@@ -7,19 +7,20 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.spp.common.BasePage;
 
-public class CreateReimbursementClaim extends BasePage{
-	public CreateReimbursementClaim(WebDriver driver) {
+public class CreateReimbursementClaimPaymentModeDD extends BasePage{
+	
+	public CreateReimbursementClaimPaymentModeDD(WebDriver driver) {
 		super(driver);
-		// TODO Auto-generated constructor stub
 		PageFactory.initElements(driver, this);
 	}
+
 	@FindBy(id="salary")
 	WebElement Salary;
 	@FindBy(xpath="//*[@id=\"menu\"]/li[6]/div/div[1]/ul/li[4]/a")
 	WebElement ReimbursementClaim;
 	@FindBy(xpath="//*[@id=\"claims_list\"]/div[1]/span/a")
 	WebElement NewReimbursement;
-	@FindBy(xpath="//*[@id=\"employees_table\"]/tbody/tr[2]/td[5]/input")
+	@FindBy(xpath="//*[@id=\"employees_table\"]/tbody/tr/td[contains(text(),'Akshay')]/parent::tr/td[5]/input")
 	WebElement AddEmployee;
 	@FindBy(xpath="//*[@id=\"main\"]/div/div[2]/form/div[3]/input")
 	WebElement ClaimButton;
@@ -46,7 +47,15 @@ public class CreateReimbursementClaim extends BasePage{
 	@FindBy(xpath="//*[@id=\"reimbursement_claims\"]/tbody/tr[1]/td[8]/a")
 	//@FindBy(xpath="//*[@id=\"reimbursement_allotments\"]/tbody/tr/td[2][contains(text(),'Reim. LTA')]/parent::tr/td[8]/a")
 	WebElement DeleteButton;
+	@FindBy(id="reimbursement_allotment_block_period")
+	WebElement BlockPeriod;
+	@FindBy(id="reimbursement_claim_block_period")
+	WebElement ClaimBlockPeriod;
+	@FindBy(id="reimbursement_claim_financial_institution_id")
+	WebElement SelectBank;
 	
+	@FindBy(id="reimbursement_claim_ac_cq_dd_no")
+	WebElement EnterChequeNo;
 	public void selectSalary() {
 		Salary.click();
 	}
@@ -68,8 +77,11 @@ public class CreateReimbursementClaim extends BasePage{
 	public void selectFinancialYear(String value){
 		dropDownSelect(FinancialYear, value);
 	}
-	public void selectPaymentMode(String value){
+	public void selectPaymentModeforClaim(String value){
 		dropDownSelect(PaymentMode, value);
+	}
+	public void selectClaimBlockPeriod(String value) {
+		dropDownSelect(ClaimBlockPeriod, value);
 	}
 	public void selectPaidMonth(String value){
 		dropDownSelect(PaidMonth, value);
@@ -82,7 +94,7 @@ public class CreateReimbursementClaim extends BasePage{
 	}
 	public void selectAmount(String Value) throws InterruptedException {
 		Amount.clear();
-		Thread.sleep(5000);
+		Thread.sleep(1000);
 		Amount.sendKeys(Value);
 	}
 	public void selectCreateReimbursementButton() {
@@ -98,5 +110,12 @@ public class CreateReimbursementClaim extends BasePage{
 	public void clickDeleteButton() throws Exception{
 		DeleteButton.click();
 		switchToPopUpAndAccept(driver);
+	}
+	public void SelectBank(String value) throws Exception{
+		dropDownSelect(SelectBank, value);
+	}
+	
+	public void enterChequeno(String value) {
+		EnterChequeNo.sendKeys(value);
 	}
 }

@@ -39,10 +39,19 @@ public class CheckReimbursementClaimRedirectsToMasterModule extends BasePage{
 		WebElement successfullMassege;
 		@FindBy(xpath="//*[@id=\"main\"]/section/p/a")
 		WebElement Pagechange;
-		@FindBy(xpath="//*[@id=\"reimbursement_masters\"]/tbody/tr/td[1][contains(text(),'Reimbursement')]/parent::tr/td[5]/a")
-		WebElement DeleteButton;
+		@FindBy(xpath="//*[@id=\"reimbursement_masters\"]/tbody/tr/td[5]/a")
+		WebElement DeleteMasterButton;
+		@FindBy(id="master")
+		WebElement masterLink;
+		@FindBy(xpath="//a[text()='Reimbursement Master']")
+		WebElement reimbursemnetLink;
+		public void clickMastserLink(){
+			masterLink.click();
+		}
 
-		
+		public void clickReimbursementMaster(){
+			reimbursemnetLink.click();
+		}
 		public void selectSalary() {
 			Salary.click();
 		}
@@ -91,8 +100,10 @@ public class CheckReimbursementClaimRedirectsToMasterModule extends BasePage{
 		}
 		
 		public void clickDeleteButton() throws Exception{
-			DeleteButton.click();
+			DeleteMasterButton.click();
 			switchToPopUpAndAccept(driver);
 		}
+		
+		
 		
 }

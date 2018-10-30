@@ -237,7 +237,7 @@ public void CreateArrearIndependentOfSalaryBankAdvice_SC_513() throws Interrupte
 		Assert.assertEquals(t, "Arrear was successfully created.");
 		Thread.sleep(5000);
 		cc.selectDeleteButton();
-}  */	
+}  
 @Test(priority=7)
 public void CreateArrearNoOfDaysAsSalaryComponent_SC_514() throws InterruptedException{
 	  CreateArrearNoOfDaysAsSalaryComponent cc=new CreateArrearNoOfDaysAsSalaryComponent(driver);
@@ -499,7 +499,7 @@ public void CreateArrearMergesWithSalaryComponentRestrictNegativePayPart_SC_523(
 	Assert.assertEquals(t, "Arrear was successfully created.");
 	Thread.sleep(3000);
 	cc.selectDeleteButton();
-}*/
+}
 	@Test(priority=17)
 	public void CreateArrearIndependentOfSalaryCashRestrictNegative_SC_524() throws InterruptedException{
 	  CreateArrearIndependentOfSalaryCashRestrictNegative cc=new CreateArrearIndependentOfSalaryCashRestrictNegative(driver);
@@ -694,8 +694,8 @@ public void CreateArrearMergesWithSalaryComponentRestrictNegativePayPart_SC_523(
 		Assert.assertEquals(t, "Arrear was successfully created.");
 		Thread.sleep(3000);
 		cc.selectDeleteButton();
-}	
-	/*@Test(priority=24)
+}	*/
+	@Test(priority=24)
 	public void CreateArrearInstrumentsRestrictNegativePayPart_SC_531() throws InterruptedException{
 	  CreateArrearInstrumentsRestrictNegativePayPart cc=new CreateArrearInstrumentsRestrictNegativePayPart(driver);
 		cc.clickSalaryLink();

@@ -31,9 +31,10 @@ public class CreateLTAOpeningBalance extends BasePage{
 	WebElement OpeningBalance;
 	@FindBy(xpath="//*[@id=\"opening_balance_emp_list\"]/form/div[3]/input")
 	WebElement SaveDetails;
-	@FindBy(xpath="//*[@id=\"lta_result_response\"]/div/strong")
+	@FindBy(xpath="//strong[text()='Created Successfully!']")
 	WebElement SuccessfulMessage;
-	
+	@FindBy(xpath="//*[@id=\"lta_opening_balances\"]/tbody/tr/td[7]/a")
+	WebElement DeleteButton;
 	
 	public void selectSalary() {
 		Salary.click();
@@ -64,7 +65,10 @@ public class CreateLTAOpeningBalance extends BasePage{
 	public void selectSaveDetails() {
 		SaveDetails.click();
 	}
-
+	public void DeleteLTA() {
+		DeleteButton.click();
+		switchToPopUpAndAccept(driver);
+	}
 	
 	
 	public String getMessage(){

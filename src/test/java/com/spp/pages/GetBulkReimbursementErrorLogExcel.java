@@ -17,13 +17,13 @@ public class GetBulkReimbursementErrorLogExcel extends BasePage{
 	WebElement Salary;
 	@FindBy(xpath="//*[@id=\"menu\"]/li[6]/div/div[1]/ul/li[4]/a")
 	WebElement ReimbursementClaim;
-	@FindBy(xpath="//*[@id=\"ui-accordion-accordion-panel-0\"]/li[5]/a")
+	@FindBy(xpath="//a[text()='Bulk Reimbursement Error Log']")
 	WebElement BulkReimbursementErrorLog;
 	@FindBy(id="reimbursement_errors_reimb_module_type")
 	WebElement ReimbursementModuleType;
 	@FindBy(id="reimbursement_errors_date")
 	WebElement LogDate;
-	@FindBy(xpath="//*[@id=\"reimbursement_errors\"]/div/div/input[2]")
+	@FindBy(xpath="//input[@value='Export To Excel']")
 	WebElement ExportToExcel;
 	
 	

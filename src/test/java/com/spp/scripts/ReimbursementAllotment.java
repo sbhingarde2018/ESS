@@ -22,10 +22,10 @@ import com.spp.pages.CreateReimbursementAllotment;
 import com.spp.pages.ExportToExcelBulkReimbursementErrorLog;
 public class ReimbursementAllotment extends BaseTest{
 	
-	/*@Test(priority=0)
+	@Test(priority=0)
 	public void CreateReimbursementMaster_SC_387() throws Exception{
 		CreateReimbursementMaster rm = new CreateReimbursementMaster(driver);
-		Thread.sleep(5000);
+		Thread.sleep(6000);
 		rm.clickMastserLink();
 		rm.clickReimbursementMaster();
 		rm.clickAddReimbursementMaster();
@@ -104,7 +104,7 @@ public class ReimbursementAllotment extends BaseTest{
 		/*ss.selectBlockPeriod("2013/2014");
 		ss.selectCreateReimbursementButton();
 		Thread.sleep(3000);*/
-	/*	ss.selectLoadButton();
+		ss.selectLoadButton();
 		Thread.sleep(5000);
 		ss.EmployeeBulkAllotmentButton();
 		Thread.sleep(8000);
@@ -125,7 +125,7 @@ public class ReimbursementAllotment extends BaseTest{
 		Assert.assertEquals(d, "Reimbursement Allotments were successfully deleted");
 		}
 		
-	@Test(priority=6)
+	/*@Test(priority=6)
 	public void BulkReimbursementErrorLog_SC_393() throws Exception{
 		BulkReimbursementErrorLog ty = new BulkReimbursementErrorLog(driver);
 		ty.selectEmployee();
@@ -135,7 +135,7 @@ public class ReimbursementAllotment extends BaseTest{
 		ty.selectLogDate("06 April 2013");
 		ty.selectGetErrorButton();
 		
-	}
+	}*/
 	
 	/*@Test(priority=7)
 	public void ExportToExcelBulkReimbursementErrorLog_SC_394() throws Exception{
@@ -147,7 +147,7 @@ public class ReimbursementAllotment extends BaseTest{
 		ty.selectLogDate("06 April 2018");
 		ty.selectExportToExcelButton();				
 } */
-	/* @Test(priority=8)
+	 @Test(priority=8)
 		public void CheckForNoAllotmentInRM_SC_264() throws Exception{
 		 CheckForNoAllotmentInRM rt=new CheckForNoAllotmentInRM(driver);
 	    rt.clickMastserLink();
@@ -281,7 +281,7 @@ public class ReimbursementAllotment extends BaseTest{
 		Assert.assertEquals(s, "Reimbursement Master is successfully created.");
 		Thread.sleep(5000);
 		am.clickDeleteMasterButton();
-	}*/
+	}
 	@Test(priority=14)
 	public void CheckifEmployeeReimbursementAllotmentGeneralLinkReimbursementClaimredirectstoMaster_SC_472() throws Exception{
 		CheckifEmployeeReimbursementAllotmentGeneralLinkReimbursementClaimredirectstoMaster cm=new CheckifEmployeeReimbursementAllotmentGeneralLinkReimbursementClaimredirectstoMaster(driver);
@@ -294,6 +294,21 @@ public class ReimbursementAllotment extends BaseTest{
 		Thread.sleep(5000);
 		cm.enterReimbursementName("ReimbursementMaster");
 		cm.clickCreateReimbursementMaster();
+		Thread.sleep(5000);
+		cm.selectEmployee();
+		cm.selectReimbursementAllotment();
+		cm.selectNewReimbursement();
+		cm.selectAddEmployee();
+		cm.selectAllotButton();
+		cm.selectAllotmentName("ReimbursementMaster (Other Reimbursement)");
+		Thread.sleep(2000);
+		cm.selectFinancialAllotmentYear("2013/2014");
+		cm.selectAllotmentDate("15 April 2013");
+		cm.ClickOnFunctionKey();
+		Thread.sleep(5000);
+		cm.EnterSumAmount("3000");
+		Thread.sleep(5000);
+		cm.selectCreateReimbursementAllotmentButton();
 		Thread.sleep(5000);
 		cm.clickonemployee();
 		cm.clickonreimbursement();
@@ -309,12 +324,22 @@ public class ReimbursementAllotment extends BaseTest{
 		 cm.selectFinancialYear("2013/2014");
 		 cm.selectPaymentMode("Paid in Salary");
 		 cm.selectPaidMonth("Apr/2013");
-		 cm.selectClaimDate("14 April 2013");
+		 cm.selectClaimDate("15 April 2013");
 		 cm.selectPaidDate("30 April 2013");
-		 cm.selectAmount("2000");
+		 cm.selectAmount("100");
 		 cm.selectCreateReimbursementButton();
 		 String t=cm.getMessage();
 		 Assert.assertEquals(t, "Reimbursement Claim was successfully created");
+		 Thread.sleep(2000);
+		 cm.DeleteClaim();
+		 Thread.sleep(2000);
+		 cm.clickonemployee();
+		 cm.selectReimbursementAllotment();
+		 cm.clickDeleteAllotmentButton();
+		 Thread.sleep(3000);
+		 cm.clickMastserLink();
+		 cm.clickReimbursementMaster();
+		 cm.clickDeleteMasterButton();
 	}
 	/*@Test(priority=12)
 	public void CheckifEmployeeReimbursementAllotmentReportsredirectstoReportmodule_SC_470() throws Exception{

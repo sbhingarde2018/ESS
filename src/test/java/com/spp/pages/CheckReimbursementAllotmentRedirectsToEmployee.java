@@ -33,8 +33,7 @@ public class CheckReimbursementAllotmentRedirectsToEmployee extends BasePage{
 	WebElement Name;
 	@FindBy(xpath="//*[@id=\"year_type\"]/div/select")
 	WebElement FinancialYear;
-	@FindBy(xpath="//*[@id=\"new_reimbursement_allotment\"]/div[2]/fieldset/div[1]/div[3]/div/input")
-	WebElement AllotmentDate;
+	
 	@FindBy(xpath="//*[@id=\"amount\"]/div/input")
 	WebElement Amount;
 	@FindBy(id="submit")
@@ -42,9 +41,36 @@ public class CheckReimbursementAllotmentRedirectsToEmployee extends BasePage{
 	@FindBy(xpath="//*[@id=\"reimbursement_allotment_result_response\"]/div/strong")
 	WebElement SuccessfulMessage;
 	WebElement Pagechange;
-	@FindBy(xpath="//*[@id=\"reimbursement_allotments\"]/tbody/tr/td[2][contains(text(),'Reim. LTA')]/parent::tr/td[8]/a")
+	@FindBy(xpath="//*[@id=\"reimbursement_allotments\"]/tbody/tr[1]/td[8]/a")
 	WebElement DeleteButton;
-	
+	@FindBy(id="emp_detail")
+	WebElement ClickOnEmployee;
+	@FindBy(xpath="//*[@id=\"menu\"]/li[4]/div/div/ul/li[8]/a")
+	WebElement ClickOnReimbursementAllotment;
+	@FindBy(xpath="//*[@id=\"reimbursement_allotments\"]/tbody/tr[1]/td[8]/a")
+	WebElement DeleteAllotmentButton;
+	@FindBy(id="reimbursement_master_id")
+	WebElement AllotmentName;
+	@FindBy(id="reimbursement_allotment_financial_year")
+	WebElement FinancialYearAllotment;
+	@FindBy(id="sal_date")
+	WebElement AllotmentDate;
+	@FindBy(xpath="//*[@id=\"amount\"]/div/input")
+	WebElement AllotmentAmount;
+	@FindBy(id="submit")
+	WebElement CreateReimbursementAllotmentButton;
+	@FindBy(xpath="//*[@id=\"allotment_link\"]/img")
+	WebElement FunctionKey;
+	@FindBy(id="sum_amount")
+	WebElement SumAmount;
+	@FindBy(id="reimbursement_allotment_block_period")
+	WebElement BlockPeriod;
+	public void selectEmployee() {
+		ClickOnEmployee.click();
+	}
+	public void selectReimbursementAllotment() {
+		ClickOnReimbursementAllotment.click();
+	}
 	public void selectSalary() {
 		Salary.click();
 	}
@@ -72,15 +98,13 @@ public class CheckReimbursementAllotmentRedirectsToEmployee extends BasePage{
 	public void selectFinancialYear(String value){
 		dropDownSelect(FinancialYear, value);
 	}
-	public void selectAllotmentDate(String Value) {
-		AllotmentDate.sendKeys(Value);
-	}
+	
 	public void selectAmount(String Value) {
 		
 		Amount.sendKeys(Value);
 	}
-	public void selectCreateReimbursementButton() {
-		CreateReimbursementButton.click();
+	public void selectCreateReimbursementAllotmentButton() {
+		CreateReimbursementAllotmentButton.click();
 	}
 	public String getMessage(){
 		return SuccessfulMessage.getText();
@@ -89,8 +113,27 @@ public class CheckReimbursementAllotmentRedirectsToEmployee extends BasePage{
 	}
 	
 	public void clickDeleteButton() throws Exception{
-		DeleteButton.click();
+		DeleteAllotmentButton.click();
 		switchToPopUpAndAccept(driver);
+	}
+	public void selectAlllotmentName(String value){
+		dropDownSelect(AllotmentName, value);
+	}
+	public void SelectBlockPeriod(String value){
+		dropDownSelect(BlockPeriod, value);
+	}
+	public void selectFinancialYearAllotment(String value){
+		dropDownSelect(FinancialYearAllotment, value);
+	}
+	public void selectAllotmentDate(String Value) {
+		AllotmentDate.sendKeys(Value);
+	}
+	
+	public void ClickOnFunctionKey() {
+		FunctionKey.click();
+	}
+	public void EnterSumAmount(String Value) {
+		SumAmount.sendKeys(Value);
 	}
 
 }

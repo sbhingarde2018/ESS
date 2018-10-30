@@ -22,6 +22,21 @@ public class DeleteReimbursementClaim extends BasePage{
 	@FindBy(xpath="//*[@id=\"reimbursement_claim_result_response\"]/div/strong")
 	WebElement SuccessfulMessage;
 	
+	@FindBy(id="emp_detail")
+	WebElement ClickOnEmployee;
+	@FindBy(xpath="//*[@id=\"menu\"]/li[4]/div/div/ul/li[8]/a")
+	WebElement ClickOnReimbursementAllotment;
+	@FindBy(xpath="//*[@id=\"reimbursement_allotments\"]/tbody/tr[1]/td[8]/a")
+	WebElement DeleteAllotmentButton;
+	
+	
+	@FindBy(id="master")
+	WebElement masterLink;
+	@FindBy(xpath="//a[text()='Reimbursement Master']")
+	WebElement reimbursemnetLink;
+	@FindBy(xpath="//*[@class='action-delete']")
+	WebElement DeleteMasterButton;
+	
 	public void selectSalary() {
 		Salary.click();
 	}
@@ -34,5 +49,31 @@ public class DeleteReimbursementClaim extends BasePage{
 		public String getMessage(){
 		return SuccessfulMessage.getText();
 	}
+		
+		
+		
+		public void clickonemployee() {
+			ClickOnEmployee.click();
+		}
+		public void clickonreimbursement() {
+			ClickOnReimbursementAllotment.click();
+		}
+		public void clickDeleteAllotmentButton() throws Exception{
+			DeleteAllotmentButton.click();
+			switchToPopUpAndAccept(driver);
+		}
+		
+		
+		public void clickMastserLink(){
+			PageFactory.initElements(driver, this);
+			masterLink.click();
+		}
 
+		public void clickReimbursementMaster(){
+			reimbursemnetLink.click();
+		}
+		public void clickDeleteMasterButton() throws Exception{
+			DeleteMasterButton.click();
+			switchToPopUpAndAccept(driver);
+		}
 }

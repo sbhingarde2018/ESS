@@ -8,6 +8,32 @@ import com.spp.common.BasePage;
 
 
 public class CheckifEmployeeReimbursementAllotmentGeneralLinkReimbursementClaimredirectstoMaster extends BasePage{
+	@FindBy(id="emp_detail")
+	WebElement Employee;
+	@FindBy(xpath="//*[@id=\"menu\"]/li[4]/div/div/ul/li[8]/a")
+	WebElement ReimbursementAllotment;
+	@FindBy(xpath="//*[@id=\"allotments_list\"]/div[1]/span/a")
+	WebElement NewReimbursement;
+	@FindBy(xpath="//*[@id=\"employees_table\"]/tbody/tr/td[contains(text(),'Akshay')]/parent::tr/td[5]/input")
+	WebElement AddEmployee;
+	@FindBy(xpath="//input[@value='Allot Reimbursement']")
+	WebElement AllotButton;
+
+	//@FindBy(xpath="//*[@id=\"new_reimbursement_allotment\"]/div[2]/fieldset/div[1]/div[1]/div")
+	@FindBy(id="reimbursement_master_id")
+	WebElement AllotmentName;
+	@FindBy(id="reimbursement_allotment_financial_year")
+	WebElement FinancialYearAlllotment;
+	@FindBy(id="sal_date")
+	WebElement AllotmentDate;
+	@FindBy(xpath="//*[@id=\"amount\"]/div/input")
+	WebElement AllotmentAmount;
+	@FindBy(id="submit")
+	WebElement CreateReimbursementAllotmentButton;
+	@FindBy(xpath="//*[@id=\"allotment_link\"]/img")
+	WebElement FunctionKey;
+	@FindBy(id="sum_amount")
+	WebElement SumAmount;
 	@FindBy(id="master")
 	WebElement masterLink;
 	@FindBy(xpath="//a[text()='Reimbursement Master']")
@@ -60,15 +86,57 @@ public class CheckifEmployeeReimbursementAllotmentGeneralLinkReimbursementClaimr
 	WebElement PaidDate;
 	@FindBy(id="reimbursement_claim_amount")
 	WebElement Amount;
-	@FindBy(xpath="//*[@id=\"new_claim\"]/div[2]/div/input")
+	@FindBy(xpath="//input[@value='Create Reimbursement claim']")
 	WebElement CreateReimbursementButton;
-	@FindBy(xpath="//*[@id=\"reimbursement_claim_result_response\"]/div/strong")
+	@FindBy(xpath="//strong[text()='Reimbursement Claim was successfully created']")
 	WebElement SuccessfulMessage;
-
+	@FindBy(xpath="//*[@id=\"reimbursement_claims\"]/tbody/tr/td[8]/a")
+	WebElement DeleteClaim;
+	@FindBy(xpath="//*[@id=\"reimbursement_allotments\"]/tbody/tr[1]/td[8]/a")
+	WebElement DeleteAllotmentButton;
 	
 	public CheckifEmployeeReimbursementAllotmentGeneralLinkReimbursementClaimredirectstoMaster(WebDriver driver) {
 		super(driver);
 		PageFactory.initElements(driver, this);	
+	}
+	public void selectEmployee() {
+		Employee.click();
+	}
+	public void selectReimbursementAllotment() {
+		ReimbursementAllotment.click();
+	}
+	public void selectNewReimbursement() {
+		NewReimbursement.click();
+	}
+	public void selectAddEmployee() {
+		AddEmployee.click();
+	}
+	public void selectAllotButton() {
+		AllotButton.click();
+	}
+	public void selectAllotmentName(String value){
+		dropDownSelect(AllotmentName, value);
+	}
+	public void selectFinancialAllotmentYear(String value){
+		dropDownSelect(FinancialYearAlllotment, value);
+	}
+	public void selectAllotmentDate(String Value) {
+		AllotmentDate.sendKeys(Value);
+	}
+	
+	public void ClickOnFunctionKey() {
+		FunctionKey.click();
+	}
+	public void EnterSumAmount(String Value) {
+		SumAmount.clear();
+		SumAmount.sendKeys(Value);
+	}
+	public void selectAllotmentAmount(String Value) {
+		
+		AllotmentAmount.sendKeys(Value);
+	}
+	public void selectCreateReimbursementAllotmentButton() {
+		CreateReimbursementAllotmentButton.click();
 	}
 	public void clickonemployee() {
 		ClickOnEmployee.click();
@@ -160,9 +228,18 @@ public class CheckifEmployeeReimbursementAllotmentGeneralLinkReimbursementClaimr
 		Pagechange.click();
 	}
 	
-	public void clickDeleteButton() throws Exception{
+	public void clickDeleteAllotmentButton() throws Exception{
+		DeleteAllotmentButton.click();
+		switchToPopUpAndAccept(driver);
+	}
+	public void DeleteClaim() {
+		DeleteClaim.click();
+		switchToPopUpAndAccept(driver);
+	}
+	public void clickDeleteMasterButton() throws Exception{
 		DeleteButton.click();
 		switchToPopUpAndAccept(driver);
 	}
+	
 	
 }
