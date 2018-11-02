@@ -35,7 +35,8 @@ public class CreateBonusDefinitionConsideremployeeswithminimumworking extends Ba
 	WebElement CreateBonus;
 	@FindBy(xpath="//*[@id=\"main\"]/div[2]/strong")
 	WebElement SuccessfulMessage;
-	
+	@FindBy(xpath="//*[@id='bonus_or_exgratia']/div/table/tbody/tr[1]/td[4]/a")
+	WebElement DeleteButton;
 	
 	public CreateBonusDefinitionConsideremployeeswithminimumworking(WebDriver driver) {
 		super(driver);
@@ -84,5 +85,8 @@ public class CreateBonusDefinitionConsideremployeeswithminimumworking extends Ba
 	
 	public String getMessage(){
 		return SuccessfulMessage.getText();
+	}
+	public void clickDeleteButton(){
+		DeleteButton.click();
 	}
 }

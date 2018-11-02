@@ -23,7 +23,7 @@ import com.spp.pages.ExportToExcelBulkReimbursementErrorLog;
 public class ReimbursementAllotment extends BaseTest{
 	
 	@Test(priority=0)
-	public void CreateReimbursementMaster_SC_387() throws Exception{
+	public void CreateReimMaster_SC_387() throws Exception{
 		CreateReimbursementMaster rm = new CreateReimbursementMaster(driver);
 		Thread.sleep(6000);
 		rm.clickMastserLink();
@@ -33,7 +33,7 @@ public class ReimbursementAllotment extends BaseTest{
 		rm.selectModeOfPayment("Cash");
 		rm.selectAllotmentType();
 		Thread.sleep(2000);
-		rm.enterReimbursementName("ReimbursementMaster");
+		rm.enterReimbursementName("ReimMaster");
 		rm.clickCreateReimbursementMaster();
 		String s=rm.getMessage();
 		Assert.assertEquals(s, "Reimbursement Master is successfully created.");
@@ -48,7 +48,7 @@ public class ReimbursementAllotment extends BaseTest{
 		rt.selectNewReimbursement();
 		rt.selectAddEmployee();
 		rt.selectAllotButton();
-		rt.selectName("ReimbursementMaster (Other Reimbursement)");
+		rt.selectName("ReimMaster (Other Reimbursement)");
 		Thread.sleep(2000);
 		rt.selectFinancialYear("2013/2014");
 		rt.selectAllotmentDate("15 April 2013");
@@ -92,7 +92,7 @@ public class ReimbursementAllotment extends BaseTest{
 		ss.selectEmployee();
 		ss.selectReimbursementAllotment();
 		ss.selectBulkAllotmentButton();
-		ss.selectName("ReimbursementMaster (Other Reimbursement)");
+		ss.selectName("ReimMaster (Other Reimbursement)");
 		Thread.sleep(2000);
 		ss.selectFinancialYear("2013/2014");
 		ss.selectAllotmentDate("09 April 2013");
@@ -157,7 +157,7 @@ public class ReimbursementAllotment extends BaseTest{
 		rt.selectModeOfPayment("Cash");
 		rt.selectAllotmentType();
 		Thread.sleep(5000);
-		rt.enterReimbursementName("ReimbursementMaster");
+		rt.enterReimbursementName("ReimMaster");
 		rt.clickCreateReimbursementMaster();
 		Thread.sleep(5000);
 		rt.selectEmployee();
@@ -165,7 +165,7 @@ public class ReimbursementAllotment extends BaseTest{
 		rt.selectNewReimbursement();
 		rt.selectAddEmployee();
 		rt.selectAllotButton();
-		rt.selectName("ReimbursementMaster (Other Reimbursement)");
+		rt.selectName("ReimMaster (Other Reimbursement)");
 		Thread.sleep(5000);
 		rt.clickMastserLink();
 		rt.clickReimbursementMaster();
@@ -183,7 +183,7 @@ public class ReimbursementAllotment extends BaseTest{
 		rt.selectAllotmentType();
 		rt.selectMonthlyAllotmentType();
 		Thread.sleep(5000);
-		rt.enterReimbursementName("ReimbursementMaster");
+		rt.enterReimbursementName("ReimMaster");
 		rt.clickCreateReimbursementMaster();
 		Thread.sleep(5000);
 		rt.selectEmployee();
@@ -191,7 +191,7 @@ public class ReimbursementAllotment extends BaseTest{
 		rt.selectNewReimbursement();
 		rt.selectAddEmployee();
 		rt.selectAllotButton();
-		rt.selectName("ReimbursementMaster (Other Reimbursement)");
+		rt.selectName("ReimMaster (Other Reimbursement)");
 		
 }  
 	 @Test(priority=10)
@@ -203,7 +203,7 @@ public class ReimbursementAllotment extends BaseTest{
 		rt.selectNewReimbursement();
 		rt.selectAddEmployee();
 		rt.selectAllotButton();
-		rt.selectName("ReimbursementMaster (Other Reimbursement)");
+		rt.selectName("ReimMaster (Other Reimbursement)");
 		Thread.sleep(3000);
 		rt.selectFinancialYear("2013/2014");
 		rt.selectAllotmentDate("07 April 2013");
@@ -225,7 +225,7 @@ public class ReimbursementAllotment extends BaseTest{
 			rt.selectModeOfPayment("Paid in Salary");
 			rt.selectLumpsumType();
 			Thread.sleep(5000);
-			rt.enterReimbursementName("ReimbursementMaster");
+			rt.enterReimbursementName("ReimMaster");
 			Thread.sleep(3000);
 			rt.clickCreateReimbursementMaster();
 			Thread.sleep(5000);
@@ -234,7 +234,7 @@ public class ReimbursementAllotment extends BaseTest{
 			rt.selectNewReimbursement();
 			rt.selectAddEmployee();
 			rt.selectAllotButton();
-			rt.selectName("ReimbursementMaster (Other Reimbursement)");
+			rt.selectName("ReimMaster (Other Reimbursement)");
 			Thread.sleep(2000);
 			rt.selectFinancialYear("2013/2014");
 			rt.selectAllotmentDate("15 April 2013");
@@ -258,7 +258,7 @@ public class ReimbursementAllotment extends BaseTest{
 			
 	
 	@Test(priority=13)
-	public void CheckifEmployeeReimbursementAllotmentGeneralLinkReimbursementMasterredirectstoMaster_SC_471() throws Exception{
+	public void CheckifEmployeeReimbursementAllotmentGeneralLinkReimMasterredirectstoMaster_SC_471() throws Exception{
 		CheckifEmployeeReimbursementAllotmentGeneralLinkReimbursementMasterredirectstoMaster am=new CheckifEmployeeReimbursementAllotmentGeneralLinkReimbursementMasterredirectstoMaster(driver);
 		am.clickonemployee();
 		am.clickonreimbursement();
@@ -274,7 +274,7 @@ public class ReimbursementAllotment extends BaseTest{
 		Thread.sleep(1000);
 		am.selectAllotmentType();
 		Thread.sleep(1000);
-		am.enterReimbursementName("ReimbursementMaster");
+		am.enterReimbursementName("ReimMaster");
 		//am.clickClubbedSalaryHead();
 		am.clickCreateReimbursementMaster();
 		String s=am.getMessage();
@@ -292,7 +292,7 @@ public class ReimbursementAllotment extends BaseTest{
 		cm.selectModeOfPayment("Cash");
 		cm.selectAllotmentType();
 		Thread.sleep(5000);
-		cm.enterReimbursementName("ReimbursementMaster");
+		cm.enterReimbursementName("ReimMaster");
 		cm.clickCreateReimbursementMaster();
 		Thread.sleep(5000);
 		cm.selectEmployee();
@@ -300,7 +300,7 @@ public class ReimbursementAllotment extends BaseTest{
 		cm.selectNewReimbursement();
 		cm.selectAddEmployee();
 		cm.selectAllotButton();
-		cm.selectAllotmentName("ReimbursementMaster (Other Reimbursement)");
+		cm.selectAllotmentName("ReimMaster (Other Reimbursement)");
 		Thread.sleep(2000);
 		cm.selectFinancialAllotmentYear("2013/2014");
 		cm.selectAllotmentDate("15 April 2013");
@@ -320,7 +320,7 @@ public class ReimbursementAllotment extends BaseTest{
 		Thread.sleep(5000);
 		cm.selectemployee();
 		cm.claimreimbursement();
-		cm.enterReimbursementNameinClaim("ReimbursementMaster (Other Reimbursement)");
+		cm.enterReimbursementNameinClaim("ReimMaster (Other Reimbursement)");
 		 cm.selectFinancialYear("2013/2014");
 		 cm.selectPaymentMode("Paid in Salary");
 		 cm.selectPaidMonth("Apr/2013");
