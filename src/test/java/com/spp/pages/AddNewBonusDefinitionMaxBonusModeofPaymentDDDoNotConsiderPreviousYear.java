@@ -121,6 +121,7 @@ public class AddNewBonusDefinitionMaxBonusModeofPaymentDDDoNotConsiderPreviousYe
 	}
 	public void clickDeleteButton(){
 		DeleteButton.click();
+		switchToPopUpAndAccept(driver);
 	}
 
 }

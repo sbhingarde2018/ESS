@@ -121,5 +121,6 @@ public class AddNewBonusDefinitionFormulaModeofPaymentChequeDoNotConsiderPreviou
 	}
 	public void clickDeleteButton(){
 		DeleteButton.click();
+		switchToPopUpAndAccept(driver);
 	}
 }

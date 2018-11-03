@@ -121,5 +121,6 @@ public class CreateBonusDefinitionFormulaMaxBonusCalculateDoNotConsiderPreviousY
 	}
 	public void clickDeleteButton(){
 		DeleteButton.click();
+		switchToPopUpAndAccept(driver);
 	}
 }

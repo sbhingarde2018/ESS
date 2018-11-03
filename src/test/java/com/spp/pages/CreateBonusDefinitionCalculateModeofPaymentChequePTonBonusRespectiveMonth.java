@@ -116,5 +116,6 @@ public class CreateBonusDefinitionCalculateModeofPaymentChequePTonBonusRespectiv
 	}
 	public void clickDeleteButton(){
 		DeleteButton.click();
+		switchToPopUpAndAccept(driver);
 	}
 }

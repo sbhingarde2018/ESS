@@ -121,5 +121,6 @@ public class CreateBonusDefinitionMaxBonusFormulaPTonBonusRespectiveMonthDoNotCo
 	}
 	public void clickDeleteButton(){
 		DeleteButton.click();
+		switchToPopUpAndAccept(driver);
 	}
 }

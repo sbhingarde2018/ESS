@@ -116,5 +116,6 @@ public String getMessage(){
 }
 public void clickDeleteButton(){
 	DeleteButton.click();
+	switchToPopUpAndAccept(driver);
 }
 }

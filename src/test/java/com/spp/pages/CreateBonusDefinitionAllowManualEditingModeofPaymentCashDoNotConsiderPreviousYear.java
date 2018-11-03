@@ -121,5 +121,6 @@ public class CreateBonusDefinitionAllowManualEditingModeofPaymentCashDoNotConsid
 	}
 	public void clickDeleteButton(){
 		DeleteButton.click();
+		switchToPopUpAndAccept(driver);
 	}
 }

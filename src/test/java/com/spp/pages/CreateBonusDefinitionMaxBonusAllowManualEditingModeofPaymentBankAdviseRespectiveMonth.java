@@ -111,5 +111,6 @@ public class CreateBonusDefinitionMaxBonusAllowManualEditingModeofPaymentBankAdv
 	}
 	public void clickDeleteButton(){
 		DeleteButton.click();
+		switchToPopUpAndAccept(driver);
 	}
 }

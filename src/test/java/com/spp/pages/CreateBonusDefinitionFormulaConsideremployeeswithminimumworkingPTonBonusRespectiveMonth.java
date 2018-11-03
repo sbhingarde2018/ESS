@@ -116,5 +116,6 @@ public class CreateBonusDefinitionFormulaConsideremployeeswithminimumworkingPTon
 	}
 	public void clickDeleteButton(){
 		DeleteButton.click();
+		switchToPopUpAndAccept(driver);
 	}
 }
