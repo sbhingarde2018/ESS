@@ -558,7 +558,7 @@ public class Bonus extends BaseTest{
 		Assert.assertEquals(t, "Bonus successfully created");
 		ad.clickDeleteButton();
 		ad.switchToPopUpAndAccept(driver);
-	}*/
+	}
 	
 	@Test(priority=28)
 	public void AddNewBonusDefinitionMaxBonusModeofPaymentBankAdvise_SC_660() throws Exception{
@@ -2486,7 +2486,7 @@ public class Bonus extends BaseTest{
 		Assert.assertEquals(t, "Bonus successfully created");
 		cb.clickDeleteButton();
 		cb.switchToPopUpAndAccept(driver);
-	}
+	}*/
 	@Test(priority=113)
 	public void CreateBonusDefinitionFormulaMaxBonusCalculateModeofPaymentCashRespectiveMonth_SC_745() throws Exception{
 		CreateBonusDefinitionFormulaMaxBonusCalculateModeofPaymentCashRespectiveMonth cb=new CreateBonusDefinitionFormulaMaxBonusCalculateModeofPaymentCashRespectiveMonth(driver);
