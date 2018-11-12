@@ -2463,7 +2463,7 @@ public class Bonus extends BaseTest{
 		cb.clickDeleteButton();
 		cb.switchToPopUpAndAccept(driver);
 	}*/
-	@Test(priority=112)
+	/*@Test(priority=112)
 	public void CreateBonusDefinitionMaxBonusAllowManualEditingModeofPaymentChequeRespectiveMonth_SC_744() throws Exception{
 		CreateBonusDefinitionMaxBonusAllowManualEditingModeofPaymentChequeRespectiveMonth cb=new CreateBonusDefinitionMaxBonusAllowManualEditingModeofPaymentChequeRespectiveMonth(driver);
 		cb.clickSalary();
@@ -2743,8 +2743,8 @@ public class Bonus extends BaseTest{
 		Assert.assertEquals(t, "Bonus successfully created");
 		cb.clickDeleteButton();
 		cb.switchToPopUpAndAccept(driver);
-	}
-	/*@Test(priority=124)
+	}*/
+	@Test(priority=124)
 	public void CreateBonusDefinitionMaxBonusCalculateModeofPaymentDDPTonBonusRespectiveMonth_SC_758() throws Exception{
 		CreateBonusDefinitionMaxBonusCalculateModeofPaymentDDPTonBonusRespectiveMonth cb=new CreateBonusDefinitionMaxBonusCalculateModeofPaymentDDPTonBonusRespectiveMonth(driver);
 		cb.clickSalary();
