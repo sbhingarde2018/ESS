@@ -1623,7 +1623,7 @@ public class Bonus extends BaseTest{
 		cb.clickDeleteButton();
 		cb.switchToPopUpAndAccept(driver);
 	}
-	/*@Test(priority=76)
+	@Test(priority=76)
 	public void CreateBonusDefinitionMaxBonusAllowManualEditingModeofPaymentDDPTonBonusCurrentMonth_SC_708() throws Exception{
 		CreateBonusDefinitionMaxBonusAllowManualEditingModeofPaymentDDPTonBonusCurrentMonth cb=new CreateBonusDefinitionMaxBonusAllowManualEditingModeofPaymentDDPTonBonusCurrentMonth(driver);
 		cb.clickSalary();
@@ -1902,7 +1902,7 @@ public class Bonus extends BaseTest{
 		cb.clickDeleteButton();
 		cb.switchToPopUpAndAccept(driver);
 	}
-	/*@Test(priority=88)
+	@Test(priority=88)
 	public void CreateBonusDefinitionConsideremployeeswithminimumworkingFormulaPTonBonusCurrentMonth_SC_720() throws Exception{
 		CreateBonusDefinitionConsideremployeeswithminimumworkingFormulaPTonBonusCurrentMonth cb=new CreateBonusDefinitionConsideremployeeswithminimumworkingFormulaPTonBonusCurrentMonth(driver);
 		cb.clickSalary();
@@ -2185,7 +2185,7 @@ public class Bonus extends BaseTest{
 		cb.clickDeleteButton();
 		cb.switchToPopUpAndAccept(driver);
 	}
-	/*@Test(priority=100)
+	@Test(priority=100)
 	public void AddNewBonusDefinitionAllowManualEditingModeofPaymentBankAdviseCurrentMonth_SC_732() throws Exception{
 		AddNewBonusDefinitionAllowManualEditingModeofPaymentBankAdviseCurrentMonth cb=new AddNewBonusDefinitionAllowManualEditingModeofPaymentBankAdviseCurrentMonth(driver);
 		cb.clickSalary();
@@ -2463,7 +2463,7 @@ public class Bonus extends BaseTest{
 		cb.clickDeleteButton();
 		cb.switchToPopUpAndAccept(driver);
 	}
-	/*@Test(priority=112)
+	@Test(priority=112)
 	public void CreateBonusDefinitionMaxBonusAllowManualEditingModeofPaymentChequeRespectiveMonth_SC_744() throws Exception{
 		CreateBonusDefinitionMaxBonusAllowManualEditingModeofPaymentChequeRespectiveMonth cb=new CreateBonusDefinitionMaxBonusAllowManualEditingModeofPaymentChequeRespectiveMonth(driver);
 		cb.clickSalary();
@@ -3315,7 +3315,7 @@ public class Bonus extends BaseTest{
 		cb.clickDeleteButton();
 	
 	}
-/*	@Test(priority=148)
+	@Test(priority=148)
 	public void CreateBonusDefinitionwithminimumworkingModeofPaymentCashDoNotConsiderPreviousYear_SC_782() throws Exception{
 		CreateBonusDefinitionwithminimumworkingModeofPaymentCashDoNotConsiderPreviousYear cb=new CreateBonusDefinitionwithminimumworkingModeofPaymentCashDoNotConsiderPreviousYear(driver);
 		cb.clickSalary();
@@ -3616,7 +3616,7 @@ public class Bonus extends BaseTest{
 		cb.clickDeleteButton();
 		cb.switchToPopUpAndAccept(driver);
 	}
-	/*@Test(priority=160)
+	@Test(priority=160)
 	public void CreateBonusDefinitionModeofPaymentDDPTonBonusRespectiveMonthDoNotConsiderPreviousYear_SC_794() throws Exception{
 		CreateBonusDefinitionModeofPaymentDDPTonBonusRespectiveMonthDoNotConsiderPreviousYear cb=new CreateBonusDefinitionModeofPaymentDDPTonBonusRespectiveMonthDoNotConsiderPreviousYear(driver);
 		cb.clickSalary();
@@ -4188,5 +4188,5 @@ public class Bonus extends BaseTest{
 		Assert.assertEquals(t, "Bonus successfully created");
 		cb.clickDeleteButton();
 		cb.switchToPopUpAndAccept(driver);
-	}*/
+	}
 	}
