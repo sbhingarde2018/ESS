@@ -4189,4 +4189,194 @@ public class Bonus extends BaseTest{
 		cb.clickDeleteButton();
 		cb.switchToPopUpAndAccept(driver);
 	}*/
+	/*@Test(priority=184)
+	public void CreateBonusDefinitionFormulaConsideremployeeswithminimumworkingNearest10Rupee_SC_818() throws Exception{
+		CreateBonusDefinitionFormulaConsideremployeeswithminimumworkingNearest10Rupee cb = new CreateBonusDefinitionFormulaConsideremployeeswithminimumworkingNearest10Rupee(driver);
+		cb.clickSalary();
+		cb.selectBonus();	
+		cb.clickAddNewBonus();
+		cb.EnterBonusHead("Diwali1");			
+		cb.selectformula("Bonus");
+		cb.SelectFromMonth("Mar/2013");
+		cb.SelectToMonth("Apr/2013");
+		cb.SelectPaymonth("Apr/2013");
+		cb.consideremployeeswithminwork();
+		cb.checksalarydependent();
+		cb.checknearest10rupee();
+		cb.clickCreateBonus();
+		String t=cb.getMessage();
+		Assert.assertEquals(t, "Bonus successfully created");
+		cb.clickDeleteButton();
+		cb.switchToPopUpAndAccept(driver);
+	}
+	@Test(priority=185)
+	public void CreateBonusDefinitionMaxBonusAllowManualEditingNearest10Rupee_SC_819() throws Exception{
+		CreateBonusDefinitionMaxBonusAllowManualEditingNearest10Rupee cb = new CreateBonusDefinitionMaxBonusAllowManualEditingNearest10Rupee(driver);
+		cb.clickSalary();
+		cb.selectBonus();
+		cb.clickAddNewBonus();
+		cb.EnterBonusHead("Diwali1");		
+		cb.clickManual();
+		cb.EnterMaxBonus("10000");
+		cb.SelectFromMonth("Mar/2013");
+		cb.SelectToMonth("Apr/2013");
+		cb.SelectPaymonth("Apr/2013");
+		cb.consideremployeeswithminwork();
+		cb.checksalaryindependent();
+		cb.checknearest10rupee();
+		cb.clickCreateBonus();
+		String t=cb.getMessage();
+		Assert.assertEquals(t, "Bonus successfully created");
+		cb.clickDeleteButton();
+		cb.switchToPopUpAndAccept(driver);
+	}
+	@Test(priority=186)
+	public void CreateBonusDefinitionConsideremployeeswithminimumworkingNearest10Rupee_SC_820() throws Exception{
+		CreateBonusDefinitionConsideremployeeswithminimumworkingNearest10Rupee cb = new CreateBonusDefinitionConsideremployeeswithminimumworkingNearest10Rupee(driver);
+		cb.clickSalary();
+		cb.selectBonus();
+		cb.clickAddNewBonus();
+		cb.EnterBonusHead("Diwali1");		
+		cb.clickManual();
+		cb.SelectFromMonth("Mar/2013");
+		cb.SelectToMonth("Apr/2013");
+		cb.SelectPaymonth("Apr/2013");
+		cb.consideremployeeswithminwork();
+		cb.checksalaryindependent();
+		cb.checknearest10rupee();
+		cb.clickCreateBonus();
+		String t=cb.getMessage();
+		Assert.assertEquals(t, "Bonus successfully created");
+		cb.clickDeleteButton();
+		cb.switchToPopUpAndAccept(driver);
+	}
+	@Test(priority=187)
+	public void CreateBonusDefinitionFormulaConsideremployeeswithminimumworkingCalculateNearest10Rupee_SC_821() throws Exception{
+		CreateBonusDefinitionFormulaConsideremployeeswithminimumworkingCalculateNearest10Rupee cb = new CreateBonusDefinitionFormulaConsideremployeeswithminimumworkingCalculateNearest10Rupee(driver);
+		cb.clickSalary();
+		cb.selectBonus();	
+		cb.clickAddNewBonus();
+		cb.EnterBonusHead("Diwali1");			
+		cb.selectformula("Bonus");
+		cb.SelectFromMonth("Mar/2013");
+		cb.SelectToMonth("Apr/2013");
+		cb.SelectPaymonth("Apr/2013");
+		cb.consideremployeeswithMinWorkingdays();
+		cb.checkcalculate();
+		cb.checksalarydependent();
+		cb.checknearest10rupee();
+		cb.clickCreateBonus();
+		String t=cb.getMessage();
+		Assert.assertEquals(t, "Bonus successfully created");
+		cb.clickDeleteButton();
+		cb.switchToPopUpAndAccept(driver);
+	}
+	@Test(priority=188)
+	public void CreateBonusDefinitionMaxBonusConsideremployeeswithminimumworkingCalculateNearest10Rupee_SC_822() throws Exception{
+		CreateBonusDefinitionMaxBonusConsideremployeeswithminimumworkingCalculateNearest10Rupee cb = new CreateBonusDefinitionMaxBonusConsideremployeeswithminimumworkingCalculateNearest10Rupee(driver);
+		cb.clickSalary();
+		cb.selectBonus();	
+		cb.clickAddNewBonus();
+		cb.EnterBonusHead("Diwali1");			
+		cb.selectformula("Bonus");
+		cb.EnterMaxBonus("10000");
+		cb.SelectFromMonth("Mar/2013");
+		cb.SelectToMonth("Apr/2013");
+		cb.SelectPaymonth("Apr/2013");
+		cb.consideremployeeswithMinWorkingdays();
+		cb.checkcalculate();
+		cb.checksalarydependent();
+		cb.checknearest10rupee();
+		cb.clickCreateBonus();
+		String t=cb.getMessage();
+		Assert.assertEquals(t, "Bonus successfully created");
+		cb.clickDeleteButton();
+		cb.switchToPopUpAndAccept(driver);
+	}
+	@Test(priority=189)
+	public void CreateBonusDefinitionFormulaCalculateNearest10Rupee_SC_823() throws Exception{
+		CreateBonusDefinitionFormulaCalculateNearest10Rupee cb = new CreateBonusDefinitionFormulaCalculateNearest10Rupee(driver);
+		cb.clickSalary();
+		cb.selectBonus();	
+		cb.clickAddNewBonus();
+		cb.EnterBonusHead("Diwali1");			
+		cb.selectformula("Bonus");
+		cb.SelectFromMonth("Mar/2013");
+		cb.SelectToMonth("Apr/2013");
+		cb.SelectPaymonth("Apr/2013");
+		cb.checkcalculate();
+		cb.checksalarydependent();
+		cb.checknearest10rupee();
+		cb.clickCreateBonus();
+		String t=cb.getMessage();
+		Assert.assertEquals(t, "Bonus successfully created");
+		cb.clickDeleteButton();
+		cb.switchToPopUpAndAccept(driver);
+	}
+	@Test(priority=190)
+	public void CreateBonusDefinitionFormulaMaxBonusCalculateNearest10Rupee_SC_824() throws Exception{
+		CreateBonusDefinitionFormulaMaxBonusCalculateNearest10Rupee cb = new CreateBonusDefinitionFormulaMaxBonusCalculateNearest10Rupee(driver);
+		cb.clickSalary();
+		cb.selectBonus();	
+		cb.clickAddNewBonus();
+		cb.EnterBonusHead("Diwali1");			
+		cb.selectformula("Bonus");
+		cb.EnterMaxBonus("10000");
+		cb.SelectFromMonth("Mar/2013");
+		cb.SelectToMonth("Apr/2013");
+		cb.SelectPaymonth("Apr/2013");
+		cb.checkcalculate();
+		cb.checksalarydependent();
+		cb.checknearest10rupee();
+		cb.clickCreateBonus();
+		String t=cb.getMessage();
+		Assert.assertEquals(t, "Bonus successfully created");
+		cb.clickDeleteButton();
+		cb.switchToPopUpAndAccept(driver);
+	}
+	@Test(priority=191)
+	public void AddNewBonusDefinitionFormulaModeofPaymentCashNearest10Rupee_SC_825() throws Exception{
+		AddNewBonusDefinitionFormulaModeofPaymentCashNearest10Rupee cb = new AddNewBonusDefinitionFormulaModeofPaymentCashNearest10Rupee(driver);
+		cb.clickSalary();
+		cb.selectBonus();	
+		cb.clickAddNewBonus();
+		cb.EnterBonusHead("Diwali1");			
+		cb.selectformula("Test Formula");
+		cb.SelectFromMonth("Mar/2013");
+		cb.SelectToMonth("Apr/2013");
+		cb.SelectPaymonth("Apr/2013");
+		cb.checksalaryindependent();
+		cb.SelectModeofPayment("CASH");
+		cb.checknearest10rupee();
+		cb.clickCreateBonus();
+		String t=cb.getMessage();
+		Assert.assertEquals(t, "Bonus successfully created");
+		Thread.sleep(5000);
+		cb.clickDeleteButton();
+		cb.switchToPopUpAndAccept(driver);
+	}
+	@Test(priority=192)
+	public void AddNewBonusDefinitionAllowManualEditingModeofPaymentCashNearest10Rupee_SC_826() throws Exception{
+		AddNewBonusDefinitionAllowManualEditingModeofPaymentCashNearest10Rupee cb = new AddNewBonusDefinitionAllowManualEditingModeofPaymentCashNearest10Rupee(driver);
+		cb.clickSalary();
+		cb.selectBonus();
+		cb.clickAddNewBonus();
+		cb.EnterBonusHead("Diwali1");		
+		cb.clickManual();
+		cb.EnterMaxBonus("10000");
+		cb.SelectFromMonth("Mar/2013");
+		cb.SelectToMonth("Apr/2013");
+		cb.SelectPaymonth("Apr/2013");
+		cb.checksalaryindependent();
+		cb.SelectModeofPayment("CASH");
+		cb.checknearest10rupee();
+		cb.clickCreateBonus();
+		String t=cb.getMessage();
+		Assert.assertEquals(t, "Bonus successfully created");
+		Thread.sleep(5000);
+		cb.clickDeleteButton();
+		cb.switchToPopUpAndAccept(driver);
+	}*/
+	//@Test(priority=193)
+	//public void Create Bonus Definition:FormulaMaxBonusCalculateModeofPaymentCashNearest10Rupee
 	}
