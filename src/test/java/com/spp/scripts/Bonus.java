@@ -817,8 +817,8 @@ public class Bonus extends BaseTest{
 		Assert.assertEquals(t, "Bonus successfully created");
 		ad.clickDeleteButton();
 		ad.switchToPopUpAndAccept(driver);
-	}
-	/*@Test(priority=40)
+	}*/
+	@Test(priority=40)
 	public void CreateBonusDefinitionwithminimumworkingModeofPaymentCheque_SC_672() throws Exception{
 		CreateBonusDefinitionwithminimumworkingModeofPaymentCheque ad=new CreateBonusDefinitionwithminimumworkingModeofPaymentCheque(driver);
 		ad.clickSalary();
@@ -1075,8 +1075,8 @@ public class Bonus extends BaseTest{
 		Assert.assertEquals(t, "Bonus successfully created");
 		cb.clickDeleteButton();
 		cb.switchToPopUpAndAccept(driver);
-		}*/
-	@Test(priority=52)
+		}
+	/*@Test(priority=52)
 	public void CreateBonusDefinitionFormulaMaxBonusCalculateModeofPaymentDD_SC_684() throws Exception{
 		CreateBonusDefinitionFormulaMaxBonusCalculateModeofPaymentDD cb=new CreateBonusDefinitionFormulaMaxBonusCalculateModeofPaymentDD(driver);
 		cb.clickSalary();
@@ -4491,4 +4491,5 @@ public class Bonus extends BaseTest{
 		cb.clickDeleteButton();
 		cb.switchToPopUpAndAccept(driver);
 	}*/
+	 
 	}
