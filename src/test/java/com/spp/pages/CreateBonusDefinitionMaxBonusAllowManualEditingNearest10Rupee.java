@@ -14,7 +14,7 @@ public class CreateBonusDefinitionMaxBonusAllowManualEditingNearest10Rupee exten
 	WebElement Bonus;
 	@FindBy(xpath="//*[@id=\"bonus_definition_list\"]/div[1]/span/a")
 	WebElement AddNewBonus;
-	@FindBy(id="bonus_exgratia_definition_heading_name")
+	@FindBy(id="bonusHeadName")
 	WebElement BonusHead;
 	@FindBy(id="bonus_exgratia_definition_manual_editing")
 	WebElement Manual;
@@ -32,6 +32,8 @@ public class CreateBonusDefinitionMaxBonusAllowManualEditingNearest10Rupee exten
 	WebElement EmployeeswithMinWorkingDays;
 	@FindBy(id="bonus_exgratia_definition_salary_independent")
 	WebElement CheckSalaryIndependent;
+	@FindBy(id="bonus_exgratia_definition_salary_dependent")
+	WebElement CheckSalaryDependent;
 	@FindBy(id="bonus_exgratia_definition_pt_on_bonus_exgratia")
 	WebElement SelectPTOnBonus;
 	@FindBy(id="bonus_exgratia_definition_pt_consider_month_current_month")
@@ -92,6 +94,9 @@ public class CreateBonusDefinitionMaxBonusAllowManualEditingNearest10Rupee exten
 	}
 	public void checksalaryindependent() {
 		CheckSalaryIndependent.click();
+	}
+	public void checksalarydependent() {
+		CheckSalaryDependent.click();
 	}
 	public void selectptonbonus() {
 		SelectPTOnBonus.click();
