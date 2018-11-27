@@ -18,6 +18,7 @@ public class CreateBonusDefinitionFormulaConsideremployeeswithminimumworkingCalc
 	WebElement BonusHead;
 	@FindBy(id="bonus_exgratia_definition_formula_id")
 	WebElement SelectFormula;
+	
 	@FindBy(id="bonus_exgratia_definition_max_amount")
 	WebElement MaxBonus;
 	@FindBy(id="bonus_exgratia_definition_from_month")

@@ -14,7 +14,7 @@ public class CreateBonusDefinitionMaxBonusPTonBonusRespectiveMonthDoNotConsiderP
 	WebElement Bonus;
 	@FindBy(xpath="//*[@id=\"bonus_definition_list\"]/div[1]/span/a")
 	WebElement AddNewBonus;
-	@FindBy(id="bonus_exgratia_definition_heading_name")
+	@FindBy(id="bonusHeadName")
 	WebElement BonusHead;
 	@FindBy(id="bonus_exgratia_definition_formula_id")
 	WebElement SelectFormula;
