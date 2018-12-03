@@ -22,6 +22,8 @@ public class CreateHRCategorywithoutRequired extends BasePage{
 	WebElement createhrcategorydetail;
 	@FindBy(xpath="//*[@id=\"hr_category_details_result_response\"]/div/strong")
 	WebElement successfullMessage;
+	@FindBy(xpath="//*[@id=\"hr_category_details_list\"]/div[2]/table/tbody/tr/td[contains(text(),'Driving License No')]/parent::tr/td[4]/a")
+	WebElement DeleteDetail;
 
 	public CreateHRCategorywithoutRequired(WebDriver driver) {
 		super(driver);
@@ -51,5 +53,9 @@ public class CreateHRCategorywithoutRequired extends BasePage{
 	
 	public String getMessage(){
 		return successfullMessage.getText();
+	}
+	public void deletedetail() {
+		DeleteDetail.click();
+		switchToPopUpAndAccept(driver);
 	}
 }

@@ -14,7 +14,7 @@ public class DeleteHRDetails extends BasePage{
 	WebElement hrCategory;
 	@FindBy(xpath="//div[@id='hr_category_list']//div[3]//a[1]")
 	WebElement nextButton;
-	@FindBy(xpath="//div[@id='hr_category_list']//div[2]//tr[2]//td[2]//a[text()='Details']")
+	@FindBy(xpath="//div[@id='hr_category_list']//div[2]//tr//td[2]//a[text()='Details']")
 	WebElement detailsLink;
 	@FindBy(xpath="//div[@id='hr_category_details_list']//div[2]//td[4]//a[text()='Delete']")
 	WebElement deleteButton;

@@ -14,7 +14,7 @@ public class States extends BaseTest{
 		CreateState cs=new CreateState(driver);
 		cs.clickMastserLink();
 		cs.selectState();
-		cs.enterStateName("London");
+		cs.enterStateName("Arunachal Pradesh");
 		cs.clickCreateButton();
 		String s=cs.getMessage();
 		Assert.assertEquals(s, "State was created successfully.");
@@ -26,7 +26,7 @@ public class States extends BaseTest{
 		us.clickMastserLink();
 		us.selectState();
 		us.clickEditIcon();
-		us.enterStateName("London");
+		us.enterStateName("Arunachal Pradesh");
 		us.clickUpdateButton();
 		String s=us.getMessage();
 		Assert.assertEquals(s, "State was successfully updated.");

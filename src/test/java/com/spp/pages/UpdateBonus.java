@@ -7,7 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.spp.common.BasePage;
 
-public class ComputeBonus extends BasePage{
+public class UpdateBonus extends BasePage{
 	@FindBy(id="salary") 
 	WebElement Salary;
 	@FindBy(xpath="//*[@id=\"menu\"]/li[6]/div/div[1]/ul/li[10]/a")
@@ -24,7 +24,7 @@ public class ComputeBonus extends BasePage{
 	WebElement EnterBonusAmount;
 	@FindBy(css="input[type=submit]")
 	WebElement ClickOnUpdate;
-	public ComputeBonus(WebDriver driver) {
+	public UpdateBonus(WebDriver driver) {
 		super(driver);
 		PageFactory.initElements(driver,this);
 	}
@@ -55,5 +55,5 @@ public class ComputeBonus extends BasePage{
 	public void clickonupdatebutton() {
 		ClickOnUpdate.click();
 	}
-
+	
 }

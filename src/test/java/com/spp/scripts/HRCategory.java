@@ -14,7 +14,7 @@ import com.spp.pages.EditHRDetails;
 
 public class HRCategory extends BaseTest{
 
-/*	@Test(priority=0)
+	@Test(priority=0)
 	public void verifyCreatedHRCategory_SC_67(){
 		CreateHRCategory ch=new CreateHRCategory(driver);
 		ch.clickMastserLink();
@@ -71,7 +71,7 @@ public class HRCategory extends BaseTest{
 		Assert.assertEquals(s, "HR Category Detail updated successfully.");
 	}
 
-	@Test(priority=4)
+		@Test(priority=4)
 	public void verifyDeletedHRDetails_SC_355(){
 		DeleteHRDetails ah=new DeleteHRDetails(driver);
 		ah.clickMastserLink();
@@ -83,7 +83,7 @@ public class HRCategory extends BaseTest{
 		Assert.assertEquals(s, "HR Category Detail was successfully deleted.");
 	}
 
-	@Test(priority=5)
+		@Test(priority=5)
 	public void verifyDeletedHRCategory_SC_68(){
 		DeleteHRCategory dh=new DeleteHRCategory(driver);
 		dh.clickMastserLink();
@@ -92,9 +92,9 @@ public class HRCategory extends BaseTest{
 		dh.clickDeleteButton();
 		String s=dh.getMessage();
 		Assert.assertEquals(s, "HR Category was successfully deleted.");
-	} */
+	} 
 	
-	@Test(priority=6)
+		@Test(priority=6)
 	public void CreateHRCategorywithoutRequired_SC_451() throws Exception{
 		CreateHRCategorywithoutRequired cr=new CreateHRCategorywithoutRequired(driver);
 		cr.clickMastserLink();
@@ -104,6 +104,8 @@ public class HRCategory extends BaseTest{
 		cr.clickCreateButton();
 		String s=cr.getMessage();
 		Assert.assertEquals(s, "HR Category Detail created successfully.");
+		cr.deletedetail();
+		Thread.sleep(5000);
 	} 
 	
 }

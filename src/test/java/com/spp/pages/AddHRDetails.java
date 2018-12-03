@@ -14,7 +14,7 @@ public class AddHRDetails extends BasePage {
 	WebElement hrCategory;
 	@FindBy(xpath="//div[@id='hr_category_list']//div[3]//a[1]")
 	WebElement nextButton;
-	@FindBy(xpath="//div[@id='hr_category_list']//div[2]//tr[2]//td[2]//a[text()='Details']")
+	@FindBy(xpath="//div[@id='hr_category_list']//div[2]//tr//td[2]//a[text()='Details']")
 	WebElement detailsLink;
 	@FindBy(id="hr_category_detail_name")
 	WebElement labelName;

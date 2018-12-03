@@ -13,7 +13,7 @@ public class EditHRCategory extends BasePage{
 	WebElement hrCategory;
 	@FindBy(xpath="//div[@id='hr_category_list']//div[3]//a[1]")
 	WebElement nextButton;
-	@FindBy(xpath="(//div[@id='hr_category_list']//div[2]//td[3]//a[text()='Edit'])[2]")
+	@FindBy(xpath="(//div[@id='hr_category_list']//div[2]//td[3]//a[text()='Edit'])[1]")
 	WebElement editIcon;
 	@FindBy(id="hr_category_category_name")
 	WebElement hrName;

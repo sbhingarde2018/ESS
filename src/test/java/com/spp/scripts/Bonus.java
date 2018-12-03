@@ -9,7 +9,7 @@ import com.spp.generics.Utility;
 import com.spp.pages.*;
 
 public class Bonus extends BaseTest{
-/*	@Test(priority=0)
+	@Test(priority=0)
 	public void AddNewBonusDefinitionForFormula_SC_340() throws Exception{
 		AddNewBonusDefinitionForFormula cb=new AddNewBonusDefinitionForFormula(driver);
 		cb.clickSalary();
@@ -26,16 +26,23 @@ public class Bonus extends BaseTest{
 		cb.clickCreateBonus();
 		String t=cb.getMessage();
 		Assert.assertEquals(t, "Bonus successfully created");
-		Thread.sleep(5000);
-		cb.clickDeleteButton();
-		cb.switchToPopUpAndAccept(driver);
-	}*/
-	/*@Test(priority=1)
+	//	cb.clickDeleteButton();
+	//	cb.switchToPopUpAndAccept(driver);
+	}
+	@Test(priority=1)
  	public void ComputeBonus_SC_341() throws Exception{
 		ComputeBonus sh=new ComputeBonus(driver);
 		sh.clickSalary();
 		sh.selectBonus();
 		sh.clickCompute();
+		Thread.sleep(2000);
+		sh.clickonfilter();
+		Thread.sleep(2000);
+		sh.clickonload();
+		Thread.sleep(2000);
+		sh.clickonedit();
+		sh.enterbonusamount("2000");
+		sh.clickonupdatebutton();		
 }
 	@Test(priority=2)
  	public void CheckBonusInGeneratedReport_SC_349() throws Exception{
@@ -43,7 +50,7 @@ public class Bonus extends BaseTest{
 		sh.clickReport();
 		sh.selectBonusReport();
 		sh.clickReports("Bonus Definition");
-		sh.clickMonthYear("Apr/2018");
+		sh.clickMonthYear("Apr/2013");
 		sh.clickGetEmployee();
 		Thread.sleep(2000);
 		sh.clickGetLoad();
@@ -56,9 +63,9 @@ public class Bonus extends BaseTest{
 		sh.clickSalary();
 		sh.selectBonus();
 		sh.clickCompute();
-		sh.selectEdit();
-		sh.clickBonusGiven("3000");
-		sh.clickUpdate();;
+		sh.clickonedit();
+		sh.enterbonusamount("3000");
+		sh.clickonupdatebutton();	
 		}
 	@Test(priority=4)
  	public void DeleteBonus_SC_403() throws Exception{
@@ -75,6 +82,8 @@ public class Bonus extends BaseTest{
 		sh.clickDelete();
 		sh.switchToPopUpAndAccept(driver);
 	}
+	
+	
 	@Test(priority=5)
 	public void EditBonusDefinition_SC_636() throws Exception{
 		EditBonusDefinition ed=new EditBonusDefinition(driver);
@@ -98,9 +107,9 @@ public class Bonus extends BaseTest{
 		de.switchToPopUpAndAccept(driver);
 		String t=de.getmessage();
 		Assert.assertEquals(t, "Bonus successfully deleted");
-	}*/
+	}
 	
-/*	@Test(priority=7)
+	@Test(priority=7)
  	public void AddNewBonusDefinition_SC_638() throws Exception{
 		AddNewBonusDefinition sh=new AddNewBonusDefinition(driver);
 		sh.clickSalary();
@@ -558,9 +567,9 @@ public class Bonus extends BaseTest{
 		Assert.assertEquals(t, "Bonus successfully created");
 		ad.clickDeleteButton();
 		ad.switchToPopUpAndAccept(driver);
-	}*/
+	}
 	
-	/*@Test(priority=28)
+	@Test(priority=28)
 	public void AddNewBonusDefinitionMaxBonusModeofPaymentBankAdvise_SC_660() throws Exception{
 		AddNewBonusDefinitionMaxBonusModeofPaymentBankAdvise ad=new AddNewBonusDefinitionMaxBonusModeofPaymentBankAdvise(driver);
 		ad.clickSalary();
@@ -5779,7 +5788,7 @@ public class Bonus extends BaseTest{
 		Assert.assertEquals(t, "Bonus successfully created");
 		cb.clickDeleteButton();
 		cb.switchToPopUpAndAccept(driver);	
-	}*/
+	}
 	@Test(priority=256)
 	public void CreateBonusDefinitionFormulaCurrentMonthNearest10Rupee_SC_890() throws Exception{
 		CreateBonusDefinitionFormulaCalculateModeofPaymentChequeNearest10Rupee cb = new CreateBonusDefinitionFormulaCalculateModeofPaymentChequeNearest10Rupee(driver);
@@ -6125,6 +6134,145 @@ public class Bonus extends BaseTest{
 		cb.SelectModeofPayment("Bank Advise");
 		cb.selectptonbonus();
 		cb.selectcurrentmonth();
+		cb.checknearest10rupee();
+		cb.clickCreateBonus();
+		String t=cb.getMessage();
+		Assert.assertEquals(t, "Bonus successfully created");
+		cb.clickDeleteButton();
+		cb.switchToPopUpAndAccept(driver);
+	}
+	@Test(priority=271)
+	public void AddNewBonusDefinitionMaxBonusChequeNearest10Rupee_SC_905() throws Exception {
+		CreateBonusDefinitionFormulaCalculateModeofPaymentChequeNearest10Rupee cb = new CreateBonusDefinitionFormulaCalculateModeofPaymentChequeNearest10Rupee(driver);
+		cb.clickSalary();
+		cb.selectBonus();
+		cb.clickAddNewBonus();
+		cb.EnterBonusHead("Diwali1");
+		cb.selectformula("Bonus");
+		cb.EnterMaxBonus("10000");
+		cb.SelectFromMonth("Mar/2013");
+		cb.SelectToMonth("Apr/2013");
+		cb.SelectPaymonth("Apr/2013");	
+		cb.checksalaryindependent();	
+		cb.SelectModeofPayment("Cheque");
+		cb.selectptonbonus();
+		cb.selectcurrentmonth();
+		cb.checknearest10rupee();
+		cb.clickCreateBonus();
+		String t=cb.getMessage();
+		Assert.assertEquals(t, "Bonus successfully created");
+		cb.clickDeleteButton();
+		cb.switchToPopUpAndAccept(driver);
+	}
+	@Test(priority=272)
+	public void CreateBonusDefinitionFormulaCalculateChequeNearest10Rupee_SC_906() throws Exception {
+		CreateBonusDefinitionFormulaCalculateModeofPaymentChequeNearest10Rupee cb = new CreateBonusDefinitionFormulaCalculateModeofPaymentChequeNearest10Rupee(driver);
+		cb.clickSalary();
+		cb.selectBonus();
+		cb.clickAddNewBonus();
+		cb.EnterBonusHead("Diwali1");
+		cb.selectformula("Bonus");
+		cb.SelectFromMonth("Mar/2013");
+		cb.SelectToMonth("Apr/2013");
+		cb.SelectPaymonth("Apr/2013");	
+		cb.checksalaryindependent();	
+		cb.checkcalculate();
+		cb.SelectModeofPayment("Cheque");
+		cb.selectptonbonus();
+		cb.selectcurrentmonth();
+		cb.checknearest10rupee();
+		cb.clickCreateBonus();
+		String t=cb.getMessage();
+		Assert.assertEquals(t, "Bonus successfully created");
+		cb.clickDeleteButton();
+		cb.switchToPopUpAndAccept(driver);
+	}
+	@Test(priority=273)
+	public void AddNewBonusDefinitionAllowManualEditingBankAdviseCurrentMonthNearest10Rupee_SC_907() throws Exception {
+		CreateBonusDefinitionFormulaCalculateModeofPaymentChequeNearest10Rupee cb = new CreateBonusDefinitionFormulaCalculateModeofPaymentChequeNearest10Rupee(driver);
+		cb.clickSalary();
+		cb.selectBonus();
+		cb.clickAddNewBonus();
+		cb.EnterBonusHead("Diwali1");
+		cb.clickManual();
+		cb.EnterMaxBonus("10000");
+		cb.SelectFromMonth("Mar/2013");
+		cb.SelectToMonth("Apr/2013");
+		cb.SelectPaymonth("Apr/2013");	
+		cb.checksalaryindependent();	
+		cb.checkcalculate();
+		cb.SelectModeofPayment("Bank Advise");
+		cb.selectptonbonus();
+		cb.selectcurrentmonth();
+		cb.checknearest10rupee();
+		cb.clickCreateBonus();
+		String t=cb.getMessage();
+		Assert.assertEquals(t, "Bonus successfully created");
+		cb.clickDeleteButton();
+		cb.switchToPopUpAndAccept(driver);
+	}
+	@Test(priority=274)
+	public void CreateBonusDefinitionFormulaCalculateBankAdviseNearest10Rupee_SC_908() throws Exception {
+		CreateBonusDefinitionFormulaCalculateModeofPaymentChequeNearest10Rupee cb = new CreateBonusDefinitionFormulaCalculateModeofPaymentChequeNearest10Rupee(driver);
+		cb.clickSalary();
+		cb.selectBonus();
+		cb.clickAddNewBonus();
+		cb.EnterBonusHead("Diwali1");
+		cb.selectformula("Bonus");
+		cb.SelectFromMonth("Mar/2013");
+		cb.SelectToMonth("Apr/2013");
+		cb.SelectPaymonth("Apr/2013");	
+		cb.checksalaryindependent();	
+		cb.checkcalculate();
+		cb.SelectModeofPayment("Bank Advise");
+		cb.selectptonbonus();
+		cb.selectcurrentmonth();
+		cb.checknearest10rupee();
+		cb.clickCreateBonus();
+		String t=cb.getMessage();
+		Assert.assertEquals(t, "Bonus successfully created");
+		cb.clickDeleteButton();
+		cb.switchToPopUpAndAccept(driver);	
+	}
+	@Test(priority=275)
+	public void AddNewBonusDefinitionMaxBonusModeofPaymentDDRespectiveMonthNearest10Rupee_SC_917() throws Exception {
+		CreateBonusDefinitionFormulaCalculateModeofPaymentChequeNearest10Rupee cb = new CreateBonusDefinitionFormulaCalculateModeofPaymentChequeNearest10Rupee(driver);
+		cb.clickSalary();
+		cb.selectBonus();
+		cb.clickAddNewBonus();
+		cb.EnterBonusHead("Diwali1");
+		cb.selectformula("Bonus");
+		cb.EnterMaxBonus("10000");
+		cb.SelectFromMonth("Mar/2013");
+		cb.SelectToMonth("Apr/2013");
+		cb.SelectPaymonth("Apr/2013");	
+		cb.checksalaryindependent();	
+		cb.SelectModeofPayment("DD");
+		cb.selectptonbonus();
+		cb.selectrespectivemonthconsiderpreviousyear();
+		cb.checknearest10rupee();
+		cb.clickCreateBonus();
+		String t=cb.getMessage();
+		Assert.assertEquals(t, "Bonus successfully created");
+		cb.clickDeleteButton();
+		cb.switchToPopUpAndAccept(driver);	
+	}
+	@Test(priority=276)
+	public void CreateBonusDefinitionFormulaCalculateBankAdviseRespectiveMonthNearest10Rupee_SC_918() throws Exception {
+		CreateBonusDefinitionFormulaCalculateModeofPaymentChequeNearest10Rupee cb = new CreateBonusDefinitionFormulaCalculateModeofPaymentChequeNearest10Rupee(driver);
+		cb.clickSalary();
+		cb.selectBonus();
+		cb.clickAddNewBonus();
+		cb.EnterBonusHead("Diwali1");
+		cb.selectformula("Bonus");
+		cb.SelectFromMonth("Mar/2013");
+		cb.SelectToMonth("Apr/2013");
+		cb.SelectPaymonth("Apr/2013");	
+		cb.checksalaryindependent();	
+		cb.checkcalculate();
+		cb.SelectModeofPayment("Bank Advise");
+		cb.selectptonbonus();
+		cb.selectrespectivemonthconsiderpreviousyear();
 		cb.checknearest10rupee();
 		cb.clickCreateBonus();
 		String t=cb.getMessage();

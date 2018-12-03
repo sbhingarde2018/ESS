@@ -12,7 +12,7 @@ public class DeleteState extends BasePage{
 	WebElement masterLink;
 	@FindBy(xpath="//a[text()='States']")
 	WebElement state;
-	@FindBy(xpath="//tr/td[1][text()='Gurgaon']/parent::tr/td[3]/a")
+	@FindBy(xpath="//tr/td[1][text()='Arunachal Pradesh']/parent::tr/td[3]/a")
 	WebElement deleteButton;
 	@FindBy(xpath="//strong[text()='State was successfully deleted.']")
 	WebElement successfullMessage;
