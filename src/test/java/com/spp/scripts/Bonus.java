@@ -109,7 +109,7 @@ public class Bonus extends BaseTest{
 		Assert.assertEquals(t, "Bonus successfully deleted");
 	}
 	
-	@Test(priority=7)
+/*	@Test(priority=7)
  	public void AddNewBonusDefinition_SC_638() throws Exception{
 		AddNewBonusDefinition sh=new AddNewBonusDefinition(driver);
 		sh.clickSalary();
@@ -124,7 +124,6 @@ public class Bonus extends BaseTest{
 		sh.clickCreateBonus();
 		String t=sh.getMessage();
 		Assert.assertEquals(t, "Bonus successfully created");
-		Thread.sleep(5000);
 		sh.clickDeleteButton();
 		sh.switchToPopUpAndAccept(driver);
 }
@@ -146,7 +145,6 @@ public class Bonus extends BaseTest{
 		cb.clickCreateBonus();
 		String t=cb.getMessage();
 		Assert.assertEquals(t, "Bonus successfully created");
-		Thread.sleep(5000);
 		cb.clickDeleteButton();
 		cb.switchToPopUpAndAccept(driver);
 	}
@@ -168,7 +166,6 @@ public class Bonus extends BaseTest{
 		cb.clickCreateBonus();
 		String t=cb.getMessage();
 		Assert.assertEquals(t, "Bonus successfully created");
-		Thread.sleep(5000);
 		cb.clickDeleteButton();
 		cb.switchToPopUpAndAccept(driver);
 	}
@@ -189,7 +186,6 @@ public class Bonus extends BaseTest{
 		cb.clickCreateBonus();
 		String t=cb.getMessage();
 		Assert.assertEquals(t, "Bonus successfully created");
-		Thread.sleep(5000);
 		cb.clickDeleteButton();
 		cb.switchToPopUpAndAccept(driver);
 	}
@@ -211,7 +207,6 @@ public class Bonus extends BaseTest{
 		cb.clickCreateBonus();
 		String t=cb.getMessage();
 		Assert.assertEquals(t, "Bonus successfully created");
-		Thread.sleep(5000);
 		cb.clickDeleteButton();
 		cb.switchToPopUpAndAccept(driver);
 	}
@@ -232,7 +227,6 @@ public class Bonus extends BaseTest{
 		cb.clickCreateBonus();
 		String t=cb.getMessage();
 		Assert.assertEquals(t, "Bonus successfully created");
-		Thread.sleep(5000);
 		cb.clickDeleteButton();
 		cb.switchToPopUpAndAccept(driver);
 		
@@ -255,7 +249,6 @@ public class Bonus extends BaseTest{
 		cb.clickCreateBonus();
 		String t=cb.getMessage();
 		Assert.assertEquals(t, "Bonus successfully created");
-		Thread.sleep(5000);
 		cb.clickDeleteButton();
 		cb.switchToPopUpAndAccept(driver);
 		}
@@ -279,7 +272,6 @@ public class Bonus extends BaseTest{
 		cb.clickCreateBonus();
 		String t=cb.getMessage();
 		Assert.assertEquals(t, "Bonus successfully created");
-		Thread.sleep(5000);
 		cb.clickDeleteButton();
 		cb.switchToPopUpAndAccept(driver);
 	}
@@ -301,7 +293,6 @@ public class Bonus extends BaseTest{
 		cb.clickCreateBonus();
 		String t=cb.getMessage();
 		Assert.assertEquals(t, "Bonus successfully created");
-		Thread.sleep(5000);
 		cb.clickDeleteButton();
 		cb.switchToPopUpAndAccept(driver);
 	}
@@ -323,7 +314,6 @@ public class Bonus extends BaseTest{
 		cb.clickCreateBonus();
 		String t=cb.getMessage();
 		Assert.assertEquals(t, "Bonus successfully created");
-		Thread.sleep(5000);
 		cb.clickDeleteButton();
 		cb.switchToPopUpAndAccept(driver);
 	}
@@ -347,7 +337,6 @@ public class Bonus extends BaseTest{
 		cb.clickCreateBonus();
 		String t=cb.getMessage();
 		Assert.assertEquals(t, "Bonus successfully created");
-		Thread.sleep(5000);
 		cb.clickDeleteButton();
 		cb.switchToPopUpAndAccept(driver);
 	}
@@ -1954,7 +1943,6 @@ public class Bonus extends BaseTest{
 		cb.clickCreateBonus();
 		String t=cb.getMessage();
 		Assert.assertEquals(t, "Bonus successfully created");
-		Thread.sleep(5000);
 		cb.clickDeleteButton();
 		cb.switchToPopUpAndAccept(driver);
 	}
@@ -3060,7 +3048,6 @@ public class Bonus extends BaseTest{
 		cb.clickCreateBonus();
 		String t=cb.getMessage();
 		Assert.assertEquals(t, "Bonus successfully created");
-		Thread.sleep(5000);
 		cb.clickDeleteButton();
 	}
 	@Test(priority=137)
@@ -3082,7 +3069,6 @@ public class Bonus extends BaseTest{
 		cb.clickCreateBonus();
 		String t=cb.getMessage();
 		Assert.assertEquals(t, "Bonus successfully created");
-		Thread.sleep(5000);
 		cb.clickDeleteButton();
 	}
 	@Test(priority=138)
@@ -3107,7 +3093,6 @@ public class Bonus extends BaseTest{
 		cb.clickCreateBonus();
 		String t=cb.getMessage();
 		Assert.assertEquals(t, "Bonus successfully created");
-		Thread.sleep(5000);
 		cb.clickDeleteButton();
 	}
 	@Test(priority=139)
@@ -3131,7 +3116,6 @@ public class Bonus extends BaseTest{
 		cb.clickCreateBonus();
 		String t=cb.getMessage();
 		Assert.assertEquals(t, "Bonus successfully created");
-		Thread.sleep(5000);
 		cb.clickDeleteButton();
 	}
 	@Test(priority=140)
@@ -3155,7 +3139,6 @@ public class Bonus extends BaseTest{
 		cb.clickCreateBonus();
 		String t=cb.getMessage();
 		Assert.assertEquals(t, "Bonus successfully created");
-		Thread.sleep(5000);
 		cb.clickDeleteButton();
 		}
 	@Test(priority=141)
@@ -3179,7 +3162,6 @@ public class Bonus extends BaseTest{
 		cb.clickCreateBonus();
 		String t=cb.getMessage();
 		Assert.assertEquals(t, "Bonus successfully created");
-		Thread.sleep(5000);
 		cb.clickDeleteButton();
 	}
 	@Test(priority=142)
@@ -3201,7 +3183,6 @@ public class Bonus extends BaseTest{
 		cb.clickCreateBonus();
 		String t=cb.getMessage();
 		Assert.assertEquals(t, "Bonus successfully created");
-		Thread.sleep(5000);
 		cb.clickDeleteButton();
 	}
 	@Test(priority=143)
@@ -3225,7 +3206,6 @@ public class Bonus extends BaseTest{
 		cb.clickCreateBonus();
 		String t=cb.getMessage();
 		Assert.assertEquals(t, "Bonus successfully created");
-		Thread.sleep(5000);
 		cb.clickDeleteButton();
 	}
 	@Test(priority=144)
@@ -3249,7 +3229,6 @@ public class Bonus extends BaseTest{
 		cb.clickCreateBonus();
 		String t=cb.getMessage();
 		Assert.assertEquals(t, "Bonus successfully created");
-		Thread.sleep(5000);
 		cb.clickDeleteButton();
 	}
 	@Test(priority=145)
@@ -3320,7 +3299,6 @@ public class Bonus extends BaseTest{
 		cb.clickCreateBonus();
 		String t=cb.getMessage();
 		Assert.assertEquals(t, "Bonus successfully created");
-		Thread.sleep(5000);
 		cb.clickDeleteButton();
 	
 	}
@@ -4360,7 +4338,6 @@ public class Bonus extends BaseTest{
 		cb.clickCreateBonus();
 		String t=cb.getMessage();
 		Assert.assertEquals(t, "Bonus successfully created");
-		
 		cb.clickDeleteButton();
 		cb.switchToPopUpAndAccept(driver);
 	}
@@ -4382,7 +4359,6 @@ public class Bonus extends BaseTest{
 		cb.clickCreateBonus();
 		String t=cb.getMessage();
 		Assert.assertEquals(t, "Bonus successfully created");
-		
 		cb.clickDeleteButton();
 		cb.switchToPopUpAndAccept(driver);
 	}
@@ -4405,7 +4381,6 @@ public class Bonus extends BaseTest{
 		cb.clickCreateBonus();
 		String t=cb.getMessage();
 		Assert.assertEquals(t, "Bonus successfully created");
-		
 		cb.clickDeleteButton();
 		cb.switchToPopUpAndAccept(driver);
 	}
@@ -4427,7 +4402,6 @@ public class Bonus extends BaseTest{
 		cb.clickCreateBonus();
 		String t=cb.getMessage();
 		Assert.assertEquals(t, "Bonus successfully created");
-		
 		cb.clickDeleteButton();
 		cb.switchToPopUpAndAccept(driver);
 	}
@@ -4451,7 +4425,6 @@ public class Bonus extends BaseTest{
 		cb.clickCreateBonus();
 		String t=cb.getMessage();
 		Assert.assertEquals(t, "Bonus successfully created");
-		
 		cb.clickDeleteButton();
 		cb.switchToPopUpAndAccept(driver);
 	}
@@ -6068,8 +6041,8 @@ public class Bonus extends BaseTest{
 		Assert.assertEquals(t, "Bonus successfully created");
 		cb.clickDeleteButton();
 		cb.switchToPopUpAndAccept(driver);
-	}
-	/*@Test(priority=268)
+	}*/
+	@Test(priority=268)
 	public void CreateBonusDefinitionMaxBonusCalculateModeNearest10Rupee_SC_902() throws Exception {
 		CreateBonusDefinitionFormulaCalculateModeofPaymentChequeNearest10Rupee cb = new CreateBonusDefinitionFormulaCalculateModeofPaymentChequeNearest10Rupee(driver);
 		cb.clickSalary();
@@ -6279,5 +6252,5 @@ public class Bonus extends BaseTest{
 		Assert.assertEquals(t, "Bonus successfully created");
 		cb.clickDeleteButton();
 		cb.switchToPopUpAndAccept(driver);
-	}*/
+	}
 	}
