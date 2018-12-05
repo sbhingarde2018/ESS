@@ -11,7 +11,7 @@ public class DeleteLeaveDefinition extends BasePage {
 	WebElement masterLink;
 	@FindBy(xpath="//a[text()='Leave Definitions']")
 	WebElement leaveDefinitions;
-	@FindBy(xpath="//*[@id='leave_definitions']/div[2]/table/tbody/tr/td[contains(text(),'Leave')]/parent::tr/td[7]/a")
+	@FindBy(xpath="//*[@id='leave_definitions']/div[2]/table/tbody/tr/td[contains(text(),'pune1')]/parent::tr/td[7]/a")
 	WebElement deleteButton;
 	@FindBy(xpath="//strong[text()='Leave definition successfully deleted.']")
 	WebElement successfullMessage;

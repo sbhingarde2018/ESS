@@ -21,6 +21,10 @@ public class CreateNewLeavewithoutAffectSalandAllot extends BasePage{
 	WebElement ConsiderforLeave;
 	@FindBy(xpath="//*[@id=\"new_leave_definition\"]/div[4]/input")
 	WebElement CreateLeave;
+	@FindBy(xpath="//strong[text()='Leave definition successfully created.']")
+	WebElement message;
+	@FindBy(xpath="//*[@id=\"leave_definitions\"]/div[2]/table/tbody/tr/td[contains(text(),'Paid Leave')]/parent::tr/td[7]/a")
+	WebElement ClickDelete;
 	
 	public CreateNewLeavewithoutAffectSalandAllot(WebDriver driver) {
 		super(driver);
@@ -46,5 +50,12 @@ public class CreateNewLeavewithoutAffectSalandAllot extends BasePage{
 	}
 	public void createleave() {
 		CreateLeave.click();
+	}
+	public String getTextMessage(){
+		return message.getText();
+	}
+	public void clickdelete() {
+		ClickDelete.click();
+		switchToPopUpAndAccept(driver);
 	}
 }

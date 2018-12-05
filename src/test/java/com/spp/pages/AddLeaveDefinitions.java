@@ -7,12 +7,12 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.spp.common.BasePage;
 
-public class UpdateLeaveDefinition extends BasePage{
+public class AddLeaveDefinitions extends BasePage{
 	@FindBy(id="master")
 	WebElement masterLink;
 	@FindBy(xpath="//a[text()='Leave Definitions']")
 	WebElement leaveDefinitions;
-	@FindBy(xpath="//*[@id='leave_definitions']/div[2]/table/tbody/tr/td[contains(text(),'newleave')]/parent::tr/td[6]/a")
+	@FindBy(xpath="//*[@id='leave_definitions']/div[2]/table/tbody/tr/td[contains(text(),'Leave')]/parent::tr/td[6]/a")
 	WebElement editButton;
 	@FindBy(id="leave_definition_leave_name")
 	WebElement leaveName;
@@ -20,12 +20,12 @@ public class UpdateLeaveDefinition extends BasePage{
 	WebElement shortName;
 	@FindBy(id="leave_definition_consider_for_setting")
 	WebElement considerForLeaveSettings;
-	@FindBy(xpath="//input[@value='Update Leave Definition']")
-	WebElement updateButton;
-	@FindBy(xpath="//strong[text()='Leave definition successfully updated.']")
+	@FindBy(xpath="//input[@value='Create Leave Definition']")
+	WebElement CreateButton;
+	@FindBy(xpath="//strong[text()='Leave definition successfully created.']")
 	WebElement sucessfullMessage;
 	
-	public UpdateLeaveDefinition(WebDriver driver) {
+	public AddLeaveDefinitions(WebDriver driver) {
 		super(driver);
 		PageFactory.initElements(driver, this);
 	}
@@ -56,12 +56,11 @@ public class UpdateLeaveDefinition extends BasePage{
 		considerForLeaveSettings.click();
 	}
 	
-	public void clickUpdateButton(){
-		updateButton.click();
+	public void clickCreateDefinition(){
+		CreateButton.click();
 	}
 	
-	public String getMessage(){
+	public String getTextMessage(){
 		return sucessfullMessage.getText();
 	}
-	
 }

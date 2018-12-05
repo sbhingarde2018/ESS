@@ -456,7 +456,7 @@ public class Bonus extends BaseTest{
 		cb.clickSalary();
 		cb.selectBonus();
 		cb.clickAddNewBonus();
-		cb.EnterBonusHead("Pateti");
+		cb.EnterBonusHead("Diwali");
 		cb.clickManual();
 		cb.SelectFromMonth("Mar/2013");
 		cb.SelectToMonth("Apr/2013");
@@ -477,7 +477,7 @@ public class Bonus extends BaseTest{
 		cb.clickSalary();
 		cb.selectBonus();
 		cb.clickAddNewBonus();
-		cb.EnterBonusHead("Pateti");
+		cb.EnterBonusHead("Diwali");
 		cb.clickManual();
 		cb.EnterMaxBonus("10000");
 		cb.SelectFromMonth("Mar/2013");
@@ -499,7 +499,7 @@ public class Bonus extends BaseTest{
 		cb.clickSalary();
 		cb.selectBonus();
 		cb.clickAddNewBonus();
-		cb.EnterBonusHead("Pateti");
+		cb.EnterBonusHead("Diwali");
 		cb.selectformula("Bonus");
 		cb.SelectFromMonth("Mar/2013");
 		cb.SelectToMonth("Apr/2013");
@@ -520,7 +520,7 @@ public class Bonus extends BaseTest{
 		cb.clickSalary();
 		cb.selectBonus();
 		cb.clickAddNewBonus();
-		cb.EnterBonusHead("Pateti");
+		cb.EnterBonusHead("Diwali");
 		cb.selectformula("Bonus");
 		cb.EnterMaxBonus("10000");
 		cb.SelectFromMonth("Mar/2013");
@@ -542,7 +542,7 @@ public class Bonus extends BaseTest{
 		ad.clickSalary();
 		ad.selectBonus();
 		ad.clickAddNewBonus();
-		ad.EnterBonusHead("Pateti");
+		ad.EnterBonusHead("Diwali");
 		ad.selectformula("Bonus");
 		ad.EnterMaxBonus("10000");
 		ad.SelectFromMonth("Apr/2013");
@@ -564,7 +564,7 @@ public class Bonus extends BaseTest{
 		ad.clickSalary();
 		ad.selectBonus();
 		ad.clickAddNewBonus();
-		ad.EnterBonusHead("Pateti");
+		ad.EnterBonusHead("Diwali");
 		ad.selectformula("Bonus");
 		ad.EnterMaxBonus("10000");
 		ad.SelectFromMonth("Apr/2013");
@@ -585,7 +585,7 @@ public class Bonus extends BaseTest{
 		ad.clickSalary();
 		ad.selectBonus();
 		ad.clickAddNewBonus();
-		ad.EnterBonusHead("Pateti");
+		ad.EnterBonusHead("Diwali");
 		ad.selectformula("Bonus");
 		ad.SelectFromMonth("Apr/2013");
 		ad.SelectToMonth("Apr/2013");
@@ -605,7 +605,7 @@ public class Bonus extends BaseTest{
 		ad.clickSalary();
 		ad.selectBonus();
 		ad.clickAddNewBonus();
-		ad.EnterBonusHead("Pateti");
+		ad.EnterBonusHead("Diwali");
 		ad.selectformula("Bonus");
 		ad.EnterMaxBonus("10000");
 		ad.SelectFromMonth("Apr/2013");
@@ -627,7 +627,7 @@ public class Bonus extends BaseTest{
 		ad.clickSalary();
 		ad.selectBonus();
 		ad.clickAddNewBonus();
-		ad.EnterBonusHead("Pateti");
+		ad.EnterBonusHead("Diwali");
 		ad.clickManual();
 		ad.EnterMaxBonus("10000");
 		ad.SelectFromMonth("Apr/2013");
@@ -648,7 +648,7 @@ public class Bonus extends BaseTest{
 		ad.clickSalary();
 		ad.selectBonus();
 		ad.clickAddNewBonus();
-		ad.EnterBonusHead("Pateti");
+		ad.EnterBonusHead("Diwali");
 		ad.selectformula("Bonus");
 		ad.SelectFromMonth("Apr/2013");
 		ad.SelectToMonth("Apr/2013");
@@ -669,7 +669,7 @@ public class Bonus extends BaseTest{
 		ad.clickSalary();
 		ad.selectBonus();
 		ad.clickAddNewBonus();
-		ad.EnterBonusHead("Pateti");
+		ad.EnterBonusHead("Diwali");
 		ad.selectformula("Bonus");
 		ad.EnterMaxBonus("10000");
 		ad.SelectFromMonth("Apr/2013");
@@ -691,7 +691,7 @@ public class Bonus extends BaseTest{
 		ad.clickSalary();
 		ad.selectBonus();
 		ad.clickAddNewBonus();
-		ad.EnterBonusHead("Pateti");
+		ad.EnterBonusHead("Diwali");
 		ad.clickManual();
 		ad.EnterMaxBonus("10000");
 		ad.SelectFromMonth("Apr/2013");
@@ -713,7 +713,7 @@ public class Bonus extends BaseTest{
 		ad.clickSalary();
 		ad.selectBonus();
 		ad.clickAddNewBonus();
-		ad.EnterBonusHead("Pateti");
+		ad.EnterBonusHead("Diwali");
 		ad.selectformula("Bonus");
 		ad.SelectFromMonth("Apr/2013");
 		ad.SelectToMonth("Apr/2013");
@@ -734,7 +734,7 @@ public class Bonus extends BaseTest{
 		ad.clickSalary();
 		ad.selectBonus();
 		ad.clickAddNewBonus();
-		ad.EnterBonusHead("Pateti");
+		ad.EnterBonusHead("Diwali");
 		ad.clickManual();
 		ad.SelectFromMonth("Apr/2013");
 		ad.SelectToMonth("Apr/2013");
@@ -755,7 +755,7 @@ public class Bonus extends BaseTest{
 		ad.clickSalary();
 		ad.selectBonus();
 		ad.clickAddNewBonus();
-		ad.EnterBonusHead("Pateti");
+		ad.EnterBonusHead("Diwali");
 		ad.selectformula("Bonus");
 		ad.EnterMaxBonus("10000");
 		ad.SelectFromMonth("Apr/2013");
@@ -778,7 +778,7 @@ public class Bonus extends BaseTest{
 		ad.clickSalary();
 		ad.selectBonus();
 		ad.clickAddNewBonus();
-		ad.EnterBonusHead("Pateti");
+		ad.EnterBonusHead("Diwali");
 		ad.selectformula("Bonus");
 		ad.SelectFromMonth("Apr/2013");
 		ad.SelectToMonth("Apr/2013");
@@ -800,7 +800,7 @@ public class Bonus extends BaseTest{
 		ad.clickSalary();
 		ad.selectBonus();
 		ad.clickAddNewBonus();
-		ad.EnterBonusHead("Pateti");
+		ad.EnterBonusHead("Diwali");
 		ad.selectformula("Bonus");
 		ad.EnterMaxBonus("10000");
 		ad.SelectFromMonth("Apr/2013");
@@ -822,7 +822,7 @@ public class Bonus extends BaseTest{
 		ad.clickSalary();
 		ad.selectBonus();
 		ad.clickAddNewBonus();
-		ad.EnterBonusHead("Pateti");
+		ad.EnterBonusHead("Diwali");
 		ad.selectformula("Bonus");
 		ad.SelectFromMonth("Apr/2013");
 		ad.SelectToMonth("Apr/2013");
@@ -843,7 +843,7 @@ public class Bonus extends BaseTest{
 		ad.clickSalary();
 		ad.selectBonus();
 		ad.clickAddNewBonus();
-		ad.EnterBonusHead("Pateti");
+		ad.EnterBonusHead("Diwali");
 		ad.clickManual();	
 		ad.EnterMaxBonus("10000");
 		ad.SelectFromMonth("Apr/2013");
@@ -865,7 +865,7 @@ public class Bonus extends BaseTest{
 		ad.clickSalary();
 		ad.selectBonus();
 		ad.clickAddNewBonus();
-		ad.EnterBonusHead("Pateti");
+		ad.EnterBonusHead("Diwali");
 		ad.clickManual();	
 		ad.EnterMaxBonus("10000");
 		ad.SelectFromMonth("Apr/2013");
@@ -886,7 +886,7 @@ public class Bonus extends BaseTest{
 		ad.clickSalary();
 		ad.selectBonus();
 		ad.clickAddNewBonus();
-		ad.EnterBonusHead("Pateti");
+		ad.EnterBonusHead("Diwali");
 		ad.selectformula("Bonus");
 		ad.SelectFromMonth("Apr/2013");
 		ad.SelectToMonth("Apr/2013");

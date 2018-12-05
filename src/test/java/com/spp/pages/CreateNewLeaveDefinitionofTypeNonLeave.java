@@ -54,5 +54,6 @@ public class CreateNewLeaveDefinitionofTypeNonLeave extends BasePage{
 	}
 	public void clickdelete() {
 		ClickDelete.click();
+		switchToPopUpAndAccept(driver);
 	}
 }
