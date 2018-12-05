@@ -10,9 +10,9 @@ import com.spp.common.BasePage;
 public class DeleteFormula extends BasePage{
 	@FindBy(id="master")
 	WebElement masterLink;
-	@FindBy(xpath="//ul[@id='menu']//li[3]//div[4]//li[5]//a[text()='Formula Editor']")
+	@FindBy(xpath="//ul[@id='menu']//li[3]//div[4]//li[6]//a[text()='Formula Editor']")
 	WebElement formulaEditor;
-	@FindBy(xpath="(//img[@title='Delete formula'])[4]")
+	@FindBy(xpath="//*[@id='dt_formula_list']/tbody/tr/td[contains(text(),'example')]/parent::tr/td[2]/span[2]/a")
 	WebElement deleteButton;
 	@FindBy(xpath="//strong[text()='Formula is successfully deleted']")
 	WebElement successfullMessage;

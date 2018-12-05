@@ -14,7 +14,7 @@ import com.spp.pages.VerifyUnlockAdminUser;
 public class UserSettings extends BaseTest{
 	
 
-	/*@Test(priority=0)
+	@Test(priority=0)
 	public void ChangePassword_SC_141() throws Exception{
 		ChangePassword lm=new ChangePassword(driver);
 		lm.navigateSuperuser();
@@ -105,5 +105,5 @@ public class UserSettings extends BaseTest{
 		String r=us.getMessage();
 		Assert.assertEquals(r, "Locked selected users.");
 	
-	}*/
+	}
 }

@@ -10,7 +10,7 @@ import com.spp.common.BasePage;
 public class AddFormula extends BasePage{
 	@FindBy(id="master")
 	WebElement masterLink;
-	@FindBy(xpath="//ul[@id='menu']//li[3]//div[4]//li[5]//a[text()='Formula Editor']")
+	@FindBy(xpath="//ul[@id='menu']//li[3]//div[4]//li[6]//a[text()='Formula Editor']")
 	WebElement formulaEditor;
 	@FindBy(xpath="//a[text()='Add New Formula']")
 	WebElement addFormula;

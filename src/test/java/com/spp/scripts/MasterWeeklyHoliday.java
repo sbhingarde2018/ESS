@@ -17,7 +17,7 @@ public class MasterWeeklyHoliday extends BaseTest{
 		ms.selectMasterWeekly();
 		ms.clickViewLink();
 		ms.clickNewMasterTab();
-		ms.enterEffectiveFromDate("06 September 2017");
+		ms.enterEffectiveFromDate("06 April 2013");
 		ms.selectFirstWeeklyOff("Monday");
 		ms.selectHalfOrFullDay("Second Half");
 		ms.selectsScondWeeklyOff("Friday");

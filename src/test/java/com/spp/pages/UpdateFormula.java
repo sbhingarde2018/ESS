@@ -10,9 +10,9 @@ import com.spp.common.BasePage;
 public class UpdateFormula extends BasePage {
 	@FindBy(id="master")
 	WebElement masterLink;
-	@FindBy(xpath="//ul[@id='menu']//li[3]//div[4]//li[5]//a[text()='Formula Editor']")
+	@FindBy(xpath="//ul[@id='menu']//li[3]//div[4]//li[6]//a[text()='Formula Editor']")
 	WebElement formulaEditor;
-	@FindBy(xpath="(//a[text()='edit'])[4]")
+	@FindBy(xpath="//*[@id=\"dt_formula_list\"]/tbody/tr/td[contains(text(),'example')]/parent::tr/td[2]/span[1]/a")
 	WebElement editIcon;
 	@FindBy(id="formula_formulae_name")
 	WebElement name;

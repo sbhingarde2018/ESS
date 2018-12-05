@@ -36,7 +36,7 @@ public class FormulaEditor extends BaseTest {
 		uf.selectFormulaEditor();
 		uf.clickEditIcon();
 		uf.clearExpression();
-		uf.enterName("ExampleFormula");
+		uf.enterName("example");
 		Thread.sleep(3000);
 		uf.clickBasicFormula();
 		Thread.sleep(3000);
