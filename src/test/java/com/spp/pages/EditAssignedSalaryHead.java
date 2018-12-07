@@ -12,9 +12,9 @@ public class EditAssignedSalaryHead extends BasePage{
 	WebElement masterlink;
 	@FindBy(xpath="//a[text()='Salary Structure']")
 	WebElement salarystructurelink;
-	@FindBy(xpath="//div[@id='main']//div[3]//tr[3]//td[3]//a[@class='action-settings']")
+	@FindBy(xpath="//*[@id=\"main\"]/div[3]/table/tbody/tr[2]/td[contains(text(),'SALARYSTRUCTURE')]/parent::tr/td[3]/a")
 	WebElement settingslink;
-	@FindBy(xpath="//a[@class='action-edit']")
+	@FindBy(xpath="//*[@id=\"main\"]/div[3]/table/tbody/tr/td[contains(text(),'Basic')]/parent::tr/td[7]/a")
 	WebElement editlink;
 	@FindBy(id="salary_group_detail_calc_type")
 	WebElement calculationtype;

@@ -18,13 +18,13 @@ import com.spp.pages.EditClasssificationDetails;
 
 public class Classifications extends BaseTest {
 	
-	/*@Test(priority=0)
+	@Test(priority=0)
 	public void verifyCreatedClassification_SC_62(){
 		CreateClassification cc=new CreateClassification(driver);
 		cc.clickMastserLink();
 		cc.selectClassifications();
-		cc.enterClassificationName("classification111");
-		cc.enterDisplayOrder("111");
+		cc.enterClassificationName("Classification1");
+		cc.enterDisplayOrder("888");
 		cc.clickCreateButton();
 		String s=cc.getMessage();
 		Assert.assertEquals(s, "Classification Heading created successfully.");
@@ -35,11 +35,8 @@ public class Classifications extends BaseTest {
 		EditClassification ec=new EditClassification(driver);
 		ec.clickMastserLink();
 		ec.selectClassifications();
-		Thread.sleep(7000);
 		ec.clickEditIcon();
-		Thread.sleep(7000);
-		ec.enterClassificationName("Class111");
-		ec.enterDisplayOrder("112");
+		ec.enterDisplayOrder("880");
 		ec.clickUpdateButton();
 		String s=ec.getMessage();
 		Assert.assertEquals(s, "Classification Heading successfully updated.");
@@ -51,22 +48,20 @@ public class Classifications extends BaseTest {
 		ac.clickMastserLink();
 		ac.selectClassifications();
 		ac.clickDetailsLink();
-		ac.enterClassificationDetailName("ClassDetail1");
+		ac.enterClassificationDetailName("ClassDetail");
 		ac.clickCreateButton();
 		String s=ac.getMessage();
 		Assert.assertEquals(s, "Classification created successfully.");
 	}
 	
-	@Test(priority=3)
+		@Test(priority=3)
 	public void verifyUpdatedClassificationDetails_SC_353() throws Exception{
 		EditClasssificationDetails ec=new EditClasssificationDetails(driver);
 		ec.clickMastserLink();
 		ec.selectClassifications();
 		ec.clickDetailsLink();
-		Thread.sleep(7000);
 		ec.clickEditIcon();
-		Thread.sleep(7000);
-		ec.enterClassificationDetailName("ClassDetail2");
+		ec.enterClassificationDetailName("ClassDetail");
 		ec.clickUpdateButton();
 		String s=ec.getMessage();
 		Assert.assertEquals(s, "Classification successfully updated.");
@@ -118,7 +113,7 @@ public class Classifications extends BaseTest {
 		cc.clickDeleteButton();
 		cc.switchToPopUpAndAccept(driver);
 	}
-	@Test(priority=7) 
+	/*@Test(priority=7) 
 	public void CheckAssignedClassificationDetailsCanBeDeletedOrNot_SC_329() throws Exception{
 		CheckAssignedClassificationDetailsCanBeDeletedOrNot ww=new CheckAssignedClassificationDetailsCanBeDeletedOrNot(driver);
 		ww.clickEmployeeLink();
@@ -130,13 +125,15 @@ public class Classifications extends BaseTest {
 		ww.selectViewButton();
 		ww.selectClassificationDetails();
 		ww.selectAddNewClassiDetails();
-		ww.selectSalaryStructure("Gross Salary Structure");
-		ww.selectAttendanceStructure("Hyderabad");
-		ww.selectBranch("Chennai");
+		ww.selectSalaryStructure("gross");
+		ww.selectmonth("May/2013");
+		ww.selectAttendanceStructure("Karnataka");
+		ww.selectBranch("default");
 		ww.selectBank("CASH");
-		ww.selectLeavePolicy("PolicyNo1");
+		ww.selectLeavePolicy("Default");
 	//	ww.enterBankAc("74"+Utility.getRandNum());
 		ww.clickCreateClassificationButton();
+		ww.switchToPopUpAndAccept(driver);
 		String s=ww.getMessage1();
 		Assert.assertEquals(s, "Employee detail was successfully created.");
 		Thread.sleep(5000);
@@ -145,7 +142,7 @@ public class Classifications extends BaseTest {
 		ww.clickDeleteButton();
 		String abc = ww.getAlertText();
 		System.out.println(abc);
-		Assert.assertEquals(abc, "<li>Classification is being used, you're not allowed to delete.</li>");
+		Assert.assertEquals(abc, "<li>Classification is being used, you're not allowed to delete.</li>");	
 }	*/
 	@Test(priority=8)
 	public void AddClassificationviaExcelUpload_SC_66() throws Exception {
@@ -156,7 +153,7 @@ public class Classifications extends BaseTest {
 	//ac.generatetemplate();
 	ac.clickonexceluploadforclassification();
 	Thread.sleep(5000);
-	ac.choosefile("ClassificationDetail.xlsx");
+	ac.choosefile("C:\\Users\\Alfa\\Desktop\\Relyon\\Merging\\Classification.xlsx");
 	Thread.sleep(5000);
 	ac.uploadfile();
 	}

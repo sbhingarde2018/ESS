@@ -12,7 +12,7 @@ public class UpdateLeavePolicy extends BasePage{
 	WebElement masterLink;
 	@FindBy(xpath="//a[text()='Leave Policy']")
 	WebElement leavePolicy;
-	@FindBy(xpath="//div[@id='leave-policy-master-list']//tr[4]//td[5]//a[text()='Edit']")
+	@FindBy(xpath="//*[@id=\"leave-policy-master-list\"]/table/tbody/tr/td[contains(text(),'LeavePolicy')]/parent::tr/td[5]/a")
 	WebElement editLink;
 	@FindBy(id="leave_policy_master_policy_name")
 	WebElement policyName;

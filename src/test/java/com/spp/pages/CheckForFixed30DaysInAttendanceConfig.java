@@ -42,6 +42,8 @@ public class CheckForFixed30DaysInAttendanceConfig extends BasePage{
 	WebElement ProcessSalaryButton;
 	@FindBy(xpath="//*[@id=\"salary_review\"]/tbody/tr[1]/td[7]/a")
 	WebElement Edit;
+	@FindBy(xpath="//*[@id=\"salary_detail\"]/tbody/tr/td[3]")
+	WebElement GetPayDays;
 	public CheckForFixed30DaysInAttendanceConfig(WebDriver driver) {
 		super(driver);
 		PageFactory.initElements(driver, this);
@@ -62,7 +64,12 @@ public class CheckForFixed30DaysInAttendanceConfig extends BasePage{
 	
 	
 	public void clickSalaryCalender(){
-		salaryCalender.click();
+		if(salaryCalender.isSelected()) {
+		System.out.println("Already Selected");
+		}
+		else {
+			salaryCalender.click();
+		}
 	}
 	
 		
@@ -105,5 +112,8 @@ public class CheckForFixed30DaysInAttendanceConfig extends BasePage{
 	}
 	public void clickEdit(){
 		Edit.click();
+	}
+	public String getPayDays() {
+		return GetPayDays.getText();
 	}
 }

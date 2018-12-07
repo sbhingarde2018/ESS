@@ -12,7 +12,7 @@ public class AddLeaves extends BasePage{
 	WebElement masterLink;
 	@FindBy(xpath="//a[text()='Leave Policy']")
 	WebElement leavePolicy;
-    @FindBy(xpath="//*[@id=\"leave-policy-master-list\"]/table/tbody/tr/td[contains(text(),'newLeavepolicy_91637')]/parent::tr/td[4]/a")
+    @FindBy(xpath="//*[@id=\"leave-policy-master-list\"]/table/tbody/tr/td[contains(text(),'LeavePolicyMaster')]/parent::tr/td[4]/a")
 	WebElement addLeaves;
 	@FindBy(id="non_saved_leaves")
 	WebElement leaveType;

@@ -26,6 +26,8 @@ public class CreateAttendanceConfigwithAttendTypeMonthly extends BasePage{
 	WebElement CreateAttendanceConfig;
 	@FindBy(xpath="//*[@id=\"flash_success\"]")
 	WebElement successfulmessage;
+	@FindBy(xpath="//tr[2]/td[6]/a[@class=\"action-delete\"]")
+	WebElement DeleteButton;
 	
 	public CreateAttendanceConfigwithAttendTypeMonthly(WebDriver driver) {
 	super(driver);
@@ -58,7 +60,10 @@ public class CreateAttendanceConfigwithAttendTypeMonthly extends BasePage{
 	public String getMessage(){
 		return successfulmessage.getText();
 	}
-
+	public void clickDelete() {
+		DeleteButton.click();
+		switchToPopUpAndAccept(driver);
+	}
 	
 	
 	

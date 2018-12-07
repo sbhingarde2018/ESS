@@ -13,7 +13,7 @@ public class CheckOpenComponentAndCalculativeField extends BasePage{
 	WebElement masterlink;
 	@FindBy(xpath="//a[text()='Salary Heads']")
 	WebElement salaryheads;
-	@FindBy(xpath="//*[@id='earning_heads']/tbody/tr[4]/td[5]/a[1]")
+	@FindBy(xpath="//*[@id='earning_heads']/tbody/tr[2]/td[5]/a[1]")
 	WebElement Edit;
 	@FindBy(id="salary_head_open_component")
 	WebElement OpenComponent;

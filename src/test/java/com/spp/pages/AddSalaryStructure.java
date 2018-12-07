@@ -11,7 +11,7 @@ public class AddSalaryStructure extends BasePage{
 	WebElement masterlink;
 	@FindBy(xpath="//a[text()='Salary Structure']")
 	WebElement salarystructurelink;
-	@FindBy(xpath="//a[text()='Create New Salary Structure']")
+	@FindBy(xpath="//a[text()='Add New Salary Structure']")
 	WebElement createsalarystructurelink;
 	@FindBy(id="salary_group_salary_group_name")
 	WebElement structurename;

@@ -42,6 +42,8 @@ public class CheckForSalaryCalenderInAttendanceConfiguration extends BasePage{
 	WebElement ProcessSalaryButton;
 	@FindBy(xpath="//*[@id=\"salary_review\"]/tbody/tr[1]/td[7]/a")
 	WebElement Edit;
+	@FindBy(xpath="//*[@id=\"salary_detail\"]/tbody/tr/td[3]")
+	WebElement GetPayDays;
 	public CheckForSalaryCalenderInAttendanceConfiguration(WebDriver driver) {
 		super(driver);
 		PageFactory.initElements(driver, this);
@@ -62,7 +64,11 @@ public class CheckForSalaryCalenderInAttendanceConfiguration extends BasePage{
 	
 	
 	public void clickSalaryCalender(){
+		if(salaryCalender.isSelected()) {
+			System.out.println("AlreadyEnabled");
+		}else {
 		salaryCalender.click();
+		}
 	}
 	
 		
@@ -93,6 +99,9 @@ public class CheckForSalaryCalenderInAttendanceConfiguration extends BasePage{
 	}
 	public String getMessage1(){
 		return SuccessfulMessage.getText();
+	}
+	public String getPayDays() {
+		return GetPayDays.getText();
 	}
 	public void clickSelectAllBox(){
 		SelectAllBox.click();

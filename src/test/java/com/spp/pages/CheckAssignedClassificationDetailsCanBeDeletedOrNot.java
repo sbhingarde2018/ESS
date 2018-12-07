@@ -1,5 +1,7 @@
 package com.spp.pages;
 
+import java.time.Month;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -52,6 +54,8 @@ public class CheckAssignedClassificationDetailsCanBeDeletedOrNot extends BasePag
     WebElement deleteButton;
     @FindBy(xpath="//strong[text()='Classification heading was successfully deleted.']")
     WebElement successfullMessage2;
+    @FindBy(id="sed")
+    WebElement Month;
 	
 	public CheckAssignedClassificationDetailsCanBeDeletedOrNot(WebDriver driver){
 		super(driver);
@@ -123,5 +127,8 @@ public void clickDeleteButton(){
 
 public String getMessage2(){
 	return successfullMessage2.getText();
+}
+public void selectmonth(String value) {
+	Month.sendKeys(value);
 }
 }

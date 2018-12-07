@@ -15,7 +15,7 @@ public class CheckAttendanceConfigforOnlyWorkingDaysandWeeklyHoliday extends Bas
 	WebElement ClickonAttemdanceConfig;
 	@FindBy(xpath="//*[@id=\"main\"]/div[3]/span/a")
 	WebElement AddNewAttendanceConf;
-	@FindBy(xpath="//*[@id=\"main\"]/div[4]/table/tbody/tr/td[contains(text(),'Karnataka')]/parent::tr/td[5]/a")
+	@FindBy(xpath="//*[@id=\"main\"]/div[4]/table/tbody/tr/td[contains(text(),'Hyderabad')]/parent::tr/td[5]/a")
 	WebElement ClickOnEdit;
 	@FindBy(id="attendance_configuration_attendance")
 	WebElement EnterAttendanceName;

@@ -23,14 +23,14 @@ import com.spp.pages.SalaryHeadExcelUpload;
 
 public class SalaryHeadTestcase extends BaseTest {
 	
-	@Test(priority=0)
+	/*@Test(priority=0)
 	public void verifycreatedSalaryHead_SC_1() throws Exception{
 		AddSalaryHead sh=new AddSalaryHead(driver);
 		Thread.sleep(5000);
 		sh.navigateMaster();
 		sh.clickSalaryHeadsLink();
 		sh.clickAddSalaryHeadsLink();
-		sh.enterSalaryHeadName("Education Allowance_2");
+		sh.enterSalaryHeadName("Education Allowance");
 		sh.enterSalaryHeadShortName("EA2");
 		sh.clickOpenComponentRadioButton();
 		sh.clickCalcultaiveFieldRadioButton();
@@ -47,7 +47,7 @@ public class SalaryHeadTestcase extends BaseTest {
 		es.navigateMaster();
 		es.clickSalaryHeadsLink();
 		es.clickEditSalaryHeadsLink();
-		es.enterSalaryHeadName("EDU Allowance_2");
+		es.enterSalaryHeadName("Education Allowance");
 		es.enterSalaryHeadShortName("EDU2");
 		es.clickOpenComponentRadioButton();
 		es.clickCalcultaiveFieldRadioButton();
@@ -58,7 +58,7 @@ public class SalaryHeadTestcase extends BaseTest {
 		Assert.assertEquals(s, "Salary head succesfully updated");
 	}
 	
-     @Test(priority=2)
+    @Test(priority=2)
 	 public void verifyDeletedSalaryHead_SC_3() throws Exception{
 		DeleteSalaryHead ds=new DeleteSalaryHead(driver);
 		ds.navigateMaster();
@@ -71,7 +71,7 @@ public class SalaryHeadTestcase extends BaseTest {
 		String s=ds.getMessage();
 		Assert.assertEquals(s, "Salary head successfully deleted");
 	} 
-	@Test(priority=3)
+  @Test(priority=3)
   	public void CheckAddingSalaryHeadIsAnEarningOrDeductionhead_SC_230() throws Exception{
     	 CheckAddingSalaryHeadIsAnEarningOrDeductionhead sh=new CheckAddingSalaryHeadIsAnEarningOrDeductionhead(driver);
   		Thread.sleep(5000);
@@ -79,21 +79,23 @@ public class SalaryHeadTestcase extends BaseTest {
   		sh.clickSalaryHeads();
   		Thread.sleep(2000);
   		sh.clickAddNewSalaryHead1();
-  		sh.clickHeadName("head"+Utility.getRandNum(1, 100));
-  		sh.clickShortName("shortname"+Utility.getRandNum(1, 100));
+  		sh.clickHeadName("Earning");
+  		sh.clickShortName("EA");
   		sh.clickEarnings();
   		sh.clickcreateSalaryHeadButton();
   		String q=sh.getMessage();
   		Assert.assertEquals(q, "Salary head successfully created");
-  		Thread.sleep(4000);
+  		sh.navigateMaster();
+  		sh.navigateMaster();
+  		sh.navigateMaster();
+  		sh.clickSalaryHeads();
   		sh.clickAddNewSalaryHead1();
-  		sh.clickHeadName("head"+Utility.getRandNum(1, 100));
-  		sh.clickShortName("shortname"+Utility.getRandNum(1, 100));
+  		sh.clickHeadName("Deduction");
+  		sh.clickShortName("DE");
   		sh.clickDeductionBox();
   		sh.clickcreateSalaryHeadButton();
   		String s=sh.getMessage();
   		Assert.assertEquals(q, "Salary head successfully created");
-  		Thread.sleep(5000);
   		sh.clickDeductionTab();
   		Thread.sleep(5000);
   		sh.navigateMaster();
@@ -101,7 +103,7 @@ public class SalaryHeadTestcase extends BaseTest {
 } 
 	@Test(priority=4)
    	public void CheckOpenComponentAndCalculativeField_SC_231() throws Exception{
-    	 CheckOpenComponentAndCalculativeField sh=new CheckOpenComponentAndCalculativeField(driver);
+    	CheckOpenComponentAndCalculativeField sh=new CheckOpenComponentAndCalculativeField(driver);
    		Thread.sleep(5000);
    		sh.navigateMaster();
    		sh.clickSalaryHeads();
@@ -113,7 +115,7 @@ public class SalaryHeadTestcase extends BaseTest {
    		String a=sh.getMessage();
    		Assert.assertEquals(a, "Salary head succesfully updated");
 } 
-	 @Test(priority=5)
+	@Test(priority=5)
      public void CheckOpenComponentCalculativeFieldDeductionField_SC_427() throws Exception{
     	 CheckOpenComponentCalculativeFieldDeductionField sh=new CheckOpenComponentCalculativeFieldDeductionField(driver);
    		Thread.sleep(5000);
@@ -128,21 +130,99 @@ public class SalaryHeadTestcase extends BaseTest {
    		String a=sh.getMessage();
    		Assert.assertEquals(a, "Salary head succesfully updated");
      }
-     @Test(priority=6)
+	   @Test(priority=6)
  	  public void verifyCreatedSalaryStructure_SC_28() throws Exception{
  		AddSalaryStructure ss=new AddSalaryStructure(driver);
- 		Thread.sleep(5000);
  		ss.navigateMaster();
  		ss.clickSalaryStructureLink();
- 		ss.clickAddSalaryStructureLink();
- 		ss.enterSalaryStructureName("new Structure_"+Utility.getRandNum(4000, 5000));
+ 		ss.clickAddSalaryStructureLink();	
+ 		ss.enterSalaryStructureName("SALARYSTRUCTURE");
  		ss.clickBasedOnGross();
  		ss.clickCreateButton();
  		String s=ss.getMessage();
  		Assert.assertEquals(s, "Salary group successfully created");
 } 
-     @Test(priority=7)
-  		public void AddSalaryStructureNotBasedOnGross_SC_29() throws Exception{
+	   
+	   @Test(priority=13)
+	  	public void verifyEditedSalaryStructure_SC_428() throws Exception{
+	  		EditSalaryStructure es=new EditSalaryStructure(driver);
+	  		Thread.sleep(5000);
+	  		es.navigateMaster();
+	  		es.clickSalaryStructureLink();
+	  		es.clickEditSalaryStructureLink();
+	  		es.enterSalaryStructureName("SALARYSTRUCTURE");
+	  		es.clickBasedOnGross();
+	  		es.clickUpdateSalaryStructureButton();
+	  		String s=es.getMessage();
+	  		Assert.assertEquals(s, "Salary group succesfully updated");
+	 	}  */	 
+	
+	 @Test(priority=8)
+		public void verifyAssignedSalaryHead_SC_30() throws Exception{
+		AssignSalaryHead sh=new AssignSalaryHead(driver);
+		Thread.sleep(5000);
+		sh.navigateMaster();
+		sh.clickSalaryStructureLink();
+		sh.clickSettingsLink();
+		sh.clickAssignedHeadLink();
+		sh.selectSalaryHead("Basic");
+		sh.selectCalculationType("Lumpsum");
+		sh.selectBasedOn("Pay Days");
+		sh.clickPFApplicabilty();
+		sh.clickESIApplicabilty();
+		sh.selectRoundOff("Actual");
+		sh.enterEffectiveDate("Apr/2013");
+		Thread.sleep(5000);
+		sh.clickCreateSalaryGroupDetailButton();
+		String s=sh.getMessage();
+		Assert.assertEquals(s, "Salary structure detail successfully created");
+	}    
+	
+	  @Test(priority=14)
+  	public void verifyEditedAssignedSalaryHead_SC_429() throws Exception{
+  		EditAssignedSalaryHead ea=new EditAssignedSalaryHead(driver);
+  		ea.navigateMaster();
+  		ea.clickSalaryStructureLink();
+  		ea.clickSettingsLink();
+  		ea.clickEditLink();
+  		ea.selectCalculationType("Not Applicable");
+  		ea.selectBasedOn("Independent Days");
+  		ea.selectRoundOff("Actual");
+  		ea.clickPFApplicabilty();
+  		ea.clickESIApplicabilty();
+  		ea.clickUpdateSalaryGroupDetail();
+  		String s=ea.getMessage();
+  		Assert.assertEquals(s, "Salary structure detail succesfully updated");
+  	}
+	  
+	  @Test(priority=10)
+	     public void verifyDeleteAssignedHead_SC_251() throws Exception{
+	 		DeleteAssignedSalaryHead da=new DeleteAssignedSalaryHead(driver);
+	 		da.navigateMaster();
+	 		da.clickSalaryStructureLink();
+	 		da.clickSettingsLink();
+	 		da.edittoaddgroup();
+	 		da.updatesalarygroup();
+	 		da.clickDeleteSalaryHead();
+	 		da.switchToPopUpAndAccept(driver);
+	 		String s=da.salaryheadcantbedeleted();
+	 		Assert.assertEquals(s, "Selected salary structure detail can't be deleted.");
+	 		Thread.sleep(2000);
+	 		da.clickEditIconLink();
+	 		da.selectCalculationType("Not Applicable");
+	 		da.clickUpdateSalaryGroupDetail();
+	 		Thread.sleep(2000);
+	 		da.clickDeleteSalaryHead();
+	 		da.switchToPopUpAndDismiss();
+	 		Thread.sleep(2000);
+	 		da.switchToPopUpAndAccept(driver);
+	 		String sa=da.getMessage();
+	 		Assert.assertEquals(s, "Salary structure detail successfully destroyed");
+	    } 
+	     
+	   
+	   /*  @Test(priority=7)
+     	public void AddSalaryStructureNotBasedOnGross_SC_29() throws Exception{
   		AddSalaryStructureNotBasedOnGross ss=new AddSalaryStructureNotBasedOnGross(driver);
   		Thread.sleep(5000);
   		ss.navigateMaster();
@@ -155,26 +235,7 @@ public class SalaryHeadTestcase extends BaseTest {
   		ss.clickPagechange();
   		ss.clickDeleteButton();
 }   
-        @Test(priority=8)
- 		public void verifyAssignedSalaryHead_SC_30() throws Exception{
- 		AssignSalaryHead sh=new AssignSalaryHead(driver);
- 		Thread.sleep(5000);
- 		sh.navigateMaster();
- 		sh.clickSalaryStructureLink();
- 		sh.clickSettingsLink();
- 		sh.clickAssignedHeadLink();
- 		sh.selectSalaryHead("Basic");
- 		sh.selectCalculationType("Lumpsum");
- 		sh.selectBasedOn("Paydays");
- 		sh.clickPFApplicabilty();
- 		sh.clickESIApplicabilty();
- 		sh.selectRoundOff("Actual");
- 		sh.enterEffectiveDate("Apr/2016");
- 		Thread.sleep(5000);
- 		sh.clickCreateSalaryGroupDetailButton();
- 		String s=sh.getMessage();
- 		Assert.assertEquals(s, "Salary structure detail successfully created");
- 	}     
+        
      @Test(priority=9)
   	public void verifyCloneSalaryStructure_SC_245() throws Exception{
   		AddCloneSalaryStructure cs=new AddCloneSalaryStructure(driver);
@@ -192,32 +253,7 @@ public class SalaryHeadTestcase extends BaseTest {
 		Assert.assertEquals(s, "Salary Structure clone has been successfully created");
 	} 
      
-     @Test(priority=10)
-     public void verifyDeleteAssignedHead_SC_251() throws Exception{
- 		DeleteAssignedSalaryHead da=new DeleteAssignedSalaryHead(driver);
-   		Thread.sleep(5000);
- 		da.navigateMaster();
- 		da.clickSalaryStructureLink();
- 		da.clickSettingsLink();
- 		da.clickDeleteSalaryHead();
- 		da.switchToPopUpAndAccept(driver);
- 		String s=da.salaryheadcantbedeleted();
- 		Assert.assertEquals(s, "Selected salary structure detail can't be deleted.");
- 		Thread.sleep(2000);
- 		da.clickEditIconLink();
- 		da.selectCalculationType("Not Applicable");
- 		da.clickUpdateSalaryGroupDetail();
- 		String sp=da.salaryheadcantbedeleted();
- 		Assert.assertEquals(s, "Salary structure detail succesfully updated");
- 		Thread.sleep(2000);
- 		da.clickDeleteSalaryHead();
- 		da.switchToPopUpAndDismiss();
- 		Thread.sleep(2000);
- 		da.switchToPopUpAndAccept(driver);
- 		String sa=da.getMessage();
- 		Assert.assertEquals(s, "Salary structure detail successfully destroyed");
-    } 
-     
+   
   
    @Test(priority=11)
   	public void verifyDeletedSalaryStructure_SC_252() throws Exception{
@@ -265,35 +301,7 @@ public class SalaryHeadTestcase extends BaseTest {
  																	//	or change data in excel file.
  }*/
 	
-     @Test(priority=13)
-  	public void verifyEditedSalaryStructure_SC_428() throws Exception{
-  		EditSalaryStructure es=new EditSalaryStructure(driver);
-  		Thread.sleep(5000);
-  		es.navigateMaster();
-  		es.clickSalaryStructureLink();
-  		es.clickEditSalaryStructureLink();
-  		es.enterSalaryStructureName("new Structure2");
-  		es.clickBasedOnGross();
-  		es.clickUpdateSalaryStructureButton();
-  		String s=es.getMessage();
-  		Assert.assertEquals(s, "Salary group succesfully updated");
- 	}   
-     @Test(priority=14)
-  	public void verifyEditedAssignedSalaryHead_SC_429() throws Exception{
-  		EditAssignedSalaryHead ea=new EditAssignedSalaryHead(driver);
-  		Thread.sleep(5000);
-  		ea.navigateMaster();
-  		ea.clickSalaryStructureLink();
-  		ea.clickSettingsLink();
-  		ea.clickEditLink();
-  		ea.selectCalculationType("Not Applicable");
-  		ea.selectBasedOn("Independent Days");
-  		ea.selectRoundOff("Actual");
-  		ea.clickPFApplicabilty();
-  		ea.clickESIApplicabilty();
-  		ea.clickUpdateSalaryGroupDetail();
-  		String s=ea.getMessage();
-  		Assert.assertEquals(s, "Salary structure detail succesfully updated");
-  	} 
+  
+  
     
 }

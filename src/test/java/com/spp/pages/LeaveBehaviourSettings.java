@@ -12,9 +12,9 @@ public class LeaveBehaviourSettings extends BasePage{
 	WebElement masterLink;
 	@FindBy(xpath="//a[text()='Leave Policy']")
 	WebElement leavePolicy;
-    @FindBy(xpath="//*[@id=\"leave-policy-master-list\"]/table/tbody/tr/td[contains(text(),'newLeavepolicy_35091')]/parent::tr/td[4]/a")
+    @FindBy(xpath="//*[@id=\"leave-policy-master-list\"]/table/tbody/tr/td[contains(text(),'Default')]/parent::tr/td[4]/a")
 	WebElement addLeaves;
-    @FindBy(xpath="//*[@id=\"leave_policy_setting_details\"]/div[2]/table/tbody/tr[5]/td[3]/a")
+    @FindBy(xpath="//*[@id='leave_policy_setting_details']/div[2]/table/tbody/tr/td[contains(text(),'Leave')]/parent::tr/td[3]/a")
     WebElement settingsLink;
     @FindBy(id="leave_policy_head_wise_setting_behaviour_settings_max_leave_month")
     WebElement casualLeaveallowedavaiformonth; 
@@ -40,6 +40,30 @@ public class LeaveBehaviourSettings extends BasePage{
     WebElement updateButton;
     @FindBy(xpath="//strong[text()='Setting was successfully updated.']")
     WebElement successfullMessage;
+    @FindBy(id="non_saved_leaves")
+	WebElement leaveType;
+    @FindBy(xpath="//input[@value='Add']")
+    WebElement addButton;
+    @FindBy(id="leave")
+    WebElement ClickOnLeave;
+    @FindBy(xpath="//*[@id=\"menu\"]/li[5]/div/div/ul/li[1]/a")
+    WebElement ClickOnApplyLeave;
+    @FindBy(id="filter_head")
+    WebElement ClickOnFilter;
+    @FindBy(xpath="//*[@id=\"bf_form\"]/div[9]/button[1]")
+    WebElement ClickOnLoad;
+    @FindBy(xpath="//*[@id=\"dt_leave_details\"]/tbody/tr/td[3]/a")
+    WebElement ClickOnAPPLYLEAVE;
+    @FindBy(id="leave_detail_leave_definition_id")
+    WebElement SelectLeave;
+    @FindBy(id="leave_detail_from_date")
+    WebElement FromDate;
+    @FindBy(id="leave_detail_to_date")
+    WebElement ToDate;
+    @FindBy(id="apply")
+    WebElement Apply;
+    @FindBy(xpath="//*[@id=\"apply_leave_response\"]/div/li")
+    WebElement AlertMessage;
     
 
 	public LeaveBehaviourSettings(WebDriver driver) {
@@ -57,6 +81,14 @@ public class LeaveBehaviourSettings extends BasePage{
 	
 	public void clickAddLeaves(){
 		addLeaves.click();
+	}
+	
+	public void selectLeaveType(String value){
+		dropDownSelect(leaveType, value);
+	}
+
+	public void clickAddButton(){
+		addButton.click();	
 	}
 	
 	public void clickSettingsLink(){
@@ -115,5 +147,38 @@ public class LeaveBehaviourSettings extends BasePage{
 	
 	public String getMessage(){
 		return successfullMessage.getText();
+	}
+	
+	public void Leavemaster() {
+		ClickOnLeave.click();
+	}
+	public void ApplyLeavemodule() {
+		ClickOnApplyLeave.click();
+	}
+	public void ClickonFilter() {
+		ClickOnFilter.click();
+	}
+	public void ClickOnLOAD() {
+		ClickOnLoad.click();
+	}
+	public void ClickOnApplyLeave() {
+		ClickOnAPPLYLEAVE.click();
+	}
+	public void SelectLeave(String value) {
+		dropDownSelect(SelectLeave, value);
+	}
+	public void EnterFromDate(String value) {
+		FromDate.clear();
+		FromDate.sendKeys(value);
+	}
+	public void EnterToDate(String value) {
+		ToDate.clear();
+		ToDate.sendKeys(value);
+	}
+	public void clickapply() {
+		Apply.click();
+	}
+	public String getalertMessage() {
+		return AlertMessage.getText();
 	}
 }

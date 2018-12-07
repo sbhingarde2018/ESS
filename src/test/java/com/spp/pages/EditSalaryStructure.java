@@ -11,7 +11,7 @@ public class EditSalaryStructure extends BasePage {
 	WebElement masterlink;
 	@FindBy(xpath="//a[text()='Salary Structure']")
 	WebElement salarystructurelink;
-	@FindBy(xpath="//div[@id='main']//div[3]//tr[3]/td[4]/a[text()='Edit']")
+	@FindBy(xpath="//*[@id=\"main\"]/div[3]/table/tbody/tr[2]/td[contains(text(),'SALARYSTRUCTURE')]/parent::tr/td[4]/a")
 	WebElement editsalarystructure;
 	@FindBy(id="salary_group_salary_group_name")
 	WebElement structurename;

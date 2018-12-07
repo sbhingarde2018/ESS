@@ -13,10 +13,10 @@ public class CheckForAllowHalfDayInLeaveModule extends BasePage {
 	WebElement masterLink;
 	@FindBy(xpath="//*[@id=\"menu\"]/li[3]/div/div[3]/ul/li[2]/a")
 	WebElement leavePolicy;
-    @FindBy(xpath="//div[@id='leave-policy-master-list']//tr[1]//td[4]//a[text()='Add Leaves']")
-	WebElement addLeaves;
-    @FindBy(xpath="//*[@id=\"leave_policy_setting_details\"]/div[2]/table/tbody/tr[5]/td[3]/a")
-    WebElement settingsLink;
+	 @FindBy(xpath="//*[@id=\"leave-policy-master-list\"]/table/tbody/tr/td[contains(text(),'Default')]/parent::tr/td[4]/a")
+		WebElement addLeaves;
+	    @FindBy(xpath="//*[@id='leave_policy_setting_details']/div[2]/table/tbody/tr/td[contains(text(),'Leave')]/parent::tr/td[3]/a")
+	    WebElement settingsLink;
     @FindBy(id="leave_policy_head_wise_setting_behaviour_settings_max_leave_month")
     WebElement AvailForMonth;
     @FindBy(xpath="//*[@id=\"behaviour_policy_setting\"]/div[3]/input")
@@ -25,21 +25,23 @@ public class CheckForAllowHalfDayInLeaveModule extends BasePage {
     WebElement SuccessfulMessage;
     @FindBy(id="leave")
     WebElement LeaveLink;
+    @FindBy(xpath="(//input[@id=\"leave_policy_head_wise_setting_behaviour_settings_allow_half\"])[2]")
+    WebElement allowHalfDay;
     @FindBy(linkText="Apply Leave")
     WebElement AppyLeaveLink;
     @FindBy(id="filter_head")
     WebElement Filter;
     @FindBy(xpath="//*[@id=\"bf_form\"]/div[9]/button[1]")
     WebElement Load;
-    @FindBy(xpath="//*[@id=\"dt_leave_details\"]/tbody/tr[1]/td[3]/a")
-    WebElement ApplyLeave;
+    @FindBy(xpath="//*[@id=\"dt_leave_details\"]/tbody/tr/td[3]/a")
+    WebElement ClickOnAPPLYLEAVE;
 	@FindBy(id="leave_detail_leave_definition_id")
 	WebElement LeaveType;
 	@FindBy(id="leave_detail_from_date")
 	WebElement FromDate;
 	@FindBy(id="leave_detail_to_date")
 	WebElement ToDate;
-	@FindBy(xpath="//*[@id=\"employee_leave_dates\"]/table/tbody/tr/td[3]/input")
+	@FindBy(xpath="//input[contains(@name,'second')]")
 	WebElement SecondHalf;
 	@FindBy(id="apply")
 	WebElement ApplyButton;
@@ -58,6 +60,14 @@ public class CheckForAllowHalfDayInLeaveModule extends BasePage {
 
 	public void clickMastserLink(){
 		masterLink.click();
+	}
+	public void clickAllowHalfDay(){
+		if(allowHalfDay.isSelected()) {
+			System.out.println("Already Selected");
+		}
+		else {
+		allowHalfDay.click();
+		}
 	}
 
 	public void selectLeavePolicy(){
@@ -96,8 +106,8 @@ public class CheckForAllowHalfDayInLeaveModule extends BasePage {
 	public void clickLoad(){
 		Load.click();
 	}
-	public void clickApplyLeave(){
-		ApplyLeave.click();
+	public void ClickOnApplyLeave() {
+		ClickOnAPPLYLEAVE.click();
 	}
 	public void enterFromDate(String value){
 		FromDate.sendKeys(value);
@@ -107,7 +117,14 @@ public class CheckForAllowHalfDayInLeaveModule extends BasePage {
 		ToDate.sendKeys(Keys.TAB);
 	}
 	public void selectSecondHalf(){
+		if(SecondHalf.isSelected())
+		{
+			System.out.println("Already Selected");
+		}
+		else 
+		{
 		SecondHalf.click();
+		}
 	}
 	public void clickApplyButton(){
 		ApplyButton.click();

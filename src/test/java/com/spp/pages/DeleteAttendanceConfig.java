@@ -12,7 +12,7 @@ public class DeleteAttendanceConfig extends BasePage {
 	WebElement masterLink;
 	@FindBy(xpath="//a[text()='Attendance Configuration']")
 	WebElement attendanceConfiguration;
-	@FindBy(xpath="//tr[3]/td[6]/a[@class=\"action-delete\"]")
+	@FindBy(xpath="//tr[2]/td[6]/a[@class=\"action-delete\"]")
 	WebElement deleteButton;
 	@FindBy(xpath="//div[text()='Attendance Configuration Successfully deleted']")
 	WebElement successfullMessage;

@@ -18,13 +18,13 @@ import com.spp.pages.CheckForSalaryCalenderInAttendanceConfiguration;
 
 public class AttendanceConfigurations extends BaseTest{
 	
-	/*@Test(priority=0)
+	@Test(priority=0)
 	public void verifyCreatedAttendanceConfiguration_SC_83(){
 		CreateAttendanceConfiguration ac=new CreateAttendanceConfiguration(driver);
 		ac.clickMastserLink();
 		ac.selectAttendanceConfiguration();
 		ac.clickAddAttendanceConfig();
-		ac.enterAttendanceName("chennai");
+		ac.enterAttendanceName("Chennai");
 		ac.enterShortName("ch");
 		ac.clickSalaryCalender();
 		ac.clickAttendanceType();
@@ -33,7 +33,7 @@ public class AttendanceConfigurations extends BaseTest{
 		Assert.assertEquals(s, "Attendance Configuration was Successfully created");
 	}
 
-	/*@Test(priority=1)
+	@Test(priority=1)
 	public void verifyUpdatedAttendanceConfig_SC_85(){
 		UpdateAttendanceConfiguration ua=new UpdateAttendanceConfiguration(driver);
 		ua.clickMastserLink();
@@ -48,16 +48,8 @@ public class AttendanceConfigurations extends BaseTest{
 		Assert.assertEquals(s, "Attendance Configuration was Successfully updated");
 	}
 	
-	@Test(priority=3)
-	public void verifyDeletedAttendanceConfig_SC_84(){
-		DeleteAttendanceConfig ac=new DeleteAttendanceConfig(driver);
-		ac.clickMastserLink();
-		ac.selectAttendanceConfiguration();
-		ac.clickDeleteButton();
-		String s=ac.getMessage();
-		Assert.assertEquals(s,"Attendance Configuration Successfully deleted");
-	}
-	@Test(priority=4)
+	
+	@Test(priority=2)
 	public void CheckForSalaryCalenderInAttendanceConfiguration_SC_319() throws InterruptedException{
 		CheckForSalaryCalenderInAttendanceConfiguration ua=new CheckForSalaryCalenderInAttendanceConfiguration(driver);
 		ua.clickMastserLink();
@@ -70,8 +62,8 @@ public class AttendanceConfigurations extends BaseTest{
 		Thread.sleep(5000);
 		ua.clickSalaryLink();
 		ua.clickSalaryEditor();
-		ua.clickPayMonth("Jan/2018");
-		ua.clickSalaryStructure("Gross Salary Structure");
+		ua.clickPayMonth("Mar/2013");
+		ua.clickSalaryStructure("Structure");
 		ua.clickGetValues();
 		Thread.sleep(4000);
 		ua.clickLoad();
@@ -80,9 +72,12 @@ public class AttendanceConfigurations extends BaseTest{
 		ua.clickEmployee();
 		ua.clickProcessSalaryButton();
 		ua.clickEdit();
+		String p=ua.getPayDays();
+		System.out.println("pay days in selected month "+p);
+		
 		
 	}
-	@Test(priority=5)
+	@Test(priority=3)
 	public void CheckForOnlyWorkingDayAndHolidayInAttendanceConfig_SC_320() throws InterruptedException{
 		CheckForOnlyWorkingDayAndHolidayInAttendanceConfig ua=new CheckForOnlyWorkingDayAndHolidayInAttendanceConfig(driver);
 		ua.clickMastserLink();
@@ -95,8 +90,8 @@ public class AttendanceConfigurations extends BaseTest{
 		Thread.sleep(5000);
 		ua.clickSalaryLink();
 		ua.clickSalaryEditor();
-		ua.clickPayMonth("Mar/2018");
-		ua.clickSalaryStructure("Gross Salary Structure");
+		ua.clickPayMonth("Mar/2013");
+		ua.clickSalaryStructure("Structure");
 		ua.clickGetValues();
 		Thread.sleep(4000);
 		ua.clickLoad();
@@ -105,9 +100,10 @@ public class AttendanceConfigurations extends BaseTest{
 		ua.clickEmployee();
 		ua.clickProcessSalaryButton();
 		ua.clickEdit();
-		
+		String p=ua.getPayDays();
+		System.out.println("pay days in selected month "+p);
 	}
-	@Test(priority=6)
+	@Test(priority=4)
 	public void CheckForOnlyWorkingDaysInAttendanceConfig_SC_321() throws InterruptedException{
 		CheckForOnlyWorkingDaysInAttendanceConfig ua=new CheckForOnlyWorkingDaysInAttendanceConfig(driver);
 		ua.clickMastserLink();
@@ -120,8 +116,8 @@ public class AttendanceConfigurations extends BaseTest{
 		Thread.sleep(5000);
 		ua.clickSalaryLink();
 		ua.clickSalaryEditor();
-		ua.clickPayMonth("Mar/2018");
-		ua.clickSalaryStructure("Gross Salary Structure");
+		ua.clickPayMonth("Mar/2013");
+		ua.clickSalaryStructure("Structure");
 		ua.clickGetValues();
 		Thread.sleep(4000);
 		ua.clickLoad();
@@ -130,8 +126,10 @@ public class AttendanceConfigurations extends BaseTest{
 		ua.clickEmployee();
 		ua.clickProcessSalaryButton();
 		ua.clickEdit();
+		String p=ua.getPayDays();
+		System.out.println("pay days in selected month "+p);
 	}
-	@Test(priority=7)
+		@Test(priority=5)
 	public void CheckForFixed30DaysInAttendanceConfig_SC_322() throws InterruptedException{
 		CheckForFixed30DaysInAttendanceConfig ua=new CheckForFixed30DaysInAttendanceConfig(driver);
 		ua.clickMastserLink();
@@ -144,8 +142,8 @@ public class AttendanceConfigurations extends BaseTest{
 		Thread.sleep(5000);
 		ua.clickSalaryLink();
 		ua.clickSalaryEditor();
-		ua.clickPayMonth("Mar/2018");
-		ua.clickSalaryStructure("Gross Salary Structure");
+		ua.clickPayMonth("Mar/2013");
+		ua.clickSalaryStructure("Structure");
 		ua.clickGetValues();
 		Thread.sleep(4000);
 		ua.clickLoad();
@@ -154,23 +152,11 @@ public class AttendanceConfigurations extends BaseTest{
 		ua.clickEmployee();
 		ua.clickProcessSalaryButton();
 		ua.clickEdit();
+		String p=ua.getPayDays();
+		System.out.println("pay days in selected month "+p);
 	}
-	@Test(priority=8)
-	public void CreateAttendanceConfigwithAttendTypeMonthly_SC_448() throws Exception{
-		CreateAttendanceConfigwithAttendTypeMonthly ua=new CreateAttendanceConfigwithAttendTypeMonthly(driver);
-		ua.clickonmaster();
-		ua.clickonattendanceconfig();
-		ua.addnewattendanceconfig();
-		ua.enterattendancename("Delhi_"+Utility.getRandNum(10, 10000));
-		Thread.sleep(2000);
-		ua.entershortname("D_"+Utility.getRandNum(10, 10000));
-		ua.selectsalcalender();
-		ua.selectattendancetype();
-		ua.createattendanceconfig();
-		String d=ua.getMessage();
-		Assert.assertEquals(d, "Attendance Configuration was Successfully created");
-	}*/
-	@Test(priority=9)
+	
+	@Test(priority=6)
 	public void CheckAttendanceConfigforOnlyWorkingDaysandWeeklyHoliday_SC_449() throws Exception{
 		CheckAttendanceConfigforOnlyWorkingDaysandWeeklyHoliday ua=new CheckAttendanceConfigforOnlyWorkingDaysandWeeklyHoliday(driver);
 		ua.clickonmaster();
@@ -183,7 +169,34 @@ public class AttendanceConfigurations extends BaseTest{
 	}
 	
 			
+	@Test(priority=7)
+	public void verifyDeletedAttendanceConfig_SC_84(){
+		DeleteAttendanceConfig ac=new DeleteAttendanceConfig(driver);
+		ac.clickMastserLink();
+		ac.selectAttendanceConfiguration();
+		ac.clickDeleteButton();
+		String s=ac.getMessage();
+		Assert.assertEquals(s,"Attendance Configuration Successfully deleted");
+	}
 	
+	@Test(priority=8)
+	public void CreateAttendanceConfigwithAttendTypeMonthly_SC_448() throws Exception{
+		CreateAttendanceConfigwithAttendTypeMonthly ua=new CreateAttendanceConfigwithAttendTypeMonthly(driver);
+		ua.clickonmaster();
+		ua.clickonattendanceconfig();
+		ua.addnewattendanceconfig();
+		ua.enterattendancename("Delhi");
+		Thread.sleep(2000);
+		ua.entershortname("DE");
+		ua.selectsalcalender();
+		ua.selectattendancetype();
+		ua.createattendanceconfig();
+		String d=ua.getMessage();
+		Assert.assertEquals(d, "Attendance Configuration was Successfully created");
+		Thread.sleep(2000);
+		ua.clickDelete();
+		
+	}
 	
 	
 	

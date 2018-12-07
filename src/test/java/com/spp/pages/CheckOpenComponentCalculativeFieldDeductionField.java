@@ -14,7 +14,7 @@ public class CheckOpenComponentCalculativeFieldDeductionField extends BasePage{
 	WebElement salaryheads;
 	@FindBy(xpath="//*[@id=\"main\"]/div[4]/nav/ul/li[2]/a/span")
 	WebElement ClickOnDeductionTab;
-	@FindBy(xpath="//*[@id=\"deduction_heads\"]/tbody/tr/td[contains(text(),'Leave')]/parent::tr/td[5]/a[1]")
+	@FindBy(xpath="//*[@id=\"deduction_heads\"]/tbody/tr/td[contains(text(),'Deduction')]/parent::tr/td[5]/a[1]")
 	WebElement Edit;
 	@FindBy(id="salary_head_open_component")
 	WebElement OpenComponent;

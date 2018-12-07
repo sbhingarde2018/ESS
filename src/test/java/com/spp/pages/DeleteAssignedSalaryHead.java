@@ -11,7 +11,7 @@ public class DeleteAssignedSalaryHead extends BasePage {
 	WebElement masterlink;
 	@FindBy(xpath="//a[text()='Salary Structure']")
 	WebElement salarystructurelink;
-	@FindBy(xpath="//div[@id='main']//div[3]//tr[3]//td[3]//a[@class='action-settings']")
+	@FindBy(xpath="//*[@id=\"main\"]/div[3]/table/tbody/tr[2]/td[contains(text(),'SALARYSTRUCTURE')]/parent::tr/td[3]/a")
 	WebElement settingslink;
 	@FindBy(xpath="//img[@title='Delete Salary Group']")
 	WebElement deletebutton;
@@ -27,6 +27,10 @@ public class DeleteAssignedSalaryHead extends BasePage {
 	WebElement updatesalarygroupdetail;
 	@FindBy(xpath="//*[@id=\"main\"]/div[2]/strong")
 	WebElement SalaryHeadUpdated;
+	@FindBy(xpath="//*[@id=\"main\"]/div[4]/table/tbody/tr/td[7]/a")
+	WebElement EditAddGroup;
+	@FindBy(xpath="//*[@value=\"Update Salary Group Detail\"]")
+	WebElement UpdateGroup;
 	public DeleteAssignedSalaryHead(WebDriver driver){
 		super(driver);
 		PageFactory.initElements(driver, this);
@@ -42,6 +46,13 @@ public class DeleteAssignedSalaryHead extends BasePage {
 
 	public void clickSettingsLink() throws Exception{
 		settingslink.click();
+	}
+	
+	public void edittoaddgroup() throws Exception {
+		EditAddGroup.click();
+	}
+	public void updatesalarygroup() throws Exception {
+		UpdateGroup.click();
 	}
 	
 	public void clickDeleteSalaryHead() throws Exception{

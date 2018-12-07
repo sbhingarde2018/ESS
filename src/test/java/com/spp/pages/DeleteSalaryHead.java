@@ -12,7 +12,7 @@ public class DeleteSalaryHead extends BasePage{
 	WebElement masterlink;
 	@FindBy(xpath="//a[text()='Salary Heads']")
 	WebElement salaryheads;
-	@FindBy(xpath="//*[@id=\"earning_heads\"]/tbody/tr[5]/td[5]/a[2]")
+	@FindBy(xpath="//*[@id=\"earning_heads\"]/tbody/tr[2]/td[5]/a[2]")
 	WebElement deletebutton;
 	@FindBy(xpath="//strong[text()='Salary head successfully deleted']")
 	WebElement successfullMessage;

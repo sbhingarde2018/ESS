@@ -11,7 +11,7 @@ public class EditSalaryHead extends BasePage{
 	WebElement masterlink;
 	@FindBy(xpath="//a[text()='Salary Heads']")
 	WebElement salaryheads;
-	@FindBy(xpath="//table[@id='earning_heads']//tr[5]//td[5]//a[text()='Edit']")
+	@FindBy(xpath="//table[@id='earning_heads']//tr[2]//td[5]//a[text()='Edit']")
 	WebElement editsalaryhead;
 	@FindBy(id="salary_head_head_name")
 	WebElement headname;
