@@ -23,8 +23,8 @@ public class Classifications extends BaseTest {
 		CreateClassification cc=new CreateClassification(driver);
 		cc.clickMastserLink();
 		cc.selectClassifications();
-		cc.enterClassificationName("Classification1");
-		cc.enterDisplayOrder("888");
+		cc.enterClassificationName("Classification10");
+		cc.enterDisplayOrder("123454");
 		cc.clickCreateButton();
 		String s=cc.getMessage();
 		Assert.assertEquals(s, "Classification Heading created successfully.");
@@ -36,7 +36,7 @@ public class Classifications extends BaseTest {
 		ec.clickMastserLink();
 		ec.selectClassifications();
 		ec.clickEditIcon();
-		ec.enterDisplayOrder("880");
+		ec.enterDisplayOrder("1234564");
 		ec.clickUpdateButton();
 		String s=ec.getMessage();
 		Assert.assertEquals(s, "Classification Heading successfully updated.");
@@ -48,7 +48,7 @@ public class Classifications extends BaseTest {
 		ac.clickMastserLink();
 		ac.selectClassifications();
 		ac.clickDetailsLink();
-		ac.enterClassificationDetailName("ClassDetail");
+		ac.enterClassificationDetailName("Class1");
 		ac.clickCreateButton();
 		String s=ac.getMessage();
 		Assert.assertEquals(s, "Classification created successfully.");
@@ -61,7 +61,7 @@ public class Classifications extends BaseTest {
 		ec.selectClassifications();
 		ec.clickDetailsLink();
 		ec.clickEditIcon();
-		ec.enterClassificationDetailName("ClassDetail");
+		ec.enterClassificationDetailName("Class");
 		ec.clickUpdateButton();
 		String s=ec.getMessage();
 		Assert.assertEquals(s, "Classification successfully updated.");
