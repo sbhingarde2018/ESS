@@ -12,10 +12,10 @@ public class UpdateAutoAllotSettingsMonthly extends BasePage{
 	WebElement masterLink;
 	@FindBy(xpath="//a[text()='Leave Policy']")
 	WebElement leavePolicy;
-    @FindBy(xpath="//div[@id='leave-policy-master-list']//tr[1]//td[4]//a[text()='Add Leaves']")
+	@FindBy(xpath="//*[@id=\"leave-policy-master-list\"]/table/tbody/tr/td[contains(text(),'ClonePolicy')]/parent::tr/td[4]/a")
 	WebElement addLeaves;
    // @FindBy(xpath="//*[@id=\"leave_policy_setting_details\"]/div[2]/table/tbody/tr/td[2][contains(text(),'Earned')]/parent::tr/td[3]/a")
-    @FindBy(xpath="//*[@id=\"leave_policy_setting_details\"]/div[2]/table/tbody/tr/td[2][contains(text(),'Casual')]/parent::tr/td[3]/a")
+	@FindBy(xpath="//*[@id=\"leave_policy_setting_details\"]/div[2]/table/tbody/tr/td[2][contains(text(),'Leave')]/parent::tr/td[3]/a")
     WebElement settingsLink;
     @FindBy(xpath="//*[@id=\"main\"]/div/div[3]/nav/ul/li[4]/a/span")
     WebElement AutoAllotTab;
@@ -75,12 +75,20 @@ public class UpdateAutoAllotSettingsMonthly extends BasePage{
 	WebElement Employee2;
 	@FindBy(id="leave_report_submit")
 	WebElement GenerateReport;
+	
+	@FindBy(xpath="//*[@id=\"leave-policy-master-list\"]/table/tbody/tr/td[contains(text(),'ClonePolicy')]/parent::tr/td[6]/a")
+	WebElement DeleteClone;
 
 	
 	
 	public UpdateAutoAllotSettingsMonthly(WebDriver driver) {
 		super(driver);
 		PageFactory.initElements(driver,this);
+	}
+	
+	public void deleteClone() {
+		DeleteClone.click();
+		switchToPopUpAndAccept(driver);
 	}
 
 	public void clickMastserLink(){

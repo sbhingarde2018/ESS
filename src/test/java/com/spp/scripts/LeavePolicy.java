@@ -56,7 +56,7 @@ import com.spp.pages.UpdateLeavePolicy;
 
 public class LeavePolicy extends BaseTest {
 
-	/*@Test(priority=0)
+	@Test(priority=0)
 	public void verifyCreatedLeavePolicy_SC_35(){
 		CreateLeavePolicy lp=new CreateLeavePolicy(driver);
 		lp.clickMastserLink();
@@ -143,19 +143,19 @@ public class LeavePolicy extends BaseTest {
 		lp.clickLeaveDefinitionLink();
 		System.out.println("Leave Definition Page is Displayed");
 
-	}  */
+	}  
 
 	
-	/*@Test(priority=7)
+	@Test(priority=7)
 	public void verifyUpdatedLeaveBeahaviour_SC_272() throws InterruptedException{
 		LeaveBehaviourSettings lb=new LeaveBehaviourSettings(driver);
 		lb.clickMastserLink();
 		lb.selectLeavePolicy();
 		lb.clickAddLeaves();
-		lb.selectLeaveType("Leave (L)");
+	/*	lb.selectLeaveType("Leave (L)");
 		Thread.sleep(2000);
 		lb.clickAddButton();
-		Thread.sleep(2000);
+		Thread.sleep(5000);*/
 		lb.clickSettingsLink();
 		lb.enterCasualLeaveallowedavaiformonth("1");
 		lb.clickUpdateButton();
@@ -177,7 +177,7 @@ public class LeavePolicy extends BaseTest {
 		Assert.assertEquals(alert, "Cannot apply L more than 1.0 in a month.");
 		
 		
-	}*/
+	}
 	
 	
 	/*@Test(priority=8)      //not running                               
@@ -248,7 +248,7 @@ public class LeavePolicy extends BaseTest {
 		System.out.println(alert);
 		Assert.assertEquals(alert, "Cannot apply L more than 3.0.");
 		
-	}*/
+	}
 	@Test(priority=9)
 	public void CheckForAllowHalfDayInLeaveModule_SC_275() throws InterruptedException{
 		CheckForAllowHalfDayInLeaveModule lb=new CheckForAllowHalfDayInLeaveModule(driver);
@@ -283,7 +283,7 @@ public class LeavePolicy extends BaseTest {
 		lb.selectView();
 		Thread.sleep(7000);
 		lb.clickDeleteButton();
-		}
+		}*/
 	/*@Test(enabled=false)
 	public void CheckExcessCasualLeaveTakenAsLOP_SC_276() throws InterruptedException{
 		CheckExcessCasualLeaveTakenAsLOP lb=new CheckExcessCasualLeaveTakenAsLOP(driver);
@@ -963,7 +963,7 @@ public class LeavePolicy extends BaseTest {
  	lb.clickAutoAllotTab();
  	lb.clickLeaveAllotmentBox();
  	lb.clickUpdateButton();    
-}
+}*/
      @Test(priority=27) 
      public void UpdateAutoAllotSettingsMonthly_SC_356() throws InterruptedException{
     	 UpdateAutoAllotSettingsMonthly lb=new UpdateAutoAllotSettingsMonthly(driver);
@@ -983,7 +983,7 @@ public class LeavePolicy extends BaseTest {
  	lb.SelectForMonth("Every Month");
  	Thread.sleep(4000);
  	//lb.SelectEveryMonth("Every Month");
- 	lb.SelectEffectiveFrom("Feb/2018");
+ 	lb.SelectEffectiveFrom("Jan/2013");
  	Thread.sleep(5000);
  	lb.enterNoOfLeaves("1");
  	//lb.enterPeriodInDays("20");
@@ -1000,7 +1000,7 @@ public class LeavePolicy extends BaseTest {
  	lb.clickLeaveAllotmentBox();
  	lb.clickUpdateButton();  
 }
-     @Test(priority=28) 
+   /*  @Test(priority=28) 
 	public void CheckAutoAllotSettingsMonthly_SC_357() throws InterruptedException{
 	    	 CheckAutoAllotSettingsMonthly lb=new CheckAutoAllotSettingsMonthly(driver);
 	lb.clickReport();
@@ -1074,7 +1074,7 @@ public class LeavePolicy extends BaseTest {
 	lb.clickEmployee2();
 	lb.clickGenerateReport();
 	Thread.sleep(7000);
-}
+}*/
 @Test(priority=31) 
      public void UpdateAutoAllotSettingsQuarterly_SC_360() throws InterruptedException{
     	 UpdateAutoAllotSettingsQuarterly lb=new UpdateAutoAllotSettingsQuarterly(driver);
@@ -1093,7 +1093,7 @@ public class LeavePolicy extends BaseTest {
 // 	lb.SelectAsPerMonth("Current half-year");
 // 	lb.SelectForMonth("Every Month");
  	Thread.sleep(4000);
- 	lb.SelectEffectiveFrom("Jan/2018");
+ 	lb.SelectEffectiveFrom("Jan/2013");
  	Thread.sleep(5000);
  	lb.enterNoOfLeaves("2");
  	//lb.enterPeriodInDays("20");
@@ -1111,7 +1111,7 @@ public class LeavePolicy extends BaseTest {
  	lb.clickUpdateButton();     
 }
 
-     @Test(priority=32) 
+   /*  @Test(priority=32) 
  	public void CheckAutoAllotSettingsQuarterly_SC_361() throws InterruptedException{
     	 CheckAutoAllotSettingsQuarterly lb=new CheckAutoAllotSettingsQuarterly(driver);
  	lb.clickReport();
@@ -1129,7 +1129,7 @@ public class LeavePolicy extends BaseTest {
  	lb.clickEmployee2();
  	lb.clickGenerateReport();
  	Thread.sleep(7000);
- }
+ }*/
      @Test(priority=33) 
      public void UpdateAutoAllotSettingsHalfYearly_SC_362() throws InterruptedException{
     	 UpdateAutoAllotSettingsHalfYearly lb=new UpdateAutoAllotSettingsHalfYearly(driver);
@@ -1148,7 +1148,7 @@ public class LeavePolicy extends BaseTest {
 // 	lb.SelectAsPerMonth("Current half-year");
 // 	lb.SelectForMonth("Every Month");
  	Thread.sleep(4000);
- 	lb.SelectEffectiveFrom("Jan/2018");
+ 	lb.SelectEffectiveFrom("Jan/2013");
  	Thread.sleep(5000);
  	lb.enterNoOfLeaves("2");
  	//lb.enterPeriodInDays("20");
@@ -1165,7 +1165,7 @@ public class LeavePolicy extends BaseTest {
  	lb.clickLeaveAllotmentBox();
  	lb.clickUpdateButton();     
 }
-     @Test(priority=34) 
+   /*  @Test(priority=34) 
   	public void CheckAutoAllotSettingsHalfYearly_SC_363() throws InterruptedException{
     	 CheckAutoAllotSettingsHalfYearly lb=new CheckAutoAllotSettingsHalfYearly(driver);
   	lb.clickReport();
@@ -1183,7 +1183,7 @@ public class LeavePolicy extends BaseTest {
   	lb.clickEmployee2();
   	lb.clickGenerateReport();
   	Thread.sleep(7000);
-}
+}*/
 	@Test(priority=35) 
     public void UpdateAutoAllotSettingsYearly_SC_364() throws InterruptedException{
    	 UpdateAutoAllotSettingsYearly lb=new UpdateAutoAllotSettingsYearly(driver);
@@ -1202,7 +1202,7 @@ public class LeavePolicy extends BaseTest {
 //   lb.SelectAsPerMonth("Current half-year");
 //	lb.SelectForMonth("Every Month");
 	Thread.sleep(4000);
-	lb.SelectEffectiveFrom("Jan/2018");
+	lb.SelectEffectiveFrom("Jan/2013");
 	Thread.sleep(5000);
 	lb.enterNoOfLeaves("2");
 	//lb.enterPeriodInDays("20");
@@ -1219,7 +1219,7 @@ public class LeavePolicy extends BaseTest {
 	lb.clickLeaveAllotmentBox();
 	lb.clickUpdateButton();     
 }
-	@Test(priority=36) 
+	/*@Test(priority=36) 
   	public void CheckAutoAllotSettingsYearly_SC_365() throws InterruptedException{
     	 CheckAutoAllotSettingsYearly lb=new CheckAutoAllotSettingsYearly(driver);
   	lb.clickReport();
@@ -1705,5 +1705,12 @@ public class LeavePolicy extends BaseTest {
 		Assert.assertEquals(p, "Encash limit exceeded in a year.");
 	}*/
 	
+	@Test(priority=36)
+	public void DeleteClone() throws Exception {
+		UpdateAutoAllotSettingsMonthly up = new UpdateAutoAllotSettingsMonthly(driver);
+		up.clickMastserLink();
+		up.selectLeavePolicy();
+		up.deleteClone();
+	}
 	
 }
