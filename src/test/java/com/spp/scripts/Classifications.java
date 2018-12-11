@@ -60,8 +60,11 @@ public class Classifications extends BaseTest {
 		ec.clickMastserLink();
 		ec.selectClassifications();
 		ec.clickDetailsLink();
+		Thread.sleep(5000);
 		ec.clickEditIcon();
-		ec.enterClassificationDetailName("Class");
+		Thread.sleep(5000);
+		ec.enterClassificationDetailName("Class");	
+		Thread.sleep(5000);
 		ec.clickUpdateButton();
 		String s=ec.getMessage();
 		Assert.assertEquals(s, "Classification successfully updated.");
