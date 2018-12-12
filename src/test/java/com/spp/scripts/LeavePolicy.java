@@ -56,7 +56,7 @@ import com.spp.pages.UpdateLeavePolicy;
 
 public class LeavePolicy extends BaseTest {
 
-	@Test(priority=0)
+	/*@Test(priority=0)
 	public void verifyCreatedLeavePolicy_SC_35(){
 		CreateLeavePolicy lp=new CreateLeavePolicy(driver);
 		lp.clickMastserLink();
@@ -152,10 +152,6 @@ public class LeavePolicy extends BaseTest {
 		lb.clickMastserLink();
 		lb.selectLeavePolicy();
 		lb.clickAddLeaves();
-	/*	lb.selectLeaveType("Leave (L)");
-		Thread.sleep(2000);
-		lb.clickAddButton();
-		Thread.sleep(5000);*/
 		lb.clickSettingsLink();
 		lb.enterCasualLeaveallowedavaiformonth("1");
 		lb.clickUpdateButton();
@@ -177,7 +173,7 @@ public class LeavePolicy extends BaseTest {
 		Assert.assertEquals(alert, "Cannot apply L more than 1.0 in a month.");
 		
 		
-	}
+	}*/
 	
 	
 	/*@Test(priority=8)      //not running                               
@@ -1705,12 +1701,12 @@ public class LeavePolicy extends BaseTest {
 		Assert.assertEquals(p, "Encash limit exceeded in a year.");
 	}*/
 	
-	@Test(priority=36)
+	/*@Test(priority=36)
 	public void DeleteClone() throws Exception {
 		UpdateAutoAllotSettingsMonthly up = new UpdateAutoAllotSettingsMonthly(driver);
 		up.clickMastserLink();
 		up.selectLeavePolicy();
 		up.deleteClone();
-	}
+	}*/
 	
 }

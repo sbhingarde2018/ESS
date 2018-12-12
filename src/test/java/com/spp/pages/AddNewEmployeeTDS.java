@@ -64,9 +64,21 @@ public class AddNewEmployeeTDS extends BasePage{
 	WebElement successfullMessage;
 	@FindBy(id="employee_detail_classification_1")
 	WebElement SelectDesignation;
+	@FindBy(id="employee_statutory_pf_number")
+	WebElement EnterPFNO;
+	@FindBy(id="pf_ed")
+	WebElement EffectiveFromPF;
+	@FindBy(id="employee_statutory_esi_number")
+	WebElement EnterESINo;
+	@FindBy(id="esi_ed")
+	WebElement EffectiveFromESI;
+	@FindBy(id="employee_statutory_uan")
+	WebElement EnterUANNo;
+	@FindBy(id="employee_statutory_aadhar_no")
+	WebElement EnterAadharNo;
 	public AddNewEmployeeTDS(WebDriver driver){
 		super(driver);
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements( driver, this);
 	}
 
 	public void navigateEmployee() throws Exception{
@@ -157,4 +169,26 @@ public class AddNewEmployeeTDS extends BasePage{
 	    public String getMessage(){
 	    	return successfullMessage.getText();
 	    }
+	    
+	    public void enterPFNo(String value) {
+	    	EnterPFNO.sendKeys(value);
+	    }
+	    public void enterEffectivePF(String value) {
+	    	EffectiveFromPF.sendKeys(value);
+	    }
+	    public void enterESINo(String value) {
+	    	
+	    	EnterESINo.sendKeys(value);
+	    }
+	    
+	     public void enterEffectiveESI(String value) {
+	    	 EffectiveFromESI.sendKeys(value);
+	 	    }
+	     public void enterUANNo(String value) {
+	 	    	EnterUANNo.sendKeys(value);
+	 	    }
+	     public void enterAADHARNo(String value) {
+	 	    	EnterAadharNo.sendKeys(value);
+	 	    }
+	    
 }

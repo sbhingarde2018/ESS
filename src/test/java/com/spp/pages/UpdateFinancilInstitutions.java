@@ -12,7 +12,7 @@ public class UpdateFinancilInstitutions extends BasePage {
 	WebElement masterLink;
 	@FindBy(xpath="//a[text()='Financial Institution (Bank)']")
 	WebElement financialInstitution;
-	@FindBy(xpath="//table[@id='financial_institutions']//tr[1]//td[8]//a[text()='Edit']")
+	@FindBy(xpath="//*[@id=\"financial_institutions\"]/tbody/tr/td[contains(text(),'ICICIBank')]/parent::tr/td[8]/a")
 	WebElement editIcon;
 	@FindBy(id="financial_institution_account_type")
 	WebElement accoutType;

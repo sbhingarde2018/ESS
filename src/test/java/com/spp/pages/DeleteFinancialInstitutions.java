@@ -12,7 +12,7 @@ public class DeleteFinancialInstitutions extends BasePage{
 	WebElement masterLink;
 	@FindBy(xpath="//a[text()='Financial Institution (Bank)']")
 	WebElement financialInstitution;
-	@FindBy(xpath="//table[@id='financial_institutions']//tr[1]//td[9]//a[text()='Delete']")
+	@FindBy(xpath="//*[@id=\"financial_institutions\"]/tbody/tr/td[contains(text(),'ICICIBank')]/parent::tr/td[9]/a")
 	WebElement deleteButton;
 	@FindBy(xpath="//strong[text()='Financial Institution was successfully deleted.']")
 	WebElement successfullMessage;

@@ -12,6 +12,7 @@ import com.spp.common.BaseTest;
 import com.spp.generics.Utility;
 import com.spp.pages.AddEmployeewithClassificationDetail;
 import com.spp.pages.AddNewEmployee;
+import com.spp.pages.AddNewEmployeeTDS;
 import com.spp.pages.AddNewHrCategoryDetailsofEmployee;
 import com.spp.pages.AssignEmployee;
 import com.spp.pages.CheckifEmployeeEmployeeDetailsReportsEmployeeMasterReportredirectstoReportmodule;
@@ -38,34 +39,40 @@ public class EmployeeDetails extends BaseTest{
 
 	@Test(priority=0)
 	public void verifyAddNewEmployee_SC_77() throws Exception{
-		AddNewEmployee qq=new AddNewEmployee(driver);
-		qq.clickEmployeeLink();
-		qq.selectEmployeeDetails();
-		qq.selectAddNewEmployee();
-		qq.enterEmployeeid("1"+Utility.getRandNum());
-		qq.enterEmployeeref("2"+Utility.getRandNum());
-		qq.enterEmployeename("Krishna");	
-		qq.enterEmployeefather("shankar");
-		qq.selectDateofBirth("05 March 1995");
-		qq.selectGender("Male");
-		qq.selectMaritalStatus("Single");
-		qq.selectDateofJoining("09 January 2013");
-		qq.selectdateofsalary("01 May 2013");
-		qq.clickPresentAddress();
-		qq.selectState("Maharashtra");
-		qq.clickStatutoryTab();
-		qq.enteremployeePfNumber("12"+Utility.getRandNum());
-		qq.selectPfEffective("Jan/2013");
-		qq.enterUan("7687987678"+Utility.getRandNum2());
-		qq.enterESINo("777676"+Utility.getRandNum());
-		qq.selectEffectiveESIDate("Jan/2013");
-		qq.clickCreateEmployeeButton();
-		String s=qq.getMessage();
+		AddNewEmployeeTDS at=new AddNewEmployeeTDS(driver);
+		at.navigateEmployee();
+		at.clickEmployeeDetails();
+		at.clickAddNewEmployee();
+		Thread.sleep(1000);
+		at.enterEmployeeId("ID01");
+		at.enterEmployeeRefNo("REF01");
+		at.enterEmployeeName("Ashok");
+		at.enterFathername("Anil");
+		at.enterdob("14 May 1980");
+		at.selectGender("Female");
+		at.selectMaritalStatus("Single");
+		at.enterdoj("01 April 2013");
+		at.entersaldate("01 May 2013");
+		Thread.sleep(1000);
+		at.selectPresentadd();
+		at.selectstate("Maharashtra");
+		Thread.sleep(1000);
+		at.selectstatdetails();
+		at.enterPFNo("KN/25145");
+		at.enterUANNo("100025482555");
+		at.enterESINo("123-12545-123");
+		at.enterAADHARNo("125498784564");
+		at.enterEffectivePF("May/2013");
+		Thread.sleep(5000);
+		at.enterEffectiveESI("May/2013");
+		Thread.sleep(5000);
+		at.createemployee();	
+		String s=at.getMessage();
 		Assert.assertEquals(s, "Employee successfully created");
 						
 	}	
 	
-/*@Test(priority=1)
+	/*@Test(priority=1)
 	public void verifyAssignEmployee_SC_78() throws Exception{
 		AssignEmployee ww=new AssignEmployee(driver);
 		ww.clickEmployeeLink();
@@ -94,7 +101,7 @@ public class EmployeeDetails extends BaseTest{
 	
 	
 	
-	@Test(priority=2)
+/*@Test(priority=2)
 	public void CreateEmployeeviaExcelImport_SC_95() throws InterruptedException {
 	CreateEmployeeviaExcelImport xl=new CreateEmployeeviaExcelImport(driver);
 	xl.clickEmployeeTab();
