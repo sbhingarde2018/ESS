@@ -33,10 +33,6 @@ import com.spp.pages.UpdateWeeklyOff;
 
 
 public class EmployeeDetails extends BaseTest{
-	
-	
-
-
 	@Test(priority=0)
 	public void verifyAddNewEmployee_SC_77() throws Exception{
 		AddNewEmployeeTDS at=new AddNewEmployeeTDS(driver);

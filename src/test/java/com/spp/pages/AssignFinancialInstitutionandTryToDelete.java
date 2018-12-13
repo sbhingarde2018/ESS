@@ -17,7 +17,7 @@ public class AssignFinancialInstitutionandTryToDelete extends BasePage{
 	WebElement ClickOnFilterHead;
 	@FindBy(xpath="//*[@id=\"bf_form\"]/div[9]/button[1]")
 	WebElement ClickOnLoad;
-	@FindBy(xpath="//*[@id=\"employees_dtable\"]/tbody/tr/td[contains(text(),'Sheetal')]/parent::tr/td[6]/a[1]")
+	@FindBy(xpath="//*[@id=\"employees_dtable\"]/tbody/tr/td[1]/a[1]")
 	
 	WebElement ClickOnView; 
 	@FindBy(xpath="//*[@id=\"classification_details\"]/a")

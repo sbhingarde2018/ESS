@@ -19,9 +19,9 @@ public class UserSettings extends BaseTest{
 		ChangePassword lm=new ChangePassword(driver);
 		lm.navigateSuperuser();
 		lm.clickChangePassword();
-		lm.clickCurrentPassword("default1234$%");
-		lm.clickNewPassword("default1234$%");
-		lm.clickConfirmPassword("default1234$%");
+		lm.clickCurrentPassword("default@123456");
+		lm.clickNewPassword("default@123456");
+		lm.clickConfirmPassword("default@123456");
 		lm.clickUpdateButton();
 		String r=lm.getMessage();
 		Assert.assertEquals(r, "Password was successfully updated");

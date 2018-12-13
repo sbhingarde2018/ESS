@@ -17,19 +17,12 @@ public class AddNewGratuity extends BasePage{
 	WebElement AddNewGratuity;
 	@FindBy(id="gratuity_employee_id")
 	WebElement SelectEmployee;
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	@FindBy(id="gratuity_payment_mode")
+	WebElement SelectMOP;
+	@FindBy(id="gratuity_salary_considered_earned")
+	WebElement SalaryConsidered;
+	@FindBy(id="gratuity_date_of_payment")
+	WebElement DateofPayment;
 	
 	public AddNewGratuity(WebDriver driver) {
 		super(driver);
@@ -44,5 +37,23 @@ public class AddNewGratuity extends BasePage{
 	public void addnewgratuity() {
 		AddNewGratuity.click();
 	}
+	public void selectEmployee(String value) {
+		dropDownSelect(SelectEmployee, value);
+	}
+	public void selectmodeofPayment(String value) {
+		dropDownSelect(SelectMOP, value);
+	}
+	public void selectSalaryConsidered() {
+		if(!SalaryConsidered.isSelected()) {
+			SalaryConsidered.click();
+		}
+	}
+	public void enterdateofpayment(String value) {
+		DateofPayment.sendKeys(value);
+		}
+		
+	
+	
+	
 
 }
