@@ -14,19 +14,19 @@ public class AddNewFullandFinalSettlementwithIncludeHeldSalaryAmount extends Bas
 	WebElement ClickOnFNF;
 	@FindBy(xpath="//*[text()='Add New Full and Final Settlement']")
 	WebElement AddNewFNF;
-	@FindBy(id="full_and_final_settlement_specific_details_")
+	@FindBy(xpath="//input[@value='pending_advance']")
 	WebElement IncludePendingAdvanceamount;
 	@FindBy(id="full_and_final_settlement_employee_id")
 	WebElement SelectEmployee;
-	@FindBy(id="full_and_final_settlement[specific_details][]")
+	@FindBy(xpath="//div[normalize-space()='Include Held Salary Amount']/input")
 	WebElement IncludeHeldSalaryAmount;
-	@FindBy(id="full_and_final_settlement_include_last_sal")
+	@FindBy(xpath="//span[normalize-space()='Include last month Salary']/input")
 	WebElement IncludeLastSalary;
 	@FindBy(id="full_and_final_settlement_last_sal_option_detailed_salary")
 	WebElement IncludeDetailSalary;
 	@FindBy(id="full_and_final_settlement_last_sal_option_salary_summary")
 	WebElement IncludeSalarySummary;
-	@FindBy(id="full_and_final_settlement_specific_details_")
+	@FindBy(xpath="//span[normalize-space()='Include Open Component']/input")
 	WebElement IncludeOpenComponent;
 	@FindBy(id="full_and_final_settlement_pending_loan_amount")
 	WebElement IncludePendingLoanAMount;
@@ -36,6 +36,8 @@ public class AddNewFullandFinalSettlementwithIncludeHeldSalaryAmount extends Bas
 	WebElement SuccessMessage;
 	@FindBy(xpath="//*[@id=\"employees\"]/tbody/tr/td[6]/a")
 	WebElement ClickDelete;
+	@FindBy(xpath="//*[@id=\"employees\"]/tbody/tr/td[5]/a")
+	WebElement ClickOnDetails;
 	public AddNewFullandFinalSettlementwithIncludeHeldSalaryAmount(WebDriver driver) {
 		super(driver);
 		PageFactory.initElements( driver, this);
