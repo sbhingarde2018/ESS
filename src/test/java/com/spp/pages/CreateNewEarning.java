@@ -7,7 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.spp.common.BasePage;
 
-public class AddNewFullandFinalSettlementwithIncludeHeldSalaryAmount extends BasePage{
+public class CreateNewEarning extends BasePage{
 	@FindBy(id="salary")
 	WebElement ClickOnSalary;
 	@FindBy(xpath="//*[@id=\"menu\"]/li[6]/div/div[2]/ul/li[2]/a")
@@ -32,8 +32,7 @@ public class AddNewFullandFinalSettlementwithIncludeHeldSalaryAmount extends Bas
 	WebElement IncludePendingLoanAMount;
 	@FindBy(id="create_ffs")
 	WebElement CreateFNF;
-	@FindBy(xpath="//strong[text()='Full And Final Settlement successfully created']")
-	WebElement SuccessMessage;
+	
 	@FindBy(xpath="//*[@id=\"employees\"]/tbody/tr/td[6]/a")
 	WebElement ClickDelete;
 	@FindBy(xpath="//*[@id=\"employees\"]/tbody/tr/td[5]/a")
@@ -46,14 +45,12 @@ public class AddNewFullandFinalSettlementwithIncludeHeldSalaryAmount extends Bas
 	WebElement EnterAmount;
 	@FindBy(id="new_head_update")
 	WebElement CreateHead;
-	@FindBy(xpath="//*[@id=\"full_and_final_settlement_pending_loan_detail_\"]")
-	WebElement SelectLoan;
-	@FindBy(id="full_and_final_settlement_open_component_lists_")
-	WebElement SelectHead;
-	@FindBy(xpath="//strong[text()='Full And Final Settlement successfully deleted']")
-	WebElement deleteMessage;
+	@FindBy(xpath="//strong[text()='Head was successfully created']")
+	WebElement SuccessMessage;
+	@FindBy(xpath="//*[@id=\"main\"]/section/div[2]/nav/ul/li[2]/a/span")
+	WebElement SelectTheoreticalTab;
 	
-	public AddNewFullandFinalSettlementwithIncludeHeldSalaryAmount(WebDriver driver) {
+	public CreateNewEarning(WebDriver driver) {
 		super(driver);
 		PageFactory.initElements( driver, this);
 	}
@@ -105,12 +102,6 @@ public class AddNewFullandFinalSettlementwithIncludeHeldSalaryAmount extends Bas
 			IncludePendingAdvanceamount.click();
 		}
 	}
-	
-	public void selecthead() {
-		if(!SelectHead.isSelected()) {
-			SelectHead.click();
-		}
-	}
 	public void createfnf() {
 		CreateFNF.click();
 	}
@@ -119,17 +110,9 @@ public class AddNewFullandFinalSettlementwithIncludeHeldSalaryAmount extends Bas
 		
 		return SuccessMessage.getText();
 	}
-public String deleteMessage() {
-		
-		return deleteMessage.getText();
-	}
 	public void clickdelete() {
 		ClickDelete.click();
 		switchToPopUpAndAccept(driver);
-	}
-	public void clickdelete1() {
-		ClickDelete.click();
-		
 	}
 	public void clickdetails() {
 		ClickOnDetails.click();
@@ -147,8 +130,8 @@ public String deleteMessage() {
 	public void createhead() {
 		CreateHead.click();
 	}
-	public void selectloan() {
-		SelectLoan.click();
+	public void selecttheoreticaltab() {
+		SelectTheoreticalTab.click();
 	}
 
 }
