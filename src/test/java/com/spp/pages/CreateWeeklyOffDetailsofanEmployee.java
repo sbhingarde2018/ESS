@@ -16,8 +16,8 @@ public class CreateWeeklyOffDetailsofanEmployee extends BasePage{
 	WebElement ClickOnFilterHead;
 	@FindBy(xpath="//*[@id=\"bf_form\"]/div[9]/button[1]")
 	WebElement ClickOnLoad;
-	@FindBy(xpath="//*[@id=\"employees_dtable\"]/tbody/tr/td[1][contains(text(),'1234')]/parent::tr/td[6]/a[1]")
-	WebElement ClickOnView; 
+	@FindBy(xpath="//*[@id=\"employees_dtable\"]/tbody/tr/td[contains(text(),'Anil')]/parent::tr/td[6]/a[1]")
+	WebElement ClickonView;
 	@FindBy(xpath="//*[@id=\"ui-accordion-accordion-header-2\"]/h3")
 	WebElement ClickOnGeneral;
 	@FindBy(xpath="//*[@id=\"weekly_off\"]/a")
@@ -59,7 +59,7 @@ public class CreateWeeklyOffDetailsofanEmployee extends BasePage{
 		ClickOnLoad.click();
 	}
 	public void clickonview() {
-		ClickOnView.click();
+		ClickonView.click();
 	}
 	public void clickongeneral() {
 		ClickOnGeneral.click();

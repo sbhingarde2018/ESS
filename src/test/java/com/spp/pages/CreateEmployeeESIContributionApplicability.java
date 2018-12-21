@@ -16,8 +16,8 @@ public class CreateEmployeeESIContributionApplicability extends BasePage{
 	WebElement ClickOnFilterHead;
 	@FindBy(xpath="//*[@id=\"bf_form\"]/div[9]/button[1]")
 	WebElement ClickOnLoad;
-	@FindBy(xpath="//*[@id=\"employees_dtable\"]/tbody/tr/td[1][contains(text(),'1234')]/parent::tr/td[6]/a[1]")
-	WebElement ClickOnView; 
+	@FindBy(xpath="//*[@id=\"employees_dtable\"]/tbody/tr/td[contains(text(),'Anil')]/parent::tr/td[6]/a[1]")
+	WebElement ClickonView;
 	@FindBy(xpath="//*[@id=\"employee_esi_contribution_restrict\"]/a")
 	WebElement ClickonESIContri;
 	@FindBy(id="fr_date")
@@ -47,7 +47,7 @@ public class CreateEmployeeESIContributionApplicability extends BasePage{
 		ClickOnLoad.click();
 	}
 	public void clickonview() {
-		ClickOnView.click();
+		ClickonView.click();
 	}
 	public void clickonESICon() {
 		ClickonESIContri.click();

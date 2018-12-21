@@ -17,15 +17,20 @@ public class DeleteClassificationDetailsInEmployee extends BasePage{
 	WebElement ClickOnFilterHead;
 	@FindBy(xpath="//*[@id=\"bf_form\"]/div[9]/button[1]")
 	WebElement ClickOnLoad;
-	@FindBy(xpath="//*[@id=\"employees_dtable\"]/tbody/tr/td[1][contains(text(),'1234')]/parent::tr/td[6]/a[1]")
+	@FindBy(xpath="//*[@id=\"bf_non_classified_emp_form\"]/div[2]/button[1]")
+	WebElement Load2;
+	@FindBy(xpath="//*[@id='employees_dtable']/tbody/tr/td[contains(text(),'Anil')]/parent::tr/td[6]/a[1]")
 	WebElement ClickOnView; 
+	@FindBy(xpath="//*[@id='employees_dtable']/tbody/tr/td[contains(text(),'Anil')]/parent::tr/td[6]/a[2]")
+	WebElement DeleteEmployee;
 	@FindBy(xpath="//*[@id=\"classification_details\"]/a")
 	WebElement ClickClassificationDetail;
 	@FindBy(xpath="//*[@id=\"main\"]/div[4]/table/tbody/tr[1]/td[7]/a")
 	WebElement DeleteClassification;
 	@FindBy(xpath="//*[@id=\"main\"]/div[2]/strong")
 	WebElement successfulmessage;
-	
+	@FindBy(xpath="//input[@attr='non_classified_emp']")
+	WebElement EmployeewithoutClass;
 	
 	
 	public DeleteClassificationDetailsInEmployee(WebDriver driver) {
@@ -41,9 +46,16 @@ public class DeleteClassificationDetailsInEmployee extends BasePage{
 	public void clickonfilter() {
 		ClickOnFilterHead.click();
 	}
+	public void clickEmployeewithoutClass(){
+		EmployeewithoutClass.click();
+	}
 	public void clickonload() {
 		ClickOnLoad.click();
 	}
+	public void clickonload2() {
+		Load2.click();
+	}
+	
 	public void clickonview() {
 		ClickOnView.click();
 	}
@@ -55,6 +67,9 @@ public class DeleteClassificationDetailsInEmployee extends BasePage{
 	}
 		public String getMessage(){
 		return successfulmessage.getText();
+	}
+	public void deleteemployee() {
+		DeleteEmployee.click();
 	}
 		
 }

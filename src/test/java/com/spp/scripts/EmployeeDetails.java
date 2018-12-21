@@ -40,35 +40,250 @@ public class EmployeeDetails extends BaseTest{
 		at.clickEmployeeDetails();
 		at.clickAddNewEmployee();
 		Thread.sleep(1000);
-		at.enterEmployeeId("ID01");
-		at.enterEmployeeRefNo("REF01");
-		at.enterEmployeeName("Ashok");
-		at.enterFathername("Anil");
-		at.enterdob("14 May 1980");
+		at.enterEmployeeId("ID001");
+		at.enterEmployeeRefNo("Ref-"+Utility.getRandNum(10, 100));
+		at.enterEmployeeName("Anil");
+		at.enterFathername("Anand");
+		at.enterdob("14 June 1980");
 		at.selectGender("Female");
 		at.selectMaritalStatus("Single");
-		at.enterdoj("01 April 2013");
-		at.entersaldate("01 May 2013");
+		at.enterdoj("01 January 2018");
+		at.entersaldate("01 February 2018");
 		Thread.sleep(1000);
 		at.selectPresentadd();
 		at.selectstate("Maharashtra");
 		Thread.sleep(1000);
 		at.selectstatdetails();
-		at.enterPFNo("KN/25145");
-		at.enterUANNo("100025482555");
-		at.enterESINo("123-12545-123");
-		at.enterAADHARNo("125498784564");
-		at.enterEffectivePF("May/2013");
-		Thread.sleep(5000);
-		at.enterEffectiveESI("May/2013");
-		Thread.sleep(5000);
-		at.createemployee();	
+		at.checkTDS();
+		at.selectpanoption("ADD PAN");
+		at.enterpanno("PRAPM"+Utility.getRandNum(4441, 4966)+"P");
+		at.entereffectivedatePAN("01 January 2018");
+		Thread.sleep(1000);
+		at.selectclassificationdetail();
+		at.selectsalstructure("Structure");
+		at.selectbranch("default");
+		at.selectattendancestructure("Karnataka");
+		at.selectbank("CASH");
+		at.selectleavepolicy("Default");
+		Thread.sleep(2000);
+		at.selectdesignation("Tester");
+		Thread.sleep(2000);
+		at.createemployee();
 		String s=at.getMessage();
 		Assert.assertEquals(s, "Employee successfully created");
 						
 	}	
 	
-	/*@Test(priority=1)
+	
+	
+	@Test(priority=1)
+	public void CheckDeleteClassificationDetailsInEmployee_SC_421() throws Exception {
+	DeleteClassificationDetailsInEmployee ce = new DeleteClassificationDetailsInEmployee(driver);
+		ce.clickonemployee();
+		ce.clickonemployeedetails();
+		ce.clickonfilter();
+		Thread.sleep(2000);
+		ce.clickonload();
+		Thread.sleep(2000);
+		ce.clickonview();
+		ce.clickclassificationdetail();
+		ce.deletecclassification();
+		ce.switchToPopUpAndAccept(driver);
+		String message = ce.getMessage();
+		Assert.assertEquals(message, "Employee detail was successfully deleted.");
+	}
+	
+	@Test(priority=2)
+	public void DeleteEmployee1() throws Exception {
+		DeleteClassificationDetailsInEmployee ce = new DeleteClassificationDetailsInEmployee(driver);
+		ce.clickonemployee();
+		ce.clickonemployeedetails();
+		ce.clickonfilter();
+		Thread.sleep(2000);
+		ce.clickEmployeewithoutClass();
+		ce.clickonload2();
+		Thread.sleep(2000);
+		ce.deleteemployee();
+		ce.switchToPopUpAndAccept(driver);
+		Thread.sleep(5000);
+	}
+	@Test(priority=3)
+		public void AddEmployeewithClassificationDetail_SC_440() throws Exception{
+			AddNewEmployeeTDS at=new AddNewEmployeeTDS(driver);
+			at.navigateEmployee();
+			at.clickEmployeeDetails();
+			at.clickAddNewEmployee();
+			Thread.sleep(1000);
+			at.enterEmployeeId("ID001");
+			at.enterEmployeeRefNo("Ref-"+Utility.getRandNum(10, 100));
+			at.enterEmployeeName("Anil");
+			at.enterFathername("Anand");
+			at.enterdob("14 June 1980");
+			at.selectGender("Female");
+			at.selectMaritalStatus("Single");
+			at.enterdoj("01 January 2018");
+			at.entersaldate("01 February 2018");
+			Thread.sleep(1000);
+			at.selectPresentadd();
+			at.selectstate("Maharashtra");
+			Thread.sleep(1000);
+			at.selectstatdetails();
+			at.checkTDS();
+			at.selectpanoption("ADD PAN");
+			at.enterpanno("PRAPM"+Utility.getRandNum(4441, 4966)+"P");
+			at.entereffectivedatePAN("01 January 2018");
+			Thread.sleep(1000);
+			at.selectclassificationdetail();
+			at.selectsalstructure("Structure");
+			at.selectbranch("default");
+			at.selectattendancestructure("Karnataka");
+			at.selectbank("CASH");
+			at.selectleavepolicy("Default");
+			Thread.sleep(2000);
+			at.selectdesignation("Tester");
+			Thread.sleep(2000);
+			at.createemployee();
+			String s=at.getMessage();
+			Assert.assertEquals(s, "Employee successfully created");
+							
+		}	
+
+	@Test(priority=4)
+	public void EditClassificationDetailsChangeSalaryStructureofanemployee_SC_441() throws Exception{
+		EditClassificationDetailsChangeSalaryStructureofanemployee dw= new EditClassificationDetailsChangeSalaryStructureofanemployee(driver);
+		dw.clickonemployee();
+		dw.clickonemployeedetails();
+		dw.clickonfilter();
+		Thread.sleep(2000);
+		dw.clickonload();
+		Thread.sleep(2000);
+		dw.clickonview();
+		Thread.sleep(2000);
+		dw.clickonclassificationdetails();
+		Thread.sleep(1000);
+		dw.clickonedit();
+		dw.selectsalarystructure("Structure");
+		dw.updateclassificationdetails();
+		String message = dw.getMessage();
+		Assert.assertEquals(message, "Employee detail was successfully updated.");
+	}
+	
+	@Test(priority=5)
+	public void CreateEmployeeESIContributionApplicability_SC_452() throws Exception {
+		CreateEmployeeESIContributionApplicability ca=new CreateEmployeeESIContributionApplicability(driver);
+		ca.clickonemployee();
+		ca.clickonemployeedetails();
+		ca.clickonfilter();
+		Thread.sleep(2000);
+		ca.clickonload();
+		Thread.sleep(2000);
+		ca.clickonview();
+		Thread.sleep(2000);
+		ca.clickonESICon();
+		ca.selecteffdate("Jun/2018");
+		ca.createesi();
+		String message = ca.getMessage();
+		Assert.assertEquals(message, "ESI Applicability Detail Successfully Created.");
+	}
+	
+	@Test(priority=6)
+	public void CreateWeeklyOffDetailsofanEmployee_SC_453() throws Exception {
+		CreateWeeklyOffDetailsofanEmployee ca=new CreateWeeklyOffDetailsofanEmployee(driver);
+		ca.clickonemployee();
+		ca.clickonemployeedetails();
+		ca.clickonfilter();
+		Thread.sleep(2000);
+		ca.clickonload();
+		Thread.sleep(2000);
+		ca.clickonview();
+		ca.clickongeneral();
+		Thread.sleep(2000);
+		ca.clickonweeklyoff();
+		Thread.sleep(2000);
+		ca.addnewweeklyoff();
+		Thread.sleep(2000);
+		ca.selecteffectivefromdate("01 September 2018");
+		Thread.sleep(2000);
+		ca.selecteffectivetilldate("29 September 2018");
+		ca.firstweeklyoff("Monday");
+		Thread.sleep(2000);
+		ca.enterfirstorsecondhalf1("Full");
+		Thread.sleep(2000);
+		ca.secondweeklyoff("Friday");
+		Thread.sleep(2000);
+		ca.enterfirstorsecondhalf2("Full");
+		Thread.sleep(2000);
+		ca.createweeklyoff();
+		Thread.sleep(2000);
+		String message = ca.getMessage();
+		Assert.assertEquals(message, "Attendance Weekly Off successfully created");
+		
+	}
+	
+	@Test(priority=7)
+	public void UpdateWeeklyOff_SC_454() throws Exception{
+		UpdateWeeklyOff uf= new UpdateWeeklyOff(driver);
+		uf.clickonemployee();
+		uf.clickonemployeedetails();
+		uf.clickonfilter();
+		Thread.sleep(2000);
+		uf.clickonload();
+		Thread.sleep(2000);
+		uf.clickonview();
+		Thread.sleep(2000);
+		uf.clickongeneral();
+		Thread.sleep(2000);
+		uf.clickonweeklyoff();
+		Thread.sleep(2000);
+		uf.clickonedit();
+		Thread.sleep(2000);
+		uf.updatedate("01 August 2018");
+		Thread.sleep(2000);
+		uf.updateweeklyoff();
+		Thread.sleep(2000);
+		String message = uf.getMessage();
+		Assert.assertEquals(message, "Attendance Weekly Off successfully updated");
+	}
+	@Test(priority=8)
+	public void DeleteWeeklyOff_SC_455() throws Exception{
+		DeleteWeeklyOff dw= new DeleteWeeklyOff(driver);
+		dw.clickonemployee();
+		dw.clickonemployeedetails();
+		dw.clickonfilter();
+		Thread.sleep(2000);
+		dw.clickonload();
+		Thread.sleep(2000);
+		dw.clickonview();
+		Thread.sleep(2000);
+		dw.clickongeneral();
+		Thread.sleep(2000);
+		dw.clickonweeklyoff();
+		Thread.sleep(2000);
+		dw.clickondelete();
+		dw.switchToPopUpAndDismiss();
+		Thread.sleep(2000);
+		dw.clickondelete();
+		Thread.sleep(2000);
+		dw.switchToPopUpAndAccept(driver);
+		String message = dw.getMessage();
+		Assert.assertEquals(message, "Attendance Weekly Off was successfully deleted.");
+	}	
+	
+	@Test(priority=9)
+	public void DeleteEmployee() throws Exception {
+		DeleteClassificationDetailsInEmployee ce = new DeleteClassificationDetailsInEmployee(driver);
+		ce.clickonemployee();
+		ce.clickonemployeedetails();
+		ce.clickonfilter();
+		Thread.sleep(2000);
+		ce.clickonload();
+		Thread.sleep(2000);
+		ce.deleteemployee();
+		ce.switchToPopUpAndAccept(driver);
+		Thread.sleep(5000);
+	}
+	
+/*	@Test(priority=1)
 	public void verifyAssignEmployee_SC_78() throws Exception{
 		AssignEmployee ww=new AssignEmployee(driver);
 		ww.clickEmployeeLink();
@@ -83,21 +298,19 @@ public class EmployeeDetails extends BaseTest{
 		ww.selectViewButton();
 		ww.selectClassificationDetails();
 		ww.selectAddNewClassiDetails();
-		ww.selectSalaryStructure("new Structure");
+		ww.selectSalaryStructure("Structure");
 		ww.selectAttendanceStructure("Karnataka");
-		ww.selectBranch("Chennai");
-		ww.selectBank("SBI");
-		ww.selectLeavePolicy("new");
-		ww.enterBankAc("74"+Utility.getRandNum());
+		ww.selectBranch("default");
+		ww.selectBank("CASH");
+		ww.selectLeavePolicy("Default");
+		//ww.enterBankAc("74"+Utility.getRandNum());
 		ww.clickCreateClassificationButton();
 		String s=ww.getMessage();
 		Assert.assertEquals(s, "Employee detail was successfully created.");
 		
 }	
 	
-	
-	
-/*@Test(priority=2)
+@Test(priority=2)
 	public void CreateEmployeeviaExcelImport_SC_95() throws InterruptedException {
 	CreateEmployeeviaExcelImport xl=new CreateEmployeeviaExcelImport(driver);
 	xl.clickEmployeeTab();
@@ -134,97 +347,12 @@ public class EmployeeDetails extends BaseTest{
 		Thread.sleep(3000);
 		gxl.DownloadTemplate();
 	}
-	@Test(priority=4)
-	public void CheckDeleteClassificationDetailsInEmployee_SC_421() throws Exception {
-	DeleteClassificationDetailsInEmployee ce = new DeleteClassificationDetailsInEmployee(driver);
-		ce.clickonemployee();
-		ce.clickonemployeedetails();
-		ce.clickonfilter();
-		Thread.sleep(2000);
-		ce.clickonload();
-		Thread.sleep(2000);
-		ce.clickonview();
-		ce.clickclassificationdetail();
-		ce.deletecclassification();
-		ce.switchToPopUpAndAccept(driver);
-		Thread.sleep(2000);
-		String message = ce.getMessage();
-		Assert.assertEquals(message, "Employee detail was successfully deleted.");
-	}
-	@Test(priority=5)
-	public void AddEmployeewithClassificationDetail_SC_440() throws Exception {
-		AddEmployeewithClassificationDetail ce = new AddEmployeewithClassificationDetail(driver);
-		ce.navigateEmployee();
-		ce.clickEmployeeDetails();
-		ce.clickAddNewEmployee();
-		ce.enterEmployeeId("TATA123");
-		ce.enterEmployeeRefNo("TATA1234");
-		ce.enterEmployeeName("Poonam");
-		ce.enterFathername("Anil");
-		ce.enterdob("14 June 1991");
-		ce.selectGender("Female");
-		ce.selectMaritalStatus("Single");
-		ce.enterdoj("09 June 2011");
-		ce.entersaldate("01 July 2011");
-		ce.selectPresentadd();
-		ce.selectstate("Karnataka");
-		ce.selectsalstructure("Gross Structure");
-		ce.selectbranch("Chennai");
-		ce.selectattendancestructure("Karnataka");
-		ce.selectbank("");
-	}
-
-	@Test(priority=6)
-	public void CreateEmployeeESIContributionApplicability_SC_452() throws Exception {
-		CreateEmployeeESIContributionApplicability ca=new CreateEmployeeESIContributionApplicability(driver);
-		ca.clickonemployee();
-		ca.clickonemployeedetails();
-		ca.clickonfilter();
-		Thread.sleep(2000);
-		ca.clickonload();
-		Thread.sleep(2000);
-		ca.clickonview();
-		Thread.sleep(2000);
-		ca.clickonESICon();
-		ca.selecteffdate("Jun/2018");
-		ca.createesi();
-		String message = ca.getMessage();
-		Assert.assertEquals(message, "ESI Applicability Detail Successfully Created.");
-	}
 	
-	@Test(priority=7)
-	public void CreateWeeklyOffDetailsofanEmployee_SC_453() throws Exception {
-		CreateWeeklyOffDetailsofanEmployee ca=new CreateWeeklyOffDetailsofanEmployee(driver);
-		ca.clickonemployee();
-		ca.clickonemployeedetails();
-		ca.clickonfilter();
-		Thread.sleep(2000);
-		ca.clickonload();
-		Thread.sleep(2000);
-		ca.clickonview();
-		ca.clickongeneral();
-		Thread.sleep(2000);
-		ca.clickonweeklyoff();
-		Thread.sleep(2000);
-		ca.addnewweeklyoff();
-		Thread.sleep(2000);
-		ca.selecteffectivefromdate("01 September 2018");
-		Thread.sleep(2000);
-		ca.selecteffectivetilldate("29 September 2018");
-		ca.firstweeklyoff("Monday");
-		Thread.sleep(2000);
-		ca.enterfirstorsecondhalf1("Full");
-		Thread.sleep(2000);
-		ca.secondweeklyoff("Friday");
-		Thread.sleep(2000);
-		ca.enterfirstorsecondhalf2("Full");
-		Thread.sleep(2000);
-		ca.createweeklyoff();
-		Thread.sleep(2000);
-		String message = ca.getMessage();
-		Assert.assertEquals(message, "Attendance Weekly Off successfully created");
-		
-	}
+	
+
+	
+	
+	
 	
 	@Test(priority=8)
 	public void CheckifEmployeeEmployeeDetailsReportsEmployeeMasterReportredirectstoReportmodule_SC_462() throws Exception {
@@ -367,81 +495,10 @@ public class EmployeeDetails extends BaseTest{
 		Assert.assertEquals(message, "Hr master detail successfully deleted.");
 	}
 	
-	@Test(priority=16)
-	public void UpdateWeeklyOff_SC_454() throws Exception{
-		UpdateWeeklyOff uf= new UpdateWeeklyOff(driver);
-		uf.clickonemployee();
-		uf.clickonemployeedetails();
-		uf.clickonfilter();
-		Thread.sleep(2000);
-		uf.clickonload();
-		Thread.sleep(2000);
-		uf.clickonview();
-		Thread.sleep(2000);
-		uf.clickongeneral();
-		Thread.sleep(2000);
-		uf.clickonweeklyoff();
-		Thread.sleep(2000);
-		uf.clickonedit();
-		Thread.sleep(2000);
-		uf.updatedate("01 August 2019");
-		Thread.sleep(2000);
-		uf.updateweeklyoff();
-		Thread.sleep(2000);
-		String message = uf.getMessage();
-		Assert.assertEquals(message, "Attendance Weekly Off successfully updated");
-	}
-	@Test(priority=17)
-	public void DeleteWeeklyOff_SC_455() throws Exception{
-		DeleteWeeklyOff dw= new DeleteWeeklyOff(driver);
-		dw.clickonemployee();
-		dw.clickonemployeedetails();
-		dw.clickonfilter();
-		Thread.sleep(2000);
-		dw.clickonload();
-		Thread.sleep(2000);
-		dw.clickonview();
-		Thread.sleep(2000);
-		dw.clickongeneral();
-		Thread.sleep(2000);
-		dw.clickonweeklyoff();
-		Thread.sleep(2000);
-		dw.clickondelete();
-		dw.switchToPopUpAndDismiss();
-		Thread.sleep(2000);
-		dw.clickondelete();
-		Thread.sleep(2000);
-		dw.switchToPopUpAndAccept(driver);
-		String message = dw.getMessage();
-		Assert.assertEquals(message, "Attendance Weekly Off was successfully deleted.");
-	}	
-	@Test(priority=18)
-	public void EditClassificationDetailsChangeSalaryStructureofanemployee_SC_441() throws Exception{
-		EditClassificationDetailsChangeSalaryStructureofanemployee dw= new EditClassificationDetailsChangeSalaryStructureofanemployee(driver);
-		dw.clickonemployee();
-		dw.clickonemployeedetails();
-		dw.clickonfilter();
-		Thread.sleep(2000);
-		dw.clickonload();
-		Thread.sleep(2000);
-		dw.clickonview();
-		Thread.sleep(2000);
-		dw.clickonclassificationdetails();
-		Thread.sleep(1000);
-		dw.clickonedit();
-		dw.selectsalarystructure("New Structure1");
-		dw.updateclassificationdetails();
-		Thread.sleep(2000);
-		dw.switchToPopUpAndDismiss();
-		Thread.sleep(2000);
-		dw.updateclassificationdetails();
-		Thread.sleep(2000);
-		dw.switchToPopUpAndAccept(driver);
-		String message = dw.getMessage();
-		Assert.assertEquals(message, "Employee detail was successfully updated.");
-	}*/
-}	
 	
+	*/
+
+}	
 	
 	
 

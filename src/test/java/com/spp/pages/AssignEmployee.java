@@ -19,7 +19,7 @@ public class AssignEmployee extends BasePage {
 	WebElement EmployeewithoutClass;
 	@FindBy(xpath="//*[@id=\"bf_non_classified_emp_form\"]/div[2]/button[1]")
 	WebElement LoadButton;
-	@FindBy(xpath="//*[@id=\"employees_dtable\"]/tbody/tr[1]/td[6]/a")
+	@FindBy(xpath="//*[@id=\"employees_dtable\"]/tbody/tr/td[contains(text(),'Ashok')]/parent::tr/td[6]/a[1]")
 	WebElement ViewButton;
 	@FindBy(xpath="//*[@id=\"classification_details\"]/a")
 	WebElement ClassificationDetails;
@@ -41,7 +41,7 @@ public class AssignEmployee extends BasePage {
 	
 	@FindBy(id="bank_ac")
 	WebElement BankAc;
-	@FindBy(xpath="//*[@id=\"emp_det_form\"]/div[2]/div[18]/input")
+	@FindBy(xpath="//*[@value='Create Classification Details']")
 	WebElement CreateClassificationButton; 
 	@FindBy(xpath="//*[@id=\"main\"]/div[2]/strong")
 	WebElement successfullMessage;
