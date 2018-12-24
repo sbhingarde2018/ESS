@@ -19,7 +19,7 @@ public class CreateReimbursementClaim extends BasePage{
 	WebElement ReimbursementClaim;
 	@FindBy(xpath="//*[@id=\"claims_list\"]/div[1]/span/a")
 	WebElement NewReimbursement;
-	@FindBy(xpath="//*[@id=\"employees_table\"]/tbody/tr[2]/td[5]/input")
+	@FindBy(xpath="//*[@name=\"employee_id\"]")
 	WebElement AddEmployee;
 	@FindBy(xpath="//*[@id=\"main\"]/div/div[2]/form/div[3]/input")
 	WebElement ClaimButton;

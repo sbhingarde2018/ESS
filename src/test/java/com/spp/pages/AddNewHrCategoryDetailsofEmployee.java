@@ -16,8 +16,8 @@ public class AddNewHrCategoryDetailsofEmployee extends BasePage{
 	WebElement ClickonFilter;
 	@FindBy(xpath="//*[@id=\"bf_form\"]/div[9]/button[1]")
 	WebElement ClickOnLoad;
-	@FindBy(xpath="//*[@id=\"employees_dtable\"]/tbody/tr/td[contains(text(),'Ekta')]/parent::tr/td[6]/a[1]")
-	WebElement ClickonView;
+	@FindBy(xpath="//*[@id='employees_dtable']/tbody/tr/td[contains(text(),'Anil')]/parent::tr/td[6]/a[1]")
+	WebElement ClickOnView;
 	@FindBy(xpath="//*[@id=\"ui-accordion-accordion-header-1\"]/h3")
 	WebElement ClickonHRCategory;
 	@FindBy(xpath="//*[@id=\"ui-accordion-accordion-panel-1\"]/li[2]/a")
@@ -30,7 +30,7 @@ public class AddNewHrCategoryDetailsofEmployee extends BasePage{
 	WebElement EnterQualification;
 	@FindBy(id="hr_master_category_values_4")
 	WebElement EnterNationality;
-	@FindBy(xpath="//*[@id=\"main\"]/div[4]/form/div[11]/input")
+	@FindBy(xpath="//*[@value='Save Details']")
 	WebElement ClickOnSave;
 	@FindBy(xpath="//*[@id=\"main\"]/div[2]/strong")
 	WebElement successfulmessage;
@@ -55,7 +55,7 @@ public class AddNewHrCategoryDetailsofEmployee extends BasePage{
 		ClickOnLoad.click();
 	}
 	public void clickonview() {
-		ClickonView.click();
+		ClickOnView.click();
 	}
 	public void clickonhrcategory() {
 		ClickonHRCategory.click();

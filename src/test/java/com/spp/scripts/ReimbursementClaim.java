@@ -24,7 +24,7 @@ import junit.framework.Assert;
 
 public class ReimbursementClaim extends BaseTest{
 	
-	 /*@Test(priority=0)
+	/*@Test(priority=0)
 		public void CreateReimbursementAllotment_SC_289() throws Exception{
 		 CreateReimbursementAllotment rt = new CreateReimbursementAllotment(driver);
 		 rt.clickMastserLink();
@@ -34,7 +34,7 @@ public class ReimbursementClaim extends BaseTest{
 			rt.selectModeOfPayment("Paid in Salary");
 			rt.selectLumpsumType();
 			Thread.sleep(5000);
-			rt.enterReimbursementName("ReimbursementMaster");
+			rt.enterReimbursementName("Rmaster");
 			Thread.sleep(3000);
 			rt.clickCreateReimbursementMaster();
 			Thread.sleep(5000);
@@ -43,10 +43,10 @@ public class ReimbursementClaim extends BaseTest{
 			rt.selectNewReimbursement();
 			rt.selectAddEmployee();
 			rt.selectAllotButton();
-			rt.selectName("ReimbursementMaster (Other Reimbursement)");
+			rt.selectName("Rmaster (Other Reimbursement)");
 			Thread.sleep(2000);
-			rt.selectFinancialYear("2013/2014");
-			rt.selectAllotmentDate("15 April 2013");
+			rt.selectFinancialYear("2017/2018");
+			rt.selectAllotmentDate("15 March 2018");
 			rt.ClickOnFunctionKey();
 			Thread.sleep(5000);
 			rt.EnterSumAmount("3000");
@@ -54,7 +54,7 @@ public class ReimbursementClaim extends BaseTest{
 			rt.selectCreateReimbursementButton();
 			String e=rt.getMessage();
 			Assert.assertEquals(e, "Reimbursement Allotment was successfully created");
-		}	
+		}	*/
 			
 	@Test(priority=1)
 		public void CreateReimbursementClaim_SC_290() throws Exception{
@@ -64,12 +64,12 @@ public class ReimbursementClaim extends BaseTest{
 		 rt.selectNewReimbursement();
 		 rt.selectAddEmployee();
 		 rt.selectClaimButton();
-		 rt.selectName("ReimbursementMaster (Other Reimbursement)");
-		 rt.selectFinancialYear("2013/2014");
+		 rt.selectName("Rmaster (Other Reimbursement)");
+		 rt.selectFinancialYear("2017/2018");
 		 rt.selectPaymentMode("Paid in Salary");
-		 rt.selectPaidMonth("Apr/2013");
-		 rt.selectClaimDate("15 April 2013");
-		 rt.selectPaidDate("30 April 2013");
+		 rt.selectPaidMonth("Mar/2018");
+		 rt.selectClaimDate("15 March 2018");
+		 rt.selectPaidDate("30 March 2018");
 		 rt.selectAmount("");
 		 rt.selectCreateReimbursementButton();
 		 String t=rt.getMessage();
@@ -79,7 +79,7 @@ public class ReimbursementClaim extends BaseTest{
 		 
 }
 	
-	@Test(priority=2)
+/*	@Test(priority=2)
 	public void BulkReimbursementClaim_SC_370() throws Exception{
 	 BulkReimbursementClaim rt = new BulkReimbursementClaim(driver);
 	 rt.selectSalary();
@@ -337,9 +337,9 @@ public class ReimbursementClaim extends BaseTest{
 	Assert.assertEquals(t, "Reimbursement Claim was successfully created");
 	Thread.sleep(5000);
 	cm.clickDeleteButton();
-	}*/
+	}
 	
-	  	/*	@Test(priority=12)
+	  	@Test(priority=12)
 	public void CheckReimbursementClaimRedirectsToReportModule_SC_504() throws Exception{
 	 CheckReimbursementClaimRedirectsToReportModule rt = new CheckReimbursementClaimRedirectsToReportModule(driver);
 	 rt.selectSalary();
@@ -352,9 +352,9 @@ public class ReimbursementClaim extends BaseTest{
 	 rt.selectFromDate("05 June 2018");
 	 rt.selectToDate("10 June 2018");
 	 rt.selectGenerateReport();
-}*/
+}
 	
-	 /*@Test(priority=13)
+	 @Test(priority=13)
 		public void CreateLTAOpeningBalance_SC_559() throws Exception{
 		  CreateLTAOpeningBalance rt = new CreateLTAOpeningBalance(driver);
 		 rt.selectSalary();
@@ -370,9 +370,9 @@ public class ReimbursementClaim extends BaseTest{
 		 Assert.assertEquals(e, "Created Successfully!"); 
 		 Thread.sleep(3000);
 		 rt.DeleteLTA();
-	}*/
+	}
 	 
-	/*@Test(priority=14)
+	@Test(priority=14)
 		public void SaveLTAAdjustment_SC_558() throws Exception{
 		  CreateLTAOpeningBalance rt = new CreateLTAOpeningBalance(driver);
 		 rt.selectSalary();
@@ -388,7 +388,7 @@ public class ReimbursementClaim extends BaseTest{
 		 Assert.assertEquals(e, "Created Successfully!"); 
 		 Thread.sleep(3000);
 		 rt.DeleteLTA();
-	}*/
+	}
 	 
 	 
 	 
@@ -445,7 +445,7 @@ public class ReimbursementClaim extends BaseTest{
 		Assert.assertEquals(s, "Reimbursement Master is successfully created.");
 		Thread.sleep(3000);
 		rt.clickDeleteButton();
-	}
+	}*/
 	 
 	 
 	

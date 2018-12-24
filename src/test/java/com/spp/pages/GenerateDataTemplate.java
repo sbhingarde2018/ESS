@@ -28,7 +28,7 @@ public class GenerateDataTemplate extends  BasePage{
 	WebElement EmpWithoutClassificationButton;
 	@FindBy(xpath="//*[@id=\"bf_non_classified_emp_form\"]/div[2]/button[1]")
 	WebElement LoadEmployeesButton;
-	@FindBy(xpath="//*[@id=\"main\"]/div[4]/form/fieldset/div/div[4]")
+	@FindBy(xpath="//*[@id='main']/div[4]/form/fieldset/div/div[4]/button")
 	WebElement GenerateTemplateButton;
 	
 

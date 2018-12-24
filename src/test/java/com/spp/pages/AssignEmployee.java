@@ -19,8 +19,8 @@ public class AssignEmployee extends BasePage {
 	WebElement EmployeewithoutClass;
 	@FindBy(xpath="//*[@id=\"bf_non_classified_emp_form\"]/div[2]/button[1]")
 	WebElement LoadButton;
-	@FindBy(xpath="//*[@id=\"employees_dtable\"]/tbody/tr/td[contains(text(),'Ashok')]/parent::tr/td[6]/a[1]")
-	WebElement ViewButton;
+	@FindBy(xpath="//*[@id='employees_dtable']/tbody/tr/td[contains(text(),'Anil')]/parent::tr/td[6]/a[1]")
+	WebElement ClickOnView; 
 	@FindBy(xpath="//*[@id=\"classification_details\"]/a")
 	WebElement ClassificationDetails;
 	@FindBy(xpath="//*[@id=\"main\"]/div[3]/span/a")
@@ -68,7 +68,7 @@ public void selectLoadButton(){
 	LoadButton.click();
 }
 public void selectViewButton(){
-	ViewButton.click();
+	ClickOnView.click();
 }
 public void selectClassificationDetails(){
 	ClassificationDetails.click();

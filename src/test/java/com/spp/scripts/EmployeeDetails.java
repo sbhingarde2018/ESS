@@ -94,6 +94,49 @@ public class EmployeeDetails extends BaseTest{
 	}
 	
 	@Test(priority=2)
+	public void verifyAssignEmployee_SC_78() throws Exception{
+		AssignEmployee ww=new AssignEmployee(driver);
+		ww.clickEmployeeLink();
+		ww.selectEmployeeDetails();
+		ww.selectFilterHead();
+		System.out.println("done1");
+		Thread.sleep(3000);
+		ww.clickEmployeewithoutClass();
+		System.out.println("done2");
+		ww.selectLoadButton();
+		Thread.sleep(4000);
+		ww.selectViewButton();
+		ww.selectClassificationDetails();
+		ww.selectAddNewClassiDetails();
+		ww.selectSalaryStructure("Structure");
+		ww.selectAttendanceStructure("Karnataka");
+		ww.selectBranch("default");
+		ww.selectBank("CASH");
+		ww.selectLeavePolicy("Default");
+		//ww.enterBankAc("74"+Utility.getRandNum());
+		ww.clickCreateClassificationButton();
+		String s=ww.getMessage();
+		Assert.assertEquals(s, "Employee detail was successfully created.");
+		
+}	
+	@Test(priority=3)
+	public void CheckDeleteClassificationDetailsInEmployeeExtra1_SC_421() throws Exception {
+	DeleteClassificationDetailsInEmployee ce = new DeleteClassificationDetailsInEmployee(driver);
+		ce.clickonemployee();
+		ce.clickonemployeedetails();
+		ce.clickonfilter();
+		Thread.sleep(2000);
+		ce.clickonload();
+		Thread.sleep(2000);
+		ce.clickonview();
+		ce.clickclassificationdetail();
+		ce.deletecclassification();
+		ce.switchToPopUpAndAccept(driver);
+		String message = ce.getMessage();
+		Assert.assertEquals(message, "Employee detail was successfully deleted.");
+	}
+	
+	@Test(priority=4)
 	public void DeleteEmployee1() throws Exception {
 		DeleteClassificationDetailsInEmployee ce = new DeleteClassificationDetailsInEmployee(driver);
 		ce.clickonemployee();
@@ -107,7 +150,7 @@ public class EmployeeDetails extends BaseTest{
 		ce.switchToPopUpAndAccept(driver);
 		Thread.sleep(5000);
 	}
-	@Test(priority=3)
+	@Test(priority=5)
 		public void AddEmployeewithClassificationDetail_SC_440() throws Exception{
 			AddNewEmployeeTDS at=new AddNewEmployeeTDS(driver);
 			at.navigateEmployee();
@@ -148,7 +191,7 @@ public class EmployeeDetails extends BaseTest{
 							
 		}	
 
-	@Test(priority=4)
+	@Test(priority=6)
 	public void EditClassificationDetailsChangeSalaryStructureofanemployee_SC_441() throws Exception{
 		EditClassificationDetailsChangeSalaryStructureofanemployee dw= new EditClassificationDetailsChangeSalaryStructureofanemployee(driver);
 		dw.clickonemployee();
@@ -168,7 +211,7 @@ public class EmployeeDetails extends BaseTest{
 		Assert.assertEquals(message, "Employee detail was successfully updated.");
 	}
 	
-	@Test(priority=5)
+	@Test(priority=7)
 	public void CreateEmployeeESIContributionApplicability_SC_452() throws Exception {
 		CreateEmployeeESIContributionApplicability ca=new CreateEmployeeESIContributionApplicability(driver);
 		ca.clickonemployee();
@@ -186,7 +229,7 @@ public class EmployeeDetails extends BaseTest{
 		Assert.assertEquals(message, "ESI Applicability Detail Successfully Created.");
 	}
 	
-	@Test(priority=6)
+	@Test(priority=8)
 	public void CreateWeeklyOffDetailsofanEmployee_SC_453() throws Exception {
 		CreateWeeklyOffDetailsofanEmployee ca=new CreateWeeklyOffDetailsofanEmployee(driver);
 		ca.clickonemployee();
@@ -220,7 +263,7 @@ public class EmployeeDetails extends BaseTest{
 		
 	}
 	
-	@Test(priority=7)
+	@Test(priority=9)
 	public void UpdateWeeklyOff_SC_454() throws Exception{
 		UpdateWeeklyOff uf= new UpdateWeeklyOff(driver);
 		uf.clickonemployee();
@@ -244,7 +287,7 @@ public class EmployeeDetails extends BaseTest{
 		String message = uf.getMessage();
 		Assert.assertEquals(message, "Attendance Weekly Off successfully updated");
 	}
-	@Test(priority=8)
+	@Test(priority=10)
 	public void DeleteWeeklyOff_SC_455() throws Exception{
 		DeleteWeeklyOff dw= new DeleteWeeklyOff(driver);
 		dw.clickonemployee();
@@ -269,166 +312,9 @@ public class EmployeeDetails extends BaseTest{
 		Assert.assertEquals(message, "Attendance Weekly Off was successfully deleted.");
 	}	
 	
-	@Test(priority=9)
-	public void DeleteEmployee() throws Exception {
-		DeleteClassificationDetailsInEmployee ce = new DeleteClassificationDetailsInEmployee(driver);
-		ce.clickonemployee();
-		ce.clickonemployeedetails();
-		ce.clickonfilter();
-		Thread.sleep(2000);
-		ce.clickonload();
-		Thread.sleep(2000);
-		ce.deleteemployee();
-		ce.switchToPopUpAndAccept(driver);
-		Thread.sleep(5000);
-	}
-	
-/*	@Test(priority=1)
-	public void verifyAssignEmployee_SC_78() throws Exception{
-		AssignEmployee ww=new AssignEmployee(driver);
-		ww.clickEmployeeLink();
-		ww.selectEmployeeDetails();
-		ww.selectFilterHead();
-		System.out.println("done1");
-		Thread.sleep(3000);
-		ww.clickEmployeewithoutClass();
-		System.out.println("done2");
-		ww.selectLoadButton();
-		Thread.sleep(4000);
-		ww.selectViewButton();
-		ww.selectClassificationDetails();
-		ww.selectAddNewClassiDetails();
-		ww.selectSalaryStructure("Structure");
-		ww.selectAttendanceStructure("Karnataka");
-		ww.selectBranch("default");
-		ww.selectBank("CASH");
-		ww.selectLeavePolicy("Default");
-		//ww.enterBankAc("74"+Utility.getRandNum());
-		ww.clickCreateClassificationButton();
-		String s=ww.getMessage();
-		Assert.assertEquals(s, "Employee detail was successfully created.");
-		
-}	
-	
-@Test(priority=2)
-	public void CreateEmployeeviaExcelImport_SC_95() throws InterruptedException {
-	CreateEmployeeviaExcelImport xl=new CreateEmployeeviaExcelImport(driver);
-	xl.clickEmployeeTab();
-	xl.clickEmployeeDetailsLink();
-	xl.clickImportExportTab();
-	xl.clickExcelTemplateUpload();
-	xl.enterExcelFilePath("C:\\Users\\admin\\Desktop\\RELYON\\EmployeeDetails.xlsx");
-	xl.clickUpload();
-	Thread.sleep(3000);
-	xl.clickNotificationIcon();
-	xl.importBackgroundJobs();
-	xl.sortByLatestJob();
-	xl.sortByLatestJob();
-	
-	String message = xl.getSuccessmessage();
-	Assert.assertEquals(message, "Successfully Imported");
-	
-}
-	
-	@Test(priority=3)
-	public void verifyDataTemplateGeneration_SC_96() throws InterruptedException, IOException {
-	
-		GenerateDataTemplate gxl = new GenerateDataTemplate(driver);
-	
-		gxl.clickEmployeeTab();
-		gxl.clickEmployeeDetailsLink();
-		gxl.clickImportExportTab();
-		gxl.clickGenerateDataTemplateTab();
-		gxl.SelectExcelType("Employees Data Template");
-		gxl.clickGetEmployees();
-		Thread.sleep(3000);
-		gxl.SelectEmpWithoutClassificationButton();
-		gxl.LoadEmployees();
-		Thread.sleep(3000);
-		gxl.DownloadTemplate();
-	}
 	
 	
-
-	
-	
-	
-	
-	@Test(priority=8)
-	public void CheckifEmployeeEmployeeDetailsReportsEmployeeMasterReportredirectstoReportmodule_SC_462() throws Exception {
-		CheckifEmployeeEmployeeDetailsReportsEmployeeMasterReportredirectstoReportmodule cr=new CheckifEmployeeEmployeeDetailsReportsEmployeeMasterReportredirectstoReportmodule(driver);
-		cr.clickonemployee();
-		cr.clickonemployeedetails();
-		cr.clickonreports();
-		Thread.sleep(2000);
-		cr.clickonmasterreport();
-		Thread.sleep(2000);
-		cr.selectreporttype("Date Of Joining");
-		cr.getemployees();
-		Thread.sleep(2000);
-		cr.clickonload();
-		Thread.sleep(2000);
-		cr.selectemployee();
-		Thread.sleep(2000);
-		cr.generatereport();
-	
-	}
-	@Test(priority=9)
-	public void CheckifEmployeeEmployeeDetailsReportsEmployeeStatutoryReportredirectstoReportmodule_SC_463() throws Exception {
-		CheckifEmployeeEmployeeDetailsReportsEmployeeStatutoryReportredirectstoReportmodule cr=new CheckifEmployeeEmployeeDetailsReportsEmployeeStatutoryReportredirectstoReportmodule(driver);
-		cr.clickonemployee();
-		cr.clickonemployeedetails();
-		cr.clickonreports();
-		Thread.sleep(2000);
-		cr.clickonstatreport();
-		Thread.sleep(2000);
-		cr.selectreporttype("PF");
-		cr.selectgroup("Chennai Group11");
-		cr.selectorderby("Ref. No.");
-		cr.selectpaymonth("Jun/2018");
-		Thread.sleep(2000);
-		cr.generatestatreport();
-	
-	}
-	/*@Test(priority=10)
-	public void CheckifEmployeeEmployeeDetailsReportsEmployeeSummaryredirectstoReportmodule_SC_464() throws Exception {
-		CheckifEmployeeEmployeeDetailsReportsEmployeeSummaryredirectstoReportmodule cr=new CheckifEmployeeEmployeeDetailsReportsEmployeeSummaryredirectstoReportmodule(driver);
-		cr.clickonemployee();
-		cr.clickonemployeedetails();
-		cr.clickonreports();
-		Thread.sleep(2000);
-		cr.clickonemployeesummary();
-		cr.clickonviewsummary();
-		cr.downloadpdf();
-		//cr.downloadexcel();
-	}
 	@Test(priority=11)
-	public void GetHRSampleTemplates_SC_460() throws Exception{
-		GetHRSampleTemplates gh= new GetHRSampleTemplates(driver);
-		gh.clickonemployee();
-		gh.clickonemployeedetails();
-		gh.clickonimportexport();
-		Thread.sleep(2000);
-		gh.clickonhrsampletemplate();
-		gh.selecthrcategory("Placement");
-		gh.gettemplate();
-	}
-	@Test(priority=12)
-	public void GetHRDataTemplates_SC_461() throws Exception{
-		GetHRDataTemplates gd=new GetHRDataTemplates(driver);
-		gd.clickonemployee();
-		gd.clickonemployeedetails();
-		gd.clickonimportexport();
-		Thread.sleep(2000);
-		gd.clickonhrdatatemplate();
-		gd.selecthrcategory("Placement");
-		gd.getemployees();
-		Thread.sleep(2000);
-		gd.clickonload();
-		Thread.sleep(2000);
-		gd.getdatatemplate();
-	}
-	@Test(priority=13)
 	public void AddNewHrCategoryDetailsofEmployee_SC_456() throws Exception{
 		AddNewHrCategoryDetailsofEmployee de=new AddNewHrCategoryDetailsofEmployee(driver);
 		de.clickonemployee();
@@ -450,7 +336,7 @@ public class EmployeeDetails extends BaseTest{
 		String message = de.getMessage();
 		Assert.assertEquals(message, "Hr Detail Created Successfully");
 	}
-	@Test(priority=14)
+	@Test(priority=12)
 	public void EditHrCategoryDetailsofEmployee_SC_457() throws Exception{
 		EditHrCategoryDetailsofEmployee de=new EditHrCategoryDetailsofEmployee(driver);
 		de.clickonemployee();
@@ -470,8 +356,101 @@ public class EmployeeDetails extends BaseTest{
 		String message = de.getMessage();
 		Assert.assertEquals(message, "Hr Detail Updated Successfully");
 	}
+	
+	@Test(priority=13)
+	public void GetHRSampleTemplates_SC_460() throws Exception{
+		GetHRSampleTemplates gh= new GetHRSampleTemplates(driver);
+		gh.clickonemployee();
+		gh.clickonemployeedetails();
+		gh.clickonimportexport();
+		Thread.sleep(2000);
+		gh.clickonhrsampletemplate();
+		gh.selecthrcategory("Personal");
+		gh.gettemplate();
+	}
+	@Test(priority=14)
+	public void GetHRDataTemplates_SC_461() throws Exception{
+		GetHRDataTemplates gd=new GetHRDataTemplates(driver);
+		gd.clickonemployee();
+		gd.clickonemployeedetails();
+		gd.clickonimportexport();
+		Thread.sleep(2000);
+		gd.clickonhrdatatemplate();
+		gd.selecthrcategory("Personal");
+		gd.getemployees();
+		Thread.sleep(2000);
+		gd.clickonload();
+		Thread.sleep(2000);
+		gd.getdatatemplate();
+	}
+	
 	@Test(priority=15)
-	public void DeleteHrCategoryDetailsofEmployee_SC_458() throws Exception{
+	public void CheckifEmployeeEmployeeDetailsReportsEmployeeSummaryredirectstoReportmodule_SC_464() throws Exception {
+		CheckifEmployeeEmployeeDetailsReportsEmployeeSummaryredirectstoReportmodule cr=new CheckifEmployeeEmployeeDetailsReportsEmployeeSummaryredirectstoReportmodule(driver);
+		cr.clickonemployee();
+		cr.clickonemployeedetails();
+		cr.clickonreports();
+		Thread.sleep(2000);
+		cr.clickonemployeesummary();
+		cr.clickonviewsummary();
+		cr.downloadpdf();
+		//cr.downloadexcel();
+	}
+	
+		@Test(priority=16)
+	public void CheckifEmployeeEmployeeDetailsReportsEmployeeMasterReportredirectstoReportmodule_SC_462() throws Exception {
+		CheckifEmployeeEmployeeDetailsReportsEmployeeMasterReportredirectstoReportmodule cr=new CheckifEmployeeEmployeeDetailsReportsEmployeeMasterReportredirectstoReportmodule(driver);
+		cr.clickonemployee();
+		cr.clickonemployeedetails();
+		cr.clickonreports();
+		Thread.sleep(2000);
+		cr.clickonmasterreport();
+		Thread.sleep(2000);
+		cr.selectreporttype("Date Of Joining");
+		cr.getemployees();
+		Thread.sleep(2000);
+		cr.clickonload();
+		Thread.sleep(2000);
+		cr.selectemployee();
+		Thread.sleep(2000);
+		cr.generatereport();
+	
+	}
+		@Test(priority=17)
+	public void CheckifEmployeeEmployeeDetailsReportsEmployeeStatutoryReportredirectstoReportmodule_SC_463() throws Exception {
+		CheckifEmployeeEmployeeDetailsReportsEmployeeStatutoryReportredirectstoReportmodule cr=new CheckifEmployeeEmployeeDetailsReportsEmployeeStatutoryReportredirectstoReportmodule(driver);
+		cr.clickonemployee();
+		cr.clickonemployeedetails();
+		cr.clickonreports();
+		Thread.sleep(2000);
+		cr.clickonstatreport();
+		Thread.sleep(2000);
+		cr.selectreporttype("PF");
+		cr.selectgroup("Default");
+		cr.selectorderby("Ref. No.");
+		cr.selectpaymonth("Nov/2018");
+		Thread.sleep(2000);
+		cr.generatestatreport();
+	
+	}
+	
+		@Test(priority=18)
+		public void verifyDataTemplateGeneration_SC_96() throws InterruptedException, IOException {
+		GenerateDataTemplate gxl = new GenerateDataTemplate(driver);
+			gxl.clickEmployeeTab();
+			gxl.clickEmployeeDetailsLink();
+			gxl.clickImportExportTab();
+			gxl.clickGenerateDataTemplateTab();
+			gxl.SelectExcelType("Employees Data Template");
+			gxl.clickGetEmployees();
+			Thread.sleep(3000);
+			gxl.SelectEmpWithoutClassificationButton();
+			gxl.LoadEmployees();
+			Thread.sleep(3000);
+			gxl.DownloadTemplate();
+		}
+			@Test(priority=19)
+		public void DeleteHrCategoryDetailsofEmployee_SC_458() throws Exception{
 		DeleteHrCategoryDetailsofEmployee de=new DeleteHrCategoryDetailsofEmployee(driver);
 		de.clickonemployee();
 		de.clickonemployeedetails();
@@ -496,8 +475,59 @@ public class EmployeeDetails extends BaseTest{
 	}
 	
 	
-	*/
+	
+	
+	
 
+	
+	@Test(priority=20)
+	public void CreateEmployeeviaExcelImport_SC_95() throws InterruptedException {
+	CreateEmployeeviaExcelImport xl=new CreateEmployeeviaExcelImport(driver);
+	xl.clickEmployeeTab();
+	xl.clickEmployeeDetailsLink();
+	xl.clickImportExportTab();
+	xl.clickExcelTemplateUpload();
+	xl.enterExcelFilePath("C:\\Users\\Alfa\\Documents\\EmployeeDetails.xlsx");
+	xl.clickUpload();
+	Thread.sleep(3000);
+	xl.clickNotificationIcon();
+	xl.importBackgroundJobs();
+	xl.sortByLatestJob();
+	xl.sortByLatestJob();
+	String message = xl.getSuccessmessage();
+	Assert.assertEquals(message, "Successfully Imported");
+	
+}
+	@Test(priority=21)
+	public void CheckDeleteClassificationDetailsInEmployeeExtra_SC_421() throws Exception {
+	DeleteClassificationDetailsInEmployee ce = new DeleteClassificationDetailsInEmployee(driver);
+		ce.clickonemployee();
+		ce.clickonemployeedetails();
+		ce.clickonfilter();
+		Thread.sleep(2000);
+		ce.clickonload();
+		Thread.sleep(2000);
+		ce.clickonview();
+		ce.clickclassificationdetail();
+		ce.deletecclassification();
+		ce.switchToPopUpAndAccept(driver);
+		String message = ce.getMessage();
+		Assert.assertEquals(message, "Employee detail was successfully deleted.");
+	}
+	@Test(priority=22)
+	public void DeleteEmployee() throws Exception {
+		DeleteClassificationDetailsInEmployee ce = new DeleteClassificationDetailsInEmployee(driver);
+		ce.clickonemployee();
+		ce.clickonemployeedetails();
+		ce.clickonfilter();
+		Thread.sleep(2000);
+		ce.clickEmployeewithoutClass();
+		ce.clickonload2();
+		Thread.sleep(2000);
+		ce.deleteemployee();
+		ce.switchToPopUpAndAccept(driver);
+		Thread.sleep(5000);
+	}
 }	
 	
 	
