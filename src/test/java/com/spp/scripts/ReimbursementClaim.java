@@ -24,7 +24,7 @@ import junit.framework.Assert;
 
 public class ReimbursementClaim extends BaseTest{
 	
-	/*@Test(priority=0)
+	@Test(priority=17)
 		public void CreateReimbursementAllotment_SC_289() throws Exception{
 		 CreateReimbursementAllotment rt = new CreateReimbursementAllotment(driver);
 		 rt.clickMastserLink();
@@ -54,9 +54,9 @@ public class ReimbursementClaim extends BaseTest{
 			rt.selectCreateReimbursementButton();
 			String e=rt.getMessage();
 			Assert.assertEquals(e, "Reimbursement Allotment was successfully created");
-		}	*/
+		}	
 			
-	@Test(priority=1)
+	@Test(priority=18)
 		public void CreateReimbursementClaim_SC_290() throws Exception{
 		 CreateReimbursementClaim rt = new CreateReimbursementClaim(driver);
 		 rt.selectSalary();
@@ -70,36 +70,37 @@ public class ReimbursementClaim extends BaseTest{
 		 rt.selectPaidMonth("Mar/2018");
 		 rt.selectClaimDate("15 March 2018");
 		 rt.selectPaidDate("30 March 2018");
-		 rt.selectAmount("");
+		// rt.selectAmount("1");
+		 rt.selectCreateReimbursementButton();
+		 Thread.sleep(5000);
 		 rt.selectCreateReimbursementButton();
 		 String t=rt.getMessage();
 		 Assert.assertEquals(t, "Reimbursement Claim was successfully created");
-		 Thread.sleep(4000);
 		 rt.clickDeleteButton();
 		 
 }
 	
-/*	@Test(priority=2)
+	/*@Test(priority=2)
 	public void BulkReimbursementClaim_SC_370() throws Exception{
 	 BulkReimbursementClaim rt = new BulkReimbursementClaim(driver);
 	 rt.selectSalary();
 	 rt.selectReimbursementClaim();
 	 rt.selectBulkReimbursementClaim();
-	 rt.selectName("ReimbursementMaster (Other Reimbursement)");
-	 rt.selectFinancialYear("2013/2014");
-	 rt.selectIssuedOn("Apr/2013");
-	 rt.selectClaimDate("15 April 2013");
+	 rt.selectName("Rmaster (Other Reimbursement)");
+	 rt.selectFinancialYear("2017/2018");
+	 rt.selectIssuedOn("Mar/2013");
+	 rt.selectClaimDate("15 March 2018");
 	 rt.selectGetEmployee();
 	 rt.selectCheckBox();
 	 rt.selectAmount("100");
-	 rt.selectPaymonth("Apr/2013");
+	 rt.selectPaymonth("Apr/2018");
 	 rt.selectClaimReimbursementButton();
 	 Thread.sleep(2000);
 	 String e=rt.getMessage();
 	 Assert.assertEquals(e, "Reimbursement Claims were successfully created");
 }
 	
-	@Test(priority=3)
+		@Test(priority=3)
 	  public void BulkReimbursementClaimDelete_SC_371() throws Exception{
 		  BulkReimbursementClaimDelete rt = new BulkReimbursementClaimDelete(driver);
 	   rt.selectSalary();
@@ -223,13 +224,13 @@ public class ReimbursementClaim extends BaseTest{
 		rt.clickReimbursementMaster();
 		rt.clickDeleteMasterButton();
 		
-	  }
+	  }*/
 	
 	
 	  @Test(priority=9)
 	  public void CreateReimbursementClaimPaymentModeCheque_SC_593() throws Exception{
 		CreateReimbursementClaimPaymentModeCheque cm=new CreateReimbursementClaimPaymentModeCheque(driver);
-		cm.clickMastserLink();
+		/*cm.clickMastserLink();
 		cm.selectFinancialInst();
 		cm.addnewfinanInsti();
 		cm.selectAccoutType("Salary Account");
@@ -240,7 +241,7 @@ public class ReimbursementClaim extends BaseTest{
 		cm.enterPinCode("400085");
 		cm.enterIFSCCode("HDFC0000060");
 		cm.createfinanceinsti();
-		Thread.sleep(10000);
+		Thread.sleep(10000);*/
 		cm.clickMastserLink();
 		cm.clickReimbursementMaster();
 		cm.clickAddReimbursementMaster();
@@ -257,9 +258,12 @@ public class ReimbursementClaim extends BaseTest{
 		cm.selectAddEmployeeAllotment();
 		cm.selectAllotButton();
 		cm.selectAlllotmentName("Reim. LTA (LTA)");
-		cm.SelectBlockPeriod("2010/2013");
-		cm.selectFinancialYearAllotment("2013/2014");
-		cm.selectAllotmentDate("15 April 2013");
+		cm.SelectBlockPeriod("2014/2017");
+		Thread.sleep(5000);
+		cm.selectFinancialYearAllotment("2017/2018");
+		Thread.sleep(5000);
+		cm.selectAllotmentDate("01 December 2017");
+		Thread.sleep(5000);
 		cm.ClickOnFunctionKey();
 		Thread.sleep(5000);
 		cm.EnterSumAmount("2000");
@@ -272,15 +276,18 @@ public class ReimbursementClaim extends BaseTest{
 		cm.selectAddEmployee();
 		cm.selectClaimButton();
 		cm.selectName("Reim. LTA (LTA)");
-		cm.selectFinancialYear("2013/2014");
+		Thread.sleep(5000);
+		cm.selectFinancialYear("2017/2018");
 		Thread.sleep(1000);
 		cm.selectPaymentModeforClaim("Cheque");
-		cm.selectClaimBlockPeriod("2010/2013");
-		cm.selectPaidDate("30 April 2013");
-		cm.selectClaimDate("15 April 2013");
-		cm.selectAmount("");
+		cm.selectClaimBlockPeriod("2014/2017");
+		cm.selectPaidDate("05 December 2017");
+		cm.selectClaimDate("05 December 2017");
+		//cm.selectAmount("");
 		cm.SelectBank("HDFC Bank");
 		cm.enterChequeno("2356");
+		cm.selectCreateReimbursementButton();
+		Thread.sleep(5000);
 		cm.selectCreateReimbursementButton();
 		String t=cm.getMessage();
 		Assert.assertEquals(t, "Reimbursement Claim was successfully created");
@@ -289,7 +296,7 @@ public class ReimbursementClaim extends BaseTest{
 	
 	}
 	
-	  @Test(priority=10)
+	 @Test(priority=10)
 	public void CreateReimbursementClaimPaymentModeDD_SC_593() throws Exception{
 	CreateReimbursementClaimPaymentModeDD cm=new CreateReimbursementClaimPaymentModeDD(driver);
 	cm.selectSalary();
@@ -298,15 +305,17 @@ public class ReimbursementClaim extends BaseTest{
 	cm.selectAddEmployee();
 	cm.selectClaimButton();
 	cm.selectName("Reim. LTA (LTA)");
-	cm.selectFinancialYear("2013/2014");
+	cm.selectFinancialYear("2017/2018");
 	Thread.sleep(1000);
 	cm.selectPaymentModeforClaim("DD");
-	cm.selectClaimBlockPeriod("2010/2013");
-	cm.selectPaidDate("30 April 2013");
-	cm.selectClaimDate("15 April 2013");
-	cm.selectAmount("");
+	cm.selectClaimBlockPeriod("2014/2017");
+	cm.selectPaidDate("05 December 2017");
+	cm.selectClaimDate("05 December 2017");
+	//cm.selectAmount("");
 	cm.SelectBank("HDFC Bank");
 	cm.enterChequeno("2356");
+	cm.selectCreateReimbursementButton();
+	Thread.sleep(5000);
 	cm.selectCreateReimbursementButton();
 	String t=cm.getMessage();
 	Assert.assertEquals(t, "Reimbursement Claim was successfully created");
@@ -314,7 +323,7 @@ public class ReimbursementClaim extends BaseTest{
 	cm.clickDeleteButton();
 	}
 	
-	  	@Test(priority=11)
+	   	@Test(priority=11)
 	public void CreateReimbursementClaimPaymentModeBankAdvise_SC_593() throws Exception{
 	CreateReimbursementClaimPaymentModeDD cm=new CreateReimbursementClaimPaymentModeDD(driver);
 	cm.selectSalary();
@@ -323,15 +332,17 @@ public class ReimbursementClaim extends BaseTest{
 	cm.selectAddEmployee();
 	cm.selectClaimButton();
 	cm.selectName("Reim. LTA (LTA)");
-	cm.selectFinancialYear("2013/2014");
+	cm.selectFinancialYear("2017/2018");
 	Thread.sleep(1000);
 	cm.selectPaymentModeforClaim("Bank Advise");
-	cm.selectClaimBlockPeriod("2010/2013");
-	cm.selectPaidDate("30 April 2013");
-	cm.selectClaimDate("15 April 2013");
-	cm.selectAmount("");
+	cm.selectClaimBlockPeriod("2014/2017");
+	cm.selectPaidDate("05 December 2017");
+	cm.selectClaimDate("05 December 2017");
+	//cm.selectAmount("");
 	cm.SelectBank("HDFC Bank");
 	cm.enterChequeno("2356");
+	cm.selectCreateReimbursementButton();
+	Thread.sleep(5000);
 	cm.selectCreateReimbursementButton();
 	String t=cm.getMessage();
 	Assert.assertEquals(t, "Reimbursement Claim was successfully created");
@@ -339,7 +350,7 @@ public class ReimbursementClaim extends BaseTest{
 	cm.clickDeleteButton();
 	}
 	
-	  	@Test(priority=12)
+	   	  	/*@Test(priority=12)
 	public void CheckReimbursementClaimRedirectsToReportModule_SC_504() throws Exception{
 	 CheckReimbursementClaimRedirectsToReportModule rt = new CheckReimbursementClaimRedirectsToReportModule(driver);
 	 rt.selectSalary();
@@ -352,7 +363,7 @@ public class ReimbursementClaim extends BaseTest{
 	 rt.selectFromDate("05 June 2018");
 	 rt.selectToDate("10 June 2018");
 	 rt.selectGenerateReport();
-}
+}*/
 	
 	 @Test(priority=13)
 		public void CreateLTAOpeningBalance_SC_559() throws Exception{
@@ -361,33 +372,31 @@ public class ReimbursementClaim extends BaseTest{
 		 rt.selectReimbursementClaim();
 		 rt.selectLTABalance();
 		 rt.selectCreateLTA();
-		 rt.selectFinancialYear("2013/2014");
-		 rt.selectBlockPeriod("2018/2021");
+		 rt.selectFinancialYear("2017/2018");
+		 rt.selectBlockPeriod("2014/2017");
 		 rt.selectGetEmployees();
 		 rt.selectOpeningBalance("1000");
 		 rt.selectSaveDetails();
 		 String e=rt.getMessage();
-		 Assert.assertEquals(e, "Created Successfully!"); 
-		 Thread.sleep(3000);
+		 Assert.assertEquals(e, "LTA Opening Balances were created successfully!"); 
 		 rt.DeleteLTA();
 	}
 	 
 	@Test(priority=14)
 		public void SaveLTAAdjustment_SC_558() throws Exception{
 		  CreateLTAOpeningBalance rt = new CreateLTAOpeningBalance(driver);
-		 rt.selectSalary();
-		 rt.selectReimbursementClaim();
-		 rt.selectLTABalance();
-		 rt.selectCreateLTA();
-		 rt.selectFinancialYear("2013/2014");
-		 rt.selectBlockPeriod("2018/2021");
-		 rt.selectGetEmployees();
-		 rt.selectOpeningBalance("1000");
-		 rt.selectSaveDetails();
-		 String e=rt.getMessage();
-		 Assert.assertEquals(e, "Created Successfully!"); 
-		 Thread.sleep(3000);
-		 rt.DeleteLTA();
+		  rt.selectSalary();
+			 rt.selectReimbursementClaim();
+			 rt.selectLTABalance();
+			 rt.selectCreateLTA();
+			 rt.selectFinancialYear("2017/2018");
+			 rt.selectBlockPeriod("2014/2017");
+			 rt.selectGetEmployees();
+			 rt.selectOpeningBalance("1000");
+			 rt.selectSaveDetails();
+			 String e=rt.getMessage();
+			 Assert.assertEquals(e, "LTA Opening Balances were created successfully!"); 
+			 rt.DeleteLTA();
 	}
 	 
 	 
@@ -408,17 +417,17 @@ public class ReimbursementClaim extends BaseTest{
 		 rt.selectAddEmployee();
 		 rt.selectAllotButton();
 		 rt.selectAlllotmentName("Reim. LTA (LTA)");
-			rt.SelectBlockPeriod("2010/2013");
-			rt.selectFinancialYearAllotment("2013/2014");
-			rt.selectAllotmentDate("15 April 2013");
-			rt.ClickOnFunctionKey();
-			Thread.sleep(5000);
-			rt.EnterSumAmount("2000");
-			Thread.sleep(5000);
-			rt.selectCreateReimbursementAllotmentButton();	
+		rt.SelectBlockPeriod("2014/2017");
+		rt.selectFinancialYearAllotment("2017/2018");
+		rt.selectAllotmentDate("05 December 2017");
+		rt.ClickOnFunctionKey();
+		Thread.sleep(5000);
+		rt.EnterSumAmount("2000");
+		rt.selectCreateReimbursementAllotmentButton();	
+		Thread.sleep(5000);
+		rt.selectCreateReimbursementAllotmentButton();	
 		 String e=rt.getMessage();
 		 Assert.assertEquals(e, "Reimbursement Allotment was successfully created"); 
-		 Thread.sleep(3000);
 		 rt.clickDeleteButton();
 	  }
 	 
@@ -439,13 +448,13 @@ public class ReimbursementClaim extends BaseTest{
 	 	rt.selectModeOfPayment("Cash");
 		rt.selectAllotmentType();
 		Thread.sleep(5000);
-		rt.enterReimbursementName("ReimbursementMaster");
+		rt.enterReimbursementName("Rmaster");
 		rt.clickCreateReimbursementMaster();
 		String s=rt.getMessage();
 		Assert.assertEquals(s, "Reimbursement Master is successfully created.");
 		Thread.sleep(3000);
 		rt.clickDeleteButton();
-	}*/
+	}
 	 
 	 
 	

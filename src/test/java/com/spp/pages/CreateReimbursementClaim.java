@@ -43,7 +43,7 @@ public class CreateReimbursementClaim extends BasePage{
 	WebElement CreateReimbursementButton;
 	@FindBy(xpath="//*[@id=\"reimbursement_claim_result_response\"]/div/strong")
 	WebElement SuccessfulMessage;
-	@FindBy(xpath="//*[@id=\"reimbursement_claims\"]/tbody/tr[1]/td[8]/a")
+	@FindBy(xpath="//*[@id='reimbursement_claims']/tbody/tr[1]/td[7]/a[2]")
 	//@FindBy(xpath="//*[@id=\"reimbursement_allotments\"]/tbody/tr/td[2][contains(text(),'Reim. LTA')]/parent::tr/td[8]/a")
 	WebElement DeleteButton;
 	

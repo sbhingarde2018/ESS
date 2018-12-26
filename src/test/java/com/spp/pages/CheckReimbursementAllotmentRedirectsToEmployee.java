@@ -23,7 +23,7 @@ public class CheckReimbursementAllotmentRedirectsToEmployee extends BasePage{
 	WebElement ReimAllotment;
 	@FindBy(xpath="//*[@id=\"allotments_list\"]/div[1]/span/a")
 	WebElement NewReimbursement;
-	@FindBy(xpath="//*[@id=\"employees_table\"]/tbody/tr[3]/td[5]/input")
+	@FindBy(xpath="//*[@id=\"employees_table\"]/tbody/tr/td[contains(text(),'Ashish')]/parent::tr/td[5]/input")
 	WebElement AddEmployee;
 	@FindBy(xpath="//*[@id=\"main\"]/div/div[2]/form/div[3]/input")
 	WebElement AllotButton;
@@ -47,7 +47,7 @@ public class CheckReimbursementAllotmentRedirectsToEmployee extends BasePage{
 	WebElement ClickOnEmployee;
 	@FindBy(xpath="//*[@id=\"menu\"]/li[4]/div/div/ul/li[8]/a")
 	WebElement ClickOnReimbursementAllotment;
-	@FindBy(xpath="//*[@id=\"reimbursement_allotments\"]/tbody/tr[1]/td[8]/a")
+	@FindBy(xpath="//*[@id='reimbursement_allotments']/tbody/tr[1]/td[7]/a[2]")
 	WebElement DeleteAllotmentButton;
 	@FindBy(id="reimbursement_master_id")
 	WebElement AllotmentName;

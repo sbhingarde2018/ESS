@@ -62,7 +62,7 @@ public class CreateReimbursementClaimPaymentModeCheque extends BasePage{
 	WebElement ReimbursementClaim;
 	@FindBy(xpath="//*[@id=\"claims_list\"]/div[1]/span/a")
 	WebElement NewReimbursement;
-	@FindBy(xpath="//*[@id=\"employees_table\"]/tbody/tr/td[contains(text(),'Akshay')]/parent::tr/td[5]/input")
+	@FindBy(xpath="//*[@id=\"employees_table\"]/tbody/tr/td[contains(text(),'Ashish')]/parent::tr/td[5]/input")
 	WebElement AddEmployee;
 	@FindBy(xpath="//*[@id=\"main\"]/div/div[2]/form/div[3]/input")
 	WebElement ClaimButton;
@@ -86,7 +86,7 @@ public class CreateReimbursementClaimPaymentModeCheque extends BasePage{
 	WebElement CreateReimbursementButton;
 	@FindBy(xpath="//*[@id=\"reimbursement_claim_result_response\"]/div/strong")
 	WebElement SuccessfulMessage;
-	@FindBy(xpath="//*[@id=\"reimbursement_claims\"]/tbody/tr[1]/td[8]/a")
+	@FindBy(xpath="//*[@id='reimbursement_claims']/tbody/tr[1]/td[7]/a[2]")
 	//@FindBy(xpath="//*[@id=\"reimbursement_allotments\"]/tbody/tr/td[2][contains(text(),'Reim. LTA')]/parent::tr/td[8]/a")
 	WebElement DeleteButton;
 	
