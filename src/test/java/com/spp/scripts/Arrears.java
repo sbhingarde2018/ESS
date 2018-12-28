@@ -62,7 +62,7 @@ import com.spp.pages.EditArrear;
 
 public class Arrears extends BaseTest{
 
-	/*@Test(priority=0)
+	@Test(priority=0)
 	public void ArrearsManualSalaryHeadWiseAsSalaryComponent_SC_132() throws InterruptedException{
 		ArrearsManualSalaryHeadWiseAsSalaryComponent cc=new ArrearsManualSalaryHeadWiseAsSalaryComponent(driver);
 		cc.clickSalaryLink();
@@ -81,7 +81,6 @@ public class Arrears extends BaseTest{
 		cc.ClickCreateButton();
 		String t=cc.getMessage();
 		Assert.assertEquals(t, "Arrear was successfully created.");
-		Thread.sleep(3000);
 		cc.selectDeleteButton();
 		
 }
@@ -104,7 +103,6 @@ public class Arrears extends BaseTest{
 		cc.ClickCreateButton();
 		String t=cc.getMessage();
 		Assert.assertEquals(t, "Arrear was successfully created.");
-		Thread.sleep(3000);
 		cc.selectDeleteButton();
 }
 	
@@ -130,7 +128,6 @@ public class Arrears extends BaseTest{
 		cc.ClickCreateButton();
 		String t=cc.getMessage();
 		Assert.assertEquals(t, "Arrear was successfully created.");
-		Thread.sleep(3000);
 		cc.selectDeleteButton();
 		
   	}
@@ -156,7 +153,6 @@ public class Arrears extends BaseTest{
  		cc.ClickCreateButton();
  		String t=cc.getMessage();
  		Assert.assertEquals(t, "Arrear was successfully created.");
- 		Thread.sleep(3000);
  		cc.selectDeleteButton();
 
   } 
@@ -182,7 +178,6 @@ public class Arrears extends BaseTest{
 		cc.ClickCreateButton();
 		String t=cc.getMessage();
 		Assert.assertEquals(t, "Arrear was successfully created.");
-		Thread.sleep(5000);
 		cc.selectDeleteButton();
 
 }
@@ -209,7 +204,6 @@ public class Arrears extends BaseTest{
 		cc.ClickCreateButton();
 		String t=cc.getMessage();
 		Assert.assertEquals(t, "Arrear was successfully created.");
-		Thread.sleep(5000);
 		cc.selectDeleteButton();
   
 }
@@ -235,7 +229,6 @@ public void CreateArrearIndependentOfSalaryBankAdvice_SC_513() throws Interrupte
 		cc.ClickCreateButton();
 		String t=cc.getMessage();
 		Assert.assertEquals(t, "Arrear was successfully created.");
-		Thread.sleep(5000);
 		cc.selectDeleteButton();
 }  
 @Test(priority=7)
@@ -260,7 +253,6 @@ public void CreateArrearNoOfDaysAsSalaryComponent_SC_514() throws InterruptedExc
 		cc.ClickCreateButton();
 		String t=cc.getMessage();
 		Assert.assertEquals(t, "Arrear was successfully created.");
-		Thread.sleep(5000);
 		cc.selectDeleteButton();
 } 
 	@Test(priority=8)
@@ -287,7 +279,6 @@ public void CreateArrearNoOfDaysAsSalaryComponent_SC_514() throws InterruptedExc
 		cc.ClickCreateButton();
 		String t=cc.getMessage();
 		Assert.assertEquals(t, "Arrear was successfully created.");
-		Thread.sleep(5000);
 		cc.selectDeleteButton();
 }
 	@Test(priority=9)
@@ -310,7 +301,6 @@ public void CreateArrearNoOfDaysAsSalaryComponent_SC_514() throws InterruptedExc
 		cc.ClickCreateButton();
 		String t=cc.getMessage();
 		Assert.assertEquals(t, "Arrear was successfully created.");
-		Thread.sleep(5000);
 		cc.selectDeleteButton();
 }
 	@Test(priority=10)
@@ -335,7 +325,6 @@ public void CreateArrearNoOfDaysAsSalaryComponent_SC_514() throws InterruptedExc
 		cc.ClickCreateButton();
 		String t=cc.getMessage();
 		Assert.assertEquals(t, "Arrear was successfully created.");
-		Thread.sleep(5000);
 		cc.selectDeleteButton();
 }
 
@@ -361,10 +350,9 @@ public void CreateArrearNoOfDaysAsSalaryComponent_SC_514() throws InterruptedExc
 		cc.ClickCreateButton();
 		String t=cc.getMessage();
 		Assert.assertEquals(t, "Arrear was successfully created.");
-		Thread.sleep(5000);
 		cc.selectDeleteButton();
 }
-	/*@Test(priority=12)
+	@Test(priority=12)
 	public void CreateArrearMergesWithSalaryComponentRestrictNegative_SC_519() throws InterruptedException{
 		CreateArrearMergesWithSalaryComponentRestrictNegative cc=new CreateArrearMergesWithSalaryComponentRestrictNegative(driver);
 		cc.clickSalaryLink();
@@ -387,7 +375,6 @@ public void CreateArrearNoOfDaysAsSalaryComponent_SC_514() throws InterruptedExc
 		cc.ClickCreateButton();
 		String t=cc.getMessage();
 		Assert.assertEquals(t, "Arrear was successfully created.");
-		Thread.sleep(5000);
 		cc.selectDeleteButton();
 }
 
@@ -414,7 +401,6 @@ public void CreateArrearNoOfDaysAsSalaryComponent_SC_514() throws InterruptedExc
 		cc.ClickCreateButton();
 		String t=cc.getMessage();
 		Assert.assertEquals(t, "Arrear was successfully created.");
-		Thread.sleep(5000);
 		cc.selectDeleteButton();
 }
 	@Test(priority=14)
@@ -441,11 +427,10 @@ public void CreateArrearNoOfDaysAsSalaryComponent_SC_514() throws InterruptedExc
 		cc.ClickCreateButton();
 		String t=cc.getMessage();
 		Assert.assertEquals(t, "Arrear was successfully created.");
-		Thread.sleep(3000);
 		cc.selectDeleteButton();
 
 	}
-	@Test(priority=15)
+/*	@Test(priority=15)
 	public void CreateArrearAsSalaryComponentRestrictNegativePayPart_SC_522() throws InterruptedException{
 		CreateArrearAsSalaryComponentRestrictNegativePayPart cc=new CreateArrearAsSalaryComponentRestrictNegativePayPart(driver);
 		cc.clickSalaryLink();
@@ -694,7 +679,7 @@ public void CreateArrearMergesWithSalaryComponentRestrictNegativePayPart_SC_523(
 		Assert.assertEquals(t, "Arrear was successfully created.");
 		Thread.sleep(3000);
 		cc.selectDeleteButton();
-}	*/
+}	
 	@Test(priority=24)
 	public void CreateArrearInstrumentsRestrictNegativePayPart_SC_531() throws InterruptedException{
 	  CreateArrearInstrumentsRestrictNegativePayPart cc=new CreateArrearInstrumentsRestrictNegativePayPart(driver);
