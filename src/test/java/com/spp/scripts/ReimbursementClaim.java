@@ -78,7 +78,7 @@ public class ReimbursementClaim extends BaseTest{
 		 
 }
 	
-	@Test(priority=2)
+	/*@Test(priority=2)
 	public void BulkReimbursementClaim_SC_370() throws Exception{
 	 BulkReimbursementClaim rt = new BulkReimbursementClaim(driver);
 	 rt.selectSalary();
@@ -215,7 +215,7 @@ public class ReimbursementClaim extends BaseTest{
 	 	 rt.switchToPopUpAndAccept(driver);
 	 	String e=rt.getMessage();
 		Assert.assertEquals(e, "Reimbursement Claim was successfully deleted."); 
-	  }
+	  }*/
 	
 	
 	  @Test(priority=9)
