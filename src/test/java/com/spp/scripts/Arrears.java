@@ -430,7 +430,7 @@ public void CreateArrearNoOfDaysAsSalaryComponent_SC_514() throws InterruptedExc
 		cc.selectDeleteButton();
 
 	}
-	@Test(priority=15)
+	/*@Test(priority=15)
 	public void CreateArrearAsSalaryComponentRestrictNegativePayPart_SC_522() throws InterruptedException{
 		CreateArrearAsSalaryComponentRestrictNegativePayPart cc=new CreateArrearAsSalaryComponentRestrictNegativePayPart(driver);
 		cc.clickSalaryLink();

@@ -74,11 +74,12 @@ public class ReimbursementClaim extends BaseTest{
 		 rt.selectCreateReimbursementButton();
 		 String t=rt.getMessage();
 		 Assert.assertEquals(t, "Reimbursement Claim was successfully created");
+		 Thread.sleep(2000);
 		 rt.clickDeleteButton();
 		 
 }
 	
-	/*@Test(priority=2)
+	@Test(priority=2)
 	public void BulkReimbursementClaim_SC_370() throws Exception{
 	 BulkReimbursementClaim rt = new BulkReimbursementClaim(driver);
 	 rt.selectSalary();
@@ -215,10 +216,10 @@ public class ReimbursementClaim extends BaseTest{
 	 	 rt.switchToPopUpAndAccept(driver);
 	 	String e=rt.getMessage();
 		Assert.assertEquals(e, "Reimbursement Claim was successfully deleted."); 
-	  }*/
+	  }
 	
 	
-	  @Test(priority=9)
+	 @Test(priority=9)
 	  public void CreateReimbursementClaimPaymentModeCheque_SC_593() throws Exception{
 		CreateReimbursementClaimPaymentModeCheque cm=new CreateReimbursementClaimPaymentModeCheque(driver);
 		cm.selectSalary();
@@ -299,7 +300,7 @@ public class ReimbursementClaim extends BaseTest{
 	Assert.assertEquals(t, "Reimbursement Claim was successfully created");
 	}
 	
-	   @Test(priority=12)
+	 @Test(priority=12)
 		public void CheckReimbursementClaimRedirectsToReportModule_SC_504() throws Exception{
 		 CheckReimbursementClaimRedirectsToReportModule rt = new CheckReimbursementClaimRedirectsToReportModule(driver);
 		 rt.selectSalary();
@@ -337,6 +338,7 @@ public class ReimbursementClaim extends BaseTest{
 		 rt.selectSaveDetails();
 		 String e=rt.getMessage();
 		 Assert.assertEquals(e, "LTA Opening Balances were created successfully!"); 
+		 Thread.sleep(2000);
 		 rt.DeleteLTA();
 	}	 
 	 
@@ -364,6 +366,7 @@ public class ReimbursementClaim extends BaseTest{
 			 rt.selectadjustmentFinancialYear("2018/2019");
 			 rt.selectBlockPeriodAdjustment("2018/2021");
 			 rt.selectGetEmployees();
+			 Thread.sleep(2000);
 			 rt.DeleteAdjustment();
 	}
 	 
@@ -386,8 +389,8 @@ public class ReimbursementClaim extends BaseTest{
 		 rt.selectAllotButton();
 		 rt.selectAlllotmentName("Reim. LTA (LTA)");
 		rt.SelectBlockPeriod("2018/2021");
-		rt.selectFinancialYearAllotment("2018/2019");
 		rt.selectAllotmentDate("01 December 2018");
+		rt.selectFinancialYearAllotment("2018/2019");
 		rt.ClickOnFunctionKey();
 		Thread.sleep(5000);
 		rt.EnterSumAmount("2000");
@@ -396,6 +399,7 @@ public class ReimbursementClaim extends BaseTest{
 		rt.selectCreateReimbursementAllotmentButton();	
 		 String e=rt.getMessage();
 		 Assert.assertEquals(e, "Reimbursement Allotment was successfully created"); 
+		 Thread.sleep(2000);
 		 rt.clickDeleteButton();
 	  }
 	 
