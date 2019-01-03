@@ -62,7 +62,7 @@ import com.spp.pages.EditArrear;
 
 public class Arrears extends BaseTest{
 
-	@Test(priority=0)
+	/*@Test(priority=0)
 	public void ArrearsManualSalaryHeadWiseAsSalaryComponent_SC_132() throws InterruptedException{
 		ArrearsManualSalaryHeadWiseAsSalaryComponent cc=new ArrearsManualSalaryHeadWiseAsSalaryComponent(driver);
 		cc.clickSalaryLink();
@@ -837,8 +837,8 @@ public void CreateArrearMergesWithSalaryComponentRestrictNegativePayPart_SC_523(
 		Assert.assertEquals(t, "Arrear was successfully created.");
 		Thread.sleep(3000);
 		cc.selectDeleteButton();
-}
-	/*@Test(priority=30)
+}*/
+	@Test(priority=30)
 	public void CreateArrearNoOfDaysDifferenceInstruments_537() throws InterruptedException{
 		CreateArrearNoOfDaysDifferenceInstruments cc=new CreateArrearNoOfDaysDifferenceInstruments(driver);
 		cc.clickSalaryLink();
@@ -915,7 +915,7 @@ public void CreateArrearMergesWithSalaryComponentRestrictNegativePayPart_SC_523(
 		Thread.sleep(3000);
 		cc.selectDeleteButton();
 }
-	/*@Test(priority=33)
+	@Test(priority=33)
 	public void CreateArrearsManualSalaryHeadWiseCash_SC_540() throws InterruptedException{
 		CreateArrearsManualSalaryHeadWiseCash cc=new CreateArrearsManualSalaryHeadWiseCash(driver);
 		cc.clickSalaryLink();
@@ -1105,7 +1105,7 @@ public void CreateArrearMergesWithSalaryComponentRestrictNegativePayPart_SC_523(
 		Assert.assertEquals(t, "Arrear deleted successfully");
 }
 	
-	@Test(priority=42)
+/*	@Test(priority=42)
 	public void CheckArrearsRedirectToMasterModule_SC_502() throws InterruptedException{
 	CheckArrearsRedirectToMasterModule cc=new CheckArrearsRedirectToMasterModule(driver);
 	cc.clickSalaryLink();
