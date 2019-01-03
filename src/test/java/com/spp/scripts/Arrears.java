@@ -838,7 +838,7 @@ public void CreateArrearMergesWithSalaryComponentRestrictNegativePayPart_SC_523(
 		Thread.sleep(3000);
 		cc.selectDeleteButton();
 }*/
-	@Test(priority=30)
+/*	@Test(priority=30)
 	public void CreateArrearNoOfDaysDifferenceInstruments_537() throws InterruptedException{
 		CreateArrearNoOfDaysDifferenceInstruments cc=new CreateArrearNoOfDaysDifferenceInstruments(driver);
 		cc.clickSalaryLink();
@@ -1010,7 +1010,7 @@ public void CreateArrearMergesWithSalaryComponentRestrictNegativePayPart_SC_523(
 		Assert.assertEquals(t, "Arrear was successfully created.");
 		Thread.sleep(3000);
 		cc.selectDeleteButton();
-}
+}*/
 	@Test(priority=37)
 	public void CreateArrearsManualLumpsumInstruments_SC_544() throws InterruptedException{
 		CreateArrearsManualLumpsumInstruments cc=new CreateArrearsManualLumpsumInstruments(driver);
@@ -1105,7 +1105,7 @@ public void CreateArrearMergesWithSalaryComponentRestrictNegativePayPart_SC_523(
 		Assert.assertEquals(t, "Arrear deleted successfully");
 }
 	
-/*	@Test(priority=42)
+	@Test(priority=42)
 	public void CheckArrearsRedirectToMasterModule_SC_502() throws InterruptedException{
 	CheckArrearsRedirectToMasterModule cc=new CheckArrearsRedirectToMasterModule(driver);
 	cc.clickSalaryLink();
@@ -1119,7 +1119,6 @@ public void CreateArrearMergesWithSalaryComponentRestrictNegativePayPart_SC_523(
 	cc.ClickCreateButton();
 	String y=cc.getMessage();
 	Assert.assertEquals(y, "Salary head successfully created");
-	Thread.sleep(3000);
 	cc.ClickDelete();
 	}
 	@Test(priority=43)
@@ -1160,7 +1159,7 @@ public void CreateArrearMergesWithSalaryComponentRestrictNegativePayPart_SC_523(
 	}
 	
 	
-	@Test(priority=47)  
+	/*@Test(priority=47)  
 	public void DeleteComputationDetails_SC_555() throws InterruptedException{
 		DeleteComputationDetails cc=new DeleteComputationDetails(driver);
 		cc.clickSalaryLink();

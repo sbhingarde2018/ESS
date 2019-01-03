@@ -18,7 +18,7 @@ public class CheckifSalaryArrearsGeneralLinkPaymonthsredirectstoCreateNewPaymont
 	WebElement ClickOnPaymonths;
 	@FindBy(css="input[type=submit]")
 	WebElement CreatePaymonth;
-	@FindBy(xpath="//*[@id=\"paymonth-lists\"]/form/div[3]/table/tbody/tr/td[contains(text(),'May/2013')]/parent::tr/td[8]/a")
+	@FindBy(xpath="//*[@id=\"paymonth-lists\"]/form/div[3]/table/tbody/tr[1]/td[8]/a/img")
 	WebElement ClickDelete;
 	@FindBy(xpath="//*[@id=\"main\"]/div[3]/div/div/fieldset/div[2]/form/div/input[2]")
 	WebElement DeleteConfirm;

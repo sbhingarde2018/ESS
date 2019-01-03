@@ -32,7 +32,7 @@ public class CheckArrearsRedirectToMasterModule extends BasePage{
 		@FindBy(xpath="//*[@id=\"main\"]/div[1]/strong")
 		WebElement SuccessfulMessage;
 		
-		@FindBy(xpath="//*[@id=\"earning_heads\"]/tbody/tr/td[contains(text(),'Work')]/parent::tr/td[5]/a[2]")
+		@FindBy(xpath="//*[@id='earning_heads']/tbody/tr/td[contains(text(),'Work')]/parent::tr/td[5]/a[2]")
 		WebElement ClickDelete;
 		
 			
@@ -69,7 +69,6 @@ public class CheckArrearsRedirectToMasterModule extends BasePage{
 		}
 		public void ClickDelete() throws InterruptedException {
 			ClickDelete.click();
-			Thread.sleep(2000);
 			switchToPopUpAndAccept(driver);
 		}
 		
