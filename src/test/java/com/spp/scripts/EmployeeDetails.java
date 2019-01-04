@@ -42,13 +42,13 @@ public class EmployeeDetails extends BaseTest{
 		Thread.sleep(1000);
 		at.enterEmployeeId("ID001");
 		at.enterEmployeeRefNo("Ref-"+Utility.getRandNum(10, 100));
-		at.enterEmployeeName("Anil");
+		at.enterEmployeeName("Tina");
 		at.enterFathername("Anand");
 		at.enterdob("14 June 1980");
 		at.selectGender("Female");
 		at.selectMaritalStatus("Single");
-		at.enterdoj("01 January 2018");
-		at.entersaldate("01 February 2018");
+		at.enterdoj("01 November 2018");
+		at.entersaldate("01 November 2018");
 		Thread.sleep(1000);
 		at.selectPresentadd();
 		at.selectstate("Maharashtra");
@@ -57,7 +57,7 @@ public class EmployeeDetails extends BaseTest{
 		at.checkTDS();
 		at.selectpanoption("ADD PAN");
 		at.enterpanno("PRAPM"+Utility.getRandNum(4441, 4966)+"P");
-		at.entereffectivedatePAN("01 January 2018");
+		at.entereffectivedatePAN("01 November 2018");
 		Thread.sleep(1000);
 		at.selectclassificationdetail();
 		at.selectsalstructure("Structure");
@@ -76,7 +76,7 @@ public class EmployeeDetails extends BaseTest{
 	
 	
 	
-	@Test(priority=1)
+	/*@Test(priority=1)
 	public void CheckDeleteClassificationDetailsInEmployee_SC_421() throws Exception {
 	DeleteClassificationDetailsInEmployee ce = new DeleteClassificationDetailsInEmployee(driver);
 		ce.clickonemployee();
@@ -527,7 +527,7 @@ public class EmployeeDetails extends BaseTest{
 		ce.deleteemployee();
 		ce.switchToPopUpAndAccept(driver);
 		Thread.sleep(5000);
-	}
+	}*/
 }	
 	
 	

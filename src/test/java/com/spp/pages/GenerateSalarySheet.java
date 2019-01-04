@@ -23,6 +23,8 @@ public class GenerateSalarySheet extends BasePage{
 	WebElement PayMonth;
 	@FindBy(id="xls_format")
 	WebElement Excel;
+	@FindBy(id="pdf_format")
+	WebElement PDF;
 	@FindBy(id="salary_sheet_filter")
 	WebElement GetEmployee;
 	@FindBy(xpath="//*[@id=\"bf_form\"]/div[9]/button[1]")
@@ -31,6 +33,12 @@ public class GenerateSalarySheet extends BasePage{
 	WebElement SuccessfulMessage;
 	@FindBy(id="salary_sheet_submit")
 	WebElement GenerateReport;
+	@FindBy(id="select_all_emp")
+	WebElement SelectEmployee;
+	@FindBy(id="group_by")
+	WebElement SelectGroupBy;
+	@FindBy(id="order_by")
+	WebElement SelectOrderBy;
 
 	
 	public void selectReports() {
@@ -50,6 +58,9 @@ public class GenerateSalarySheet extends BasePage{
 		Excel.click();
 	}
 	
+	public void selectpdf() {
+		PDF.click();
+	}
 	public void selectGetEmployee() {
 		GetEmployee.click();
 	}
@@ -63,6 +74,13 @@ public class GenerateSalarySheet extends BasePage{
 	public String getMessage() {
 		return SuccessfulMessage.getText();
 	}
-
-
+	public void selectemployee() {
+		SelectEmployee.click();
+	}
+	public void selectgroupby(String value){
+		dropDownSelect(SelectGroupBy, value);
+	}
+	public void selectorderby(String value){
+		dropDownSelect(SelectOrderBy, value);
+	}
 }
