@@ -5,6 +5,7 @@ import org.testng.annotations.Test;
 
 import com.spp.common.BaseTest;
 import com.spp.generics.Utility;
+import com.spp.pages.AddAdvanceMaster;
 import com.spp.pages.AddNewAdvanceMaster;
 import com.spp.pages.CheckAdvanceMasterCreatedWithClubbedInSalary;
 import com.spp.pages.CheckAdvanceMasterCreatedWithoutClubbedInSalary;
@@ -26,8 +27,26 @@ import junit.framework.Assert;
 
 public class AdvanceMaster extends BaseTest {
 	
-
+	
+	
+	
+	
 	@Test(priority=0)
+	public void CheckAdvanceMasterCreatedWithoutClubbedInSalary_SC_5() throws Exception{
+		AddAdvanceMaster am = new AddAdvanceMaster(driver);
+		am.navigateMaster();
+		am.clickAdvanceMaster();
+		am.clickAddAdvancMaster();
+		am.enterAdvanceName("ADVANCE_1");
+		am.clickClubbedInSalary();
+		am.clickCreateAdvanceButton();
+		String a = am.getMessage();
+		Assert.assertEquals(a, "Advance successfully created");
+		
+		
+	}
+
+	/*@Test(priority=0)
 	public void CheckAdvanceMasterCreatedWithoutClubbedInSalary_SC_5() throws Exception{
 		CheckAdvanceMasterCreatedWithoutClubbedInSalary ld=new CheckAdvanceMasterCreatedWithoutClubbedInSalary(driver);
 		ld.clickMastserLink();
@@ -372,7 +391,7 @@ public class AdvanceMaster extends BaseTest {
 		ld.clickAdvanceMaster();
 		ld.clickdelete();
 		ld.switchToPopUpAndAccept(driver);
-	}  
+	}  */
 	
 
 	

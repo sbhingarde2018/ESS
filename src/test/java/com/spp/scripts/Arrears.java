@@ -1143,7 +1143,7 @@ public void CreateArrearMergesWithSalaryComponentRestrictNegativePayPart_SC_523(
 }
 	
 
-	@Test(priority=44)
+/*	@Test(priority=44)
 	public void CheckifSalaryArrearsGeneralLinkPaymonthsredirectstoCreateNewPaymonthpage_SC_501() throws Exception {
 		CheckifSalaryArrearsGeneralLinkPaymonthsredirectstoCreateNewPaymonthpage lp=new CheckifSalaryArrearsGeneralLinkPaymonthsredirectstoCreateNewPaymonthpage(driver);
 		lp.clickonsalary();
@@ -1156,7 +1156,7 @@ public void CreateArrearMergesWithSalaryComponentRestrictNegativePayPart_SC_523(
 		lp.ClickDelete();
 		Thread.sleep(2000);
 		lp.DeleteConfirm();
-	}
+	}*/
 	
 	
 	/*@Test(priority=47)  

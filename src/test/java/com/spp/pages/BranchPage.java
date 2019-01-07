@@ -30,6 +30,10 @@ public class BranchPage extends BasePage{
 	WebElement pfgroup;
 	@FindBy(id="pf_effective_date")
 	WebElement effectivefrom;
+	@FindBy(xpath="//*[@id=\"pfgroup_save\"]/div[2]/div[2]/fieldset/div/div/img")
+	WebElement MonthPicker;
+	@FindBy(xpath="//*[@id=\"CalendarControl\"]/table/tbody/tr[2]/td[1]/a")
+	WebElement SelectMonth;
 	@FindBy(xpath="//input[@value='Create PF Detail']")
 	WebElement createpfdetail;
 	@FindBy(xpath="(//span[normalize-space(text()='ESI Detail')])[7]")
@@ -158,5 +162,11 @@ public class BranchPage extends BasePage{
 	
 	public String getPTMessage(){
 		return successfullPTMessage.getText();
+	}
+	public void selectmonthoption() {
+		MonthPicker.click();
+	}
+	public void selectmonth() {
+		SelectMonth.click();
 	}
 }
