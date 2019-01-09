@@ -42,7 +42,7 @@ public class EmployeeDetails extends BaseTest{
 		Thread.sleep(1000);
 		at.enterEmployeeId("ID001");
 		at.enterEmployeeRefNo("Ref-"+Utility.getRandNum(10, 100));
-		at.enterEmployeeName("Tina");
+		at.enterEmployeeName("Anil");
 		at.enterFathername("Anand");
 		at.enterdob("14 June 1980");
 		at.selectGender("Female");
@@ -76,7 +76,7 @@ public class EmployeeDetails extends BaseTest{
 	
 	
 	
-	/*@Test(priority=1)
+	@Test(priority=1)
 	public void CheckDeleteClassificationDetailsInEmployee_SC_421() throws Exception {
 	DeleteClassificationDetailsInEmployee ce = new DeleteClassificationDetailsInEmployee(driver);
 		ce.clickonemployee();
@@ -416,7 +416,7 @@ public class EmployeeDetails extends BaseTest{
 		cr.generatereport();
 	
 	}
-		@Test(priority=17)
+		/*@Test(priority=17)
 	public void CheckifEmployeeEmployeeDetailsReportsEmployeeStatutoryReportredirectstoReportmodule_SC_463() throws Exception {
 		CheckifEmployeeEmployeeDetailsReportsEmployeeStatutoryReportredirectstoReportmodule cr=new CheckifEmployeeEmployeeDetailsReportsEmployeeStatutoryReportredirectstoReportmodule(driver);
 		cr.clickonemployee();
@@ -432,7 +432,7 @@ public class EmployeeDetails extends BaseTest{
 		Thread.sleep(2000);
 		cr.generatestatreport();
 	
-	}
+	}*/
 	
 		@Test(priority=18)
 		public void verifyDataTemplateGeneration_SC_96() throws InterruptedException, IOException {
@@ -527,7 +527,7 @@ public class EmployeeDetails extends BaseTest{
 		ce.deleteemployee();
 		ce.switchToPopUpAndAccept(driver);
 		Thread.sleep(5000);
-	}*/
+	}
 }	
 	
 	
