@@ -23,7 +23,7 @@ public class CheckforMaximumAllowedinLM extends BasePage{
 	WebElement successfullMessage;
 	@FindBy(id="salary")
 	WebElement ClickOnSalary;
-	@FindBy(xpath="//*[@id=\"menu\"]/li[6]/div/div[1]/ul/li[7]/a")
+	@FindBy(xpath="//a[text()='Loan Detail']")
 	WebElement ClickonLoanDetail;
 	@FindBy(id="add_employees")
 	WebElement AddEmployees;

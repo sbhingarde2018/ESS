@@ -26,27 +26,8 @@ import junit.framework.Assert;
 
 
 public class AdvanceMaster extends BaseTest {
-	
-	
-	
-	
-	
-	@Test(priority=0)
-	public void CheckAdvanceMasterCreatedWithoutClubbedInSalary_SC_5() throws Exception{
-		AddAdvanceMaster am = new AddAdvanceMaster(driver);
-		am.navigateMaster();
-		am.clickAdvanceMaster();
-		am.clickAddAdvancMaster();
-		am.enterAdvanceName("ADVANCE_1");
-		am.clickClubbedInSalary();
-		am.clickCreateAdvanceButton();
-		String a = am.getMessage();
-		Assert.assertEquals(a, "Advance successfully created");
-		
-		
-	}
 
-	/*@Test(priority=0)
+	@Test(priority=0)
 	public void CheckAdvanceMasterCreatedWithoutClubbedInSalary_SC_5() throws Exception{
 		CheckAdvanceMasterCreatedWithoutClubbedInSalary ld=new CheckAdvanceMasterCreatedWithoutClubbedInSalary(driver);
 		ld.clickMastserLink();
@@ -60,7 +41,8 @@ public class AdvanceMaster extends BaseTest {
 		Assert.assertEquals(d, "Advance successfully created");
 		ld.clickDeleteButton();
 		ld.switchToPopUpAndAccept(driver);
-	}	
+	}
+	
 	@Test(priority=1)
 	public void CheckAdvanceMasterCreatedWithClubbedInSalary_SC_6() throws Exception{
 			CheckAdvanceMasterCreatedWithClubbedInSalary ld=new CheckAdvanceMasterCreatedWithClubbedInSalary(driver);
@@ -72,9 +54,8 @@ public class AdvanceMaster extends BaseTest {
 			ld.clickCreateButton();
 			String d=ld.getMessage();
 			Assert.assertEquals(d, "Advance successfully created");
-			
-
-}
+	}
+	
 	@Test(priority=2)
 	public void CheckAdvanceMasterEdited_SC_7() throws Exception{
 		CheckAdvanceMasterEdited ld=new CheckAdvanceMasterEdited(driver);
@@ -98,7 +79,7 @@ public class AdvanceMaster extends BaseTest {
 		ld.switchToPopUpAndAccept(driver);
 		String d=ld.getMessage();
 		Assert.assertEquals(d, "Advance successfully deleted");
-}  
+}
 	@Test(priority=4)
 	public void AddNewAdvanceMaster_SC_140() throws Exception{
 		AddNewAdvanceMaster ld=new AddNewAdvanceMaster(driver);
@@ -107,8 +88,11 @@ public class AdvanceMaster extends BaseTest {
 		ld.clickAddNewAdvanceMaster();
 		ld.clickAdvanceName("Advance_Master"+Utility.getRandNum(41, 50));
 		Thread.sleep(2000);
+		ld.enterinterestrate("2");
 		ld.ClickMaxAmount("5000");
+		ld.emirecovery("17");
 		ld.uncheckclubbedinsal();
+		ld.checkreducingbal();
 		ld.clickCreateButton();
 		String d=ld.getMessage();
 		Assert.assertEquals(d, "Advance successfully created");
@@ -152,15 +136,18 @@ public class AdvanceMaster extends BaseTest {
 		rb.clickAddAdvancMaster();
 		rb.enterAdvanceName("Advance_Master"+Utility.getRandNum(100, 105));
 		rb.enterInterestRate("5");
-		rb.enterMaximumAmount("10000");
+		rb.uncheckclubbedinsal();
 		rb.checkreducingbal();
 		rb.clickCreateAdvanceButton();
-		String d=rb.getMessage();
+		String d= rb.getMessage();
 		Assert.assertEquals(d, "Advance successfully created");
+		String e= rb.checkifYesButton();
+		Assert.assertEquals(e, "Yes");
 		rb.clickDeleteAdvanceMaster();
 		rb.switchToPopUpAndAccept(driver);
-		
-	}
+		}
+	
+	
 	@Test(priority=8)
 	public void CheckAdvanceMstrwithoutReducingBalance_SC_432() throws Exception{
 		CheckAdvanceMstrwithoutReducingBalance wr=new CheckAdvanceMstrwithoutReducingBalance(driver);
@@ -173,9 +160,11 @@ public class AdvanceMaster extends BaseTest {
 		wr.clickCreateAdvanceButton();
 		String d=wr.getMessage();
 		Assert.assertEquals(d, "Advance successfully created");
+		String e= wr.checkifYesButton();
+		Assert.assertEquals(e, "No");
 		wr.clickDeleteAdvanceMaster();
 		wr.switchToPopUpAndAccept(driver);
-		}	
+		}
 	
 	@Test(priority=9)
 	public void CheckAdvancemstrwithRedBalandClubbedInSal_SC_433() throws Exception{
@@ -184,13 +173,16 @@ public class AdvanceMaster extends BaseTest {
 		wrc.clickAdvanceMaster();
 		wrc.clickAddAdvancMaster();
 		wrc.enterAdvanceName("Advance_Master"+Utility.getRandNum(61, 70));
-		wrc.enterInterestRate("5");
+		wrc.enterInterestRate("2");
 		wrc.enterMaximumAmount("10000");
-		wrc.clickClubbedInSalary();
 		wrc.clickReducingBalance();	
 		wrc.clickCreateAdvanceButton();
 		String d=wrc.getMessage();
 		Assert.assertEquals(d, "Advance successfully created");
+		String e= wrc.checkifYesButton();
+		Assert.assertEquals(e, "Yes");
+		String f= wrc.checkifYesNoButton();
+		Assert.assertEquals(f, "Yes");
 		wrc.clickDeleteAdvanceMaster();
 		wrc.switchToPopUpAndAccept(driver);
 	}
@@ -202,23 +194,27 @@ public class AdvanceMaster extends BaseTest {
 		worc.clickAdvanceMaster();
 		worc.clickAddAdvancMaster();
 		worc.enterAdvanceName("Advance_Master"+Utility.getRandNum(71, 80));
+		worc.uncheckclubbedinsal();
 		worc.enterInterestRate("5");
 		worc.enterMaximumAmount("10000");
 		worc.clickCreateAdvanceButton();
 		String d=worc.getMessage();
 		Assert.assertEquals(d, "Advance successfully created");
+		String e= worc.checkifYesButton();
+		Assert.assertEquals(e, "No");
+		String f= worc.checkifYesNoButton();
+		Assert.assertEquals(f, "No");
 		worc.clickDeleteAdvanceMaster();
 		worc.switchToPopUpAndAccept(driver);
 	}
-
 	
-	@Test(priority=11)  
+	/*@Test(priority=11)  
 	public void CheckForInterestRateInAdvanceMaster_SC_253() throws Exception{
 		CheckForInterestRateInAdvanceMaster ld=new CheckForInterestRateInAdvanceMaster(driver);
 		ld.clickMastserLink();
 		ld.clickAdvancemaster();
 		ld.clickAddAdvancMaster();
-		ld.enterAdvanceName("Default");
+		ld.enterAdvanceName("Advance_Master"+Utility.getRandNum(71, 80));
 		ld.clickCreateAdvanceButton();
 		Thread.sleep(5000);
 		ld.clickMastserLink();

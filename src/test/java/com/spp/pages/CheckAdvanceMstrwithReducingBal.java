@@ -29,6 +29,10 @@ public class CheckAdvanceMstrwithReducingBal extends BasePage{
 	WebElement successfullMessage;
 	@FindBy(xpath="//*[@id='standing_instr_list']/div[2]/table/tbody/tr/td[contains(text(),'Advance_Master')]/parent::tr/td[5]/a")
 	WebElement Deletebutton;
+	@FindBy(xpath="//*[@id='standing_instr_list']/div[2]/table/tbody[2]/tr/td[contains(text(),'Advance_Master')]/parent::tr/td[2]")
+	WebElement ReduceBalYes;
+	@FindBy(id="standing_instruction_master_clubbed_in_salary_head")
+	WebElement ClubbedInSal;
 	
 	
 	
@@ -71,11 +75,12 @@ public class CheckAdvanceMstrwithReducingBal extends BasePage{
 	}
 	public void  clickDeleteAdvanceMaster() throws Exception{
 		Deletebutton.click();
-		
 	}
-	
-	
-	
-	
+	public String checkifYesButton(){
+		return ReduceBalYes.getText();
+	}
+	public void uncheckclubbedinsal() {
+    	ClubbedInSal.click();
+    }
 	
 }

@@ -34,6 +34,10 @@ public class CheckAdvancemstrwithRedBalandClubbedInSal extends BasePage{
 	WebElement successfullMessage;
 	@FindBy(xpath="//*[@id='standing_instr_list']/div[2]/table/tbody/tr/td[contains(text(),'Advance_Master')]/parent::tr/td[5]/a")
 	WebElement Deletebutton;
+	@FindBy(xpath="//*[@id='standing_instr_list']/div[2]/table/tbody[2]/tr/td[contains(text(),'Advance_Master')]/parent::tr/td[2]")
+	WebElement ReduceBalYes;
+	@FindBy(xpath="//*[@id='standing_instr_list']/div[2]/table/tbody[2]/tr/td[contains(text(),'Advance_Master')]/parent::tr/td[3]")
+	WebElement ClubbedSalYesNo;
 	
 
 	public CheckAdvancemstrwithRedBalandClubbedInSal(WebDriver driver){
@@ -89,8 +93,12 @@ public class CheckAdvancemstrwithRedBalandClubbedInSal extends BasePage{
 		return successfullMessage.getText();
 	}
 	public void  clickDeleteAdvanceMaster() throws Exception{
-		Deletebutton.click();
-		
+		Deletebutton.click();		
 	}
-	
+	public String checkifYesButton(){
+		return ReduceBalYes.getText();
+	}
+	public String checkifYesNoButton() {
+		return ClubbedSalYesNo.getText();
+	}
 }

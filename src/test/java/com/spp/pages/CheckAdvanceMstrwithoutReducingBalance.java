@@ -28,7 +28,8 @@ public class CheckAdvanceMstrwithoutReducingBalance extends BasePage {
 	WebElement successfullMessage;
 	@FindBy(xpath="//*[@id='standing_instr_list']/div[2]/table/tbody/tr/td[contains(text(),'Advance_Master')]/parent::tr/td[5]/a")
 	WebElement Deletebutton;
-	
+	@FindBy(xpath="//*[@id='standing_instr_list']/div[2]/table/tbody[2]/tr/td[contains(text(),'Advance_Master')]/parent::tr/td[2]")
+	WebElement ReduceBalYes;
 	
 	
 	public CheckAdvanceMstrwithoutReducingBalance(WebDriver driver){
@@ -70,7 +71,10 @@ public class CheckAdvanceMstrwithoutReducingBalance extends BasePage {
 	}
 	public void  clickDeleteAdvanceMaster() throws Exception{
 		Deletebutton.click();
-		
+	}
+	
+	public String checkifYesButton(){
+		return ReduceBalYes.getText();
 	}
 	
 }

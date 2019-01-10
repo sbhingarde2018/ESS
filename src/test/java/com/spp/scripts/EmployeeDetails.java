@@ -499,7 +499,7 @@ public class EmployeeDetails extends BaseTest{
 	
 }
 	@Test(priority=21)
-	public void CheckDeleteClassificationDetailsInEmployeeExtra_SC_421() throws Exception {
+	public void CheckDeleteClassificationDetailsInEmployeeExtra() throws Exception {
 	DeleteClassificationDetailsInEmployee ce = new DeleteClassificationDetailsInEmployee(driver);
 		ce.clickonemployee();
 		ce.clickonemployeedetails();

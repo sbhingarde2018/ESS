@@ -56,7 +56,7 @@ public class LoanMaster extends BaseTest{
 		me.clickonMaster();
 		me.selectloanmaster();
 		me.clickonedit();
-		me.editloanmastername("LoanMaster");
+		me.editloanmastername("LoanMaster1");
 		me.updateloanmaster();
 		String d=me.getMessage();
 		Assert.assertEquals(d, "Loan successfully updated");
@@ -69,6 +69,11 @@ public class LoanMaster extends BaseTest{
 		md.selectloanmaster();
 		Thread.sleep(1000);
 		md.clickondelete();
+		Thread.sleep(1000);
+		md.switchToPopUpAndDismiss();
+		Thread.sleep(3000);
+		md.clickondelete();
+		Thread.sleep(1000);
 		md.switchToPopUpAndAccept(driver);
 		String d=md.getMessage();
 		Assert.assertEquals(d, "Loan successfully deleted");
@@ -188,7 +193,7 @@ public class LoanMaster extends BaseTest{
 		Thread.sleep(5000);
 		ma.createloan();
 		String abc = ma.getAlertText();
-		//System.out.println(abc);
+		System.out.println(abc);
 		Assert.assertEquals(abc, "Amount can not be greater than 10000");
 		ma.switchToPopUpAndAccept(driver);
 	}
@@ -215,16 +220,8 @@ public class LoanMaster extends BaseTest{
 		mi.addnewloandetail();
 		Thread.sleep(2000);
 		mi.selectloanname("Default");
-		System.out.println("No of Installments accepted EMI Recovery value successfully");
-	
-		/*mi.enterloandate("13 May 2013");
-		Thread.sleep(3000);
-		mi.enterinstitutionname("State Bank of India-1");
 		Thread.sleep(2000);
-		mi.enterloanaccno("12345");
-		mi.enterloanamount("1000");
-		mi.enterrecoverfrom("May/2013");
-		mi.createloan();*/
+		System.out.println("No of Installments accepted EMI Recovery value successfully");
 		
 	}
 	@Test(priority=11)
@@ -282,7 +279,8 @@ public class LoanMaster extends BaseTest{
 		ma.addnewloandetail();
 		Thread.sleep(2000);
 		ma.enterloanname("Default");
-		ma.enterloandate("01 April 2013");
+		Thread.sleep(3000);
+		ma.enterloandate("01 April 2018");
 		Thread.sleep(3000);
 		ma.enterinstitutionname("HDFC Bank-FORT MUMBAI");
 		Thread.sleep(2000);
@@ -290,22 +288,23 @@ public class LoanMaster extends BaseTest{
 		ma.enterloanamount("10000");
 		ma.clicklumpsum();
 		ma.enterinstallmentamt("1000");
-		ma.enterrecoverfrom("May/2013");
+		ma.enterrecoverfrom("May/2018");
 		ma.createloan();
 		Thread.sleep(3000);
 		ma.addnewloandetail();
 		Thread.sleep(2000);
 		ma.enterloanname("Default");
-		ma.enterloandate("01 April 2013");
+		ma.enterloandate("01 April 2018");
 		Thread.sleep(3000);
 		ma.enterinstitutionname("HDFC Bank-FORT MUMBAI");
 		Thread.sleep(2000);
-		ma.enterloanaccno("122345");
+		ma.enterloanaccno("122345890");
 		ma.enterloanamount("10000");
 		ma.clicklumpsum();
 		ma.enterinstallmentamt("1000");
-		ma.enterrecoverfrom("May/2013");
+		ma.enterrecoverfrom("May/2018");
 		ma.createloan();
+		Thread.sleep(2000);
 		String abc = ma.getAlertMessage1();
 		System.out.println(abc);
 		Assert.assertEquals(abc, "Default can be given only 1 times in this service");
@@ -324,5 +323,17 @@ public class LoanMaster extends BaseTest{
 		 ma.clickonMaster();
 		 ma.selectFinancialInst();
 		 ma.deletefinancialinsti();
+	}
+	
+	@Test(priority=11)
+	public void DeleteLoanMaster() throws Exception{
+		CheckLoanMastercanbeDeleted md=new CheckLoanMastercanbeDeleted(driver);
+		md.clickonMaster();
+		md.selectloanmaster();
+		Thread.sleep(1000);
+		md.clickondelete();
+		md.switchToPopUpAndAccept(driver);
+		String d=md.getMessage();
+		Assert.assertEquals(d, "Loan successfully deleted");
 	}
 }
