@@ -208,7 +208,7 @@ public class AdvanceMaster extends BaseTest {
 		worc.switchToPopUpAndAccept(driver);
 	}
 	
-	/*@Test(priority=11)  
+	@Test(priority=11)  
 	public void CheckForInterestRateInAdvanceMaster_SC_253() throws Exception{
 		CheckForInterestRateInAdvanceMaster ld=new CheckForInterestRateInAdvanceMaster(driver);
 		ld.clickMastserLink();

@@ -14,7 +14,7 @@ public class CheckForInterestRateInAdvanceMaster extends BasePage {
 	WebElement masterLink;
 	@FindBy(xpath="//*[@id=\"menu\"]/li[3]/div/div[2]/ul/li[3]/a")
 	WebElement Advancemaster;
-	@FindBy(xpath="//*[@class=\"action-edit\"]")
+	@FindBy(xpath="//*[@id='standing_instr_list']/div[2]/table/tbody/tr/td[contains(text(),'Advance_Master')]/parent::tr/td[4]/a")
 	WebElement Edit;
 	@FindBy(xpath="//a[text()='Add New Advance Master']")
 	WebElement addAdvanceMaster;
@@ -32,13 +32,13 @@ public class CheckForInterestRateInAdvanceMaster extends BasePage {
 	
 	@FindBy(id="salary")
 	WebElement Salary;
-	@FindBy(xpath="//*[@id='menu']/li[6]/div/div[1]/ul/li[6]/a")
+	@FindBy(xpath="//*[@id='menu']/li[6]/div/div[1]/ul/li[7]/a")
 	WebElement AdvanceDetailsLink;
 	@FindBy(id="add_employees")
 	WebElement AddEmployee;
 	@FindBy(xpath="//*[@id=\"bf_form\"]/div[9]/button[1]")
 	WebElement Load;
-	@FindBy(xpath="//*[@id='si_detail_employees']/tbody/tr[1]/td[6]/a")
+	@FindBy(xpath="//*[@id='si_detail_employees']/tbody/tr[2]/td[contains(text(),'Tina')]/parent::tr/td[6]/a")
 	WebElement ViewLink;
 	@FindBy(xpath="//*[@id='standing_detail_list']/div[1]/span/a")
 	WebElement AddNewAdvanceLink;
@@ -59,7 +59,7 @@ public class CheckForInterestRateInAdvanceMaster extends BasePage {
 	WebElement createAdvance;
 	@FindBy(xpath="//*[@id='main']/div[2]/strong")
 	WebElement SuccessfulMessage;
-	@FindBy(xpath="//*[@id='standing_detail_list']/div[2]/table/tbody/tr[1]/td[8]/a")
+	@FindBy(xpath="//*[@id='standing_detail_list']/div[2]/table/tbody/tr/td[contains(text(),'Advance_Master')]/parent::tr/td[8]/a")
 	WebElement deleteadvancedetails;
 	@FindBy(id="lump")
 	WebElement lumpsum;
@@ -141,9 +141,7 @@ public class CheckForInterestRateInAdvanceMaster extends BasePage {
 		AdvanceDate.sendKeys(value);
 		Thread.sleep(1000);
 		AdvanceDate.sendKeys(Keys.TAB);
-}
-    
-    
+    }
     public void enterinstallmentamount(String value){
 		Installments.clear();
 		Installments.sendKeys(value);
@@ -160,8 +158,7 @@ public class CheckForInterestRateInAdvanceMaster extends BasePage {
     	return SuccessfulMessage.getText();
 
 }
-    public void deleteadvancedetails(String advanceMaster) {
-		// TODO Auto-generated method stub
+    public void deleteadvancedetails() {
 		deleteadvancedetails.click();
 	}
 	

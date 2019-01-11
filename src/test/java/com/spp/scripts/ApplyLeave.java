@@ -15,7 +15,7 @@ import junit.framework.Assert;
 
 public class ApplyLeave extends BaseTest{
 
-	/*@Test(priority=0)
+	@Test(priority=0)
 	public void ApplyDefaultLeave_SC_109() throws Exception{
 		ApplyDefaultLeave dl=new ApplyDefaultLeave(driver);
 		dl.clickonleave();
@@ -27,12 +27,11 @@ public class ApplyLeave extends BaseTest{
 		Thread.sleep(2000);
 		dl.applyleave();
 		Thread.sleep(2000);
-		dl.selectleavetype("Casual Leave (CL)");
-		dl.selectfromdate("03 September 2018");
-		Thread.sleep(2000);
-		dl.selecttodate("04 September 2018");
-		Thread.sleep(5000);
+		dl.selectleavetype("Loss of Pay (LOP)");
+		dl.selectfromdate("14 January 2019");
+		dl.selecttodate("14 January 2019");
 		dl.clickonapply();
+		System.out.println("click on apply");
 		String s=dl.getMessage();
 		Assert.assertEquals(s, "Leave applied successfully.");
 		Thread.sleep(2000);
@@ -40,7 +39,7 @@ public class ApplyLeave extends BaseTest{
 		Thread.sleep(2000);
 		dl.checkleavesummary();
 	}
-	@Test(priority=1)
+	/*@Test(priority=1)
 	public void ApplyUserDefinedtLeave_SC_110() throws Exception{
 		ApplyUserDefinedtLeave dl=new ApplyUserDefinedtLeave(driver);
 		dl.clickonleave();
@@ -136,7 +135,7 @@ public class ApplyLeave extends BaseTest{
 		dl.selectodate("30 August 2018");
 		dl.clickonsearch();
 	
-	}*/
+	}
 	@Test(priority=5)
 	public void ToviewappliedLeaveDetailinLeaveSummarytab_SC_478() throws Exception{
 		ToviewappliedLeaveDetailinLeaveSummarytab st=new ToviewappliedLeaveDetailinLeaveSummarytab(driver);
@@ -154,5 +153,5 @@ public class ApplyLeave extends BaseTest{
 		st.selectodate("30 August 2018");
 		st.clickonsearch();
 		st.clickonview();
-	}
+	}*/
 }

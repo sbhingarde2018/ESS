@@ -16,7 +16,7 @@ WebElement ClickOnApplyLeave;
 WebElement ClickOnFilterHead;
 @FindBy(xpath="//*[@id=\"bf_form\"]/div[9]/button[1]")
 WebElement ClickOnLoad;
-@FindBy(xpath="//*[@id=\"dt_leave_details\"]/tbody/tr/td[contains(text(),'Ankit')]/parent::tr/td[3]/a")
+@FindBy(xpath="//*[@id=\"dt_leave_details\"]/tbody/tr/td[contains(text(),'Tina')]/parent::tr/td[3]/a")
 WebElement ApplyLeave;
 @FindBy(id="leave_detail_leave_definition_id")
 WebElement SelectLeaveType;
@@ -24,7 +24,7 @@ WebElement SelectLeaveType;
 WebElement SelectFromDate;
 @FindBy(id="leave_detail_to_date")
 WebElement SelectToDate;
-@FindBy(xpath="//*[@id=\"apply\"]")
+@FindBy(xpath="//*[@id='apply']")
 WebElement ClickOnApply;
 @FindBy(xpath="//*[@id=\"apply_leave_response\"]/div/strong")
 WebElement successfullmessage;
@@ -63,6 +63,7 @@ public void selecttodate(String value) {
 	SelectToDate.sendKeys(value);
 }
 public void clickonapply() {
+	ClickOnApply.click();
 	ClickOnApply.click();
 }
 public String getMessage(){
