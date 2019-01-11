@@ -325,15 +325,5 @@ public class LoanMaster extends BaseTest{
 		 ma.deletefinancialinsti();
 	}
 	
-	@Test(priority=11)
-	public void DeleteLoanMaster() throws Exception{
-		CheckLoanMastercanbeDeleted md=new CheckLoanMastercanbeDeleted(driver);
-		md.clickonMaster();
-		md.selectloanmaster();
-		Thread.sleep(1000);
-		md.clickondelete();
-		md.switchToPopUpAndAccept(driver);
-		String d=md.getMessage();
-		Assert.assertEquals(d, "Loan successfully deleted");
-	}
+	
 }
