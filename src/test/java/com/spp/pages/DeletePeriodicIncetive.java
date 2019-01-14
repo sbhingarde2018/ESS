@@ -16,6 +16,8 @@ public class DeletePeriodicIncetive extends BasePage{
 	WebElement deletePeriodicIncetive;
 	@FindBy(xpath="//strong[text()='Periodic Incentive successfully deleted']")
 	WebElement successfullMessage;
+	@FindBy(xpath="//*[@id='standing_instr_list']/div[2]/table/tbody/tr/td[contains(text(),'PeriodicIncentiveMaster')]")
+	WebElement SelectedPeriodicIncentiveMaster;
 	
 	public DeletePeriodicIncetive(WebDriver driver){
 		super(driver);
@@ -34,8 +36,10 @@ public class DeletePeriodicIncetive extends BasePage{
 		deletePeriodicIncetive.click();
 		
 	}
-	
 	public String getMessage(){
 		return successfullMessage.getText();
+	}
+	public boolean CheckIfPresent() {
+		return checkIfExist(SelectedPeriodicIncentiveMaster);
 	}
 }

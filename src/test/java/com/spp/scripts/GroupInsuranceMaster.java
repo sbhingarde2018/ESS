@@ -23,12 +23,14 @@ public class GroupInsuranceMaster extends BaseTest{
 		cs.enterGroupInsurance("Group_Insurance_Master"+Utility.getRandNum(1, 10));
 		cs.uncheckclubbinsalhead();
 		cs.clickCreateGroupInsurance();
+		String a = cs.GroupCheckNo();
+		Assert.assertEquals(a, "No");
 		String d=cs.getMessage();
 		Assert.assertEquals(d, "Group Insurance successfully created");
 		cs.clickdelete();
 		cs.switchToPopUpAndAccept(driver);
-		
 	}
+	
 	@Test(priority=1)
 	public void CreateGrpInsunceMstrwithClubbInSal_SC_20() throws Exception {
 		CreateGrpInsunceMstrwithClubbInSal gc=new CreateGrpInsunceMstrwithClubbInSal(driver);
@@ -37,12 +39,13 @@ public class GroupInsuranceMaster extends BaseTest{
 		gc.clickNewGroupInsuranceMaster();
 		gc.clickGroupInsuranceName("Group_Insurance_Master"+Utility.getRandNum(1, 10));
 		gc.clickCreateGroupinsurance();
+		String a = gc.GroupCheckYes();
+		Assert.assertEquals(a, "Yes");
 		String d=gc.getMessage();
 		Assert.assertEquals(d, "Group Insurance successfully created");
 	}
 	
-@Test(priority=2)
-	
+	@Test(priority=2)
 	public void CheckGrpIncMstrcanbeEdited_SC_21() throws Exception{
 	CheckGrpIncMstrcanbeEdited gi=new CheckGrpIncMstrcanbeEdited(driver);
 		gi.navigateMaster();
@@ -52,25 +55,26 @@ public class GroupInsuranceMaster extends BaseTest{
 		gi.updategrpinsurnce();
 		String d=gi.getMessage();
 		Assert.assertEquals(d, "Group Insurance successfully updated");	
+	}
 	
-
-}
+	
 	@Test(priority=3)
-	
 	public void DeleteGroupInsuranceMaster_SC_22() throws Exception{
 		DeleteGroupInsuranceMaster dg=new DeleteGroupInsuranceMaster(driver);
 		dg.navigateMaster();
 		dg.selectGroupInsurance();
 		dg.clickDeleteGroupInsurance();
-		dg.switchToPopUpAndDismiss();
-		Thread.sleep(2000);
-		dg.clickDeleteGroupInsurance();
-		Thread.sleep(2000);
-		dg.switchToPopUpAndAccept(driver);
-		String abc=dg.getMessage();
-		System.out.println(abc);
 		Thread.sleep(5000);
+		dg.switchToPopUpAndDismiss();
+		dg.clickDeleteGroupInsurance();
+		Thread.sleep(5000);
+		dg.switchToPopUpAndAccept(driver);
+		Thread.sleep(5000);
+		String abc=dg.getMessage();
 		Assert.assertEquals(abc, "Group Insurance successfully deleted");
-		
+		boolean abcd =  dg.CheckIfPresent();
+		//System.out.println(abcd);
+		Assert.assertEquals(false,abcd);
+		//System.out.println("Completed");
 	}
 }

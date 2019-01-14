@@ -16,6 +16,8 @@ public class DeleteGroupInsuranceMaster extends BasePage {
 	WebElement deleteGroupInsurance;
 	@FindBy(xpath="//strong[text()='Group Insurance successfully deleted']")
 	WebElement successfullMessage;
+	@FindBy(xpath="//*[@id='standing_instr_list']/div[2]/table/tbody/tr/td[contains(text(),'Group_Insurance_Master')]")
+	WebElement SelectedGroupInsuranceMaster;
 
 	public DeleteGroupInsuranceMaster(WebDriver driver){
 		super(driver);
@@ -36,5 +38,8 @@ public class DeleteGroupInsuranceMaster extends BasePage {
 	
 	public String getMessage(){
 		return successfullMessage.getText();
+	}
+	public boolean CheckIfPresent() {
+		return checkIfExist(SelectedGroupInsuranceMaster);
 	}
 }

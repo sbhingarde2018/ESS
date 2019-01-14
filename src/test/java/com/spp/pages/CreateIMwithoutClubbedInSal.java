@@ -25,6 +25,8 @@ public class CreateIMwithoutClubbedInSal extends BasePage{
 	WebElement successfulmessage;
 	@FindBy(xpath="//*[@class=\"action-delete\"]")
 	WebElement ClickDelete;
+	@FindBy(xpath="//*[@id='standing_instr_list']/div[2]/table/tbody[2]/tr/td[contains(text(),'Insurance_Master')]/parent::tr/td[2]")
+	WebElement ClubbedInSalNo;
 	
 	public CreateIMwithoutClubbedInSal(WebDriver driver) {
 		super(driver);
@@ -54,5 +56,8 @@ public class CreateIMwithoutClubbedInSal extends BasePage{
 	}	
 	public void clickdelete() {
 		ClickDelete.click();
+	}
+	public String CheckNoBtn(){
+		return ClubbedInSalNo.getText();
 	}
 }

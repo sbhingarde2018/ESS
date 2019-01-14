@@ -23,6 +23,8 @@ public class CreatePeriodicIncMstrwithClubbInSal extends BasePage {
 	WebElement successfullMessage;
 	@FindBy(xpath="//*[@id=\"standing_instr_list\"]/div[2]/table/tbody[2]/tr/td[1][contains(text(),'Periodic incentive')]/parent::tr/td[4]/a")
 	WebElement DeleteButton;
+	@FindBy (xpath="//*[@id='standing_instr_list']/div[2]/table/tbody[2]/tr/td[contains(text(),'PerodicIncentiveMaster')]/parent::tr/td[2]")
+	WebElement CheckNo;
 
 	public CreatePeriodicIncMstrwithClubbInSal(WebDriver driver){
 		super(driver);
@@ -54,6 +56,9 @@ public class CreatePeriodicIncMstrwithClubbInSal extends BasePage {
 	}
 	public void ClickDeleteButton() {
 		DeleteButton.click();
+	}
+	public String PeriodicCheckYes(){
+		return CheckNo.getText();
 	}
 
 }

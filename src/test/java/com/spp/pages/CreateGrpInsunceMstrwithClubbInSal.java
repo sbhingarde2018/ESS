@@ -23,6 +23,8 @@ public class CreateGrpInsunceMstrwithClubbInSal extends BasePage {
 	WebElement CreateGroupinsurance; 
 	@FindBy(xpath="//*[@id=\"main\"]/div[2]/strong")
 	WebElement SuccessfulMessage;
+	@FindBy (xpath="//*[@id='standing_instr_list']/div[2]/table/tbody[2]/tr/td[contains(text(),'Group_Insurance_Master')]/parent::tr/td[2]")
+	WebElement CheckYes;
 	
 	
 	public CreateGrpInsunceMstrwithClubbInSal(WebDriver driver){
@@ -55,5 +57,9 @@ public class CreateGrpInsunceMstrwithClubbInSal extends BasePage {
 	public String getMessage() {
 		return SuccessfulMessage.getText();
 	}
+	public String GroupCheckYes(){
+		return CheckYes.getText();
+	}
+	
 	
 }

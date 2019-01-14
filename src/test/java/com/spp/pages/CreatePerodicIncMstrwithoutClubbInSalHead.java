@@ -28,6 +28,8 @@ public class CreatePerodicIncMstrwithoutClubbInSalHead extends BasePage{
 	List<WebElement> Delete;
 	@FindBy(xpath="//*[@class=\"action-delete\"]")
 	WebElement ClickDelete;
+	@FindBy (xpath="//*[@id='standing_instr_list']/div[2]/table/tbody[2]/tr/td[contains(text(),'PerodicIncentiveMaster')]/parent::tr/td[2]")
+	WebElement CheckIfNo;
 	
 	public CreatePerodicIncMstrwithoutClubbInSalHead(WebDriver driver){
 		super(driver);
@@ -65,7 +67,8 @@ public class CreatePerodicIncMstrwithoutClubbInSalHead extends BasePage{
 	public void clickdelete() {
 		ClickDelete.click();
 	}
-	
-	
+	public String PeriodicCheckNo(){
+		return CheckIfNo.getText();
+	}
 
 }

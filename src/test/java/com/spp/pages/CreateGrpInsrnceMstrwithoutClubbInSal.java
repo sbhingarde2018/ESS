@@ -24,6 +24,8 @@ public class CreateGrpInsrnceMstrwithoutClubbInSal extends BasePage {
 	WebElement successfullMessage;
 	@FindBy(xpath="//*[@class=\"action-delete\"]")
 	WebElement ClickDelete;
+	@FindBy (xpath="//*[@id='standing_instr_list']/div[2]/table/tbody[2]/tr/td[contains(text(),'Group_Insurance_Master')]/parent::tr/td[2]")
+	WebElement CheckNo;
 	
 	public CreateGrpInsrnceMstrwithoutClubbInSal(WebDriver driver){
 		super(driver);
@@ -58,5 +60,8 @@ public class CreateGrpInsrnceMstrwithoutClubbInSal extends BasePage {
 	}
 	public void clickdelete() {
 		ClickDelete.click();
+	}
+	public String GroupCheckNo(){
+		return CheckNo.getText();
 	}
 }

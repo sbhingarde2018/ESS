@@ -13,7 +13,7 @@ import junit.framework.Assert;
 
 public class InsuranceMaster extends BaseTest{
 
-@Test(priority=0)
+	@Test(priority=0)
 	public void CreateIMwithoutClubbedInSal_SC_15() throws Exception {
 		CreateIMwithoutClubbedInSal lm=new CreateIMwithoutClubbedInSal(driver);
 		lm.clickonmaster();
@@ -26,6 +26,8 @@ public class InsuranceMaster extends BaseTest{
 		Thread.sleep(2000);
 		String d=lm.getMessage();
 		Assert.assertEquals(d, "Insurance successfully created");
+		String a = lm.CheckNoBtn();
+		Assert.assertEquals(a, "No");
 		lm.clickdelete();
 		lm.switchToPopUpAndAccept(driver);
 	}
@@ -40,9 +42,12 @@ public class InsuranceMaster extends BaseTest{
 		Thread.sleep(2000);
 		cs.createinsurance();
 		Thread.sleep(2000);
+		String a = cs.CheckYesBtn();
+		Assert.assertEquals(a, "Yes");
 		String d=cs.getMessage();
 		Assert.assertEquals(d, "Insurance successfully created");	
 	}
+	
 	@Test(priority=2)
 	public void CheckInsuranceMastercanbeEdited_SC_17() throws Exception {
 		CheckInsuranceMastercanbeEdited cs=new CheckInsuranceMastercanbeEdited(driver);
@@ -56,6 +61,7 @@ public class InsuranceMaster extends BaseTest{
 		String d=cs.getMessage();
 		Assert.assertEquals(d, "Insurance successfully updated");	
 	}
+	
 	@Test(priority=3)
 	public void DeleteInsuranceMaster_SC_18() throws Exception{
 		DeleteInsuranceMaster di=new DeleteInsuranceMaster(driver);
@@ -70,6 +76,8 @@ public class InsuranceMaster extends BaseTest{
 		di.switchToPopUpAndAccept(driver);
 		String abc=di.getMessage();
 		Assert.assertEquals(abc, "Insurance successfully deleted");
+		boolean abcd =  di.CIfPresent();
+		Assert.assertEquals(false,abcd);
 	}
 	
 	

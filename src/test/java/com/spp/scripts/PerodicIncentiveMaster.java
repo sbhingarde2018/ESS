@@ -25,6 +25,8 @@ public class PerodicIncentiveMaster extends BaseTest{
 		cs.clickCreateButton();
 		String d=cs.getMessage();
 		Assert.assertEquals(d, "Periodic Incentive successfully created");	
+		String a = cs.PeriodicCheckNo();
+		Assert.assertEquals(a, "No");
 		cs.clickdelete();
 		cs.switchToPopUpAndAccept(driver);
 	}
@@ -38,13 +40,12 @@ public class PerodicIncentiveMaster extends BaseTest{
 		ci.enterPeriodicIncentiveName("PerodicIncentiveMaster"+Utility.getRandNum(1, 10));
 		ci.clickCreatePeriodicIncentive();
 		String d=ci.getMessage();
-		Assert.assertEquals(d, "Periodic Incentive successfully created");	
+		Assert.assertEquals(d, "Periodic Incentive successfully created");
+		String a = ci.PeriodicCheckYes();
+		Assert.assertEquals(a, "Yes");	
 	}
-	
-	
-	
+		
 	@Test(priority=2)
-	
 	public void CheckPeriodicIncMstrcanbeEdited_SC_26() throws Exception{
 		CheckPeriodicIncMstrcanbeEdited ci=new CheckPeriodicIncMstrcanbeEdited(driver);
 		ci.navigateMaster();
@@ -63,13 +64,16 @@ public class PerodicIncentiveMaster extends BaseTest{
 		pi.navigateMaster();
 		pi.selectPeriodicIncentive();
 		pi.clickDeletePeriodicIncentive();
-		Thread.sleep(2000);
+		Thread.sleep(5000);
 		pi.switchToPopUpAndDismiss();
 		Thread.sleep(2000);
 		pi.clickDeletePeriodicIncentive();
-		Thread.sleep(2000);
+		Thread.sleep(5000);
 		pi.switchToPopUpAndAccept(driver);
 		String abc=pi.getMessage();
 		Assert.assertEquals(abc, "Periodic Incentive successfully deleted");
+		boolean abcd =  pi.CheckIfPresent();
+		//System.out.println(abcd);
+		Assert.assertEquals(false,abcd);
 	}
 }

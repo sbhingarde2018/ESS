@@ -22,6 +22,8 @@ public class CreateIMwithClubbedInSal extends BasePage{
 	WebElement CreateInsurance;
 	@FindBy(xpath="//*[@id=\"main\"]/div[2]/strong")
 	WebElement successfulmessage;
+	@FindBy(xpath="//*[@id='standing_instr_list']/div[2]/table/tbody[2]/tr/td[contains(text(),'Insurance_Master')]/parent::tr/td[2]")
+	WebElement ClubbedInSalYes;
 	
 	public CreateIMwithClubbedInSal(WebDriver driver) {
 		super(driver);
@@ -48,5 +50,8 @@ public class CreateIMwithClubbedInSal extends BasePage{
 	}
 	public String getMessage() {
 		return successfulmessage.getText();
-	}	
+	}
+	public String CheckYesBtn(){
+		return ClubbedInSalYes.getText();
+	}
 }
