@@ -387,7 +387,7 @@ public class AdvanceMaster extends BaseTest {
 		ld.clickAdvanceMaster();
 		ld.clickdelete();
 		ld.switchToPopUpAndAccept(driver);
-	}  */
+	}  
 	
 
 	

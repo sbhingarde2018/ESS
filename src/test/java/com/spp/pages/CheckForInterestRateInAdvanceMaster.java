@@ -158,7 +158,7 @@ public class CheckForInterestRateInAdvanceMaster extends BasePage {
     	return SuccessfulMessage.getText();
 
 }
-    public void deleteadvancedetails() {
+    public void deleteadvancedetails(String advanceMaster) {
 		deleteadvancedetails.click();
 	}
 	

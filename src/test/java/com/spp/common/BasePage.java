@@ -88,4 +88,25 @@ public class BasePage {
 		String text = driver.switchTo().alert().getText();
 		return text;
 }
+	
+	 public boolean isVisible(WebElement element)
+	 {
+	 return element.isDisplayed();
+	 }
+
+	 public boolean checkIfExist(WebElement element)
+	 {
+	 boolean elemexists = false;
+	 try
+	 {
+	 elemexists =  element.isDisplayed();
+	 return elemexists;
+
+	 }
+	 catch(Exception e)
+	 {	
+	 }
+	 return elemexists;
+	 }
+
 }
