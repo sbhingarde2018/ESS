@@ -50,7 +50,7 @@ public class CompanyTestcase01 extends BaseTest{
 		ed.enterEstablishmentDate("05 March 2000");
 		ed.enterPhoneNo1("9988776655");
 		ed.enterAddress1("#73, Shreelekha Complex");
-		ed.enterPhoneNo2("2234587");
+		ed.enterPhoneNo2("9988776658");
 		ed.enterEmail("relyonsoft@gmail.com");
 		ed.enterAddress2("West of chord Road, Bengaluru");
 		ed.enterAddress3("Karnataka 560086");
@@ -83,7 +83,7 @@ public class CompanyTestcase01 extends BaseTest{
 		Thread.sleep(3000);
 		bp.selectPFGroup("Default");
 		Thread.sleep(2000);
-		bp.selectmonthoption();
+		bp.selectmonthoptionPF();
 		Thread.sleep(2000);
 		bp.selectmonth();
 		bp.clickCreatePFDetail();
@@ -92,7 +92,8 @@ public class CompanyTestcase01 extends BaseTest{
 		Thread.sleep(3000);
 		bp.clickESIDetail();
 		bp.selectESIGroup("Default");
-		bp.selectmonthoption();
+		Thread.sleep(2000);
+		bp.selectmonthoptionESI();
 		Thread.sleep(2000);
 		bp.selectmonth();
 		bp.clickCreateESIdetail();
@@ -102,7 +103,8 @@ public class CompanyTestcase01 extends BaseTest{
 		bp.clickPTDetail();
 		Thread.sleep(2000);
 		bp.selectPTGroup("Default");
-		bp.selectmonthoption();
+		Thread.sleep(2000);
+		bp.selectmonthoptionPT();
 		Thread.sleep(2000);
 		bp.selectmonth();
 		bp.clickCreatePTDetail();
@@ -137,7 +139,7 @@ public class CompanyTestcase01 extends BaseTest{
 		db.clickEditlink();
 		db.clickPFDetailTab();
 		db.clickEditPFGroup();
-		db.editeffectivedate("01 January 2013"); 
+		db.editeffectivedate("01 January 2019"); 
 		Thread.sleep(2000);
 		db.updatepfdetail();
 		String s=db.getMessage();
@@ -153,7 +155,7 @@ public class CompanyTestcase01 extends BaseTest{
 		db.clickEditlink();
 		db.clickESIDetailTab();
 		db.clickEditESIGroup();
-		db.editeffectivedate("01 January 2013"); 
+		db.editeffectivedate("01 January 2019"); 
 		Thread.sleep(2000);
 		db.updateESIdetail();
 		String s=db.getMessage();
@@ -169,7 +171,7 @@ public class CompanyTestcase01 extends BaseTest{
 		db.clickEditlink();
 		db.clickPTDetailTab();
 		db.clickEditPTGroup();
-		db.editeffectivedate("01 January 2013"); 
+		db.editeffectivedate("01 January 2019"); 
 		Thread.sleep(2000);
 		db.updatepTdetail();
 		String s=db.getMessage();
@@ -264,7 +266,7 @@ public class CompanyTestcase01 extends BaseTest{
 		up.clickondocument();
 		Thread.sleep(2000);
 		up.addnewdocument();
-		up.uploadfile("C:\\Users\\alfalabs\\Documents\\Document1.xlsx");
+		up.uploadfile("C:\\Users\\Alfa\\Documents\\Document1.xlsx");
 		Thread.sleep(2000);
 		up.enterremarks("Upload file");
 		Thread.sleep(2000);
@@ -296,321 +298,7 @@ public class CompanyTestcase01 extends BaseTest{
 		Assert.assertEquals(f, "Company Document Was Successfully Deleted");
 	}
 	
-	/*@Test(priority=13)
-	public void verifyPFGroupCreated_SC_48_49() throws Exception{
-		AddPFGroup ag=new AddPFGroup(driver);
-		ag.navigateMaster();
-		ag.clickCompanayLink();
-		ag.clickAddPFLink();
-		ag.enterPFGroupName("PF_1");
-		ag.enterPFNumber("KN/45889");
-		ag.enterDBFileCode("IFC0001");
-		ag.enterExtension("1");
-		ag.enterPFAddress("Chennai");
-		ag.clickPFCreateButton();
-		Thread.sleep(3000);
-		ag.clickPFRateLinkButton();
-		Thread.sleep(2000);	
-		ag.selectEffectiveDate("May/2013");
-		ag.clickPFGroupRateButton();
-		String s=ag.getMessage();
-		Assert.assertEquals(s, "PF group rate successfully created.");
-	} 
 	
-	@Test(priority=14)
-	public void verifyESIGroupCreated_SC_50_51() throws Exception{
-		AddESIGroup ae=new AddESIGroup(driver);
-		Thread.sleep(5000);
-		ae.navigateMaster();
-		ae.clickCompanayLink();
-		ae.clickESILink();
-		ae.clickAddressLink();
-		ae.enterESIName("ESI_1");
-		ae.enterESINumber("cn/23456SD58DE6787");
-		ae.enterESIAddress("Chennai,TN");
-		ae.enterESIOffice("CMBT");
-		ae.clickCreateESI();
-		Thread.sleep(5000);
-		ae.clickESIRateLink();
-		ae.selectESIEffectiveDate("May/2013");
-		ae.clickCreateESIRate();
-		String s=ae.getMessage();
-		Assert.assertEquals(s, "ESI group rate successfully created.");
-	}
-	
-	@Test(priority=15)//not running default pt group slab not present
-	public void verifyPTGroupCreatedSC_52_53() throws Exception{
-		AddPTGroup pt=new AddPTGroup(driver);
-		Thread.sleep(3000);
-		pt.navigateMaster();
-		pt.clickCompanayLink();
-		pt.clickPTLink();
-		pt.clickAddPTLink();
-		pt.enterPTGroupName("PT_1");
-		pt.selectState("mah");
-		pt.enterPTAddress("maha");
-		pt.enterPTOCircleNumber("123");
-		pt.enterPTCertificateNumber("RE1234");
-		pt.selectReturnType("Half Yearly");
-		pt.clickCreatePT();
-		Thread.sleep(3000);
-		pt.clickPTRate();
-		pt.selectEffectiveFrom("May/2013");
-		pt.clickPTGroupRateButton();
-		Thread.sleep(3000);
-		pt.clickSettingsLink();
-		pt.clickFillDefaultButton();	
-		String s=pt.getMessage();
-		Assert.assertEquals(s, "PT group rate successfully created");
-	}
-	
-	@Test(priority=16)	
-	public void verifyUpdatePFGroup_SC_187_203() throws Exception{
-		EditPFGroupandPFRate ep=new EditPFGroupandPFRate(driver);
-		Thread.sleep(5000);
-		ep.navigateMaster();
-		ep.clickCompanayLink();
-		ep.clickEditPFGroup();
-		ep.enterPFGroupName("PF-1");
-		ep.enterPFNumber("CN/20317fTudxszc888");
-		ep.enterDBFileCode("234355");
-		ep.enterExtension("2");	
-		ep.enterPFAddress("Sholinganltlure,Chetnnai.");
-		ep.clickUpdatePFButton();
-		ep.clickPFRateLinkButton();
-		Thread.sleep(5000);
-		//ep.clickEditPFRateButton();
-		ep.selectEffectiveFrom("Aug/2017");
-		Thread.sleep(5000);
-		ep.enterEPFValue("10");
-		ep.enterCutoffValue("000");
-		ep.enterAccountNO2("1");
-		ep.enterPensionFund("8.34");
-		ep.enterAccountNo21("0.1");
-		ep.enterAccountNo22("0.1"); 
-		Thread.sleep(1000);
-		ep.clickUpdatePFRateButton();
-		String s=ep.getMessage();
-		Assert.assertEquals(s, "PF group rate successfully updated.");
-	}  
-	
-	@Test(priority=17)
-	public void verifyDeletedPFGroup_SC_192() throws Exception{   
-		DeletePFGroup dg=new DeletePFGroup(driver);
-		Thread.sleep(3000);
-		dg.navigateMaster();
-		dg.clickCompanayLink();
-		dg.clickPFGroupLink();
-		dg.clickDeletePFGroupButton();
-		Thread.sleep(2000);
-		dg.switchToPopUpAndDismiss();
-		Thread.sleep(3000);
-		dg.clickDeletePFGroupButton();
-		dg.switchToPopUpAndAccept(driver);
-		String s=dg.getMessage();
-		Assert.assertEquals(s,"PF group successfully deleted");
-		}
-	
-	@Test(priority=18)
-	public void verifyUpdateESIGroup_SC_195_206() throws Exception{ 
-		EditESIAndESIRate er=new EditESIAndESIRate(driver);
-		Thread.sleep(5000);
-		er.navigateMaster();
-		er.clickCompanayLink();
-		er.clickESILink();
-		er.clickEditESILink();
-		er.enterESIName("ESI-1");
-		er.enterESINumber("123645FS678CS9");
-		er.enterESIAddress("Shollinganallure,Chennai");
-		er.enterESIOffice("Techpark");
-		er.clickupdateESIButton();
-		Thread.sleep(2000);
-		er.clickESILink();
-		er.clickEditESILink();
-		Thread.sleep(2000);
-		er.clickESIRateLink();
-		Thread.sleep(2000);
-		er.clickEditESIRateIcon();
-		Thread.sleep(3000);
-		er.enterEmployeeRate("1.25");
-		er.enterEmployerRate("10");
-		er.enterCutOff("1010");
-		er.enterMinimumLimit("65");
-		Thread.sleep(3000);
-		er.clickUpdateESIRateButton();
-		Assert.assertEquals("ESI group rate successfully updated", "ESI group rate successfully updated");
-	}
-	
-	@Test(priority=19)
-	public void verifyDeletedESIGoup_SC_197() throws Exception{
-		DeleteESIGroup de=new DeleteESIGroup(driver);
-		de.navigateMaster();
-		de.clickCompanayLink();
-		de.clickESILink();
-		Thread.sleep(2000);
-		de.clickDeleteEditESIGroupButton();
-		de.switchToPopUpAndDismiss();
-		Thread.sleep(2000);
-		de.clickDeleteEditESIGroupButton();
-		de.switchToPopUpAndAccept(driver);
-		String s=de.getMessage();
-		Assert.assertEquals(s, "ESI group successfully deleted");
-	}
-	
-	@Test(priority=20)
-	public void verifyUpdatePTGroup_SC_199_209() throws Exception{
-		EditPTGroup ep=new EditPTGroup(driver);
-		Thread.sleep(2000);
-		ep.navigateMaster();
-		ep.clickCompanayLink();
-		ep.clickPTLink();
-		ep.clickEditPTGroup();
-		ep.enterPTGroupName("PT-103");
-		ep.enterPTAddress("#25,chennai1");
-		ep.enterPTCertificateNumber("234563");
-		ep.enterPTOCircleNumber("65783474");
-		ep.clickPTLock();
-		ep.clickUpdatePTGroupButton();
-		Thread.sleep(3000);
-		ep.clickPTRate();
-		Thread.sleep(2000);
-		ep.clickSettingsLink();
-		ep.clickEditPTRateLink();
-		Thread.sleep(2000);
-		ep.enterMinimumField("700");
-		ep.enterPTField("20");
-		ep.selectCategory("f");
-		ep.clickUpdatePTRate();	
-		String s=ep.getMessage();
-		Assert.assertEquals(s,"PT rate successfully updated.");
-	}
-	
-	@Test(priority=21)
-	public void verifyDeletedPTGroup_SC_202() throws Exception{
-		DeletePTGroup dpg=new DeletePTGroup(driver);
-		//Thread.sleep(1000);
-		dpg.navigateMaster();
-		dpg.clickCompanayLink();
-		dpg.clickPTLink();
-		Thread.sleep(2000);
-		dpg.clickDeleteFirstPT();
-		Thread.sleep(2000);
-		dpg.switchToPopUpAndDismiss();
-		Thread.sleep(2000);
-		dpg.clickDeleteFirstPT();
-		Thread.sleep(1000);
-		dpg.switchToPopUpAndAccept(driver);
-        String s=dpg.getMessage();
-        Assert.assertEquals(s, "PT Group was successfully deleted.");
-	} 
-	
-	@Test(priority=22)
-	public void verifyDeletedPFGroup_SC_204() throws Exception{   
-		DeletePFGroupRate dg=new DeletePFGroupRate(driver);
-		Thread.sleep(3000);
-		dg.navigateMaster();
-		dg.clickCompanayLink();
-		Thread.sleep(2000);
-		dg.clickonpf();
-		dg.clickedit();
-		Thread.sleep(2000);
-		dg.clickPFRateLinkButton();
-		dg.clickdeletepfratebutton();
-		dg.switchToPopUpAndDismiss();
-		Thread.sleep(2000);
-		dg.clickdeletepfratebutton();
-		dg.switchToPopUpAndAccept(driver);
-		String s=dg.getMessage();
-		Assert.assertEquals(s,"PF group rate successfully deleted.");
-		
-}
-	
-	@Test(priority=23)
-	public void verifyDeletedESIGroup_SC_208() throws Exception{   
-		DeleteESIGroupRate dg=new DeleteESIGroupRate(driver);
-		Thread.sleep(3000);
-		dg.navigateMaster();
-		dg.clickCompanayLink();
-		Thread.sleep(4000);
-		dg.clickESIGroup();
-		dg.clickEditLink();
-		dg.clickESIRate();
-		dg.clickDeleteButton();
-		dg.switchToPopUpAndDismiss();
-		Thread.sleep(2000);
-		dg.clickDeleteButton();
-		dg.switchToPopUpAndAccept(driver);
-		String s=dg.getMessage();
-		Assert.assertEquals(s,"ESI group rate successfully deleted.");
-		
-}
-	
-	@Test(priority=24)
-	public void verifyDeletedPTGroup_SC_211() throws Exception{   
-		DeletePTGroupRate dg=new DeletePTGroupRate(driver);
-		Thread.sleep(3000);
-		dg.navigateMaster();
-		dg.clickCompanayLink();
-		Thread.sleep(4000);
-		dg.clickPTGroup();
-		dg.clickEditLink();
-		dg.clickPTRate();
-		dg.clickSettings();
-		dg.clickDeleteButton();
-		dg.switchToPopUpAndDismiss();
-		Thread.sleep(2000);
-		dg.clickDeleteButton();
-		dg.switchToPopUpAndAccept(driver);
-		String s=dg.getMessage();
-		Assert.assertEquals(s,"PT Rate successfully deleted");
-	}
-	
-	/*@Test(priority=25)
-	public void verifyAssignPFGroupToBranch_SC_54C() throws Exception{
-		AssignPFGroupToBranch db=new AssignPFGroupToBranch(driver);
-		db.navigateMaster();
-		db.clickCompanayLink();
-		db.clickBranchLink();
-		db.clickEditlink();
-		db.clickPFDetailTab();
-		db.selectPFGroup("Default");
-		db.enterEffectiveFrom("May/2018");                      //created PF Group data needs to delete (sol:Take random dates from calender)
-		db.ClickCreatePfDetails();
-		String s=db.getMessage();
-		Assert.assertEquals(s, "PF detail successfully created.");
-		}	
-	
-	@Test(priority=13)
-	public void verifyAssignigESIGroupToBranch_SC_55C() throws Exception{
-		AssignigESIGroupToBranch db=new AssignigESIGroupToBranch(driver);
-		db.navigateMaster();
-		db.clickCompanayLink();
-		db.clickBranchLink();
-		db.clickEditlink();
-		db.clickESIDetailTab();
-		db.selectESIGroup("Default");
-		db.enterEffectiveFrom("May/2018");                      //created PF Group data needs to delete (sol:Take random dates from calender)
-		db.ClickCreateESIDetail();
-		Thread.sleep(2000);
-		String s=db.getMessage();
-		Assert.assertEquals(s, "ESI detail successfully created.");
-		}	
-
-	@Test(priority=14)
-	public void verifyAssignigPTGroupToBranch_SC_56C() throws Exception{
-		AssignigPTGroupToBranch db=new AssignigPTGroupToBranch(driver);
-		db.navigateMaster();
-		db.clickCompanayLink();
-		db.clickBranchLink();
-		db.clickEditlink();
-		db.clickPTDetailTab();
-		db.selectPTGroup("kolhapur");
-		db.enterEffectiveFrom("May/2018");           //created PF Group data needs to delete (sol:Take random dates from calender)
-		db.ClickCreatePTDetail();
-		Thread.sleep(2000);
-		String s=db.getMessage();
-		Assert.assertEquals(s, "PT detail successfully created.");
-		}	*/
 	
 
 	
