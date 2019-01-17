@@ -19,7 +19,7 @@ import com.spp.pages.EditPFGroupandPFRate;
 import com.spp.pages.EditPTGroup;
 
 public class CompanyStatutories extends BaseTest{
-	/*@Test(priority=0)
+	@Test(priority=0)
 	public void verifyPFGroupCreated_SC_48_49() throws Exception{
 		AddPFGroup ag=new AddPFGroup(driver);
 		ag.navigateMaster();
@@ -135,9 +135,9 @@ public class CompanyStatutories extends BaseTest{
 		ae.clickCreateESIRate();
 		String s=ae.getMessage();
 		Assert.assertEquals(s, "ESI group rate successfully created.");
-	}*/
+	}
 	
-	/*@Test(priority=5)
+	@Test(priority=5)
 	public void verifyUpdateESIGroup_SC_195_206() throws Exception{ 
 		EditESIAndESIRate er=new EditESIAndESIRate(driver);
 		Thread.sleep(5000);
@@ -204,7 +204,7 @@ public class CompanyStatutories extends BaseTest{
 		Assert.assertEquals(s, "ESI group successfully deleted");
 	}
 	
-	@Test(priority=8)//not running default pt group slab not present
+	/*@Test(priority=8)//not running default pt group slab not present
 	public void verifyPTGroupCreatedSC_52_53() throws Exception{
 		AddPTGroup pt=new AddPTGroup(driver);
 		Thread.sleep(3000);
@@ -301,7 +301,7 @@ public class CompanyStatutories extends BaseTest{
 		//Assert.assertEquals(s,"PT Rate successfully deleted");
 	}
 	
-	@Test(priority=11)
+	/*@Test(priority=11)
 	public void verifyDeletedPTGroup_SC_202() throws Exception{
 		DeletePTGroup dpg=new DeletePTGroup(driver);
 		//Thread.sleep(1000);

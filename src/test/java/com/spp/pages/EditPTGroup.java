@@ -15,7 +15,7 @@ public class EditPTGroup extends BasePage{
 	WebElement ptlink;
 	@FindBy(xpath="//table[@id='dt_pt_groups']//tr[2]//td[4]//a[text()='edit']")
 	WebElement editPTGroupIcon;
-	@FindBy(id="pt_group_name")
+	@FindBy(id="pt_group_id")
 	WebElement ptgroupname;
 	@FindBy(id="pt_group_address")
 	WebElement ptaddress;

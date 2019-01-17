@@ -15,7 +15,7 @@ public class AddPTGroup extends BasePage{
 	WebElement ptlink;
 	@FindBy(xpath="//a[text()='Add New PT Group']")
 	WebElement addptlink;
-	@FindBy(id="pt_group_name")
+	@FindBy(id="pt_group_id")
 	WebElement ptgroupname;
 	@FindBy(id="pt_group_state_id")
 	WebElement state;
