@@ -13,7 +13,7 @@ public class EditPFGroupandPFRate extends BasePage {
 	WebElement companystatutorylink;
 	@FindBy(xpath="//div[@id='pf_group_list']/div[2]//tr[2]//td[4]//img[@title='Edit branch']")
 	WebElement editpficon;
-	@FindBy(id="pf_group_pf_group")
+	@FindBy(id="pf_group_id")
 	WebElement pfgruopname;
 	@FindBy(id="pf_group_pf_number")
 	WebElement pfnumber;

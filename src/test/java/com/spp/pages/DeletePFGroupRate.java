@@ -13,9 +13,9 @@ public class DeletePFGroupRate extends BasePage{
 	WebElement companystatutorylink;
 	@FindBy(xpath="//*[@id=\"ui-accordion-accordion-panel-0\"]/li[1]/a")
 	WebElement ClickonPF;
-	@FindBy(xpath="//*[@id=\"dt_pf_groups\"]/tbody/tr[2]/td[4]/a")
+	@FindBy(xpath="//*[@id=\"dt_pf_groups\"]/tbody/tr[2]/td[4]/span[1]")
 	WebElement ClickOnEdit;
-	@FindBy(xpath="//*[@id=\"main\"]/div/header/div[3]/nav/ul/li[2]/a/span")
+	@FindBy(xpath="//span[contains(text(), 'PF Rate')]")
 	WebElement pfratelink;
 	@FindBy(xpath="//*[@id=\"pf_grprate_list\"]/div[2]/table/tbody/tr[1]/td[6]/a/img")
 	WebElement deletepfratebutton;
@@ -52,6 +52,7 @@ public class DeletePFGroupRate extends BasePage{
 	
 	public void clickdeletepfratebutton() throws Exception{
 		deletepfratebutton.click();
+		
 		
 	}
 //	public void clickPFGroupLink() throws Exception{

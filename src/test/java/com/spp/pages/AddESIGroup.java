@@ -14,7 +14,7 @@ public class AddESIGroup extends BasePage {
 	WebElement esilink;
 	@FindBy(xpath="//a[text()='Add New ESI Group']")
 	WebElement addesilink;
-	@FindBy(id="esi_group_esi_group_name")
+	@FindBy(id="esi_group_id")
 	WebElement esiname;
 	@FindBy(id="esi_group_esi_no")
 	WebElement esinumber;

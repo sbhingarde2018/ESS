@@ -19,12 +19,13 @@ import com.spp.pages.EditPFGroupandPFRate;
 import com.spp.pages.EditPTGroup;
 
 public class CompanyStatutories extends BaseTest{
-	@Test(priority=0)
+	/*@Test(priority=0)
 	public void verifyPFGroupCreated_SC_48_49() throws Exception{
 		AddPFGroup ag=new AddPFGroup(driver);
 		ag.navigateMaster();
 		ag.clickCompanayLink();
 		ag.clickAddPFLink();
+		Thread.sleep(2000);
 		ag.enterPFGroupName("PF_1");
 		ag.enterPFNumber("KN/45889");
 		ag.enterDBFileCode("IFC0001");
@@ -34,7 +35,7 @@ public class CompanyStatutories extends BaseTest{
 		Thread.sleep(3000);
 		ag.clickPFRateLinkButton();
 		Thread.sleep(2000);	
-		ag.selectEffectiveDate("May/2013");
+		ag.selectEffectiveDate("May/2019");
 		ag.clickPFGroupRateButton();
 		String s=ag.getMessage();
 		Assert.assertEquals(s, "PF group rate successfully created.");
@@ -82,10 +83,13 @@ public class CompanyStatutories extends BaseTest{
 		dg.clickedit();
 		Thread.sleep(2000);
 		dg.clickPFRateLinkButton();
+		Thread.sleep(2000);
 		dg.clickdeletepfratebutton();
+		Thread.sleep(5000);
 		dg.switchToPopUpAndDismiss();
 		Thread.sleep(2000);
 		dg.clickdeletepfratebutton();
+		Thread.sleep(5000);
 		dg.switchToPopUpAndAccept(driver);
 		String s=dg.getMessage();
 		Assert.assertEquals(s,"PF group rate successfully deleted.");
@@ -131,9 +135,9 @@ public class CompanyStatutories extends BaseTest{
 		ae.clickCreateESIRate();
 		String s=ae.getMessage();
 		Assert.assertEquals(s, "ESI group rate successfully created.");
-	}
+	}*/
 	
-	@Test(priority=5)
+	/*@Test(priority=5)
 	public void verifyUpdateESIGroup_SC_195_206() throws Exception{ 
 		EditESIAndESIRate er=new EditESIAndESIRate(driver);
 		Thread.sleep(5000);
@@ -314,7 +318,7 @@ public class CompanyStatutories extends BaseTest{
 		dpg.switchToPopUpAndAccept(driver);
         String s=dpg.getMessage();
         Assert.assertEquals(s, "PT Group was successfully deleted.");
-	} 
+	} */
 	
 	
 	

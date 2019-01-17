@@ -14,7 +14,7 @@ public class AddPFGroup extends BasePage{
 	WebElement companystatutorylink;
 	@FindBy(xpath="//a[text()='Add New PF Group']")
 	WebElement addpf;
-	@FindBy(id="pf_group_pf_group")
+	@FindBy(id="pf_group_id")
 	WebElement pfgruopname;
 	@FindBy(id="pf_group_pf_number")
 	WebElement pfnumber;
