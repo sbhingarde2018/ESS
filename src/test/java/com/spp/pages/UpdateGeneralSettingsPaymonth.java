@@ -38,13 +38,23 @@ public class UpdateGeneralSettingsPaymonth extends BasePage {
 		OptionSettings.click();
 	}
 	public void selectHoldSalary(){
-		HoldSalary.click();
+		
+		if(!HoldSalary.isSelected())
+		{
+			HoldSalary.click();
+		}
 	}
 	public void selectPTOnGross(){
-		PTOnGross.click();
+		if(!PTOnGross.isSelected())
+		{
+			PTOnGross.click();
+		}
 	}
 	public void selectVoluntaryPF(){
-		VoluntaryPF.click();
+		if(!VoluntaryPF.isSelected())
+		{
+			VoluntaryPF.click();
+		}
 	}
 
 		public void ClickUpdateSettings(){

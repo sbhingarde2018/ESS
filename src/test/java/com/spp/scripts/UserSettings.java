@@ -27,7 +27,7 @@ public class UserSettings extends BaseTest{
 		Assert.assertEquals(r, "Password was successfully updated");
 	}	
 	
-	@Test(priority=1)
+/*	@Test(priority=1)
 		public void SecurityPolicy_SC_142() throws Exception{
 			SecurityPolicy sp=new SecurityPolicy(driver);
 			sp.navigateSuperuser1();
@@ -57,7 +57,7 @@ public class UserSettings extends BaseTest{
 		String r=us.getMessage();
 		Assert.assertEquals(r, "Unlocked selected users.");
 	}
-	@Test(priority=3)
+	/*@Test(priority=3)
 	public void LockUser_SC_145() throws Exception{
 		VerifyLockUser us=new VerifyLockUser(driver);
 		us.clickonsuperuser();
@@ -105,5 +105,5 @@ public class UserSettings extends BaseTest{
 		String r=us.getMessage();
 		Assert.assertEquals(r, "Locked selected users.");
 	
-	}
+	}*/
 }

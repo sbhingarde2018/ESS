@@ -36,7 +36,9 @@ public class UpdatePayslipLegendsInSettings extends BasePage{
 		PaySlipLegends.click();
 	}
 	public void selectRefNo(){
+		if(!RefNo.isSelected()) {
 		RefNo.click();
+		}
 	}
 	public void selectEmployeeName(){
 		EmployeeName.click();
@@ -50,7 +52,9 @@ public class UpdatePayslipLegendsInSettings extends BasePage{
 		return successfullMessage.getText();
 	}
 	public void selectall() {
+		if(!SelectAll.isSelected()) {
 		SelectAll.click();
+		}
 	}
 
 }

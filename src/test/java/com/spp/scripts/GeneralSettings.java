@@ -40,7 +40,7 @@ public class GeneralSettings extends BaseTest{
 	String e=sh.getMessage();
 	Assert.assertEquals(e, "Option Setting was successfully updated.");
 }
-	@Test(priority=2)
+		@Test(priority=2)
 	public void UpdateCountrySettings_SC_88() throws Exception{
 		UpdateCountrySettings sh=new UpdateCountrySettings(driver);
 	sh.clickSettings();
@@ -52,7 +52,7 @@ public class GeneralSettings extends BaseTest{
 	String e=sh.getMessage();
 	Assert.assertEquals(e, "Option Setting was successfully updated.");
 }
-	@Test(priority=3)
+		@Test(priority=3)
 	public void UpdateDateFormat_SC_89() throws Exception{
 		UpdateDateFormat sh=new UpdateDateFormat(driver);
 	sh.clickSettings();
@@ -62,9 +62,8 @@ public class GeneralSettings extends BaseTest{
 	sh.ClickUpdateSettings();
 	String e=sh.getMessage();
 	Assert.assertEquals(e, "Option Setting was successfully updated.");
-
 }
-	@Test(priority=4)
+		@Test(priority=4)
 	public void UpdatePayslipLegendsInSettings_SC_90() throws Exception{
 		UpdatePayslipLegendsInSettings sh=new UpdatePayslipLegendsInSettings(driver);
 	    sh.clickSettings();
@@ -76,7 +75,7 @@ public class GeneralSettings extends BaseTest{
 		Assert.assertEquals(e, "Payslip Legends saved successfully.");
 	
 }
-	@Test(priority=5)
+		@Test(priority=5)
 	public void UpdateDashboardSettings_SC_91() throws Exception{
 		UpdateDashboardSettings sh=new UpdateDashboardSettings(driver);
 	    sh.clickSettings();

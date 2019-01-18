@@ -34,10 +34,14 @@ public class ModuleSelectionInSettings extends BasePage{
 		OptionSettings.click();
 	}
 	public void selectModuleSelection(){
+		if(!ModuleSelection.isSelected()) {
 		ModuleSelection.click();
+		}
 	}
 	public void selectRemibursementModule(){
+		if(!RemibursementModule.isSelected()) {
 		RemibursementModule.click();
+		}
 	}
 	public void clickUpdateModule(){
 		UpdateModule.click();

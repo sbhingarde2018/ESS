@@ -36,10 +36,14 @@ public class UpdateDashboardSettings extends BasePage{
 		DashboardSettings.click();
 	}
 	public void selectNewEmployee(){
+		if(!NewEmployee.isSelected()) {
 		NewEmployee.click();
+		}
 	}
 	public void selectClassificationNotAssigned(){
+		if(!ClassificationNotAssigned.isSelected()) {
 		ClassificationNotAssigned.click();
+		}
 	}
 	public void clickUpdateDashboard(){
 		UpdateDashboard.click();

@@ -29,7 +29,7 @@ public class ReimbursementMaster extends BaseTest {
 		rm.selectReimbursementType("Other Reimbursement");
 		rm.selectModeOfPayment("Paid in Salary");
 		rm.selectLumpsumType();
-		rm.enterReimbursementName("MediClaim"+Utility.getRandNum(1000, 1010));
+		rm.enterReimbursementName("Transportation"+Utility.getRandNum(1000, 1010));
 		rm.clickCreateReimbursementMaster();
 		Thread.sleep(1000);
 		rm.clickonedit();
@@ -197,7 +197,7 @@ public class ReimbursementMaster extends BaseTest {
 		rm.selectModeOfPayment("Bank Advise");
 		rm.selectLumpsumType();
 		Thread.sleep(5000);
-		rm.enterReimbursementName("HouseRepair_Allowance"+Utility.getRandNum(1011, 1020));
+		rm.enterReimbursementName("Meals"+Utility.getRandNum(1011, 1020));
 		rm.clickCreateReimbursementMaster();
 		String s=rm.getMessage();
 		Assert.assertEquals(s, "Reimbursement Master is successfully created.");
@@ -216,7 +216,7 @@ public class ReimbursementMaster extends BaseTest {
 		rm.selectModeOfPayment("Cash");
 		rm.selectAllotmentType();
 		Thread.sleep(5000);
-		rm.enterReimbursementName("OvertimeClaim"+Utility.getRandNum(1021 , 1030));
+		rm.enterReimbursementName("Canteen"+Utility.getRandNum(1021 , 1030));
 		rm.clickCreateReimbursementMaster();
 		String s = rm.getMessage();
 		Assert.assertEquals(s, "Reimbursement Master is successfully created.");
@@ -230,7 +230,7 @@ public class ReimbursementMaster extends BaseTest {
 		rm.clickMastserLink();
 		rm.clickReimbursementMaster();
 		rm.clickAddReimbursementMaster();
-		rm.enterReimbursementName("Travelling_Allowance"+Utility.getRandNum(1031,1040));
+		rm.enterReimbursementName("Stationary"+Utility.getRandNum(1031,1040));
 		rm.selectReimbursementType("Other Reimbursement");
 		rm.selectModeOfPayment("Paid in Salary");
 		rm.selectAllotmentType();
@@ -253,7 +253,7 @@ public class ReimbursementMaster extends BaseTest {
 		rm.selectModeOfPayment("Paid in Salary");
 		rm.selectLumpsumType();
 		Thread.sleep(5000);
-		rm.enterReimbursementName("SpecialClaim"+Utility.getRandNum(1041, 1050));
+		rm.enterReimbursementName("Medicines"+Utility.getRandNum(1041, 1050));
 		Thread.sleep(3000);
 		rm.clickCreateReimbursementMaster();
 		String s=rm.getMessage();
@@ -271,7 +271,7 @@ public class ReimbursementMaster extends BaseTest {
 		ur.selectModeOfPayment("Bank Advise");
 		ur.clickLumpusum();
 		ur.clickConsiderTDS();
-		ur.enterReimbursementName("DiwaliBonus"+Utility.getRandNum(1051, 1060));
+		ur.enterReimbursementName("Arrears"+Utility.getRandNum(1051, 1060));
 		ur.clickUpdateReimbursement();
 		String s=ur.getMessage();
 		Assert.assertEquals(s, "Reimbursement Master is successfully updated.");
