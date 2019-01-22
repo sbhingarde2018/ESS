@@ -39,9 +39,9 @@ public class CreateInsuranceDetails extends BasePage {
 	WebElement InsuranceDetails;
 	@FindBy(xpath="//*[@id=\"add_employees\"]")
 	WebElement AddEmployee;
-	@FindBy(xpath="//*[@id=\"bf_form\"]/div[9]/button[1]")
+	@FindBy(xpath="//*[@id=\"bf_form\"]/div/button[contains(text(),'LOAD')]")
 	WebElement Load;
-	@FindBy(xpath="//*[@id=\"si_detail_employees\"]/tbody/tr[1]/td[6]/a")
+	@FindBy(xpath="//*[@id=\"si_detail_employees\"]/tbody/tr[2]/td[6]/a")
 	WebElement View;
 	@FindBy(xpath="//*[@id=\"standing_detail_list\"]/div[1]/span/a")
 	WebElement AddNewInsuranceDetails;
@@ -127,7 +127,12 @@ public class CreateInsuranceDetails extends BasePage {
 		AddEmployee.click();
 	}
 	public void clickLoad() throws Exception{
+		resizeWindow();
+		Thread.sleep(5000);
 		Load.click();
+		Thread.sleep(5000);
+		exitFullscreen();
+		
 	}
 	public void clickView() throws Exception{
 		View.click();

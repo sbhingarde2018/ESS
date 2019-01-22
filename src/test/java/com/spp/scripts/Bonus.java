@@ -9,7 +9,7 @@ import com.spp.generics.Utility;
 import com.spp.pages.*;
 
 public class Bonus extends BaseTest{
-	@Test(priority=0)
+	/*@Test(priority=0)
 	public void AddNewBonusDefinitionForFormula_SC_340() throws Exception{
 		AddNewBonusDefinitionForFormula cb=new AddNewBonusDefinitionForFormula(driver);
 		cb.clickSalary();
@@ -107,7 +107,7 @@ public class Bonus extends BaseTest{
 		de.switchToPopUpAndAccept(driver);
 		String t=de.getmessage();
 		Assert.assertEquals(t, "Bonus successfully deleted");
-	}
+	}*/
 	
 	@Test(priority=7)
  	public void AddNewBonusDefinition_SC_638() throws Exception{
@@ -318,7 +318,7 @@ public class Bonus extends BaseTest{
 		cb.switchToPopUpAndAccept(driver);
 	}
 	
-	@Test(priority=17)
+	/*@Test(priority=17)
 	public void AddNewBonusDefinitionFormulaModeofPaymentCash_SC_649() throws Exception{
 		AddNewBonusDefinitionFormulaModeofPaymentCash cb=new AddNewBonusDefinitionFormulaModeofPaymentCash(driver);
 		cb.clickSalary();
@@ -6252,5 +6252,5 @@ public class Bonus extends BaseTest{
 		Assert.assertEquals(t, "Bonus successfully created");
 		cb.clickDeleteButton();
 		cb.switchToPopUpAndAccept(driver);
-	}
+	}*/
 	}

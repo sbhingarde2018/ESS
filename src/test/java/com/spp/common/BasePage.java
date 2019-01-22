@@ -101,7 +101,6 @@ public class BasePage {
 	 {
 	 elemexists =  element.isDisplayed();
 	 return elemexists;
-
 	 }
 	 catch(Exception e)
 	 {	
@@ -109,4 +108,13 @@ public class BasePage {
 	 return elemexists;
 	 }
 
+	 public void resizeWindow()
+	 {
+		 driver.manage().window().fullscreen();	
+	 }
+	 public void exitFullscreen()
+	 {
+		 driver.manage().window().maximize();
+	 }
+	 
 }

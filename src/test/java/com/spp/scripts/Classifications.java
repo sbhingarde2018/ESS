@@ -18,7 +18,7 @@ import com.spp.pages.EditClasssificationDetails;
 
 public class Classifications extends BaseTest {
 	
-	@Test(priority=0)
+	/*@Test(priority=0)
 	public void verifyCreatedClassification_SC_62(){
 		CreateClassification cc=new CreateClassification(driver);
 		cc.clickMastserLink();
@@ -52,9 +52,9 @@ public class Classifications extends BaseTest {
 		ac.clickCreateButton();
 		String s=ac.getMessage();
 		Assert.assertEquals(s, "Classification created successfully.");
-	}
+	}*/
 	
-		@Test(priority=3)
+	@Test(priority=3)
 	public void verifyUpdatedClassificationDetails_SC_353() throws Exception{
 		EditClasssificationDetails ec=new EditClasssificationDetails(driver);
 		ec.clickMastserLink();
@@ -70,7 +70,7 @@ public class Classifications extends BaseTest {
 		Assert.assertEquals(s, "Classification successfully updated.");
 	}
 	
-	@Test(priority=4)
+	/*@Test(priority=4)
 	public void verifyDeletedClassificationDetails_SC_65(){
 		DeleteClassificationDetails dc=new DeleteClassificationDetails(driver);
 		dc.clickMastserLink();
@@ -115,7 +115,7 @@ public class Classifications extends BaseTest {
 		cc.selectClassifications();
 		cc.clickDeleteButton();
 		cc.switchToPopUpAndAccept(driver);
-	}
+	}*/
 	/*@Test(priority=7) 
 	public void CheckAssignedClassificationDetailsCanBeDeletedOrNot_SC_329() throws Exception{
 		CheckAssignedClassificationDetailsCanBeDeletedOrNot ww=new CheckAssignedClassificationDetailsCanBeDeletedOrNot(driver);
@@ -147,7 +147,7 @@ public class Classifications extends BaseTest {
 		System.out.println(abc);
 		Assert.assertEquals(abc, "<li>Classification is being used, you're not allowed to delete.</li>");	
 }	*/
-	@Test(priority=8)
+	/*@Test(priority=8)
 	public void AddClassificationviaExcelUpload_SC_66() throws Exception {
 	AddClassificationviaExcelUpload ac=new AddClassificationviaExcelUpload(driver);
 	ac.clickonmaster();
@@ -159,5 +159,5 @@ public class Classifications extends BaseTest {
 	ac.choosefile("C:\\Users\\Alfa\\Desktop\\Relyon\\Merging\\Classification.xlsx");
 	Thread.sleep(5000);
 	ac.uploadfile();
-	}
+	}*/
 }

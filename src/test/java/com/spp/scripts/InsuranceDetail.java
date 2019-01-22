@@ -21,7 +21,7 @@ import com.spp.pages.SalaryInsuranceReportsStandingInsDetailReportredirectstoRep
 public class InsuranceDetail extends BaseTest{
 
 	
-	@Test(priority=0)
+	/*@Test(priority=0)
 	public void AddNewInsuranceMaster_SC_302() throws Exception{
 		AddNewInsuranceMaster pi=new AddNewInsuranceMaster(driver);
 		pi.navigateMaster();	
@@ -31,12 +31,12 @@ public class InsuranceDetail extends BaseTest{
 		pi.clickCreateinsurance();
 		String d=pi.getMessage();
 		Assert.assertEquals(d, "Insurance successfully created");
-	}
+	}*/
 	
 	@Test(priority=1)
 	public void CreateInsuranceDetails_SC_303() throws Exception{
 		CreateInsuranceDetails pi=new CreateInsuranceDetails(driver);
-		pi.navigateMaster();
+		/*pi.navigateMaster();
 		pi.selectFinancialInst();
 		pi.addnewfinanInsti();
 		pi.selectAccoutType("Insurance");
@@ -47,13 +47,13 @@ public class InsuranceDetail extends BaseTest{
 		pi.enterPinCode("400085");
 		pi.enterIFSCCode("HDFC0000060");
 		pi.createfinanceinsti();
-		Thread.sleep(5000);
+		Thread.sleep(5000);*/
 		pi.clickonsalary();	
 		pi.clickInsuranceDetails();
 		pi.clickAddEmployee();
-		Thread.sleep(5000);
+		Thread.sleep(3000);
 		pi.clickLoad();
-		Thread.sleep(4000);
+		Thread.sleep(3000);
 		pi.clickView();
 		pi.clickAddNewInsuranceDetails();
 		pi.selectInsuranceName("LIC");
@@ -67,11 +67,9 @@ public class InsuranceDetail extends BaseTest{
 		pi.clickCreateInsurancebutton();
 		String c=pi.getMessage();
 		Assert.assertEquals(c, "Insurance successfully created");
-
-		
 	}  
 	
-	@Test(priority=2)
+	/*@Test(priority=2)
 	public void EditEMIDetail_SC_382() throws Exception{
 		EditEMIDetailInsuranceDetails pi=new EditEMIDetailInsuranceDetails(driver);
 		pi.navigatesalary();	
@@ -299,7 +297,18 @@ public class InsuranceDetail extends BaseTest{
  		si.deleteemployee();
 		
 		
-	}
+	}*/
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	/*@Test(priority=9)
 	public void CheckifSalaryInsuranceReportsStandingInsDetailReportredirectstoReport_SC_615() throws Exception{
 		SalaryInsuranceReportsStandingInsDetailReportredirectstoReport si=new SalaryInsuranceReportsStandingInsDetailReportredirectstoReport(driver);

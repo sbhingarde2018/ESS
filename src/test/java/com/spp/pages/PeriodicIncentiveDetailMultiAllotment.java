@@ -14,7 +14,7 @@ public class PeriodicIncentiveDetailMultiAllotment extends BasePage{
 	WebElement PeriodicInsuranceDetails;
 	@FindBy(xpath="//*[@id=\"add_employees\"]")
 	WebElement AddEmployee;
-	@FindBy(xpath="//*[@id=\"bf_form\"]/div[9]/button[1]")
+	@FindBy(xpath="//*[@id=\"bf_form\"]/div/button[contains(text(),'LOAD')]")
 	WebElement Load;
 	@FindBy(xpath="//*[@id='si_detail_employees']/thead/tr/th[1]/input")
 	WebElement UnTick;
