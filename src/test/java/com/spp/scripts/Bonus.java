@@ -107,7 +107,7 @@ public class Bonus extends BaseTest{
 		de.switchToPopUpAndAccept(driver);
 		String t=de.getmessage();
 		Assert.assertEquals(t, "Bonus successfully deleted");
-	}*/
+	}
 	
 	@Test(priority=7)
  	public void AddNewBonusDefinition_SC_638() throws Exception{
@@ -316,9 +316,9 @@ public class Bonus extends BaseTest{
 		Assert.assertEquals(t, "Bonus successfully created");
 		cb.clickDeleteButton();
 		cb.switchToPopUpAndAccept(driver);
-	}
+	}*/
 	
-	/*@Test(priority=17)
+	@Test(priority=17)
 	public void AddNewBonusDefinitionFormulaModeofPaymentCash_SC_649() throws Exception{
 		AddNewBonusDefinitionFormulaModeofPaymentCash cb=new AddNewBonusDefinitionFormulaModeofPaymentCash(driver);
 		cb.clickSalary();
@@ -456,7 +456,7 @@ public class Bonus extends BaseTest{
 		cb.clickSalary();
 		cb.selectBonus();
 		cb.clickAddNewBonus();
-		cb.EnterBonusHead("Pateti");
+		cb.EnterBonusHead("Navratri");
 		cb.clickManual();
 		cb.SelectFromMonth("Mar/2013");
 		cb.SelectToMonth("Apr/2013");
@@ -477,7 +477,7 @@ public class Bonus extends BaseTest{
 		cb.clickSalary();
 		cb.selectBonus();
 		cb.clickAddNewBonus();
-		cb.EnterBonusHead("Pateti");
+		cb.EnterBonusHead("Navratri");
 		cb.clickManual();
 		cb.EnterMaxBonus("10000");
 		cb.SelectFromMonth("Mar/2013");
@@ -499,7 +499,7 @@ public class Bonus extends BaseTest{
 		cb.clickSalary();
 		cb.selectBonus();
 		cb.clickAddNewBonus();
-		cb.EnterBonusHead("Pateti");
+		cb.EnterBonusHead("Navratri");
 		cb.selectformula("Bonus");
 		cb.SelectFromMonth("Mar/2013");
 		cb.SelectToMonth("Apr/2013");
@@ -520,7 +520,7 @@ public class Bonus extends BaseTest{
 		cb.clickSalary();
 		cb.selectBonus();
 		cb.clickAddNewBonus();
-		cb.EnterBonusHead("Pateti");
+		cb.EnterBonusHead("Navratri");
 		cb.selectformula("Bonus");
 		cb.EnterMaxBonus("10000");
 		cb.SelectFromMonth("Mar/2013");
@@ -536,7 +536,7 @@ public class Bonus extends BaseTest{
 		cb.clickDeleteButton();
 		cb.switchToPopUpAndAccept(driver);
 	}
-	@Test(priority=27)
+	/*@Test(priority=27)
 	public void AddNewBonusDefinitionMaxBonusModeofPaymentCash_SC_659() throws Exception{
 		AddNewBonusDefinitionMaxBonusModeofPaymentCash ad=new AddNewBonusDefinitionMaxBonusModeofPaymentCash(driver);
 		ad.clickSalary();
