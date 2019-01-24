@@ -109,7 +109,7 @@ public class Bonus extends BaseTest{
 		Assert.assertEquals(t, "Bonus successfully deleted");
 	}*/
 	
-	@Test(priority=7)
+	/*@Test(priority=7)
  	public void AddNewBonusDefinition_SC_638() throws Exception{
 		AddNewBonusDefinition sh=new AddNewBonusDefinition(driver);
 		sh.clickSalary();
@@ -748,14 +748,14 @@ public class Bonus extends BaseTest{
 		Assert.assertEquals(t, "Bonus successfully created");
 		ad.clickDeleteButton();
 		ad.switchToPopUpAndAccept(driver);
-	}
-	/*@Test(priority=37)
+	}*/
+	@Test(priority=37)
 	public void CreateBonusDefinitionMaxBonusCalculateModeofPaymentBankAdvise_SC_669() throws Exception{
 		CreateBonusDefinitionMaxBonusCalculateModeofPaymentBankAdvise ad=new CreateBonusDefinitionMaxBonusCalculateModeofPaymentBankAdvise(driver);
 		ad.clickSalary();
 		ad.selectBonus();
 		ad.clickAddNewBonus();
-		ad.EnterBonusHead("Pateti");
+		ad.EnterBonusHead("Navratri");
 		ad.selectformula("Bonus");
 		ad.EnterMaxBonus("10000");
 		ad.SelectFromMonth("Apr/2013");
@@ -778,7 +778,7 @@ public class Bonus extends BaseTest{
 		ad.clickSalary();
 		ad.selectBonus();
 		ad.clickAddNewBonus();
-		ad.EnterBonusHead("Pateti");
+		ad.EnterBonusHead("Navratri");
 		ad.selectformula("Bonus");
 		ad.SelectFromMonth("Apr/2013");
 		ad.SelectToMonth("Apr/2013");
@@ -800,7 +800,7 @@ public class Bonus extends BaseTest{
 		ad.clickSalary();
 		ad.selectBonus();
 		ad.clickAddNewBonus();
-		ad.EnterBonusHead("Pateti");
+		ad.EnterBonusHead("Navratri");
 		ad.selectformula("Bonus");
 		ad.EnterMaxBonus("10000");
 		ad.SelectFromMonth("Apr/2013");
@@ -822,7 +822,7 @@ public class Bonus extends BaseTest{
 		ad.clickSalary();
 		ad.selectBonus();
 		ad.clickAddNewBonus();
-		ad.EnterBonusHead("Pateti");
+		ad.EnterBonusHead("Navratri");
 		ad.selectformula("Bonus");
 		ad.SelectFromMonth("Apr/2013");
 		ad.SelectToMonth("Apr/2013");
@@ -843,7 +843,7 @@ public class Bonus extends BaseTest{
 		ad.clickSalary();
 		ad.selectBonus();
 		ad.clickAddNewBonus();
-		ad.EnterBonusHead("Pateti");
+		ad.EnterBonusHead("Navratri");
 		ad.clickManual();	
 		ad.EnterMaxBonus("10000");
 		ad.SelectFromMonth("Apr/2013");
@@ -865,7 +865,7 @@ public class Bonus extends BaseTest{
 		ad.clickSalary();
 		ad.selectBonus();
 		ad.clickAddNewBonus();
-		ad.EnterBonusHead("Pateti");
+		ad.EnterBonusHead("Navratri");
 		ad.clickManual();	
 		ad.EnterMaxBonus("10000");
 		ad.SelectFromMonth("Apr/2013");
@@ -886,7 +886,7 @@ public class Bonus extends BaseTest{
 		ad.clickSalary();
 		ad.selectBonus();
 		ad.clickAddNewBonus();
-		ad.EnterBonusHead("Pateti");
+		ad.EnterBonusHead("Navratri");
 		ad.selectformula("Bonus");
 		ad.SelectFromMonth("Apr/2013");
 		ad.SelectToMonth("Apr/2013");
@@ -964,7 +964,7 @@ public class Bonus extends BaseTest{
 		cb.clickDeleteButton();
 		cb.switchToPopUpAndAccept(driver);
 		}
-	@Test(priority=47)
+	/*@Test(priority=47)
 	public void CreateBonusDefinitionMaxBonusCalculateModeofPaymentCheque_SC_679() throws Exception{
 		CreateBonusDefinitionMaxBonusCalculateModeofPaymentCheque cb=new CreateBonusDefinitionMaxBonusCalculateModeofPaymentCheque(driver);
 		cb.clickSalary();
