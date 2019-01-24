@@ -107,7 +107,7 @@ public class Bonus extends BaseTest{
 		de.switchToPopUpAndAccept(driver);
 		String t=de.getmessage();
 		Assert.assertEquals(t, "Bonus successfully deleted");
-	}
+	}*/
 	
 	@Test(priority=7)
  	public void AddNewBonusDefinition_SC_638() throws Exception{
@@ -535,7 +535,7 @@ public class Bonus extends BaseTest{
 		Assert.assertEquals(t, "Bonus successfully created");
 		cb.clickDeleteButton();
 		cb.switchToPopUpAndAccept(driver);
-	}*/
+	}
 	@Test(priority=27)
 	public void AddNewBonusDefinitionMaxBonusModeofPaymentCash_SC_659() throws Exception{
 		AddNewBonusDefinitionMaxBonusModeofPaymentCash ad=new AddNewBonusDefinitionMaxBonusModeofPaymentCash(driver);
