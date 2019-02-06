@@ -109,7 +109,7 @@ public class Bonus extends BaseTest{
 		Assert.assertEquals(t, "Bonus successfully deleted");
 	}*/
 	
-	@Test(priority=7)
+	/*@Test(priority=7)
  	public void AddNewBonusDefinition_SC_638() throws Exception{
 		AddNewBonusDefinition sh=new AddNewBonusDefinition(driver);
 		sh.clickSalary();
@@ -2345,8 +2345,8 @@ public class Bonus extends BaseTest{
 		Assert.assertEquals(t, "Bonus successfully created");
 		cb.clickDeleteButton();
 		cb.switchToPopUpAndAccept(driver);
-	}
-	/*@Test(priority=107)
+	}*/
+	@Test(priority=107)
 	public void CreateBonusDefinitionwithminimumworkingModeofPaymentBankAdviseRespectiveMonth_SC_739() throws Exception{
 		CreateBonusDefinitionwithminimumworkingModeofPaymentBankAdviseRespectiveMonth cb=new CreateBonusDefinitionwithminimumworkingModeofPaymentBankAdviseRespectiveMonth(driver);
 		cb.clickSalary();
@@ -2578,7 +2578,7 @@ public class Bonus extends BaseTest{
 		cb.clickDeleteButton();
 		cb.switchToPopUpAndAccept(driver);
 	}
-	@Test(priority=117)
+	/*@Test(priority=117)
 	public void CreateBonusDefinitionFormulaCalculateModeofPaymentChequePTonBonusRespectiveMonth_SC_749() throws Exception{
 		CreateBonusDefinitionFormulaCalculateModeofPaymentChequePTonBonusRespectiveMonth cb=new CreateBonusDefinitionFormulaCalculateModeofPaymentChequePTonBonusRespectiveMonth(driver);
 		cb.clickSalary();
