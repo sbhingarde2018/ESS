@@ -2578,7 +2578,7 @@ public class Bonus extends BaseTest{
 		cb.clickDeleteButton();
 		cb.switchToPopUpAndAccept(driver);
 	}*/
-	@Test(priority=117)
+	/*@Test(priority=117)
 	public void CreateBonusDefinitionFormulaCalculateModeofPaymentChequePTonBonusRespectiveMonth_SC_749() throws Exception{
 		CreateBonusDefinitionFormulaCalculateModeofPaymentChequePTonBonusRespectiveMonth cb=new CreateBonusDefinitionFormulaCalculateModeofPaymentChequePTonBonusRespectiveMonth(driver);
 		cb.clickSalary();
@@ -3050,8 +3050,8 @@ public class Bonus extends BaseTest{
 		String t=cb.getMessage();
 		Assert.assertEquals(t, "Bonus successfully created");
 		cb.clickDeleteButton();
-	}
-	/*@Test(priority=137)
+	}*/
+	@Test(priority=137)
 	public void AddNewBonusDefinitionFormulaModeofPaymentDDPTonBonusRespectiveMonth_SC_771() throws Exception{
 		AddNewBonusDefinitionFormulaModeofPaymentDDPTonBonusRespectiveMonth cb=new AddNewBonusDefinitionFormulaModeofPaymentDDPTonBonusRespectiveMonth(driver);
 		cb.clickSalary();
@@ -3279,7 +3279,7 @@ public class Bonus extends BaseTest{
 		cb.clickDeleteButton();
 		
 	}
-	@Test(priority=147)
+	/*@Test(priority=147)
 	public void CreateBonusDefinitionFormulaPTonBonusRespectiveMonthDoNotConsiderPreviousYear_SC_781() throws Exception{
 		CreateBonusDefinitionFormulaPTonBonusRespectiveMonthDoNotConsiderPreviousYear cb=new CreateBonusDefinitionFormulaPTonBonusRespectiveMonthDoNotConsiderPreviousYear(driver);
 		cb.clickSalary();
