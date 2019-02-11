@@ -3279,7 +3279,7 @@ public class Bonus extends BaseTest{
 		cb.clickDeleteButton();
 		
 	}*/
-	@Test(priority=147)
+	/*@Test(priority=147)
 	public void CreateBonusDefinitionFormulaPTonBonusRespectiveMonthDoNotConsiderPreviousYear_SC_781() throws Exception{
 		CreateBonusDefinitionFormulaPTonBonusRespectiveMonthDoNotConsiderPreviousYear cb=new CreateBonusDefinitionFormulaPTonBonusRespectiveMonthDoNotConsiderPreviousYear(driver);
 		cb.clickSalary();
@@ -3523,8 +3523,8 @@ public class Bonus extends BaseTest{
 		Thread.sleep(3000);
 		cb.clickDeleteButton();
 		cb.switchToPopUpAndAccept(driver);
-	}
-	/*@Test(priority=157)
+	}*/
+	@Test(priority=157)
 	public void CreateBonusDefinitionMaxBonusAllowManualEditingRespectiveMonthDoNotConsiderPreviousYear_SC_791() throws Exception{
 		CreateBonusDefinitionMaxBonusAllowManualEditingRespectiveMonthDoNotConsiderPreviousYear cb=new CreateBonusDefinitionMaxBonusAllowManualEditingRespectiveMonthDoNotConsiderPreviousYear(driver);
 		cb.clickSalary();
@@ -3771,7 +3771,7 @@ public class Bonus extends BaseTest{
 		cb.clickDeleteButton();
 		cb.switchToPopUpAndAccept(driver);
 	}
-	@Test(priority=167)
+	/*@Test(priority=167)
 	public void CreateBonusDefinitionFormulaCalculateModeofPaymentDDDoNotConsiderPreviousYear_SC_801() throws Exception{
 		CreateBonusDefinitionFormulaCalculateModeofPaymentDDDoNotConsiderPreviousYear cb=new CreateBonusDefinitionFormulaCalculateModeofPaymentDDDoNotConsiderPreviousYear(driver);
 		cb.clickSalary();
