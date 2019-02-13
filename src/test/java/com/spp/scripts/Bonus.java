@@ -3524,7 +3524,7 @@ public class Bonus extends BaseTest{
 		cb.clickDeleteButton();
 		cb.switchToPopUpAndAccept(driver);
 	}*/
-	@Test(priority=157)
+	/*@Test(priority=157)
 	public void CreateBonusDefinitionMaxBonusAllowManualEditingRespectiveMonthDoNotConsiderPreviousYear_SC_791() throws Exception{
 		CreateBonusDefinitionMaxBonusAllowManualEditingRespectiveMonthDoNotConsiderPreviousYear cb=new CreateBonusDefinitionMaxBonusAllowManualEditingRespectiveMonthDoNotConsiderPreviousYear(driver);
 		cb.clickSalary();
@@ -3770,7 +3770,7 @@ public class Bonus extends BaseTest{
 		Assert.assertEquals(t, "Bonus successfully created");
 		cb.clickDeleteButton();
 		cb.switchToPopUpAndAccept(driver);
-	}
+	}*/
 	/*@Test(priority=167)
 	public void CreateBonusDefinitionFormulaCalculateModeofPaymentDDDoNotConsiderPreviousYear_SC_801() throws Exception{
 		CreateBonusDefinitionFormulaCalculateModeofPaymentDDDoNotConsiderPreviousYear cb=new CreateBonusDefinitionFormulaCalculateModeofPaymentDDDoNotConsiderPreviousYear(driver);
@@ -4017,7 +4017,7 @@ public class Bonus extends BaseTest{
 		cb.clickDeleteButton();
 		cb.switchToPopUpAndAccept(driver);
 	}*/
-	/*@Test(priority=177)
+	@Test(priority=177)
 	public void CreateBonusDefinitionConsideremployeeswithminimumworkingModeofPaymentBankadviseDoNotConsiderPreviousYear_SC_811() throws Exception{
 		CreateBonusDefinitionConsideremployeeswithminimumworkingModeofPaymentBankadviseDoNotConsiderPreviousYear cb=new CreateBonusDefinitionConsideremployeeswithminimumworkingModeofPaymentBankadviseDoNotConsiderPreviousYear(driver);
 		cb.clickSalary();
@@ -4238,7 +4238,7 @@ public class Bonus extends BaseTest{
 		cb.clickDeleteButton();
 		cb.switchToPopUpAndAccept(driver);
 	}
-	@Test(priority=187)
+	/*@Test(priority=187)
 	public void CreateBonusDefinitionFormulaConsideremployeeswithminimumworkingCalculateNearest10Rupee_SC_821() throws Exception{
 		CreateBonusDefinitionFormulaConsideremployeeswithminimumworkingCalculateNearest10Rupee cb = new CreateBonusDefinitionFormulaConsideremployeeswithminimumworkingCalculateNearest10Rupee(driver);
 		cb.clickSalary();
