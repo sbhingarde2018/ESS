@@ -4238,7 +4238,7 @@ public class Bonus extends BaseTest{
 		cb.clickDeleteButton();
 		cb.switchToPopUpAndAccept(driver);
 	}*/
-	@Test(priority=187)
+	/*@Test(priority=187)
 	public void CreateBonusDefinitionFormulaConsideremployeeswithminimumworkingCalculateNearest10Rupee_SC_821() throws Exception{
 		CreateBonusDefinitionFormulaConsideremployeeswithminimumworkingCalculateNearest10Rupee cb = new CreateBonusDefinitionFormulaConsideremployeeswithminimumworkingCalculateNearest10Rupee(driver);
 		cb.clickSalary();
@@ -4450,8 +4450,8 @@ public class Bonus extends BaseTest{
 		Assert.assertEquals(t, "Bonus successfully created");
 		cb.clickDeleteButton();
 		cb.switchToPopUpAndAccept(driver);
-	}
-	/*@Test(priority=197)
+	}*/
+	@Test(priority=197)
 	public void CreateBonusDefinitionModeofPaymentCashNearest10Rupee_SC_831() throws Exception{
 		CreateBonusDefinitionModeofPaymentCashNearest10Rupee cb = new CreateBonusDefinitionModeofPaymentCashNearest10Rupee(driver);
 		cb.clickSalary();
@@ -4664,7 +4664,7 @@ public class Bonus extends BaseTest{
 			cb.clickDeleteButton();
 			cb.switchToPopUpAndAccept(driver);
 	 }
-	 @Test(priority=207)
+	 /*@Test(priority=207)
 	 public void CreateBonusDefinitionFormulaMaxBonusCalculateModeofPaymentBankAdviseNearest10Rupee_SC_841() throws Exception {
 		 CreateBonusDefinitionFormulaMaxBonusCalculateModeofPaymentBankAdviseNearest10Rupee cb = new CreateBonusDefinitionFormulaMaxBonusCalculateModeofPaymentBankAdviseNearest10Rupee(driver);
 		 	cb.clickSalary();
