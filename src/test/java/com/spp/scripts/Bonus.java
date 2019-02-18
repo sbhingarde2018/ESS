@@ -3524,7 +3524,7 @@ public class Bonus extends BaseTest{
 		cb.clickDeleteButton();
 		cb.switchToPopUpAndAccept(driver);
 	}*/
-	@Test(priority=157)
+	/*@Test(priority=157)
 	public void CreateBonusDefinitionMaxBonusAllowManualEditingRespectiveMonthDoNotConsiderPreviousYear_SC_791() throws Exception{
 		CreateBonusDefinitionMaxBonusAllowManualEditingRespectiveMonthDoNotConsiderPreviousYear cb=new CreateBonusDefinitionMaxBonusAllowManualEditingRespectiveMonthDoNotConsiderPreviousYear(driver);
 		cb.clickSalary();
@@ -4663,8 +4663,11 @@ public class Bonus extends BaseTest{
 			Assert.assertEquals(t, "Bonus successfully created");
 			cb.clickDeleteButton();
 			cb.switchToPopUpAndAccept(driver);
-	 }
-	 /*@Test(priority=207)
+	 } 
+	 
+	 */
+	 
+	 @Test(priority=207)
 	 public void CreateBonusDefinitionFormulaMaxBonusCalculateModeofPaymentBankAdviseNearest10Rupee_SC_841() throws Exception {
 		 CreateBonusDefinitionFormulaMaxBonusCalculateModeofPaymentBankAdviseNearest10Rupee cb = new CreateBonusDefinitionFormulaMaxBonusCalculateModeofPaymentBankAdviseNearest10Rupee(driver);
 		 	cb.clickSalary();
@@ -4880,7 +4883,7 @@ public class Bonus extends BaseTest{
 		cb.clickDeleteButton();
 		cb.switchToPopUpAndAccept(driver);
 	}
-	@Test(priority=217)
+	/*@Test(priority=217)
 	public void CreateBonusDefinitionConsideremployeeswithminimumworkingMaxBonusNearest10Rupee_SC_851() throws Exception {
 		CreateBonusDefinitionFormulaCalculateModeofPaymentChequeNearest10Rupee cb = new CreateBonusDefinitionFormulaCalculateModeofPaymentChequeNearest10Rupee(driver);
 		cb.clickSalary();
