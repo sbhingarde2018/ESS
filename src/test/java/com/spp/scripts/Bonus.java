@@ -109,7 +109,7 @@ public class Bonus extends BaseTest{
 		Assert.assertEquals(t, "Bonus successfully deleted");
 	}*/
 	
-	/*@Test(priority=7)
+	@Test(priority=7)
  	public void AddNewBonusDefinition_SC_638() throws Exception{
 		AddNewBonusDefinition sh=new AddNewBonusDefinition(driver);
 		sh.clickSalary();
@@ -2345,8 +2345,8 @@ public class Bonus extends BaseTest{
 		Assert.assertEquals(t, "Bonus successfully created");
 		cb.clickDeleteButton();
 		cb.switchToPopUpAndAccept(driver);
-	}*/
-	/*@Test(priority=107)
+	}
+	@Test(priority=107)
 	public void CreateBonusDefinitionwithminimumworkingModeofPaymentBankAdviseRespectiveMonth_SC_739() throws Exception{
 		CreateBonusDefinitionwithminimumworkingModeofPaymentBankAdviseRespectiveMonth cb=new CreateBonusDefinitionwithminimumworkingModeofPaymentBankAdviseRespectiveMonth(driver);
 		cb.clickSalary();
@@ -3278,8 +3278,8 @@ public class Bonus extends BaseTest{
 		Assert.assertEquals(t, "Bonus successfully created");
 		cb.clickDeleteButton();
 		
-	}*/
-	/*@Test(priority=147)
+	}
+	@Test(priority=147)
 	public void CreateBonusDefinitionFormulaPTonBonusRespectiveMonthDoNotConsiderPreviousYear_SC_781() throws Exception{
 		CreateBonusDefinitionFormulaPTonBonusRespectiveMonthDoNotConsiderPreviousYear cb=new CreateBonusDefinitionFormulaPTonBonusRespectiveMonthDoNotConsiderPreviousYear(driver);
 		cb.clickSalary();
@@ -3523,8 +3523,8 @@ public class Bonus extends BaseTest{
 		Thread.sleep(3000);
 		cb.clickDeleteButton();
 		cb.switchToPopUpAndAccept(driver);
-	}*/
-	/*@Test(priority=157)
+	}
+	@Test(priority=157)
 	public void CreateBonusDefinitionMaxBonusAllowManualEditingRespectiveMonthDoNotConsiderPreviousYear_SC_791() throws Exception{
 		CreateBonusDefinitionMaxBonusAllowManualEditingRespectiveMonthDoNotConsiderPreviousYear cb=new CreateBonusDefinitionMaxBonusAllowManualEditingRespectiveMonthDoNotConsiderPreviousYear(driver);
 		cb.clickSalary();
@@ -4663,10 +4663,7 @@ public class Bonus extends BaseTest{
 			Assert.assertEquals(t, "Bonus successfully created");
 			cb.clickDeleteButton();
 			cb.switchToPopUpAndAccept(driver);
-	 } 
-	 
-	 */
-	 
+	 }	 
 	 @Test(priority=207)
 	 public void CreateBonusDefinitionFormulaMaxBonusCalculateModeofPaymentBankAdviseNearest10Rupee_SC_841() throws Exception {
 		 CreateBonusDefinitionFormulaMaxBonusCalculateModeofPaymentBankAdviseNearest10Rupee cb = new CreateBonusDefinitionFormulaMaxBonusCalculateModeofPaymentBankAdviseNearest10Rupee(driver);
