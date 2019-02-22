@@ -128,7 +128,7 @@ public class BaseTest implements Automation_Constant{
 			loginPage.setPassword(pw);
 			Thread.sleep(2000);
 			loginPage.clickLogin();
-			loginPage.verifyURLhas(homePageURL);
+			//loginPage.verifyURLhas(homePageURL);
 		}
 		else{
 			log.warn("explicit login required");
@@ -144,7 +144,7 @@ public class BaseTest implements Automation_Constant{
 			Thread.sleep(5000);
 			homePage.superaction();
 			homePage.clickLogout();
-			homePage.verifyURLhas(loginPageURL);
+			//homePage.verifyURLhas(loginPageURL);
 		}
 		else{
 			log.warn("explicit logout required");
