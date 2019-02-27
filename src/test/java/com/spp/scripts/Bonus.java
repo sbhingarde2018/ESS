@@ -5787,7 +5787,7 @@ public class Bonus extends BaseTest{
 		cb.clickDeleteButton();
 		cb.switchToPopUpAndAccept(driver);	
 	}*/
-	/*@Test(priority=257)
+	@Test(priority=257)
 	public void AddNewBonusDefinitionMaxBonusModeofPaymentCashCurrentMonthNearest10Rupee_SC_891() throws Exception {
 		CreateBonusDefinitionFormulaCalculateModeofPaymentChequeNearest10Rupee cb = new CreateBonusDefinitionFormulaCalculateModeofPaymentChequeNearest10Rupee(driver);
 		cb.clickSalary();
@@ -6018,8 +6018,8 @@ public class Bonus extends BaseTest{
 		Assert.assertEquals(t, "Bonus successfully created");
 		cb.clickDeleteButton();
 		cb.switchToPopUpAndAccept(driver);
-	}*/
-	@Test(priority=267)
+	}
+	/*@Test(priority=267)
 	public void CreateBonusDefinitionMaxBonusAllowManualEditingBankAdviseNearest10Rupee_SC_901() throws Exception {
 		CreateBonusDefinitionFormulaCalculateModeofPaymentChequeNearest10Rupee cb = new CreateBonusDefinitionFormulaCalculateModeofPaymentChequeNearest10Rupee(driver);
 		cb.clickSalary();
@@ -6253,5 +6253,5 @@ public class Bonus extends BaseTest{
 		Assert.assertEquals(t, "Bonus successfully created");
 		cb.clickDeleteButton();
 		cb.switchToPopUpAndAccept(driver);
-	}
+	}*/
 	}
