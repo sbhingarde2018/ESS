@@ -10,7 +10,7 @@ import com.spp.common.BasePage;
 public class CheckBonusInGeneratedReport extends BasePage{
 	@FindBy(id="report") 
 	WebElement Report;
-	@FindBy(xpath="//*[@id=\"menu\"]/li[8]/div/div[3]/ul/li[3]/a")
+	@FindBy(xpath="//*[@id='menu']/li[8]/div/div[3]/ul/li[3]/a")
 	WebElement BonusReport;
 	@FindBy(id="report_type")
 	WebElement Reports;
@@ -18,10 +18,12 @@ public class CheckBonusInGeneratedReport extends BasePage{
 	WebElement MonthYear;
 	@FindBy(id="filter")
 	WebElement GetEmployee;
-	@FindBy(xpath="//*[@id=\"bf_form\"]/div[9]/button[1]")
+	@FindBy(xpath="//*[@id='bf_form']/div[10]/button[1]")
 	WebElement Load;
 	@FindBy(id="exgratia_bonus_submit")
 	WebElement GenerateReport;
+	@FindBy(xpath="//table/tbody/tr[1]/td[1]/input[1]")
+	WebElement Checkbox;
 	
 	public CheckBonusInGeneratedReport(WebDriver driver) {
 		super(driver);
@@ -52,6 +54,9 @@ public class CheckBonusInGeneratedReport extends BasePage{
 	}
 	public void clickGetLoad(){
 		Load.click();
+	}
+	public void clickOnCheckbox() {
+		Checkbox.click();
 	}
 	public void clickGetGenerateReport(){
 		GenerateReport.click();

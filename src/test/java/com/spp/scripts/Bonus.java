@@ -9,7 +9,7 @@ import com.spp.generics.Utility;
 import com.spp.pages.*;
 
 public class Bonus extends BaseTest{
-	/*@Test(priority=0)
+	@Test(priority=0)
 	public void AddNewBonusDefinitionForFormula_SC_340() throws Exception{
 		AddNewBonusDefinitionForFormula cb=new AddNewBonusDefinitionForFormula(driver);
 		cb.clickSalary();
@@ -18,9 +18,9 @@ public class Bonus extends BaseTest{
 		cb.EnterBonusHead("Holi");
 		cb.EnterMaxBonus("5000");
 		cb.SelectFormula("Bonus");
-		cb.SelectFromMonth("Mar/2013");
-		cb.SelectToMonth("Apr/2013");
-		cb.SelectPaymonth("Apr/2013");
+		cb.SelectFromMonth("Mar/2019");
+		cb.SelectToMonth("Mar/2019");
+		cb.SelectPaymonth("Mar/2019");
 		cb.checksalarydependent();
 		cb.checknearestrupee();
 		cb.clickCreateBonus();
@@ -36,70 +36,93 @@ public class Bonus extends BaseTest{
 		sh.selectBonus();
 		sh.clickCompute();
 		Thread.sleep(2000);
+		sh.resizeWindow();
+		Thread.sleep(2000);
 		sh.clickonfilter();
 		Thread.sleep(2000);
 		sh.clickonload();
 		Thread.sleep(2000);
-		sh.clickonedit();
-		sh.enterbonusamount("2000");
-		sh.clickonupdatebutton();		
-}
+		sh.exitFullscreen();
+		Thread.sleep(2000);
+		//sh.clickonedit();
+		//sh.enterbonusamount("2000");
+		//sh.clickonupdatebutton();		
+	}
 	@Test(priority=2)
  	public void CheckBonusInGeneratedReport_SC_349() throws Exception{
 		CheckBonusInGeneratedReport sh=new CheckBonusInGeneratedReport(driver);
 		sh.clickReport();
 		sh.selectBonusReport();
-		sh.clickReports("Bonus Definition");
-		sh.clickMonthYear("Apr/2013");
+		sh.clickReports("Bonus Details");
+		sh.clickMonthYear("Mar/2019");
 		sh.clickGetEmployee();
+		Thread.sleep(2000);
+		sh.resizeWindow();
 		Thread.sleep(2000);
 		sh.clickGetLoad();
 		Thread.sleep(3000);
+		sh.clickOnCheckbox();
 		sh.clickGetGenerateReport();
+		sh.exitFullscreen();
+		Thread.sleep(2000);
 }
 	@Test(priority=3)
  	public void UpdateBonus_SC_402() throws Exception{
 		UpdateBonus sh=new UpdateBonus(driver);
 		sh.clickSalary();
 		sh.selectBonus();
+		sh.resizeWindow();
+		Thread.sleep(2000);
 		sh.clickCompute();
 		sh.clickonedit();
-		sh.enterbonusamount("3000");
-		sh.clickonupdatebutton();	
+		sh.enterbonusamount("2000");
+		sh.clickonupdatebutton();
+		sh.exitFullscreen();
+		Thread.sleep(2000);
 		}
 	@Test(priority=4)
  	public void DeleteBonus_SC_403() throws Exception{
 		DeleteBonus sh=new DeleteBonus(driver);
 		sh.clickSalary();
 		sh.selectBonus();
+		sh.resizeWindow();
+		Thread.sleep(2000);
 		sh.clickCompute();
 //		sh.selectAddEmployee();
 //		Thread.sleep(3000);
 //		sh.clickLoad();
 //		Thread.sleep(3000);
+		sh.clickDelete1();
+		sh.switchToPopUpAndAccept(driver);
 		sh.clickDelete();
 		sh.switchToPopUpAndDismiss(driver);
 		sh.clickDelete();
 		sh.switchToPopUpAndAccept(driver);
+		sh.exitFullscreen();
+		Thread.sleep(2000);
 	}
-	
-	
 	@Test(priority=5)
 	public void EditBonusDefinition_SC_636() throws Exception{
 		EditBonusDefinition ed=new EditBonusDefinition(driver);
 		ed.clickSalary();
 		ed.selectBonus();
+		ed.resizeWindow();
+		Thread.sleep(2000);
 		ed.clickonedit();
 		ed.editmaxbonusamt("5000");
 		ed.updatebonus();
 		String t=ed.getmessage();
 		Assert.assertEquals(t, "Bonus successfully updated");
+		ed.exitFullscreen();
+		Thread.sleep(2000);
 	}
 	@Test(priority=6)
 	public void DeleteBonusDefinition_SC_637() throws Exception{
 		DeleteBonusDefinition de=new DeleteBonusDefinition(driver);
 		de.clickSalary();
 		de.selectBonus();
+		de.resizeWindow();
+		Thread.sleep(2000);
 		de.clickondelete();
 		de.switchToPopUpAndDismiss();
 		Thread.sleep(2000);
@@ -107,8 +130,9 @@ public class Bonus extends BaseTest{
 		de.switchToPopUpAndAccept(driver);
 		String t=de.getmessage();
 		Assert.assertEquals(t, "Bonus successfully deleted");
-	}*/
-	
+		de.exitFullscreen();
+		Thread.sleep(2000);
+	}
 	/*@Test(priority=7)
  	public void AddNewBonusDefinition_SC_638() throws Exception{
 		AddNewBonusDefinition sh=new AddNewBonusDefinition(driver);
@@ -126,9 +150,8 @@ public class Bonus extends BaseTest{
 		Assert.assertEquals(t, "Bonus successfully created");
 		sh.clickDeleteButton();
 		sh.switchToPopUpAndAccept(driver);
-	}
-	
-	@Test(priority=8)
+	}*/
+	/*@Test(priority=8)
 	public void AddNewBonusDefinitionMaxBonus_SC_639() throws Exception{
 		AddNewBonusDefinitionMaxBonus cb=new AddNewBonusDefinitionMaxBonus(driver);
 		cb.clickSalary();
@@ -209,8 +232,8 @@ public class Bonus extends BaseTest{
 		Assert.assertEquals(t, "Bonus successfully created");
 		cb.clickDeleteButton();
 		cb.switchToPopUpAndAccept(driver);
-	}
-	@Test(priority=12)
+	}*/
+	/*@Test(priority=12)
 	public void CreateBonusDefinitionConsideremployeeswithminimumworking_SC_643() throws Exception{
 		CreateBonusDefinitionConsideremployeeswithminimumworking cb=new CreateBonusDefinitionConsideremployeeswithminimumworking(driver);
 		cb.clickSalary();
@@ -295,8 +318,8 @@ public class Bonus extends BaseTest{
 		Assert.assertEquals(t, "Bonus successfully created");
 		cb.clickDeleteButton();
 		cb.switchToPopUpAndAccept(driver);
-	}
-	@Test(priority=16)
+	}*/
+	/*@Test(priority=16)
 	public void CreateBonusDefinitionFormulaMaxBonusCalculate_SC_648() throws Exception{
 		CreateBonusDefinitionFormulaMaxBonusCalculate cb=new CreateBonusDefinitionFormulaMaxBonusCalculate(driver);
 		cb.clickSalary();
@@ -907,7 +930,7 @@ public class Bonus extends BaseTest{
 		cb.clickSalary();
 		cb.selectBonus();
 		cb.clickAddNewBonus();
-		cb.EnterBonusHead("Diwali1");
+		cb.EnterBonusHead("Diwali12");
 		cb.selectformula("Bonus");
 		cb.EnterMaxBonus("10000");
 		cb.SelectFromMonth("Mar/2013");
@@ -929,7 +952,7 @@ public class Bonus extends BaseTest{
 		cb.clickSalary();
 		cb.selectBonus();
 		cb.clickAddNewBonus();
-		cb.EnterBonusHead("Diwali1");
+		cb.EnterBonusHead("Diwali13");
 		cb.clickManual();
 		cb.SelectFromMonth("Mar/2013");
 		cb.SelectToMonth("Apr/2013");
@@ -950,7 +973,7 @@ public class Bonus extends BaseTest{
 		cb.clickSalary();
 		cb.selectBonus();
 		cb.clickAddNewBonus();
-		cb.EnterBonusHead("Diwali1");
+		cb.EnterBonusHead("Diwali14");
 		cb.selectformula("Test Formula");
 		cb.SelectFromMonth("Mar/2013");
 		cb.SelectToMonth("Apr/2013");
@@ -971,7 +994,7 @@ public class Bonus extends BaseTest{
 		cb.clickSalary();
 		cb.selectBonus();
 		cb.clickAddNewBonus();
-		cb.EnterBonusHead("Diwali1");
+		cb.EnterBonusHead("Diwali15");
 		cb.selectformula("Bonus");
 		cb.EnterMaxBonus("10000");
 		cb.SelectFromMonth("Mar/2013");
@@ -994,7 +1017,7 @@ public class Bonus extends BaseTest{
 		cb.clickSalary();
 		cb.selectBonus();
 		cb.clickAddNewBonus();
-		cb.EnterBonusHead("Diwali1");
+		cb.EnterBonusHead("Diwali16");
 		cb.selectformula("Bonus");
 		cb.EnterMaxBonus("10000");
 		cb.SelectFromMonth("Mar/2013");
@@ -1015,7 +1038,7 @@ public class Bonus extends BaseTest{
 		cb.clickSalary();
 		cb.selectBonus();
 		cb.clickAddNewBonus();
-		cb.EnterBonusHead("Diwali1");
+		cb.EnterBonusHead("Diwali17");
 		cb.selectformula("Bonus");
 		cb.SelectFromMonth("Mar/2013");
 		cb.SelectToMonth("Apr/2013");
@@ -1037,7 +1060,7 @@ public class Bonus extends BaseTest{
 		cb.clickSalary();
 		cb.selectBonus();
 		cb.clickAddNewBonus();
-		cb.EnterBonusHead("Diwali1");
+		cb.EnterBonusHead("Diwali18");
 		cb.selectformula("Bonus");
 		cb.EnterMaxBonus("10000");
 		cb.SelectFromMonth("Mar/2013");
@@ -1059,7 +1082,7 @@ public class Bonus extends BaseTest{
 		cb.clickSalary();
 		cb.selectBonus();
 		cb.clickAddNewBonus();
-		cb.EnterBonusHead("Diwali1");
+		cb.EnterBonusHead("Diwali19");
 		cb.selectformula("Bonus");
 		cb.SelectFromMonth("Mar/2013");
 		cb.SelectToMonth("Apr/2013");
@@ -1081,7 +1104,7 @@ public class Bonus extends BaseTest{
 		cb.clickSalary();
 		cb.selectBonus();
 		cb.clickAddNewBonus();
-		cb.EnterBonusHead("Diwali1");
+		cb.EnterBonusHead("Diwali20");
 		cb.selectformula("Bonus");
 		cb.EnterMaxBonus("10000");
 		cb.SelectFromMonth("Mar/2013");
@@ -1103,7 +1126,7 @@ public class Bonus extends BaseTest{
 		cb.clickSalary();
 		cb.selectBonus();
 		cb.clickAddNewBonus();
-		cb.EnterBonusHead("Diwali1");
+		cb.EnterBonusHead("Diwali21");
 		cb.selectformula("Bonus");
 		cb.SelectFromMonth("Mar/2013");
 		cb.SelectToMonth("Apr/2013");
@@ -1124,7 +1147,7 @@ public class Bonus extends BaseTest{
 		cb.clickSalary();
 		cb.selectBonus();
 		cb.clickAddNewBonus();
-		cb.EnterBonusHead("Diwali1");
+		cb.EnterBonusHead("Diwali22");
 		cb.selectformula("Bonus");
 		cb.EnterMaxBonus("10000");
 		cb.SelectFromMonth("Mar/2013");
@@ -1145,7 +1168,7 @@ public class Bonus extends BaseTest{
 		cb.clickSalary();
 		cb.selectBonus();
 		cb.clickAddNewBonus();
-		cb.EnterBonusHead("Diwali1");
+		cb.EnterBonusHead("Diwali23");
 		cb.clickManual();
 		cb.EnterMaxBonus("10000");
 		cb.SelectFromMonth("Mar/2013");
@@ -1160,14 +1183,14 @@ public class Bonus extends BaseTest{
 		Assert.assertEquals(t, "Bonus successfully created");
 		cb.clickDeleteButton();
 		cb.switchToPopUpAndAccept(driver);
-		}
+	}
 	@Test(priority=56)
 	public void CreateBonusDefinitionMaxBonusCalculateModeofPaymentDD_SC_688() throws Exception{
 		CreateBonusDefinitionMaxBonusCalculateModeofPaymentDD cb=new CreateBonusDefinitionMaxBonusCalculateModeofPaymentDD(driver);
 		cb.clickSalary();
 		cb.selectBonus();
 		cb.clickAddNewBonus();
-		cb.EnterBonusHead("Diwali1");
+		cb.EnterBonusHead("Diwali24");
 		cb.selectformula("Bonus");
 		cb.EnterMaxBonus("10000");
 		cb.SelectFromMonth("Mar/2013");
@@ -1183,14 +1206,14 @@ public class Bonus extends BaseTest{
 		Assert.assertEquals(t, "Bonus successfully created");
 		cb.clickDeleteButton();
 		cb.switchToPopUpAndAccept(driver);
-		}
-	@Test(priority=57)
+		}*/
+	/*@Test(priority=57)
 	public void AddNewBonusDefinitionAllowManualEditingModeofPaymentDD_SC_689() throws Exception{
 		AddNewBonusDefinitionAllowManualEditingModeofPaymentDD cb=new AddNewBonusDefinitionAllowManualEditingModeofPaymentDD(driver);
 		cb.clickSalary();
 		cb.selectBonus();
 		cb.clickAddNewBonus();
-		cb.EnterBonusHead("Diwali1");
+		cb.EnterBonusHead("Diwali25");
 		cb.clickManual();
 		cb.SelectFromMonth("Mar/2013");
 		cb.SelectToMonth("Apr/2013");
@@ -1210,7 +1233,7 @@ public class Bonus extends BaseTest{
 		cb.clickSalary();
 		cb.selectBonus();
 		cb.clickAddNewBonus();
-		cb.EnterBonusHead("Diwali1");
+		cb.EnterBonusHead("Diwali26");
 		cb.selectformula("Test Formula");
 		cb.SelectFromMonth("Mar/2013");
 		cb.SelectToMonth("Apr/2013");
@@ -1230,7 +1253,7 @@ public class Bonus extends BaseTest{
 		cb.clickSalary();
 		cb.selectBonus();
 		cb.clickAddNewBonus();
-		cb.EnterBonusHead("Diwali1");
+		cb.EnterBonusHead("Diwali42");
 		cb.selectformula("Bonus");
 		cb.SelectFromMonth("Mar/2013");
 		cb.SelectToMonth("Apr/2013");
@@ -1251,7 +1274,7 @@ public class Bonus extends BaseTest{
 		cb.clickSalary();
 		cb.selectBonus();
 		cb.clickAddNewBonus();
-		cb.EnterBonusHead("Diwali1");
+		cb.EnterBonusHead("Diwali154");
 		cb.clickManual();
 		cb.SelectFromMonth("Mar/2013");
 		cb.SelectToMonth("Apr/2013");
@@ -1272,7 +1295,7 @@ public class Bonus extends BaseTest{
 		cb.clickSalary();
 		cb.selectBonus();
 		cb.clickAddNewBonus();
-		cb.EnterBonusHead("Diwali1");
+		cb.EnterBonusHead("Diwali145");
 		cb.clickManual();
 		cb.EnterMaxBonus("10000");
 		cb.SelectFromMonth("Mar/2013");
@@ -1295,7 +1318,7 @@ public class Bonus extends BaseTest{
 		cb.clickSalary();
 		cb.selectBonus();
 		cb.clickAddNewBonus();
-		cb.EnterBonusHead("Diwali1");
+		cb.EnterBonusHead("Diwali145");
 		cb.clickManual();
 		cb.SelectFromMonth("Mar/2013");
 		cb.SelectToMonth("Apr/2013");
@@ -1318,7 +1341,7 @@ public class Bonus extends BaseTest{
 		cb.clickSalary();
 		cb.selectBonus();
 		cb.clickAddNewBonus();
-		cb.EnterBonusHead("Diwali1");
+		cb.EnterBonusHead("Diwali15");
 		cb.selectformula("Bonus");
 		cb.EnterMaxBonus("10000");
 		cb.SelectFromMonth("Mar/2013");
@@ -1342,7 +1365,7 @@ public class Bonus extends BaseTest{
 		cb.clickSalary();
 		cb.selectBonus();
 		cb.clickAddNewBonus();
-		cb.EnterBonusHead("Diwali1");
+		cb.EnterBonusHead("Diwali15");
 		cb.selectformula("Bonus");
 		cb.SelectFromMonth("Mar/2013");
 		cb.SelectToMonth("Apr/2013");
@@ -1365,7 +1388,7 @@ public class Bonus extends BaseTest{
 		cb.clickSalary();
 		cb.selectBonus();
 		cb.clickAddNewBonus();
-		cb.EnterBonusHead("Diwali1");
+		cb.EnterBonusHead("Diwali16");
 		cb.selectformula("Bonus");
 		cb.EnterMaxBonus("10000");
 		cb.SelectFromMonth("Mar/2013");
@@ -1390,7 +1413,7 @@ public class Bonus extends BaseTest{
 		cb.clickSalary();
 		cb.selectBonus();
 		cb.clickAddNewBonus();
-		cb.EnterBonusHead("Diwali1");
+		cb.EnterBonusHead("Diwali14");
 		cb.selectformula("Test Formula");
 		cb.SelectFromMonth("Mar/2013");
 		cb.SelectToMonth("Apr/2013");
@@ -2562,7 +2585,7 @@ public class Bonus extends BaseTest{
 		cb.clickSalary();
 		cb.selectBonus();
 		cb.clickAddNewBonus();
-		cb.EnterBonusHead("Diwali1");		
+		cb.EnterBonusHead("1");		
 		cb.selectformula("Test Formula");
 		cb.SelectFromMonth("Mar/2013");
 		cb.SelectToMonth("Apr/2013");
@@ -2584,7 +2607,7 @@ public class Bonus extends BaseTest{
 		cb.clickSalary();
 		cb.selectBonus();
 		cb.clickAddNewBonus();
-		cb.EnterBonusHead("Diwali1");		
+		cb.EnterBonusHead("1");		
 		cb.selectformula("Bonus");
 		cb.SelectFromMonth("Mar/2013");
 		cb.SelectToMonth("Apr/2013");
@@ -4238,7 +4261,7 @@ public class Bonus extends BaseTest{
 		cb.clickDeleteButton();
 		cb.switchToPopUpAndAccept(driver);
 	}*/
-	@Test(priority=187)
+	/*@Test(priority=187)
 	public void CreateBonusDefinitionFormulaConsideremployeeswithminimumworkingCalculateNearest10Rupee_SC_821() throws Exception{
 		CreateBonusDefinitionFormulaConsideremployeeswithminimumworkingCalculateNearest10Rupee cb = new CreateBonusDefinitionFormulaConsideremployeeswithminimumworkingCalculateNearest10Rupee(driver);
 		cb.clickSalary();
@@ -5313,7 +5336,7 @@ public class Bonus extends BaseTest{
 		cb.clickDeleteButton();
 		cb.switchToPopUpAndAccept(driver);
 	}
-	/*@Test(priority=237)
+	@Test(priority=237)
 	public void CreateBonusDefinitionFormulaCalculateDDNearest10Rupee_SC_871() throws Exception {
 		CreateBonusDefinitionFormulaCalculateModeofPaymentChequeNearest10Rupee cb = new CreateBonusDefinitionFormulaCalculateModeofPaymentChequeNearest10Rupee(driver);
 		cb.clickSalary();
