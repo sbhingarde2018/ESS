@@ -10,7 +10,9 @@ import com.spp.common.BasePage;
 public class HomePage extends BasePage{
 
 	@FindBy(xpath="(//span[normalize-space(text()='superuser')])[1]")
+	//@FindBy(xpath="//span[@class='profile-image']")
 	private WebElement superuseraction;
+	//@FindBy(xpath="//a[text()='Logout']")
 	@FindBy(xpath="//*[.='Logout']")
 	private WebElement logout;
 

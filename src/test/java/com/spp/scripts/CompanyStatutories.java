@@ -3,7 +3,6 @@ package com.spp.scripts;
 import org.testng.annotations.Test;
 import org.testng.Assert;
 
-import com.gargoylesoftware.htmlunit.javascript.host.Symbol;
 import com.spp.common.BaseTest;
 import com.spp.pages.AddESIGroup;
 import com.spp.pages.AddPFGroup;

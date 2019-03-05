@@ -11,6 +11,7 @@ import com.spp.common.BasePage;
 
 public class LoginPage extends BasePage{
 	@FindBy(id="user_username")
+	//@FindBy(xpath="//*[@id='user_username']")
 	WebElement txtUsername;
 	
 	@FindBy(id="user_password")

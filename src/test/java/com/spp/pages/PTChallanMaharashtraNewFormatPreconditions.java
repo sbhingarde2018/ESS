@@ -16,7 +16,7 @@ public class PTChallanMaharashtraNewFormatPreconditions extends BasePage{
 	WebElement ptlink;
 	@FindBy(xpath="//a[text()='Add New PT Group']")
 	WebElement addptlink;
-	@FindBy(id="pt_group_name")
+	@FindBy(id="pt_group_id")
 	WebElement ptgroupname;
 	@FindBy(id="pt_group_state_id")
 	WebElement state;
@@ -30,12 +30,12 @@ public class PTChallanMaharashtraNewFormatPreconditions extends BasePage{
 	WebElement returnperiod;
 	@FindBy(xpath="//input[@value='Create PT Group']")
 	WebElement creatept;
-	@FindBy(xpath="(//span[normalize-space(text()='PT Rate')])[7]")
+	@FindBy(xpath="(//span[normalize-space(text()='PT Rate')])[6]")
 	WebElement ptratelink;
 	@FindBy(id="pt_group_rate_paymonth_id")
 	WebElement effectivefrom;
 	@FindBy(xpath="//input[@value='Create PT Group Rate']")
-	WebElement createptgruoprate;
+	WebElement createptgrouprate;
 	@FindBy(xpath="//a[text()='Settings']")
 	WebElement settingslink;
 	@FindBy(xpath="//button[text()='Fill Default']")
@@ -130,7 +130,6 @@ public class PTChallanMaharashtraNewFormatPreconditions extends BasePage{
 	public void companylink() {
 		CompanyLink.click();
 	}
-	
 	public void clickPTLink() throws Exception{
 		ptlink.click();
 	}
@@ -176,7 +175,7 @@ public class PTChallanMaharashtraNewFormatPreconditions extends BasePage{
 	}
 	
 	public void clickPTGroupRateButton() throws Exception{
-		createptgruoprate.click();
+		createptgrouprate.click();
 	}
 	
 	public void clickSettingsLink() throws Exception{

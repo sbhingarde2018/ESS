@@ -25,6 +25,7 @@ public class CheckBonusInGeneratedReport extends BasePage{
 	@FindBy(xpath="//table/tbody/tr[1]/td[1]/input[1]")
 	WebElement Checkbox;
 	
+	
 	public CheckBonusInGeneratedReport(WebDriver driver) {
 		super(driver);
 		PageFactory.initElements(driver,this);

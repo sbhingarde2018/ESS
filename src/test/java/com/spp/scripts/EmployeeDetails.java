@@ -1,7 +1,6 @@
 package com.spp.scripts;
 
 
-
 import java.io.IOException;
 
 import org.openqa.selenium.WebElement;
@@ -73,9 +72,6 @@ public class EmployeeDetails extends BaseTest{
 		Assert.assertEquals(s, "Employee successfully created");
 						
 	}	
-	
-	
-	
 	@Test(priority=1)
 	public void CheckDeleteClassificationDetailsInEmployee_SC_421() throws Exception {
 	DeleteClassificationDetailsInEmployee ce = new DeleteClassificationDetailsInEmployee(driver);
@@ -528,18 +524,4 @@ public class EmployeeDetails extends BaseTest{
 		ce.switchToPopUpAndAccept(driver);
 		Thread.sleep(5000);
 	}
-}	
-	
-	
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
-
+}

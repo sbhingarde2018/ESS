@@ -3,7 +3,6 @@ package com.spp.scripts;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import com.gargoylesoftware.htmlunit.javascript.host.css.CSS;
 import com.spp.common.BaseTest;
 import com.spp.generics.Utility;
 import com.spp.pages.ArrearsManualLumpsumAsSalaryComponent;

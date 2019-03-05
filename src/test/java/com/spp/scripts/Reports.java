@@ -11,8 +11,7 @@ import junit.framework.Assert;
 
 public class Reports extends BaseTest {
 	
-	
-	/*@Test(priority=0)
+	@Test(priority=0)
 	public void PTChallanMaharashtraNewFormatPreconditions_SC_172() throws Exception{
 		PTChallanMaharashtraNewFormatPreconditions pt=new PTChallanMaharashtraNewFormatPreconditions(driver);
 		pt.navigateMaster();
@@ -88,7 +87,7 @@ public class Reports extends BaseTest {
 		String t=pt.getMessageforemployee();
 		Assert.assertEquals(t, "Employee successfully created");
 	}
-	@Test(priority=1)
+	/*@Test(priority=1)
 	public void PTChallanMaharashtraNewFormatVerifyingslbsinreport_SC_175() throws Exception{
 		PTChallanMaharashtraNewFormatVerifyingslbsinreport pt=new PTChallanMaharashtraNewFormatVerifyingslbsinreport(driver);
 		pt.clickonreport();
@@ -112,7 +111,7 @@ public class Reports extends BaseTest {
 		pt.selectorderby("Employee Name");
 		pt.getpreview();
 		
-	}*/
+	}
 	@Test(priority=2)
 	public void PTChallanMaharashtraNewFormatVerifyingtheamount_SC_176() throws Exception{
 		PTChallanMaharashtraNewFormatVerifyingtheamount pt=new PTChallanMaharashtraNewFormatVerifyingtheamount(driver);
@@ -137,5 +136,5 @@ public class Reports extends BaseTest {
 		pt.enterlessexcesspaid("20");
 		Thread.sleep(500);
 		pt.clickonpreview();
-	}
+	}*/
 }
