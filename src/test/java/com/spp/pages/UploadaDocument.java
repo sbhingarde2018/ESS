@@ -15,7 +15,7 @@ public class UploadaDocument extends BasePage{
 	WebElement ClickOnCompany;
 	@FindBy(xpath="//*[@id=\"ui-accordion-accordion-panel-0\"]/li[3]/a")
 	WebElement ClickOnDocuments;
-	@FindBy(xpath="//*[@id=\"main\"]/div[1]/span/a")
+	@FindBy(xpath="//*[@id='main']/div[1]/span/a")
 	WebElement AddNewDocument;
 	@FindBy(id="company_document_file_path")
 	WebElement UploadFile;
@@ -53,5 +53,4 @@ public class UploadaDocument extends BasePage{
 	public String getMessage() {
 		return successfullmessage.getText();
 	}
-
 }

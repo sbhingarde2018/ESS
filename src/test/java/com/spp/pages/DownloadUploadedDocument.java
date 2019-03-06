@@ -14,7 +14,7 @@ public class DownloadUploadedDocument extends BasePage{
 	WebElement ClickOnCompany;
 	@FindBy(xpath="//*[@id=\"ui-accordion-accordion-panel-0\"]/li[3]/a")
 	WebElement ClickOnDocuments;
-	@FindBy(xpath="//*[@id=\"main\"]/div[2]/table/thead/tr[2]/td[contains(text(),'Upload file')]/parent::tr/td[5]/a")
+	@FindBy(xpath="//*[@id='main']/div[2]/table/thead/tr[2]/td[contains(text(),'Upload file')]/parent::tr/td[5]/a")
 	WebElement DownloadFile;
 	
 	public DownloadUploadedDocument(WebDriver driver) {
