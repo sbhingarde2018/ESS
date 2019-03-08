@@ -14,7 +14,7 @@ public class EditPFGroupandPFRate extends BasePage {
 	@FindBy(xpath="//div[@id='pf_group_list']/div[2]//tr[2]//td[4]//img[@title='Edit branch']")
 	WebElement editpficon;
 	@FindBy(id="pf_group_id")
-	WebElement pfgruopname;
+	WebElement pfgroupname;
 	@FindBy(id="pf_group_pf_number")
 	WebElement pfnumber;
 	@FindBy(id="pf_group_db_file_code")
@@ -50,6 +50,7 @@ public class EditPFGroupandPFRate extends BasePage {
 	@FindBy(xpath="//*[@id=\"pf_grprt_res_rsp\"]/div/strong")
 	WebElement successfullMessage;
 	
+	
 	public EditPFGroupandPFRate(WebDriver driver){
 		super(driver);
 		PageFactory.initElements(driver, this);
@@ -67,8 +68,8 @@ public class EditPFGroupandPFRate extends BasePage {
 	}
 	
 	public void enterPFGroupName(String value) throws Exception{
-		pfgruopname.clear();
-		pfgruopname.sendKeys(value);
+		pfgroupname.clear();
+		pfgroupname.sendKeys(value);
 	}
 	
 	public void enterPFNumber(String value) throws Exception{
@@ -143,7 +144,6 @@ public class EditPFGroupandPFRate extends BasePage {
 	public void clickUpdatePFRateButton() throws Exception{
 		updatePFratebutton.click();
 	}
-	
 	public String getMessage(){
 		return successfullMessage.getText();
 	}

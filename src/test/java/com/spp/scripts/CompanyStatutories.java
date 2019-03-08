@@ -29,18 +29,16 @@ public class CompanyStatutories extends BaseTest{
 		ag.enterPFNumber("KN/45889");
 		ag.enterDBFileCode("IFC0001");
 		ag.enterExtension("1");
-		ag.enterPFAddress("Chennai");
+		ag.enterPFAddress("Bangalore");
 		ag.clickPFCreateButton();
 		Thread.sleep(3000);
 		ag.clickPFRateLinkButton();
 		Thread.sleep(2000);	
-		ag.selectEffectiveDate("May/2019");
+		ag.selectEffectiveDate("Mar/2019");
 		ag.clickPFGroupRateButton();
 		String s=ag.getMessage();
-		Assert.assertEquals(s, "PF group rate successfully created.");
-		
+		Assert.assertEquals(s, "PF group rate successfully created.");	
 	} 
-	
 	@Test(priority=1)	
 	public void verifyUpdatePFGroup_SC_187_203() throws Exception{
 		EditPFGroupandPFRate ep=new EditPFGroupandPFRate(driver);
@@ -69,8 +67,7 @@ public class CompanyStatutories extends BaseTest{
 		ep.clickUpdatePFRateButton();
 		String s=ep.getMessage();
 		Assert.assertEquals(s, "PF group rate successfully updated.");
-	}  
-	
+	} 
 	@Test(priority=2)
 	public void verifyDeletedPFGroup_SC_204() throws Exception{   
 		DeletePFGroupRate dg=new DeletePFGroupRate(driver);
@@ -92,9 +89,7 @@ public class CompanyStatutories extends BaseTest{
 		dg.switchToPopUpAndAccept(driver);
 		String s=dg.getMessage();
 		Assert.assertEquals(s,"PF group rate successfully deleted.");
-		
-}
-	
+	}
 	@Test(priority=3)
 	public void verifyDeletedPFGroup_SC_192() throws Exception{   
 		DeletePFGroup dg=new DeletePFGroup(driver);
@@ -110,9 +105,7 @@ public class CompanyStatutories extends BaseTest{
 		dg.switchToPopUpAndAccept(driver);
 		String s=dg.getMessage();
 		Assert.assertEquals(s,"PF group successfully deleted");
-		}
-	
-	
+	}
 	@Test(priority=4)
 	public void verifyESIGroupCreated_SC_50_51() throws Exception{
 		AddESIGroup ae=new AddESIGroup(driver);
@@ -135,7 +128,6 @@ public class CompanyStatutories extends BaseTest{
 		String s=ae.getMessage();
 		Assert.assertEquals(s, "ESI group rate successfully created.");
 	}
-	
 	@Test(priority=5)
 	public void verifyUpdateESIGroup_SC_195_206() throws Exception{ 
 		EditESIAndESIRate er=new EditESIAndESIRate(driver);
@@ -166,7 +158,6 @@ public class CompanyStatutories extends BaseTest{
 		er.clickUpdateESIRateButton();
 		Assert.assertEquals("ESI group rate successfully updated", "ESI group rate successfully updated");
 	}
-	
 	@Test(priority=6)
 	public void verifyDeletedESIGroup_SC_208() throws Exception{   
 		DeleteESIGroupRate dg=new DeleteESIGroupRate(driver);
@@ -184,9 +175,7 @@ public class CompanyStatutories extends BaseTest{
 		dg.switchToPopUpAndAccept(driver);
 		String s=dg.getMessage();
 		Assert.assertEquals(s,"ESI group rate successfully deleted.");
-		
-}
-	
+	}
 	@Test(priority=7)
 	public void verifyDeletedESIGoup_SC_197() throws Exception{
 		DeleteESIGroup de=new DeleteESIGroup(driver);
@@ -202,8 +191,7 @@ public class CompanyStatutories extends BaseTest{
 		String s=de.getMessage();
 		Assert.assertEquals(s, "ESI group successfully deleted");
 	}
-	
-	/*@Test(priority=8)//not running default pt group slab not present
+	@Test(priority=8)//not running default pt group slab not present
 	public void verifyPTGroupCreatedSC_52_53() throws Exception{
 		AddPTGroup pt=new AddPTGroup(driver);
 		Thread.sleep(3000);
@@ -228,7 +216,6 @@ public class CompanyStatutories extends BaseTest{
 		String s=pt.getMessage();
 		Assert.assertEquals(s, "Default PT Slab Successfully Created.");
 	}
-	
 	@Test(priority=9)
 	public void verifyUpdatePTGroup_SC_199_209() throws Exception{
 		EditPTGroup ep=new EditPTGroup(driver);
@@ -256,7 +243,6 @@ public class CompanyStatutories extends BaseTest{
 		//String s=ep.getMessage();
 		//Assert.assertEquals(s,"PT rate successfully updated.");
 	}
-	
 	@Test(priority=10)
 	public void verifyDeletedPTGroup_SC_211() throws Exception{   
 		DeletePTGroupRate dg=new DeletePTGroupRate(driver);
@@ -294,13 +280,10 @@ public class CompanyStatutories extends BaseTest{
 		dg.clickPTRate();
 		Thread.sleep(2000);
 		dg.DeletePTSlab();
-		
-		
 		//String s=dg.getMessage();
 		//Assert.assertEquals(s,"PT Rate successfully deleted");
 	}
-	
-	/*@Test(priority=11)
+	@Test(priority=11)
 	public void verifyDeletedPTGroup_SC_202() throws Exception{
 		DeletePTGroup dpg=new DeletePTGroup(driver);
 		//Thread.sleep(1000);
@@ -317,14 +300,5 @@ public class CompanyStatutories extends BaseTest{
 		dpg.switchToPopUpAndAccept(driver);
         String s=dpg.getMessage();
         Assert.assertEquals(s, "PT Group was successfully deleted.");
-	} */
-	
-	
-	
-	
-	
-	
-	
-		
-	
+	}
 }

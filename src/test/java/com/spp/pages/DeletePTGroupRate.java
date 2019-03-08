@@ -15,17 +15,17 @@ public class DeletePTGroupRate extends BasePage{
 	WebElement companystatutorylink;
 	@FindBy(xpath="//*[@id=\"ui-accordion-accordion-panel-0\"]/li[3]/a")
 	WebElement PTGroup;
-	@FindBy(xpath="//*[@id=\"dt_pt_groups\"]/tbody/tr/td[contains(text(),'PT_1')]/parent::tr/td[4]/span[1]/a")
+	@FindBy(xpath="//*[@id='dt_pt_groups']/tbody/tr/td[contains(text(),'PT-1')]/parent::tr/td[4]/span[1]/a")
 	WebElement EditLink;
-	@FindBy(xpath="//*[@id=\"main\"]/div[3]/nav/ul/li[2]/a/span")
+	@FindBy(xpath="//*[@id='main']/div[3]/nav/ul/li[2]/a/span")
 	WebElement PTRate;
-	@FindBy(xpath="//*[@id=\"ptrate_list\"]/div[2]/table/tbody/tr/td[4]/a[1]")
+	@FindBy(xpath="//*[@id='ptrate_list']/div[2]/table/tbody/tr/td[4]/a[1]")
 	WebElement Settings;
 	@FindBy(xpath="//*[@id='pt_rate_list']/div[2]/table/tbody/tr[1]/td[9]/a")
 	WebElement DeleteButton;
-	@FindBy(xpath="//*[@id=\"pt_rate_result\"]/div/strong")
+	@FindBy(xpath="//*[@id='pt_rate_result']/div/strong")
 	WebElement SuccessfulMessage;
-	@FindBy(xpath="//*[@id=\"ptrate_list\"]/div[2]/table/tbody/tr/td[4]/a[2]")
+	@FindBy(xpath="//*[@id='ptrate_list']/div[2]/table/tbody/tr/td[4]/a[2]")
 	WebElement DeleteSlab;
 	
 	public DeletePTGroupRate(WebDriver driver){

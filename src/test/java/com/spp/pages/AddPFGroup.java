@@ -86,9 +86,7 @@ public class AddPFGroup extends BasePage{
 	public void clickPFGroupRateButton() throws Exception{
 		pfratebutton.click();
 	}
-	
 	public String getMessage(){
 		return successfullMessage.getText();
 	}
-
 }
