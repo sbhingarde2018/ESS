@@ -13,7 +13,7 @@ public class CheckOpenComponentAndCalculativeField extends BasePage{
 	WebElement masterlink;
 	@FindBy(xpath="//a[text()='Salary Heads']")
 	WebElement salaryheads;
-	@FindBy(xpath="//*[@id='earning_heads']/tbody/tr[2]/td[5]/a[1]")
+	@FindBy(xpath="//*[@id='earning_heads']/tbody/tr/td[normalize-space()='Earning1']/parent::tr/td/a[text()='Edit']")
 	WebElement Edit;
 	@FindBy(id="salary_head_open_component")
 	WebElement OpenComponent;
@@ -23,24 +23,21 @@ public class CheckOpenComponentAndCalculativeField extends BasePage{
 	WebElement UpdateSalaryHeadButton;
 	@FindBy(xpath="//*[@id=\"main\"]/div[1]/strong")
 	WebElement SuccessfulMesssage;
-	
-	
-	
-	
+	@FindBy(xpath="//*[@id='earning_heads']/tbody/tr/td[normalize-space()='Earning1']/parent::tr/td[3]")
+	WebElement CheckYesNo;
+	@FindBy(xpath="//*[@id='earning_heads']/tbody/tr/td[normalize-space()='Earning1']/parent::tr/td[4]")
+	WebElement CheckYesNo1;
 	
 	public CheckOpenComponentAndCalculativeField(WebDriver driver){
 		super(driver);
 		PageFactory.initElements(driver, this);
 	}
-
 	public void navigateMaster() throws Exception{
 		masterlink.click();
 	}
-
 	public void clickSalaryHeads() throws Exception{
 		salaryheads.click();
 	}
-
 	public void clickEdit() throws Exception{
 		Edit.click();
 	}
@@ -55,5 +52,11 @@ public class CheckOpenComponentAndCalculativeField extends BasePage{
 	}
 	public String getMessage() {
 		return SuccessfulMesssage.getText();
+	}
+	public String Earning1CheckYesOpenComponent(){
+		return CheckYesNo.getText();
+	}
+	public String Earning1CheckYesCalculativeField(){
+		return CheckYesNo1.getText();
 	}
 }

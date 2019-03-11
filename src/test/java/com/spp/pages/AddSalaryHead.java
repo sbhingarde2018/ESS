@@ -1,4 +1,5 @@
 package com.spp.pages;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -78,4 +79,3 @@ public class AddSalaryHead extends BasePage {
 		return successfullMessage.getText();
 	}
 }
-
