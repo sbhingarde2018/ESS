@@ -11,7 +11,7 @@ public class AssignSalaryHead extends BasePage{
 	WebElement masterlink;
 	@FindBy(xpath="//a[text()='Salary Structure']")
 	WebElement salarystructurelink;
-	@FindBy(xpath="//*[@id=\"main\"]/div[3]/table/tbody/tr[2]/td[contains(text(),'SALARYSTRUCTURE')]/parent::tr/td[3]/a")
+	@FindBy(xpath="//*[@id='main']/div/table/tbody/tr/td[contains(text(),'SALARYSTRUCTURE')]/parent::tr/td[3]/a")
 	WebElement settingslink;
 	@FindBy(xpath="//a[text()='Assign New Head to Structure']")
 	WebElement assignedheadlink;

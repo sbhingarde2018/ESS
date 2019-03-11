@@ -23,7 +23,7 @@ import com.spp.pages.SalaryHeadExcelUpload;
 
 public class SalaryHeadTestcase extends BaseTest {
 	
-	@Test(priority=0)
+	/*@Test(priority=0)
 	public void verifycreatedSalaryHead_SC_1() throws Exception{
 		AddSalaryHead sh=new AddSalaryHead(driver);
 		Thread.sleep(5000);
@@ -142,7 +142,7 @@ public class SalaryHeadTestcase extends BaseTest {
    		Assert.assertEquals(c, "Yes");
    		sh.deductionSalaryHeadDelete();
    		sh.switchToPopUpAndAccept(driver);
-    	}
+    }
 	@Test(priority=6)
  	public void SalaryHeadExcelUpload_SC_4() throws Exception{
     	SalaryHeadExcelUpload sh=new SalaryHeadExcelUpload(driver);
@@ -151,7 +151,7 @@ public class SalaryHeadTestcase extends BaseTest {
  		sh.clickSalaryHeads();
  		sh.clickGenerateSampleTemplate();
  		sh.clickExcelTemplateUploadLink();
- 		sh.clickChooseFile("C:\\Users\\alfalabs\\Downloads\\SalaryHead.xlsx");
+ 		sh.clickChooseFile("C:\\Users\\Administrator\\Downloads\\SalaryHead.xlsx");
  		Thread.sleep(3000);
  		sh.clickUploadLink();
  		String z=sh.getMessage();
@@ -164,9 +164,9 @@ public class SalaryHeadTestcase extends BaseTest {
  		sh.clickDeductionTab();
  		sh.deductionSalaryHeadDelete();          //to rerun this testcase delete previous data from salary head>earnings,deduction//	or change data in excel file. 
  		sh.switchToPopUpAndAccept(driver);
-		}
-	/*@Test(priority=7)
- 	 public void verifyCreatedSalaryStructure_SC_28() throws Exception{
+	}*/
+	@Test(priority=7)
+ 	public void verifyCreatedSalaryStructure_SC_28() throws Exception{
  		AddSalaryStructure ss=new AddSalaryStructure(driver);
  		ss.navigateMaster();
  		ss.clickSalaryStructureLink();
@@ -176,7 +176,7 @@ public class SalaryHeadTestcase extends BaseTest {
  		ss.clickCreateButton();
  		String s=ss.getMessage();
  		Assert.assertEquals(s, "Salary group successfully created");
-		}
+	}
 	@Test(priority=8)
     public void AddSalaryStructureNotBasedOnGross_SC_29() throws Exception{
   		AddSalaryStructureNotBasedOnGross ss=new AddSalaryStructureNotBasedOnGross(driver);
@@ -189,8 +189,21 @@ public class SalaryHeadTestcase extends BaseTest {
   		String s=ss.getMessage();
   		Assert.assertEquals(s, "Salary group successfully created");
   		ss.clickDeleteButton();
-		}
+	}
 	@Test(priority=9)
+	public void verifyEditedSalaryStructure_SC_428() throws Exception{
+		EditSalaryStructure es=new EditSalaryStructure(driver);
+		Thread.sleep(5000);
+		es.navigateMaster();
+		es.clickSalaryStructureLink();
+		es.clickEditSalaryStructureLink();
+		es.enterSalaryStructureName("SALARYSTRUCTURE");
+		es.clickBasedOnGross();
+		es.clickUpdateSalaryStructureButton();
+		String s=es.getMessage();
+		Assert.assertEquals(s, "Salary group succesfully updated");
+	}
+	@Test(priority=10)
 	public void verifyAssignedSalaryHead_SC_30() throws Exception{
 		AssignSalaryHead sh=new AssignSalaryHead(driver);
 		Thread.sleep(5000);
@@ -209,8 +222,8 @@ public class SalaryHeadTestcase extends BaseTest {
 		sh.clickCreateSalaryGroupDetailButton();
 		String s=sh.getMessage();
 		Assert.assertEquals(s, "Salary structure detail successfully created");
-		}
-	@Test(priority=10)
+	}
+	@Test(priority=11)
   	public void verifyCloneSalaryStructure_SC_245() throws Exception{
   		AddCloneSalaryStructure cs=new AddCloneSalaryStructure(driver);
   		Thread.sleep(5000);
@@ -225,8 +238,8 @@ public class SalaryHeadTestcase extends BaseTest {
   		cs.clickCreateSalaryStructure();
  		String s=cs.getMessage();
 		Assert.assertEquals(s, "Salary Structure clone has been successfully created");
-		}
-		@Test(priority=11)
+	}
+	@Test(priority=12)
   	public void verifyEditedAssignedSalaryHead_SC_429() throws Exception{
   		EditAssignedSalaryHead ea=new EditAssignedSalaryHead(driver);
   		ea.navigateMaster();
@@ -241,20 +254,7 @@ public class SalaryHeadTestcase extends BaseTest {
   		ea.clickUpdateSalaryGroupDetail();
   		String s=ea.getMessage();
   		Assert.assertEquals(s, "Salary structure detail succesfully updated");
-  		}
-		@Test(priority=12)
-		public void verifyEditedSalaryStructure_SC_428() throws Exception{
-		  	EditSalaryStructure es=new EditSalaryStructure(driver);
-		  	Thread.sleep(5000);
-		  	es.navigateMaster();
-		  	es.clickSalaryStructureLink();
-		  	es.clickEditSalaryStructureLink();
-		  	es.enterSalaryStructureName("SALARYSTRUCTURE");
-		  	es.clickBasedOnGross();
-		  	es.clickUpdateSalaryStructureButton();
-		  	String s=es.getMessage();
-		  	Assert.assertEquals(s, "Salary group succesfully updated");
-		}
+  	}
 	@Test(priority=13)
 	public void verifyDeleteAssignedHead_SC_251() throws Exception{
 	 	DeleteAssignedSalaryHead da=new DeleteAssignedSalaryHead(driver);
@@ -278,39 +278,26 @@ public class SalaryHeadTestcase extends BaseTest {
 	 	da.clickDeleteSalaryHead();
 	 	da.switchToPopUpAndAccept(driver);
 	 	String sa=da.getMessage();
-	 	Assert.assertEquals(sa, "Salary structure detail succesfully destroyed");
-	 	}*/
-	/*@Test(priority=14)
+	 	Assert.assertEquals(sa, "Salary structure detail successfully destroyed");
+	}
+	@Test(priority=14)
   	public void verifyDeletedSalaryStructure_SC_252() throws Exception{
   		DeleteSalaryStructure ss=new DeleteSalaryStructure(driver);
   		Thread.sleep(5000);
   		ss.navigateMaster();
   		ss.clickSalaryStructureLink();
   		ss.clickSettingsLink();
- 		ss.clickEditIconLink();
-		ss.selectCalculationType("Not Applicable");
-		ss.clickUpdateSalaryGroupDetail();
-		Thread.sleep(2000);
- 		//ss.clickDeleteSalaryHead();
- 		//ss.switchToPopUpAndDismiss();
  		Thread.sleep(2000);
  		ss.clickDeleteSalaryHead();
  		Thread.sleep(2000);
- 		//ss.switchToPopUpAndAccept(driver);
- 		//Thread.sleep(2000);
   		String s=ss.getMessage();
   		Assert.assertEquals(s, "Salary structure detail successfully destroyed");
   		ss.navigateMaster();
   		ss.clickSalaryStructureLink();
   		ss.clickDeleteSalaryStructure();
   		Thread.sleep(2000);
-  		//ss.switchToPopUpAndDismiss();
-  		//Thread.sleep(2000);
-  		//ss.clickDeleteSalaryStructure();
-  		//Thread.sleep(2000);
-  		//ss.switchToPopUpAndAccept(driver);
+  		ss.clickDeleteSalaryStructure1();
   		String d=ss.salarygroupdelete();
   		Assert.assertEquals(d, "Salary group succesfully deleted");
-		}
-	*/													  
+	}							  
 }

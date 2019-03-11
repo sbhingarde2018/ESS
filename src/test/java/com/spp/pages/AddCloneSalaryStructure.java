@@ -17,7 +17,7 @@ public class AddCloneSalaryStructure extends BasePage {
 	WebElement groupname;
 	@FindBy(xpath="//select[@id='old_salary_structure']")
 	WebElement cloneofDropdown;
-	@FindBy(xpath="//option[text()='new Structure1']")
+	@FindBy(xpath="//option[text()='SALARYSTRUCTURE']")
 	WebElement selectstructure;
 	@FindBy(xpath="//input[@value='Create Salary Structure']")
 	WebElement CreateSalaryStructureButton;
@@ -60,4 +60,7 @@ public class AddCloneSalaryStructure extends BasePage {
 	public String getMessage(){
 		return successfullMessage.getText();
 	}
+	//public void selectGrouping1(String value){
+	//	dropDownSelect(GroupBy1, value);	
+	//}
 }

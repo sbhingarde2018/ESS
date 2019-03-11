@@ -13,7 +13,7 @@ public class AddSalaryStructureNotBasedOnGross extends BasePage{
 	WebElement masterlink;
 	@FindBy(xpath="//a[text()='Salary Structure']")
 	WebElement salarystructurelink;
-	@FindBy(xpath="//a[text()='Create New Salary Structure']")
+	@FindBy(xpath="//a[text()='Add New Salary Structure']")
 	WebElement createsalarystructurelink;
 	@FindBy(id="salary_group_salary_group_name")
 	WebElement structurename;
@@ -21,9 +21,7 @@ public class AddSalaryStructureNotBasedOnGross extends BasePage{
 	WebElement createsalarystructurebutton;
 	@FindBy(xpath="//strong[text()='Salary group successfully created']")
 	WebElement successfullMessage;
-	@FindBy(linkText="Next →")
-	WebElement Pagechange;
-	@FindBy(xpath="//*[@id=\"main\"]/div[3]/table/tbody//tr/td[1][contains(text(),'New Structure')]/parent::tr/td[5]/a")
+	@FindBy(xpath="//*[@id='main']/div/table/tbody//tr/td[contains(text(),'New Structure')]/parent::tr/td[5]/a")
 	WebElement DeleteButton;
 	
 
@@ -55,10 +53,6 @@ public class AddSalaryStructureNotBasedOnGross extends BasePage{
 	public String getMessage(){
 		return successfullMessage.getText();
 	}
-	public void clickPagechange() throws Exception{
-		Pagechange.click();
-	}
-	
 	public void clickDeleteButton() throws Exception{
 		DeleteButton.click();
 		switchToPopUpAndAccept(driver);
