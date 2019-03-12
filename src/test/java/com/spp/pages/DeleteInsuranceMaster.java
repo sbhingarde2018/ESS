@@ -17,7 +17,7 @@ public class DeleteInsuranceMaster extends BasePage {
 	WebElement deleteInsurance;
 	@FindBy(xpath="//strong[text()='Insurance successfully deleted']")
 	WebElement successfullMessage;
-	@FindBy(xpath="//*[@id='standing_instr_list']/div[2]/table/tbody/tr/td[contains(text(),'Insurance_Master')]")
+	@FindBy(xpath="//*[@id='standing_instr_list']/div/table/tbody/tr/td[contains(text(),'Insurance_Master')]")
 	WebElement SelectedInsuranceMaster;
 	
 	public DeleteInsuranceMaster(WebDriver driver){

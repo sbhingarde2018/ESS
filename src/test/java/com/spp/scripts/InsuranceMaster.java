@@ -31,7 +31,6 @@ public class InsuranceMaster extends BaseTest{
 		lm.clickdelete();
 		lm.switchToPopUpAndAccept(driver);
 	}
-	
 	@Test(priority=1)
 	public void CreateIMwithClubbedInSal_SC_16() throws Exception {
 		CreateIMwithClubbedInSal cs=new CreateIMwithClubbedInSal(driver);
@@ -47,7 +46,6 @@ public class InsuranceMaster extends BaseTest{
 		String d=cs.getMessage();
 		Assert.assertEquals(d, "Insurance successfully created");	
 	}
-	
 	@Test(priority=2)
 	public void CheckInsuranceMastercanbeEdited_SC_17() throws Exception {
 		CheckInsuranceMastercanbeEdited cs=new CheckInsuranceMastercanbeEdited(driver);
@@ -61,7 +59,6 @@ public class InsuranceMaster extends BaseTest{
 		String d=cs.getMessage();
 		Assert.assertEquals(d, "Insurance successfully updated");	
 	}
-	
 	@Test(priority=3)
 	public void DeleteInsuranceMaster_SC_18() throws Exception{
 		DeleteInsuranceMaster di=new DeleteInsuranceMaster(driver);
@@ -78,7 +75,5 @@ public class InsuranceMaster extends BaseTest{
 		Assert.assertEquals(abc, "Insurance successfully deleted");
 		boolean abcd =  di.CIfPresent();
 		Assert.assertEquals(false,abcd);
-	}
-	
-	
+	}	
 }

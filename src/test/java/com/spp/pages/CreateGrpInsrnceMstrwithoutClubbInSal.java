@@ -54,7 +54,6 @@ public class CreateGrpInsrnceMstrwithoutClubbInSal extends BasePage {
 	public void clickCreateGroupInsurance() throws Exception{
 		createGroupInsurance.click();
 	}
-	
 	public String getMessage(){
 		return successfullMessage.getText();
 	}
