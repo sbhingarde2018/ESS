@@ -28,6 +28,7 @@ public class ReimbursementMaster extends BaseTest {
 		rm.clickAddReimbursementMaster();
 		rm.selectReimbursementType("Other Reimbursement");
 		rm.selectModeOfPayment("Paid in Salary");
+		rm.selectTDSRef("Basic");
 		rm.selectLumpsumType();
 		rm.enterReimbursementName("Transportation"+Utility.getRandNum(1000, 1010));
 		rm.clickCreateReimbursementMaster();
@@ -44,7 +45,6 @@ public class ReimbursementMaster extends BaseTest {
 		String s=rm.getMessage();
 		Assert.assertEquals(s, "Reimbursement Master is successfully updated.");
 	}
-	
 	@Test(priority=1)
 	public void UpdateReimbursementMstrwithConsiderClaimAmtOnPresentDays_SC_444() throws Exception{
 		UpdateReimbursementMstrwithConsiderClaimAmtOnPresentDays rm=new UpdateReimbursementMstrwithConsiderClaimAmtOnPresentDays(driver);
@@ -63,7 +63,6 @@ public class ReimbursementMaster extends BaseTest {
 		String s=rm.getMessage();
 		Assert.assertEquals(s, "Reimbursement Master is successfully updated.");
 	}
-	
 	@Test(priority=2)
 	public void UpdateReimbursementMstrbyConsideringSalCalcAndDOL_SC_445() throws Exception{
 		UpdateReimbursementMstrbyConsideringSalCalcAndDOL rm=new UpdateReimbursementMstrbyConsideringSalCalcAndDOL(driver);
@@ -82,7 +81,6 @@ public class ReimbursementMaster extends BaseTest {
 		String s=rm.getMessage();
 		Assert.assertEquals(s, "Reimbursement Master is successfully updated.");
 	}
-	
 	@Test(priority=3)
 	public void UpdateReimbursementMstrbyConsideringRestrictClaimAmt_SC_446() throws Exception{
 		UpdateReimbursementMstrbyConsideringRestrictClaimAmt rm=new UpdateReimbursementMstrbyConsideringRestrictClaimAmt(driver);
@@ -101,7 +99,6 @@ public class ReimbursementMaster extends BaseTest {
 		String s=rm.getMessage();
 		Assert.assertEquals(s, "Reimbursement Master is successfully updated.");
 	}
-	
 	@Test(priority=4)
 	public void CheckForQuarterlyAllotmenInRM_SC_267() throws Exception{
 		CheckForQuarterlyAllotmenInRM ur=new CheckForQuarterlyAllotmenInRM(driver);
@@ -129,7 +126,6 @@ public class ReimbursementMaster extends BaseTest {
 		ur.clickonfunctionbutton();
 		Thread.sleep(2000);
 	}   
-	
 	@Test(priority=5)
 	public void CheckforReimbursementMasterForYearlyAllotment_SC_268() throws Exception{
 		CheckforReimbursementMasterForYearlyAllotment ur=new CheckforReimbursementMasterForYearlyAllotment(driver);
@@ -159,7 +155,6 @@ public class ReimbursementMaster extends BaseTest {
 		ur.selectAmountSideButton();
 		Thread.sleep(6000);
 	}
-	
 	@Test(priority=6)
 	public void CheckforReimbursementMasterForLumpsum_SC_269() throws Exception{
 		CheckforReimbursementMasterForLumpsumAllotment ur=new CheckforReimbursementMasterForLumpsumAllotment(driver);
@@ -183,7 +178,6 @@ public class ReimbursementMaster extends BaseTest {
 		ur.selectName(ReimbusementMaster);
 		Thread.sleep(6000);
 		}
-	
 	@Test(priority=7)
 	public void verifyAddNewReimbursementr_SC_287() throws Exception{
 		AddNewReimbursement rm=new AddNewReimbursement(driver);
@@ -191,10 +185,11 @@ public class ReimbursementMaster extends BaseTest {
 		rm.clickMastserLink();
 		rm.clickReimbursementMaster();
 		rm.clickDeleteButton();
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 		rm.clickAddReimbursementMaster();
 		rm.selectReimbursementType("Other Reimbursement");
 		rm.selectModeOfPayment("Bank Advise");
+		rm.selectTDSRef("Basic");
 		rm.selectLumpsumType();
 		Thread.sleep(5000);
 		rm.enterReimbursementName("Meals"+Utility.getRandNum(1011, 1020));
@@ -203,8 +198,7 @@ public class ReimbursementMaster extends BaseTest {
 		Assert.assertEquals(s, "Reimbursement Master is successfully created.");
 		//rm.clickPagechange();
 		rm.clickDeleteButton();	
-	}
-	
+		}
 	@Test(priority=8)
 	public void verifyAddReimbursementMaster_SC_58() throws Exception{
 		AddReimbursementMaster rm=new AddReimbursementMaster(driver);
@@ -214,6 +208,7 @@ public class ReimbursementMaster extends BaseTest {
 		rm.clickAddReimbursementMaster();
 		rm.selectReimbursementType("Other Reimbursement");
 		rm.selectModeOfPayment("Cash");
+		rm.selectTDSRef("Basic");
 		rm.selectAllotmentType();
 		Thread.sleep(5000);
 		rm.enterReimbursementName("Canteen"+Utility.getRandNum(1021 , 1030));
@@ -222,7 +217,6 @@ public class ReimbursementMaster extends BaseTest {
 		Assert.assertEquals(s, "Reimbursement Master is successfully created.");
 		rm.clickDeleteButton();
 	}
-	
 	@Test(priority=9)
 	public void CreateReimbursementMasterForTypeAllotment_SC_59() throws Exception{
 		CreateReimbursementMasterForTypeAllotment rm=new CreateReimbursementMasterForTypeAllotment(driver);
@@ -233,6 +227,7 @@ public class ReimbursementMaster extends BaseTest {
 		rm.enterReimbursementName("Stationary"+Utility.getRandNum(1031,1040));
 		rm.selectReimbursementType("Other Reimbursement");
 		rm.selectModeOfPayment("Paid in Salary");
+		rm.selectTDSRef("Basic");
 		rm.selectAllotmentType();
 		rm.selectMonthlyAllotmentType();
 		Thread.sleep(5000);
@@ -241,7 +236,6 @@ public class ReimbursementMaster extends BaseTest {
 		Assert.assertEquals(s, "Reimbursement Master is successfully created.");
 		rm.clickDeleteButton();
 	}
-
 	@Test(priority=10)
 	public void CreateReimbursementMasterForTypeLumpsum_SC_60() throws Exception{
 		CreateReimbursementMasterForTypeLumpsum rm=new CreateReimbursementMasterForTypeLumpsum(driver);
@@ -251,6 +245,7 @@ public class ReimbursementMaster extends BaseTest {
 		rm.clickAddReimbursementMaster();
 		rm.selectReimbursementType("Other Reimbursement");
 		rm.selectModeOfPayment("Paid in Salary");
+		rm.selectTDSRef("Basic");
 		rm.selectLumpsumType();
 		Thread.sleep(5000);
 		rm.enterReimbursementName("Medicines"+Utility.getRandNum(1041, 1050));
@@ -259,7 +254,6 @@ public class ReimbursementMaster extends BaseTest {
 		String s=rm.getMessage();
 		Assert.assertEquals(s, "Reimbursement Master is successfully created.");
 	}
-	
 	@Test(priority=11)
 	public void verifyUpdatedReimbursementMaster_SC_262() throws Exception{
 		UpdateReimbursement ur=new UpdateReimbursement(driver);
@@ -276,7 +270,6 @@ public class ReimbursementMaster extends BaseTest {
 		String s=ur.getMessage();
 		Assert.assertEquals(s, "Reimbursement Master is successfully updated.");
 	}
-
 	@Test(priority=12)
 	public void verifyDeletedReimbursement_SC_263() throws Exception{
 		DeleteReimbursement dr=new DeleteReimbursement(driver);

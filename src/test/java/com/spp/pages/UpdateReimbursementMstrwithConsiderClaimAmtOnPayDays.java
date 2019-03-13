@@ -44,6 +44,8 @@ public class UpdateReimbursementMstrwithConsiderClaimAmtOnPayDays extends BasePa
 	WebElement salaryHead;
 	@FindBy(xpath="//input[@value='Create Reimbursement Master']")
 	WebElement createReimbursementMaster;
+	@FindBy(id = "reimbursement_master_tds_ref_option_id")
+	WebElement TDSRef;
 	
 	public UpdateReimbursementMstrwithConsiderClaimAmtOnPayDays(WebDriver driver) {
 		super(driver);
@@ -87,6 +89,9 @@ public class UpdateReimbursementMstrwithConsiderClaimAmtOnPayDays extends BasePa
 	
 	public void selectModeOfPayment(String value){
 		dropDownSelect(modeOfPayment, value);
+	}
+	public void selectTDSRef(String value){
+		dropDownSelect(TDSRef, value);
 	}
 	
 	public void enterReimbursementName(String value){

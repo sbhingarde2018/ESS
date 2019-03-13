@@ -29,6 +29,8 @@ public class CreateReimbursementMasterForTypeLumpsum extends BasePage{
 	WebElement createReimbursementMaster;
 	@FindBy(xpath="//strong[text()='Reimbursement Master is successfully created.']")
 	WebElement successfullMassege;
+	@FindBy(id = "reimbursement_master_tds_ref_option_id")
+	WebElement TDSRef;
 
 	public CreateReimbursementMasterForTypeLumpsum(WebDriver driver) {
 		super(driver);
@@ -54,7 +56,9 @@ public class CreateReimbursementMasterForTypeLumpsum extends BasePage{
 	public void selectModeOfPayment(String value){
 		dropDownSelect(modeOfPayment, value);
 	}
-	
+	public void selectTDSRef(String value){
+		dropDownSelect(TDSRef, value);
+	}
 	public void enterReimbursementName(String value){
 		reimbursementName.sendKeys(value);
 	}
@@ -76,7 +80,3 @@ public class CreateReimbursementMasterForTypeLumpsum extends BasePage{
 	}
 
 }
-
-	
-	
-

@@ -32,6 +32,8 @@ public class AddNewReimbursement extends BasePage{
 	WebElement Pagechange;
 	@FindBy(xpath="(//a[text()='Delete'])[1]")
 	WebElement DeleteButton;
+	@FindBy(id = "reimbursement_master_tds_ref_option_id")
+	WebElement TDSRef;
 	
 	public AddNewReimbursement(WebDriver driver) {
 		super(driver);
@@ -56,6 +58,9 @@ public class AddNewReimbursement extends BasePage{
 	
 	public void selectModeOfPayment(String value){
 		dropDownSelect(modeOfPayment, value);
+	}
+	public void selectTDSRef(String value){
+		dropDownSelect(TDSRef, value);
 	}
 	
 	public void enterReimbursementName(String value){

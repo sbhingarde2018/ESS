@@ -33,6 +33,8 @@ public class CreateReimbursementMasterForTypeAllotment extends BasePage {
 	WebElement successfullMassege;
 	@FindBy(xpath="//*[@class='action-delete']")
 	WebElement DeleteButton;
+	@FindBy(id = "reimbursement_master_tds_ref_option_id")
+	WebElement TDSRef;
 
 	public CreateReimbursementMasterForTypeAllotment(WebDriver driver) {
 		super(driver);
@@ -58,7 +60,9 @@ public class CreateReimbursementMasterForTypeAllotment extends BasePage {
 	public void selectModeOfPayment(String value){
 		dropDownSelect(modeOfPayment, value);
 	}
-	
+	public void selectTDSRef(String value){
+		dropDownSelect(TDSRef, value);
+	}
 	public void enterReimbursementName(String value){
 		reimbursementName.sendKeys(value);
 	}

@@ -3,9 +3,7 @@
 <suite name="Suite" configfailurepolicy="continue">
   <test name="Test">
     <classes>
-   <class name="com.spp.scripts.InsuranceMaster"/>
-   <class name="com.spp.scripts.GroupInsuranceMaster"/>
-   
+   <class name="com.spp.scripts.ReimbursementMaster"/>
       
    
    <!--<class name="com.spp.scripts.ReimbursementClaim"/>
@@ -16,8 +14,8 @@
    <class name="com.spp.scripts.UserSettings"/>
    <class name="com.spp.scripts.FinancialInstitution"/>
    <class name="com.spp.scripts.LeavePolicy"/>
-   
-    
+   <class name="com.spp.scripts.InsuranceMaster"/>
+   <class name="com.spp.scripts.GroupInsuranceMaster"/>    
    <class name="com.spp.scripts.Classifications"/> 
    <class name="com.spp.scripts.AttendanceConfigurations"/>
    <class name="com.spp.scripts.GeneralSettings"/>
@@ -30,7 +28,7 @@
    <!--<class name="com.spp.scripts.States"/>--> 
    <!--<class name="com.spp.scripts.ReimbursementAllotment"/> 
    <class name="com.spp.scripts.AdditionalSalary"/>
-    <class name="com.spp.scripts.ReimbursementMaster"/>
+    
     <class name="com.spp.scripts.AdvanceMaster"/>
    <class name="com.spp.scripts.LoanMaster"/>
    <class name="com.spp.scripts.PerodicIncentiveMaster"/>    
