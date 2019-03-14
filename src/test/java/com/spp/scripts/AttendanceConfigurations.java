@@ -32,7 +32,6 @@ public class AttendanceConfigurations extends BaseTest{
 		String s=ac.getMessage();
 		Assert.assertEquals(s, "Attendance Configuration was Successfully created");
 	}
-
 	@Test(priority=1)
 	public void verifyUpdatedAttendanceConfig_SC_85(){
 		UpdateAttendanceConfiguration ua=new UpdateAttendanceConfiguration(driver);
@@ -47,8 +46,6 @@ public class AttendanceConfigurations extends BaseTest{
 		String s=ua.getMessage();
 		Assert.assertEquals(s, "Attendance Configuration was Successfully updated");
 	}
-	
-	
 	@Test(priority=2)
 	public void CheckForSalaryCalenderInAttendanceConfiguration_SC_319() throws InterruptedException{
 		CheckForSalaryCalenderInAttendanceConfiguration ua=new CheckForSalaryCalenderInAttendanceConfiguration(driver);
@@ -59,10 +56,11 @@ public class AttendanceConfigurations extends BaseTest{
 		ua.clickUpdateButton();
 		String s=ua.getMessage();
 		Assert.assertEquals(s, "Attendance Configuration was Successfully updated");
+		ua.resizeWindow();
 		Thread.sleep(5000);
 		ua.clickSalaryLink();
 		ua.clickSalaryEditor();
-		ua.clickPayMonth("Mar/2013");
+		ua.clickPayMonth("Apr/2018");
 		ua.clickSalaryStructure("Structure");
 		ua.clickGetValues();
 		Thread.sleep(4000);
@@ -71,11 +69,16 @@ public class AttendanceConfigurations extends BaseTest{
 		ua.clickSelectAllBox();
 		ua.clickEmployee();
 		ua.clickProcessSalaryButton();
+		Thread.sleep(5000);
 		ua.clickEdit();
+		Thread.sleep(5000);
+		ua.clickDetailView();
+		Thread.sleep(5000);
 		String p=ua.getPayDays();
+		Thread.sleep(5000);
 		System.out.println("pay days in selected month "+p);
-		
-		
+		Thread.sleep(5000);
+		ua.exitFullscreen();
 	}
 	@Test(priority=3)
 	public void CheckForOnlyWorkingDayAndHolidayInAttendanceConfig_SC_320() throws InterruptedException{
@@ -87,10 +90,11 @@ public class AttendanceConfigurations extends BaseTest{
 		ua.clickUpdateButton();
 		String s=ua.getMessage();
 		Assert.assertEquals(s, "Attendance Configuration was Successfully updated");
+		ua.resizeWindow();
 		Thread.sleep(5000);
 		ua.clickSalaryLink();
 		ua.clickSalaryEditor();
-		ua.clickPayMonth("Mar/2013");
+		ua.clickPayMonth("Mar/2018");
 		ua.clickSalaryStructure("Structure");
 		ua.clickGetValues();
 		Thread.sleep(4000);
@@ -99,9 +103,16 @@ public class AttendanceConfigurations extends BaseTest{
 		ua.clickSelectAllBox();
 		ua.clickEmployee();
 		ua.clickProcessSalaryButton();
+		Thread.sleep(5000);
 		ua.clickEdit();
+		Thread.sleep(5000);
+		ua.clickDetailView();
+		Thread.sleep(5000);
 		String p=ua.getPayDays();
+		Thread.sleep(5000);
 		System.out.println("pay days in selected month "+p);
+		Thread.sleep(5000);
+		ua.exitFullscreen();
 	}
 	@Test(priority=4)
 	public void CheckForOnlyWorkingDaysInAttendanceConfig_SC_321() throws InterruptedException{
@@ -113,10 +124,11 @@ public class AttendanceConfigurations extends BaseTest{
 		ua.clickUpdateButton();
 		String s=ua.getMessage();
 		Assert.assertEquals(s, "Attendance Configuration was Successfully updated");
+		ua.resizeWindow();
 		Thread.sleep(5000);
 		ua.clickSalaryLink();
 		ua.clickSalaryEditor();
-		ua.clickPayMonth("Mar/2013");
+		ua.clickPayMonth("Mar/2018");
 		ua.clickSalaryStructure("Structure");
 		ua.clickGetValues();
 		Thread.sleep(4000);
@@ -126,10 +138,16 @@ public class AttendanceConfigurations extends BaseTest{
 		ua.clickEmployee();
 		ua.clickProcessSalaryButton();
 		ua.clickEdit();
+		Thread.sleep(5000);
+		ua.clickDetailView();
+		Thread.sleep(5000);
 		String p=ua.getPayDays();
+		Thread.sleep(5000);
 		System.out.println("pay days in selected month "+p);
+		Thread.sleep(4000);
+		ua.exitFullscreen();
 	}
-		@Test(priority=5)
+	@Test(priority=5)
 	public void CheckForFixed30DaysInAttendanceConfig_SC_322() throws InterruptedException{
 		CheckForFixed30DaysInAttendanceConfig ua=new CheckForFixed30DaysInAttendanceConfig(driver);
 		ua.clickMastserLink();
@@ -139,23 +157,32 @@ public class AttendanceConfigurations extends BaseTest{
 		ua.clickUpdateButton();
 		String s=ua.getMessage();
 		Assert.assertEquals(s, "Attendance Configuration was Successfully updated");
+		ua.resizeWindow();
 		Thread.sleep(5000);
 		ua.clickSalaryLink();
 		ua.clickSalaryEditor();
-		ua.clickPayMonth("Mar/2013");
+		ua.clickPayMonth("Mar/2018");
 		ua.clickSalaryStructure("Structure");
 		ua.clickGetValues();
 		Thread.sleep(4000);
 		ua.clickLoad();
 		Thread.sleep(4000);
 		ua.clickSelectAllBox();
+		Thread.sleep(4000);
 		ua.clickEmployee();
+		Thread.sleep(4000);
 		ua.clickProcessSalaryButton();
+		Thread.sleep(4000);
 		ua.clickEdit();
+		Thread.sleep(4000);
+		ua.clickDetailView();
+		Thread.sleep(4000);
 		String p=ua.getPayDays();
+		Thread.sleep(4000);
 		System.out.println("pay days in selected month "+p);
+		Thread.sleep(4000);
+		ua.exitFullscreen();
 	}
-	
 	@Test(priority=6)
 	public void CheckAttendanceConfigforOnlyWorkingDaysandWeeklyHoliday_SC_449() throws Exception{
 		CheckAttendanceConfigforOnlyWorkingDaysandWeeklyHoliday ua=new CheckAttendanceConfigforOnlyWorkingDaysandWeeklyHoliday(driver);
@@ -166,9 +193,7 @@ public class AttendanceConfigurations extends BaseTest{
 		ua.updateattendconfig();
 		String d=ua.getMessage();
 		Assert.assertEquals(d, "Attendance Configuration was Successfully updated");
-	}
-	
-			
+	}		
 	@Test(priority=7)
 	public void verifyDeletedAttendanceConfig_SC_84(){
 		DeleteAttendanceConfig ac=new DeleteAttendanceConfig(driver);
@@ -178,7 +203,6 @@ public class AttendanceConfigurations extends BaseTest{
 		String s=ac.getMessage();
 		Assert.assertEquals(s,"Attendance Configuration Successfully deleted");
 	}
-	
 	@Test(priority=8)
 	public void CreateAttendanceConfigwithAttendTypeMonthly_SC_448() throws Exception{
 		CreateAttendanceConfigwithAttendTypeMonthly ua=new CreateAttendanceConfigwithAttendTypeMonthly(driver);
@@ -194,12 +218,6 @@ public class AttendanceConfigurations extends BaseTest{
 		String d=ua.getMessage();
 		Assert.assertEquals(d, "Attendance Configuration was Successfully created");
 		Thread.sleep(2000);
-		ua.clickDelete();
-		
+		ua.clickDelete();		
 	}
-	
-	
-	
 }
-
-	

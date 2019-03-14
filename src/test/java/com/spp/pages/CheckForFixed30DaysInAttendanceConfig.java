@@ -30,7 +30,7 @@ public class CheckForFixed30DaysInAttendanceConfig extends BasePage{
 	WebElement SalaryStructure;
 	@FindBy(id="get_salary")
 	WebElement GetValues;
-	@FindBy(xpath="//*[@id=\"bf_form\"]/div[9]/button[1]")
+	@FindBy(xpath="//*[@id=\"bf_form\"]/div[10]/button[1]")
 	WebElement Load;
 	@FindBy(xpath="//*[@id=\"show_message\"]/div/strong")
 	WebElement SuccessfulMessage;
@@ -44,6 +44,8 @@ public class CheckForFixed30DaysInAttendanceConfig extends BasePage{
 	WebElement Edit;
 	@FindBy(xpath="//*[@id=\"salary_detail\"]/tbody/tr/td[3]")
 	WebElement GetPayDays;
+	@FindBy(xpath="//*[@id='main']/div[2]/nav/ul/li[2]/a/span")
+	WebElement DetailView;
 	public CheckForFixed30DaysInAttendanceConfig(WebDriver driver) {
 		super(driver);
 		PageFactory.initElements(driver, this);
@@ -60,7 +62,9 @@ public class CheckForFixed30DaysInAttendanceConfig extends BasePage{
 	public void clickEditIcon(){
 		editIcon.click();
 	}
-	
+	public void clickDetailView(){
+		DetailView.click();
+	}
 	
 	
 	public void clickSalaryCalender(){

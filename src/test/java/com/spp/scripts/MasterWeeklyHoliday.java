@@ -53,6 +53,4 @@ public class MasterWeeklyHoliday extends BaseTest{
 	 	String s=wh.getMessage();
 	 	Assert.assertEquals(s, "Master Weekly off Successfully Deleted.");
 	}
-
-}
-		
+}	
