@@ -12,7 +12,7 @@ public class UpdateFormula extends BasePage {
 	WebElement masterLink;
 	@FindBy(xpath="//ul[@id='menu']//li[3]//div[4]//li[6]//a[text()='Formula Editor']")
 	WebElement formulaEditor;
-	@FindBy(xpath="//*[@id=\"dt_formula_list\"]/tbody/tr/td[contains(text(),'example')]/parent::tr/td[2]/span[1]/a")
+	@FindBy(xpath="//*[@id='dt_formula_list']/tbody/tr/td[contains(text(),'Basic')]/parent::tr/td[2]/span[1]/a")
 	WebElement editIcon;
 	@FindBy(id="formula_formulae_name")
 	WebElement name;

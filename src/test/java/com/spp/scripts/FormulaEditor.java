@@ -17,10 +17,10 @@ public class FormulaEditor extends BaseTest {
 		af.clickMastserLink();
 		af.selectFormulaEditor();
 		af.clickAddFormula();
-		af.enterName("example");
+		af.enterName("Basic");
 		af.clickBasicFormula();
 		af.clickOperator();
-		af.enterExpression("0.6");
+		af.enterExpression("0.50");
 		af.clickVerifyButton();
 		String s=af.getMessage();
 		Assert.assertEquals(s, "Formula is verified.");
@@ -48,7 +48,7 @@ public class FormulaEditor extends BaseTest {
 		uf.clickUpdateButton();
 		String s1=uf.getUpdateMessage();
 		Assert.assertEquals(s1, "Formula is successfully updated");
-	} 
+	}
 	
 	@Test(priority=2)
 	public void verifyDeletedFormula_SC_76(){
@@ -58,8 +58,5 @@ public class FormulaEditor extends BaseTest {
 		df.clickDeleteButton();
 		String s=df.getMessage();
 		Assert.assertEquals(s,"Formula is successfully deleted");
-	} 
+	}
 }
-	
-
-

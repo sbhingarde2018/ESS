@@ -106,6 +106,5 @@ public class HRCategory extends BaseTest{
 		Assert.assertEquals(s, "HR Category Detail created successfully.");
 		cr.deletedetail();
 		Thread.sleep(5000);
-	} 
-	
+	}
 }
