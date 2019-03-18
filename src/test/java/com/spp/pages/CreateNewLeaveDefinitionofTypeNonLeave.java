@@ -24,8 +24,10 @@ public class CreateNewLeaveDefinitionofTypeNonLeave extends BasePage{
 	WebElement CreateLeave;
 	@FindBy(xpath="//strong[text()='Leave definition successfully created.']")
 	WebElement message;
-	@FindBy(xpath="//*[@id=\"leave_definitions\"]/div[2]/table/tbody/tr/td[contains(text(),'Non Leave')]/parent::tr/td[7]/a")
+	@FindBy(xpath="//*[@id='leave_definitions']/div/table/tbody/tr/td[contains(text(),'Non Leave')]/parent::tr/td[7]/a")
 	WebElement ClickDelete;
+	@FindBy(id="leave_definition_leave")
+	WebElement CheckboxLeave;
 	
 	public CreateNewLeaveDefinitionofTypeNonLeave(WebDriver driver) {
 		super(driver);
@@ -43,8 +45,8 @@ public class CreateNewLeaveDefinitionofTypeNonLeave extends BasePage{
 	public void entershortname(String value) {
 		EnterShortName.sendKeys(value);
 	}
-	public void considerforleave() {
-		ConsiderforLeave.click();
+	public void uncheckLeave() {
+		CheckboxLeave.click();
 	}
 	public void createleave() {
 		CreateLeave.click();

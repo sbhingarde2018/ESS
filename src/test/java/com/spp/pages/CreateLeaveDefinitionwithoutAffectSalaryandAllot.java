@@ -54,6 +54,7 @@ public class CreateLeaveDefinitionwithoutAffectSalaryandAllot extends BasePage{
 	}
 	public void clickdelete() {
 		ClickDelete.click();
+		switchToPopUpAndAccept(driver);
 	}
 	public void uncheckallot() {
 		UncheckAllot.click();

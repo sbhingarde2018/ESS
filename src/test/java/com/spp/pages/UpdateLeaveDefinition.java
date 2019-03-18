@@ -12,7 +12,7 @@ public class UpdateLeaveDefinition extends BasePage{
 	WebElement masterLink;
 	@FindBy(xpath="//a[text()='Leave Definitions']")
 	WebElement leaveDefinitions;
-	@FindBy(xpath="//*[@id='leave_definitions']/div[2]/table/tbody/tr/td[contains(text(),'newleave')]/parent::tr/td[6]/a")
+	@FindBy(xpath="//*[@id='leave_definitions']/div/table/tbody/tr/td[contains(text(),'Leave1')]/parent::tr/td[6]/a")
 	WebElement editButton;
 	@FindBy(id="leave_definition_leave_name")
 	WebElement leaveName;
@@ -62,6 +62,5 @@ public class UpdateLeaveDefinition extends BasePage{
 	
 	public String getMessage(){
 		return sucessfullMessage.getText();
-	}
-	
+	}	
 }

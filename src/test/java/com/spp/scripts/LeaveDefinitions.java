@@ -12,29 +12,29 @@ import com.spp.pages.UpdateLeaveDefinition;
 
 public class LeaveDefinitions extends BaseTest {
 
-	/*@Test(priority=0)
+	@Test(priority=0)
 	public void verifyAddLeaveDefinitions_SC_33(){
 		CreateNewLeaveDefinitionofTypeNonLeave ld=new CreateNewLeaveDefinitionofTypeNonLeave(driver);
 		ld.clickonmaster();
 		ld.clickleavedefinitions();
 		ld.enterleavename("Non Leave");
 		ld.entershortname("NW");
-		ld.considerforleave();
+		ld.uncheckLeave();
 		ld.createleave();
 		String s=ld.getTextMessage();
 		Assert.assertEquals(s, "Leave definition successfully created.");
 		ld.clickonmaster();
 		ld.clickleavedefinitions();
 		ld.clickdelete();
-	} */
+	}
 	
 	@Test(priority=1)
 	public void CreateaNewLeaveDefinitionoftypeLeave_SC_31() throws Exception{
 		CreateNewLeaveDefinitionOfTypeLeave ld=new CreateNewLeaveDefinitionOfTypeLeave(driver);
 		ld.clickonmaster();
 		ld.clickleavedefinitions();
-		ld.enterleavename("Leave");
-		ld.entershortname("L");
+		ld.enterleavename("Leave1");
+		ld.entershortname("L1");
 		ld.considerforleave();
 		ld.createleave();
 		String s=ld.getTextMessage();
@@ -49,14 +49,14 @@ public class LeaveDefinitions extends BaseTest {
 		ld.selectLeaveDefinitions();
 		ld.clickEditLeaveDefinition();
 		Thread.sleep(2000);
-		ld.enterLeaveName("Leave");
-		ld.enterShortName("LE");
+		ld.enterLeaveName("Leave2");
+		ld.enterShortName("LE2");
 		Thread.sleep(2000);
 		ld.clickConsiderForLeaveSettings();
 		ld.clickUpdateButton();
 		String s=ld.getMessage();
 		Assert.assertEquals(s, "Leave definition successfully updated.");
-	}	
+	}
 	
 	@Test(priority=3)
 	public void verifyDeletedLeaveDefinition_SC_34() throws Exception{
@@ -82,8 +82,5 @@ public class LeaveDefinitions extends BaseTest {
 		ld.clickonmaster();
 		ld.clickleavedefinitions();
 		ld.clickdelete();
-	
-	}
-	
-	
+	}	
 }

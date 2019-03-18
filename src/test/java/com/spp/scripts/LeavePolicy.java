@@ -56,7 +56,7 @@ import com.spp.pages.UpdateLeavePolicy;
 
 public class LeavePolicy extends BaseTest {
 
-	/*@Test(priority=0)
+	@Test(priority=0)
 	public void verifyCreatedLeavePolicy_SC_35(){
 		CreateLeavePolicy lp=new CreateLeavePolicy(driver);
 		lp.clickMastserLink();
@@ -69,8 +69,8 @@ public class LeavePolicy extends BaseTest {
 		String s=lp.getmessage();
 		Assert.assertEquals(s, "Leave policy master successfully created");
 	}
-
-		@Test(priority=1)
+	
+	@Test(priority=1)
 	public void verifyUpdatedLeavePolicy_SC_36() throws Exception{
 		UpdateLeavePolicy lp=new UpdateLeavePolicy(driver);
 		Thread.sleep(5000);
@@ -84,9 +84,8 @@ public class LeavePolicy extends BaseTest {
 		Assert.assertEquals(s, "Leave policy master successfully updated");
 	} 
 		
-		
-		@Test(priority=2)
-		public void verifyAddedLeaves_SC_38(){
+	@Test(priority=2)
+	public void verifyAddedLeaves_SC_38(){
 			AddLeaves al=new AddLeaves(driver);
 			al.clickMastserLink();
 			al.selectLeavePolicy();
@@ -95,9 +94,9 @@ public class LeavePolicy extends BaseTest {
 			al.clickAddButton();
 			String s=al.getMessage();
 			Assert.assertEquals(s, "Leave policy setting was successfully created.");
-		}
+	}
 		
-		@Test(priority=3)
+	@Test(priority=3)
 		public void verifyDeletedLeave_SC_39() throws InterruptedException{
 			DeleteLeave dl=new DeleteLeave(driver);
 			dl.clickMastserLink();
@@ -107,9 +106,9 @@ public class LeavePolicy extends BaseTest {
 			String s=dl.getMessage();
 			Assert.assertEquals(s, "Leave deleted successfully.");
 		
-		} 
+		}
 		
-		@Test(priority=4)
+	@Test(priority=4)
 		public void verifyDeletedLeavePolicy_SC_37() throws InterruptedException{
 			DeleteLeavePolicy dp=new DeleteLeavePolicy(driver);
 			dp.clickMastserLink();
@@ -130,8 +129,6 @@ public class LeavePolicy extends BaseTest {
 		lp.clickCreateButton();
 		String s=lp.getMessage();
 		Assert.assertEquals(s, "Leave policy master successfully Cloned");
-
-
 	}
 	@Test(priority=6)
 	public void verifyGeneralLink_SC_271() throws Exception {
@@ -146,7 +143,7 @@ public class LeavePolicy extends BaseTest {
 	}  
 
 	
-	@Test(priority=7)
+	/*@Test(priority=7)
 	public void verifyUpdatedLeaveBeahaviour_SC_272() throws InterruptedException{
 		LeaveBehaviourSettings lb=new LeaveBehaviourSettings(driver);
 		lb.clickMastserLink();
@@ -960,7 +957,7 @@ public class LeavePolicy extends BaseTest {
  	lb.clickLeaveAllotmentBox();
  	lb.clickUpdateButton();    
 }*/
-     @Test(priority=27) 
+     /*@Test(priority=27) 
      public void UpdateAutoAllotSettingsMonthly_SC_356() throws InterruptedException{
     	 UpdateAutoAllotSettingsMonthly lb=new UpdateAutoAllotSettingsMonthly(driver);
  	lb.clickMastserLink();
@@ -996,7 +993,7 @@ public class LeavePolicy extends BaseTest {
  	lb.clickLeaveAllotmentBox();
  	lb.clickUpdateButton();  
 }
-   /*  @Test(priority=28) 
+*/   /*  @Test(priority=28) 
 	public void CheckAutoAllotSettingsMonthly_SC_357() throws InterruptedException{
 	    	 CheckAutoAllotSettingsMonthly lb=new CheckAutoAllotSettingsMonthly(driver);
 	lb.clickReport();
@@ -1071,7 +1068,7 @@ public class LeavePolicy extends BaseTest {
 	lb.clickGenerateReport();
 	Thread.sleep(7000);
 }*/
-@Test(priority=31) 
+	/*@Test(priority=31) 
      public void UpdateAutoAllotSettingsQuarterly_SC_360() throws InterruptedException{
     	 UpdateAutoAllotSettingsQuarterly lb=new UpdateAutoAllotSettingsQuarterly(driver);
  	lb.clickMastserLink();
@@ -1105,7 +1102,7 @@ public class LeavePolicy extends BaseTest {
  	lb.clickAutoAllotTab();
  	lb.clickLeaveAllotmentBox();
  	lb.clickUpdateButton();     
-}
+}*/
 
    /*  @Test(priority=32) 
  	public void CheckAutoAllotSettingsQuarterly_SC_361() throws InterruptedException{
@@ -1126,9 +1123,9 @@ public class LeavePolicy extends BaseTest {
  	lb.clickGenerateReport();
  	Thread.sleep(7000);
  }*/
-     @Test(priority=33) 
-     public void UpdateAutoAllotSettingsHalfYearly_SC_362() throws InterruptedException{
-    	 UpdateAutoAllotSettingsHalfYearly lb=new UpdateAutoAllotSettingsHalfYearly(driver);
+    /*@Test(priority=33) 
+    public void UpdateAutoAllotSettingsHalfYearly_SC_362() throws InterruptedException{
+    UpdateAutoAllotSettingsHalfYearly lb=new UpdateAutoAllotSettingsHalfYearly(driver);
  	lb.clickMastserLink();
  	lb.selectLeavePolicy();
  	lb.clickAddLeaves();
@@ -1160,7 +1157,7 @@ public class LeavePolicy extends BaseTest {
  	lb.clickAutoAllotTab();
  	lb.clickLeaveAllotmentBox();
  	lb.clickUpdateButton();     
-}
+}*/
    /*  @Test(priority=34) 
   	public void CheckAutoAllotSettingsHalfYearly_SC_363() throws InterruptedException{
     	 CheckAutoAllotSettingsHalfYearly lb=new CheckAutoAllotSettingsHalfYearly(driver);
@@ -1180,7 +1177,7 @@ public class LeavePolicy extends BaseTest {
   	lb.clickGenerateReport();
   	Thread.sleep(7000);
 }*/
-	@Test(priority=35) 
+	/*@Test(priority=35) 
     public void UpdateAutoAllotSettingsYearly_SC_364() throws InterruptedException{
    	 UpdateAutoAllotSettingsYearly lb=new UpdateAutoAllotSettingsYearly(driver);
 	lb.clickMastserLink();
@@ -1214,7 +1211,7 @@ public class LeavePolicy extends BaseTest {
 	lb.clickAutoAllotTab();
 	lb.clickLeaveAllotmentBox();
 	lb.clickUpdateButton();     
-}
+}*/
 	/*@Test(priority=36) 
   	public void CheckAutoAllotSettingsYearly_SC_365() throws InterruptedException{
     	 CheckAutoAllotSettingsYearly lb=new CheckAutoAllotSettingsYearly(driver);
