@@ -15,9 +15,6 @@ import com.spp.pages.UpdateFinancilInstitutions;
 
 public class FinancialInstitution extends BaseTest{
 	
-	
-	
-	
 	@Test(priority=0)
 	public void verifyCreatedFinancialInstitutions_SC_72(){
 		AddFinancialInstitutions a=new AddFinancialInstitutions(driver);
@@ -54,9 +51,6 @@ public class FinancialInstitution extends BaseTest{
 		String s=uf.getMessage();
 		Assert.assertEquals(s, "Financial Institution successfully updated");
 	}
-	
-	
-	
 	@Test(priority=2)
 	public void GetFinancialListAccordingToSalaryAccount_SC_343() throws Exception{
 		GetFinancialListAccordingToAllFinancialInstituions ld=new GetFinancialListAccordingToAllFinancialInstituions(driver);
@@ -82,7 +76,7 @@ public class FinancialInstitution extends BaseTest{
 		ld.clickAccountType("Insurance");
 		Thread.sleep(5000);
 		ld.clickGetList();
-	}			
+	}		
 	
 	@Test(priority=5)
 	public void GetListAccordingToLoan_SC_346() throws Exception{
@@ -137,6 +131,7 @@ public class FinancialInstitution extends BaseTest{
 		AssignFinancialInstitutionandTryToDelete td= new AssignFinancialInstitutionandTryToDelete(driver);
 		td.clickonemployee();
 		td.clickonemployeedetails();
+		td.resizeWindow();
 		td.clickonfilter();
 		Thread.sleep(5000);
 		td.clickonload();
@@ -149,15 +144,15 @@ public class FinancialInstitution extends BaseTest{
 		td.Effectivedate();
 		Thread.sleep(2000);
 		td.changeyear();
-		Thread.sleep(2000);
-		td.changeyear();
-		Thread.sleep(2000);
-		td.changeyear();
-		Thread.sleep(2000);
-		td.changeyear();
-		Thread.sleep(2000);
-		td.changeyear();
-		Thread.sleep(2000);
+		//Thread.sleep(2000);
+		//td.changeyear();
+		//Thread.sleep(2000);
+		//td.changeyear();
+		//Thread.sleep(2000);
+		//td.changeyear();
+		//Thread.sleep(2000);
+		//td.changeyear();
+		//Thread.sleep(2000);
 		td.Selectdate();
 		Thread.sleep(2000);
 		td.enterbankaccno("98765");
@@ -182,6 +177,7 @@ public class FinancialInstitution extends BaseTest{
 		td.clickMastserLink();
 		td.selectFinancialInstitution();	
 		td.deletefinancialinsti();
+		td.exitFullscreen();
+		Thread.sleep(2000);
 	}
-
 }

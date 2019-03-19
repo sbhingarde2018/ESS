@@ -15,9 +15,9 @@ public class AssignFinancialInstitutionandTryToDelete extends BasePage{
 	WebElement ClickOnEmployDetails;
 	@FindBy(id="filter_head")
 	WebElement ClickOnFilterHead;
-	@FindBy(xpath="//*[@id=\"bf_form\"]/div[9]/button[1]")
+	@FindBy(xpath="//*[@id=\"bf_form\"]/div[10]/button[1]")
 	WebElement ClickOnLoad;
-	@FindBy(xpath="//*[@id=\"employees_dtable\"]/tbody/tr/td[1]/a[1]")
+	@FindBy(xpath="//*[@id='employees_dtable']/tbody/tr[1]/td/a[1]")
 	WebElement ClickOnView; 
 	@FindBy(xpath="//*[@id=\"classification_details\"]/a")
 	WebElement ClickClassificationDetail;
@@ -27,7 +27,7 @@ public class AssignFinancialInstitutionandTryToDelete extends BasePage{
 	WebElement SelectBank;
 	@FindBy(id="sed")
 	WebElement EffectiveDate;
-	@FindBy(xpath="//*[@id='CalendarControl']/table/tbody/tr[3]/td[2]/a")
+	@FindBy(xpath="//*[@id='CalendarControl']/table/tbody/tr[5]/td[3]/a")
 	WebElement SelectDate;
 	@FindBy(xpath="//*[@id=\"CalendarControl\"]/table/tbody/tr[1]/td[1]/a")
 	WebElement ChangeYear;
