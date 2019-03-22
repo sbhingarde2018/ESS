@@ -14,7 +14,7 @@ public class ExcelUploadforHolidays extends BasePage{
 	WebElement ClickOnMaster;
 	@FindBy(xpath="//*[@id=\"menu\"]/li[3]/div/div[3]/ul/li[3]/a")
 	WebElement ClickOnHolidayLists;
-	@FindBy(xpath="//*[@id=\"holidays_list\"]/tbody/tr/td[contains(text(),'Chennai')]/parent::tr/td[3]/a")
+	@FindBy(xpath="//*[@id='holidays_list']/tbody/tr/td[contains(text(),'Master')]/parent::tr/td[3]/a")
 	WebElement ClickOnView;
 	@FindBy(xpath="//*[@id=\"ui-accordion-accordion-panel-0\"]/li[1]/a")
 	WebElement GenerateSampleTemplate;
@@ -24,8 +24,8 @@ public class ExcelUploadforHolidays extends BasePage{
 	WebElement ChooseFile;
 	@FindBy(xpath="//*[@id=\"main\"]/form/div[3]/div/div/fieldset/div[2]/div/input")
 	WebElement UploadFile;
-	
-	
+	@FindBy(xpath="//*[@id='holidays_master_list']/tbody/tr/td[contains(text(),'Rakshabandhan')]/parent::tr/td/a[2]")
+	WebElement DeleteHoliday;
 	
 	
 	public ExcelUploadforHolidays(WebDriver driver) {
@@ -53,5 +53,8 @@ public class ExcelUploadforHolidays extends BasePage{
 	public void uploadfile() {
 		UploadFile.click();
 	}
-	 
+	public void deleteHoliday() {
+		DeleteHoliday.click();
+		switchToPopUpAndAccept(driver);
+	}	
 }

@@ -71,13 +71,14 @@ public class EmployeeDetails extends BaseTest{
 		String s=at.getMessage();
 		Assert.assertEquals(s, "Employee successfully created");
 						
-	}	
+	}
 	@Test(priority=1)
 	public void CheckDeleteClassificationDetailsInEmployee_SC_421() throws Exception {
 	DeleteClassificationDetailsInEmployee ce = new DeleteClassificationDetailsInEmployee(driver);
 		ce.clickonemployee();
 		ce.clickonemployeedetails();
 		ce.clickonfilter();
+		ce.resizeWindow();
 		Thread.sleep(2000);
 		ce.clickonload();
 		Thread.sleep(2000);
@@ -87,6 +88,8 @@ public class EmployeeDetails extends BaseTest{
 		ce.switchToPopUpAndAccept(driver);
 		String message = ce.getMessage();
 		Assert.assertEquals(message, "Employee detail was successfully deleted.");
+		ce.exitFullscreen();
+		Thread.sleep(2000);
 	}
 	
 	@Test(priority=2)
@@ -113,13 +116,14 @@ public class EmployeeDetails extends BaseTest{
 		ww.clickCreateClassificationButton();
 		String s=ww.getMessage();
 		Assert.assertEquals(s, "Employee detail was successfully created.");
-		
-}	
+		}
+			
 	@Test(priority=3)
 	public void CheckDeleteClassificationDetailsInEmployeeExtra1_SC_421() throws Exception {
 	DeleteClassificationDetailsInEmployee ce = new DeleteClassificationDetailsInEmployee(driver);
 		ce.clickonemployee();
 		ce.clickonemployeedetails();
+		ce.resizeWindow();
 		ce.clickonfilter();
 		Thread.sleep(2000);
 		ce.clickonload();
@@ -130,6 +134,7 @@ public class EmployeeDetails extends BaseTest{
 		ce.switchToPopUpAndAccept(driver);
 		String message = ce.getMessage();
 		Assert.assertEquals(message, "Employee detail was successfully deleted.");
+		ce.exitFullscreen();
 	}
 	
 	@Test(priority=4)
@@ -146,7 +151,7 @@ public class EmployeeDetails extends BaseTest{
 		ce.switchToPopUpAndAccept(driver);
 		Thread.sleep(5000);
 	}
-	@Test(priority=5)
+	/*@Test(priority=5)
 		public void AddEmployeewithClassificationDetail_SC_440() throws Exception{
 			AddNewEmployeeTDS at=new AddNewEmployeeTDS(driver);
 			at.navigateEmployee();
@@ -411,7 +416,7 @@ public class EmployeeDetails extends BaseTest{
 		Thread.sleep(2000);
 		cr.generatereport();
 	
-	}
+	}*/
 		/*@Test(priority=17)
 	public void CheckifEmployeeEmployeeDetailsReportsEmployeeStatutoryReportredirectstoReportmodule_SC_463() throws Exception {
 		CheckifEmployeeEmployeeDetailsReportsEmployeeStatutoryReportredirectstoReportmodule cr=new CheckifEmployeeEmployeeDetailsReportsEmployeeStatutoryReportredirectstoReportmodule(driver);
@@ -430,7 +435,7 @@ public class EmployeeDetails extends BaseTest{
 	
 	}*/
 	
-		@Test(priority=18)
+		/*@Test(priority=18)
 		public void verifyDataTemplateGeneration_SC_96() throws InterruptedException, IOException {
 		GenerateDataTemplate gxl = new GenerateDataTemplate(driver);
 			gxl.clickEmployeeTab();
@@ -523,5 +528,5 @@ public class EmployeeDetails extends BaseTest{
 		ce.deleteemployee();
 		ce.switchToPopUpAndAccept(driver);
 		Thread.sleep(5000);
-	}
+	}*/
 }

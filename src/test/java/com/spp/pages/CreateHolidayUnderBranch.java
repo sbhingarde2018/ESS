@@ -61,15 +61,12 @@ public class CreateHolidayUnderBranch extends BasePage {
 		description.clear();
 		description.sendKeys(value);
 	}
-
 	public void clickNationalHoliday(){
 		nationalHoliday.click();
 	}
-
 	public void clickCreateButton(){
 		createButton.click();
 	}
-
 	public String getMessage(){
 		return successfullyMessage.getText();
 	}
