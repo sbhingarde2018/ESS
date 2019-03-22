@@ -18,9 +18,9 @@ public class CheckAssignedClassificationDetailsCanBeDeletedOrNot extends BasePag
 	WebElement FilterHead;
 	@FindBy(xpath="//input[@attr='non_classified_emp']")
 	WebElement EmployeewithoutClass;
-	@FindBy(xpath="//*[@id=\"bf_form\"]/div[9]/button[1]")
+	@FindBy(xpath="//*[@id=\"bf_form\"]/div[10]/button[1]")
 	WebElement LoadButton;
-	@FindBy(xpath="//*[@id=\"employees_dtable\"]/tbody/tr[1]/td[6]/a")
+	@FindBy(xpath="//*[@id='employees_dtable']/tbody/tr[1]/td[6]/a[1]")
 	WebElement ViewButton;
 	@FindBy(xpath="//*[@id=\"classification_details\"]/a")
 	WebElement ClassificationDetails;
@@ -50,18 +50,34 @@ public class CheckAssignedClassificationDetailsCanBeDeletedOrNot extends BasePag
 	WebElement masterLink;
 	@FindBy(xpath="//a[text()='Classifications']")
 	WebElement classifications;
-    @FindBy(xpath="//tr/td[1][text()='Class111']/parent::tr/td[5]/a")
+    @FindBy(xpath="//*[@id='list_classification_headings']/div/table/tbody/tr/td[contains(text(),'Classification')]/parent::tr/td[5]/a")
     WebElement deleteButton;
     @FindBy(xpath="//strong[text()='Classification heading was successfully deleted.']")
     WebElement successfullMessage2;
     @FindBy(id="sed")
     WebElement Month;
-	
+    @FindBy(xpath="//*[@id=\"CalendarControl\"]/table/tbody/tr[1]/td[1]/a")
+	WebElement ChangeYear;
+    @FindBy(id="sed")
+	WebElement EffectiveDate;
+    @FindBy(xpath="//*[@id='CalendarControl']/table/tbody/tr[5]/td[3]/a")
+	WebElement SelectDate;
+    @FindBy(xpath="//*[@id='classification_heading_result_response']/div/li")
+	WebElement CantDeleteMessage;
+    
 	public CheckAssignedClassificationDetailsCanBeDeletedOrNot(WebDriver driver){
 		super(driver);
 		PageFactory.initElements(driver, this);
 }
-
+	public void changeyear() {
+		ChangeYear.click();
+	}
+	public void Effectivedate() {
+		EffectiveDate.click();
+	}
+	public void Selectdate() {
+		SelectDate.click();
+	}
 
 public void clickEmployeeLink() {
 	   employeeLink.click();
@@ -111,6 +127,9 @@ public void clickCreateClassificationButton(){
 }
 public String getMessage1(){
 return successfullMessage1.getText();
+}
+public String getMessage(){
+return CantDeleteMessage.getText();
 }
 public void clickMastserLink(){
 	masterLink.click();

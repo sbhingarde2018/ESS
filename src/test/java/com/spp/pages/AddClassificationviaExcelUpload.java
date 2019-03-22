@@ -23,7 +23,8 @@ public class AddClassificationviaExcelUpload extends BasePage{
 	WebElement ChooseFile;
 	@FindBy(xpath="//*[@id=\"main\"]/div[2]/fieldset/form/div[4]/input")
 	WebElement UploadFile;
-	
+	@FindBy(xpath = "//*[@id='classifications_list']/div/table/tbody/tr/td[contains(text(),'Testing1')]/parent::tr/td[3]/a")
+	WebElement DeleteButton;
 	
 	
 	public AddClassificationviaExcelUpload(WebDriver driver) {
@@ -51,5 +52,7 @@ public class AddClassificationviaExcelUpload extends BasePage{
 	public void uploadfile() {
 		UploadFile.click();
 	}
-	
+	public void deleteClassification() {
+		DeleteButton.click();	
+	}
 }

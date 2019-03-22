@@ -18,7 +18,7 @@ import com.spp.pages.EditClasssificationDetails;
 
 public class Classifications extends BaseTest {
 	
-	/*@Test(priority=0)
+	@Test(priority=0)
 	public void verifyCreatedClassification_SC_62(){
 		CreateClassification cc=new CreateClassification(driver);
 		cc.clickMastserLink();
@@ -34,10 +34,15 @@ public class Classifications extends BaseTest {
 	public void verifyUpdatedClassification_SC_352() throws Exception{
 		EditClassification ec=new EditClassification(driver);
 		ec.clickMastserLink();
+		//Thread.sleep(5000);
 		ec.selectClassifications();
+		//Thread.sleep(5000);
 		ec.clickEditIcon();
+		Thread.sleep(5000);
 		ec.enterDisplayOrder("1234564");
+		Thread.sleep(5000);
 		ec.clickUpdateButton();
+		Thread.sleep(5000);
 		String s=ec.getMessage();
 		Assert.assertEquals(s, "Classification Heading successfully updated.");
 	}
@@ -52,7 +57,7 @@ public class Classifications extends BaseTest {
 		ac.clickCreateButton();
 		String s=ac.getMessage();
 		Assert.assertEquals(s, "Classification created successfully.");
-	}*/
+	}
 	
 	@Test(priority=3)
 	public void verifyUpdatedClassificationDetails_SC_353() throws Exception{
@@ -70,7 +75,7 @@ public class Classifications extends BaseTest {
 		Assert.assertEquals(s, "Classification successfully updated.");
 	}
 	
-	/*@Test(priority=4)
+	@Test(priority=4)
 	public void verifyDeletedClassificationDetails_SC_65(){
 		DeleteClassificationDetails dc=new DeleteClassificationDetails(driver);
 		dc.clickMastserLink();
@@ -90,6 +95,7 @@ public class Classifications extends BaseTest {
 		String s=dc.getMessage();
 		Assert.assertEquals(s, "Classification heading was successfully deleted.");
 	}
+	
 	@Test(priority=6)
 	public void CheckForDuplicateClassificationHeadingAndDisplayOrder_SC_328() throws InterruptedException{
 		CheckForDuplicateClassificationHeadingAndDisplayOrder cc=new CheckForDuplicateClassificationHeadingAndDisplayOrder(driver);
@@ -115,49 +121,62 @@ public class Classifications extends BaseTest {
 		cc.selectClassifications();
 		cc.clickDeleteButton();
 		cc.switchToPopUpAndAccept(driver);
-	}*/
-	/*@Test(priority=7) 
+	}
+	
+	@Test(priority=7) 
 	public void CheckAssignedClassificationDetailsCanBeDeletedOrNot_SC_329() throws Exception{
 		CheckAssignedClassificationDetailsCanBeDeletedOrNot ww=new CheckAssignedClassificationDetailsCanBeDeletedOrNot(driver);
 		ww.clickEmployeeLink();
 		ww.selectEmployeeDetails();
 		ww.selectFilterHead();
+		ww.resizeWindow();
 		Thread.sleep(4000);
 		ww.selectLoadButton();
 		Thread.sleep(5000);
 		ww.selectViewButton();
 		ww.selectClassificationDetails();
 		ww.selectAddNewClassiDetails();
-		ww.selectSalaryStructure("gross");
-		ww.selectmonth("May/2013");
+		//ww.selectSalaryStructure("gross");
+		ww.Effectivedate();
+		Thread.sleep(2000);
+		ww.changeyear();
+		ww.Selectdate();
 		ww.selectAttendanceStructure("Karnataka");
 		ww.selectBranch("default");
 		ww.selectBank("CASH");
 		ww.selectLeavePolicy("Default");
-	//	ww.enterBankAc("74"+Utility.getRandNum());
+		//ww.enterBankAc("74"+Utility.getRandNum());
 		ww.clickCreateClassificationButton();
-		ww.switchToPopUpAndAccept(driver);
+		//ww.switchToPopUpAndAccept(driver);
 		String s=ww.getMessage1();
 		Assert.assertEquals(s, "Employee detail was successfully created.");
 		Thread.sleep(5000);
+		ww.exitFullscreen();
 		ww.clickMastserLink();
 		ww.selectClassifications();
 		ww.clickDeleteButton();
-		String abc = ww.getAlertText();
+		String abc = ww.getMessage();
 		System.out.println(abc);
-		Assert.assertEquals(abc, "<li>Classification is being used, you're not allowed to delete.</li>");	
-}	*/
-	/*@Test(priority=8)
+		Assert.assertEquals(abc, "Classification is being used, you're not allowed to delete.");	
+		}
+	
+	@Test(priority=8)
 	public void AddClassificationviaExcelUpload_SC_66() throws Exception {
-	AddClassificationviaExcelUpload ac=new AddClassificationviaExcelUpload(driver);
-	ac.clickonmaster();
-	ac.clickonclassification();
-	ac.clickondetails();
-	//ac.generatetemplate();
-	ac.clickonexceluploadforclassification();
-	Thread.sleep(5000);
-	ac.choosefile("C:\\Users\\Alfa\\Desktop\\Relyon\\Merging\\Classification.xlsx");
-	Thread.sleep(5000);
-	ac.uploadfile();
-	}*/
+		AddClassificationviaExcelUpload ac=new AddClassificationviaExcelUpload(driver);
+		ac.clickonmaster();
+		ac.clickonclassification();
+		ac.clickondetails();
+		//ac.generatetemplate();
+		ac.clickonexceluploadforclassification();
+		Thread.sleep(5000);
+		ac.choosefile("C:\\Users\\alfalabs\\Desktop\\ClassificationDetail.xlsx");
+		//ac.choosefile("C:\\Users\\Administrator\\Desktop\\ClassificationDetail.xlsx");
+		Thread.sleep(5000);
+		ac.uploadfile();
+		Thread.sleep(5000);
+		ac.deleteClassification();
+		Thread.sleep(2000);
+		ac.switchToPopUpAndAccept(driver);
+		Thread.sleep(2000);
+	}
 }
