@@ -51,9 +51,9 @@ public class CreateHolidayUnderBranch extends BasePage {
 	}
 
 	public String enterDate(String value){
-		//date.clear();
+		date.clear();
 		date.sendKeys(value);
-		date.sendKeys(Keys.TAB);
+		//date.sendKeys(Keys.TAB);
 		return value;
 	}
 	

@@ -48,9 +48,20 @@ public class HolidayList extends BaseTest {
 	   uh.clickUpdateHoliday();
 	   String s=uh.getMessage();
 	   Assert.assertEquals(s, "Holiday Master List successfully updated");
-	   } 
+	   }
+
+	/*@Test(priority=2)
+	public void verifyDisablingEnablingHolidayFromBranch_SC_44() throws InterruptedException{
+   		DisablingEnablingHolidayFromBranch hl=new DisablingEnablingHolidayFromBranch(driver);
+		hl.clickMastserLink();
+		hl.selectHolidayList();
+		hl.clickView();
+		hl.clickFirstDisable();
+		String s=hl.getMessage();
+		Assert.assertEquals(s, "Holiday Was successfully updated.");
+		}*/
  
-   @Test(priority=2)
+   @Test(priority=3)
    public void verifyDeletedHolidayList_SC_43() throws InterruptedException{
 	   DeleteHoliday dh=new DeleteHoliday(driver);  
 	   dh.clickMastserLink();
@@ -61,15 +72,16 @@ public class HolidayList extends BaseTest {
 	   Assert.assertEquals(s, "Master holiday successfully deleted.");
 	   }
    
-   @Test(priority=3)
+   @Test(priority=4)
    public void verifyCreateHolidayUnderBranch_SC_41() throws InterruptedException{
 	    CreateHolidayUnderBranch hl=new CreateHolidayUnderBranch(driver);
 		hl.clickMastserLink();
 		hl.selectHolidayList();
 		hl.clickView();
 		hl.clickAddHoliday();
-		Thread.sleep(4000);
-		hl.enterDate(Utility.getRandNum(1, 28)+" "+Utility.getRandLongMon()+" "+Utility.getRandNum(2015, 2017)); 
+		Thread.sleep(5000);
+		hl.enterDate("25 December 2018");
+		//hl.enterDate(Utility.getRandNum(1, 28)+" "+Utility.getRandLongMon()+" "+Utility.getRandNum(2015, 2017)); 
 		Thread.sleep(4000);
 		hl.enterDescription("holiday1");
 		hl.clickCreateButton();
@@ -78,17 +90,6 @@ public class HolidayList extends BaseTest {
 		Thread.sleep(6000);
 		hl.clickDeleteButton();
 		} 
-   
-   /*@Test(priority=4)
-   public void verifyDisablingEnablingHolidayFromBranch_SC_44() throws InterruptedException{
-	   DisablingEnablingHolidayFromBranch hl=new DisablingEnablingHolidayFromBranch(driver);
-		hl.clickMastserLink();
-		hl.selectHolidayList();
-		hl.clickView();
-		hl.clickFirstDisable();
-		String s=hl.getMessage();
-		Assert.assertEquals(s, "Holiday Was successfully updated.");
-		}*/
    
    @Test(priority=5)
    public void verifyExcelUploadforHolidays_SC_45() throws Exception{
