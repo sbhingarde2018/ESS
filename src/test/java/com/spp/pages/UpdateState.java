@@ -12,7 +12,7 @@ public class UpdateState extends BasePage{
 	WebElement masterLink;
 	@FindBy(xpath="//a[text()='States']")
 	WebElement state;
-	@FindBy(xpath="//tr/td[1][text()='Arunachal Pradesh']/parent::tr/td[2]/a")
+	@FindBy(xpath="//tr/td[contains(text(),'Arunachal Pradesh')]/parent::tr/td[2]/a")
 	WebElement editIcon;
 	@FindBy(id="state_state_name")
 	WebElement stateName;
@@ -38,8 +38,10 @@ public class UpdateState extends BasePage{
 		editIcon.click();
 	}
 	
-	public void enterStateName(String value){
-		stateName.sendKeys(value);
+	public void enterStateName(String value) throws InterruptedException{
+		setValue("state_state_name", value);
+		//Thread.sleep(2000);
+		//stateName.sendKeys(value);
 	}
 	
 	public void clickUpdateButton(){

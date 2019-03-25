@@ -14,18 +14,19 @@ public class States extends BaseTest{
 		CreateState cs=new CreateState(driver);
 		cs.clickMastserLink();
 		cs.selectState();
-		cs.enterStateName("Arunachal Pradesh");
+		cs.enterStateName("Arunachal Pradesh Original");
 		cs.clickCreateButton();
 		String s=cs.getMessage();
 		Assert.assertEquals(s, "State was created successfully.");
 	}
 
 	@Test(priority=1)
-	public void verifyUpdatedState_SC_324(){
+	public void verifyUpdatedState_SC_324() throws Exception{
 		UpdateState us=new UpdateState(driver);
 		us.clickMastserLink();
 		us.selectState();
 		us.clickEditIcon();
+		Thread.sleep(4000);
 		us.enterStateName("Arunachal Pradesh");
 		us.clickUpdateButton();
 		String s=us.getMessage();
@@ -41,5 +42,4 @@ public class States extends BaseTest{
 		String s=ds.getMessage();
 		Assert.assertEquals(s, "State was successfully deleted.");
 	}
-
 }

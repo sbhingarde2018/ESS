@@ -3,6 +3,7 @@ package com.spp.common;
 import java.io.IOException;
 
 import org.openqa.selenium.Alert;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -115,6 +116,12 @@ public class BasePage {
 	 public void exitFullscreen()
 	 {
 		 driver.manage().window().maximize();
+	 }
+	 
+	 public void setValue(String id, String value)
+	 {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("document.getElementById('"+id+"').setAttribute('value', '"+value+"')");
 	 }
 	 
 }

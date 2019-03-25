@@ -50,16 +50,16 @@ public class HolidayList extends BaseTest {
 	   Assert.assertEquals(s, "Holiday Master List successfully updated");
 	   }
 
-	/*@Test(priority=2)
-	public void verifyDisablingEnablingHolidayFromBranch_SC_44() throws InterruptedException{
-   		DisablingEnablingHolidayFromBranch hl=new DisablingEnablingHolidayFromBranch(driver);
-		hl.clickMastserLink();
-		hl.selectHolidayList();
-		hl.clickView();
-		hl.clickFirstDisable();
-		String s=hl.getMessage();
-		Assert.assertEquals(s, "Holiday Was successfully updated.");
-		}*/
+   @Test(priority=2)
+   public void verifyDisablingEnablingHolidayFromBranch_SC_44() throws InterruptedException{
+	   DisablingEnablingHolidayFromBranch hl=new DisablingEnablingHolidayFromBranch(driver);
+	   hl.clickMastserLink();
+	   hl.selectHolidayList();
+	   hl.clickView();
+	   hl.clickFirstDisable();
+	   String s=hl.getMessage();
+	   Assert.assertEquals(s, "Holiday Was successfully updated.");
+	   }
  
    @Test(priority=3)
    public void verifyDeletedHolidayList_SC_43() throws InterruptedException{

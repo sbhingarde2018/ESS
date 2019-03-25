@@ -22,12 +22,7 @@ public class DisablingEnablingHolidayFromBranch extends BasePage{
 	@FindBy(xpath="//*[@id=\"holiday_response\"]/div/strong")
 	WebElement successfullyMessage;
 	
-		
-	
-	
-	
-	
-	
+
 	
 	public DisablingEnablingHolidayFromBranch(WebDriver driver) {
 		super(driver);

@@ -32,7 +32,8 @@ import com.spp.pages.UpdateWeeklyOff;
 
 
 public class EmployeeDetails extends BaseTest{
-	@Test(priority=0)
+	
+	/*@Test(priority=0)
 	public void verifyAddNewEmployee_SC_77() throws Exception{
 		AddNewEmployeeTDS at=new AddNewEmployeeTDS(driver);
 		at.navigateEmployee();
@@ -150,16 +151,17 @@ public class EmployeeDetails extends BaseTest{
 		ce.deleteemployee();
 		ce.switchToPopUpAndAccept(driver);
 		Thread.sleep(5000);
-	}
-	/*@Test(priority=5)
-		public void AddEmployeewithClassificationDetail_SC_440() throws Exception{
+	}*/
+	
+	@Test(priority=5)
+	public void AddEmployeewithClassificationDetail_SC_440() throws Exception{
 			AddNewEmployeeTDS at=new AddNewEmployeeTDS(driver);
 			at.navigateEmployee();
 			at.clickEmployeeDetails();
 			at.clickAddNewEmployee();
 			Thread.sleep(1000);
 			at.enterEmployeeId("ID001");
-			at.enterEmployeeRefNo("Ref-"+Utility.getRandNum(10, 100));
+			at.enterEmployeeRefNo("Ref-"+Utility.getRandNum(100, 200));
 			at.enterEmployeeName("Anil");
 			at.enterFathername("Anand");
 			at.enterdob("14 June 1980");
@@ -189,14 +191,14 @@ public class EmployeeDetails extends BaseTest{
 			at.createemployee();
 			String s=at.getMessage();
 			Assert.assertEquals(s, "Employee successfully created");
-							
-		}	
+		}
 
 	@Test(priority=6)
 	public void EditClassificationDetailsChangeSalaryStructureofanemployee_SC_441() throws Exception{
 		EditClassificationDetailsChangeSalaryStructureofanemployee dw= new EditClassificationDetailsChangeSalaryStructureofanemployee(driver);
 		dw.clickonemployee();
 		dw.clickonemployeedetails();
+		dw.resizeWindow();
 		dw.clickonfilter();
 		Thread.sleep(2000);
 		dw.clickonload();
@@ -210,6 +212,7 @@ public class EmployeeDetails extends BaseTest{
 		dw.updateclassificationdetails();
 		String message = dw.getMessage();
 		Assert.assertEquals(message, "Employee detail was successfully updated.");
+		dw.exitFullscreen();
 	}
 	
 	@Test(priority=7)
@@ -217,6 +220,7 @@ public class EmployeeDetails extends BaseTest{
 		CreateEmployeeESIContributionApplicability ca=new CreateEmployeeESIContributionApplicability(driver);
 		ca.clickonemployee();
 		ca.clickonemployeedetails();
+		ca.resizeWindow();
 		ca.clickonfilter();
 		Thread.sleep(2000);
 		ca.clickonload();
@@ -228,6 +232,7 @@ public class EmployeeDetails extends BaseTest{
 		ca.createesi();
 		String message = ca.getMessage();
 		Assert.assertEquals(message, "ESI Applicability Detail Successfully Created.");
+		ca.exitFullscreen();
 	}
 	
 	@Test(priority=8)
@@ -235,6 +240,7 @@ public class EmployeeDetails extends BaseTest{
 		CreateWeeklyOffDetailsofanEmployee ca=new CreateWeeklyOffDetailsofanEmployee(driver);
 		ca.clickonemployee();
 		ca.clickonemployeedetails();
+		ca.resizeWindow();
 		ca.clickonfilter();
 		Thread.sleep(2000);
 		ca.clickonload();
@@ -261,7 +267,7 @@ public class EmployeeDetails extends BaseTest{
 		Thread.sleep(2000);
 		String message = ca.getMessage();
 		Assert.assertEquals(message, "Attendance Weekly Off successfully created");
-		
+		ca.exitFullscreen();
 	}
 	
 	@Test(priority=9)
@@ -269,6 +275,7 @@ public class EmployeeDetails extends BaseTest{
 		UpdateWeeklyOff uf= new UpdateWeeklyOff(driver);
 		uf.clickonemployee();
 		uf.clickonemployeedetails();
+		uf.resizeWindow();
 		uf.clickonfilter();
 		Thread.sleep(2000);
 		uf.clickonload();
@@ -287,12 +294,15 @@ public class EmployeeDetails extends BaseTest{
 		Thread.sleep(2000);
 		String message = uf.getMessage();
 		Assert.assertEquals(message, "Attendance Weekly Off successfully updated");
+		uf.exitFullscreen();
 	}
+	
 	@Test(priority=10)
 	public void DeleteWeeklyOff_SC_455() throws Exception{
 		DeleteWeeklyOff dw= new DeleteWeeklyOff(driver);
 		dw.clickonemployee();
 		dw.clickonemployeedetails();
+		dw.resizeWindow();
 		dw.clickonfilter();
 		Thread.sleep(2000);
 		dw.clickonload();
@@ -311,11 +321,10 @@ public class EmployeeDetails extends BaseTest{
 		dw.switchToPopUpAndAccept(driver);
 		String message = dw.getMessage();
 		Assert.assertEquals(message, "Attendance Weekly Off was successfully deleted.");
-	}	
+		dw.exitFullscreen();
+	}
 	
-	
-	
-	@Test(priority=11)
+	/*@Test(priority=11)
 	public void AddNewHrCategoryDetailsofEmployee_SC_456() throws Exception{
 		AddNewHrCategoryDetailsofEmployee de=new AddNewHrCategoryDetailsofEmployee(driver);
 		de.clickonemployee();
