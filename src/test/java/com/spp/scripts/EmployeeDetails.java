@@ -151,7 +151,7 @@ public class EmployeeDetails extends BaseTest{
 		ce.deleteemployee();
 		ce.switchToPopUpAndAccept(driver);
 		Thread.sleep(5000);
-	}*/
+	}
 	
 	@Test(priority=5)
 	public void AddEmployeewithClassificationDetail_SC_440() throws Exception{
@@ -322,13 +322,14 @@ public class EmployeeDetails extends BaseTest{
 		String message = dw.getMessage();
 		Assert.assertEquals(message, "Attendance Weekly Off was successfully deleted.");
 		dw.exitFullscreen();
-	}
+	}*/
 	
-	/*@Test(priority=11)
+	@Test(priority=11)
 	public void AddNewHrCategoryDetailsofEmployee_SC_456() throws Exception{
 		AddNewHrCategoryDetailsofEmployee de=new AddNewHrCategoryDetailsofEmployee(driver);
 		de.clickonemployee();
 		de.clickonemployeedetails();
+		de.resizeWindow();
 		de.clickonfilter();
 		Thread.sleep(2000);
 		de.clickonload();
@@ -345,12 +346,15 @@ public class EmployeeDetails extends BaseTest{
 		de.clickonsave();
 		String message = de.getMessage();
 		Assert.assertEquals(message, "Hr Detail Created Successfully");
+		de.exitFullscreen();
 	}
+	
 	@Test(priority=12)
 	public void EditHrCategoryDetailsofEmployee_SC_457() throws Exception{
 		EditHrCategoryDetailsofEmployee de=new EditHrCategoryDetailsofEmployee(driver);
 		de.clickonemployee();
 		de.clickonemployeedetails();
+		de.resizeWindow();
 		de.clickonfilter();
 		Thread.sleep(2000);
 		de.clickonload();
@@ -365,6 +369,7 @@ public class EmployeeDetails extends BaseTest{
 		de.clickonsave();
 		String message = de.getMessage();
 		Assert.assertEquals(message, "Hr Detail Updated Successfully");
+		de.exitFullscreen();
 	}
 	
 	@Test(priority=13)
@@ -378,6 +383,7 @@ public class EmployeeDetails extends BaseTest{
 		gh.selecthrcategory("Personal");
 		gh.gettemplate();
 	}
+	
 	@Test(priority=14)
 	public void GetHRDataTemplates_SC_461() throws Exception{
 		GetHRDataTemplates gd=new GetHRDataTemplates(driver);
@@ -387,11 +393,13 @@ public class EmployeeDetails extends BaseTest{
 		Thread.sleep(2000);
 		gd.clickonhrdatatemplate();
 		gd.selecthrcategory("Personal");
+		gd.resizeWindow();
 		gd.getemployees();
 		Thread.sleep(2000);
 		gd.clickonload();
 		Thread.sleep(2000);
 		gd.getdatatemplate();
+		gd.exitFullscreen();
 	}
 	
 	@Test(priority=15)
@@ -407,7 +415,7 @@ public class EmployeeDetails extends BaseTest{
 		//cr.downloadexcel();
 	}
 	
-		@Test(priority=16)
+	@Test(priority=16)
 	public void CheckifEmployeeEmployeeDetailsReportsEmployeeMasterReportredirectstoReportmodule_SC_462() throws Exception {
 		CheckifEmployeeEmployeeDetailsReportsEmployeeMasterReportredirectstoReportmodule cr=new CheckifEmployeeEmployeeDetailsReportsEmployeeMasterReportredirectstoReportmodule(driver);
 		cr.clickonemployee();
@@ -418,15 +426,17 @@ public class EmployeeDetails extends BaseTest{
 		Thread.sleep(2000);
 		cr.selectreporttype("Date Of Joining");
 		cr.getemployees();
+		cr.resizeWindow();
 		Thread.sleep(2000);
 		cr.clickonload();
 		Thread.sleep(2000);
 		cr.selectemployee();
 		Thread.sleep(2000);
 		cr.generatereport();
+		cr.exitFullscreen();
+	}
 	
-	}*/
-		/*@Test(priority=17)
+	/*@Test(priority=17)
 	public void CheckifEmployeeEmployeeDetailsReportsEmployeeStatutoryReportredirectstoReportmodule_SC_463() throws Exception {
 		CheckifEmployeeEmployeeDetailsReportsEmployeeStatutoryReportredirectstoReportmodule cr=new CheckifEmployeeEmployeeDetailsReportsEmployeeStatutoryReportredirectstoReportmodule(driver);
 		cr.clickonemployee();

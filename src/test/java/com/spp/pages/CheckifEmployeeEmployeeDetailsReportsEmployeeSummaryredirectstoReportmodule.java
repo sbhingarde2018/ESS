@@ -16,7 +16,7 @@ public class CheckifEmployeeEmployeeDetailsReportsEmployeeSummaryredirectstoRepo
 	WebElement ClickOnReports;
 	@FindBy(xpath="//*[@id=\"ui-accordion-accordion-panel-2\"]/ul/li[3]/a")
 	WebElement ClickOnEmployeeSummary;
-	@FindBy(xpath="//*[@id='employees_table']/tbody/tr/td[contains(text(),'Anil')]/parent::tr/td[5]/a")
+	@FindBy(xpath="//*[@id='employees_table']/tbody/tr/td[contains(text(),'Ashish')]/parent::tr/td[5]/a")
 	WebElement ClickOnViewSummary;
 	@FindBy(xpath="//*[@id=\"main\"]/div[12]/a[1]")
 	WebElement DownloadPDF;

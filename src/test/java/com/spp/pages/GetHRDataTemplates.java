@@ -20,7 +20,7 @@ public class GetHRDataTemplates extends BasePage {
 	WebElement SelectHRCategory;
 	@FindBy(id="hr_excel_filter")
 	WebElement GetEmployees;
-	@FindBy(xpath="//*[@id=\"bf_form\"]/div[9]/button[1]")
+	@FindBy(xpath="//*[@id=\"bf_form\"]/div[10]/button[1]")
 	WebElement ClickOnLoad;
 	@FindBy(id="hr_excel_submit")
 	WebElement GetDataTemplate;
