@@ -4,12 +4,13 @@
   <test name="Test">
     <classes>
     
-   <!-- <class name="com.spp.scripts.LeavePolicy"/> -->
+   <class name="com.spp.scripts.EmployeeDetails"/>
    
    
     <!-- <class name="com.spp.scripts.HolidayList"/>
-    <class name="com.spp.scripts.States"/> -->
-    <class name="com.spp.scripts.EmployeeDetails"/>
+   <class name="com.spp.scripts.LeavePolicy"/> 
+    <class name="com.spp.scripts.States"/>
+    --> 
    <!--<class name="com.spp.scripts.ReimbursementClaim"/>
    <class name="com.spp.scripts.Arrears"/>
    

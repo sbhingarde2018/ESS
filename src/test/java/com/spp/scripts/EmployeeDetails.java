@@ -33,7 +33,7 @@ import com.spp.pages.UpdateWeeklyOff;
 
 public class EmployeeDetails extends BaseTest{
 	
-	/*@Test(priority=0)
+	@Test(priority=0)
 	public void verifyAddNewEmployee_SC_77() throws Exception{
 		AddNewEmployeeTDS at=new AddNewEmployeeTDS(driver);
 		at.navigateEmployee();
@@ -322,7 +322,7 @@ public class EmployeeDetails extends BaseTest{
 		String message = dw.getMessage();
 		Assert.assertEquals(message, "Attendance Weekly Off was successfully deleted.");
 		dw.exitFullscreen();
-	}*/
+	}
 	
 	@Test(priority=11)
 	public void AddNewHrCategoryDetailsofEmployee_SC_456() throws Exception{
@@ -454,7 +454,7 @@ public class EmployeeDetails extends BaseTest{
 	
 	}*/
 	
-		/*@Test(priority=18)
+		@Test(priority=18)
 		public void verifyDataTemplateGeneration_SC_96() throws InterruptedException, IOException {
 		GenerateDataTemplate gxl = new GenerateDataTemplate(driver);
 			gxl.clickEmployeeTab();
@@ -475,6 +475,7 @@ public class EmployeeDetails extends BaseTest{
 		de.clickonemployee();
 		de.clickonemployeedetails();
 		de.clickonfilter();
+		de.resizeWindow();
 		Thread.sleep(2000);
 		de.clickonload();
 		Thread.sleep(2000);
@@ -492,6 +493,7 @@ public class EmployeeDetails extends BaseTest{
 		de.switchToPopUpAndAccept(driver);
 		String message = de.getMessage();
 		Assert.assertEquals(message, "Hr master detail successfully deleted.");
+		de.exitFullscreen();
 	}
 	
 	
@@ -500,14 +502,14 @@ public class EmployeeDetails extends BaseTest{
 	
 
 	
-	@Test(priority=20)
+	/*@Test(priority=20)
 	public void CreateEmployeeviaExcelImport_SC_95() throws InterruptedException {
 	CreateEmployeeviaExcelImport xl=new CreateEmployeeviaExcelImport(driver);
 	xl.clickEmployeeTab();
 	xl.clickEmployeeDetailsLink();
 	xl.clickImportExportTab();
 	xl.clickExcelTemplateUpload();
-	xl.enterExcelFilePath("C:\\Users\\Alfa\\Documents\\EmployeeDetails.xlsx");
+	xl.enterExcelFilePath("C:\\Users\\Administrator\\Downloads\\EmployeeDetails.xlsx");
 	xl.clickUpload();
 	Thread.sleep(3000);
 	xl.clickNotificationIcon();
@@ -516,9 +518,8 @@ public class EmployeeDetails extends BaseTest{
 	xl.sortByLatestJob();
 	String message = xl.getSuccessmessage();
 	Assert.assertEquals(message, "Successfully Imported");
-	
-}
-	@Test(priority=21)
+}*/
+	/*@Test(priority=21)
 	public void CheckDeleteClassificationDetailsInEmployeeExtra() throws Exception {
 	DeleteClassificationDetailsInEmployee ce = new DeleteClassificationDetailsInEmployee(driver);
 		ce.clickonemployee();

@@ -14,13 +14,13 @@ public class DeleteHrCategoryDetailsofEmployee extends BasePage {
 	WebElement ClickOnEmployeeDetails;
 	@FindBy(id="filter_head")
 	WebElement ClickonFilter;
-	@FindBy(xpath="//*[@id=\"bf_form\"]/div[9]/button[1]")
+	@FindBy(xpath="//*[@id=\"bf_form\"]/div[10]/button[1]")
 	WebElement ClickOnLoad;
 	@FindBy(xpath="//*[@id='employees_dtable']/tbody/tr/td[contains(text(),'Anil')]/parent::tr/td[6]/a[1]")
 	WebElement ClickonView;
 	@FindBy(xpath="//*[@id=\"ui-accordion-accordion-header-1\"]/h3")
 	WebElement ClickonHRCategory;
-	@FindBy(xpath="//*[@id=\"ui-accordion-accordion-panel-1\"]/li[2]/a")
+	@FindBy(xpath="//*[@id=\"ui-accordion-accordion-panel-1\"]/li[3]/a")
 	WebElement ClickonPersonal;
 	@FindBy(xpath="//*[@id='hr_category']/div/table/thead/tr/td[7]/a")
 	WebElement DeleteHRCategory;
