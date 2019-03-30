@@ -13,13 +13,13 @@ public class CheckForAllowHalfDayInLeaveModule extends BasePage {
 	WebElement masterLink;
 	@FindBy(xpath="//*[@id=\"menu\"]/li[3]/div/div[3]/ul/li[2]/a")
 	WebElement leavePolicy;
-	 @FindBy(xpath="//*[@id=\"leave-policy-master-list\"]/table/tbody/tr/td[contains(text(),'Default')]/parent::tr/td[4]/a")
-		WebElement addLeaves;
-	    @FindBy(xpath="//*[@id='leave_policy_setting_details']/div[2]/table/tbody/tr/td[contains(text(),'Leave')]/parent::tr/td[3]/a")
-	    WebElement settingsLink;
+	@FindBy(xpath="//*[@id='leave-policy-master-list']/table/tbody/tr/td[contains(text(),'Default')]/parent::tr/td[4]/a")
+	WebElement addLeaves;
+	@FindBy(xpath="//*[@id='leave_policy_setting_details']/div/table/tbody/tr/td[contains(text(),'Leave')]/parent::tr/td[3]/a")
+	WebElement settingsLink;
     @FindBy(id="leave_policy_head_wise_setting_behaviour_settings_max_leave_month")
     WebElement AvailForMonth;
-    @FindBy(xpath="//*[@id=\"behaviour_policy_setting\"]/div[3]/input")
+    @FindBy(xpath="//*[@id='behaviour_policy_setting']/div[3]/input")
     WebElement UpdateButton;
     @FindBy(xpath="//*[@id=\"leave_policy_head_wise_settings_response\"]/div/strong")
     WebElement SuccessfulMessage;
@@ -31,9 +31,9 @@ public class CheckForAllowHalfDayInLeaveModule extends BasePage {
     WebElement AppyLeaveLink;
     @FindBy(id="filter_head")
     WebElement Filter;
-    @FindBy(xpath="//*[@id=\"bf_form\"]/div[9]/button[1]")
+    @FindBy(xpath="//*[@id=\"bf_form\"]/div[10]/button[1]")
     WebElement Load;
-    @FindBy(xpath="//*[@id=\"dt_leave_details\"]/tbody/tr/td[3]/a")
+    @FindBy(xpath="//*[@id='dt_leave_details']/tbody/tr/td[contains(text(),'Tina')]/parent::tr/td/a")
     WebElement ClickOnAPPLYLEAVE;
 	@FindBy(id="leave_detail_leave_definition_id")
 	WebElement LeaveType;
@@ -41,18 +41,26 @@ public class CheckForAllowHalfDayInLeaveModule extends BasePage {
 	WebElement FromDate;
 	@FindBy(id="leave_detail_to_date")
 	WebElement ToDate;
+	@FindBy(id="to_date")
+	WebElement LeaveHistoryToDate;
 	@FindBy(xpath="//input[contains(@name,'second')]")
 	WebElement SecondHalf;
 	@FindBy(id="apply")
 	WebElement ApplyButton;
 	@FindBy(xpath="//*[@id=\"apply_leave_response\"]/div/strong")
 	WebElement Message2;
-	@FindBy(xpath="//*[@id=\"main\"]/div[2]/nav/ul/li[3]/a/span")
+	@FindBy(xpath="//*[@id='main']/div[2]/nav/ul/li[3]/a/span")
 	WebElement LeaveHistory;
-	@FindBy(xpath="//*[@id=\"leave_detail_for_employee\"]/table/tbody/tr/td[4]/a")
+	@FindBy(xpath="//*[@id='leave_detail_for_employee']/table/tbody/tr/td[4]/a")
 	WebElement View;
-	@FindBy(xpath="//*[@id=\"batch_details\"]/form/table[3]/tbody/tr[2]/td/input[3]")
+	@FindBy(xpath="//*[@id='batch_details']/form/table[3]/tbody/tr[2]/td/input[3]")
 	WebElement DeleteButton;
+	@FindBy(xpath="//*[@id='leave_range_data']/div[3]/div/div/input[2]")
+	WebElement SearchButton;
+	@FindBy(id="leave_policy_head_wise_setting_behaviour_settings_max_leave_month")
+    WebElement casualLeaveallowedavaiformonth;
+	 @FindBy(id="leave_policy_head_wise_setting_behaviour_settings_max_leave_year")
+	    WebElement casualLeaveallowedavailforyear;
 	public CheckForAllowHalfDayInLeaveModule(WebDriver driver) {
 		super(driver);
 		PageFactory.initElements(driver,this);
@@ -69,7 +77,14 @@ public class CheckForAllowHalfDayInLeaveModule extends BasePage {
 		allowHalfDay.click();
 		}
 	}
-
+	public void enterCasualLeaveallowedavailforyear(String value){
+		casualLeaveallowedavailforyear.clear();
+		casualLeaveallowedavailforyear.sendKeys(value);
+	}
+	public void enterCasualLeaveallowedavaiformonth(String value){
+		casualLeaveallowedavaiformonth.clear();
+		casualLeaveallowedavaiformonth.sendKeys(value);
+	}
 	public void selectLeavePolicy(){
 		leavePolicy.click();
 	}
@@ -116,15 +131,13 @@ public class CheckForAllowHalfDayInLeaveModule extends BasePage {
 		ToDate.sendKeys(value);
 		ToDate.sendKeys(Keys.TAB);
 	}
+	public void enterHistoryToDate(String value){
+		LeaveHistoryToDate.clear();
+		LeaveHistoryToDate.sendKeys(value);
+		LeaveHistoryToDate.sendKeys(Keys.TAB);
+	}
 	public void selectSecondHalf(){
-		if(SecondHalf.isSelected())
-		{
-			System.out.println("Already Selected");
-		}
-		else 
-		{
 		SecondHalf.click();
-		}
 	}
 	public void clickApplyButton(){
 		ApplyButton.click();
@@ -136,6 +149,9 @@ public class CheckForAllowHalfDayInLeaveModule extends BasePage {
 	public void selectLeaveType(String value){
 		dropDownSelect(LeaveType, value);
 	}
+	public void clickSearchButton(){
+		SearchButton.click();
+	}
 	public void selectLeaveHistory(){
 		LeaveHistory.click();
 	}
@@ -146,5 +162,4 @@ public class CheckForAllowHalfDayInLeaveModule extends BasePage {
 		DeleteButton.click();
 		switchToPopUpAndAccept(driver);
 	}
-
 }

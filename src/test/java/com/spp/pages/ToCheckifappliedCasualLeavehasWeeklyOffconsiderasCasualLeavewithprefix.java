@@ -1,8 +1,5 @@
 package com.spp.pages;
 
-import java.awt.Robot;
-import java.awt.event.KeyEvent;
-
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -11,7 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.spp.common.BasePage;
 
-public class LeaveBehaviourSettings extends BasePage{
+public class ToCheckifappliedCasualLeavehasWeeklyOffconsiderasCasualLeavewithprefix extends BasePage{
 	@FindBy(id="master")
 	WebElement masterLink;
 	@FindBy(xpath="//a[text()='Leave Policy']")
@@ -70,11 +67,46 @@ public class LeaveBehaviourSettings extends BasePage{
     WebElement Apply;
     @FindBy(xpath="//*[@id='apply_leave_response']/div/li")
     WebElement AlertMessage;
+    @FindBy(xpath="//*[@id='main']/div/div[3]/nav/ul/li[3]/a/span")
+    WebElement WeeklyOff;
+    @FindBy(xpath="(//input[@id='leave_policy_head_wise_setting_holiday_settings_consider_leave'])[2]")
+    WebElement LeaveHasHoliday;
+    @FindBy(id="leave_policy_head_wise_setting_holiday_settings_days")
+    WebElement NoofLeaveDays;
+    @FindBy(id="leave_policy_head_wise_setting_holiday_settings_prefix")
+    WebElement Prefix;
+    @FindBy(xpath="//*[@id='holidy_weekly_off_setting']/input")
+    WebElement UpdateButton;
+    @FindBy(xpath="//*[@id='leave_policy_head_wise_settings_response']/div/strong")
+    WebElement SuccessfulMessage;
+    @FindBy(id="leave")
+    WebElement LeaveLink;
+    @FindBy(linkText="Apply Leave")
+    WebElement AppyLeaveLink;
+    @FindBy(id="filter_head")
+    WebElement Filter;
+    @FindBy(xpath="//*[@id=\"bf_form\"]/div[10]/button[1]")
+    WebElement Load;
+    @FindBy(id="leave_detail_leave_definition_id")
+	WebElement LeaveType;
+    @FindBy(id="apply")
+	WebElement ApplyButton;
+	@FindBy(xpath="//*[@id=\"apply_leave_response\"]/div/strong")
+	WebElement Message2;
+	@FindBy(xpath="//*[@id='main']/div[2]/nav/ul/li[3]/a/span")
+	WebElement LeaveHistory;
+	@FindBy(xpath="//*[@id='leave_detail_for_employee']/table/tbody/tr/td[4]/a")
+	WebElement View;
+	@FindBy(xpath="//*[@id='batch_details']/form/table[3]/tbody/tr[2]/td/input[3]")
+	WebElement DeleteButton;
+	@FindBy(id="to_date")
+	WebElement LeaveHistoryToDate;
+	@FindBy(xpath="//*[@id='leave_range_data']/div[3]/div/div/input[2]")
+	WebElement SearchButton;
     
-
-	public LeaveBehaviourSettings(WebDriver driver) {
+	public ToCheckifappliedCasualLeavehasWeeklyOffconsiderasCasualLeavewithprefix(WebDriver driver) {
 		super(driver);
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(driver,this);
 	}
 	
 	public void clickMastserLink(){
@@ -88,104 +120,77 @@ public class LeaveBehaviourSettings extends BasePage{
 	public void clickAddLeaves(){
 		addLeaves.click();
 	}
-	
-	public void selectLeaveType(String value){
-		dropDownSelect(leaveType, value);
-	}
-
-	public void clickAddButton(){
-		addButton.click();	
-	}
-	
 	public void clickSettingsLink(){
 		settingsLink.click();
 	}
-	
-	public void enterCasualLeaveallowedavaiformonth(String value){
-		casualLeaveallowedavaiformonth.clear();
-		casualLeaveallowedavaiformonth.sendKeys(value);
+	public void clickWeeklyOff(){
+		WeeklyOff.click();
+	}
+	public void clickLeaveCheckbox() {
+		LeaveHasHoliday.click();
+	}
+	public void PrefixLeaves(String value) {
+		NoofLeaveDays.clear();
+		NoofLeaveDays.sendKeys(value);
+		NoofLeaveDays.sendKeys(Keys.TAB);
+	}
+	public void clickPrefixCheckbox() {
+		Prefix.click();
+	}
+	public void clickUpdateButton() {
+		UpdateButton.click();
+	}
+	public String getMessage1(){
+		return SuccessfulMessage.getText();
+	}
+	public void clickLeaveLink(){
+		LeaveLink.click();
+	}
+	public void clickAppyLeaveLink(){
+		AppyLeaveLink.click();
+	}
+	public void clickFilter(){
+		Filter.click();
 	}
 	
-	public void enterCasualLeaveallowedavailforyear(String value){
-		casualLeaveallowedavailforyear.clear();
-		casualLeaveallowedavailforyear.sendKeys(value);
-	}
-	
-	public void enterCasualLeavemustbeAvailedinYear(String value){
-		casualLeavemustbeAvailedinYear.clear();
-		casualLeavemustbeAvailedinYear.sendKeys(value);
-	}
-	
-	public void enterDaysshouldbeAppliedtoAvailtheCasualLeave(String value){
-		daysshouldbeappliedtoavailtheCasualLeave.clear();
-		daysshouldbeappliedtoavailtheCasualLeave.sendKeys(value);
-	}
-	
-	public void enterCasualLeavethatcanbeAvailedforInstance(String value){
-		casualLeavethatcanbeavailedforinstance.clear();
-		casualLeavethatcanbeavailedforinstance.sendKeys(value);
-	}
-	
-	public void enterPriorDays(String value){
-		PriorDays.clear();
-		PriorDays.sendKeys(value);
-	}
-	
-	public void clickBackDate(){
-		backDate.click();
-	}
-	
-	public void clickAllowHalfDay(){
-		allowHalfDay.click();
-	}
-	
-	public void clickAllowExcessLeave(){
-		allowExcessLeave.click();
-	}
-	
-	public void clickConsiderasLOP(){
-		considerasLOP.click();
-	}
-	
-	public void clickUpdateButton(){
-		updateButton.click();
-	}
-	
-	public String getMessage(){
-		return successfullMessage.getText();
-	}
-	
-	public void Leavemaster() {
-		ClickOnLeave.click();
-	}
-	public void ApplyLeavemodule() {
-		ClickOnApplyLeave.click();
-	}
-	public void ClickonFilter() {
-		ClickOnFilter.click();
-	}
-	public void ClickOnLOAD() {
-		ClickOnLoad.click();
+	public void clickLoad(){
+		Load.click();
 	}
 	public void ClickOnApplyLeave() {
 		ClickOnAPPLYLEAVE.click();
 	}
-	public void SelectLeave(String value) {
-		dropDownSelect(SelectLeave, value);
+	public void selectLeaveType(String value){
+		dropDownSelect(LeaveType, value);
 	}
-	public void EnterFromDate(String value) {
-		FromDate.clear();
+	public void enterFromDate(String value){
 		FromDate.sendKeys(value);
 	}
-	public void EnterToDate(String value) throws InterruptedException{
-		ToDate.clear();
+	public void enterToDate(String value){
 		ToDate.sendKeys(value);
 		ToDate.sendKeys(Keys.TAB);
 	}
-	public void clickapply() {
-		Apply.click();
+	public void clickApplyButton(){
+		ApplyButton.click();
 	}
-	public String getalertMessage() {
-		return AlertMessage.getText();
+	public String getMessage2(){
+		return Message2.getText();
+	}
+	public void selectLeaveHistory(){
+		LeaveHistory.click();
+	}
+	public void selectView(){
+		View.click();
+	}
+	public void clickDeleteButton(){
+		DeleteButton.click();
+		switchToPopUpAndAccept(driver);
+	}
+	public void enterHistoryToDate(String value){
+		LeaveHistoryToDate.clear();
+		LeaveHistoryToDate.sendKeys(value);
+		LeaveHistoryToDate.sendKeys(Keys.TAB);
+	}
+	public void clickSearchButton(){
+		SearchButton.click();
 	}
 }

@@ -1,5 +1,7 @@
 package com.spp.scripts;
 
+import java.awt.event.KeyEvent;
+
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -47,6 +49,7 @@ import com.spp.pages.EncashmentSettings;
 import com.spp.pages.GeneralLinkPolicy;
 import com.spp.pages.HolidayWeeklyoffSettings;
 import com.spp.pages.LeaveBehaviourSettings;
+import com.spp.pages.ToCheckifappliedCasualLeavehasWeeklyOffconsiderasCasualLeavewithprefix;
 import com.spp.pages.UpdateAutoAllotSettingsHalfYearly;
 import com.spp.pages.UpdateAutoAllotSettingsMonthly;
 import com.spp.pages.UpdateAutoAllotSettingsPresentDays;
@@ -56,7 +59,7 @@ import com.spp.pages.UpdateLeavePolicy;
 
 public class LeavePolicy extends BaseTest {
 
-	@Test(priority=0)
+	/*@Test(priority=0)
 	public void verifyCreatedLeavePolicy_SC_35(){
 		CreateLeavePolicy lp=new CreateLeavePolicy(driver);
 		lp.clickMastserLink();
@@ -139,9 +142,9 @@ public class LeavePolicy extends BaseTest {
 		Thread.sleep(5000);
 		lp.clickLeaveDefinitionLink();
 		System.out.println("Leave Definition Page is Displayed");
-	}
+	}*/
 	
-	/*@Test(priority=7)
+	@Test(priority=7)
 	public void verifyUpdatedLeaveBeahaviour_SC_272() throws InterruptedException{
 		LeaveBehaviourSettings lb=new LeaveBehaviourSettings(driver);
 		lb.clickMastserLink();
@@ -161,16 +164,16 @@ public class LeavePolicy extends BaseTest {
 		Thread.sleep(2000);
 		lb.SelectLeave("Leave (L)");
 		lb.EnterFromDate("21 June 2019");
-		lb.EnterToDate("29 June 2019");
+		lb.EnterToDate("25 June 2019");
 		Thread.sleep(5000);
-		lb.clickapply();
+		//lb.clickapply();
 		String alert = lb.getalertMessage();
 		System.out.println(alert);
 		Assert.assertEquals(alert, "Cannot apply L more than 1.0 in a month.");
 		lb.exitFullscreen();	
-	}*/
+	}
 	
-	/*@Test(priority=8)                 //not running                    
+	@Test(priority=8)                 //not running                    
 	public void CheckMaxNoOfEarnedLeaveAllowedAvailForYear_SC_273() throws InterruptedException{
 		LeaveBehaviourSettings lb=new LeaveBehaviourSettings(driver);
 		lb.clickMastserLink();
@@ -192,11 +195,11 @@ public class LeavePolicy extends BaseTest {
 		lb.ClickOnApplyLeave();
 		Thread.sleep(2000);
 		lb.SelectLeave("Leave (L)");
-		lb.EnterFromDate("20 December 2018");
-		lb.EnterToDate("20 December 2018");
-		Thread.sleep(3000);
+		lb.EnterFromDate("20 May 2019");
+		lb.EnterToDate("20 May 2019");
+		Thread.sleep(5000);
 		lb.clickapply();
-		Thread.sleep(3000);
+		Thread.sleep(8000);
 		//lb.Leavemaster();
 		//lb.ApplyLeavemodule();
 		//lb.ClickonFilter();
@@ -205,42 +208,43 @@ public class LeavePolicy extends BaseTest {
 		//lb.ClickOnApplyLeave();
 		Thread.sleep(2000);
 		lb.SelectLeave("Leave (L)");
-		lb.EnterFromDate("21 December 2018");
-		lb.EnterToDate("21 December 2018");
+		lb.EnterFromDate("21 June 2019");
+		lb.EnterToDate("21 June 2019");
 		Thread.sleep(5000);
 		lb.clickapply();
-		Thread.sleep(10000);
-		lb.Leavemaster();
-		lb.ApplyLeavemodule();
-		lb.ClickonFilter();
-		Thread.sleep(3000);
-		lb.ClickOnLOAD();
-		lb.ClickOnApplyLeave();
-		Thread.sleep(2000);
+		Thread.sleep(8000);
+		//lb.Leavemaster();
+		//lb.ApplyLeavemodule();
+		//lb.ClickonFilter();
+		//Thread.sleep(3000);
+		//lb.ClickOnLOAD();
+		//lb.ClickOnApplyLeave();
+		//Thread.sleep(2000);
+		//lb.SelectLeave("Leave (L)");
+		//lb.EnterFromDate("22 December 2018");
+		//lb.EnterToDate("22 December 2018");
+		//Thread.sleep(5000);
+		//lb.clickapply();
+		//Thread.sleep(10000);
+		//lb.Leavemaster();
+		//lb.ApplyLeavemodule();
+		//lb.ClickonFilter();
+		//Thread.sleep(3000);
+		//lb.ClickOnLOAD();
+		//lb.ClickOnApplyLeave();
+		//Thread.sleep(2000);
 		lb.SelectLeave("Leave (L)");
-		lb.EnterFromDate("22 December 2018");
-		lb.EnterToDate("22 December 2018");
+		lb.EnterFromDate("22 July 2019");
+		lb.EnterToDate("22 July 2019");
 		Thread.sleep(5000);
-		lb.clickapply();
-		Thread.sleep(10000);
-		lb.Leavemaster();
-		lb.ApplyLeavemodule();
-		lb.ClickonFilter();
-		Thread.sleep(3000);
-		lb.ClickOnLOAD();
-		lb.ClickOnApplyLeave();
-		Thread.sleep(2000);
-		lb.SelectLeave("Leave (L)");
-		lb.EnterFromDate("22 December 2018");
-		lb.EnterToDate("22 December 2018");
-		Thread.sleep(5000);
-		lb.clickapply();
+		//lb.clickapply();
 		String alert = lb.getalertMessage();
 		System.out.println(alert);
-		Assert.assertEquals(alert, "Cannot apply L more than 3.0.");
+		Assert.assertEquals(alert, "Cannot apply L more than 2.0 in a year.");
 		lb.exitFullscreen();
-	}*/
-	/*@Test(priority=9)
+	}
+	
+	@Test(priority=9)
 	public void CheckForAllowHalfDayInLeaveModule_SC_275() throws InterruptedException{
 		CheckForAllowHalfDayInLeaveModule lb=new CheckForAllowHalfDayInLeaveModule(driver);
 		lb.clickMastserLink();
@@ -248,10 +252,13 @@ public class LeavePolicy extends BaseTest {
 		lb.clickAddLeaves();
 		lb.clickSettingsLink();
 		Thread.sleep(2000);
+		lb.enterCasualLeaveallowedavaiformonth("3");
+		lb.enterCasualLeaveallowedavailforyear("3");
 		lb.clickAllowHalfDay();
 		lb.clickUpdateButton();
 		String d=lb.getMessage1();
 		Assert.assertEquals(d, "Setting was successfully updated.");
+		lb.resizeWindow();
 		Thread.sleep(5000);
 		lb.clickLeaveLink();
 		lb.clickAppyLeaveLink();
@@ -261,20 +268,67 @@ public class LeavePolicy extends BaseTest {
 		Thread.sleep(3000);
 		lb.ClickOnApplyLeave();
 		lb.selectLeaveType("Leave (L)");
-		lb.enterFromDate("25 December 2018");
-		lb.enterToDate("25 December 2018");
+		lb.enterFromDate("26 August 2019");
+		lb.enterToDate("26 August 2019");
 		Thread.sleep(2000);
 		lb.selectSecondHalf();
 		lb.clickApplyButton();
 		String e=lb.getMessage2();
-		Assert.assertTrue(e.contains("Leave applied"));
-		//Assert.assertEquals(e, "Leave applied successfully.");
+		//Assert.assertTrue(e.contains("Leave applied"));
+		Assert.assertEquals(e, "Leave applied successfully.");
 		Thread.sleep(6000);
 		lb.selectLeaveHistory();
+		lb.enterHistoryToDate("30 August 2019");
+		lb.clickSearchButton();
 		lb.selectView();
 		Thread.sleep(7000);
 		lb.clickDeleteButton();
-		}*/
+		lb.exitFullscreen();
+		}
+	
+	@Test(priority=10)
+	public void ToCheckifappliedCasualLeavehasWeeklyOffconsiderasCasualLeavewithprefix_SC_293() throws InterruptedException{
+		ToCheckifappliedCasualLeavehasWeeklyOffconsiderasCasualLeavewithprefix ab = new ToCheckifappliedCasualLeavehasWeeklyOffconsiderasCasualLeavewithprefix(driver);
+		ab.clickMastserLink();
+		ab.selectLeavePolicy();
+		ab.clickAddLeaves();
+		ab.clickSettingsLink();
+		Thread.sleep(2000);
+		ab.clickWeeklyOff();
+		Thread.sleep(4000);
+		ab.clickLeaveCheckbox();
+		ab.PrefixLeaves("2");
+		ab.clickPrefixCheckbox();
+		Thread.sleep(4000);
+		ab.clickUpdateButton();
+		String d=ab.getMessage1();
+		Assert.assertEquals(d, "Setting was successfully updated.");
+		ab.resizeWindow();
+		Thread.sleep(5000);
+		ab.clickLeaveLink();
+		ab.clickAppyLeaveLink();
+		ab.clickFilter();
+		Thread.sleep(3000);
+		ab.clickLoad();
+		Thread.sleep(3000);
+		ab.ClickOnApplyLeave();
+		ab.selectLeaveType("Leave (L)");
+		ab.enterFromDate("14 August 2019");
+		ab.enterToDate("15 August 2019");
+		Thread.sleep(2000);
+		ab.clickApplyButton();
+		String e=ab.getMessage2();
+		Assert.assertEquals(e, "Leave applied successfully.");
+		Thread.sleep(6000);
+		ab.selectLeaveHistory();
+		ab.enterHistoryToDate("30 August 2019");
+		ab.clickSearchButton();
+		ab.selectView();
+		Thread.sleep(7000);
+		ab.clickDeleteButton();
+		ab.exitFullscreen();
+	}
+	
 	/*@Test(enabled=false)
 	public void CheckExcessCasualLeaveTakenAsLOP_SC_276() throws InterruptedException{
 		CheckExcessCasualLeaveTakenAsLOP lb=new CheckExcessCasualLeaveTakenAsLOP(driver);
@@ -309,10 +363,9 @@ public class LeavePolicy extends BaseTest {
 		lb.selectView();
 		Thread.sleep(7000);
 		lb.clickDeleteButton();
-		
-		
-		}
-	@Test(enabled=false)
+		}*/
+	
+	/*@Test(enabled=false)
 	public void CheckForPrioritySettingsInLeavePolicy_SC_278() throws InterruptedException{
 		CheckForPrioritySettingsInLeavePolicy lb=new CheckForPrioritySettingsInLeavePolicy(driver);
 		lb.clickMastserLink();
