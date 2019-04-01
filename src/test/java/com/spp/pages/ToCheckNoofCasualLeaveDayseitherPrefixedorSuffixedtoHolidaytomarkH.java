@@ -8,7 +8,8 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.spp.common.BasePage;
 
-public class ToCheckifappliedCasualLeavehasWeeklyOffconsiderasCasualLeavewithprefix extends BasePage{
+public class ToCheckNoofCasualLeaveDayseitherPrefixedorSuffixedtoHolidaytomarkH extends BasePage{
+	
 	@FindBy(id="master")
 	WebElement masterLink;
 	@FindBy(xpath="//a[text()='Leave Policy']")
@@ -69,12 +70,12 @@ public class ToCheckifappliedCasualLeavehasWeeklyOffconsiderasCasualLeavewithpre
     WebElement AlertMessage;
     @FindBy(xpath="//*[@id='main']/div/div[3]/nav/ul/li[3]/a/span")
     WebElement WeeklyOff;
-    @FindBy(xpath="(//input[@id='leave_policy_head_wise_setting_weekly_off_settings_consider_leave'])[2]")
-    WebElement LeaveHasWeeklyOff;
-    @FindBy(id="leave_policy_head_wise_setting_weekly_off_settings_days")
-    WebElement WeeklyOffNoofLeaveDays;
-    @FindBy(id="leave_policy_head_wise_setting_weekly_off_settings_prefix")
-    WebElement WeeklyOffPrefix;
+    @FindBy(xpath="(//input[@id='leave_policy_head_wise_setting_holiday_settings_consider_leave'])[2]")
+    WebElement LeaveHasHoliday;
+    @FindBy(id="leave_policy_head_wise_setting_holiday_settings_days")
+    WebElement HolidayNoofLeaveDays;
+    @FindBy(id="leave_policy_head_wise_setting_holiday_settings_prefix")
+    WebElement HolidayPrefix;
     @FindBy(xpath="//*[@id='holidy_weekly_off_setting']/input")
     WebElement UpdateButton;
     @FindBy(xpath="//*[@id='leave_policy_head_wise_settings_response']/div/strong")
@@ -103,12 +104,13 @@ public class ToCheckifappliedCasualLeavehasWeeklyOffconsiderasCasualLeavewithpre
 	WebElement LeaveHistoryToDate;
 	@FindBy(xpath="//*[@id='leave_range_data']/div[3]/div/div/input[2]")
 	WebElement SearchButton;
-	@FindBy(xpath="//*[@id='ui-datepicker-div']/table/tbody/tr[1]/td[6]/a")
+	@FindBy(xpath="//*[@id='ui-datepicker-div']/table/tbody/tr[3]/td[4]/a")
 	WebElement FromDatePicker;
-	@FindBy(xpath="//*[@id='ui-datepicker-div']/table/tbody/tr[2]/td[1]/a")
+	@FindBy(xpath="//*[@id='ui-datepicker-div']/table/tbody/tr[3]/td[6]/a")
 	WebElement ToDatePicker;
 	
-	public ToCheckifappliedCasualLeavehasWeeklyOffconsiderasCasualLeavewithprefix(WebDriver driver) {
+
+	public ToCheckNoofCasualLeaveDayseitherPrefixedorSuffixedtoHolidaytomarkH(WebDriver driver) {
 		super(driver);
 		PageFactory.initElements(driver,this);
 	}
@@ -116,11 +118,9 @@ public class ToCheckifappliedCasualLeavehasWeeklyOffconsiderasCasualLeavewithpre
 	public void clickMastserLink(){
 		masterLink.click();
 	}
-
 	public void selectLeavePolicy(){
 		leavePolicy.click();
 	}
-	
 	public void clickAddLeaves(){
 		addLeaves.click();
 	}
@@ -130,16 +130,16 @@ public class ToCheckifappliedCasualLeavehasWeeklyOffconsiderasCasualLeavewithpre
 	public void clickWeeklyOff(){
 		WeeklyOff.click();
 	}
-	public void clickWeeklyOffLeaveCheckbox() {
-		LeaveHasWeeklyOff.click();
+	public void clickHolidayLeaveCheckbox() {
+		LeaveHasHoliday.click();
 	}
-	public void WeeklyOffPrefixLeaves(String value) {
-		WeeklyOffNoofLeaveDays.clear();
-		WeeklyOffNoofLeaveDays.sendKeys(value);
-		WeeklyOffNoofLeaveDays.sendKeys(Keys.TAB);
+	public void HolidayPrefixLeaves(String value) {
+		HolidayNoofLeaveDays.clear();
+		HolidayNoofLeaveDays.sendKeys(value);
+		HolidayNoofLeaveDays.sendKeys(Keys.TAB);
 	}
-	public void clickWeeklyOffPrefixCheckbox() {
-		WeeklyOffPrefix.click();
+	public void clickHolidayPrefixCheckbox() {
+		HolidayPrefix.click();
 	}
 	public void clickUpdateButton() {
 		UpdateButton.click();
@@ -173,7 +173,7 @@ public class ToCheckifappliedCasualLeavehasWeeklyOffconsiderasCasualLeavewithpre
 	public void enterToDate(String value){
 		ToDate.sendKeys(value);
 		ToDatePicker.click();
-		//ToDate.sendKeys(Keys.TAB);
+		ToDate.sendKeys(Keys.TAB);
 	}
 	public void clickApplyButton(){
 		ApplyButton.click();

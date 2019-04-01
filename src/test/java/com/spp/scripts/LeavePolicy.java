@@ -49,6 +49,7 @@ import com.spp.pages.EncashmentSettings;
 import com.spp.pages.GeneralLinkPolicy;
 import com.spp.pages.HolidayWeeklyoffSettings;
 import com.spp.pages.LeaveBehaviourSettings;
+import com.spp.pages.ToCheckNoofCasualLeaveDayseitherPrefixedorSuffixedtoHolidaytomarkH;
 import com.spp.pages.ToCheckifappliedCasualLeavehasWeeklyOffconsiderasCasualLeavewithprefix;
 import com.spp.pages.UpdateAutoAllotSettingsHalfYearly;
 import com.spp.pages.UpdateAutoAllotSettingsMonthly;
@@ -166,14 +167,13 @@ public class LeavePolicy extends BaseTest {
 		lb.EnterFromDate("21 June 2019");
 		lb.EnterToDate("25 June 2019");
 		Thread.sleep(5000);
-		//lb.clickapply();
 		String alert = lb.getalertMessage();
 		System.out.println(alert);
 		Assert.assertEquals(alert, "Cannot apply L more than 1.0 in a month.");
 		lb.exitFullscreen();	
 	}
 	
-	@Test(priority=8)                 //not running                    
+	@Test(priority=8)                  
 	public void CheckMaxNoOfEarnedLeaveAllowedAvailForYear_SC_273() throws InterruptedException{
 		LeaveBehaviourSettings lb=new LeaveBehaviourSettings(driver);
 		lb.clickMastserLink();
@@ -181,7 +181,6 @@ public class LeavePolicy extends BaseTest {
 		lb.clickAddLeaves();
 		lb.clickSettingsLink();
 		Thread.sleep(4000);
-		//lb.enterCasualLeaveallowedavaiformonth("3");
 		lb.enterCasualLeaveallowedavailforyear("2");
 		Thread.sleep(6000);
 		lb.clickUpdateButton();
@@ -200,12 +199,6 @@ public class LeavePolicy extends BaseTest {
 		Thread.sleep(5000);
 		lb.clickapply();
 		Thread.sleep(8000);
-		//lb.Leavemaster();
-		//lb.ApplyLeavemodule();
-		//lb.ClickonFilter();
-		//Thread.sleep(3000);
-		//lb.ClickOnLOAD();
-		//lb.ClickOnApplyLeave();
 		Thread.sleep(2000);
 		lb.SelectLeave("Leave (L)");
 		lb.EnterFromDate("21 June 2019");
@@ -213,31 +206,10 @@ public class LeavePolicy extends BaseTest {
 		Thread.sleep(5000);
 		lb.clickapply();
 		Thread.sleep(8000);
-		//lb.Leavemaster();
-		//lb.ApplyLeavemodule();
-		//lb.ClickonFilter();
-		//Thread.sleep(3000);
-		//lb.ClickOnLOAD();
-		//lb.ClickOnApplyLeave();
-		//Thread.sleep(2000);
-		//lb.SelectLeave("Leave (L)");
-		//lb.EnterFromDate("22 December 2018");
-		//lb.EnterToDate("22 December 2018");
-		//Thread.sleep(5000);
-		//lb.clickapply();
-		//Thread.sleep(10000);
-		//lb.Leavemaster();
-		//lb.ApplyLeavemodule();
-		//lb.ClickonFilter();
-		//Thread.sleep(3000);
-		//lb.ClickOnLOAD();
-		//lb.ClickOnApplyLeave();
-		//Thread.sleep(2000);
 		lb.SelectLeave("Leave (L)");
 		lb.EnterFromDate("22 July 2019");
 		lb.EnterToDate("22 July 2019");
 		Thread.sleep(5000);
-		//lb.clickapply();
 		String alert = lb.getalertMessage();
 		System.out.println(alert);
 		Assert.assertEquals(alert, "Cannot apply L more than 2.0 in a year.");
@@ -268,17 +240,16 @@ public class LeavePolicy extends BaseTest {
 		Thread.sleep(3000);
 		lb.ClickOnApplyLeave();
 		lb.selectLeaveType("Leave (L)");
-		lb.enterFromDate("26 August 2019");
-		lb.enterToDate("26 August 2019");
+		lb.enterFromDate("26 July 2019");
+		lb.enterToDate("26 July 2019");
 		Thread.sleep(2000);
 		lb.selectSecondHalf();
 		lb.clickApplyButton();
 		String e=lb.getMessage2();
-		//Assert.assertTrue(e.contains("Leave applied"));
 		Assert.assertEquals(e, "Leave applied successfully.");
 		Thread.sleep(6000);
 		lb.selectLeaveHistory();
-		lb.enterHistoryToDate("30 August 2019");
+		lb.enterHistoryToDate("30 September 2019");
 		lb.clickSearchButton();
 		lb.selectView();
 		Thread.sleep(7000);
@@ -286,7 +257,53 @@ public class LeavePolicy extends BaseTest {
 		lb.exitFullscreen();
 		}
 	
+	
 	@Test(priority=10)
+	public void ToCheckNoofCasualLeaveDaysthatareeithertobePrefixedorSuffixedtoaHolidaytomarkH_SC_292() throws InterruptedException{
+		ToCheckNoofCasualLeaveDayseitherPrefixedorSuffixedtoHolidaytomarkH mi = new ToCheckNoofCasualLeaveDayseitherPrefixedorSuffixedtoHolidaytomarkH(driver);
+		mi.clickMastserLink();
+		mi.selectLeavePolicy();
+		mi.clickAddLeaves();
+		mi.clickSettingsLink();
+		Thread.sleep(2000);
+		mi.clickWeeklyOff();
+		Thread.sleep(4000);
+		mi.clickHolidayLeaveCheckbox();
+		mi.HolidayPrefixLeaves("2");
+		mi.clickHolidayPrefixCheckbox();
+		Thread.sleep(4000);
+		mi.clickUpdateButton();
+		String d = mi.getMessage1();
+		Assert.assertEquals(d, "Setting was successfully updated.");
+		mi.resizeWindow();
+		Thread.sleep(5000);
+		mi.clickLeaveLink();
+		mi.clickAppyLeaveLink();
+		mi.clickFilter();
+		Thread.sleep(3000);
+		mi.clickLoad();
+		Thread.sleep(3000);
+		mi.ClickOnApplyLeave();
+		mi.selectLeaveType("Leave (L)");
+		Thread.sleep(3000);
+		mi.enterFromDate("14 August 2019");
+		Thread.sleep(3000);
+		mi.enterToDate("16 August 2019");
+		Thread.sleep(2000);
+		mi.clickApplyButton();
+		String e = mi.getMessage2();
+		Assert.assertEquals(e, "Leave applied successfully.");
+		Thread.sleep(6000);
+		mi.selectLeaveHistory();
+		mi.enterHistoryToDate("30 September 2019");
+		mi.clickSearchButton();
+		mi.selectView();
+		Thread.sleep(7000);
+		mi.clickDeleteButton();
+		mi.exitFullscreen();
+	}
+	
+	@Test(priority=11)
 	public void ToCheckifappliedCasualLeavehasWeeklyOffconsiderasCasualLeavewithprefix_SC_293() throws InterruptedException{
 		ToCheckifappliedCasualLeavehasWeeklyOffconsiderasCasualLeavewithprefix ab = new ToCheckifappliedCasualLeavehasWeeklyOffconsiderasCasualLeavewithprefix(driver);
 		ab.clickMastserLink();
@@ -296,9 +313,9 @@ public class LeavePolicy extends BaseTest {
 		Thread.sleep(2000);
 		ab.clickWeeklyOff();
 		Thread.sleep(4000);
-		ab.clickLeaveCheckbox();
-		ab.PrefixLeaves("2");
-		ab.clickPrefixCheckbox();
+		ab.clickWeeklyOffLeaveCheckbox();
+		ab.WeeklyOffPrefixLeaves("2");
+		ab.clickWeeklyOffPrefixCheckbox();
 		Thread.sleep(4000);
 		ab.clickUpdateButton();
 		String d=ab.getMessage1();
@@ -313,20 +330,76 @@ public class LeavePolicy extends BaseTest {
 		Thread.sleep(3000);
 		ab.ClickOnApplyLeave();
 		ab.selectLeaveType("Leave (L)");
-		ab.enterFromDate("14 August 2019");
-		ab.enterToDate("15 August 2019");
+		Thread.sleep(3000);
+		ab.enterFromDate("2 August 2019");
+		Thread.sleep(3000);
+		ab.enterToDate("4 August 2019");
 		Thread.sleep(2000);
 		ab.clickApplyButton();
 		String e=ab.getMessage2();
 		Assert.assertEquals(e, "Leave applied successfully.");
 		Thread.sleep(6000);
 		ab.selectLeaveHistory();
-		ab.enterHistoryToDate("30 August 2019");
+		ab.enterHistoryToDate("30 September 2019");
 		ab.clickSearchButton();
 		ab.selectView();
 		Thread.sleep(7000);
 		ab.clickDeleteButton();
 		ab.exitFullscreen();
+	}
+	
+	@Test(priority=12)
+	public void verifyUpdatedHolidayWeeklyLeaves_SC_291() throws Exception{
+		HolidayWeeklyoffSettings hs=new HolidayWeeklyoffSettings(driver);
+		hs.clickLeaveLink();
+		hs.clickAppyLeaveLink();
+		hs.resizeWindow();
+		Thread.sleep(3000);
+		hs.clickFilter();
+		Thread.sleep(3000);
+		hs.clickLoad();
+		Thread.sleep(3000);
+		hs.ClickOnApplyLeave();
+		Thread.sleep(2000);
+		hs.selectLeaveHistory();
+		hs.enterHistoryToDate("30 September 2019");
+		hs.clickSearchButton();
+		hs.selectView();
+		Thread.sleep(7000);
+		hs.clickDeleteButton();
+		Thread.sleep(7000);
+		hs.selectView();
+		Thread.sleep(7000);
+		hs.clickDeleteButton();
+		Thread.sleep(7000);
+		hs.clickLeaveLink();
+		hs.clickAppyLeaveLink();
+		hs.resizeWindow();
+		Thread.sleep(3000);
+		hs.clickFilter();
+		Thread.sleep(3000);
+		hs.clickLoad();
+		Thread.sleep(3000);
+		hs.ClickOnApplyLeave();
+		hs.selectLeaveType("Leave (L)");
+		Thread.sleep(3000);
+		hs.enterFromDate("2 August 2019");
+		Thread.sleep(3000);
+		hs.enterToDate("4 August 2019");
+		Thread.sleep(2000);
+		hs.clickApplyButton();
+		String e = hs.getMessage2();
+		Assert.assertEquals(e, "Leave applied successfully.");
+		Thread.sleep(6000);
+		hs.selectLeaveType("Leave (L)");
+		Thread.sleep(3000);
+		hs.enterFromDate1("14 August 2019");
+		Thread.sleep(3000);
+		hs.enterToDate1("16 August 2019");
+		Thread.sleep(2000);
+		hs.clickApplyButton();
+		Thread.sleep(6000);
+		hs.exitFullscreen();
 	}
 	
 	/*@Test(enabled=false)
@@ -708,33 +781,7 @@ public class LeavePolicy extends BaseTest {
 		
 	}
 	
-	@Test(priority=6)
-	public void verifyUpdatedHolidayWeeklyLeaves_SC_291() throws Exception{
-		HolidayWeeklyoffSettings hs=new HolidayWeeklyoffSettings(driver);
-		hs.clickMastserLink();
-		hs.selectLeavePolicy();	
-		hs.clickAddLeaves();
-		hs.clickSettingsLink();
-		hs.clickHolidayTab();
-		Thread.sleep(5000);
-		hs.clickHolidayCasualLeave();
-		hs.enterNoofCasualLeaves("3");
-		hs.clickTab();
-		hs.clickSandwichLeave();
-		hs.clickWeeklyoffHoliday();
-		Thread.sleep(3000);
-		hs.enterNoofCasualLeavesforWeekly("3");
-		hs.clickTab();
-		hs.clickSuffix();
-		hs.clickUpdateButton();
-		String s=hs.getMessage();
-		Assert.assertEquals(s, "Setting was successfully updated.");
-		Thread.sleep(300);
-		hs.clickHolidayCasualLeave();
-		hs.clickWeeklyoffHoliday();
-		hs.clickUpdateButton();
-		
-	}
+	
 	 @Test(priority=22) 
      public void CheckAutoLeaveAllotmentWithPeriodInLeavePolicy_SC_294() throws InterruptedException{
     	 CheckAutoLeaveAllotmentWithPeriodInLeavePolicy lb=new CheckAutoLeaveAllotmentWithPeriodInLeavePolicy(driver);
