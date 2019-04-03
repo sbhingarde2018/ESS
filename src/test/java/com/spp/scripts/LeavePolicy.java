@@ -143,7 +143,7 @@ public class LeavePolicy extends BaseTest {
 		Thread.sleep(5000);
 		lp.clickLeaveDefinitionLink();
 		System.out.println("Leave Definition Page is Displayed");
-	}*/
+	}
 	
 	@Test(priority=7)
 	public void verifyUpdatedLeaveBeahaviour_SC_272() throws InterruptedException{
@@ -400,6 +400,165 @@ public class LeavePolicy extends BaseTest {
 		hs.clickApplyButton();
 		Thread.sleep(6000);
 		hs.exitFullscreen();
+	}*/
+	
+	@Test(priority=13) 
+    public void CheckForCarryOverInLeavePolicys_SC_283() throws InterruptedException{
+    CheckForCarryOverInLeavePolicy lb=new CheckForCarryOverInLeavePolicy(driver);
+    	lb.clickMastserLink();
+    	lb.selectLeavePolicy();
+    	lb.clickAddLeaves();
+    	lb.clickSettingsLink();
+    	Thread.sleep(4000);
+    	lb.clickLapseTab();
+    	Thread.sleep(4000);
+    	lb.clickCarryOver();
+    	lb.clickUpdateButton();
+    	String d=lb.getMessage1();
+    	Assert.assertEquals(d, "Setting was successfully updated.");
+    	Thread.sleep(6000);
+    	lb.clickLeaveLink();
+    	lb.clickAppyLeaveLink();
+    	lb.resizeWindow();
+    	lb.clickFilter();
+    	Thread.sleep(5000);
+    	lb.clickLoad();
+    	Thread.sleep(4000);
+    	lb.clickApplyLeave();
+    	Thread.sleep(4000);
+    	lb.clickLeaveSummaryTab();
+    	Thread.sleep(4000);
+    	lb.clickMastserLink();
+    	lb.selectLeavePolicy();
+    	lb.clickAddLeaves();
+    	lb.clickSettingsLink();
+    	Thread.sleep(4000);
+    	lb.clickLapseTab();
+    	lb.clickCarryOver();
+    	lb.clickUpdateButton();
+    	String t=lb.getMessage1();
+    	Assert.assertEquals(t, "Setting was successfully updated.");
+    	Thread.sleep(6000);
+    	lb.clickLeaveLink();
+    	lb.clickAppyLeaveLink();
+    	lb.clickFilter();
+    	Thread.sleep(4000);
+    	lb.clickLoad();
+    	Thread.sleep(4000);
+    	lb.clickApplyLeave();
+    	Thread.sleep(4000);
+    	lb.clickLeaveSummaryTab();
+    	Thread.sleep(4000);
+    	lb.exitFullscreen();
+    	}
+	
+	@Test(priority=14) 
+    public void CheckForLowerLimitInLeavePolicy_SC_284() throws InterruptedException{
+   	CheckForLowerLimitInLeavePolicy lb=new CheckForLowerLimitInLeavePolicy(driver);
+   		lb.clickMastserLink();
+   		lb.selectLeavePolicy();
+   		lb.clickAddLeaves();
+   		lb.clickSettingsLink();
+   		Thread.sleep(4000);
+   		lb.clickLapseTab();
+   		lb.clickCarryOver();
+   		Thread.sleep(4000);
+   		lb.clickLowerLimit();
+   		lb.enterLowerBoxvalue("5"); 	
+   		lb.clickUpdateButton();
+   		String d=lb.getMessage1();
+   		Assert.assertEquals(d, "Setting was successfully updated.");
+   		Thread.sleep(6000);
+   		lb.resizeWindow();
+   		lb.clickLeaveLink();
+   		lb.clickAppyLeaveLink();
+   		lb.clickFilter();
+   		Thread.sleep(5000);
+   		lb.clickLoad();
+   		Thread.sleep(4000);
+   		lb.clickApplyLeave();
+   		Thread.sleep(4000);
+   		lb.clickLeaveSummaryTab();
+   		Thread.sleep(5000);
+   		lb.clickReport();
+   		lb.clickAdvanceLeaveReport();
+   		lb.selectLeaveReport("Summary");
+   		lb.selectLeavePolicy("Default");
+   		lb.clickPaymonth("Feb/2019");
+   		lb.clickSelectAllCheckBox();
+   		lb.clickGetEmployee();
+   		Thread.sleep(4000);
+   		lb.clickLoad();
+   		Thread.sleep(5000);
+   		lb.clickEmployee1();
+   		lb.clickEmployee2();
+   		lb.clickGenerateReport();
+   		Thread.sleep(5000);
+   		lb.clickMastserLink();
+   		lb.selectLeavePolicy();
+		lb.clickAddLeaves();
+		lb.clickSettingsLink();
+		Thread.sleep(4000);
+		lb.clickLapseTab();
+		lb.clickCarryOver();
+		Thread.sleep(4000);
+		lb.clickUpdateButton();	    
+		}
+	
+	@Test(priority=15) 
+    public void CheckForUpperLimitInLeavePolicy_SC_285() throws InterruptedException{
+   	CheckForUpperLimitInLeavePolicy lb=new CheckForUpperLimitInLeavePolicy(driver);
+   		lb.clickMastserLink();
+   		lb.selectLeavePolicy();
+   		lb.clickAddLeaves();
+   		lb.clickSettingsLink();
+   		Thread.sleep(4000);
+   		lb.clickLapseTab();
+   		Thread.sleep(4000);
+   		lb.clickCarryOver();
+   		Thread.sleep(4000);
+   		lb.clickUpperLimit();
+   		Thread.sleep(3000);
+   		lb.enterUpperBoxvalue("10"); 	
+   		lb.clickUpdateButton();
+   		String d=lb.getMessage1();
+   		Assert.assertEquals(d, "Setting was successfully updated.");
+   		Thread.sleep(6000);
+   		lb.clickLeaveLink();
+   		lb.clickAppyLeaveLink();
+   		lb.resizeWindow();
+   		lb.clickFilter();
+   		Thread.sleep(5000);
+   		lb.clickLoad();
+   		Thread.sleep(4000);
+   		lb.clickApplyLeave();
+   		Thread.sleep(4000);
+   		lb.clickLeaveSummaryTab();
+   		Thread.sleep(5000);
+   		lb.clickReport();
+   		lb.clickAdvanceLeaveReport();
+   		lb.selectLeaveReport("Summary");
+   		lb.selectLeavePolicy("Default");
+   		lb.clickPaymonth("Jan/2019");
+   		lb.clickSelectAllCheckBox();
+   		lb.clickGetEmployee();
+   		Thread.sleep(4000);
+   		lb.clickLoad();
+   		Thread.sleep(5000);
+   		lb.clickEmployee1();
+   		lb.clickEmployee2();
+   		lb.clickGenerateReport();
+   		Thread.sleep(5000);
+   		lb.clickMastserLink();
+   		lb.selectLeavePolicy();
+   		lb.clickAddLeaves();
+   		lb.clickSettingsLink();
+   		Thread.sleep(4000);
+   		lb.clickLapseTab();
+   		lb.clickCarryOver();
+   		Thread.sleep(4000);
+   		lb.clickUpdateButton();
+   		lb.exitFullscreen();
 	}
 	
 	/*@Test(enabled=false)
@@ -505,160 +664,9 @@ public class LeavePolicy extends BaseTest {
 		Assert.assertEquals(s, "Setting was successfully updated.");
 
 	} 
-	
-	 @Test(priority=17) 
-    public void CheckForCarryOverInLeavePolicys_SC_283() throws InterruptedException{
-    	 CheckForCarryOverInLeavePolicy lb=new CheckForCarryOverInLeavePolicy(driver);
-	lb.clickMastserLink();
-	lb.selectLeavePolicy();
-	lb.clickAddLeaves();
-	lb.clickSettingsLink();
-	Thread.sleep(4000);
-	lb.clickLapseTab();
-	Thread.sleep(4000);
-	lb.clickCarryOver();
-	lb.clickUpdateButton();
-	String d=lb.getMessage1();
-	Assert.assertEquals(d, "Setting was successfully updated.");
-	Thread.sleep(6000);
-	lb.clickLeaveLink();
-	lb.clickAppyLeaveLink();
-	lb.clickFilter();
-	Thread.sleep(5000);
-	lb.clickLoad();
-	Thread.sleep(4000);
-	lb.clickApplyLeave();
-	Thread.sleep(4000);
-	lb.clickLeaveSummaryTab();
-	Thread.sleep(4000);
-	lb.clickMastserLink();
-	lb.selectLeavePolicy();
-	lb.clickAddLeaves();
-	lb.clickSettingsLink();
-	Thread.sleep(4000);
-	lb.clickLapseTab();
-	lb.clickCarryOver();
-	lb.clickUpdateButton();
-	String t=lb.getMessage1();
-	Assert.assertEquals(t, "Setting was successfully updated.");
-	Thread.sleep(6000);
-	lb.clickLeaveLink();
-	lb.clickAppyLeaveLink();
-	lb.clickFilter();
-	Thread.sleep(4000);
-	lb.clickLoad();
-	Thread.sleep(4000);
-	lb.clickApplyLeave();
-	Thread.sleep(4000);
-	lb.clickLeaveSummaryTab();
-	Thread.sleep(4000);
-}
-     @Test(enabled=false) 
-     public void CheckForLowerLimitInLeavePolicy_SC_284() throws InterruptedException{
-    	 CheckForLowerLimitInLeavePolicy lb=new CheckForLowerLimitInLeavePolicy(driver);
- 	lb.clickMastserLink();
- 	lb.selectLeavePolicy();
- 	lb.clickAddLeaves();
- 	lb.clickSettingsLink();
- 	Thread.sleep(4000);
- 	lb.clickLapseTab();
- 	
- 	lb.clickCarryOver();
- 	Thread.sleep(4000);
- 	lb.clickLowerLimit();
- 	lb.enterLowerBoxvalue("5"); 	
- 	lb.clickUpdateButton();
- 	String d=lb.getMessage1();
- 	Assert.assertEquals(d, "Setting was successfully updated.");
- 	Thread.sleep(6000);
- 	lb.clickLeaveLink();
- 	lb.clickAppyLeaveLink();
- 	lb.clickFilter();
- 	Thread.sleep(5000);
- 	lb.clickLoad();
- 	Thread.sleep(4000);
- 	lb.clickApplyLeave();
- 	Thread.sleep(4000);
- 	lb.clickLeaveSummaryTab();
- 	Thread.sleep(5000);
- 	lb.clickReport();
- 	lb.clickAdvanceLeaveReport();
- 	lb.selectLeaveReport("Summary");
- 	lb.selectLeavePolicy("new");
- 	lb.clickPaymonth("Mar/2018");
- 	lb.clickSelectAllCheckBox();
- 	lb.clickGetEmployee();
- 	Thread.sleep(4000);
- 	lb.clickLoad();
- 	Thread.sleep(5000);
- 	lb.clickEmployee1();
- 	lb.clickEmployee2();
- 	lb.clickGenerateReport();
- 	Thread.sleep(5000);
- 	lb.clickMastserLink();
- 	lb.selectLeavePolicy();
- 	lb.clickAddLeaves();
- 	lb.clickSettingsLink();
- 	Thread.sleep(4000);
- 	lb.clickLapseTab();
- 	lb.clickCarryOver();
- 	Thread.sleep(4000);
- 	lb.clickUpdateButton();
- 	    
-    }
-     @Test(enabled=false) 
-     public void CheckForUpperLimitInLeavePolicy_SC_285() throws InterruptedException{
-    	 CheckForUpperLimitInLeavePolicy lb=new CheckForUpperLimitInLeavePolicy(driver);
- 	lb.clickMastserLink();
- 	lb.selectLeavePolicy();
- 	lb.clickAddLeaves();
- 	lb.clickSettingsLink();
- 	Thread.sleep(4000);
- 	lb.clickLapseTab();
- 	Thread.sleep(4000);
- 	lb.clickCarryOver();
- 	Thread.sleep(4000);
- 	lb.clickUpperLimit();
- 	Thread.sleep(3000);
- 	lb.enterUpperBoxvalue("10"); 	
- 	lb.clickUpdateButton();
- 	String d=lb.getMessage1();
- 	Assert.assertEquals(d, "Setting was successfully updated.");
- 	Thread.sleep(6000);
- 	lb.clickLeaveLink();
- 	lb.clickAppyLeaveLink();
- 	lb.clickFilter();
- 	Thread.sleep(5000);
- 	lb.clickLoad();
- 	Thread.sleep(4000);
- 	lb.clickApplyLeave();
- 	Thread.sleep(4000);
- 	lb.clickLeaveSummaryTab();
- 	Thread.sleep(5000);
- 	lb.clickReport();
- 	lb.clickAdvanceLeaveReport();
- 	lb.selectLeaveReport("Summary");
- 	lb.selectLeavePolicy("new");
- 	lb.clickPaymonth("Mar/2018");
- 	lb.clickSelectAllCheckBox();
- 	lb.clickGetEmployee();
- 	Thread.sleep(4000);
- 	lb.clickLoad();
- 	Thread.sleep(5000);
- 	lb.clickEmployee1();
- 	lb.clickEmployee2();
- 	lb.clickGenerateReport();
- 	Thread.sleep(5000);
- 	lb.clickMastserLink();
- 	lb.selectLeavePolicy();
- 	lb.clickAddLeaves();
- 	lb.clickSettingsLink();
- 	Thread.sleep(4000);
- 	lb.clickLapseTab();
- 	lb.clickCarryOver();
- 	Thread.sleep(4000);
- 	lb.clickUpdateButton();
-}
+	 
+     
+     
      @Test(priority=20) 
      public void CheckForLapseUnavailedOnInLeavePolicy_SC_286() throws InterruptedException{
     	 CheckForLapseUnavailedOnInLeavePolicy lb=new CheckForLapseUnavailedOnInLeavePolicy(driver);

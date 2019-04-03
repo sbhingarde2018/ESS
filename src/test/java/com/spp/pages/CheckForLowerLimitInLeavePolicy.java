@@ -14,16 +14,16 @@ public class CheckForLowerLimitInLeavePolicy extends BasePage{
 	WebElement leavePolicy;
     @FindBy(xpath="//div[@id='leave-policy-master-list']//tr[1]//td[4]//a[text()='Add Leaves']")
 	WebElement addLeaves;
-   // @FindBy(xpath="//*[@id=\"leave_policy_setting_details\"]/div[2]/table/tbody/tr/td[2][contains(text(),'Earned')]/parent::tr/td[3]/a")
-    @FindBy(xpath="//*[@id=\"leave_policy_setting_details\"]/div[2]/table/tbody/tr/td[2][contains(text(),'Casual')]/parent::tr/td[3]/a")
+    //@FindBy(xpath="//*[@id=\"leave_policy_setting_details\"]/div[2]/table/tbody/tr/td[2][contains(text(),'Earned')]/parent::tr/td[3]/a")
+    @FindBy(xpath="//*[@id='leave_policy_setting_details']/div/table/tbody/tr/td[contains(text(),'Leave')]/parent::tr/td[3]/a")
     WebElement settingsLink;
-    @FindBy(xpath="//*[@id=\"main\"]/div/div[3]/nav/ul/li[2]/a/span")
+    @FindBy(xpath="//*[@id='main']/div/div[3]/nav/ul/li[2]/a/span")
     WebElement LapseTab;
-    @FindBy(xpath="//*[@id=\"lapse_carryover_encashment_sets\"]/fieldset/legend/label/input")
+    @FindBy(xpath="//input[@id='leave_policy_head_wise_setting_carry_over_lapse_settings_carry_over']")
     WebElement CarryOver;
-    @FindBy(xpath="//*[@id=\"excess_div\"]/table/tbody/tr[1]/td[1]/label/input[1]")
+    @FindBy(xpath="//*[@id='excess_div']/table/tbody/tr[1]/td[1]/label/input[1]")
     WebElement LowerLimit;
-    @FindBy(xpath="//*[@id=\"excess_div\"]/table/tbody/tr[1]/td[1]/label/input[2]")
+    @FindBy(xpath="//*[@id='excess_div']/table/tbody/tr[1]/td[1]/label/input[2]")
     WebElement LowerBoxvalue;
     @FindBy(id="update_carry_over_lapse")
     WebElement UpdateButton;
@@ -35,9 +35,9 @@ public class CheckForLowerLimitInLeavePolicy extends BasePage{
     WebElement AppyLeaveLink;
     @FindBy(id="filter_head")
     WebElement Filter;
-    @FindBy(xpath="//*[@id=\"bf_form\"]/div[9]/button[1]")
+    @FindBy(xpath="//*[@id='bf_form']/div[10]/button[1]")
     WebElement Load;
-    @FindBy(xpath="//*[@id=\"dt_leave_details\"]/tbody/tr[1]/td[3]/a")
+    @FindBy(xpath="//*[@id='dt_leave_details']/tbody/tr/td[contains(text(),'Tina')]/parent::tr/td/a")
     WebElement ApplyLeave;
 	@FindBy(xpath="//*[@id=\"main\"]/div[2]/nav/ul/li[2]/a/span")
 	WebElement LeaveSummaryTab;
@@ -55,10 +55,10 @@ public class CheckForLowerLimitInLeavePolicy extends BasePage{
 	WebElement SelectAllCheckBox;
 	@FindBy(id="leave_report_employees")
 	WebElement GetEmployee;
-	@FindBy(xpath="//*[@id=\"leave_report_table\"]/tbody/tr[1]/td[1]/input")
-	WebElement Employee1;
 	@FindBy(xpath="//*[@id=\"leave_report_table\"]/tbody/tr[2]/td[1]/input")
 	WebElement Employee2;
+	@FindBy(xpath="//*[@id=\"leave_report_table\"]/tbody/tr[3]/td[1]/input")
+	WebElement Employee3;
 	@FindBy(id="leave_report_submit")
 	WebElement GenerateReport;
 	
@@ -145,11 +145,11 @@ public class CheckForLowerLimitInLeavePolicy extends BasePage{
 		Load.click();
 	}
 	public void clickEmployee1(){
-		Employee1.click();
+		Employee2.click();
 	}
 	
 	public void clickEmployee2(){
-		Employee2.click();
+		Employee3.click();
 	}
 	public void clickGenerateReport(){
 		GenerateReport.click();
