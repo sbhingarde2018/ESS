@@ -60,7 +60,7 @@ import com.spp.pages.UpdateLeavePolicy;
 
 public class LeavePolicy extends BaseTest {
 
-	/*@Test(priority=0)
+	@Test(priority=0)
 	public void verifyCreatedLeavePolicy_SC_35(){
 		CreateLeavePolicy lp=new CreateLeavePolicy(driver);
 		lp.clickMastserLink();
@@ -145,7 +145,7 @@ public class LeavePolicy extends BaseTest {
 		System.out.println("Leave Definition Page is Displayed");
 	}
 	
-	@Test(priority=7)
+	/*@Test(priority=7)
 	public void verifyUpdatedLeaveBeahaviour_SC_272() throws InterruptedException{
 		LeaveBehaviourSettings lb=new LeaveBehaviourSettings(driver);
 		lb.clickMastserLink();
@@ -450,6 +450,7 @@ public class LeavePolicy extends BaseTest {
     	lb.clickLeaveSummaryTab();
     	Thread.sleep(4000);
     	lb.exitFullscreen();
+    	Thread.sleep(8000);
     	}
 	
 	@Test(priority=14) 
@@ -502,7 +503,8 @@ public class LeavePolicy extends BaseTest {
 		lb.clickLapseTab();
 		lb.clickCarryOver();
 		Thread.sleep(4000);
-		lb.clickUpdateButton();	    
+		lb.clickUpdateButton();
+		Thread.sleep(8000);
 		}
 	
 	@Test(priority=15) 
@@ -559,7 +561,8 @@ public class LeavePolicy extends BaseTest {
    		Thread.sleep(4000);
    		lb.clickUpdateButton();
    		lb.exitFullscreen();
-	}
+   		Thread.sleep(8000);
+		}
 	
 	/*@Test(enabled=false)
 	public void CheckExcessCasualLeaveTakenAsLOP_SC_276() throws InterruptedException{

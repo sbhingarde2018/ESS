@@ -59,7 +59,7 @@ public class CheckForUpperLimitInLeavePolicy extends BasePage {
 	WebElement Employee3;
 	@FindBy(id="leave_report_submit")
 	WebElement GenerateReport;
-	@FindBy(xpath="//*[@id=\"leave_policy_head_wise_settings_response\"]/div/strong")
+	@FindBy(xpath="//*[@id='leave_policy_head_wise_settings_response']/div/strong")
     WebElement SuccessfulMessage;
 	
 	public CheckForUpperLimitInLeavePolicy(WebDriver driver) {
@@ -155,5 +155,4 @@ public class CheckForUpperLimitInLeavePolicy extends BasePage {
 	public String getMessage1(){
 		return SuccessfulMessage.getText();
 	}
-
 }
