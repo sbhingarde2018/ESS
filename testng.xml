@@ -4,15 +4,15 @@
   <test name="Test">
     <classes>
     
-    <class name="com.spp.scripts.LeavePolicy"/>
-   
+    <class name="com.spp.scripts.BulkIncrementDetails"/> 
+    
    
    <!--<class name="com.spp.scripts.HolidayList"/>
     <class name="com.spp.scripts.States"/>
     <class name="com.spp.scripts.EmployeeDetails"/>--> 
    <!--<class name="com.spp.scripts.ReimbursementClaim"/>
    <class name="com.spp.scripts.Arrears"/>
-   
+   <class name="com.spp.scripts.LeavePolicy"/>
    <class name="com.spp.scripts.FullandFinalSettlement"/>
    <class name="com.spp.scripts.SalarySheet"/>
    <class name="com.spp.scripts.UserSettings"/>
@@ -45,7 +45,7 @@
    <class name="com.spp.scripts.GroupInsuranceDetail"/>
    <class name="com.spp.scripts.ReportWriter"/>-->
      <!-- <class name="com.spp.scripts.BulkClassificationChange"/> 
-    <class name="com.spp.scripts.BulkIncrementDetails"/> 
+    
    <class name="com.spp.scripts.RestrictPFContribution"/> 
    
     <class name="com.spp.scripts.Reports"/>

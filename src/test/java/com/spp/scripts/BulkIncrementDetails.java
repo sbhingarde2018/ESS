@@ -11,18 +11,21 @@ import com.spp.pages.CheckifEmployeeBulkSalaryRateDetailsGeneralLinksSalaryHeads
 public class BulkIncrementDetails extends BaseTest {
 
 
-	/*@Test(priority=0)
+	@Test(priority=0)
 	public void BulkIncrementUpdate_SC_102() throws Exception { 
 	BulkIncrementUpdate aa=new BulkIncrementUpdate(driver);
 	aa.clickEmployeeLink();
 	aa.selectBulkIncrementDetails();
-	aa.selectPayMonth("Apr/2013");
+	aa.selectPayMonth("Mar/2019");
 	aa.selectSalaryStructure("Structure");
 	Thread.sleep(2000);
 	aa.selectSalaryHead("Basic");
 	aa.selectGetValues();
+	aa.resizeWindow();
 	Thread.sleep(5000);
-	aa.selectLoad();	
+	aa.selectLoad();
+	Thread.sleep(2000);
+	aa.uncheckCheckbox();
 	aa.enterByAmount("2000");
 	aa.selectIncrementButton();
 	Thread.sleep(2000);
@@ -30,11 +33,12 @@ public class BulkIncrementDetails extends BaseTest {
 	Thread.sleep(2000);
 	String s=aa.getMessage();
 	Assert.assertEquals(s, "Employees Salary Successfully Updated.");
-}
+	aa.exitFullscreen();
+	}
 	
 	@Test(priority=1)
 	public void CheckifEmployeeBulkIncrementsDetailsGeneralLinksSalaryHeadsredirectstoMastermodule_SC_468() throws Exception { 
-		CheckifEmployeeBulkIncrementsDetailsGeneralLinksSalaryHeadsredirectstoMastermodule be=new CheckifEmployeeBulkIncrementsDetailsGeneralLinksSalaryHeadsredirectstoMastermodule(driver);
+	CheckifEmployeeBulkIncrementsDetailsGeneralLinksSalaryHeadsredirectstoMastermodule be=new CheckifEmployeeBulkIncrementsDetailsGeneralLinksSalaryHeadsredirectstoMastermodule(driver);
 		be.clickonemployee();
 		be.clickonbulkincrementdetails();
 		Thread.sleep(2000);
@@ -50,11 +54,11 @@ public class BulkIncrementDetails extends BaseTest {
 		Assert.assertEquals(message, "Salary head successfully created");
 		Thread.sleep(3000);
 		be.ClickDelete();
-	}
+		}
 
 		
 	
-	@Test(priority=2)
+	/*@Test(priority=2)
 	public void CheckifEmployeeBulkSalaryRateDetailsGeneralLinksSalaryHeadsredirectstoMastermodule_SC_467() throws Exception { 
 		CheckifEmployeeBulkSalaryRateDetailsGeneralLinksSalaryHeadsredirectstoMastermodule be=new CheckifEmployeeBulkSalaryRateDetailsGeneralLinksSalaryHeadsredirectstoMastermodule(driver);
 		be.clickonemployee();
@@ -74,7 +78,7 @@ public class BulkIncrementDetails extends BaseTest {
 		be.ClickDelete();
 		
 
-	}
+		}
 	
 	@Test(priority=1)
 	public void BulkSalaryRateAllot_SC_101() throws Exception { 

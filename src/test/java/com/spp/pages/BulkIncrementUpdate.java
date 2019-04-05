@@ -19,14 +19,17 @@ public class BulkIncrementUpdate extends BasePage {
 	WebElement BulkIncrementDetails;
 	@FindBy(id="month_year")
 	WebElement PayMonth;
-	
+	@FindBy(xpath="//*[@id='dt_bulk_increment']/tbody/tr[1]/td[1]/input")
+	WebElement AshishCheckbox;
+	@FindBy(xpath="//*[@id='dt_bulk_increment']/tbody/tr[2]/td[1]/input")
+	WebElement AnilCheckbox;
 	@FindBy(id="bi_salary_group")
 	WebElement SalaryStructure;
 	@FindBy(id="bi_salary_head_id")
 	WebElement SalaryHead;
 	@FindBy(id="get_increment_values")
 	WebElement GetValues;
-	@FindBy(xpath="//*[@id=\"bf_form\"]/div[9]/button[1]")
+	@FindBy(xpath="//*[@id='bf_form']/div[10]/button[1]")
 	WebElement Load;
 	@FindBy(id="amount")
 	WebElement ByAmount;
@@ -57,6 +60,12 @@ public class BulkIncrementUpdate extends BasePage {
 	}
 	public void selectLoad(){
 		Load.click();
+	}
+	public void uncheckCheckbox() throws InterruptedException{
+		AshishCheckbox.click();
+		Thread.sleep(2000);
+		AnilCheckbox.click();
+		Thread.sleep(2000);
 	}
 	public void enterByAmount(String value) throws Exception {
 		ByAmount.sendKeys(value);
