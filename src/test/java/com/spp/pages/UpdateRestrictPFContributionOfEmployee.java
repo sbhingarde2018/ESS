@@ -19,9 +19,9 @@ public class UpdateRestrictPFContributionOfEmployee extends BasePage{
     WebElement Employee;
 	@FindBy(xpath="//*[@id=\"menu\"]/li[4]/div/div/ul/li[3]/a")
 	WebElement PfContribution;
-	@FindBy(xpath="//*[@id=\"employees_table\"]/tbody/tr[1]/td[4]/input")
+	@FindBy(xpath="//*[@id='employees_table']/tbody/tr[1]/td[4]/input")
 	WebElement CheckBox1;
-	@FindBy(xpath="//*[@id=\"employees_table\"]/tbody/tr[1]/td[5]/input")
+	@FindBy(xpath="//*[@id='employees_table']/tbody/tr[1]/td[5]/input")
 	WebElement CheckBox2;
 	@FindBy(xpath="//*[@id=\"RestrictPFESIForm\"]/div[3]/input")
 	WebElement UpdateButton;

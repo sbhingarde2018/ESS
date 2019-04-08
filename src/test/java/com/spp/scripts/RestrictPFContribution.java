@@ -35,5 +35,5 @@ public class RestrictPFContribution extends BaseTest{
 		String q=af.getPFMessage();
 		Assert.assertEquals(q, "PF Contribution was successfully updated");
 			
-}
+	}
 }

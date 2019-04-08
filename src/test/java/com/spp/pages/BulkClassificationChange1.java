@@ -42,8 +42,8 @@ public class BulkClassificationChange1 extends BasePage {
 	WebElement successfullMessage;
 	@FindBy(id="sal_grp_from")
     WebElement SalaryFrom1;
-	@FindBy(id="sal_grp_from")
-    WebElement SalaryFrom2;
+	@FindBy(id="sal_grp_to")
+    WebElement SalaryTo1;
 	@FindBy(id="salary_group_based_on_gross")
 	WebElement BasedOnGross;
 	@FindBy(xpath="//input[@value='Create Salary Structure']")
@@ -94,8 +94,8 @@ public class BulkClassificationChange1 extends BasePage {
 	public void selectSalaryFrom1(String value){
 		dropDownSelect(SalaryFrom1, value);
 	}
-	public void selectSalaryFrom2(String value){
-		dropDownSelect(SalaryFrom2, value);
+	public void selectSalaryTo1(String value){
+		dropDownSelect(SalaryTo1, value);
 	}
 	public void entergroupname(String value) {
 		EnterGroupName.sendKeys(value);

@@ -22,7 +22,7 @@ public class SearchEmployeeforClassificationChange extends BasePage{
 	WebElement SearchEmployee;
 	@FindBy(xpath="//*[@id=\"main\"]/div[4]/table/tbody/tr/td[2]/table[1]/tbody/tr[1]/td/input[2]")
 	WebElement ClickOnSearch;
-	@FindBy(id="selected_employees_14")
+	@FindBy(xpath="//*[@id='emps']/table/tbody/tr[2]/td[1]/input")
 	WebElement SelectEmployee;
 	@FindBy(id="sal_grp_to")
 	WebElement SelectSalaryGroupTo;
@@ -51,6 +51,7 @@ public class SearchEmployeeforClassificationChange extends BasePage{
 		dropDownSelect(SelectSalaryGroupFrom, value);
 	}
 	public void searchemployee(String value) {
+		SearchEmployee.clear();
 		SearchEmployee.sendKeys(value);
 	}
 	public void clickonsearch() {

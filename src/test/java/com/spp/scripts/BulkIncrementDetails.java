@@ -11,7 +11,7 @@ import com.spp.pages.CheckifEmployeeBulkSalaryRateDetailsGeneralLinksSalaryHeads
 public class BulkIncrementDetails extends BaseTest {
 
 
-	@Test(priority=0)
+	/*@Test(priority=0)
 	public void BulkIncrementUpdate_SC_102() throws Exception { 
 	BulkIncrementUpdate aa=new BulkIncrementUpdate(driver);
 	aa.clickEmployeeLink();
@@ -54,13 +54,11 @@ public class BulkIncrementDetails extends BaseTest {
 		Assert.assertEquals(message, "Salary head successfully created");
 		Thread.sleep(3000);
 		be.ClickDelete();
-		}
+		}*/
 
-		
-	
-	/*@Test(priority=2)
+	@Test(priority=2)
 	public void CheckifEmployeeBulkSalaryRateDetailsGeneralLinksSalaryHeadsredirectstoMastermodule_SC_467() throws Exception { 
-		CheckifEmployeeBulkSalaryRateDetailsGeneralLinksSalaryHeadsredirectstoMastermodule be=new CheckifEmployeeBulkSalaryRateDetailsGeneralLinksSalaryHeadsredirectstoMastermodule(driver);
+	CheckifEmployeeBulkSalaryRateDetailsGeneralLinksSalaryHeadsredirectstoMastermodule be=new CheckifEmployeeBulkSalaryRateDetailsGeneralLinksSalaryHeadsredirectstoMastermodule(driver);
 		be.clickonemployee();
 		be.clickonbulksalaryratedetails();
 		Thread.sleep(2000);
@@ -76,37 +74,36 @@ public class BulkIncrementDetails extends BaseTest {
 		Assert.assertEquals(message, "Salary head successfully created");
 		Thread.sleep(3000);
 		be.ClickDelete();
-		
-
 		}
 	
-	@Test(priority=1)
+	@Test(priority=3)
 	public void BulkSalaryRateAllot_SC_101() throws Exception { 
 	BulkSalaryRateAllot bb=new BulkSalaryRateAllot(driver);
-	bb.clickEmployeeLink();
-	bb.selectBulkSalaryRateDetails();
-	bb.selectPayMonth("Apr/2013");
-	bb.selectSalaryStructure("Structure");
-	Thread.sleep(2000);
-	bb.selectGetEmployees();
-	Thread.sleep(2000);
-	bb.selectLoad();
-	String i=bb.getMessage();
-	Assert.assertEquals(i, "Employees Successfully Loaded.");
-	Thread.sleep(10000);
-	bb.selectMoreButton();
-	bb.enterBasic("9000");
-	bb.selectPopulateButton();
-	Thread.sleep(5000);
-	String q=bb.getMessage();
-	Assert.assertEquals(q, "Employees Salary successfully Populated.");
-	Thread.sleep(3000);
-	bb.selectSaveValues();
-	Thread.sleep(2000);
-	String r=bb.getMessage();
-	Assert.assertEquals(r, "Employees Salary successfully Updated.");
-	Thread.sleep(3000);
-	bb.selectCloseButton();
-	
-}*/
+		bb.clickEmployeeLink();
+		bb.selectBulkSalaryRateDetails();
+		bb.selectPayMonth("Mar/2019");
+		bb.selectSalaryStructure("Structure");
+		bb.resizeWindow();
+		Thread.sleep(2000);
+		bb.selectGetEmployees();
+		Thread.sleep(2000);
+		bb.selectLoad();
+		String i=bb.getMessage();
+		Assert.assertEquals(i, "Employees Successfully Loaded.");
+		Thread.sleep(10000);
+		bb.selectMoreButton();
+		bb.enterBasic("9000");
+		bb.selectPopulateButton();
+		Thread.sleep(5000);
+		String q=bb.getMessage();
+		Assert.assertEquals(q, "Employees Salary successfully Populated.");
+		Thread.sleep(3000);
+		bb.selectSaveValues();
+		Thread.sleep(2000);
+		String r=bb.getMessage();
+		Assert.assertEquals(r, "Employees Salary successfully Updated.");
+		Thread.sleep(3000);
+		bb.selectCloseButton();
+		bb.exitFullscreen();
+		}
 }

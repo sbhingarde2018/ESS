@@ -16,7 +16,7 @@ public class CheckifEmployeeBulkSalaryRateDetailsGeneralLinksSalaryHeadsredirect
 	WebElement ClickonGeneralLinks;
 	@FindBy(xpath="//*[@id=\"ui-accordion-accordion-panel-0\"]/li[1]/a")
 	WebElement ClickOnSalaryHead;
-	@FindBy(xpath="//*[@id=\"main\"]/div[3]/span/a")
+	@FindBy(xpath="//*[@id='main']/div[3]/span/a")
 	WebElement AddNewSalaryHead;
 	@FindBy(id="salary_head_head_name")
 	WebElement EnterHeadName;
@@ -26,7 +26,7 @@ public class CheckifEmployeeBulkSalaryRateDetailsGeneralLinksSalaryHeadsredirect
 	WebElement CreateSalaryHead;
 	@FindBy(xpath="//*[@id=\"main\"]/div[1]/strong")
 	WebElement successfullmessage;
-	@FindBy(xpath="//*[@id=\"earning_heads\"]/tbody/tr/td[contains(text(),'Gross_Salary')]/parent::tr/td[5]/a[2]")
+	@FindBy(xpath="//*[@id='earning_heads']/tbody/tr/td[contains(text(),'Gross_Salary')]/parent::tr/td[5]/a[2]")
 	WebElement ClickDelete;
 	
 	public CheckifEmployeeBulkSalaryRateDetailsGeneralLinksSalaryHeadsredirectstoMastermodule(WebDriver driver) {

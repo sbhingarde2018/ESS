@@ -22,7 +22,7 @@ public class BulkClassificationChange extends BaseTest {
 		Thread.sleep(5000);
 		af.selectEmployee();
 		af.selectBulkClassification();
-		af.selectMonth("Apr/2013");
+		af.selectMonth("Mar/2019");
 		Thread.sleep(2000);
 		af.selectSalaryCheckBox();
 		Thread.sleep(2000);
@@ -40,33 +40,34 @@ public class BulkClassificationChange extends BaseTest {
 		Thread.sleep(2000);
 		af.selectEmployeeCheckBox();
 		Thread.sleep(2000);
-		af.selectSalaryFrom2("Structure");
+		af.selectSalaryTo1("Structure");
 		af.clickChangeButton();
 		//af.switchToPopUpAndAccept(driver);
 		Thread.sleep(5000);
-		af.navigateMaster();
-		af.clickSalaryStructureLink();
-		af.selectDeleteButton();
-}
-	/*@Test(priority=1)
+		//af.navigateMaster();
+		//af.clickSalaryStructureLink();
+		//af.selectDeleteButton();
+	}
+	
+	@Test(priority=1)
 	public void SearchEmployeeforClassificationChange_SC_469() throws Exception{
 		SearchEmployeeforClassificationChange ec=new SearchEmployeeforClassificationChange(driver);
 				ec.clickonemployee();
 				ec.clickonbulkclassification();
 				Thread.sleep(2000);
-				ec.selectmonth("Apr/2013");
+				ec.selectmonth("Mar/2019");
 				Thread.sleep(2000);
 				ec.checksalarycheckbox();
 				Thread.sleep(2000);
-				ec.selectsalarygroupfrom("acc");
+				ec.selectsalarygroupfrom("Structure");
 				Thread.sleep(2000);
-				ec.searchemployee("Akshay");
+				ec.searchemployee("Anil");
 				Thread.sleep(2000);
 				ec.clickonsearch();
-				Thread.sleep(2000);
+				Thread.sleep(3000);
 				ec.selectemployee();
 				Thread.sleep(2000);
-				ec.selectsalarygroupto("Structure");
+				ec.selectsalarygroupto("Gross_Structure");
 				ec.clickonchange();
 				ec.switchToPopUpAndDismiss();
 				Thread.sleep(2000);
@@ -75,9 +76,23 @@ public class BulkClassificationChange extends BaseTest {
 				Thread.sleep(1000);
 				String t=ec.getMessage();
 				Assert.assertEquals(t, "Successfully Updated");
+				Thread.sleep(5000);
+				ec.clickonemployee();
+				ec.clickonbulkclassification();
+				Thread.sleep(2000);
+				ec.selectmonth("Mar/2019");
 				Thread.sleep(3000);
-				ec.selectmonth("Apr/2013");
 				ec.checksalarycheckbox();
-				ec.selectsalarygroupfrom("acc");
-	}*/
+				//Thread.sleep(2000);
+				//ec.searchemployee("");
+				Thread.sleep(3000);
+				ec.selectsalarygroupfrom("Gross_Structure");
+				Thread.sleep(2000);
+				ec.selectsalarygroupto("Structure");
+				Thread.sleep(2000);
+				ec.selectemployee();
+				Thread.sleep(2000);
+				ec.clickonchange();
+				ec.switchToPopUpAndAccept(driver);
+	}
 }
