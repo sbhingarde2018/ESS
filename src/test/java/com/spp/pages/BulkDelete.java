@@ -24,7 +24,7 @@ public class BulkDelete extends BasePage {
     WebElement EmployeeSelection;
 	@FindBy(id="bulk_delete_select_all")
 	WebElement BulkDelete;
-	@FindBy(xpath="//*[@id=\"bulk_delete_allotment\"]/div[4]/input")
+	@FindBy(xpath="//*[@id='bulk_delete_allotment']/div[4]/input")
     WebElement DeleteReimbursementAllotmentsButton;
 	@FindBy(xpath="//*[@id=\"reimbursement_allotment_result_response\"]/div/strong")
 	WebElement successfullMessage;	

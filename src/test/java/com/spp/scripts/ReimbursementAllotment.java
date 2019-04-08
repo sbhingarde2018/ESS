@@ -29,16 +29,17 @@ public class ReimbursementAllotment extends BaseTest{
 		rm.clickMastserLink();
 		rm.clickReimbursementMaster();
 		rm.clickAddReimbursementMaster();
-		rm.selectReimbursementType("Other Reimbursement");
-		rm.selectModeOfPayment("Cash");
-		rm.selectAllotmentType();
 		Thread.sleep(2000);
 		rm.enterReimbursementName("ReimMaster");
+		rm.selectReimbursementType("LTA");
+		rm.selectModeOfPayment("Bank Advise");
+		rm.selectAllotmentType();
+		rm.selectTDSRef("Basic");
+		Thread.sleep(2000);
 		rm.clickCreateReimbursementMaster();
 		String s=rm.getMessage();
 		Assert.assertEquals(s, "Reimbursement Master is successfully created.");
-	
-	} 
+	}
 	
 	@Test(priority=1)
 	public void AddNewReimbursementAllotmentr_SC_388() throws Exception{
@@ -48,10 +49,11 @@ public class ReimbursementAllotment extends BaseTest{
 		rt.selectNewReimbursement();
 		rt.selectAddEmployee();
 		rt.selectAllotButton();
-		rt.selectName("ReimMaster (Other Reimbursement)");
+		rt.selectName("Reim. LTA (LTA)");
+		rt.selectBlockPeriod("2018/2021");
 		Thread.sleep(2000);
-		rt.selectFinancialYear("2013/2014");
-		rt.selectAllotmentDate("15 April 2013");
+		rt.selectAllotmentDate("01 December 2018");
+		rt.selectFinancialYear("2018/2019");
 		rt.ClickOnFunctionKey();
 		Thread.sleep(5000);
 		rt.EnterSumAmount("3000");
@@ -59,8 +61,7 @@ public class ReimbursementAllotment extends BaseTest{
 		rt.selectCreateReimbursementButton();
 		String s=rt.getMessage();
 		Assert.assertEquals(s, "Reimbursement Allotment was successfully created");
-		
-	}	 
+	}
 	
 	@Test(priority=2)
 	public void UpdateReimbursementAllotment_SC_389() throws Exception{
@@ -74,7 +75,7 @@ public class ReimbursementAllotment extends BaseTest{
 		rt.selectUpdateButton();		
 		String s=rt.getMessage();
 		Assert.assertEquals(s, "Reimbursement Allotment was successfully updated");
-	}	
+	}
 	
 	@Test(priority=3)
 	public void DeleteReimbursementAllotment_SC_390() throws Exception{
@@ -92,27 +93,30 @@ public class ReimbursementAllotment extends BaseTest{
 		ss.selectEmployee();
 		ss.selectReimbursementAllotment();
 		ss.selectBulkAllotmentButton();
-		ss.selectName("ReimMaster (Other Reimbursement)");
+		ss.selectName("Reim. LTA (LTA)");
 		Thread.sleep(2000);
-		ss.selectFinancialYear("2013/2014");
-		ss.selectAllotmentDate("09 April 2013");
+		ss.selectFinancialYear("2018/2019");
+		ss.selectAllotmentDate("01 December 2018");
 		Thread.sleep(2000);
+		ss.selectBlockPeriod("2018/2021");
 		ss.selectAmount("4000");
 		ss.selectAmountFor();
 		ss.getemployees();
+		ss.resizeWindow();
 		Thread.sleep(5000);
-		/*ss.selectBlockPeriod("2013/2014");
-		ss.selectCreateReimbursementButton();
-		Thread.sleep(3000);*/
+		//ss.selectCreateReimbursementButton();
+		//Thread.sleep(3000);
 		ss.selectLoadButton();
 		Thread.sleep(5000);
 		ss.EmployeeBulkAllotmentButton();
 		Thread.sleep(8000);
 		ss.selectAllotReimbursementButton();
 		Thread.sleep(5000);
+		ss.exitFullscreen();
 		//String t=ss.getMessage();
 		//Assert.assertEquals(t, "Reimbursement Allotments were successfully created");
 	}
+	
 	@Test(priority=5)
 	public void BulkDelete_SC_392() throws Exception{
 		BulkDelete ty = new BulkDelete(driver);
@@ -147,17 +151,18 @@ public class ReimbursementAllotment extends BaseTest{
 		ty.selectLogDate("06 April 2018");
 		ty.selectExportToExcelButton();				
 } */
-	 @Test(priority=8)
-		public void CheckForNoAllotmentInRM_SC_264() throws Exception{
-		 CheckForNoAllotmentInRM rt=new CheckForNoAllotmentInRM(driver);
+	@Test(priority=8)
+	public void CheckForNoAllotmentInRM_SC_264() throws Exception{
+	CheckForNoAllotmentInRM rt=new CheckForNoAllotmentInRM(driver);
 	    rt.clickMastserLink();
 		rt.clickReimbursementMaster();
 		rt.clickAddReimbursementMaster();
+		rt.enterReimbursementName("ReimMaster");
 		rt.selectReimbursementType("Other Reimbursement");
 		rt.selectModeOfPayment("Cash");
-		rt.selectAllotmentType();
+		//rt.selectAllotmentType();
 		Thread.sleep(5000);
-		rt.enterReimbursementName("ReimMaster");
+		rt.selectTDSRef("Basic");
 		rt.clickCreateReimbursementMaster();
 		Thread.sleep(5000);
 		rt.selectEmployee();
@@ -170,9 +175,9 @@ public class ReimbursementAllotment extends BaseTest{
 		rt.clickMastserLink();
 		rt.clickReimbursementMaster();
 		rt.clickDeleteButton();
-		
-}	
-	 @Test(priority=9)
+		}
+	
+	 /*@Test(priority=9)
 		public void CheckForAllotmentInRM_SC_265() throws Exception{
 		CheckForAllotmentInRM rt=new CheckForAllotmentInRM(driver);
 		rt.clickMastserLink();
@@ -340,7 +345,7 @@ public class ReimbursementAllotment extends BaseTest{
 		 cm.clickMastserLink();
 		 cm.clickReimbursementMaster();
 		 cm.clickDeleteMasterButton();
-	}
+	}*/
 	/*@Test(priority=12)
 	public void CheckifEmployeeReimbursementAllotmentReportsredirectstoReportmodule_SC_470() throws Exception{
 		CheckifEmployeeReimbursementAllotmentReportsredirectstoReportmodule rd=new CheckifEmployeeReimbursementAllotmentReportsredirectstoReportmodule(driver);

@@ -28,6 +28,8 @@ public class CreateReimbursementMaster extends BasePage {
 	WebElement createReimbursementMaster;
 	@FindBy(xpath="//strong[text()='Reimbursement Master is successfully created.']")
 	WebElement successfullMassege;
+	@FindBy(id = "reimbursement_master_tds_ref_option_id")
+	WebElement TDSRef;
 
 	public CreateReimbursementMaster(WebDriver driver) {
 		super(driver);
@@ -37,43 +39,34 @@ public class CreateReimbursementMaster extends BasePage {
 	public void clickMastserLink(){
 		masterLink.click();
 	}
-
 	public void clickReimbursementMaster(){
 		reimbursemnetLink.click();
 	}
 	public void clickAddReimbursementMaster(){
 		addReimbursement.click();
 	}
-	
 	public void selectReimbursementType(String value){
 		dropDownSelect(reimbursementType, value);
 	}
-	
 	public void selectModeOfPayment(String value){
 		dropDownSelect(modeOfPayment, value);
 	}
-	
 	public void enterReimbursementName(String value){
 		reimbursementName.sendKeys(value);
 	}
-	
 	public void selectAllotmentType(){
 		allotmentType.click();
 	}
-	
 	public void clcikClubbedSalaryHead(){
 		salaryHead.click();
 	}
-	
 	public void clickCreateReimbursementMaster(){
 		createReimbursementMaster.click();
 	}
-	
+	public void selectTDSRef(String value){
+		dropDownSelect(TDSRef, value);
+	}
 	public String getMessage(){
 		return successfullMassege.getText();
 	}
-
 }
-
-
-

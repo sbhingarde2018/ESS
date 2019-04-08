@@ -35,7 +35,7 @@ public class CheckForNoAllotmentInRM extends BasePage {
 	WebElement successfullMassege;
 	@FindBy(xpath="//*[@id=\"main\"]/section/p/a")
 	WebElement Pagechange;
-	@FindBy(xpath="//*[@class='action-delete']")
+	@FindBy(xpath="//*[@id='reimbursement_masters']/tbody/tr/td[contains(text(),'ReimMaster')]/parent::tr/td[5]/a")
 	WebElement DeleteButton;
 	@FindBy(id="emp_detail")
 	WebElement Employee;
@@ -43,11 +43,13 @@ public class CheckForNoAllotmentInRM extends BasePage {
 	WebElement ReimbursementAllotment;
 	@FindBy(xpath="//*[@id=\"allotments_list\"]/div[1]/span/a")
 	WebElement NewReimbursement;
-	@FindBy(xpath="//*[@id=\"employees_table\"]/tbody/tr/td[contains(text(),'Akshay')]/parent::tr/td[5]/input")
+	@FindBy(xpath="//*[@id=\"employees_table\"]/tbody/tr/td[contains(text(),'Anil')]/parent::tr/td[5]/input")
 	WebElement AddEmployee;
 	@FindBy(xpath="//*[@id=\"main\"]/div/div[2]/form/div[3]/input")
 	WebElement AllotButton;
-
+	@FindBy(id = "reimbursement_master_tds_ref_option_id")
+	WebElement TDSRef;
+	
 	//@FindBy(xpath="//*[@id=\"new_reimbursement_allotment\"]/div[2]/fieldset/div[1]/div[1]/div")
 	@FindBy(id="reimbursement_master_id")
 	WebElement Name;
@@ -73,7 +75,9 @@ public class CheckForNoAllotmentInRM extends BasePage {
 		Name.sendKeys(value);
 	}
 	
-	
+	public void selectTDSRef(String value){
+		dropDownSelect(TDSRef, value);
+	}
 	
 	
 
