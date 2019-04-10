@@ -5,6 +5,7 @@
     <classes>
     
     <class name="com.spp.scripts.ReimbursementAllotment"/>
+    <class name="com.spp.scripts.LeaveAllotAvailDateSettings"/>
        
    <!--<class name="com.spp.scripts.HolidayList"/>
     <class name="com.spp.scripts.States"/>
@@ -54,7 +55,7 @@
 	<class name="com.spp.scripts.FinancialInstitutionBank"/> 
      
 	<class name="com.spp.scripts.SalaryRateDetails"/>
-	<class name="com.spp.scripts.LeaveAllotAvailDateSettings"/> 
+	 
 	<class name="com.spp.scripts.SetLeaveOpeningBalance"/> 
 	<class name="com.spp.scripts.ManualLeaveAllotmentscript"/>
     <class name="com.spp.scripts.CompanyStatutories"/>

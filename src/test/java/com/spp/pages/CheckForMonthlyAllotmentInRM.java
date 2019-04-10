@@ -36,7 +36,7 @@ public class CheckForMonthlyAllotmentInRM extends BasePage{
 	WebElement createReimbursementMaster;
 	@FindBy(xpath="//strong[text()='Reimbursement Master is successfully created.']")
 	WebElement successfullMassege;
-	@FindBy(xpath="//*[@class='action-delete']")
+	@FindBy(xpath="//*[@id='reimbursement_masters']/tbody/tr/td[contains(text(),'ReimMaster')]/parent::tr/td[5]/a")
 	WebElement DeleteButton;
 	@FindBy(id="emp_detail")
 	WebElement Employee;
@@ -44,9 +44,9 @@ public class CheckForMonthlyAllotmentInRM extends BasePage{
 	WebElement ReimbursementAllotment;
 	@FindBy(xpath="//*[@id=\"allotments_list\"]/div[1]/span/a")
 	WebElement NewReimbursement;
-	@FindBy(xpath="//*[@id=\"employees_table\"]/tbody/tr/td[contains(text(),'Akshay')]/parent::tr/td[5]/input")
+	@FindBy(xpath="//*[@id=\"employees_table\"]/tbody/tr/td[contains(text(),'Anil')]/parent::tr/td[5]/input")
 	WebElement AddEmployee;
-	@FindBy(xpath="//*[@id=\"main\"]/div/div[2]/form/div[3]/input")
+	@FindBy(xpath="//*[@id='main']/div/div[2]/form/div[3]/input")
 	WebElement AllotButton;
 
 	//@FindBy(xpath="//*[@id=\"new_reimbursement_allotment\"]/div[2]/fieldset/div[1]/div[1]/div")
@@ -54,11 +54,12 @@ public class CheckForMonthlyAllotmentInRM extends BasePage{
 	WebElement Name;
 	@FindBy(id="allotment_link")
 	WebElement AmountSideButton;
-	@FindBy(xpath="//*[@id=\"year_type\"]/div/select")
+	@FindBy(id="reimbursement_allotment_financial_year")
 	WebElement FinancialYear;
-	@FindBy(xpath="//*[@id=\"new_reimbursement_allotment\"]/div[2]/fieldset/div[1]/div[3]/div/input")
+	@FindBy(id="sal_date")
 	WebElement AllotmentDate;
-	
+	@FindBy(xpath="//*[@id='allotment_link']/img")
+	WebElement FunctionKey;
 	
 	public void selectEmployee() {
 		Employee.click();
@@ -87,7 +88,7 @@ public class CheckForMonthlyAllotmentInRM extends BasePage{
 	public void selectAllotmentDate(String Value) {
 		AllotmentDate.sendKeys(Value);
 	}
-public void clickMastserLink(){
+	public void clickMastserLink(){
 		
 		masterLink.click();
 	}
@@ -98,7 +99,9 @@ public void clickMastserLink(){
 	public void clickAddReimbursementMaster(){
 		addReimbursement.click();
 	}
-	
+	public void ClickOnFunctionKey() {
+		FunctionKey.click();
+	}
 	public void selectReimbursementType(String value){
 		dropDownSelect(reimbursementType, value);
 	}

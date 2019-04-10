@@ -9,26 +9,29 @@ import com.spp.pages.UpdateLeaveAllotAvailDateSettingsInBulk;
 public class LeaveAllotAvailDateSettings extends BaseTest {
 	
 	
-/*	@Test(priority=0)
+	@Test(priority=0)
 	public void UpdateLeaveAllotAvailDateSettingsInBulk_SC_107() throws Exception{
-		UpdateLeaveAllotAvailDateSettingsInBulk af=new UpdateLeaveAllotAvailDateSettingsInBulk(driver);
+	UpdateLeaveAllotAvailDateSettingsInBulk af=new UpdateLeaveAllotAvailDateSettingsInBulk(driver);
 		af.selectEmployee();
 		af.selectLeaveAllotAvail();
-		af.selectLeaveType("Compensatory Off (CO)");
+		af.selectLeaveType("Leave (L)");
+		af.resizeWindow();
 		af.selectGetEmployee();
 		Thread.sleep(5000);
 		af.selectLoadButton();
 		af.selectMoreLink();
 		Thread.sleep(3000);
-		af.selectAllotFrom("16 May 2018");
-		af.selectAvailFrom("25 May 2018");
+		af.selectAllotFrom("16 May 2019");
+		af.selectAvailFrom("25 May 2019");
 		Thread.sleep(4000);
 		af.selectUpdateButton();
 		Thread.sleep(5000);
 		String s=af.getMessage();
  		Assert.assertEquals(s, "Leave Allot/Avail Date configuration successfully updated.");
- 		af.selectMoreLink1();	
-}*/
+ 		af.selectMoreLink1();
+ 		af.exitFullscreen();
+		}
+		
 	@Test(priority=1)
 	public void CheckifEmployeeLeaveAllotAvailDateSettingsGeneralLinkredirectstoEmployeeMaster_SC_473() throws Exception{
 		CheckifEmployeeLeaveAllotAvailDateSettingsGeneralLinkredirectstoEmployeeMaster la=new CheckifEmployeeLeaveAllotAvailDateSettingsGeneralLinkredirectstoEmployeeMaster(driver);
@@ -52,10 +55,12 @@ public class LeaveAllotAvailDateSettings extends BaseTest {
 		la.selectState("Maharashtra");
 		la.selectclassificationdetail();
 		la.selectsalstructure("Structure");
-		la.selectbranch("Chennai");
+		Thread.sleep(2000);
+		la.selectbranch("default");
+		Thread.sleep(2000);
 		la.selectattendancestructure("Karnataka");
 		la.selectbank("CASH");
-		la.selectleavepolicy("PolicyNo1");
+		la.selectleavepolicy("ClonePolicy");
 		la.createemployee();
 		String s=la.getMessage();
  		Assert.assertEquals(s, "Employee successfully created");

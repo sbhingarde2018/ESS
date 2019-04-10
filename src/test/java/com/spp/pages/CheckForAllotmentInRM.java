@@ -19,7 +19,7 @@ public class CheckForAllotmentInRM extends BasePage {
 	WebElement ReimbursementAllotment;
 	@FindBy(xpath="//*[@id=\"allotments_list\"]/div[1]/span/a")
 	WebElement NewReimbursement;
-	@FindBy(xpath="//*[@id=\"employees_table\"]/tbody/tr/td[contains(text(),'Akshay')]/parent::tr/td[5]/input")
+	@FindBy(xpath="//*[@id='employees_table']/tbody/tr/td[contains(text(),'Anil')]/parent::tr/td[5]/input")
 	WebElement AddEmployee;
 	@FindBy(xpath="//*[@id=\"main\"]/div/div[2]/form/div[3]/input")
 	WebElement AllotButton;
@@ -52,7 +52,14 @@ public class CheckForAllotmentInRM extends BasePage {
 	WebElement successfullMassege;
 	@FindBy(xpath="//*[@class='action-delete']")
 	WebElement DeleteButton;
-	
+	@FindBy(id = "reimbursement_master_tds_ref_option_id")
+	WebElement TDSRef;
+	@FindBy(id="reimbursement_allotment_financial_year")
+	WebElement FinancialYear;
+	@FindBy(id="sal_date")
+	WebElement AllotmentDate;
+	@FindBy(xpath="//*[@id='allotment_link']/img")
+	WebElement FunctionKey;	
 	
 	public void selectEmployee() {
 		Employee.click();
@@ -70,11 +77,14 @@ public class CheckForAllotmentInRM extends BasePage {
 		AllotButton.click();
 	}
 	public void selectName(String value){
-	Name.sendKeys(value);	
+		Name.sendKeys(value);	
 	}
 	
-public void clickMastserLink(){
-		
+	public void selectTDSRef(String value){
+		dropDownSelect(TDSRef, value);
+	}
+	
+	public void clickMastserLink(){
 		masterLink.click();
 	}
 
@@ -111,6 +121,9 @@ public void clickMastserLink(){
 	public void clickCreateReimbursementMaster(){
 		createReimbursementMaster.click();
 	}
+	public void selectFinancialYear(String value){
+		dropDownSelect(FinancialYear, value);
+	}
 	
 	public String getMessage(){
 		return successfullMassege.getText();
@@ -118,6 +131,12 @@ public void clickMastserLink(){
 	public void clickDeleteButton() throws Exception{
 		DeleteButton.click();
 		switchToPopUpAndAccept(driver);
+	}
+	public void selectAllotmentDate(String Value) {
+		AllotmentDate.sendKeys(Value);
+	}
+	public void ClickOnFunctionKey() {
+		FunctionKey.click();
 	}
 
 }

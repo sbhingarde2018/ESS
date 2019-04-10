@@ -26,9 +26,9 @@ public class UpdateLeaveAllotAvailDateSettingsInBulk extends BasePage{
 	@FindBy(id="filter")
 	WebElement GetEmployee;
 	
-	@FindBy(xpath="//*[@id=\"bf_form\"]/div[9]/button[1]")
+	@FindBy(xpath="//*[@id='bf_form']/div[10]/button[1]")
 	WebElement LoadButton;
-	@FindBy(xpath="//*[@id=\"leave_allot_config\"]/tbody/tr[1]/td[4]/span")
+	@FindBy(xpath="//*[@id='leave_allot_config']/tbody/tr[1]/td[4]/span")
 	WebElement MoreLink;
 	@FindBy(xpath="//*[@id=\"main\"]/div[5]/form/div[4]/div[1]/div[2]/div/div/input")
 	WebElement AllotFrom;
@@ -38,7 +38,7 @@ public class UpdateLeaveAllotAvailDateSettingsInBulk extends BasePage{
 	WebElement UpdateButton;
 	@FindBy(xpath="//*[@id=\"leave_allot_config_response\"]/div/strong")
 	WebElement successfullMessage;
-	@FindBy(xpath="//*[@id=\"leave_allot_config\"]/tbody/tr[1]/td[4]/span")
+	@FindBy(xpath="//*[@id='leave_allot_config']/tbody/tr[1]/td[4]/span")
 	WebElement MoreLink1;
 	
 	public void selectEmployee() {
@@ -63,7 +63,7 @@ public class UpdateLeaveAllotAvailDateSettingsInBulk extends BasePage{
    public void selectAllotFrom(String value) {
 	   AllotFrom.clear();
 	   AllotFrom.sendKeys(value);  
-	  // AllotFrom.sendKeys(Keys.TAB);
+	  //AllotFrom.sendKeys(Keys.TAB);
 	 }
    public void selectAvailFrom(String value) {
 	   AvailFrom.clear();
