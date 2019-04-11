@@ -56,6 +56,14 @@ public class CheckifEmployeeSetLeaveOpeningBalanceGeneralLinkEmployeeMasterredir
 	WebElement CreateEmployee;
 	@FindBy(xpath="//*[@id=\"main\"]/div[2]/strong")
 	WebElement successfullmessage;
+	@FindBy(xpath="//*[@id=\"menu\"]/li[4]/div/div/ul/li[1]/a")
+	WebElement EmployeeDetails;
+	@FindBy(id="filter_head")
+	WebElement ClickOnFilterHead;
+	@FindBy(xpath="//*[@id=\"bf_form\"]/div[10]/button[1]")
+	WebElement ClickOnLoad;
+	@FindBy(xpath="//*[@id]/td[contains(text(),'Preeti')]/parent::tr/td/a[2]")
+	WebElement DeleteUser;
 	
 	public CheckifEmployeeSetLeaveOpeningBalanceGeneralLinkEmployeeMasterredirectstoEmployeeMastertoAddNewEmployee(WebDriver driver) {
 		super(driver);
@@ -66,6 +74,9 @@ public class CheckifEmployeeSetLeaveOpeningBalanceGeneralLinkEmployeeMasterredir
 	}
 	public void clickonsetleaveopeningbalance() {
 		ClickOnSetLeaveOpeningBalance.click();
+	}
+	public void clickDeleteUser() {
+		DeleteUser.click();
 	}
 	public void clickongenerallinks() {
 		ClickOnGeneralLinks.click();
@@ -134,6 +145,15 @@ public class CheckifEmployeeSetLeaveOpeningBalanceGeneralLinkEmployeeMasterredir
     public String getMessage(){
 		return successfullmessage.getText();
 	}
-	
+    public void clickEmployeeDetails() throws Exception{
+		EmployeeDetails.click();
+	}
+    public void clickonfilter() {
+		ClickOnFilterHead.click();
+	}
+   
+    public void clickonload() {
+		ClickOnLoad.click();
+	}
 	
 }

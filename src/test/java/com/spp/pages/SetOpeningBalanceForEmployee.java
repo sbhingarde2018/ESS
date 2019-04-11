@@ -21,15 +21,15 @@ public class SetOpeningBalanceForEmployee extends BasePage {
 	WebElement LeaveType;
 	@FindBy(id="filter")
 	WebElement GetEmployeeButtone;
-	@FindBy(xpath="//*[@id=\"bf_form\"]/div[9]/button[1]")
+	@FindBy(xpath="//*[@id='bf_form']/div[10]/button[1]")
 	WebElement LoadButton;
-	@FindBy(xpath="//*[@id=\"leave_op_bal\"]/tbody/tr[1]/td[5]/span")
+	@FindBy(xpath="//*[@id='leave_op_bal']/tbody/tr/td[contains(text(),'Anil')]/parent::tr/td/span")
 	WebElement MoreButton;
-	@FindBy(id="opening_balance_value_10_val")
+	@FindBy(id="opening_balance_value_195_val")
 	WebElement OpeningBalance;
 	@FindBy(id="populate")
 	WebElement Update;
-	@FindBy(xpath="//*[@id=\"leave_op_bal_response\"]/div/strong")
+	@FindBy(xpath="//*[@id='leave_op_bal_response']/div/strong")
 	WebElement successfullMessage;	
 	
 	public void selectEmployee() {

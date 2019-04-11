@@ -27,12 +27,12 @@ public class ManualLeaveAllotment extends BasePage{
 	WebElement LeaveType;
 	@FindBy(id="filter")
 	WebElement GetEmployee;
-	@FindBy(xpath="//*[@id=\"bf_form\"]/div[9]/button[1]")
+	@FindBy(xpath="//*[@id='bf_form']/div[10]/button[1]")
 	WebElement LoadButton;
 	
-	@FindBy(xpath="//*[@id=\"row_num_241\"]/td[6]/input")
+	@FindBy(id="leave_allotment_value_1457_val")
 	WebElement AllotedBox;
-	@FindBy(xpath="//*[@id=\"main\"]/div[6]/div/form/div[4]/button")
+	@FindBy(xpath="//*[@id='main']/div[6]/div/form/div[4]/button")
 	WebElement UpdateLeaveAllotmentButton;
 	@FindBy(xpath="//*[@id='show_message']/div/strong")
 	WebElement SuccessfulMessage;

@@ -10,13 +10,14 @@ import org.testng.Assert;
 
 public class SetLeaveOpeningBalance extends BaseTest{
 	
-	/*@Test(priority=0)
+	@Test(priority=0)
 	public void SetOpeningBalanceForEmployee_SC_104() throws Exception{
-		SetOpeningBalanceForEmployee ty = new SetOpeningBalanceForEmployee(driver);
+	SetOpeningBalanceForEmployee ty = new SetOpeningBalanceForEmployee(driver);
 		ty.selectEmployee();
 		ty.selectSetOpeningBalance();
-		ty.selectLeaveType("Casual Leave (CL)");
+		ty.selectLeaveType("Leave (L)");
 		ty.selectGetEmployeeButtone();
+		ty.resizeWindow();
 		Thread.sleep(4000);
 		ty.selectLoadButton();
 		ty.selectMoreButton();
@@ -25,10 +26,12 @@ public class SetLeaveOpeningBalance extends BaseTest{
 		ty.selectUpdate();
 		String d=ty.getMessage();
 		Assert.assertEquals(d, "Leave Opening Balance successfully created.");
-}*/
+		ty.exitFullscreen();
+		}
+		
 	@Test(priority=1)
 	public void CheckifEmployeeSetLeaveOpeningBalanceGeneralLinkEmployeeMasterredirectstoEmployeeMastertoAddNewEmployee_SC_474() throws Exception{
-		CheckifEmployeeSetLeaveOpeningBalanceGeneralLinkEmployeeMasterredirectstoEmployeeMastertoAddNewEmployee la=new CheckifEmployeeSetLeaveOpeningBalanceGeneralLinkEmployeeMasterredirectstoEmployeeMastertoAddNewEmployee(driver);
+	CheckifEmployeeSetLeaveOpeningBalanceGeneralLinkEmployeeMasterredirectstoEmployeeMastertoAddNewEmployee la=new CheckifEmployeeSetLeaveOpeningBalanceGeneralLinkEmployeeMasterredirectstoEmployeeMastertoAddNewEmployee(driver);
 		la.clickonemployee();
 		la.clickonsetleaveopeningbalance();
 		la.clickongenerallinks();
@@ -49,12 +52,23 @@ public class SetLeaveOpeningBalance extends BaseTest{
 		la.selectState("Maharashtra");
 		la.selectclassificationdetail();
 		la.selectsalstructure("Structure");
-		la.selectbranch("Chennai");
+		la.selectbranch("default");
 		la.selectattendancestructure("Karnataka");
 		la.selectbank("CASH");
-		la.selectleavepolicy("PolicyNo1");
+		la.selectleavepolicy("Default");
 		la.createemployee();
 		String s=la.getMessage();
  		Assert.assertEquals(s, "Employee successfully created");
-	}
+ 		la.clickonemployee();
+ 		la.clickEmployeeDetails();
+ 		la.clickonfilter();
+ 		la.resizeWindow();
+		Thread.sleep(2000);
+		la.clickonload();
+		Thread.sleep(2000);
+		la.clickDeleteUser();
+		Thread.sleep(2000);
+		la.switchToPopUpAndAccept(driver);
+		la.exitFullscreen();
+		}
 }

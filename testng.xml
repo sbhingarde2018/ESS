@@ -4,12 +4,14 @@
   <test name="Test">
     <classes>
     
-    <class name="com.spp.scripts.ReimbursementAllotment"/>
-    <class name="com.spp.scripts.LeaveAllotAvailDateSettings"/>
-       
-   <!--<class name="com.spp.scripts.HolidayList"/>
-    <class name="com.spp.scripts.States"/>
-    <class name="com.spp.scripts.EmployeeDetails"/>--> 
+    <class name="com.spp.scripts.SetLeaveOpeningBalance"/>
+	<class name="com.spp.scripts.ManualLeaveAllotmentscript"/>
+	
+	<!--<class name="com.spp.scripts.ReimbursementAllotment"/>
+	<class name="com.spp.scripts.LeaveAllotAvailDateSettings"/>
+	<class name="com.spp.scripts.HolidayList"/>
+   <class name="com.spp.scripts.States"/>
+   <class name="com.spp.scripts.EmployeeDetails"/>--> 
    <!--<class name="com.spp.scripts.ReimbursementClaim"/>
    <class name="com.spp.scripts.Arrears"/>
    <class name="com.spp.scripts.LeavePolicy"/>
@@ -26,7 +28,7 @@
    <class name="com.spp.scripts.GeneralSettings"/>-->
      
    <!-- <class name="com.spp.scripts.Bonus"/>  -->
-   <!-- <class name="com.spp.scripts.ReportingAuthority"/> 
+   <!--  <class name="com.spp.scripts.ReportingAuthority"/>
     <class name="com.spp.scripts.Leave"/>
     <class name="com.spp.scripts.MasterWeeklyHoliday"/>
    <class name="com.spp.scripts.AttendanceConfigurations"/>-->
@@ -55,9 +57,7 @@
 	<class name="com.spp.scripts.FinancialInstitutionBank"/> 
      
 	<class name="com.spp.scripts.SalaryRateDetails"/>
-	 
-	<class name="com.spp.scripts.SetLeaveOpeningBalance"/> 
-	<class name="com.spp.scripts.ManualLeaveAllotmentscript"/>
+
     <class name="com.spp.scripts.CompanyStatutories"/>
     <class name="com.spp.scripts.SalarySheetTestPlan"/> 
     <class name="com.spp.scripts.TDSArrears"/>

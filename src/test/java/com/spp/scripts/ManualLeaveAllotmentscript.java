@@ -10,16 +10,17 @@ import com.spp.pages.ManualLeaveAllotment;
 
 public class ManualLeaveAllotmentscript extends BaseTest {
 	
-	/*@Test(priority=0)
+	@Test(priority=0)
 	public void ManualLeaveAllotment_SC_106() throws Exception{
-		ManualLeaveAllotment rt = new ManualLeaveAllotment(driver);
+	ManualLeaveAllotment rt = new ManualLeaveAllotment(driver);
 		rt.selectEmployee();
 		rt.selectManualLeaveAllotment();
-		rt.selectPayMonth("Jan/2018");
-		rt.selectLeavePolicy("new");
+		rt.selectPayMonth("Mar/2019");
+		rt.selectLeavePolicy("Default");
 		Thread.sleep(4000);
-		rt.selectLeaveType("Casual Leave");
+		rt.selectLeaveType("Leave");
 		rt.selectGetEmployee();
+		rt.resizeWindow();
 		Thread.sleep(5000);
 		rt.selectLoadButton();
 		Thread.sleep(4000);
@@ -27,7 +28,9 @@ public class ManualLeaveAllotmentscript extends BaseTest {
 		rt.selectUpdateLeaveAllotmentButton();
 		String a=rt.getMessage();
 		Assert.assertEquals(a, "Leave allotment details successfully saved.");
-}*/
+		rt.exitFullscreen();
+		}
+	
 	@Test(priority=1)
 	public void CheckifEmployeeManualLeaveAllotmentGeneralLinkredirectstoEmployeeMaster_SC_475() throws Exception{
 		CheckifEmployeeManualLeaveAllotmentGeneralLinkredirectstoEmployeeMaster la=new CheckifEmployeeManualLeaveAllotmentGeneralLinkredirectstoEmployeeMaster(driver);
@@ -50,12 +53,23 @@ public class ManualLeaveAllotmentscript extends BaseTest {
 		la.selectState("Maharashtra");
 		la.selectclassificationdetail();
 		la.selectsalstructure("Structure");
-		la.selectbranch("Chennai");
+		la.selectbranch("default");
 		la.selectattendancestructure("Karnataka");
 		la.selectbank("CASH");
-		la.selectleavepolicy("PolicyNo1");
+		la.selectleavepolicy("Default");
 		la.createemployee();
 		String s=la.getMessage();
  		Assert.assertEquals(s, "Employee successfully created");
+ 		la.clickonemployee();
+ 		la.clickEmployeeDetails();
+ 		la.clickonfilter();
+ 		la.resizeWindow();
+		Thread.sleep(2000);
+		la.clickonload();
+		Thread.sleep(2000);
+		la.clickDeleteUser();
+		Thread.sleep(2000);
+		la.switchToPopUpAndAccept(driver);
+		la.exitFullscreen();
 	}
 }
