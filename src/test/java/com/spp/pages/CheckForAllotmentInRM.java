@@ -1,5 +1,6 @@
 package com.spp.pages;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -134,6 +135,7 @@ public class CheckForAllotmentInRM extends BasePage {
 	}
 	public void selectAllotmentDate(String Value) {
 		AllotmentDate.sendKeys(Value);
+		AllotmentDate.sendKeys(Keys.TAB);
 	}
 	public void ClickOnFunctionKey() {
 		FunctionKey.click();

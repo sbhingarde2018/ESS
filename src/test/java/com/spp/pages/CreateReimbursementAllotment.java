@@ -23,15 +23,14 @@ public class CreateReimbursementAllotment extends BasePage {
 	WebElement AddEmployee;
 	@FindBy(xpath="//*[@id=\"main\"]/div/div[2]/form/div[3]/input")
 	WebElement AllotButton;
-
 	//@FindBy(xpath="//*[@id=\"new_reimbursement_allotment\"]/div[2]/fieldset/div[1]/div[1]/div")
 	@FindBy(id="reimbursement_master_id")
 	WebElement Name;
-	@FindBy(xpath="//*[@id=\"year_type\"]/div/select")
+	@FindBy(xpath="//*[@id='year_type']/div/select")
 	WebElement FinancialYear;
-	@FindBy(xpath="//*[@id=\"new_reimbursement_allotment\"]/div[2]/fieldset/div[1]/div[3]/div/input")
+	@FindBy(xpath="//*[@id='new_reimbursement_allotment']/div[2]/fieldset/div[1]/div[3]/div/input")
 	WebElement AllotmentDate;
-	@FindBy(xpath="//*[@id=\"amount\"]/div/input")
+	@FindBy(xpath="//*[@id='amount']/div/input")
 	WebElement Amount;
 	@FindBy(id="submit")
 	WebElement CreateReimbursementButton;
@@ -64,8 +63,8 @@ public class CreateReimbursementAllotment extends BasePage {
 	WebElement FunctionKey;
 	@FindBy(id="sum_amount")
 	WebElement SumAmount;
-public void clickMastserLink(){
-		
+	
+	public void clickMastserLink(){	
 		masterLink.click();
 	}
 
@@ -150,6 +149,4 @@ public void clickMastserLink(){
 	public void EnterSumAmount(String Value) {
 		SumAmount.sendKeys(Value);
 	}
-
-
 }

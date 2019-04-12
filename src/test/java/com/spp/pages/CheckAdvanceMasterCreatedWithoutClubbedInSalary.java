@@ -20,9 +20,9 @@ public class CheckAdvanceMasterCreatedWithoutClubbedInSalary extends BasePage {
 	WebElement ClubbedinSalaryBox;
 	@FindBy(xpath="//*[@id=\"standing_instruction_master_form\"]/div[8]/input")
 	WebElement CreateButton;
-	@FindBy(xpath="//*[@id=\"main\"]/div[2]/strong")
+	@FindBy(xpath="//*[@id='main']/div[2]/strong")
 	WebElement successfulMessage;
-	@FindBy(xpath="//*[@id='standing_instr_list']/div[2]/table/tbody/tr/td[contains(text(),'Advance_Master')]/parent::tr/td[5]/a")
+	@FindBy(xpath="//*[@id='standing_instr_list']/div/table/tbody/tr/td[contains(text(),'Advance_Master')]/parent::tr/td[4]/a")
 	WebElement Deletebutton;
 	
 	public CheckAdvanceMasterCreatedWithoutClubbedInSalary(WebDriver driver) {

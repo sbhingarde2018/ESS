@@ -15,7 +15,7 @@ public class BulkSalaryRateAllot extends BasePage {
 	}
 	@FindBy(id="emp_detail")
 	WebElement employeeLink;	
-	@FindBy(xpath="//*[@id=\"menu\"]/li[4]/div/div/ul/li[5]/a")
+	@FindBy(xpath="//*[@id='menu']/li[4]/div/div/ul/li[5]/a")
 	WebElement BulkSalaryRateDetails;
 	@FindBy(id="month_year")
 	WebElement PayMonth;
@@ -45,9 +45,9 @@ public class BulkSalaryRateAllot extends BasePage {
 	WebElement MoreButton2;
 	@FindBy(id="salary")
 	WebElement Salary;
-	@FindBy(xpath="//*[@id=\"menu\"]/li[6]/div/div[3]/ul/li[1]")
+	@FindBy(xpath="//*[@id='menu']/li[6]/div/div[3]/ul/li[1]")
 	WebElement SalaryEditor;
-	@FindBy(xpath="//*[@id=\"ui-accordion-accordion-panel-0\"]/li/a[2]")
+	@FindBy(xpath="//*[@id='ui-accordion-accordion-panel-0']/li/a[2]")
 	WebElement ProcessSalaryList;
 	
 	

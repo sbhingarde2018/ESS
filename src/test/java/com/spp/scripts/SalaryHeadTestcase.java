@@ -23,7 +23,7 @@ import com.spp.pages.SalaryHeadExcelUpload;
 
 public class SalaryHeadTestcase extends BaseTest {
 	
-	/*@Test(priority=0)
+	@Test(priority=0)
 	public void verifycreatedSalaryHead_SC_1() throws Exception{
 		AddSalaryHead sh=new AddSalaryHead(driver);
 		Thread.sleep(5000);
@@ -164,7 +164,8 @@ public class SalaryHeadTestcase extends BaseTest {
  		sh.clickDeductionTab();
  		sh.deductionSalaryHeadDelete();          //to rerun this testcase delete previous data from salary head>earnings,deduction//	or change data in excel file. 
  		sh.switchToPopUpAndAccept(driver);
-	}*/
+	}
+	
 	@Test(priority=7)
  	public void verifyCreatedSalaryStructure_SC_28() throws Exception{
  		AddSalaryStructure ss=new AddSalaryStructure(driver);

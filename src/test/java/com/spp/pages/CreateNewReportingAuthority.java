@@ -29,7 +29,7 @@ public class CreateNewReportingAuthority extends BasePage {
 	WebElement EnterEmployeeName;
 	@FindBy(id="filter_employee_workflows_1")
 	WebElement GetEmployeeButton;
-	@FindBy(xpath="//*[@id='bf_form']/div[9]/button[1]")
+	@FindBy(xpath="//*[@id='bf_form']/div[10]/button[1]")
 	WebElement LoadButton;
 	@FindBy(xpath="//*[@id=\"show_message\"]/div/strong")
 	WebElement SuccessfulMessage;

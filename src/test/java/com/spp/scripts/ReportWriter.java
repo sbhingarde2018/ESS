@@ -178,4 +178,38 @@ public class ReportWriter extends BaseTest{
 		af.exitFullscreen();
 		Thread.sleep(2000);
 		}
+	@Test(priority=5)
+	public void GenerateReportWriterGroupByPaymonthandDepartmentandOccupation_SC_1481() throws Exception{
+		GenerateReportWriterGroupByPaymonthandDepartmentandOccupation ag = new GenerateReportWriterGroupByPaymonthandDepartmentandOccupation(driver);
+		ag.resizeWindow();
+		Thread.sleep(2000);
+		ag.clickReport();
+		ag.clickReportWriter();
+		ag.clickPayMonth();
+		ag.tickPayMonthCheckbox();
+		ag.clickClassificationDetails();
+		Thread.sleep(2000);
+		ag.clickDesignationCheckbox();
+		Thread.sleep(2000);
+		ag.clickDepartmentCheckbox();
+		Thread.sleep(2000);
+		ag.clickAdditionalInformation();
+		ag.clickDateofJoining();
+		ag.clickEmployees();
+		ag.clickonfilter();
+		Thread.sleep(2000);
+		ag.clickonload();
+		Thread.sleep(2000);
+		ag.selectEmployee();
+		ag.selectGrouping1("Paymonth");
+		Thread.sleep(2000);
+		ag.selectGrouping2("Department");
+		Thread.sleep(2000);
+		ag.selectGrouping3("Designation");
+		Thread.sleep(2000);
+		ag.clickonGenerate();
+		Thread.sleep(2000);
+		ag.exitFullscreen();
+		Thread.sleep(2000);
+		}
 }

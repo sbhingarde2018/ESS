@@ -248,7 +248,7 @@ public class ReimbursementMaster extends BaseTest {
 		rm.selectTDSRef("Basic");
 		rm.selectLumpsumType();
 		Thread.sleep(5000);
-		rm.enterReimbursementName("Electronics"+Utility.getRandNum(1041, 1050));
+		rm.enterReimbursementName("Electronics"+Utility.getRandNum(1061, 1070));
 		Thread.sleep(3000);
 		rm.clickCreateReimbursementMaster();
 		String s=rm.getMessage();

@@ -12,14 +12,17 @@ import com.spp.pages.UpdateFormula;
 public class FormulaEditor extends BaseTest {
 	
 	@Test(priority=0)
-	public void verifyCreatedFormule_SC_74(){
+	public void verifyCreatedFormule_SC_74()throws Exception{
 		AddFormula af=new AddFormula(driver);
 		af.clickMastserLink();
 		af.selectFormulaEditor();
 		af.clickAddFormula();
 		af.enterName("Basic");
+		Thread.sleep(3000);
 		af.clickBasicFormula();
+		Thread.sleep(3000);
 		af.clickOperator();
+		Thread.sleep(3000);
 		af.enterExpression("0.50");
 		af.clickVerifyButton();
 		String s=af.getMessage();

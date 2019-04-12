@@ -200,5 +200,3 @@ public class SalaryRateDetails extends BaseTest {
 		Assert.assertEquals(message, "Salary group successfully created");
 	}
 }
-
-

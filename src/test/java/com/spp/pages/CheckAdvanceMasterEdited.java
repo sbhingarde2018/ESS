@@ -19,7 +19,7 @@ public class CheckAdvanceMasterEdited extends BasePage{
 	WebElement UpdateButton;
 	@FindBy(xpath="//*[@id=\"main\"]/div[2]/strong")
 	WebElement successfulMessage;
-	@FindBy(xpath="//*[@id='standing_instr_list']/div[2]/table/tbody/tr/td[contains(text(),'Advance_Master')]/parent::tr/td[4]/a")
+	@FindBy(xpath="//*[@id='standing_instr_list']/div/table/tbody/tr/td[contains(text(),'Advance_Master')]/parent::tr/td[3]/a")
 	WebElement EditButton;
 	
 	public CheckAdvanceMasterEdited(WebDriver driver) {
@@ -31,7 +31,6 @@ public class CheckAdvanceMasterEdited extends BasePage{
 
 		masterLink.click();
 	}
-
 	public void clickAdvanceMaster(){
 		AdvanceMaster.click();
 	}
@@ -45,12 +44,8 @@ public class CheckAdvanceMasterEdited extends BasePage{
 
 	public void clickUpdateButton(){
 		UpdateButton.click();
-	}	
-
-   	
-    
+	}
     public String getMessage() {
     	return successfulMessage.getText();
-
-}
+    }
 }

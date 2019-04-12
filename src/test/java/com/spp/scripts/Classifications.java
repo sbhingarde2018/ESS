@@ -169,8 +169,8 @@ public class Classifications extends BaseTest {
 		//ac.generatetemplate();
 		ac.clickonexceluploadforclassification();
 		Thread.sleep(5000);
-		ac.choosefile("C:\\Users\\alfalabs\\Desktop\\ClassificationDetail.xlsx");
-		//ac.choosefile("C:\\Users\\Administrator\\Desktop\\ClassificationDetail.xlsx");
+		//ac.choosefile("C:\\Users\\alfalabs\\Desktop\\ClassificationDetail.xlsx");
+		ac.choosefile("C:\\Users\\Administrator\\Desktop\\ClassificationDetail.xlsx");
 		Thread.sleep(5000);
 		ac.uploadfile();
 		Thread.sleep(5000);

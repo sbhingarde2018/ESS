@@ -176,8 +176,11 @@ public class ReimbursementAllotment extends BaseTest{
 		rt.selectAddEmployee();
 		rt.selectAllotButton();
 		rt.selectName("ReimMaster (Other Reimbursement)");
-		rt.selectAllotmentDate("01 December 2018");
+		Thread.sleep(3000);
 		rt.selectFinancialYear("2018/2019");
+		Thread.sleep(3000);
+		rt.selectAllotmentDate("01 December 2018");
+		Thread.sleep(3000);
 		rt.ClickOnFunctionKey();
 		}
 	 
@@ -193,7 +196,9 @@ public class ReimbursementAllotment extends BaseTest{
 		rt.selectName("ReimMaster (Other Reimbursement)");
 		Thread.sleep(3000);
 		rt.selectFinancialYear("2018/2019");
+		Thread.sleep(3000);
 		rt.selectAllotmentDate("01 December 2018");
+		Thread.sleep(3000);
 		rt.ClickOnFunctionKey();
 		//rt.selectAmountSideButton();
 		Thread.sleep(5000);

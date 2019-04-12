@@ -115,7 +115,8 @@ public class LoanDetail extends BaseTest{
 		 am.clickYesButton();
 		 String s=am.getMessage();
 		 Assert.assertEquals(s, "Receipt Successfully Saved.");
-}	 @Test(priority=4)
+}	 
+	 @Test(priority=4)
 		public void UpdateSiReceiptInLoanDetail_SC_400() throws Exception{
 		 UpdateSiReceiptInLoanDetail am=new UpdateSiReceiptInLoanDetail(driver);
 		 am.navigatesalary();

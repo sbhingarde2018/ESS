@@ -109,7 +109,7 @@ public class HolidayList extends BaseTest {
 	   Thread.sleep(2000);
 	   uh.exceluploadforholidays();
 	   Thread.sleep(2000);
-	   uh.choosefile("C:\\Users\\alfalabs\\Downloads\\HolidayMaster.xlsx");
+	   uh.choosefile("C:\\Users\\Administrator\\Downloads\\HolidayMaster.xlsx");
 	   uh.uploadfile();
 	   Thread.sleep(5000);
 	   uh.deleteHoliday();

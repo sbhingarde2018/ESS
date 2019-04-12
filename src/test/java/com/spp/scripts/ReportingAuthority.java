@@ -17,20 +17,22 @@ public class ReportingAuthority extends BaseTest {
 		rt.selectReportingAuth();
 		rt.selectCreateNewAuthority();
 		rt.selectReportTo("Employee Name");
-		rt.enterName("geeta (456)");
+		rt.enterName("Anil (Ref-120)");
 		rt.selectGetEmployeeButton();
+		rt.resizeWindow();
 		Thread.sleep(5000);
 		rt.selectLoadButton();
 		Thread.sleep(5000);
 		String a=rt.getMessage();
-		Assert.assertEquals(a, "Employees Added Successfully.");
+		Assert.assertEquals(a, "Employees Successfully Loaded.");
 		rt.selectCreateButton();
 		String c=rt.getMessage1();
 		Assert.assertEquals(c, "Employees Workflow created successfully");
 		Thread.sleep(5000);
 		rt.selectReportingAuthorityPage();
+		rt.exitFullscreen();
 }
-	@Test(priority=1)
+	/*@Test(priority=1)
 	public void UnlinkEmployee_SC_378() throws Exception{
 		UnlinkEmployee rt = new UnlinkEmployee(driver);
 		rt.selectEmployee();
@@ -41,8 +43,6 @@ public class ReportingAuthority extends BaseTest {
 		rt.selectUnlinkEmployeeButton();
 		String w=rt.getMessage();
 		Assert.assertEquals(w, "Employees unlinked successfully.");
-		
-	
 	}	
 	
 	@Test(priority=2)
@@ -61,5 +61,5 @@ public class ReportingAuthority extends BaseTest {
 		rt.selectLinkEmployee();
 		String y=rt.getMessage1();
 		Assert.assertEquals(y, "Employees linked successfully.");
-	}		
+	}*/		
 }

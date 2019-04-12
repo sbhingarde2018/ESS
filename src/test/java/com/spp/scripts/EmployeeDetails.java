@@ -93,7 +93,7 @@ public class EmployeeDetails extends BaseTest{
 		Thread.sleep(2000);
 	}
 	
-	@Test(priority=2)
+	/*@Test(priority=2)
 	public void verifyAssignEmployee_SC_78() throws Exception{
 		AssignEmployee ww=new AssignEmployee(driver);
 		ww.clickEmployeeLink();
@@ -436,7 +436,7 @@ public class EmployeeDetails extends BaseTest{
 		cr.exitFullscreen();
 	}
 	
-	/*@Test(priority=17)
+	@Test(priority=17)
 	public void CheckifEmployeeEmployeeDetailsReportsEmployeeStatutoryReportredirectstoReportmodule_SC_463() throws Exception {
 		CheckifEmployeeEmployeeDetailsReportsEmployeeStatutoryReportredirectstoReportmodule cr=new CheckifEmployeeEmployeeDetailsReportsEmployeeStatutoryReportredirectstoReportmodule(driver);
 		cr.clickonemployee();
@@ -452,7 +452,7 @@ public class EmployeeDetails extends BaseTest{
 		Thread.sleep(2000);
 		cr.generatestatreport();
 	
-	}*/
+	}
 	
 		@Test(priority=18)
 		public void verifyDataTemplateGeneration_SC_96() throws InterruptedException, IOException {
@@ -494,7 +494,7 @@ public class EmployeeDetails extends BaseTest{
 		String message = de.getMessage();
 		Assert.assertEquals(message, "Hr master detail successfully deleted.");
 		de.exitFullscreen();
-	}
+	}*/
 	
 	
 	

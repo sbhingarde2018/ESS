@@ -16,7 +16,7 @@ public class AddFormula extends BasePage{
 	WebElement addFormula;
 	@FindBy(id="formula_formulae_name")
 	WebElement name;
-	@FindBy(xpath="//*[@id='variables']/option[33]")
+	@FindBy(xpath="//*[@id='variables']/option[32]")
 	WebElement basicFormula;
 	@FindBy(id="formula_formulae")
 	WebElement expression;
