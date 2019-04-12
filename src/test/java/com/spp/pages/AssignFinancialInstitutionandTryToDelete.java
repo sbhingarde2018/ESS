@@ -43,7 +43,7 @@ public class AssignFinancialInstitutionandTryToDelete extends BasePage{
 	WebElement financialInstitution;
 	@FindBy(xpath="//*[@id=\"financial_institutions\"]/tbody/tr/td[contains(text(),'State Bank')]/parent::tr/td[9]/a")
 	WebElement DeleteFinancialInstitution;
-	@FindBy(xpath="//*[@id=\"main\"]/div[4]/table/tbody/tr/td[7]/a")
+	@FindBy(xpath="//*[@id='main']/div[4]/table/tbody/tr/td[7]/a")
 	WebElement DeleteClassDetail;
 	
 	public AssignFinancialInstitutionandTryToDelete(WebDriver driver) {

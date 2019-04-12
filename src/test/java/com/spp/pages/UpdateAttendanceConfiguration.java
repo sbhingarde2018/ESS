@@ -12,7 +12,7 @@ public class UpdateAttendanceConfiguration extends BasePage {
 	WebElement masterLink;
 	@FindBy(xpath="//a[text()='Attendance Configuration']")
 	WebElement attendanceConfiguration;
-	@FindBy(xpath="//tr[2]/td[5]/a[@class='action-edit']")
+	@FindBy(xpath="//*[@id='main']/div/table/tbody/tr/td[contains(text(),'Chennai')]/parent::tr/td[5]/a")
 	WebElement editIcon;
 	@FindBy(id="attendance_configuration_attendance")
 	WebElement attendanceName;

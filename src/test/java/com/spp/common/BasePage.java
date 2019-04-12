@@ -123,5 +123,9 @@ public class BasePage {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("document.getElementById('"+id+"').setAttribute('value', '"+value+"')");
 	 }
-	 
+	 public void jsclick(WebElement e)
+	 {
+		 JavascriptExecutor jse = (JavascriptExecutor) driver;
+		 jse.executeScript("arguments[0].click();", e);
+	 }
 }

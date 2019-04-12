@@ -250,7 +250,7 @@ public class CompanyTestcase01 extends BaseTest{
 		up.clickondocument();
 		Thread.sleep(2000);
 		up.addnewdocument();
-		up.uploadfile("C:\\Users\\Administrator\\Documents\\Document1.xlsx");
+		up.uploadfile("C:\\Users\\alfalabs\\Documents\\Document1.xlsx");
 		Thread.sleep(2000);
 		up.enterremarks("Upload file");
 		Thread.sleep(2000);

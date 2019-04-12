@@ -128,7 +128,7 @@ public class BaseTest implements Automation_Constant{
 			loginPage.setPassword(pw);
 			Thread.sleep(2000);
 			loginPage.clickLogin();
-			//loginPage.verifyURLhas(homePageURL);
+			loginPage.verifyURLhas(homePageURL);
 		}
 		else{
 			log.warn("explicit login required");
@@ -139,12 +139,13 @@ public class BaseTest implements Automation_Constant{
 	@AfterMethod
 	public void postCondition(ITestResult result) throws Exception{
 		if(logoutRequired){
+			//System.out.println("MEra bhai");
 			log.info("implicit logout");
 			HomePage homePage=new HomePage(driver);
 			Thread.sleep(5000);
 			homePage.superaction();
 			homePage.clickLogout();
-			//homePage.verifyURLhas(loginPageURL);
+			homePage.verifyURLhas(loginPageURL);
 		}
 		else{
 			log.warn("explicit logout required");
@@ -161,8 +162,3 @@ public class BaseTest implements Automation_Constant{
 		eReport.endTest(testReport);
 	}
 }
-
-
-
-
-

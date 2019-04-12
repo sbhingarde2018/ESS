@@ -73,7 +73,7 @@ public class EmployeeDetails extends BaseTest{
 		Assert.assertEquals(s, "Employee successfully created");
 						
 	}
-	@Test(priority=1)
+	/*@Test(priority=1)
 	public void CheckDeleteClassificationDetailsInEmployee_SC_421() throws Exception {
 	DeleteClassificationDetailsInEmployee ce = new DeleteClassificationDetailsInEmployee(driver);
 		ce.clickonemployee();
@@ -93,7 +93,7 @@ public class EmployeeDetails extends BaseTest{
 		Thread.sleep(2000);
 	}
 	
-	/*@Test(priority=2)
+	@Test(priority=2)
 	public void verifyAssignEmployee_SC_78() throws Exception{
 		AssignEmployee ww=new AssignEmployee(driver);
 		ww.clickEmployeeLink();
@@ -494,7 +494,7 @@ public class EmployeeDetails extends BaseTest{
 		String message = de.getMessage();
 		Assert.assertEquals(message, "Hr master detail successfully deleted.");
 		de.exitFullscreen();
-	}*/
+	}
 	
 	
 	
@@ -502,7 +502,7 @@ public class EmployeeDetails extends BaseTest{
 	
 
 	
-	/*@Test(priority=20)
+	@Test(priority=20)
 	public void CreateEmployeeviaExcelImport_SC_95() throws InterruptedException {
 	CreateEmployeeviaExcelImport xl=new CreateEmployeeviaExcelImport(driver);
 	xl.clickEmployeeTab();
@@ -518,8 +518,8 @@ public class EmployeeDetails extends BaseTest{
 	xl.sortByLatestJob();
 	String message = xl.getSuccessmessage();
 	Assert.assertEquals(message, "Successfully Imported");
-}*/
-	/*@Test(priority=21)
+}
+	@Test(priority=21)
 	public void CheckDeleteClassificationDetailsInEmployeeExtra() throws Exception {
 	DeleteClassificationDetailsInEmployee ce = new DeleteClassificationDetailsInEmployee(driver);
 		ce.clickonemployee();

@@ -151,7 +151,7 @@ public class SalaryHeadTestcase extends BaseTest {
  		sh.clickSalaryHeads();
  		sh.clickGenerateSampleTemplate();
  		sh.clickExcelTemplateUploadLink();
- 		sh.clickChooseFile("C:\\Users\\Administrator\\Downloads\\SalaryHead.xlsx");
+ 		sh.clickChooseFile("C:\\Users\\alfalabs\\Downloads\\SalaryHead.xlsx");
  		Thread.sleep(3000);
  		sh.clickUploadLink();
  		String z=sh.getMessage();

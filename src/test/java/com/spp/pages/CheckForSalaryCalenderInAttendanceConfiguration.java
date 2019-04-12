@@ -12,7 +12,7 @@ public class CheckForSalaryCalenderInAttendanceConfiguration extends BasePage{
 	WebElement masterLink;
 	@FindBy(xpath="//a[text()='Attendance Configuration']")
 	WebElement attendanceConfiguration;
-	@FindBy(xpath="//tr[2]/td[5]/a[@class='action-edit']")
+	@FindBy(xpath="//*[@id='main']/div/table/tbody/tr/td[contains(text(),'Hyderabad')]/parent::tr/td[5]/a")
 	WebElement editIcon;
 	@FindBy(id="attendance_configuration_salary_calendar_days_actual_days__month")
     WebElement salaryCalender;
