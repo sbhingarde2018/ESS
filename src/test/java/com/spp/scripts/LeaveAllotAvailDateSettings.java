@@ -4,12 +4,13 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import com.spp.common.BaseTest;
 import com.spp.pages.CheckifEmployeeLeaveAllotAvailDateSettingsGeneralLinkredirectstoEmployeeMaster;
+import com.spp.pages.ToupdateLeaveAllotAvailDateSettingsviaExcelUpload;
 import com.spp.pages.UpdateLeaveAllotAvailDateSettingsInBulk;
 
 public class LeaveAllotAvailDateSettings extends BaseTest {
 	
 	
-	@Test(priority=0)
+	/*@Test(priority=0)
 	public void UpdateLeaveAllotAvailDateSettingsInBulk_SC_107() throws Exception{
 	UpdateLeaveAllotAvailDateSettingsInBulk af=new UpdateLeaveAllotAvailDateSettingsInBulk(driver);
 		af.selectEmployee();
@@ -64,5 +65,37 @@ public class LeaveAllotAvailDateSettings extends BaseTest {
 		la.createemployee();
 		String s=la.getMessage();
  		Assert.assertEquals(s, "Employee successfully created");
+	}*/
+	
+	@Test(priority=2)
+	public void ToupdateLeaveAllotAvailDateSettingsviaExcelUpload_SC_108() throws Exception{
+	ToupdateLeaveAllotAvailDateSettingsviaExcelUpload laads = new ToupdateLeaveAllotAvailDateSettingsviaExcelUpload(driver);
+	laads.clickonemployee();
+	laads.clickonleaveallotdetails();
+	laads.clickonGenerateSample();
+	Thread.sleep(3000);
+	laads.selectLeaveType("Leave (L)");
+	Thread.sleep(3000);
+	laads.clickGenerateSampleExcelTemplate();
+	Thread.sleep(3000);
+	laads.clickonemployee();
+	Thread.sleep(3000);
+	laads.clickonleaveallotdetails();
+	Thread.sleep(3000);
+	laads.clickExcelTemplateUpload();
+	Thread.sleep(3000);
+	laads.clickChooseFile("C:\\Users\\Administrator\\Downloads\\AllotAvailFromDateSetting20190415-6447-5giaiu.xlsx");
+	Thread.sleep(3000);
+	laads.clickUploadLink();
+	Thread.sleep(3000);
+	laads.selectLeaveType("Leave (L)");
+	laads.resizeWindow();
+	laads.selectGetEmployee();
+	Thread.sleep(5000);
+	laads.selectLoadButton();
+	Thread.sleep(3000);
+	laads.selectMoreLink();
+	Thread.sleep(3000);
+	laads.exitFullscreen();
 	}
 }

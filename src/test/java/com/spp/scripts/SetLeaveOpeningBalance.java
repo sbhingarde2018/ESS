@@ -6,11 +6,13 @@ import com.spp.common.BaseTest;
 import com.spp.pages.CheckifEmployeeLeaveAllotAvailDateSettingsGeneralLinkredirectstoEmployeeMaster;
 import com.spp.pages.CheckifEmployeeSetLeaveOpeningBalanceGeneralLinkEmployeeMasterredirectstoEmployeeMastertoAddNewEmployee;
 import com.spp.pages.SetOpeningBalanceForEmployee;
+import com.spp.pages.TosetLeaveOpeningBalanceviaExcelUpload;
+
 import org.testng.Assert;
 
 public class SetLeaveOpeningBalance extends BaseTest{
 	
-	@Test(priority=0)
+	/*@Test(priority=0)
 	public void SetOpeningBalanceForEmployee_SC_104() throws Exception{
 	SetOpeningBalanceForEmployee ty = new SetOpeningBalanceForEmployee(driver);
 		ty.selectEmployee();
@@ -70,5 +72,37 @@ public class SetLeaveOpeningBalance extends BaseTest{
 		Thread.sleep(2000);
 		la.switchToPopUpAndAccept(driver);
 		la.exitFullscreen();
-		}
+		}*/
+	
+	@Test(priority=2)
+	public void TosetLeaveOpeningBalanceviaExcelUpload_SC_105() throws Exception{
+	TosetLeaveOpeningBalanceviaExcelUpload obj = new TosetLeaveOpeningBalanceviaExcelUpload(driver);
+		obj.clickonemployee();
+		obj.selectSetOpeningBalance();
+		obj.clickonGenerateSample();
+		Thread.sleep(3000);
+		obj.selectLeaveType("Leave (L)");
+		Thread.sleep(3000);
+		obj.clickGenerateSampleExcelTemplate();
+		Thread.sleep(3000);
+		obj.clickonemployee();
+		Thread.sleep(3000);
+		obj.selectSetOpeningBalance();
+		Thread.sleep(3000);
+		obj.clickExcelTemplateUpload();
+		Thread.sleep(3000);
+		obj.clickChooseFile("C:\\Users\\Administrator\\Downloads\\LeaveOpeningBalanceUploadExcel20190415-6447-1hjlvu8.xlsx");
+		Thread.sleep(3000);
+		obj.clickUploadLink();
+		Thread.sleep(3000);
+		obj.selectLeaveType1("Leave (L)");
+		obj.resizeWindow();
+		obj.selectGetEmployee();
+		Thread.sleep(5000);
+		obj.selectLoadButton();
+		Thread.sleep(3000);
+		obj.selectMoreLink();
+		Thread.sleep(3000);
+		obj.exitFullscreen();
+	}
 }
