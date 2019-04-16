@@ -91,7 +91,7 @@ public class SetLeaveOpeningBalance extends BaseTest{
 		Thread.sleep(3000);
 		obj.clickExcelTemplateUpload();
 		Thread.sleep(3000);
-		obj.clickChooseFile("C:\\Users\\Administrator\\Downloads\\LeaveOpeningBalanceUploadExcel20190415-6447-1hjlvu8.xlsx");
+		obj.clickChooseFile("C:\\Users\\alfalabs\\Downloads\\LeaveOpeningBalanceUploadExcel20190415-6447-1hjlvu8.xlsx");
 		Thread.sleep(3000);
 		obj.clickUploadLink();
 		Thread.sleep(3000);

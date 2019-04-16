@@ -84,7 +84,7 @@ public class LeaveAllotAvailDateSettings extends BaseTest {
 	Thread.sleep(3000);
 	laads.clickExcelTemplateUpload();
 	Thread.sleep(3000);
-	laads.clickChooseFile("C:\\Users\\Administrator\\Downloads\\AllotAvailFromDateSetting20190415-6447-5giaiu.xlsx");
+	laads.clickChooseFile("C:\\Users\\alfalabs\\Downloads\\AllotAvailFromDateSetting20190415-6447-5giaiu.xlsx");
 	Thread.sleep(3000);
 	laads.clickUploadLink();
 	Thread.sleep(3000);
