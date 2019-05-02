@@ -22,9 +22,9 @@ public class AllotSalaryNotOnGross extends BasePage {
 	WebElement SalaryRateDetails;
 	@FindBy(id="filter_head")
 	WebElement AdvancedFilterIcon;
-	@FindBy(xpath="//*[@id='bf_form']/div[9]/button[1]")
+	@FindBy(xpath="//*[@id='bf_form']/div[10]/button[1]")
 	WebElement LoadButton;
-	@FindBy(xpath="//*[@id=\"notalloted\"]/tbody/tr[2]/td[4]")
+	@FindBy(xpath="//*[@id='notalloted']/tbody/tr/td[contains(text(),'Tina')]/parent::tr/td/a")
 	WebElement AllotSalaryButton;
 	@FindBy(id="month_year")
 	WebElement EffectiveFrom;
@@ -32,8 +32,6 @@ public class AllotSalaryNotOnGross extends BasePage {
 	WebElement GetRate;
 	@FindBy(xpath="//*[@id=\"sal_allotment\"]/table/tbody/tr[2]/td[4]/input")
 	WebElement basic;
-	
-	
     @FindBy(xpath="//*[@id=\"sal_allotment\"]/table/tbody/tr[6]/td/input")
 	WebElement PopulateButton;
 	@FindBy(xpath="//input[@value='Save']")
@@ -42,10 +40,12 @@ public class AllotSalaryNotOnGross extends BasePage {
 	WebElement successfullMessage;
 	@FindBy(xpath="//span[contains(text(),'Listing Employee (Salary allotted)')]")
 	WebElement SalaryAlloted;
-	@FindBy(xpath="//*[@id=\"alloted\"]/tbody/tr[1]/td[4]/a")
+	@FindBy(xpath="//*[@id='alloted']/tbody/tr/td[contains(text(),'Tina')]/parent::tr/td/a")
 	WebElement Edit;
-	
-
+	@FindBy(id="gross_sal_formula")
+	WebElement GrossSal;
+	@FindBy(xpath="//*[@id=\"sal_allotment\"]/table/tbody/tr[2]/td[4]/input")
+	WebElement EarningsSalAllot;
 
 
 public void clickEmployeeLink() {
@@ -92,5 +92,14 @@ public void ClickSalaryAlloted() {
 }
 public void ClickEdit() {
 	Edit.click();
+}
+public void enterGrossSal(String value) {
+	 GrossSal.clear();
+	 GrossSal.sendKeys(value);
+}
+
+public void SalAllotEarnings(String value) throws Exception {
+	EarningsSalAllot.clear();
+	EarningsSalAllot.sendKeys(value);
 }
 }

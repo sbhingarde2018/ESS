@@ -19,9 +19,9 @@ public class AllotSalaryToEmployee extends BasePage {
 	WebElement SalaryRateDetails;
 	@FindBy(id="filter_head")
 	WebElement AdvancedFilterIcon;
-	@FindBy(xpath="//*[@id='bf_form']/div[9]/button[1]")
+	@FindBy(xpath="//*[@id='bf_form']/div[10]/button[1]")
 	WebElement LoadButton;
-	@FindBy(xpath="//*[@id=\"notalloted\"]/tbody/tr[1]/td[4]/a")
+	@FindBy(xpath="//*[@id='notalloted']/tbody/tr/td[contains(text(),'Tina')]/parent::tr/td/a")
 	WebElement AllotSalaryButton;
 	@FindBy(id="month_year")
 	WebElement EffectiveFrom;
@@ -30,19 +30,16 @@ public class AllotSalaryToEmployee extends BasePage {
 	@FindBy(id="gross_sal_formula")
 	WebElement GrossSal;
 	@FindBy(xpath="//*[@id=\"sal_allotment\"]/table/tbody/tr[2]/td[4]/input")
-	WebElement conveyance1;
+	WebElement EarningsSalAllot;
 	@FindBy(xpath="//*[@id=\"sal_allotment\"]/table/tbody/tr[4]/td[4]/input")
 	WebElement Mess;
-	
-//	@FindBy(xpath="//*[@id=\"sal_allotment\"]/table/tbody/tr[7]/td/input")
-//	WebElement PopulateButton;
-	@FindBy(xpath="//*[@id=\"sal_allotment\"]/table/tbody/tr[6]/td/input")
+	@FindBy(xpath="//input[@value='Save']")
 	WebElement SaveButton;
-	@FindBy(xpath="//*[@id=\"main\"]/div[1]/strong")
+	@FindBy(xpath="//*[@id='main']/div[1]/strong")
 	WebElement successfullMessage;
 	@FindBy(xpath="//span[contains(text(),'Listing Employee (Salary allotted)')]")
 	WebElement SalaryAlloted;
-	@FindBy(xpath="//*[@id=\"alloted\"]/tbody/tr[1]/td[4]/a")
+	@FindBy(xpath="//*[@id='alloted']/tbody/tr/td[contains(text(),'Tina')]/parent::tr/td/a")
 	WebElement Edit;
 	
 
@@ -76,8 +73,9 @@ public void selectGetRate() {
 	 GrossSal.sendKeys(value);
 }
 
-public void enterConveyance(String value) throws Exception {
-	conveyance1.sendKeys(value);
+public void SalAllotEarnings(String value) throws Exception {
+	EarningsSalAllot.clear();
+	EarningsSalAllot.sendKeys(value);
 }
 public void enterMess(String value) {
 Mess.sendKeys(value);

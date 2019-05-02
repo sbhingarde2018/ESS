@@ -16,26 +16,28 @@ import com.spp.pages.CreateSalaryGroupusingEmployee;
 import com.spp.pages.CreateSalaryHeadusingEmployee;
 import com.spp.pages.EditClassificationDetailsChangeSalaryStructureofanemployee;
 
-
-
 public class SalaryRateDetails extends BaseTest {
 
-	/*@Test(priority=0)
+	@Test(priority=0)
 	public void verifyAllotSalaryToEmployee_SC_98() throws Exception {
-		System.out.println("Hello 1");
-		AllotSalaryToEmployee rr= new AllotSalaryToEmployee(driver);
+	AllotSalaryToEmployee rr= new AllotSalaryToEmployee(driver);
 		rr.clickEmployeeLink();
 		rr.selectSalaryRateDetails();
+		rr.resizeWindow();
 		rr.selectAdvancedFilterIcon();
 		Thread.sleep(3000);
-		
 		rr.selectLoadButton();
+		Thread.sleep(3000);
 		rr.selectAllotSalaryButton();
-		rr.selectEffectiveFrom("Mar/2018");
+		Thread.sleep(3000);
+		rr.selectEffectiveFrom("Feb/2019");
 		rr.selectGetRate();
+		Thread.sleep(3000);
 		rr.enterGrossSal("40000");
-		rr.enterConveyance("20000");
-		rr.enterMess("2000");
+		Thread.sleep(3000);
+		rr.SalAllotEarnings("20000");
+		Thread.sleep(3000);
+		//rr.enterMess("2000");
 		//rr.selectPopulateButton();
 		rr.SelectSaveButton();
  		String s=rr.getMessage();
@@ -43,55 +45,101 @@ public class SalaryRateDetails extends BaseTest {
 		Thread.sleep(3000);
 		rr.ClickSalaryAlloted();
 		rr.ClickEdit();
-	} 
+		Thread.sleep(3000);
+		rr.selectEffectiveFrom("Feb/2019");
+		rr.selectGetRate();
+		Thread.sleep(3000);
+		rr.enterGrossSal("0.00");
+		Thread.sleep(3000);
+		rr.SalAllotEarnings("0.00");
+		Thread.sleep(3000);
+		rr.SelectSaveButton();
+		rr.exitFullscreen();
+		}
+	
 	@Test(priority=1)
 	public void verifyAllotSalaryNotOnGross_SC_99() throws Exception {
 		AllotSalaryNotOnGross rr= new AllotSalaryNotOnGross(driver);
 		rr.clickEmployeeLink();
 		rr.selectSalaryRateDetails();
+		rr.resizeWindow();
 		rr.selectAdvancedFilterIcon();
 		Thread.sleep(3000);
-		
 		rr.selectLoadButton();
 		Thread.sleep(2000);
 		rr.selectAllotSalaryButton();
-		rr.selectEffectiveFrom("Mar/2018");
+		Thread.sleep(3000);
+		rr.selectEffectiveFrom("Mar/2019");
 		rr.selectGetRate();
 		Thread.sleep(3000);
-		rr.enterBasic("20000");    //
-		JavascriptExecutor jse = (JavascriptExecutor)driver;
-		//jse.executeScript("scroll(0, 1000);");
-		rr.selectPopulateButton();
+		rr.enterGrossSal("40000");
 		Thread.sleep(3000);
-		jse.executeScript("scroll(0, 1000);");
+		rr.SalAllotEarnings("20000");
 		Thread.sleep(3000);
 		rr.SelectSaveButton();
  		String s=rr.getMessage();
  		Assert.assertEquals(s, "Salary Allotted successfully");
-		Thread.sleep(3000);
+ 		Thread.sleep(3000);
 		rr.ClickSalaryAlloted();
 		rr.ClickEdit();
-	} 
+		Thread.sleep(3000);
+		rr.selectEffectiveFrom("Mar/2019");
+		rr.selectGetRate();
+		Thread.sleep(3000);
+		rr.enterGrossSal("0.00");
+		Thread.sleep(3000);
+		rr.SalAllotEarnings("0.00");
+		Thread.sleep(3000);
+		rr.SelectSaveButton();
+		rr.exitFullscreen();
+	}
+	
 	@Test(priority=2)
-	public void verifyAllotSalaryViaExcel_SC_100() throws InterruptedException {
+	public void verifyAllotSalaryViaExcel_SC_100() throws Exception {
 		AllotSalaryViaExcel aa= new AllotSalaryViaExcel(driver);
 		aa.clickEmployeeLink();
 		aa.selectSalaryRateDetails();
 		aa.selectSalaryRateTemplate();
-		aa.selectMonthYear("Mar/2018");
-		aa.selectSalaryStructure("Clone 2");
+		aa.selectMonthYear("Mar/2019");
+		aa.selectSalaryStructure("Structure");
 		aa.selectGetClick();
+		aa.resizeWindow();
 		Thread.sleep(2000);
 		aa.selectLoadButton();
+		Thread.sleep(2000);
 		aa.selectGenerateFileButton();
-		// incomplete because of import excel 	functionality	
+		Thread.sleep(2000);
+		aa.clickEmployeeLink();
+		aa.selectSalaryRateDetails();
+		aa.clickUploadSalaryRates();
+		aa.selectMonthYear("Mar/2019");
+		aa.clickChooseFile("C:\\Users\\Administrator\\Downloads\\SalaryAllotment.xlsx");
+		Thread.sleep(3000);
+		aa.clickExcelTemplateUpload();
+		Thread.sleep(3000);
+		aa.clickEmployeeLink();
+		aa.selectSalaryRateDetails();
+		Thread.sleep(3000);
+		aa.ClickSalaryAlloted();
+		aa.ClickEdit();
+		Thread.sleep(3000);
+		aa.selectEffectiveFrom("Mar/2019");
+		aa.selectGetRate();
+		Thread.sleep(3000);
+		aa.enterGrossSal("0.00");
+		Thread.sleep(3000);
+		aa.SalAllotEarnings("0.00");
+		Thread.sleep(3000);
+		aa.SelectSaveButton();
+		aa.exitFullscreen();
 	}
 	
-	@Test(priority=3)
+	/*@Test(priority=3)
 	public void EditClassificationDetailsChangeSalaryStructureofanemployee_SC_410() throws Exception{
-		EditClassificationDetailsChangeSalaryStructureofanemployee dw= new EditClassificationDetailsChangeSalaryStructureofanemployee(driver);
+	EditClassificationDetailsChangeSalaryStructureofanemployee dw= new EditClassificationDetailsChangeSalaryStructureofanemployee(driver);
 		dw.clickonemployee();
 		dw.clickonemployeedetails();
+		dw.resizeWindow();
 		dw.clickonfilter();
 		Thread.sleep(2000);
 		dw.clickonload();
@@ -111,7 +159,9 @@ public class SalaryRateDetails extends BaseTest {
 		dw.switchToPopUpAndAccept(driver);
 		String message = dw.getMessage();
 		Assert.assertEquals(message, "Employee detail was successfully updated.");
+		dw.exitFullscreen();
 	}
+	
 	@Test(priority=4)
 	public void AllotSalarytoanemployeeAfterchangingSalaryStructure_SC_411() throws Exception{
 		AllotSalarytoanemployeeAfterchangingSalaryStructure dw= new AllotSalarytoanemployeeAfterchangingSalaryStructure(driver);
@@ -180,7 +230,7 @@ public class SalaryRateDetails extends BaseTest {
 		he.createsalaryhead();
 		String message = he.getMessage();
 		Assert.assertEquals(message, "Salary head successfully created");
-	}*/
+	}
 		
 	
 
@@ -198,5 +248,5 @@ public class SalaryRateDetails extends BaseTest {
 		ge.createsalstructure();
 		String message = ge.getMessage();
 		Assert.assertEquals(message, "Salary group successfully created");
-	}
+	}*/
 }
