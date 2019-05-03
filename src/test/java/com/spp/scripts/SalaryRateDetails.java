@@ -113,7 +113,7 @@ public class SalaryRateDetails extends BaseTest {
 		aa.selectSalaryRateDetails();
 		aa.clickUploadSalaryRates();
 		aa.selectMonthYear("Mar/2019");
-		aa.clickChooseFile("C:\\Users\\Administrator\\Downloads\\SalaryAllotment.xlsx");
+		aa.clickChooseFile("C:\\Users\\alfalabs\\Downloads\\SalaryAllotment.xlsx");
 		Thread.sleep(3000);
 		aa.clickExcelTemplateUpload();
 		Thread.sleep(3000);
