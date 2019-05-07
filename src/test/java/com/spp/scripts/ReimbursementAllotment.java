@@ -153,7 +153,7 @@ public class ReimbursementAllotment extends BaseTest{
 		rt.clickMastserLink();
 		rt.clickReimbursementMaster();
 		rt.clickDeleteButton();
-		}*/
+		}
 	
 	@Test(priority=7)
 	public void CheckForAllotmentInRM_SC_265() throws Exception{
@@ -227,7 +227,7 @@ public class ReimbursementAllotment extends BaseTest{
 		ty.selectReimbursementModuleType("Reimbursement allotments");
 		ty.selectLogDate("31 March 2019");
 		ty.selectExportToExcelButton();				
-		}
+		}*/
 	
 	/*@Test(priority=11)
 	public void CreateReimbursementAllotment_SC_289() throws Exception{
@@ -265,9 +265,8 @@ public class ReimbursementAllotment extends BaseTest{
 		rt.clickMastserLink();
 		rt.clickReimbursementMaster();
 		rt.clickDeleteMasterButton();	
-		}	
+		}*/	
 			
-	
 	@Test(priority=13)
 	public void CheckifEmployeeReimbursementAllotmentGeneralLinkReimMasterredirectstoMaster_SC_471() throws Exception{
 		CheckifEmployeeReimbursementAllotmentGeneralLinkReimbursementMasterredirectstoMaster am=new CheckifEmployeeReimbursementAllotmentGeneralLinkReimbursementMasterredirectstoMaster(driver);
@@ -282,10 +281,11 @@ public class ReimbursementAllotment extends BaseTest{
 		am.selectReimbursementType("Other Reimbursement");
 		Thread.sleep(1000);
 		am.selectModeOfPayment("Cash");
+		am.selectTDSRef("Basic");
 		Thread.sleep(1000);
 		am.selectAllotmentType();
 		Thread.sleep(1000);
-		am.enterReimbursementName("ReimMaster");
+		am.enterReimbursementName("MedicinalReimbursement");
 		//am.clickClubbedSalaryHead();
 		am.clickCreateReimbursementMaster();
 		String s=am.getMessage();
@@ -293,7 +293,8 @@ public class ReimbursementAllotment extends BaseTest{
 		Thread.sleep(5000);
 		am.clickDeleteMasterButton();
 	}
-	@Test(priority=14)
+	
+	/*@Test(priority=14)
 	public void CheckifEmployeeReimbursementAllotmentGeneralLinkReimbursementClaimredirectstoMaster_SC_472() throws Exception{
 		CheckifEmployeeReimbursementAllotmentGeneralLinkReimbursementClaimredirectstoMaster cm=new CheckifEmployeeReimbursementAllotmentGeneralLinkReimbursementClaimredirectstoMaster(driver);
 		cm.clickMastserLink();
@@ -301,9 +302,10 @@ public class ReimbursementAllotment extends BaseTest{
 		cm.clickAddReimbursementMaster();
 		cm.selectReimbursementType("Other Reimbursement");
 		cm.selectModeOfPayment("Cash");
+		cm.selectTDSRef("Basic");
 		cm.selectAllotmentType();
 		Thread.sleep(5000);
-		cm.enterReimbursementName("ReimMaster");
+		cm.enterReimbursementName("TravellingReimbursement");
 		cm.clickCreateReimbursementMaster();
 		Thread.sleep(5000);
 		cm.selectEmployee();
@@ -352,10 +354,9 @@ public class ReimbursementAllotment extends BaseTest{
 		 cm.clickReimbursementMaster();
 		 cm.clickDeleteMasterButton();
 	}*/
+	
 	/*@Test(priority=12)
 	public void CheckifEmployeeReimbursementAllotmentReportsredirectstoReportmodule_SC_470() throws Exception{
 		CheckifEmployeeReimbursementAllotmentReportsredirectstoReportmodule rd=new CheckifEmployeeReimbursementAllotmentReportsredirectstoReportmodule(driver);
-		
 	}*/
-	
 }

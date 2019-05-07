@@ -38,6 +38,8 @@ public class CheckifEmployeeReimbursementAllotmentGeneralLinkReimbursementMaster
 	WebElement masterLink;
 	@FindBy(xpath="//a[text()='Reimbursement Master']")
 	WebElement reimbursemnetLink;
+	@FindBy(id = "reimbursement_master_tds_ref_option_id")
+	WebElement TDSRef;
 	public CheckifEmployeeReimbursementAllotmentGeneralLinkReimbursementMasterredirectstoMaster(WebDriver driver) {
 		super(driver);
 		PageFactory.initElements(driver, this);	
@@ -95,6 +97,9 @@ public void clickMastserLink(){
 	public void clickDeleteMasterButton() throws Exception{
 		DeleteButton.click();
 		switchToPopUpAndAccept(driver);
+	}
+	public void selectTDSRef(String value){
+		dropDownSelect(TDSRef, value);
 	}
 
 }
