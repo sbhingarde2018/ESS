@@ -172,5 +172,6 @@ public class LeaveAllotAvailDateSettings extends BaseTest {
 		Thread.sleep(5000);
 		Assert.assertEquals(lad.ifexists1(), true);
 		Thread.sleep(2000);
+		lad.exitFullscreen();
 	}
 }
