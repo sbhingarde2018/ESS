@@ -72,7 +72,44 @@ public class ApplyLeave extends BaseTest{
 		dl.checkleavesummary();
 	}*/
 	
-	@Test(priority=2)
+	/*@Test(priority=2)
+	public void SearchtheLeavesApplied_SC_477() throws Exception{
+		SearchtheLeavesApplied dl=new SearchtheLeavesApplied(driver);
+		dl.clickonleave();
+		dl.clickonapplyleave();
+		dl.clickonfilterhead();
+		Thread.sleep(2000);
+		dl.clickonload();
+		Thread.sleep(2000);
+		dl.applyleave();
+		Thread.sleep(1000);
+		dl.checkleavehistory();
+		Thread.sleep(1000);
+		dl.selectfromdate("01 August 2018");
+		dl.selectodate("30 August 2018");
+		dl.clickonsearch();
+	}
+	
+	@Test(priority=3)
+	public void ToviewappliedLeaveDetailinLeaveSummarytab_SC_478() throws Exception{
+		ToviewappliedLeaveDetailinLeaveSummarytab st=new ToviewappliedLeaveDetailinLeaveSummarytab(driver);
+		st.clickonleave();
+		st.clickonapplyleave();
+		st.clickonfilterhead();
+		Thread.sleep(2000);
+		st.clickonload();
+		Thread.sleep(2000);
+		st.applyleave();
+		Thread.sleep(1000);
+		st.checkleavehistory();
+		Thread.sleep(1000);
+		st.selectfromdate("01 August 2018");
+		st.selectodate("30 August 2018");
+		st.clickonsearch();
+		st.clickonview();
+	}*/
+	
+	@Test(priority=4)
 	public void DeleteAppliedLeave_SC_112() throws Exception{
 		DeleteAppliedLeave dl=new DeleteAppliedLeave(driver);
 		dl.clickonleave();
@@ -105,71 +142,35 @@ public class ApplyLeave extends BaseTest{
 		//dl.checkleavehistory();
 	}
 	
-	/*@Test(priority=3)
+	/*@Test(priority=5)
 	public void CheckifLeaveApplyLeaveGeneralLinkEmployeeMasterredirectstoEmployeeMaster_SC_476() throws Exception{
-		CheckifLeaveApplyLeaveGeneralLinkEmployeeMasterredirectstoEmployeeMaster dl=new CheckifLeaveApplyLeaveGeneralLinkEmployeeMasterredirectstoEmployeeMaster(driver);
-			dl.clickonleave();
-			dl.clickonapplyleave();
-			dl.clickongenerallinks();
-			Thread.sleep(2000);
-			dl.clickonemployeemaster();
-			Thread.sleep(2000);
-			dl.addnewemployee();
-			dl.enterEmployeeid("ABC123566");
-			dl.enterEmployeeref("12345697865799");
-			dl.enterEmployeename("Priya");
-			dl.enterEmployeefather("Harish");
-			dl.selectDateofBirth("06 June 1995");
-			dl.selectGender("Female");
-			dl.selectMaritalStatus("Single");
-			dl.selectDateofJoining("06 June 2018");
-			Thread.sleep(500);
-			dl.clickPresentAddress();
-			dl.selectState("Maharashtra");
-			dl.selectclassificationdetail();
-			dl.selectsalstructure("Structure");
-			dl.selectbranch("Chennai");
-			dl.selectattendancestructure("Karnataka");
-			dl.selectbank("CASH");
-			dl.selectleavepolicy("PolicyNo1");
-			dl.createemployee();
-			String s=dl.getMessage();
-	 		Assert.assertEquals(s, "Employee successfully created");
-	}
-	@Test(priority=4)
-	public void SearchtheLeavesApplied_SC_477() throws Exception{
-		SearchtheLeavesApplied dl=new SearchtheLeavesApplied(driver);
+	CheckifLeaveApplyLeaveGeneralLinkEmployeeMasterredirectstoEmployeeMaster dl=new CheckifLeaveApplyLeaveGeneralLinkEmployeeMasterredirectstoEmployeeMaster(driver);
 		dl.clickonleave();
 		dl.clickonapplyleave();
-		dl.clickonfilterhead();
+		dl.clickongenerallinks();
 		Thread.sleep(2000);
-		dl.clickonload();
+		dl.clickonemployeemaster();
 		Thread.sleep(2000);
-		dl.applyleave();
-		Thread.sleep(1000);
-		dl.checkleavehistory();
-		Thread.sleep(1000);
-		dl.selectfromdate("01 August 2018");
-		dl.selectodate("30 August 2018");
-		dl.clickonsearch();
-	
-	}
-	@Test(priority=5)
-	public void ToviewappliedLeaveDetailinLeaveSummarytab_SC_478() throws Exception{
-		ToviewappliedLeaveDetailinLeaveSummarytab st=new ToviewappliedLeaveDetailinLeaveSummarytab(driver);
-		st.clickonleave();
-		st.clickonapplyleave();
-		st.clickonfilterhead();
-		Thread.sleep(2000);
-		st.clickonload();
-		Thread.sleep(2000);
-		st.applyleave();
-		Thread.sleep(1000);
-		st.checkleavehistory();
-		Thread.sleep(1000);
-		st.selectfromdate("01 August 2018");
-		st.selectodate("30 August 2018");
-		st.clickonsearch();
-		st.clickonview();
+		dl.addnewemployee();
+		dl.enterEmployeeid("ABC123566");
+		dl.enterEmployeeref("12345697865799");
+		dl.enterEmployeename("Priya");
+		dl.enterEmployeefather("Harish");
+		dl.selectDateofBirth("06 June 1995");
+		dl.selectGender("Female");
+		dl.selectMaritalStatus("Single");
+		dl.selectDateofJoining("06 June 2018");
+		Thread.sleep(500);
+		dl.clickPresentAddress();
+		dl.selectState("Maharashtra");
+		dl.selectclassificationdetail();
+		dl.selectsalstructure("Structure");
+		dl.selectbranch("Chennai");
+		dl.selectattendancestructure("Karnataka");
+		dl.selectbank("CASH");
+		dl.selectleavepolicy("PolicyNo1");
+		dl.createemployee();
+		String s=dl.getMessage();
+	 	Assert.assertEquals(s, "Employee successfully created");
 	}*/
 }

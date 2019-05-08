@@ -310,7 +310,7 @@ public class ReimbursementAllotment extends BaseTest{
 		cm.ClickOnFunctionKey();
 		Thread.sleep(5000);
 		cm.EnterSumAmount("3000");
-		Thread.sleep(5000);
+		Thread.sleep(7000);
 		cm.selectCreateReimbursementAllotmentButton();
 		Thread.sleep(5000);
 		cm.clickonemployee();
@@ -328,8 +328,10 @@ public class ReimbursementAllotment extends BaseTest{
 		//cm.selectPaymentMode("Paid in Salary");
 		//cm.selectPaidMonth("Apr/2013");
 		cm.selectClaimDate("18 March 2019");
+		Thread.sleep(5000);
 		cm.selectPaidDate("19 March 2019");
-		cm.selectAmount("30");
+		Thread.sleep(5000);
+		cm.selectAmount("3000");
 		cm.selectCreateReimbursementButton();
 		String t=cm.getMessage();
 		Assert.assertEquals(t, "Reimbursement Claim was successfully created");

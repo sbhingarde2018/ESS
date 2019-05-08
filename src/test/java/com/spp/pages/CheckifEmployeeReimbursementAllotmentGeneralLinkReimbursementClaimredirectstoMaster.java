@@ -1,5 +1,6 @@
 package com.spp.pages;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -173,9 +174,11 @@ public class CheckifEmployeeReimbursementAllotmentGeneralLinkReimbursementClaimr
 	}
 	public void selectClaimDate(String Value) {
 		ClaimDate.sendKeys(Value);
+		ClaimDate.sendKeys(Keys.TAB);
 	}
 	public void selectPaidDate(String Value) {
 		PaidDate.sendKeys(Value);
+		//PaidDate.sendKeys(Keys.TAB);
 	}
 	public void selectAmount(String Value) {
 		Amount.clear();
