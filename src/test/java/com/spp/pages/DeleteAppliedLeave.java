@@ -1,5 +1,6 @@
 package com.spp.pages;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -14,9 +15,9 @@ public class DeleteAppliedLeave extends BasePage{
 	WebElement ClickOnApplyLeave;
 	@FindBy(id="filter_head")
 	WebElement ClickOnFilterHead;
-	@FindBy(xpath="//*[@id=\"bf_form\"]/div[9]/button[1]")
+	@FindBy(xpath="//*[@id=\"bf_form\"]/div[10]/button[1]")
 	WebElement ClickOnLoad;
-	@FindBy(xpath="//*[@id=\"dt_leave_details\"]/tbody/tr/td[contains(text(),'Ankit')]/parent::tr/td[3]/a")
+	@FindBy(xpath="//*[@id=\"dt_leave_details\"]/tbody/tr/td[contains(text(),'Tina')]/parent::tr/td[3]/a")
 	WebElement ApplyLeave;
 	@FindBy(xpath="//*[@id=\"main\"]/div[2]/nav/ul/li[3]/a")
 	WebElement SwitchLeaveHistory;
@@ -28,6 +29,10 @@ public class DeleteAppliedLeave extends BasePage{
 	WebElement successfullmessage;
 	@FindBy(xpath="//*[@id=\"main\"]/div[2]/nav/ul/li[3]/a")
 	WebElement CheckLeaveHistory;
+	@FindBy(id="to_date")
+	WebElement LeaveHistoryToDate;
+	@FindBy(xpath="//*[@id='leave_range_data']/div[3]/div/div/input[2]")
+	WebElement SearchButton;
 	
 	public DeleteAppliedLeave(WebDriver driver) {
 		super(driver);
@@ -62,5 +67,13 @@ public class DeleteAppliedLeave extends BasePage{
 	}
 	public void checkleavehistory() {
 		CheckLeaveHistory.click();
+	}
+	public void enterHistoryToDate(String value){
+		LeaveHistoryToDate.clear();
+		LeaveHistoryToDate.sendKeys(value);
+		LeaveHistoryToDate.sendKeys(Keys.TAB);
+	}
+	public void clickSearchButton(){
+		SearchButton.click();
 	}
 }

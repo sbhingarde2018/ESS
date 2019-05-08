@@ -1,5 +1,6 @@
 package com.spp.pages;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -14,9 +15,9 @@ WebElement ClickOnLeave;
 WebElement ClickOnApplyLeave;
 @FindBy(id="filter_head")
 WebElement ClickOnFilterHead;
-@FindBy(xpath="//*[@id=\"bf_form\"]/div[9]/button[1]")
+@FindBy(xpath="//*[@id='bf_form']/div[10]/button[1]")
 WebElement ClickOnLoad;
-@FindBy(xpath="//*[@id=\"dt_leave_details\"]/tbody/tr/td[contains(text(),'Tina')]/parent::tr/td[3]/a")
+@FindBy(xpath="//*[@id='dt_leave_details']/tbody/tr/td[contains(text(),'Tina')]/parent::tr/td[3]/a")
 WebElement ApplyLeave;
 @FindBy(id="leave_detail_leave_definition_id")
 WebElement SelectLeaveType;
@@ -58,9 +59,11 @@ public void selectleavetype(String value) {
 }
 public void selectfromdate(String value) {
 	SelectFromDate.sendKeys(value);
+	SelectFromDate.sendKeys(Keys.TAB);
 }
 public void selecttodate(String value) {
 	SelectToDate.sendKeys(value);
+	SelectToDate.sendKeys(Keys.TAB);
 }
 public void clickonapply() {
 	ClickOnApply.click();

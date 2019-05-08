@@ -20,6 +20,7 @@ public class ApplyLeave extends BaseTest{
 		ApplyDefaultLeave dl=new ApplyDefaultLeave(driver);
 		dl.clickonleave();
 		dl.clickonapplyleave();
+		dl.resizeWindow();
 		Thread.sleep(1000);
 		dl.clickonfilterhead();
 		Thread.sleep(2000);
@@ -27,23 +28,29 @@ public class ApplyLeave extends BaseTest{
 		Thread.sleep(2000);
 		dl.applyleave();
 		Thread.sleep(2000);
-		dl.selectleavetype("Loss of Pay (LOP)");
-		dl.selectfromdate("14 January 2019");
-		dl.selecttodate("14 January 2019");
+		dl.selectleavetype("Compensatory Work (CW)");
+		Thread.sleep(2000);
+		dl.selectfromdate("14 June 2019");
+		Thread.sleep(2000);
+		dl.selecttodate("14 June 2019");
+		Thread.sleep(2000);
 		dl.clickonapply();
-		System.out.println("click on apply");
+		//System.out.println("click on apply");
 		String s=dl.getMessage();
 		Assert.assertEquals(s, "Leave applied successfully.");
 		Thread.sleep(2000);
 		dl.checkleavehistory();
 		Thread.sleep(2000);
 		dl.checkleavesummary();
+		dl.exitFullscreen();
 	}
+	
 	/*@Test(priority=1)
 	public void ApplyUserDefinedtLeave_SC_110() throws Exception{
 		ApplyUserDefinedtLeave dl=new ApplyUserDefinedtLeave(driver);
 		dl.clickonleave();
 		dl.clickonapplyleave();
+		dl.resizeWindow();
 		Thread.sleep(1000);
 		dl.clickonfilterhead();
 		Thread.sleep(2000);
@@ -51,7 +58,7 @@ public class ApplyLeave extends BaseTest{
 		Thread.sleep(2000);
 		dl.applyleave();
 		Thread.sleep(2000);
-		dl.selectleavetype("Casual Leave (CL)");
+		dl.selectleavetype("Leave (L)");
 		dl.selectfromdate("03 September 2018");
 		Thread.sleep(2000);
 		dl.selecttodate("04 September 2018");
@@ -63,12 +70,14 @@ public class ApplyLeave extends BaseTest{
 		dl.checkleavehistory();
 		Thread.sleep(2000);
 		dl.checkleavesummary();
-	}
+	}*/
+	
 	@Test(priority=2)
 	public void DeleteAppliedLeave_SC_112() throws Exception{
 		DeleteAppliedLeave dl=new DeleteAppliedLeave(driver);
 		dl.clickonleave();
 		dl.clickonapplyleave();
+		dl.resizeWindow();
 		Thread.sleep(1000);
 		dl.clickonfilterhead();
 		Thread.sleep(2000);
@@ -77,17 +86,26 @@ public class ApplyLeave extends BaseTest{
 		dl.applyleave();
 		dl.checkleavehistory();
 		Thread.sleep(2000);
+		dl.enterHistoryToDate("30 November 2019");
+		Thread.sleep(2000);
+		dl.clickSearchButton();
+		Thread.sleep(2000);
 		dl.clickonview();
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 		dl.clickondelete();
+		Thread.sleep(2000);
 		dl.switchToPopUpAndDismiss();
+		Thread.sleep(2000);
 		dl.clickondelete();
+		Thread.sleep(2000);
 		dl.switchToPopUpAndAccept(driver);
 		String s=dl.getMessage();
 		Assert.assertEquals(s, "Leave detail successfully deleted.");
-		dl.checkleavehistory();
+		dl.exitFullscreen();
+		//dl.checkleavehistory();
 	}
-	@Test(priority=3)
+	
+	/*@Test(priority=3)
 	public void CheckifLeaveApplyLeaveGeneralLinkEmployeeMasterredirectstoEmployeeMaster_SC_476() throws Exception{
 		CheckifLeaveApplyLeaveGeneralLinkEmployeeMasterredirectstoEmployeeMaster dl=new CheckifLeaveApplyLeaveGeneralLinkEmployeeMasterredirectstoEmployeeMaster(driver);
 			dl.clickonleave();

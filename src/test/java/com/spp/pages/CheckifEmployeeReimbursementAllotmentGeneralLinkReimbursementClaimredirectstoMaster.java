@@ -14,12 +14,10 @@ public class CheckifEmployeeReimbursementAllotmentGeneralLinkReimbursementClaimr
 	WebElement ReimbursementAllotment;
 	@FindBy(xpath="//*[@id=\"allotments_list\"]/div[1]/span/a")
 	WebElement NewReimbursement;
-	@FindBy(xpath="//*[@id=\"employees_table\"]/tbody/tr/td[contains(text(),'Akshay')]/parent::tr/td[5]/input")
+	@FindBy(xpath="//*[@id='employees_table']/tbody/tr/td[contains(text(),'Tina')]/parent::tr/td/input")
 	WebElement AddEmployee;
 	@FindBy(xpath="//input[@value='Allot Reimbursement']")
 	WebElement AllotButton;
-
-	//@FindBy(xpath="//*[@id=\"new_reimbursement_allotment\"]/div[2]/fieldset/div[1]/div[1]/div")
 	@FindBy(id="reimbursement_master_id")
 	WebElement AllotmentName;
 	@FindBy(id="reimbursement_allotment_financial_year")
@@ -30,7 +28,7 @@ public class CheckifEmployeeReimbursementAllotmentGeneralLinkReimbursementClaimr
 	WebElement AllotmentAmount;
 	@FindBy(id="submit")
 	WebElement CreateReimbursementAllotmentButton;
-	@FindBy(xpath="//*[@id=\"allotment_link\"]/img")
+	@FindBy(xpath="//*[@id='allotment_link']/img")
 	WebElement FunctionKey;
 	@FindBy(id="sum_amount")
 	WebElement SumAmount;
@@ -68,7 +66,7 @@ public class CheckifEmployeeReimbursementAllotmentGeneralLinkReimbursementClaimr
 	WebElement ClickOnReimburseClaim;
 	@FindBy(xpath="//*[@id=\"claims_list\"]/div[1]/span/a")
 	WebElement AddNewReimbursementClaim;
-	@FindBy(xpath="//*[@id='employees_table']/tbody/tr/td[contains(text(),'Akshay')]/parent::tr/td[5]/input")
+	@FindBy(xpath="//*[@id='employees_table']/tbody/tr/td[contains(text(),'Tina')]/parent::tr/td/input")
 	WebElement SelectEmployee;
 	@FindBy(xpath="//input[@value='Claim Reimbursement']")
 	WebElement ClaimReimbursement;
@@ -90,10 +88,12 @@ public class CheckifEmployeeReimbursementAllotmentGeneralLinkReimbursementClaimr
 	WebElement CreateReimbursementButton;
 	@FindBy(xpath="//strong[text()='Reimbursement Claim was successfully created']")
 	WebElement SuccessfulMessage;
-	@FindBy(xpath="//*[@id=\"reimbursement_claims\"]/tbody/tr/td[8]/a")
+	@FindBy(xpath="//*[@id='reimbursement_claims']/tbody/tr[1]/td/a[2]")
 	WebElement DeleteClaim;
-	@FindBy(xpath="//*[@id=\"reimbursement_allotments\"]/tbody/tr[1]/td[8]/a")
+	@FindBy(xpath="//*[@id='reimbursement_allotments']/tbody/tr[1]/td/a[2]")
 	WebElement DeleteAllotmentButton;
+	@FindBy(id = "reimbursement_master_tds_ref_option_id")
+	WebElement TDSRef;
 	
 	public CheckifEmployeeReimbursementAllotmentGeneralLinkReimbursementClaimredirectstoMaster(WebDriver driver) {
 		super(driver);
@@ -223,16 +223,17 @@ public class CheckifEmployeeReimbursementAllotmentGeneralLinkReimbursementClaimr
 		createReimbursementMaster.click();
 	}
 	
-
 	public void clickPagechange() throws Exception{
 		Pagechange.click();
 	}
-	
 	public void clickDeleteAllotmentButton() throws Exception{
 		DeleteAllotmentButton.click();
 		switchToPopUpAndAccept(driver);
 	}
-	public void DeleteClaim() {
+	public void DeleteClaim() throws Exception {
+		DeleteClaim.click();
+		switchToPopUpAndAccept(driver);
+		Thread.sleep(2000);
 		DeleteClaim.click();
 		switchToPopUpAndAccept(driver);
 	}
@@ -240,6 +241,7 @@ public class CheckifEmployeeReimbursementAllotmentGeneralLinkReimbursementClaimr
 		DeleteButton.click();
 		switchToPopUpAndAccept(driver);
 	}
-	
-	
+	public void selectTDSRef(String value){
+		dropDownSelect(TDSRef, value);
+	}	
 }
