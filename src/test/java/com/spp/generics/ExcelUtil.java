@@ -11,6 +11,7 @@ import java.util.ArrayList;
 import org.apache.poi.EncryptedDocumentException;
 import org.apache.poi.hssf.usermodel.HSSFRow;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
+import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellStyle;
@@ -750,8 +751,18 @@ public class ExcelUtil {
 				    //do something
 				}
 	        }
+	/*public static void createXLSWorkbook (String fileName, String sheetName) throws IOException, EncryptedDocumentException, InvalidFormatException {
+
+		   FileInputStream fis = new FileInputStream(new File(fileName));
+		   HSSFWorkbook workbook = (HSSFWorkbook) WorkbookFactory.create(fis);
+		   
+		   ws = workbook.getSheet()
+				   
+		   FileOutputStream fos =new FileOutputStream(new File(fileName));
+		   workbook.write(fos);
+		   fos.close();
+		}*/
 	
-	
-	
+
 	   
 }	

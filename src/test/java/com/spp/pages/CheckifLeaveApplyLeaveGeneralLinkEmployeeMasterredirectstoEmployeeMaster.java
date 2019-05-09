@@ -133,8 +133,5 @@ public class CheckifLeaveApplyLeaveGeneralLinkEmployeeMasterredirectstoEmployeeM
     }
     public String getMessage(){
 		return successfullmessage.getText();
-	}
-	
-	
-	
+	}	
 }

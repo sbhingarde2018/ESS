@@ -1,6 +1,7 @@
 package com.spp.common;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.JavascriptExecutor;
@@ -82,39 +83,35 @@ public class BasePage {
 		Select s=new Select(locator);
 		s.selectByValue(valToBeSelected);
 	}
-	public String getAlertText()
 	
+	public String getAlertText()
 	{
-		
 		String text = driver.switchTo().alert().getText();
 		return text;
-}
+		}
 	
-	 public boolean isVisible(WebElement element)
-	 {
-	 return element.isDisplayed();
+	 public boolean isVisible(WebElement element){
+		 return element.isDisplayed();
 	 }
 
-	 public boolean checkIfExist(WebElement element)
-	 {
-	 boolean elemexists = false;
-	 try
-	 {
-	 elemexists =  element.isDisplayed();
-	 return elemexists;
-	 }
-	 catch(Exception e)
-	 {	
-	 }
-	 return elemexists;
+	 public boolean checkIfExist(WebElement element){
+		 boolean elemexists = false;
+		 
+		 try {
+			 elemexists = element.isDisplayed();
+			 return elemexists;
+			 }
+		 catch(Exception e){
+			 
+		 }
+		 return elemexists;
 	 }
 
-	 public void resizeWindow()
-	 {
+	 public void resizeWindow(){
 		 driver.manage().window().fullscreen();	
 	 }
-	 public void exitFullscreen()
-	 {
+	 
+	 public void exitFullscreen(){
 		 driver.manage().window().maximize();
 	 }
 	 
@@ -123,9 +120,15 @@ public class BasePage {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("document.getElementById('"+id+"').setAttribute('value', '"+value+"')");
 	 }
+	 
 	 public void jsclick(WebElement e)
 	 {
 		 JavascriptExecutor jse = (JavascriptExecutor) driver;
 		 jse.executeScript("arguments[0].click();", e);
 	 }
+	 
+	 public boolean stringComp(ArrayList<String> big,ArrayList<String> small) {
+		 return big.contains(small);
+	 }
+	 
 }

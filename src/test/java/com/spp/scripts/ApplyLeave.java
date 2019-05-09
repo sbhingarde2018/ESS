@@ -3,6 +3,7 @@ package com.spp.scripts;
 import org.testng.annotations.Test;
 
 import com.spp.common.BaseTest;
+import com.spp.generics.Utility;
 import com.spp.pages.ApplyDefaultLeave;
 import com.spp.pages.ApplyUserDefinedtLeave;
 import com.spp.pages.CheckifEmployeeLeaveAllotAvailDateSettingsGeneralLinkredirectstoEmployeeMaster;
@@ -72,11 +73,14 @@ public class ApplyLeave extends BaseTest{
 		dl.checkleavesummary();
 	}*/
 	
-	/*@Test(priority=2)
+	@Test(priority=2)
 	public void SearchtheLeavesApplied_SC_477() throws Exception{
 		SearchtheLeavesApplied dl=new SearchtheLeavesApplied(driver);
 		dl.clickonleave();
 		dl.clickonapplyleave();
+		Thread.sleep(2000);
+		dl.resizeWindow();
+		Thread.sleep(2000);
 		dl.clickonfilterhead();
 		Thread.sleep(2000);
 		dl.clickonload();
@@ -85,9 +89,12 @@ public class ApplyLeave extends BaseTest{
 		Thread.sleep(1000);
 		dl.checkleavehistory();
 		Thread.sleep(1000);
-		dl.selectfromdate("01 August 2018");
-		dl.selectodate("30 August 2018");
+		//dl.selectfromdate("01 August 2018");
+		dl.selectodate("30 November 2019");
 		dl.clickonsearch();
+		Thread.sleep(5000);
+		dl.exitFullscreen();
+		Thread.sleep(2000);
 	}
 	
 	@Test(priority=3)
@@ -95,6 +102,9 @@ public class ApplyLeave extends BaseTest{
 		ToviewappliedLeaveDetailinLeaveSummarytab st=new ToviewappliedLeaveDetailinLeaveSummarytab(driver);
 		st.clickonleave();
 		st.clickonapplyleave();
+		Thread.sleep(2000);
+		st.resizeWindow();
+		Thread.sleep(2000);
 		st.clickonfilterhead();
 		Thread.sleep(2000);
 		st.clickonload();
@@ -103,11 +113,16 @@ public class ApplyLeave extends BaseTest{
 		Thread.sleep(1000);
 		st.checkleavehistory();
 		Thread.sleep(1000);
-		st.selectfromdate("01 August 2018");
-		st.selectodate("30 August 2018");
+		//st.selectfromdate("01 August 2018");
+		st.selectodate("30 November 2019");
+		Thread.sleep(2000);
 		st.clickonsearch();
+		Thread.sleep(2000);
 		st.clickonview();
-	}*/
+		Thread.sleep(2000);
+		st.exitFullscreen();
+		Thread.sleep(2000);
+	}
 	
 	@Test(priority=4)
 	public void DeleteAppliedLeave_SC_112() throws Exception{
@@ -142,7 +157,7 @@ public class ApplyLeave extends BaseTest{
 		//dl.checkleavehistory();
 	}
 	
-	/*@Test(priority=5)
+	@Test(priority=5)
 	public void CheckifLeaveApplyLeaveGeneralLinkEmployeeMasterredirectstoEmployeeMaster_SC_476() throws Exception{
 	CheckifLeaveApplyLeaveGeneralLinkEmployeeMasterredirectstoEmployeeMaster dl=new CheckifLeaveApplyLeaveGeneralLinkEmployeeMasterredirectstoEmployeeMaster(driver);
 		dl.clickonleave();
@@ -153,8 +168,8 @@ public class ApplyLeave extends BaseTest{
 		Thread.sleep(2000);
 		dl.addnewemployee();
 		dl.enterEmployeeid("ABC123566");
-		dl.enterEmployeeref("12345697865799");
-		dl.enterEmployeename("Priya");
+		dl.enterEmployeeref("Ref-"+Utility.getRandNum(100, 200));
+		dl.enterEmployeename("ShantiPriya");
 		dl.enterEmployeefather("Harish");
 		dl.selectDateofBirth("06 June 1995");
 		dl.selectGender("Female");
@@ -165,12 +180,12 @@ public class ApplyLeave extends BaseTest{
 		dl.selectState("Maharashtra");
 		dl.selectclassificationdetail();
 		dl.selectsalstructure("Structure");
-		dl.selectbranch("Chennai");
+		dl.selectbranch("default");
 		dl.selectattendancestructure("Karnataka");
 		dl.selectbank("CASH");
-		dl.selectleavepolicy("PolicyNo1");
+		dl.selectleavepolicy("Default");
 		dl.createemployee();
 		String s=dl.getMessage();
 	 	Assert.assertEquals(s, "Employee successfully created");
-	}*/
+	}
 }

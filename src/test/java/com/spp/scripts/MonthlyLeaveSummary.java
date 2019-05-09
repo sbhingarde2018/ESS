@@ -1,5 +1,6 @@
 package com.spp.scripts;
 
+import java.util.ArrayList;
 
 import org.testng.annotations.Test;
 
@@ -8,18 +9,24 @@ import com.spp.pages.CheckifLeaveMonthlyLeaveSummaryGeneralLinkEmployeeMasterred
 import com.spp.pages.GenerateAdvancedLeaveSummary;
 import com.spp.pages.GenerateMonthlyLeaveSummary;
 
+import junit.framework.Assert;
+
 public class MonthlyLeaveSummary extends BaseTest{
 
-	/*@Test(priority=0)
+	@Test(priority=0)
 	public void GenerateMonthlyLeaveSummary_SC_118() throws Exception{
-		GenerateMonthlyLeaveSummary gm=new GenerateMonthlyLeaveSummary(driver);
+	GenerateMonthlyLeaveSummary gm=new GenerateMonthlyLeaveSummary(driver);
 		gm.clickonleave();
 		gm.clickonmonthlyleavesummary();
-		gm.selectpaymonth("Jul/2018");
+		gm.selectpaymonth("Mar/2019");
 		Thread.sleep(2000);
-		gm.selectleavepolicy("PolicyNo1");
+		gm.selectleavepolicy("Default");
 		Thread.sleep(2000);
-		gm.selectleavetype("Casual Leave");
+		gm.selectleavetype("Leave");
+		Thread.sleep(2000);
+		gm.selectorderby("Ref No.");
+		Thread.sleep(2000);
+		gm.resizeWindow();
 		Thread.sleep(2000);
 		gm.clickongetemployees();
 		Thread.sleep(2000);
@@ -28,29 +35,52 @@ public class MonthlyLeaveSummary extends BaseTest{
 		gm.selectallemployees();
 		Thread.sleep(1000);
 		gm.generatereport();
-	}
-	*/
-	@Test(priority=1)
-	public void GenerateAdvancedLeaveSummary_SC_119() throws Exception{
-		GenerateAdvancedLeaveSummary gm=new GenerateAdvancedLeaveSummary(driver);
-		gm.clickonleave();
-		gm.clickonmonthlyleavesummary();
-		gm.selectadvanceleavesummary();
-		gm.selectpaymonth("Jul/2018");
-		Thread.sleep(2000);
-		gm.selectleavepolicy("PolicyNo1");
-		Thread.sleep(2000);
-		gm.selectleavetype("Casual Leave");
-		Thread.sleep(2000);
-		gm.clickongetemployees();
-		Thread.sleep(2000);
-		gm.clickonload();
-		Thread.sleep(2000);
-		gm.selectallemployees();
+		/*ArrayList<String> excelnames = gm.getColumn();
+		ArrayList<String> webnames = new ArrayList<String>();
+		webnames.add("Tina");
+		webnames.add("Anil");
+		boolean listcontains = gm.stringComp(excelnames, webnames);		
+		Assert.assertEquals(true, listcontains);*/
 		Thread.sleep(1000);
-		gm.generatereport();
+		gm.exitFullscreen();
+		Thread.sleep(2000);
 	}
 	
+	@Test(priority=1)
+	public void GenerateAdvancedLeaveSummary_SC_119() throws Exception{
+	GenerateAdvancedLeaveSummary gm=new GenerateAdvancedLeaveSummary(driver);
+		gm.clickonleave();
+		gm.clickonmonthlyleavesummary();
+		gm.selectpaymonth("Mar/2019");
+		Thread.sleep(2000);
+		gm.selectleavepolicy("Default");
+		Thread.sleep(2000);
+		gm.selectleavetype("Leave");
+		Thread.sleep(2000);
+		gm.selectorderby("Ref No.");
+		Thread.sleep(2000);
+		gm.resizeWindow();
+		Thread.sleep(2000);
+		gm.clickongetemployees();
+		Thread.sleep(2000);
+		gm.clickonload();
+		Thread.sleep(2000);
+		gm.selectallemployees();
+		gm.selectadvanceleavesummary();
+		Thread.sleep(2000);
+		gm.generatereport();
+		Thread.sleep(2000);
+		/*ArrayList<String> excelnames = gm.getColumn();
+		System.out.println(excelnames.toString());
+		ArrayList<String> webnames = new ArrayList<String>();
+		webnames.add("Tina");
+		webnames.add("Anil");
+		boolean listcontains = gm.stringComp(excelnames, webnames);		
+		Assert.assertEquals(true, listcontains);*/
+		Thread.sleep(2000);
+		gm.exitFullscreen();
+		Thread.sleep(2000);
+	}
 	
 	/*@Test(priority=2)
 	public void CheckifLeaveMonthlyLeaveSummaryGeneralLinkEmployeeMasterredirectstoEmployeeMaster_SC_486() throws Exception{
