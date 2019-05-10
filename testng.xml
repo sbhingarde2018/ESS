@@ -4,10 +4,12 @@
   <test name="Test">
     <classes>
     
-    <class name="com.spp.scripts.SalaryRateDetails"/>
+    <class name="com.spp.scripts.AttendanceIntegration"/>
+    <class name="com.spp.scripts.MonthlyLeaveSummary"/>
     
-    <!-- <class name="com.spp.scripts.ApplyLeave"/> -->
-    <!-- <class name="com.spp.scripts.MonthlyLeaveSummary"/> -->
+    <!--<class name="com.spp.scripts.SalaryRateDetails"/>
+    <class name="com.spp.scripts.ApplyLeave"/> -->
+    
     <!-- <class name="com.spp.scripts.LeaveAllotAvailDateSettings"/> -->
     <!-- <class name="com.spp.scripts.RestrictPFContribution"/>
     <class name="com.spp.scripts.BulkIncrementDetails"/>

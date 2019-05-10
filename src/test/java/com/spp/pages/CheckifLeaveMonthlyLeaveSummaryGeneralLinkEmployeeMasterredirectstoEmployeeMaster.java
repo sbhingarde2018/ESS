@@ -8,9 +8,10 @@ import org.openqa.selenium.support.PageFactory;
 import com.spp.common.BasePage;
 
 public class CheckifLeaveMonthlyLeaveSummaryGeneralLinkEmployeeMasterredirectstoEmployeeMaster extends BasePage{
+	
 	@FindBy(id="leave")
 	WebElement ClickOnLeave;
-	@FindBy(xpath="//*[@id=\"menu\"]/li[5]/div/div/ul/li[3]/a")
+	@FindBy(xpath="//*[@id=\"menu\"]/li[5]/div/div/ul/li[4]/a")
 	WebElement ClickOnMonthlyLeaveSummary;
 	@FindBy(xpath="//*[@id=\"ui-accordion-accordion-header-1\"]/h3")
 	WebElement ClickOnGeneralLinks;

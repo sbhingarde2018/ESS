@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import org.testng.annotations.Test;
 
 import com.spp.common.BaseTest;
+import com.spp.generics.Utility;
 import com.spp.pages.CheckifLeaveMonthlyLeaveSummaryGeneralLinkEmployeeMasterredirectstoEmployeeMaster;
 import com.spp.pages.GenerateAdvancedLeaveSummary;
 import com.spp.pages.GenerateMonthlyLeaveSummary;
@@ -13,7 +14,7 @@ import junit.framework.Assert;
 
 public class MonthlyLeaveSummary extends BaseTest{
 
-	@Test(priority=0)
+	/*@Test(priority=0)
 	public void GenerateMonthlyLeaveSummary_SC_118() throws Exception{
 	GenerateMonthlyLeaveSummary gm=new GenerateMonthlyLeaveSummary(driver);
 		gm.clickonleave();
@@ -35,12 +36,12 @@ public class MonthlyLeaveSummary extends BaseTest{
 		gm.selectallemployees();
 		Thread.sleep(1000);
 		gm.generatereport();
-		/*ArrayList<String> excelnames = gm.getColumn();
+		ArrayList<String> excelnames = gm.getColumn();
 		ArrayList<String> webnames = new ArrayList<String>();
 		webnames.add("Tina");
 		webnames.add("Anil");
 		boolean listcontains = gm.stringComp(excelnames, webnames);		
-		Assert.assertEquals(true, listcontains);*/
+		Assert.assertEquals(true, listcontains);
 		Thread.sleep(1000);
 		gm.exitFullscreen();
 		Thread.sleep(2000);
@@ -70,19 +71,19 @@ public class MonthlyLeaveSummary extends BaseTest{
 		Thread.sleep(2000);
 		gm.generatereport();
 		Thread.sleep(2000);
-		/*ArrayList<String> excelnames = gm.getColumn();
+		ArrayList<String> excelnames = gm.getColumn();
 		System.out.println(excelnames.toString());
 		ArrayList<String> webnames = new ArrayList<String>();
 		webnames.add("Tina");
 		webnames.add("Anil");
 		boolean listcontains = gm.stringComp(excelnames, webnames);		
-		Assert.assertEquals(true, listcontains);*/
+		Assert.assertEquals(true, listcontains);
 		Thread.sleep(2000);
 		gm.exitFullscreen();
 		Thread.sleep(2000);
-	}
+	}*/
 	
-	/*@Test(priority=2)
+	@Test(priority=2)
 	public void CheckifLeaveMonthlyLeaveSummaryGeneralLinkEmployeeMasterredirectstoEmployeeMaster_SC_486() throws Exception{
 		CheckifLeaveMonthlyLeaveSummaryGeneralLinkEmployeeMasterredirectstoEmployeeMaster la=new CheckifLeaveMonthlyLeaveSummaryGeneralLinkEmployeeMasterredirectstoEmployeeMaster(driver);
 		la.clickonleave();
@@ -92,8 +93,8 @@ public class MonthlyLeaveSummary extends BaseTest{
 		Thread.sleep(2000);
 		la.addnewemployee();
 		la.enterEmployeeid("ABC12983");
-		la.enterEmployeeref("12342556186");
-		la.enterEmployeename("Ashish");
+		la.enterEmployeeref("Ref-"+Utility.getRandNum(100, 200));
+		la.enterEmployeename("Arihant");
 		la.enterEmployeefather("Harish");
 		la.selectDateofBirth("06 June 1995");
 		la.selectGender("Female");
@@ -104,12 +105,12 @@ public class MonthlyLeaveSummary extends BaseTest{
 		la.selectState("Maharashtra");
 		la.selectclassificationdetail();
 		la.selectsalstructure("Structure");
-		la.selectbranch("Chennai");
+		la.selectbranch("default");
 		la.selectattendancestructure("Karnataka");
 		la.selectbank("CASH");
-		la.selectleavepolicy("PolicyNo1");
+		la.selectleavepolicy("Default");
 		la.createemployee();
 		String s=la.getMessage();
  		Assert.assertEquals(s, "Employee successfully created");
-	}*/
+	}
 }
