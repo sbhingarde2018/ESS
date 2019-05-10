@@ -26,7 +26,8 @@ public class CreateSalaryGroupusingEmployee extends BasePage{
 	WebElement CreateSalStructure;
 	@FindBy(xpath="//*[@id=\"main\"]/div[2]/strong")
 	WebElement successfullmessage;
-	
+	@FindBy(xpath="//*[@id='main']/div/table/tbody/tr/td[contains(text(),'HRA STRUCTURE')]/parent::tr/td[5]/a")
+	WebElement deleteicon;
 	
 	public CreateSalaryGroupusingEmployee(WebDriver driver) {
 		super(driver);
@@ -59,4 +60,8 @@ public class CreateSalaryGroupusingEmployee extends BasePage{
 	public String getMessage(){
 		return successfullmessage.getText();
 	}
+	public void clickDeleteSalaryStructure() throws Exception{
+		deleteicon.click();
+	}
+
 }

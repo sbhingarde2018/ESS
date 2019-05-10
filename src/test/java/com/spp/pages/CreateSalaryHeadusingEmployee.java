@@ -26,6 +26,8 @@ public class CreateSalaryHeadusingEmployee extends BasePage{
 	WebElement CreateSalaryHead;
 	@FindBy(xpath="//*[@id=\"main\"]/div[1]/strong")
 	WebElement successfullmessage;
+	@FindBy(xpath="//*[@id='earning_heads']/tbody/tr/td[contains(text(),'HRA')]/parent::tr/td/a[text()='Delete']")	
+	WebElement deletebutton;
 	
 	public CreateSalaryHeadusingEmployee(WebDriver driver) {
 		super(driver);
@@ -57,6 +59,9 @@ public class CreateSalaryHeadusingEmployee extends BasePage{
 	}
 	public String getMessage(){
 		return successfullmessage.getText();
+	}
+	public void clickDeleteSalaryHeadsButton() throws Exception{
+		deletebutton.click();
 	}
 	
 }

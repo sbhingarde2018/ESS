@@ -16,9 +16,9 @@ public class AllotSalarytoanemployeeAfterchangingSalaryStructure extends BasePag
 	WebElement SelectSalaryAllotedTab;
 	@FindBy(id="filter_head")
 	WebElement ClickonFilter;
-	@FindBy(xpath="//*[@id=\"bf_form\"]/div[9]/button[1]")
+	@FindBy(xpath="//*[@id='bf_form']/div[10]/button[1]")
 	WebElement ClickOnLoad;
-	@FindBy(xpath="//*[@id=\"alloted\"]/tbody/tr/td[contains(text(),'kunal')]/parent::tr/td[4]/a")
+	@FindBy(xpath="//*[@id='alloted']/tbody/tr/td[contains(text(),'JOHN')]/parent::tr/td[4]/a")
 	WebElement ClickOnEdit;
 	@FindBy(id="month_year")
 	WebElement SelectEffFrom;

@@ -1,5 +1,6 @@
 package com.spp.pages;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -12,7 +13,7 @@ public class AssignNewHeadtoStructure extends BasePage{
 	WebElement ClickOnMaster;
 	@FindBy(xpath="//*[@id=\"menu\"]/li[3]/div/div[2]/ul/li[2]/a")
 	WebElement ClickOnSalaryStructure;
-	@FindBy(xpath="//*[@id=\"main\"]/div[3]/table/tbody/tr/td[contains(text(),'Gross Salary Structure')]/parent::tr/td[3]/a")
+	@FindBy(xpath="//*[@id='main']/div[3]/table/tbody/tr/td[contains(text(),'Gross_Structure')]/parent::tr/td[3]/a")
 	WebElement ClickOnsettings;
 	@FindBy(xpath="//*[@id=\"main\"]/div[2]/span/a")
 	WebElement AssignNewHead;
@@ -30,7 +31,7 @@ public class AssignNewHeadtoStructure extends BasePage{
 	WebElement SelectEffFrom;
 	@FindBy(id="salary_group_detail_round_off")
 	WebElement SelectRoundOff;
-	@FindBy(xpath="//*[@id=\"new_salary_group_detail\"]/fieldset/div[6]/input")
+	@FindBy(xpath="//input[@value='Create Salary Group Detail']")
 	WebElement CreateSalaryGrpdetail;
 	@FindBy(xpath="//*[@id=\"main\"]/div[2]/strong")
 	WebElement successfullmessage;
@@ -70,6 +71,7 @@ public class AssignNewHeadtoStructure extends BasePage{
 	}
 	public void selectefffrommonth(String value) {
 		SelectEffFrom.sendKeys(value);
+		SelectEffFrom.sendKeys(Keys.TAB);
 	}
 	public void selectroundoff(String value) {
 		dropDownSelect(SelectRoundOff, value);
@@ -79,6 +81,5 @@ public class AssignNewHeadtoStructure extends BasePage{
 	}
 	public String getMessage(){
 		return successfullmessage.getText();
-	}
-	
+	}	
 }

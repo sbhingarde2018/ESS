@@ -15,17 +15,17 @@ public class EditClassificationDetailsChangeSalaryStructureofanemployee extends 
 	WebElement ClickOnEmployeeDetails;
 	@FindBy(id="filter_head")
 	WebElement ClickonFilter;
-	@FindBy(xpath="//*[@id=\"bf_form\"]/div[10]/button[1]")
+	@FindBy(xpath="//*[@id='bf_form']/div[10]/button[1]")
 	WebElement ClickOnLoad;
-	@FindBy(xpath="//*[@id=\"employees_dtable\"]/tbody/tr/td[contains(text(),'Anil')]/parent::tr/td[6]/a[1]")
+	@FindBy(xpath="//*[@id='employees_dtable']/tbody/tr/td[contains(text(),'JOHN')]/parent::tr/td[6]/a[1]")
 	WebElement ClickonView;
-	@FindBy(xpath="//*[@id=\"classification_details\"]/a")
+	@FindBy(xpath="//*[@id='classification_details']/a")
 	WebElement ClickonClassificationDetails;
 	@FindBy(xpath="//*[@id=\"main\"]/div[4]/table/tbody/tr[1]/td[6]/a")
 	WebElement ClickOnEdit;
 	@FindBy(id="employee_detail_salary_group_id")
 	WebElement SelectSalaryStructure;
-	@FindBy(xpath="//*[@id=\"emp_det_form\"]/div[2]/div[15]/input")
+	@FindBy(xpath="//input[@value='Update Classification Details']")
 	WebElement UpdateClassificationDetail;
 	@FindBy(xpath="//*[@id=\"main\"]/div[2]/strong")
 	WebElement successfulmessage;

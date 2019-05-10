@@ -4,9 +4,10 @@
   <test name="Test">
     <classes>
     
-    <class name="com.spp.scripts.ApplyLeave"/>
-    <class name="com.spp.scripts.MonthlyLeaveSummary"/>
+    <class name="com.spp.scripts.SalaryRateDetails"/>
     
+    <!-- <class name="com.spp.scripts.ApplyLeave"/> -->
+    <!-- <class name="com.spp.scripts.MonthlyLeaveSummary"/> -->
     <!-- <class name="com.spp.scripts.LeaveAllotAvailDateSettings"/> -->
     <!-- <class name="com.spp.scripts.RestrictPFContribution"/>
     <class name="com.spp.scripts.BulkIncrementDetails"/>
@@ -18,7 +19,6 @@
 	<class name="com.spp.scripts.SalaryHeadTestcase"/>
 	<class name="com.spp.scripts.InsuranceMaster"/>
 	<class name="com.spp.scripts.GroupInsuranceMaster"/>
-	<class name="com.spp.scripts.SalaryRateDetails"/>
 	<class name="com.spp.scripts.LeaveDefinitions"/>
 	<class name="com.spp.scripts.HolidayList"/>
 	<class name="com.spp.scripts.MasterWeeklyHoliday"/>
