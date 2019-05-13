@@ -22,7 +22,9 @@ public class AttendanceIntegration extends BaseTest{
 		Thread.sleep(2000);
 		agm.writeFormatName("Attendance Format123");
 		Thread.sleep(2000);
-		agm.addSampleFile("C:\\Users\\alfalabs\\Downloads\\SalaryHead (1).xlsx");
+		agm.changeFileType();
+		Thread.sleep(2000);
+		agm.addSampleFile("C:\\Users\\alfalabs\\Desktop\\AttendanceIntegration.txt");
 		Thread.sleep(2000);
 		agm.writeStartingrow("1");
 		agm.clickNext();
@@ -82,6 +84,7 @@ public class AttendanceIntegration extends BaseTest{
 		anmm.clickonAttendanceIntegration();
 		Thread.sleep(2000);
 	}
+	
 	@Test(priority = 3)
 	public void DeleteAttendanceIntegrationConfiguration_SC_492() throws Exception{
 		DeleteAttendanceIntegrationConfiguration asd = new DeleteAttendanceIntegrationConfiguration(driver); 

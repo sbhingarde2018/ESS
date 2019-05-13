@@ -29,7 +29,8 @@ public class AddNewAttendanceIntegrationConfiguration extends BasePage{
 	WebElement SaveBtn;
 	@FindBy(xpath="//*[@id='show_message']/div/strong")
 	WebElement SuccessfulMessage;
-	
+	@FindBy(id="text_radio_button")
+	WebElement FileTypeRadio;
 	
 	public AddNewAttendanceIntegrationConfiguration(WebDriver driver) {
 		super(driver);
@@ -65,6 +66,9 @@ public class AddNewAttendanceIntegrationConfiguration extends BasePage{
 	}
 	public String getMessage(){
 		return SuccessfulMessage.getText();
+	}
+	public void changeFileType() {
+		FileTypeRadio.click();
 	}
 	
 }
