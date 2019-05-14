@@ -10,7 +10,7 @@ import com.spp.common.BasePage;
 public class CheckifLeaveMonthlyAttendanceGeneralLinkEmployeeMasterredirectstoEmployeeMaster extends BasePage{
 	@FindBy(id="leave")
 	WebElement ClickOnLeave;
-	@FindBy(xpath="//*[@id=\"menu\"]/li[5]/div/div/ul/li[4]/a")
+	@FindBy(xpath="//*[@id='menu']/li[5]/div/div/ul/li[5]/a")
 	WebElement ClickOnMonthlyAttendance;
 	@FindBy(xpath="//*[@id=\"ui-accordion-accordion-header-1\"]/h3")
 	WebElement ClickOnGeneralLinks;
@@ -56,6 +56,12 @@ public class CheckifLeaveMonthlyAttendanceGeneralLinkEmployeeMasterredirectstoEm
 	WebElement CreateEmployee;
 	@FindBy(xpath="//*[@id=\"main\"]/div[2]/strong")
 	WebElement successfullmessage;
+	@FindBy(id="filter_head")
+	WebElement FilterEmployee;
+	@FindBy(xpath="//*[@id='bf_form']/div[10]/button[1]")
+	WebElement ClickOnLoad;
+	@FindBy(xpath="//*[@id='employees_dtable']/tbody/tr/td[contains(text(),'Reena')]/parent::tr/td/a[2]")
+	WebElement DeleteEmployees;
 	
 	public CheckifLeaveMonthlyAttendanceGeneralLinkEmployeeMasterredirectstoEmployeeMaster(WebDriver driver) {
 		super(driver);
@@ -134,5 +140,13 @@ public class CheckifLeaveMonthlyAttendanceGeneralLinkEmployeeMasterredirectstoEm
     public String getMessage(){
 		return successfullmessage.getText();
 	}
-	
+    public void clickfilteremployee() {
+    	FilterEmployee.click();
+    }
+    public void clickonload() {
+		ClickOnLoad.click();
+	}
+    public void clickdelete() {
+		DeleteEmployees.click();
+	}	
 }

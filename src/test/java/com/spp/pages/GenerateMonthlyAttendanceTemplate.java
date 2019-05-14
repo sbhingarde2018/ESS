@@ -10,17 +10,17 @@ import com.spp.common.BasePage;
 public class GenerateMonthlyAttendanceTemplate extends BasePage{
 	@FindBy(id="leave")
 	WebElement ClickOnLeave;
-	@FindBy(xpath="//*[@id=\"menu\"]/li[5]/div/div/ul/li[4]/a")
+	@FindBy(xpath="//*[@id='menu']/li[5]/div/div/ul/li[5]/a")
 	WebElement ClickOnMonthlyAttendance;
-	@FindBy(xpath="//*[@id=\"ui-accordion-accordion-header-1\"]/h3")
+	@FindBy(xpath="//*[@id='ui-accordion-accordion-header-1']/h3")
 	WebElement SelectMonthlyAttendance;
-	@FindBy(xpath="//*[@id=\"ui-accordion-accordion-panel-1\"]/li[2]/a")
+	@FindBy(xpath="//*[@id='ui-accordion-accordion-panel-1']/li/a[contains(text(),'Generate Monthly Attendance ExcelTemplate')]")
 	WebElement GenerateMonthlyAttendance;
 	@FindBy(id="paymonth_id")
 	WebElement SelectPayMonth;
 	@FindBy(id="leave_policy_master")
 	WebElement SelectLeavePolicy;
-	@FindBy(xpath="//*[@id=\"main\"]/div[2]/div/form/fieldset/div[4]/input")
+	@FindBy(xpath="//*[@id='main']/div[4]/div/form/fieldset/div[4]/input")
 	WebElement GenerateTemplate;
 	
 	public GenerateMonthlyAttendanceTemplate(WebDriver driver) {
@@ -47,9 +47,5 @@ public class GenerateMonthlyAttendanceTemplate extends BasePage{
 	}
 	public void generatetemplate() {
 		GenerateTemplate.click();
-	}
-	
-	
-	
-	
+	}	
 }
