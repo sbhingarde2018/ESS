@@ -77,7 +77,7 @@ public class MonthlyAttendance extends BaseTest{
 		Thread.sleep(2000);
 		upl.uploadmonthlyattendance();
 		Thread.sleep(2000);
-		upl.UploadExcelFile("C:\\Users\\Administrator\\Downloads\\MonthlyAttendance.xlsx");
+		upl.UploadExcelFile("C:\\Users\\alfalabs\\Downloads\\MonthlyAttendance.xlsx");
 		Thread.sleep(2000);
 		upl.clickUploadFile();
 		String s = upl.getMessage();
