@@ -4,7 +4,7 @@
   <test name="Test">
     <classes>
     
-    <class name="com.spp.scripts.MonthlyAttendance"/>
+    <class name="com.spp.scripts.LeaveEncashment"/>
     
     
     <!--<class name="com.spp.scripts.AttendanceIntegration"/>
@@ -33,6 +33,7 @@
 	<class name="com.spp.scripts.FormulaEditor"/>
 	<class name="com.spp.scripts.ReimbursementMaster"/>-->
 	<!--<class name="com.spp.scripts.EmployeeDetails"/>
+	<class name="com.spp.scripts.MonthlyAttendance"/>
 	<class name="com.spp.scripts.ReimbursementAllotment"/>-->
    <!--<class name="com.spp.scripts.ReimbursementClaim"/>
    <class name="com.spp.scripts.Arrears"/>

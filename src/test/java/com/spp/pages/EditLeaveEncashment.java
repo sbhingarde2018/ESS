@@ -14,11 +14,11 @@ public class EditLeaveEncashment extends BasePage{
 	WebElement ClickOnLeaveEncashment;
 	@FindBy(id="filter_head")
 	WebElement ClickOnFilter;
-	@FindBy(xpath="//button[text()='LOAD']")
+	@FindBy(xpath="//*[@id='bf_form']/div[10]/button[1]")
 	WebElement ClickOnLoad;
-	@FindBy(xpath="//*[@id=\"dt_leave_encashment\"]/tbody/tr/td[contains(text(),'Ankit')]/parent::tr/td[3]/a")
+	@FindBy(xpath="//*[@id='dt_leave_encashment']/tbody/tr/td[contains(text(),'Raj')]/parent::tr/td[3]/a")
 	WebElement ClickOnView;
-	@FindBy(xpath="//*[@id=\"employee_leaves_encashed\"]/table/tbody/tr[1]/td[7]/a")
+	@FindBy(xpath="//*[@id='employee_leaves_encashed']/table/tbody/tr/td[contains(text(),'Casual Leave')]/parent::tr/td[7]/a")
 	WebElement ClickOnEdit;
 	@FindBy(id="leave_encashment_mode_of_payment")
 	WebElement SelectModeofPayment;

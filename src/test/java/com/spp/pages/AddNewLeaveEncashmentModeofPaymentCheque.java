@@ -14,9 +14,9 @@ public class AddNewLeaveEncashmentModeofPaymentCheque extends BasePage{
 	WebElement ClickOnLeaveEncashment;
 	@FindBy(id="filter_head")
 	WebElement ClickOnFilter;
-	@FindBy(xpath="//button[text()='LOAD']")
+	@FindBy(xpath="//*[@id='bf_form']/div[10]/button[1]")
 	WebElement ClickOnLoad;
-	@FindBy(xpath="//*[@id=\"dt_leave_encashment\"]/tbody/tr/td[contains(text(),'Ankit')]/parent::tr/td[3]/a")
+	@FindBy(xpath="//*[@id='dt_leave_encashment']/tbody/tr/td[contains(text(),'Raj')]/parent::tr/td[3]/a")
 	WebElement ClickOnView;
 	@FindBy(xpath="//a[text()='Add New Leave Encashment']")
 	WebElement AddNewLeaveEncashment;

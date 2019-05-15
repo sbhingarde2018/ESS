@@ -56,6 +56,12 @@ public class CheckifLeaveLeaveEncashmentGeneralLinkEmployeeMasterredirectstoEmpl
 	WebElement CreateEmployee;
 	@FindBy(xpath="//*[@id=\"main\"]/div[2]/strong")
 	WebElement successfullmessage;
+	@FindBy(id="filter_head")
+	WebElement FilterEmployee;
+	@FindBy(xpath="//*[@id='bf_form']/div[10]/button[1]")
+	WebElement ClickOnLoad;
+	@FindBy(xpath="//*[@id='employees_dtable']/tbody/tr/td[contains(text(),'Shyam')]/parent::tr/td/a[2]")
+	WebElement DeleteEmployees;
 	
 	public CheckifLeaveLeaveEncashmentGeneralLinkEmployeeMasterredirectstoEmployeeMaster(WebDriver driver) {
 		super(driver);
@@ -133,5 +139,14 @@ public class CheckifLeaveLeaveEncashmentGeneralLinkEmployeeMasterredirectstoEmpl
     }
     public String getMessage(){
 		return successfullmessage.getText();
+	}
+    public void clickfilteremployee() {
+    	FilterEmployee.click();
+    }
+    public void clickonload() {
+		ClickOnLoad.click();
+	}
+    public void clickdelete() {
+		DeleteEmployees.click();
 	}
 }

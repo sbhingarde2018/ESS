@@ -4,6 +4,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.spp.common.BaseTest;
+import com.spp.generics.Utility;
 import com.spp.pages.AddNewLeaveEncashmentInFFS;
 import com.spp.pages.AddNewLeaveEncashmentModeofPaymentCheque;
 import com.spp.pages.AddNewLeaveEncashmentModeofPaymentDD;
@@ -23,67 +24,197 @@ import com.spp.pages.UpdateLeaveEncashmentBasedonPercentagetoRemovevalueandInser
 
 public class LeaveEncashment extends BaseTest{
 	
-	
-/*	@Test(priority=0)
+	@Test(priority=0)
 	public void LeaveEncashmentLumpsumUnitRate_SC_113() throws Exception{
 		LeaveEncashmentLumpsumUnitRate lu=new LeaveEncashmentLumpsumUnitRate(driver);
 		lu.clickonleave();
 		lu.clickonleaveencashment();
+		lu.resizeWindow();
 		lu.clickonfilter();
+		Thread.sleep(2000);
+		lu.clickonload();
+		Thread.sleep(2000);
+		lu.clickonview();
+		Thread.sleep(2000);
+		lu.addnewleaveencashment();
+		Thread.sleep(2000);
+		lu.selectmonth("Mar/2019");
+		Thread.sleep(2000);
+		lu.selectleave("Casual Leave");
+		Thread.sleep(2000);
+		//lu.enternoofleaves("2");
+		//Thread.sleep(2000);
+		lu.enterunitrate("1000");
+		Thread.sleep(2000);
+		lu.checkshowinsalary();
+		Thread.sleep(2000);
+		lu.clickonsave();
+		String s=lu.getMessage();
+		Assert.assertEquals(s, "Leave encashment successfully created.");
+		Thread.sleep(2000);
+		lu.clickonSalary();
+		lu.clickonsalaryeditor();
+		Thread.sleep(2000);
+		lu.selectSalEditorPaymonth("Mar/2019");
+		Thread.sleep(2000);
+		lu.selectSalEditorSalaryStructure("Structure");
+		Thread.sleep(2000);
+		lu.clickGetValues();
+		Thread.sleep(2000);
+		lu.clickonload();
+		Thread.sleep(2000);
+		lu.clickSelectAll();
+		Thread.sleep(2000);
+		lu.clickProcessSalary();
+		Thread.sleep(5000);
+		lu.clickonSalary();
+		Thread.sleep(5000);
+		lu.clickSalaryProcessList();
+		Thread.sleep(5000);
+		lu.editSalaryProcessList();
+		Thread.sleep(5000);
+		lu.clickSalaryReviewDetailView();
+		Thread.sleep(2000);
+		lu.clickonleave();
+		lu.clickonleaveencashment();
+		lu.clickonfilter();
+		Thread.sleep(2000);
+		lu.clickonload();
+		Thread.sleep(2000);
+		lu.clickonview();
+		Thread.sleep(2000);
+		lu.deleteEncashment();
+		Thread.sleep(2000);
+		lu.switchToPopUpAndAccept(driver);
+		Thread.sleep(2000);
+		lu.exitFullscreen();
+		Thread.sleep(2000);
+	}
+	
+	@Test(priority=1)
+	public void AddNewLeaveEncashmentModeofPaymentCheque_SC_418() throws Exception{
+		AddNewLeaveEncashmentModeofPaymentCheque lu=new AddNewLeaveEncashmentModeofPaymentCheque(driver);
+		lu.clickonleave();
+		lu.clickonleaveencashment();
+		lu.clickonfilter();
+		lu.resizeWindow();
 		Thread.sleep(2000);
 		lu.clickonload();
 		Thread.sleep(3000);
 		lu.clickonview();
 		lu.addnewleaveencashment();
 		Thread.sleep(1000);
-		lu.selectmonth("Aug/2018");
-		Thread.sleep(500);
-		lu.selectleave("Earned Leave");
+		lu.selectmonth("Jan/2019");
 		Thread.sleep(1000);
-		lu.enternoofleaves("2");
+		lu.selectleave("Casual Leave");
 		Thread.sleep(1000);
+		//lu.enternoofleaves("2");
+		//Thread.sleep(1000);
 		lu.enterunitrate("500");
-		Thread.sleep(500);
-		lu.checkshowinsalary();
-		Thread.sleep(500);	
+		Thread.sleep(2000);
+		lu.selectmodeofpayment("Cheque");
+		Thread.sleep(2000);
+		lu.selectbank("State Bank of India");
+		Thread.sleep(2000);
 		lu.clickonsave();
+		Thread.sleep(2000);
 		String s=lu.getMessage();
 		Assert.assertEquals(s, "Leave encashment successfully created.");
+		lu.exitFullscreen();
+		Thread.sleep(2000);
 	}
 	
-	@Test(priority=1)
+	@Test(priority=2)
 	public void EditLeaveEncashment_SC_419() throws Exception{
 		EditLeaveEncashment lu=new EditLeaveEncashment(driver);
 		lu.clickonleave();
 		lu.clickonleaveencashment();
+		Thread.sleep(2000);
+		lu.resizeWindow();
+		Thread.sleep(2000);
 		lu.clickonfilter();
 		Thread.sleep(2000);
 		lu.clickonload();
 		Thread.sleep(3000);
 		lu.clickonview();
+		Thread.sleep(3000);
 		lu.clickonedit();
+		Thread.sleep(3000);
 		lu.selectmodeofpayment("Cash");
+		Thread.sleep(3000);
 		lu.clickonupdate();
+		Thread.sleep(3000);
 		String s=lu.getMessage();
 		Assert.assertEquals(s, "Leave encashment successfully updated.");
+		Thread.sleep(3000);
+		lu.exitFullscreen();
 	}
 	
-	@Test(priority=2)
+	@Test(priority=3)
 	public void DeleteLeaveEncashment_SC_420() throws Exception{
 		DeleteLeaveEncashment lu=new DeleteLeaveEncashment(driver);
 		lu.clickonleave();
 		lu.clickonleaveencashment();
 		lu.clickonfilter();
 		Thread.sleep(2000);
+		lu.resizeWindow();
+		Thread.sleep(2000);
 		lu.clickonload();
 		Thread.sleep(3000);
 		lu.clickonview();
+		Thread.sleep(3000);
 		lu.clickondelete();
+		Thread.sleep(3000);
 		lu.switchToPopUpAndAccept(driver);
+		Thread.sleep(3000);
 		String s=lu.getMessage();
 		Assert.assertEquals(s, "Leave encashment successfully deleted.");
-	}*/
-	@Test(priority=3)
+		Thread.sleep(2000);
+		lu.exitFullscreen();
+		Thread.sleep(2000);
+	}
+	
+	@Test(priority=4)
+	public void CheckifLeaveLeaveEncashmentGeneralLinkEmployeeMasterredirectstoEmployeeMaster_SC_485() throws Exception{
+		CheckifLeaveLeaveEncashmentGeneralLinkEmployeeMasterredirectstoEmployeeMaster la=new CheckifLeaveLeaveEncashmentGeneralLinkEmployeeMasterredirectstoEmployeeMaster(driver);
+		la.clickonleave();
+		la.clickonleaveencashment();
+	//	la.clickongenerallinks();
+		la.clickonemployeemaster();
+		Thread.sleep(2000);
+		la.addnewemployee();
+		la.enterEmployeeid("ABC7208");
+		la.enterEmployeeref("Ref-"+Utility.getRandNum(200, 300));
+		la.enterEmployeename("Shyam");
+		la.enterEmployeefather("Suresh");
+		la.selectDateofBirth("06 June 1995");
+		la.selectGender("Male");
+		la.selectMaritalStatus("Single");
+		la.selectDateofJoining("06 June 2018");
+		Thread.sleep(2000);
+		la.clickPresentAddress();
+		la.selectState("Maharashtra");
+		la.selectclassificationdetail();
+		la.selectsalstructure("Structure");
+		la.selectbranch("default");
+		la.selectattendancestructure("Karnataka");
+		la.selectbank("CASH");
+		la.selectleavepolicy("Default");
+		la.createemployee();
+		String s=la.getMessage();
+ 		Assert.assertEquals(s, "Employee successfully created");
+ 		Thread.sleep(2000);
+ 		la.resizeWindow();
+ 		la.clickfilteremployee();
+ 		Thread.sleep(2000);
+ 		la.clickonload();
+		Thread.sleep(2000);
+ 		la.clickdelete();
+ 		la.switchToPopUpAndAccept(driver);
+ 		la.exitFullscreen();
+	}
+	
+	/*@Test(priority=3)
 	public void AddNewLeaveEncashmentwithContributionApplicableBasedonAmount_SC_481() throws Exception{
 		AddNewLeaveEncashmentwithContributionApplicableBasedonAmount lu=new AddNewLeaveEncashmentwithContributionApplicableBasedonAmount(driver);
 		lu.clickonleave();
@@ -190,7 +321,7 @@ public class LeaveEncashment extends BaseTest{
 		lu.clickonupdate();
 		String s=lu.getMessage();
 		Assert.assertEquals(s, "Leave encashment successfully updated.");
-	}
+	}*/
 	
 	
 	/*@Test(priority=1)
@@ -306,32 +437,7 @@ public class LeaveEncashment extends BaseTest{
 		String s=lu.getMessage();
 		Assert.assertEquals(s, "Leave encashment successfully created.");
 	}
-	@Test(priority=5)
-	public void AddNewLeaveEncashmentModeofPaymentCheque_SC_418() throws Exception{
-		AddNewLeaveEncashmentModeofPaymentCheque lu=new AddNewLeaveEncashmentModeofPaymentCheque(driver);
-		lu.clickonleave();
-		lu.clickonleaveencashment();
-		lu.clickonfilter();
-		Thread.sleep(2000);
-		lu.clickonload();
-		Thread.sleep(3000);
-		lu.clickonview();
-		lu.addnewleaveencashment();
-		Thread.sleep(1000);
-		lu.selectmonth("Aug/2018");
-		Thread.sleep(1000);
-		lu.selectleave("Earned Leave");
-		Thread.sleep(1000);
-		lu.enternoofleaves("2");
-		Thread.sleep(1000);
-		lu.enterunitrate("500");
-		Thread.sleep(500);
-		lu.selectmodeofpayment("Cheque");
-		lu.selectbank("State Bank of India");
-		lu.clickonsave();
-		String s=lu.getMessage();
-		Assert.assertEquals(s, "Leave encashment successfully created.");
-	}
+	
 	
 	@Test(priority=6)
 	public void AddNewLeaveEncashmentModeofPaymentDD_SC_479() throws Exception{
@@ -385,41 +491,5 @@ public class LeaveEncashment extends BaseTest{
 		lu.clickonsave();
 		String s=lu.getMessage();
 		Assert.assertEquals(s, "Leave encashment successfully created.");
-	}
-	
-	
-	
-	
-	
-	@Test(priority=14)
-	public void CheckifLeaveLeaveEncashmentGeneralLinkEmployeeMasterredirectstoEmployeeMaster_SC_485() throws Exception{
-		CheckifLeaveLeaveEncashmentGeneralLinkEmployeeMasterredirectstoEmployeeMaster la=new CheckifLeaveLeaveEncashmentGeneralLinkEmployeeMasterredirectstoEmployeeMaster(driver);
-		la.clickonleave();
-		la.clickonleaveencashment();
-	//	la.clickongenerallinks();
-		la.clickonemployeemaster();
-		Thread.sleep(2000);
-		la.addnewemployee();
-		la.enterEmployeeid("ABC7208");
-		la.enterEmployeeref("ref-7208");
-		la.enterEmployeename("Shyam");
-		la.enterEmployeefather("Suresh");
-		la.selectDateofBirth("06 June 1995");
-		la.selectGender("Male");
-		la.selectMaritalStatus("Single");
-		la.selectDateofJoining("06 June 2018");
-		Thread.sleep(500);
-		la.clickPresentAddress();
-		la.selectState("Maharashtra");
-		la.selectclassificationdetail();
-		la.selectsalstructure("Structure");
-		la.selectbranch("Chennai");
-		la.selectattendancestructure("Karnataka");
-		la.selectbank("CASH");
-		la.selectleavepolicy("PolicyNo1");
-		la.createemployee();
-		String s=la.getMessage();
- 		Assert.assertEquals(s, "Employee successfully created");
-	}
-	}*/
+	}*/	
 }
