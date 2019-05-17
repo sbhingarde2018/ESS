@@ -11,7 +11,7 @@ public class AddNewAttendanceIntegrationConfiguration extends BasePage{
 	
 	@FindBy(id="leave")
 	WebElement Leave;
-	@FindBy(xpath="//*[@id='menu']/li[5]/div/div/ul/li[6]/a")
+	@FindBy(xpath="//*[@id='menu']/li[5]/div/div/ul/li[5]/a")
 	WebElement AttendanceIntegration;
 	@FindBy(xpath="//*[@id='attendance-format-list']/form/div[2]/span/a")
 	WebElement AddNewAttendanceIntegration;

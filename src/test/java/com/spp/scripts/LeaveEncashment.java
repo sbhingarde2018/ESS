@@ -24,7 +24,7 @@ import com.spp.pages.UpdateLeaveEncashmentBasedonPercentagetoRemovevalueandInser
 
 public class LeaveEncashment extends BaseTest{
 	
-	/*@Test(priority=0)
+	@Test(priority=0)
 	public void LeaveEncashmentLumpsumUnitRate_SC_113() throws Exception{
 		LeaveEncashmentLumpsumUnitRate lu=new LeaveEncashmentLumpsumUnitRate(driver);
 		lu.clickonleave();
@@ -522,7 +522,7 @@ public class LeaveEncashment extends BaseTest{
  		Thread.sleep(2000);
  		la.exitFullscreen();
  		Thread.sleep(2000);
-	}*/
+	}
 	
 	@Test(priority=9)
 	public void AddNewLeaveEncashmentModeofPaymentDD_SC_479() throws Exception{

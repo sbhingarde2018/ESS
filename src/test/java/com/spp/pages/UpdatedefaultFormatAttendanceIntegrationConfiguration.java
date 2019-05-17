@@ -11,7 +11,7 @@ public class UpdatedefaultFormatAttendanceIntegrationConfiguration extends BaseP
 	
 	@FindBy(id="leave")
 	WebElement Leave;
-	@FindBy(xpath="//*[@id='menu']/li[5]/div/div/ul/li[6]/a")
+	@FindBy(xpath="//*[@id='menu']/li[5]/div/div/ul/li[5]/a")
 	WebElement AttendanceIntegration;
 	@FindBy(xpath="//*[@id=\"attendance_foramts\"]/tbody/tr[2]/td[3]/input")
 	WebElement DefaultBtn;

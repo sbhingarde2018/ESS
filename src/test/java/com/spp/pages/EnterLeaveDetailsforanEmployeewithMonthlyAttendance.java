@@ -10,7 +10,7 @@ import com.spp.common.BasePage;
 public class EnterLeaveDetailsforanEmployeewithMonthlyAttendance extends BasePage{
 	@FindBy(id="leave")
 	WebElement ClickOnLeave;
-	@FindBy(xpath="//*[@id='menu']/li[5]/div/div/ul/li[5]/a")
+	@FindBy(xpath="//*[@id='menu']/li[5]/div/div/ul/li[4]/a")
 	WebElement ClickOnMonthlyAttendance;
 	@FindBy(id="paymonth_id")
 	WebElement SelectPaymonth;
