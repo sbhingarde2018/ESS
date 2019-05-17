@@ -14,9 +14,9 @@ public class AddNewLeaveEncashmentwithContributionApplicableBasedonPercentage ex
 	WebElement ClickOnLeaveEncashment;
 	@FindBy(id="filter_head")
 	WebElement ClickOnFilter;
-	@FindBy(xpath="//button[text()='LOAD']")
+	@FindBy(xpath="//*[@id='bf_form']/div[10]/button[1]")
 	WebElement ClickOnLoad;
-	@FindBy(xpath="//*[@id=\"dt_leave_encashment\"]/tbody/tr/td[contains(text(),'Ankit')]/parent::tr/td[3]/a")
+	@FindBy(xpath="//*[@id='dt_leave_encashment']/tbody/tr/td[contains(text(),'Raj')]/parent::tr/td[3]/a")
 	WebElement ClickOnView;
 	@FindBy(xpath="//a[text()='Add New Leave Encashment']")
 	WebElement AddNewLeaveEncashment;
@@ -38,12 +38,22 @@ public class AddNewLeaveEncashmentwithContributionApplicableBasedonPercentage ex
 	WebElement SelectSalaryHead;
 	@FindBy(id="amount")
 	WebElement EnterAmount;
-	@FindBy(css="[name=button][type=button]")
+	@FindBy(xpath="//button[text()='Insert']")
 	WebElement ClickOnInsert;
 	@FindBy(xpath="//*[@id=\"new_leave_encashment\"]/table/tbody/tr[13]/td/input")
 	WebElement ClickOnSave;
 	@FindBy(xpath="//strong[text()='Leave encashment successfully created.']")
 	WebElement SuccessfulMessage;
+	@FindBy(id="salary")
+	WebElement Salary;
+	@FindBy(xpath="//*[@id='menu']/li[6]/div/div[3]/ul/li[2]/a")
+	WebElement SalaryProcessList;
+	@FindBy(xpath="//*[@id='main']/div[2]/nav/ul/li[2]/a/span")
+	WebElement SalaryReviewDetailView;
+	@FindBy(xpath = "//*[@id='salary_review']/tbody/tr/td[contains(text(),'Feb/2019')]/parent::tr/td/a")
+	WebElement SalaryProcessListEdit;
+	
+	
 	public AddNewLeaveEncashmentwithContributionApplicableBasedonPercentage(WebDriver driver) {
 		super(driver);
 		PageFactory.initElements(driver, this);
@@ -103,5 +113,17 @@ public class AddNewLeaveEncashmentwithContributionApplicableBasedonPercentage ex
 	}
 	public String getMessage() {
 		return SuccessfulMessage.getText();
+	}
+	public void clickonSalary() {
+		Salary.click();
+	}
+	public void clickonSalaryProcessList() {
+		SalaryProcessList.click();
+	}
+	public void editSalaryProcessList() {
+		SalaryProcessListEdit.click();
+	}
+	public void clickSalaryReviewDetailView() {
+		SalaryReviewDetailView.click();
 	}
 }

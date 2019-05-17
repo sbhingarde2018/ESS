@@ -14,13 +14,13 @@ public class UpdateLeaveEncashmentBasedonAmounttoRemovevalueandInsertvalue exten
 	WebElement ClickOnLeaveEncashment;
 	@FindBy(id="filter_head")
 	WebElement ClickOnFilter;
-	@FindBy(xpath="//button[text()='LOAD']")
+	@FindBy(xpath="//*[@id='bf_form']/div[10]/button[1]")
 	WebElement ClickOnLoad;
-	@FindBy(xpath="//*[@id=\"dt_leave_encashment\"]/tbody/tr/td[contains(text(),'Ankit')]/parent::tr/td[3]/a")
+	@FindBy(xpath="//*[@id='dt_leave_encashment']/tbody/tr/td[contains(text(),'Raj')]/parent::tr/td[3]/a")
 	WebElement ClickOnView;
-	@FindBy(xpath="//*[@id=\"employee_leaves_encashed\"]/table/tbody/tr[1]/td[7]/a")
+	@FindBy(xpath="//*[@id='employee_leaves_encashed']/table/tbody/tr/td[contains(text(),'Jan/2019')]/parent::tr/td[7]/a")
 	WebElement ClickOnEdit;
-	@FindBy(xpath="//*[@id=\"contribution_fields\"]/table/tbody/tr/td[1]/table/tbody/tr[6]/td[2]/button[1]")
+	@FindBy(xpath="//button[text()='Remove']")
 	WebElement ClickOnRemove;
 	@FindBy(id="leave_encashment_based_on_1")
 	WebElement CheckBasedOnAmount;
@@ -28,12 +28,23 @@ public class UpdateLeaveEncashmentBasedonAmounttoRemovevalueandInsertvalue exten
 	WebElement SelectSalaryHead;
 	@FindBy(id="amount")
 	WebElement EnterAmount;
-	@FindBy(css="[name=button][type=button]")
+	@FindBy(xpath="//button[text()='Insert']")
 	WebElement ClickOnInsert;
 	@FindBy(xpath="//strong[text()='Leave encashment successfully updated.']")
 	WebElement SuccessfulMessage;
 	@FindBy(css="input[name=commit][type=submit]")
 	WebElement ClickOnUpdate;
+	@FindBy(id="salary")
+	WebElement Salary;
+	@FindBy(xpath="//*[@id='menu']/li[6]/div/div[3]/ul/li[2]/a")
+	WebElement SalaryProcessList;
+	@FindBy(xpath="//*[@id='main']/div[2]/nav/ul/li[2]/a/span")
+	WebElement SalaryReviewDetailView;
+	@FindBy(xpath = "//*[@id='salary_review']/tbody/tr/td[contains(text(),'Jan/2019')]/parent::tr/td/a")
+	WebElement SalaryProcessListEdit;
+	@FindBy(xpath="//*[@id='employee_leaves_encashed']/table/tbody/tr/td[contains(text(),'Casual Leave')]/parent::tr/td/a/img")
+	WebElement EncashmentDeleteBtn;
+	
 	public UpdateLeaveEncashmentBasedonAmounttoRemovevalueandInsertvalue(WebDriver driver) {
 		super(driver);
 		PageFactory.initElements(driver, this);
@@ -76,5 +87,20 @@ public class UpdateLeaveEncashmentBasedonAmounttoRemovevalueandInsertvalue exten
 	}
 	public void clickonupdate() {
 		ClickOnUpdate.click();
+	}
+	public void clickonSalary() {
+		Salary.click();
+	}
+	public void clickonSalaryProcessList() {
+		SalaryProcessList.click();
+	}
+	public void editSalaryProcessList() {
+		SalaryProcessListEdit.click();
+	}
+	public void clickSalaryReviewDetailView() {
+		SalaryReviewDetailView.click();
+	}
+	public void deleteEncashment() {
+		EncashmentDeleteBtn.click();
 	}
 }

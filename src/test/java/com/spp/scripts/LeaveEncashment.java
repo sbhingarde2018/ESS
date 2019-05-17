@@ -89,7 +89,7 @@ public class LeaveEncashment extends BaseTest{
 		Thread.sleep(2000);
 		lu.exitFullscreen();
 		Thread.sleep(2000);
-	}*/
+	}
 	
 	@Test(priority=1)
 	public void LeaveencashmentUnitratebasedonFormula_SC_114() throws Exception{
@@ -386,7 +386,7 @@ public class LeaveEncashment extends BaseTest{
 		Thread.sleep(4000);
 	}
 	
-	/*@Test(priority=5)
+	@Test(priority=5)
 	public void AddNewLeaveEncashmentModeofPaymentCheque_SC_418() throws Exception{
 		AddNewLeaveEncashmentModeofPaymentCheque lu=new AddNewLeaveEncashmentModeofPaymentCheque(driver);
 		lu.clickonleave();
@@ -524,172 +524,273 @@ public class LeaveEncashment extends BaseTest{
  		Thread.sleep(2000);
 	}*/
 	
-	
-	
-	/*@Test(priority=5)
-	public void AddNewLeaveEncashmentwithContributionApplicableBasedonAmount_SC_481() throws Exception{
-		AddNewLeaveEncashmentwithContributionApplicableBasedonAmount lu=new AddNewLeaveEncashmentwithContributionApplicableBasedonAmount(driver);
-		lu.clickonleave();
-		lu.clickonleaveencashment();
-		lu.clickonfilter();
-		Thread.sleep(2000);
-		lu.clickonload();
-		Thread.sleep(3000);
-		lu.clickonview();
-		lu.addnewleaveencashment();
-		Thread.sleep(1000);
-		lu.selectmonth("Aug/2018");
-		Thread.sleep(500);
-		lu.selectleave("Earned Leave");
-		Thread.sleep(1000);
-		lu.enternoofleaves("2");
-		Thread.sleep(1000);
-		lu.enterunitrate("500");
-		Thread.sleep(500);
-		lu.checkshowinsalary();
-		lu.checkcontribution();
-		lu.selectsalaryhead("Basic");
-		lu.enteramount("1000");
-		lu.clickoninsert();
-		Thread.sleep(500);
-		lu.clickonsave();
-		String s=lu.getMessage();
-		Assert.assertEquals(s, "Leave encashment successfully created.");
-	}
-	
-	
-	@Test(priority=4)
-	public void AddNewLeaveEncashmentwithContributionApplicableBasedonPercentage_SC_482() throws Exception{
-		AddNewLeaveEncashmentwithContributionApplicableBasedonPercentage lu=new AddNewLeaveEncashmentwithContributionApplicableBasedonPercentage(driver);
-		lu.clickonleave();
-		lu.clickonleaveencashment();
-		lu.clickonfilter();
-		Thread.sleep(2000);
-		lu.clickonload();
-		Thread.sleep(3000);
-		lu.clickonview();
-		lu.addnewleaveencashment();
-		Thread.sleep(1000);
-		lu.selectmonth("Aug/2018");
-		Thread.sleep(500);
-		lu.selectleave("Earned Leave");
-		Thread.sleep(1000);
-		lu.enternoofleaves("1");
-		Thread.sleep(1000);
-		lu.enterunitrate("120");
-		Thread.sleep(500);
-		lu.checkshowinsalary();
-		lu.checkcontribution();
-		lu.checkbasedonpercent();
-		lu.selectsalaryhead("Basic");
-		lu.enteramount("100");
-		lu.clickoninsert();
-		Thread.sleep(500);
-		lu.clickonsave();
-		String s=lu.getMessage();
-		Assert.assertEquals(s, "Leave encashment successfully created.");
-	}
-	@Test(priority=5)
-	public void UpdateLeaveEncashmentBasedonAmounttoRemovevalueandInsertvalue_SC_483() throws Exception{
-		UpdateLeaveEncashmentBasedonAmounttoRemovevalueandInsertvalue lu=new UpdateLeaveEncashmentBasedonAmounttoRemovevalueandInsertvalue(driver);
-		lu.clickonleave();
-		lu.clickonleaveencashment();
-		lu.clickonfilter();
-		Thread.sleep(2000);
-		lu.clickonload();
-		Thread.sleep(3000);
-		lu.clickonview();
-		lu.clickonedit();
-		lu.clickonremove();
-		lu.checkbasedonamount();
-		Thread.sleep(2000);
-		lu.selectsalaryhead("Dearness Allowance");
-		lu.enteramount("2500");
-		lu.clickoninsert();
-		Thread.sleep(500);
-		lu.clickonupdate();
-		String s=lu.getMessage();
-		Assert.assertEquals(s, "Leave encashment successfully updated.");
-	}
-	
-	@Test(priority=6)
-	public void UpdateLeaveEncashmentBasedonPercentagetoRemovevalueandInsertvalue_SC_484() throws Exception{
-		UpdateLeaveEncashmentBasedonPercentagetoRemovevalueandInsertvalue lu=new UpdateLeaveEncashmentBasedonPercentagetoRemovevalueandInsertvalue(driver);
-		lu.clickonleave();
-		lu.clickonleaveencashment();
-		lu.clickonfilter();
-		Thread.sleep(2000);
-		lu.clickonload();
-		Thread.sleep(3000);
-		lu.clickonview();
-		lu.clickonedit();
-		lu.clickonremove();
-		lu.checkbasedonpercent();
-		Thread.sleep(2000);
-		lu.selectsalaryhead("Dearness Allowance");
-		lu.enteramount("100");
-		lu.clickoninsert();
-		Thread.sleep(500);
-		lu.clickonupdate();
-		String s=lu.getMessage();
-		Assert.assertEquals(s, "Leave encashment successfully updated.");
-	}*/
-	
-	
-	/*
-	
-	
-	@Test(priority=6)
+	@Test(priority=9)
 	public void AddNewLeaveEncashmentModeofPaymentDD_SC_479() throws Exception{
 		AddNewLeaveEncashmentModeofPaymentDD lu=new AddNewLeaveEncashmentModeofPaymentDD(driver);
 		lu.clickonleave();
 		lu.clickonleaveencashment();
 		lu.clickonfilter();
 		Thread.sleep(2000);
+		lu.resizeWindow();
 		lu.clickonload();
-		Thread.sleep(3000);
+		Thread.sleep(5000);
 		lu.clickonview();
 		lu.addnewleaveencashment();
 		Thread.sleep(1000);
-		lu.selectmonth("Aug/2018");
+		lu.selectmonth("Jan/2019");
 		Thread.sleep(1000);
-		lu.selectleave("Earned Leave");
+		lu.selectleave("Casual Leave");
 		Thread.sleep(1000);
-		lu.enternoofleaves("2");
-		Thread.sleep(1000);
-		lu.enterunitrate("500");
+        lu.enterunitrate("100");
 		Thread.sleep(500);
 		lu.selectmodeofpayment("DD");
 		lu.selectbank("State Bank of India");
 		lu.clickonsave();
 		String s=lu.getMessage();
 		Assert.assertEquals(s, "Leave encashment successfully created.");
-	}
+		Thread.sleep(2000);
+		lu.ClickSalary();
+		lu.ClickSalaryProcessList();
+		lu.ClickEditSalaryList();
+		Thread.sleep(2000);
+		lu.ClickDetailView();
+		lu.clickonleave();
+		lu.clickonleaveencashment();
+		lu.clickonfilter();
+		Thread.sleep(4000);
+		lu.clickonload();
+		Thread.sleep(5000);
+		lu.exitFullscreen();
+		lu.clickonview();
+		Thread.sleep(2000);
+		lu.ClickDelete();
+		lu.switchToPopUpAndAccept(driver);
+		}
 	
-	@Test(priority=7)
+	@Test(priority=10)
 	public void AddNewLeaveEncashmentInFFS_SC_480() throws Exception{
 		AddNewLeaveEncashmentInFFS lu=new AddNewLeaveEncashmentInFFS(driver);
 		lu.clickonleave();
 		lu.clickonleaveencashment();
 		lu.clickonfilter();
 		Thread.sleep(2000);
+		lu.resizeWindow();
 		lu.clickonload();
 		Thread.sleep(3000);
 		lu.clickonview();
 		lu.addnewleaveencashment();
 		Thread.sleep(1000);
-		lu.selectmonth("Aug/2018");
+		lu.selectmonth("Jan/2019");
 		Thread.sleep(1000);
-		lu.selectleave("Earned Leave");
+		lu.selectleave("Casual Leave");
 		Thread.sleep(1000);
-		lu.enternoofleaves("2");
-		Thread.sleep(1000);
-		lu.enterunitrate("500");
+		lu.enterunitrate("100");
 		Thread.sleep(500);
 		lu.checkffs();
 		Thread.sleep(2000);
 		lu.clickonsave();
 		String s=lu.getMessage();
 		Assert.assertEquals(s, "Leave encashment successfully created.");
-	}*/	
+		Thread.sleep(2000);
+		lu.ClickSalary();
+		lu.ClickSalaryProcessList();
+		lu.ClickEditSalaryList();
+		Thread.sleep(2000);
+		lu.ClickDetailView();
+		lu.clickonleave();
+		lu.clickonleaveencashment();
+		lu.clickonfilter();
+		Thread.sleep(4000);
+		lu.clickonload();
+		Thread.sleep(5000);
+		lu.exitFullscreen();
+		lu.clickonview();
+		Thread.sleep(2000);
+		lu.ClickDelete();
+		lu.switchToPopUpAndAccept(driver);
+	}
+	
+	@Test(priority=11)
+	public void AddNewLeaveEncashmentwithContributionApplicableBasedonAmount_SC_481() throws Exception{
+		AddNewLeaveEncashmentwithContributionApplicableBasedonAmount lu=new AddNewLeaveEncashmentwithContributionApplicableBasedonAmount(driver);
+		lu.clickonleave();
+		lu.clickonleaveencashment();
+		lu.clickonfilter();
+		Thread.sleep(2000);
+		lu.resizeWindow();
+		lu.clickonload();
+		Thread.sleep(5000);
+		lu.clickonview();
+		lu.exitFullscreen();
+		lu.addnewleaveencashment();
+		Thread.sleep(1000);
+		lu.selectmonth("Jan/2019");
+		Thread.sleep(500);
+		lu.selectleave("Casual Leave");
+		Thread.sleep(1000);
+		lu.enterunitrate("100");
+		Thread.sleep(1000);
+		lu.checkshowinsalary();
+		lu.checkcontribution();
+		lu.selectsalaryhead("Basic");
+		lu.enteramount("100");
+		lu.clickoninsert();
+		Thread.sleep(1000);
+		lu.clickonsave();
+		String s=lu.getMessage();
+		Assert.assertEquals(s, "Leave encashment successfully created.");
+		Thread.sleep(2000);
+		lu.ClickSalary();
+		lu.ClickSalaryProcessList();
+		lu.ClickEditSalaryList();
+		Thread.sleep(2000);
+		lu.ClickDetailView();
+		Thread.sleep(2000);
+		}
+	
+	@Test(priority=12)
+	public void UpdateLeaveEncashmentBasedonAmounttoRemovevalueandInsertvalue_SC_483() throws Exception{
+		UpdateLeaveEncashmentBasedonAmounttoRemovevalueandInsertvalue lu=new UpdateLeaveEncashmentBasedonAmounttoRemovevalueandInsertvalue(driver);
+		lu.clickonleave();
+		lu.clickonleaveencashment();
+		lu.resizeWindow();
+		Thread.sleep(2000);
+		lu.clickonfilter();
+		Thread.sleep(2000);
+		lu.clickonload();
+		Thread.sleep(2000);
+		lu.clickonview();
+		Thread.sleep(2000);
+		lu.clickonedit();
+		Thread.sleep(2000);
+		lu.clickonremove();
+		lu.checkbasedonamount();
+		Thread.sleep(2000);
+		lu.selectsalaryhead("Earning");
+		lu.enteramount("100");
+		lu.clickoninsert();
+		Thread.sleep(1000);
+		lu.clickonupdate();
+		String s=lu.getMessage();
+		Assert.assertEquals(s, "Leave encashment successfully updated.");
+		Thread.sleep(2000);
+		lu.clickonSalary();
+		lu.clickonSalaryProcessList();
+		Thread.sleep(1000);
+		lu.editSalaryProcessList();
+		Thread.sleep(4000);
+		lu.clickSalaryReviewDetailView();
+		Thread.sleep(2000);
+		lu.clickonleave();
+		lu.clickonleaveencashment();
+		lu.clickonfilter();
+		Thread.sleep(2000);
+		lu.clickonload();
+		Thread.sleep(2000);
+		lu.clickonview();
+		Thread.sleep(2000);
+		lu.deleteEncashment();
+		Thread.sleep(1000);
+		lu.switchToPopUpAndAccept(driver);
+		Thread.sleep(1000);
+		lu.exitFullscreen();
+	}
+	
+	@Test(priority=13)
+	public void AddNewLeaveEncashmentwithContributionApplicableBasedonPercentage_SC_482() throws Exception{
+		AddNewLeaveEncashmentwithContributionApplicableBasedonPercentage lu=new AddNewLeaveEncashmentwithContributionApplicableBasedonPercentage(driver);
+		lu.clickonleave();
+		lu.clickonleaveencashment();
+		lu.clickonfilter();
+		lu.resizeWindow();
+		Thread.sleep(2000);
+		lu.clickonload();
+		Thread.sleep(2000);
+		lu.clickonview();
+		lu.addnewleaveencashment();
+		Thread.sleep(2000);
+		lu.selectmonth("Feb/2019");
+		Thread.sleep(2000);
+		lu.selectleave("Casual Leave");
+		Thread.sleep(2000);
+		//lu.enternoofleaves("1");
+		//Thread.sleep(1000);
+		lu.enterunitrate("120");
+		Thread.sleep(1000);
+		lu.checkshowinsalary();
+		Thread.sleep(1000);
+		lu.checkcontribution();
+		lu.checkbasedonpercent();
+		Thread.sleep(1000);
+		lu.selectsalaryhead("Basic");
+		lu.enteramount("100");
+		Thread.sleep(1000);
+		lu.clickoninsert();
+		Thread.sleep(1000);
+		lu.clickonsave();
+		Thread.sleep(1000);
+		String s=lu.getMessage();
+		Assert.assertEquals(s, "Leave encashment successfully created.");
+		Thread.sleep(2000);
+		lu.clickonSalary();
+		lu.clickonSalaryProcessList();
+		Thread.sleep(1000);
+		Thread.sleep(4000);
+		lu.editSalaryProcessList();
+		Thread.sleep(4000);
+		lu.clickSalaryReviewDetailView();
+		Thread.sleep(2000);
+		lu.exitFullscreen();
+	}
+	
+	@Test(priority=14)
+	public void UpdateLeaveEncashmentBasedonPercentagetoRemovevalueandInsertvalue_SC_484() throws Exception{
+		UpdateLeaveEncashmentBasedonPercentagetoRemovevalueandInsertvalue lu=new UpdateLeaveEncashmentBasedonPercentagetoRemovevalueandInsertvalue(driver);
+		lu.clickonleave();
+		lu.clickonleaveencashment();
+		lu.resizeWindow();
+		Thread.sleep(2000);
+		lu.clickonfilter();
+		Thread.sleep(2000);
+		lu.clickonload();
+		Thread.sleep(2000);
+		lu.clickonview();
+		Thread.sleep(2000);
+		lu.clickonedit();
+		Thread.sleep(2000);
+		lu.clickonremove();
+		Thread.sleep(2000);
+		lu.checkbasedonpercent();
+		Thread.sleep(2000);
+		lu.selectsalaryhead("Earning");
+		lu.enteramount("100");
+		Thread.sleep(2000);
+		lu.clickoninsert();
+		Thread.sleep(1000);
+		lu.clickonupdate();
+		String s=lu.getMessage();
+		Assert.assertEquals(s, "Leave encashment successfully updated.");
+		Thread.sleep(2000);
+		lu.clickonSalary();
+		lu.clickonSalaryProcessList();
+		Thread.sleep(1000);
+		Thread.sleep(4000);
+		lu.editSalaryProcessList();
+		Thread.sleep(4000);
+		lu.clickSalaryReviewDetailView();
+		Thread.sleep(2000);
+		lu.clickonleave();
+		lu.clickonleaveencashment();
+		lu.clickonfilter();
+		Thread.sleep(2000);
+		lu.clickonload();
+		Thread.sleep(2000);
+		lu.clickonview();
+		Thread.sleep(2000);
+		lu.deleteEncashment();
+		Thread.sleep(1000);
+		lu.switchToPopUpAndAccept(driver);
+		Thread.sleep(1000);
+		lu.exitFullscreen();
+	}
 }
