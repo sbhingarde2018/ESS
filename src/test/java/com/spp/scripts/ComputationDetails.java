@@ -3,40 +3,45 @@ package com.spp.scripts;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import com.spp.common.BaseTest;
-import com.spp.generics.Utility;
-import com.spp.pages.EditAllowancesAllowanceForRenderingServicesOutsideIndia;
-import com.spp.pages.EditAllowancesAllowanceReceivedByEmployeeOfUNO;
-import com.spp.pages.EditAllowancesAllowanceToHighCourtJudge;
+//import com.spp.generics.Utility;
+//import com.spp.pages.EditAllowancesAllowanceForRenderingServicesOutsideIndia;
+//import com.spp.pages.EditAllowancesAllowanceReceivedByEmployeeOfUNO;
+//import com.spp.pages.EditAllowancesAllowanceToHighCourtJudge;
 import com.spp.pages.EditAllowancesAllowanceforTransportEmployees;
-import com.spp.pages.EditAllowancesBorderAreaRemoteAreaAllowance;
+//import com.spp.pages.EditAllowancesBorderAreaRemoteAreaAllowance;
 import com.spp.pages.EditAllowancesChildrenHostelAllowance;
-import com.spp.pages.EditAllowancesCompensatoryFieldAreaAllowance;
-import com.spp.pages.EditAllowancesCompensatoryModifiedFieldAreaAllowance;
+//import com.spp.pages.EditAllowancesCompensatoryFieldAreaAllowance;
+//import com.spp.pages.EditAllowancesCompensatoryModifiedFieldAreaAllowance;
 import com.spp.pages.EditAllowancesConveyanceTransportAllowance;
-import com.spp.pages.EditAllowancesCounterInsurgencyAllowanceGrantedToMembersofArmedForces;
-import com.spp.pages.EditAllowancesDifficultAreaOrDisturbedAreaAllowance;
-import com.spp.pages.EditAllowancesEntertainmentAllowance;
+//import com.spp.pages.EditAllowancesCounterInsurgencyAllowanceGrantedToMembersofArmedForces;
+//import com.spp.pages.EditAllowancesDifficultAreaOrDisturbedAreaAllowance;
+//import com.spp.pages.EditAllowancesEntertainmentAllowance;
 import com.spp.pages.EditAllowancesHighAltitudeAllowance;
-import com.spp.pages.EditAllowancesHighAltitudeAllowanceforarmedforces;
+//import com.spp.pages.EditAllowancesHighAltitudeAllowanceforarmedforces;
 import com.spp.pages.EditAllowancesHouseRentAllowance;
-import com.spp.pages.EditAllowancesIslandDutyAllowance;
-import com.spp.pages.EditAllowancesOtherAllowance;
-import com.spp.pages.EditAllowancesSnowBoundAreaOrAvalancheAllowance;
-import com.spp.pages.EditAllowancesSpecialCompensatoryHighlyActiveFieldAreaAllowance;
+//import com.spp.pages.EditAllowancesIslandDutyAllowance;
+//import com.spp.pages.EditAllowancesOtherAllowance;
+//import com.spp.pages.EditAllowancesSnowBoundAreaOrAvalancheAllowance;
+//import com.spp.pages.EditAllowancesSpecialCompensatoryHighlyActiveFieldAreaAllowance;
 import com.spp.pages.EditAllowancesSpecialCompensatoryHillyAreaAllowance;
-import com.spp.pages.EditAllowancesSumptuaryAllowanceHCSCJudges;
+//import com.spp.pages.EditAllowancesSumptuaryAllowanceHCSCJudges;
 import com.spp.pages.EditAllowancesTribalAreaScheduledAreaAgencyAreaAllowance;
 import com.spp.pages.EditAllowancesUncongenialClimateAllowance;
-import com.spp.pages.EditAllowancesUndergroundAllowance;
+//import com.spp.pages.EditAllowancesUndergroundAllowance;
+//import com.spp.pages.EditAllowancesUserDefined;
 import com.spp.pages.EditMainComponentBasic;
 import com.spp.pages.EditMainComponentsCommisionasaofturnover;
 import com.spp.pages.EditMainComponentsDAFormingpartofsalary;
 import com.spp.pages.EditMainComponentsDANotformingpartofsalary;
-import com.spp.pages.EditnameOtherAllowance;
+//import com.spp.pages.EditnameOtherAllowance;
+//import com.spp.pages.SelectLimitHighAltitudeAllowance;
+//import com.spp.pages.SelectLimitSnowBoundAreaOrAvalancheAllowance;
+//import com.spp.pages.SelectLimitSpecialCompensatoryHillyAreaAllowance;
+//import com.spp.pages.SelectLimitUncongenialClimateAllowance;
 
 
 public class ComputationDetails extends BaseTest {
-	@Test(priority=0)
+	/*@Test(priority=0)
 	public void EditMainComponentBasic_SC_1055() throws Exception{
 		EditMainComponentBasic ab=new EditMainComponentBasic(driver);
 		ab.ClickTDS();
@@ -152,8 +157,8 @@ public class ComputationDetails extends BaseTest {
 		Thread.sleep(2000);
 		ab.ClickAllowances();
 		
-	}
-	/*@Test(priority=5)
+	}*/
+	@Test(priority=5)
 	public void EditAllowancesConveyanceTransportAllowance_SC_1060() throws Exception{
 		EditAllowancesConveyanceTransportAllowance ab=new EditAllowancesConveyanceTransportAllowance(driver);
 		ab.ClickTDS();
@@ -320,7 +325,7 @@ public class ComputationDetails extends BaseTest {
 		Thread.sleep(2000);
 		ab.ClickAllowances();
 	}
-	@Test(priority=12)
+	/*@Test(priority=12)
 	public void EditAllowancesSnowBoundAreaOrAvalancheAllowance_SC_1067() throws Exception{
 		EditAllowancesSnowBoundAreaOrAvalancheAllowance ab=new EditAllowancesSnowBoundAreaOrAvalancheAllowance(driver);
 		ab.ClickTDS();
@@ -335,6 +340,13 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickUpdateBtn();
 		String i=ab.getMessage();
 		Assert.assertEquals(i, "Updated successfully.");
+		Thread.sleep(2000);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickAllowances();
 	}
 	@Test(priority=13)
 	public void EditAllowancesDifficultAreaOrDisturbedAreaAllowance_SC_1068() throws Exception{
@@ -351,6 +363,13 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickUpdateBtn();
 		String i=ab.getMessage();
 		Assert.assertEquals(i, "Updated successfully.");
+		Thread.sleep(2000);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickAllowances();
 	}
 	@Test(priority=14)
 	public void EditAllowancesBorderAreaRemoteAreaAllowance_SC_1069() throws Exception{
@@ -367,6 +386,13 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickUpdateBtn();
 		String i=ab.getMessage();
 		Assert.assertEquals(i, "Updated successfully.");
+		Thread.sleep(2000);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickAllowances();
 	}
 	@Test(priority=15)
 	public void EditAllowancesCompensatoryFieldAreaAllowance_SC_1070() throws Exception{
@@ -383,6 +409,13 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickUpdateBtn();
 		String i=ab.getMessage();
 		Assert.assertEquals(i, "Updated successfully.");
+		Thread.sleep(2000);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickAllowances();
 	}
 	@Test(priority=16)
 	public void EditAllowancesCompensatoryModifiedFieldAreaAllowance_SC_1071() throws Exception{
@@ -399,6 +432,13 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickUpdateBtn();
 		String i=ab.getMessage();
 		Assert.assertEquals(i, "Updated successfully.");
+		Thread.sleep(2000);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickAllowances();
 	}
 	@Test(priority=17)
 	public void EditAllowancesCounterInsurgencyAllowanceGrantedToMembersofArmedForces_SC_1072() throws Exception{
@@ -415,6 +455,13 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickUpdateBtn();
 		String i=ab.getMessage();
 		Assert.assertEquals(i, "Updated successfully.");
+		Thread.sleep(2000);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickAllowances();
 	}
 	@Test(priority=18)
 	public void EditAllowancesUndergroundAllowance_SC_1073() throws Exception{
@@ -431,6 +478,13 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickUpdateBtn();
 		String i=ab.getMessage();
 		Assert.assertEquals(i, "Updated successfully.");
+		Thread.sleep(2000);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickAllowances();
 	}
 	@Test(priority=19)
 	public void EditAllowancesSpecialCompensatoryHighlyActiveFieldAreaAllowance_SC_1074() throws Exception{
@@ -447,6 +501,13 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickUpdateBtn();
 		String i=ab.getMessage();
 		Assert.assertEquals(i, "Updated successfully.");
+		Thread.sleep(2000);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickAllowances();
 	}
 	@Test(priority=20)
 	public void EditAllowancesHighAltitudeAllowanceforarmedforces_SC_1075() throws Exception{
@@ -463,6 +524,13 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickUpdateBtn();
 		String i=ab.getMessage();
 		Assert.assertEquals(i, "Updated successfully.");
+		Thread.sleep(2000);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickAllowances();
 	}
 	@Test(priority=21)
 	public void EditAllowancesIslandDutyAllowance_SC_1076() throws Exception{
@@ -479,6 +547,13 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickUpdateBtn();
 		String i=ab.getMessage();
 		Assert.assertEquals(i, "Updated successfully.");
+		Thread.sleep(2000);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickAllowances();
 	}
 	@Test(priority=22)
 	public void EditAllowancesEntertainmentAllowance_SC_1077() throws Exception{
@@ -495,6 +570,13 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickUpdateBtn();
 		String i=ab.getMessage();
 		Assert.assertEquals(i, "Updated successfully.");
+		Thread.sleep(2000);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickAllowances();
 	}
 	@Test(priority=23)
 	public void EditAllowancesAllowanceForRenderingServicesOutsideIndia_SC_1078() throws Exception{
@@ -511,6 +593,13 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickUpdateBtn();
 		String i=ab.getMessage();
 		Assert.assertEquals(i, "Updated successfully.");
+		Thread.sleep(2000);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickAllowances();
 	}
 	@Test(priority=24)
 	public void EditAllowancesAllowanceToHighCourtJudge_SC_1079() throws Exception{
@@ -527,6 +616,13 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickUpdateBtn();
 		String i=ab.getMessage();
 		Assert.assertEquals(i, "Updated successfully.");
+		Thread.sleep(2000);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickAllowances();
 	}
 	@Test(priority=25)
 	public void EditAllowancesSumptuaryAllowanceHCSCJudges_SC_1080() throws Exception{
@@ -543,6 +639,13 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickUpdateBtn();
 		String i=ab.getMessage();
 		Assert.assertEquals(i, "Updated successfully.");
+		Thread.sleep(2000);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickAllowances();
 		}
 	@Test(priority=26)
 	public void EditAllowancesAllowanceReceivedByEmployeeOfUNO_SC_1081() throws Exception{
@@ -559,6 +662,13 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickUpdateBtn();
 		String i=ab.getMessage();
 		Assert.assertEquals(i, "Updated successfully.");
+		Thread.sleep(2000);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickAllowances();
 		}
 	@Test(priority=26)
 	public void EditAllowancesOtherAllowance_SC_1082() throws Exception{
@@ -575,9 +685,16 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickUpdateBtn();
 		String i=ab.getMessage();
 		Assert.assertEquals(i, "Updated successfully.");
+		Thread.sleep(2000);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickAllowances();
 		}
 	@Test(priority=27)
-	public void EditnameOtherAllowance_Sc_1083() throws Exception{
+	public void EditnameOtherAllowance_SC_1083() throws Exception{
 		EditnameOtherAllowance ab=new EditnameOtherAllowance(driver);
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
@@ -592,5 +709,126 @@ public class ComputationDetails extends BaseTest {
 		Thread.sleep(2000);
 		String i=ab.getMessage();
 		Assert.assertEquals(i, "Updated successfully.");
-		}*/
+		}
+	@Test(priority=28)
+	public void EditAllowancesUserDefined_SC_1084() throws Exception{
+		EditAllowancesUserDefined ab=new EditAllowancesUserDefined(driver);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickAllowances();
+		Thread.sleep(2000);
+		ab.ClickUDAllowanceGiven();
+		ab.EnterEditedValues("20");
+		ab.ClickUpdateBtn();
+		String i=ab.getMessage();
+		Assert.assertEquals(i, "Updated successfully.");
+		Thread.sleep(2000);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickAllowances();
 	}
+	@Test(priority=29)
+	public void SelectLimitSpecialCompensatoryHillyAreaAllowance_SC_1085() throws Exception{
+		SelectLimitSpecialCompensatoryHillyAreaAllowance ab=new SelectLimitSpecialCompensatoryHillyAreaAllowance(driver);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickAllowances();
+		Thread.sleep(2000);
+		ab.ClickHillyareaAllowanceGiven();
+		ab.EnterEditedValues("25");
+		ab.SelectLimit("300");
+		ab.ClickUpdateBtn();
+		String i=ab.getMessage();
+		Assert.assertEquals(i, "Updated successfully.");
+		Thread.sleep(2000);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickAllowances();
+	}
+	@Test(priority=30)
+	public void SelectLimitHighAltitudeAllowance_SC_1087() throws Exception{
+		SelectLimitHighAltitudeAllowance ab=new SelectLimitHighAltitudeAllowance(driver);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickAllowances();
+		Thread.sleep(2000);
+		ab.ClickHighAltitudeAllowanceGiven();
+		ab.EnterEditedValues("25");
+		ab.SelectLimit("300");
+		ab.ClickUpdateBtn();
+		String i=ab.getMessage();
+		Assert.assertEquals(i, "Updated successfully.");
+		Thread.sleep(2000);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickAllowances();
+	}
+	@Test(priority=31)
+	public void SelectLimitUncongenialClimateAllowance_SC_1088() throws Exception{
+		SelectLimitUncongenialClimateAllowance ab=new SelectLimitUncongenialClimateAllowance(driver);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickAllowances();
+		Thread.sleep(2000);
+		ab.ClickUncongenialAllowanceGiven();
+		ab.EnterEditedValues("25");
+		ab.SelectLimit("300");
+		ab.ClickUpdateBtn();
+		String i=ab.getMessage();
+		Assert.assertEquals(i, "Updated successfully.");
+		Thread.sleep(2000);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickAllowances();
+	}
+	@Test(priority=32)
+	public void SelectLimitSnowBoundAreaOrAvalancheAllowance_SC_1089() throws Exception{
+		SelectLimitSnowBoundAreaOrAvalancheAllowance ab=new SelectLimitSnowBoundAreaOrAvalancheAllowance(driver);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickAllowances();
+		Thread.sleep(2000);
+		ab.ClickSnowBoundAllowanceGiven();
+		ab.EnterEditedValues("25");
+		ab.SelectLimit("300");
+		ab.ClickUpdateBtn();
+		String i=ab.getMessage();
+		Assert.assertEquals(i, "Updated successfully.");
+		Thread.sleep(2000);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickAllowances();
+	}
+	@Test(priority=33)
+	public void SelectLimitDifficultAreaOrDisturbedAreaAllowance*/
+}
