@@ -328,7 +328,7 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickDetails();
 		Thread.sleep(2000);
 		ab.ClickAllowances();
-	}
+	}*/
 	@Test(priority=12)
 	public void EditAllowancesSnowBoundAreaOrAvalancheAllowance_SC_1067() throws Exception{
 		EditAllowancesSnowBoundAreaOrAvalancheAllowance ab=new EditAllowancesSnowBoundAreaOrAvalancheAllowance(driver);
@@ -489,8 +489,8 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickDetails();
 		Thread.sleep(2000);
 		ab.ClickAllowances();
-	}*/
-	@Test(priority=19)
+	}
+	/*@Test(priority=19)
 	public void EditAllowancesSpecialCompensatoryHighlyActiveFieldAreaAllowance_SC_1074() throws Exception{
 		EditAllowancesSpecialCompensatoryHighlyActiveFieldAreaAllowance ab=new EditAllowancesSpecialCompensatoryHighlyActiveFieldAreaAllowance(driver);
 		ab.ClickTDS();
