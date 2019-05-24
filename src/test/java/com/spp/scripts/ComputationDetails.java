@@ -3,10 +3,10 @@ package com.spp.scripts;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import com.spp.common.BaseTest;
-//import com.spp.generics.Utility;
-//import com.spp.pages.EditAllowancesAllowanceForRenderingServicesOutsideIndia;
+import com.spp.generics.Utility;
+import com.spp.pages.EditAllowancesAllowanceForRenderingServicesOutsideIndia;
 //import com.spp.pages.EditAllowancesAllowanceReceivedByEmployeeOfUNO;
-//import com.spp.pages.EditAllowancesAllowanceToHighCourtJudge;
+import com.spp.pages.EditAllowancesAllowanceToHighCourtJudge;
 import com.spp.pages.EditAllowancesAllowanceforTransportEmployees;
 import com.spp.pages.EditAllowancesBorderAreaRemoteAreaAllowance;
 import com.spp.pages.EditAllowancesChildrenHostelAllowance;
@@ -15,16 +15,16 @@ import com.spp.pages.EditAllowancesCompensatoryModifiedFieldAreaAllowance;
 import com.spp.pages.EditAllowancesConveyanceTransportAllowance;
 import com.spp.pages.EditAllowancesCounterInsurgencyAllowanceGrantedToMembersofArmedForces;
 import com.spp.pages.EditAllowancesDifficultAreaOrDisturbedAreaAllowance;
-//import com.spp.pages.EditAllowancesEntertainmentAllowance;
+import com.spp.pages.EditAllowancesEntertainmentAllowance;
 import com.spp.pages.EditAllowancesHighAltitudeAllowance;
-//import com.spp.pages.EditAllowancesHighAltitudeAllowanceforarmedforces;
+import com.spp.pages.EditAllowancesHighAltitudeAllowanceforarmedforces;
 import com.spp.pages.EditAllowancesHouseRentAllowance;
-//import com.spp.pages.EditAllowancesIslandDutyAllowance;
+import com.spp.pages.EditAllowancesIslandDutyAllowance;
 //import com.spp.pages.EditAllowancesOtherAllowance;
 import com.spp.pages.EditAllowancesSnowBoundAreaOrAvalancheAllowance;
-//import com.spp.pages.EditAllowancesSpecialCompensatoryHighlyActiveFieldAreaAllowance;
+import com.spp.pages.EditAllowancesSpecialCompensatoryHighlyActiveFieldAreaAllowance;
 import com.spp.pages.EditAllowancesSpecialCompensatoryHillyAreaAllowance;
-//import com.spp.pages.EditAllowancesSumptuaryAllowanceHCSCJudges;
+import com.spp.pages.EditAllowancesSumptuaryAllowanceHCSCJudges;
 import com.spp.pages.EditAllowancesTribalAreaScheduledAreaAgencyAreaAllowance;
 import com.spp.pages.EditAllowancesUncongenialClimateAllowance;
 import com.spp.pages.EditAllowancesUndergroundAllowance;
@@ -328,7 +328,7 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickDetails();
 		Thread.sleep(2000);
 		ab.ClickAllowances();
-	}*/
+	}
 	@Test(priority=12)
 	public void EditAllowancesSnowBoundAreaOrAvalancheAllowance_SC_1067() throws Exception{
 		EditAllowancesSnowBoundAreaOrAvalancheAllowance ab=new EditAllowancesSnowBoundAreaOrAvalancheAllowance(driver);
@@ -489,8 +489,8 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickDetails();
 		Thread.sleep(2000);
 		ab.ClickAllowances();
-	}
-	/*@Test(priority=19)
+	}*/
+	@Test(priority=19)
 	public void EditAllowancesSpecialCompensatoryHighlyActiveFieldAreaAllowance_SC_1074() throws Exception{
 		EditAllowancesSpecialCompensatoryHighlyActiveFieldAreaAllowance ab=new EditAllowancesSpecialCompensatoryHighlyActiveFieldAreaAllowance(driver);
 		ab.ClickTDS();
@@ -651,7 +651,7 @@ public class ComputationDetails extends BaseTest {
 		Thread.sleep(2000);
 		ab.ClickAllowances();
 		}
-	@Test(priority=26)
+	/*@Test(priority=26)
 	public void EditAllowancesAllowanceReceivedByEmployeeOfUNO_SC_1081() throws Exception{
 		EditAllowancesAllowanceReceivedByEmployeeOfUNO ab=new EditAllowancesAllowanceReceivedByEmployeeOfUNO(driver);
 		ab.ClickTDS();
