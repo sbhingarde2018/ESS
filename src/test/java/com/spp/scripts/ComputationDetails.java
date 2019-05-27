@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 import com.spp.common.BaseTest;
 import com.spp.generics.Utility;
 import com.spp.pages.EditAllowancesAllowanceForRenderingServicesOutsideIndia;
-//import com.spp.pages.EditAllowancesAllowanceReceivedByEmployeeOfUNO;
+import com.spp.pages.EditAllowancesAllowanceReceivedByEmployeeOfUNO;
 import com.spp.pages.EditAllowancesAllowanceToHighCourtJudge;
 import com.spp.pages.EditAllowancesAllowanceforTransportEmployees;
 import com.spp.pages.EditAllowancesBorderAreaRemoteAreaAllowance;
@@ -20,7 +20,7 @@ import com.spp.pages.EditAllowancesHighAltitudeAllowance;
 import com.spp.pages.EditAllowancesHighAltitudeAllowanceforarmedforces;
 import com.spp.pages.EditAllowancesHouseRentAllowance;
 import com.spp.pages.EditAllowancesIslandDutyAllowance;
-//import com.spp.pages.EditAllowancesOtherAllowance;
+import com.spp.pages.EditAllowancesOtherAllowance;
 import com.spp.pages.EditAllowancesSnowBoundAreaOrAvalancheAllowance;
 import com.spp.pages.EditAllowancesSpecialCompensatoryHighlyActiveFieldAreaAllowance;
 import com.spp.pages.EditAllowancesSpecialCompensatoryHillyAreaAllowance;
@@ -28,19 +28,19 @@ import com.spp.pages.EditAllowancesSumptuaryAllowanceHCSCJudges;
 import com.spp.pages.EditAllowancesTribalAreaScheduledAreaAgencyAreaAllowance;
 import com.spp.pages.EditAllowancesUncongenialClimateAllowance;
 import com.spp.pages.EditAllowancesUndergroundAllowance;
-//import com.spp.pages.EditAllowancesUserDefined;
+import com.spp.pages.EditAllowancesUserDefined;
 import com.spp.pages.EditMainComponentBasic;
 import com.spp.pages.EditMainComponentsCommisionasaofturnover;
 import com.spp.pages.EditMainComponentsDAFormingpartofsalary;
 import com.spp.pages.EditMainComponentsDANotformingpartofsalary;
 //import com.spp.pages.EditPerquisitesRentFreeAccommodation;
-//import com.spp.pages.EditnameOtherAllowance;
+import com.spp.pages.EditnameOtherAllowance;
 //import com.spp.pages.SelectLimitBorderAreaRemoteAreaAllowance;
 //import com.spp.pages.SelectLimitDifficultAreaOrDisturbedAreaAllowance;
-//import com.spp.pages.SelectLimitHighAltitudeAllowance;
+import com.spp.pages.SelectLimitHighAltitudeAllowance;
 //import com.spp.pages.SelectLimitHighAltitudeAllowanceforarmedforces;
 //import com.spp.pages.SelectLimitSnowBoundAreaOrAvalancheAllowance;
-//import com.spp.pages.SelectLimitSpecialCompensatoryHillyAreaAllowance;
+import com.spp.pages.SelectLimitSpecialCompensatoryHillyAreaAllowance;
 //import com.spp.pages.SelectLimitUncongenialClimateAllowance;
 
 
@@ -328,7 +328,7 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickDetails();
 		Thread.sleep(2000);
 		ab.ClickAllowances();
-	}*/
+	}
 	@Test(priority=12)
 	public void EditAllowancesSnowBoundAreaOrAvalancheAllowance_SC_1067() throws Exception{
 		EditAllowancesSnowBoundAreaOrAvalancheAllowance ab=new EditAllowancesSnowBoundAreaOrAvalancheAllowance(driver);
@@ -490,7 +490,7 @@ public class ComputationDetails extends BaseTest {
 		Thread.sleep(2000);
 		ab.ClickAllowances();
 	}
-	/*@Test(priority=19)
+	@Test(priority=19)
 	public void EditAllowancesSpecialCompensatoryHighlyActiveFieldAreaAllowance_SC_1074() throws Exception{
 		EditAllowancesSpecialCompensatoryHighlyActiveFieldAreaAllowance ab=new EditAllowancesSpecialCompensatoryHighlyActiveFieldAreaAllowance(driver);
 		ab.ClickTDS();
@@ -650,8 +650,8 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickDetails();
 		Thread.sleep(2000);
 		ab.ClickAllowances();
-		}
-	/*@Test(priority=26)
+		}*/
+	@Test(priority=26)
 	public void EditAllowancesAllowanceReceivedByEmployeeOfUNO_SC_1081() throws Exception{
 		EditAllowancesAllowanceReceivedByEmployeeOfUNO ab=new EditAllowancesAllowanceReceivedByEmployeeOfUNO(driver);
 		ab.ClickTDS();
@@ -674,7 +674,7 @@ public class ComputationDetails extends BaseTest {
 		Thread.sleep(2000);
 		ab.ClickAllowances();
 		}
-	@Test(priority=26)
+	@Test(priority=27)
 	public void EditAllowancesOtherAllowance_SC_1082() throws Exception{
 		EditAllowancesOtherAllowance ab=new EditAllowancesOtherAllowance(driver);
 		ab.ClickTDS();
@@ -697,7 +697,7 @@ public class ComputationDetails extends BaseTest {
 		Thread.sleep(2000);
 		ab.ClickAllowances();
 		}
-	@Test(priority=27)
+	@Test(priority=28)
 	public void EditnameOtherAllowance_SC_1083() throws Exception{
 		EditnameOtherAllowance ab=new EditnameOtherAllowance(driver);
 		ab.ClickTDS();
@@ -714,7 +714,7 @@ public class ComputationDetails extends BaseTest {
 		String i=ab.getMessage();
 		Assert.assertEquals(i, "Updated successfully.");
 		}
-	@Test(priority=28)
+	@Test(priority=29)
 	public void EditAllowancesUserDefined_SC_1084() throws Exception{
 		EditAllowancesUserDefined ab=new EditAllowancesUserDefined(driver);
 		ab.ClickTDS();
@@ -737,7 +737,7 @@ public class ComputationDetails extends BaseTest {
 		Thread.sleep(2000);
 		ab.ClickAllowances();
 	}
-	@Test(priority=29)
+	@Test(priority=30)
 	public void SelectLimitSpecialCompensatoryHillyAreaAllowance_SC_1085() throws Exception{
 		SelectLimitSpecialCompensatoryHillyAreaAllowance ab=new SelectLimitSpecialCompensatoryHillyAreaAllowance(driver);
 		ab.ClickTDS();
@@ -761,7 +761,7 @@ public class ComputationDetails extends BaseTest {
 		Thread.sleep(2000);
 		ab.ClickAllowances();
 	}
-	@Test(priority=30)
+	@Test(priority=31)
 	public void SelectLimitHighAltitudeAllowance_SC_1087() throws Exception{
 		SelectLimitHighAltitudeAllowance ab=new SelectLimitHighAltitudeAllowance(driver);
 		ab.ClickTDS();
@@ -785,7 +785,7 @@ public class ComputationDetails extends BaseTest {
 		Thread.sleep(2000);
 		ab.ClickAllowances();
 	}
-	@Test(priority=31)
+	/*@Test(priority=32)
 	public void SelectLimitUncongenialClimateAllowance_SC_1088() throws Exception{
 		SelectLimitUncongenialClimateAllowance ab=new SelectLimitUncongenialClimateAllowance(driver);
 		ab.ClickTDS();
@@ -809,7 +809,7 @@ public class ComputationDetails extends BaseTest {
 		Thread.sleep(2000);
 		ab.ClickAllowances();
 	}
-	@Test(priority=32)
+	/*@Test(priority=33)
 	public void SelectLimitSnowBoundAreaOrAvalancheAllowance_SC_1089() throws Exception{
 		SelectLimitSnowBoundAreaOrAvalancheAllowance ab=new SelectLimitSnowBoundAreaOrAvalancheAllowance(driver);
 		ab.ClickTDS();
@@ -833,7 +833,7 @@ public class ComputationDetails extends BaseTest {
 		Thread.sleep(2000);
 		ab.ClickAllowances();
 	}
-	@Test(priority=33)
+	@Test(priority=34)
 	public void SelectLimitDifficultAreaOrDisturbedAreaAllowance_SC_1090() throws Exception{
 		SelectLimitDifficultAreaOrDisturbedAreaAllowance ab=new SelectLimitDifficultAreaOrDisturbedAreaAllowance(driver);
 		ab.ClickTDS();
@@ -857,7 +857,7 @@ public class ComputationDetails extends BaseTest {
 		Thread.sleep(2000);
 		ab.ClickAllowances();
 	}
-	@Test(priority=34)
+	@Test(priority=35)
 	public void SelectLimitBorderAreaRemoteAreaAllowance_SC_1091() throws Exception{
 		SelectLimitBorderAreaRemoteAreaAllowance ab=new SelectLimitBorderAreaRemoteAreaAllowance(driver);
 		ab.ClickTDS();
@@ -881,7 +881,7 @@ public class ComputationDetails extends BaseTest {
 		Thread.sleep(2000);
 		ab.ClickAllowances();
 	}
-	@Test(priority=35)
+	@Test(priority=36)
 	public void SelectLimitHighAltitudeAllowanceforarmedforces_SC_1092() throws Exception{
 		SelectLimitHighAltitudeAllowanceforarmedforces ab=new SelectLimitHighAltitudeAllowanceforarmedforces(driver);
 		ab.ClickTDS();
@@ -905,9 +905,31 @@ public class ComputationDetails extends BaseTest {
 		Thread.sleep(2000);
 		ab.ClickAllowances();
 	}
-	@Test(priority=36)
+	@Test(priority=37)
 	public void EditPerquisitesRentFreeAccommodation_SC_1093() throws Exception{
 		EditPerquisitesRentFreeAccommodation ab=new EditPerquisitesRentFreeAccommodation(driver);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickPerquisites();
+		Thread.sleep(2000);
+		ab.ClickRentFreeAcc();
+		ab.EnterEditedValues("20");
+		ab.clickUpdateBtn();
+		String i=ab.getMessage();
+		Assert.assertEquals(i, "Updated successfully.");
+		Thread.sleep(2000);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickPerquisites();
+	}
+	@Test(priortiy=38)
+	public void EditPerquisitesMedical_SC_1094() throws Exception{
 		
 	}*/
 }
