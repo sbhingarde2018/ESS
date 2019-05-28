@@ -33,15 +33,29 @@ import com.spp.pages.EditMainComponentBasic;
 import com.spp.pages.EditMainComponentsCommisionasaofturnover;
 import com.spp.pages.EditMainComponentsDAFormingpartofsalary;
 import com.spp.pages.EditMainComponentsDANotformingpartofsalary;
+//import com.spp.pages.EditPerquisitesElectricity;
+//import com.spp.pages.EditPerquisitesFreeEducationforhouseholdmembers;
+//import com.spp.pages.EditPerquisitesFreeeducationforEmployeesChildren;
+//import com.spp.pages.EditPerquisitesGardener;
+//import com.spp.pages.EditPerquisitesGas;
+//import com.spp.pages.EditPerquisitesLeaveTravelConcession;
+import com.spp.pages.EditPerquisitesMedical;
+import com.spp.pages.EditPerquisitesRentFreeAccommodation;
+//import com.spp.pages.EditPerquisitesWater;
 //import com.spp.pages.EditPerquisitesRentFreeAccommodation;
-import com.spp.pages.EditnameOtherAllowance;
-//import com.spp.pages.SelectLimitBorderAreaRemoteAreaAllowance;
-//import com.spp.pages.SelectLimitDifficultAreaOrDisturbedAreaAllowance;
+//import com.spp.pages.EditnameOtherAllowance;
+import com.spp.pages.SelectLimitBorderAreaRemoteAreaAllowance;
+import com.spp.pages.SelectLimitDifficultAreaOrDisturbedAreaAllowance;
+import com.spp.pages.SelectLimitBorderAreaRemoteAreaAllowance;
+import com.spp.pages.SelectLimitDifficultAreaOrDisturbedAreaAllowance;
 import com.spp.pages.SelectLimitHighAltitudeAllowance;
-//import com.spp.pages.SelectLimitHighAltitudeAllowanceforarmedforces;
-//import com.spp.pages.SelectLimitSnowBoundAreaOrAvalancheAllowance;
+import com.spp.pages.SelectLimitHighAltitudeAllowanceforarmedforces;
+import com.spp.pages.SelectLimitSnowBoundAreaOrAvalancheAllowance;
+import com.spp.pages.SelectLimitHighAltitudeAllowanceforarmedforces;
+import com.spp.pages.SelectLimitSnowBoundAreaOrAvalancheAllowance;
 import com.spp.pages.SelectLimitSpecialCompensatoryHillyAreaAllowance;
-//import com.spp.pages.SelectLimitUncongenialClimateAllowance;
+import com.spp.pages.SelectLimitUncongenialClimateAllowance;
+import com.spp.pages.SelectLimitUncongenialClimateAllowance;
 
 
 public class ComputationDetails extends BaseTest {
@@ -651,7 +665,7 @@ public class ComputationDetails extends BaseTest {
 		Thread.sleep(2000);
 		ab.ClickAllowances();
 		}*/
-	@Test(priority=26)
+	/*@Test(priority=26)
 	public void EditAllowancesAllowanceReceivedByEmployeeOfUNO_SC_1081() throws Exception{
 		EditAllowancesAllowanceReceivedByEmployeeOfUNO ab=new EditAllowancesAllowanceReceivedByEmployeeOfUNO(driver);
 		ab.ClickTDS();
@@ -784,8 +798,8 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickDetails();
 		Thread.sleep(2000);
 		ab.ClickAllowances();
-	}
-	/*@Test(priority=32)
+	}*/
+	@Test(priority=32)
 	public void SelectLimitUncongenialClimateAllowance_SC_1088() throws Exception{
 		SelectLimitUncongenialClimateAllowance ab=new SelectLimitUncongenialClimateAllowance(driver);
 		ab.ClickTDS();
@@ -809,7 +823,7 @@ public class ComputationDetails extends BaseTest {
 		Thread.sleep(2000);
 		ab.ClickAllowances();
 	}
-	/*@Test(priority=33)
+	@Test(priority=33)
 	public void SelectLimitSnowBoundAreaOrAvalancheAllowance_SC_1089() throws Exception{
 		SelectLimitSnowBoundAreaOrAvalancheAllowance ab=new SelectLimitSnowBoundAreaOrAvalancheAllowance(driver);
 		ab.ClickTDS();
@@ -893,7 +907,7 @@ public class ComputationDetails extends BaseTest {
 		Thread.sleep(2000);
 		ab.ClickArmedForcesAllowanceGiven();
 		ab.EnterEditedValues("25");
-		ab.SelectLimit("300");
+		ab.SelectLimit("1060");
 		ab.ClickUpdateBtn();
 		String i=ab.getMessage();
 		Assert.assertEquals(i, "Updated successfully.");
@@ -928,9 +942,189 @@ public class ComputationDetails extends BaseTest {
 		Thread.sleep(2000);
 		ab.ClickPerquisites();
 	}
-	@Test(priortiy=38)
+	@Test(priority=38)
 	public void EditPerquisitesMedical_SC_1094() throws Exception{
-		
+		EditPerquisitesMedical ab=new EditPerquisitesMedical(driver);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickPerquisites();
+		Thread.sleep(2000);
+		ab.ClickMedical();
+		ab.EnterEditedValues("20");
+		ab.clickUpdateBtn();
+		String i=ab.getMessage();
+		Assert.assertEquals(i, "Updated successfully.");
+		Thread.sleep(2000);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickPerquisites();
+		}
+	/*@Test(priority=39)
+	public void EditPerquisitesLeaveTravelConcession_SC_1095() throws Exception{
+		EditPerquisitesLeaveTravelConcession ab=new EditPerquisitesLeaveTravelConcession(driver);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickPerquisites();
+		Thread.sleep(2000);
+		ab.ClickLeaveTravelConcession();
+		ab.EnterEditedValues("20");
+		ab.clickUpdateBtn();
+		String i=ab.getMessage();
+		Assert.assertEquals(i, "Updated successfully.");
+		Thread.sleep(2000);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickPerquisites();
+	}
+	@Test(priority=40)
+	public void EditPerquisitesFreeEducationforhouseholdmembers_SC_1096() throws Exception{
+		EditPerquisitesFreeEducationforhouseholdmembers ab=new EditPerquisitesFreeEducationforhouseholdmembers(driver);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickPerquisites();
+		Thread.sleep(2000);
+		ab.ClickFreeEducation();
+		ab.EnterEditedValues("20");
+		ab.clickUpdateBtn();
+		String i=ab.getMessage();
+		Assert.assertEquals(i, "Updated successfully.");
+		Thread.sleep(2000);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickPerquisites();
+	}
+	@Test(priority=41)
+	public void EditPerquisitesFreeeducationforEmployeesChildren_SC_1097() throws Exception{
+		EditPerquisitesFreeeducationforEmployeesChildren ab=new EditPerquisitesFreeeducationforEmployeesChildren(driver);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickPerquisites();
+		Thread.sleep(2000);
+		ab.ClickFreeEducationEmp();
+		ab.EnterEditedValues("20");
+		ab.clickUpdateBtn();
+		String i=ab.getMessage();
+		Assert.assertEquals(i, "Updated successfully.");
+		Thread.sleep(2000);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickPerquisites();
+	}
+	@Test(priority=42)
+	public void EditPerquisitesGas_SC_1098() throws Exception{
+		EditPerquisitesGas ab=new EditPerquisitesGas(driver);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickPerquisites();
+		Thread.sleep(2000);
+		ab.ClickGas();
+		ab.EnterEditedValues("20");
+		ab.clickUpdateBtn();
+		String i=ab.getMessage();
+		Assert.assertEquals(i, "Updated successfully.");
+		Thread.sleep(2000);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickPerquisites();
+	}
+	@Test(priority=43)
+	public void EditPerquisitesElectricity_SC_1099() throws Exception{
+		EditPerquisitesElectricity ab=new EditPerquisitesElectricity(driver);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickPerquisites();
+		Thread.sleep(2000);
+		ab.ClickElectricity();
+		ab.EnterEditedValues("20");
+		ab.clickUpdateBtn();
+		String i=ab.getMessage();
+		Assert.assertEquals(i, "Updated successfully.");
+		Thread.sleep(2000);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickPerquisites();
+	}
+	@Test(priority=44)
+	public void EditPerquisitesWater_SC_1100() throws Exception{
+		EditPerquisitesWater ab=new EditPerquisitesWater(driver);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickPerquisites();
+		Thread.sleep(2000);
+		ab.ClickWater();
+		ab.EnterEditedValues("20");
+		ab.clickUpdateBtn();
+		String i=ab.getMessage();
+		Assert.assertEquals(i, "Updated successfully.");
+		Thread.sleep(2000);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickPerquisites();
+	}
+	@Test(priority=45)
+	public void EditPerquisitesGardener_SC_1101() throws Exception{
+		EditPerquisitesGardener ab=new EditPerquisitesGardener(driver);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickPerquisites();
+		Thread.sleep(2000);
+		ab.ClickGardener();
+		ab.EnterEditedValues("20");
+		ab.clickUpdateBtn();
+		String i=ab.getMessage();
+		Assert.assertEquals(i, "Updated successfully.");
+		Thread.sleep(2000);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickPerquisites();
 	}*/
 }
 	
