@@ -33,41 +33,41 @@ import com.spp.pages.EditMainComponentBasic;
 import com.spp.pages.EditMainComponentsCommisionasaofturnover;
 import com.spp.pages.EditMainComponentsDAFormingpartofsalary;
 import com.spp.pages.EditMainComponentsDANotformingpartofsalary;
-//import com.spp.pages.EditPerquisitesCarOtherAutomotive;
+import com.spp.pages.EditPerquisitesCarOtherAutomotive;
 import com.spp.pages.EditPerquisitesLeaveTravelConcession;
 import com.spp.pages.EditPerquisitesElectricity;
-//import com.spp.pages.EditPerquisitesEmployerContributionToPF;
+import com.spp.pages.EditPerquisitesEmployerContributionToPF;
 import com.spp.pages.EditPerquisitesFreeEducationforhouseholdmembers;
 import com.spp.pages.EditPerquisitesFreeeducationforEmployeesChildren;
-//import com.spp.pages.EditPerquisitesFreefoodandnonalcoholicbeverges;
+import com.spp.pages.EditPerquisitesFreefoodandnonalcoholicbeverges;
 import com.spp.pages.EditPerquisitesGardener;
 import com.spp.pages.EditPerquisitesGas;
-//import com.spp.pages.EditPerquisitesHolidayExpenses;
-//import com.spp.pages.EditPerquisitesHotelAccommodation;
-//import com.spp.pages.EditPerquisitesInterestCreditPF;
-//import com.spp.pages.EditPerquisitesInterestfreeorconcessionalloans;
-//import com.spp.pages.EditPerquisitesLeaveTravelConcession;
+import com.spp.pages.EditPerquisitesHolidayExpenses;
+import com.spp.pages.EditPerquisitesHotelAccommodation;
+import com.spp.pages.EditPerquisitesInterestCreditPF;
+import com.spp.pages.EditPerquisitesInterestfreeorconcessionalloans;
+import com.spp.pages.EditPerquisitesLeaveTravelConcession;
 import com.spp.pages.EditPerquisitesMedical;
-//import com.spp.pages.EditPerquisitesPersonalAttendant;
+import com.spp.pages.EditPerquisitesPersonalAttendant;
 import com.spp.pages.EditPerquisitesRentFreeAccommodation;
-//import com.spp.pages.EditPerquisitesSweeper;
-//import com.spp.pages.EditPerquisitesTaxPaidByEmployer;
-//import com.spp.pages.EditPerquisitesWatchman;
+import com.spp.pages.EditPerquisitesSweeper;
+import com.spp.pages.EditPerquisitesTaxPaidByEmployer;
+import com.spp.pages.EditPerquisitesWatchman;
 import com.spp.pages.EditPerquisitesWater;
-//import com.spp.pages.EditPerquisitesRentFreeAccommodation;
+import com.spp.pages.EditPerquisitesRentFreeAccommodation;
 import com.spp.pages.EditnameOtherAllowance;
 import com.spp.pages.SelectLimitBorderAreaRemoteAreaAllowance;
 import com.spp.pages.SelectLimitDifficultAreaOrDisturbedAreaAllowance;
-//import com.spp.pages.SelectLimitBorderAreaRemoteAreaAllowance;
-//import com.spp.pages.SelectLimitDifficultAreaOrDisturbedAreaAllowance;
+import com.spp.pages.SelectLimitBorderAreaRemoteAreaAllowance;
+import com.spp.pages.SelectLimitDifficultAreaOrDisturbedAreaAllowance;
 import com.spp.pages.SelectLimitHighAltitudeAllowance;
 import com.spp.pages.SelectLimitHighAltitudeAllowanceforarmedforces;
 import com.spp.pages.SelectLimitSnowBoundAreaOrAvalancheAllowance;
-//import com.spp.pages.SelectLimitHighAltitudeAllowanceforarmedforces;
-//import com.spp.pages.SelectLimitSnowBoundAreaOrAvalancheAllowance;
+import com.spp.pages.SelectLimitHighAltitudeAllowanceforarmedforces;
+import com.spp.pages.SelectLimitSnowBoundAreaOrAvalancheAllowance;
 import com.spp.pages.SelectLimitSpecialCompensatoryHillyAreaAllowance;
 import com.spp.pages.SelectLimitUncongenialClimateAllowance;
-//import com.spp.pages.SelectLimitUncongenialClimateAllowance;
+import com.spp.pages.SelectLimitUncongenialClimateAllowance;
 
 
 public class ComputationDetails extends BaseTest {
@@ -977,7 +977,7 @@ public class ComputationDetails extends BaseTest {
 		Thread.sleep(2000);
 		ab.ClickPerquisites();
 		}*/
-	@Test(priority=39)
+	/*@Test(priority=39)
 	public void EditPerquisitesLeaveTravelConcession_SC_1095() throws Exception{
 		EditPerquisitesLeaveTravelConcession ab=new EditPerquisitesLeaveTravelConcession(driver);
 		ab.ClickTDS();
@@ -1137,8 +1137,8 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickDetails();
 		Thread.sleep(2000);
 		ab.ClickPerquisites();
-	}
-	/*@Test(priority=46)
+	}*/
+	@Test(priority=46)
 	public void EditPerquisitesSweeper_SC_1102() throws Exception{
 		EditPerquisitesSweeper ab=new EditPerquisitesSweeper(driver);
 		ab.ClickTDS();
@@ -1299,7 +1299,7 @@ public class ComputationDetails extends BaseTest {
 		Thread.sleep(2000);
 		ab.ClickPerquisites();
 	}
-	@Test(priority=53)
+	/*@Test(priority=53)
 	public void EditPerquisitesInterestfreeorconcessionalloans_SC_1109() throws Exception{
 		EditPerquisitesInterestfreeorconcessionalloans ab=new EditPerquisitesInterestfreeorconcessionalloans(driver);
 		ab.ClickTDS();
