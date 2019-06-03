@@ -19,7 +19,7 @@ public class EditnameOtherPerquisites extends BasePage {
 	WebElement EditName;
 	@FindBy(id="custom_heading")
 	WebElement Heading;
-	@FindBy(xpath="//*[@id=\"OtherPerquisites\"]/div/div/form/div/div/input")
+	@FindBy(xpath="//*/div/div[2]/form/div[3]/div/input")
 	WebElement SaveBtn;
 	@FindBy(xpath="//*[@id=\"show_message\"]/div/strong")
 	WebElement UpdateSuccess;
