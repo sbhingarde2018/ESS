@@ -33,6 +33,24 @@ import com.spp.pages.EditMainComponentBasic;
 import com.spp.pages.EditMainComponentsCommisionasaofturnover;
 import com.spp.pages.EditMainComponentsDAFormingpartofsalary;
 import com.spp.pages.EditMainComponentsDANotformingpartofsalary;
+//import com.spp.pages.EditOthersAdvanceSalary;
+//import com.spp.pages.EditOthersAmountReceivedFromUnrecognizedProvidentFund;
+//import com.spp.pages.EditOthersAmountReceivedOnKeymenInsuranceIncludingBonus;
+//import com.spp.pages.EditOthersAmountReceivedOnVoluntaryRetirement;
+//import com.spp.pages.EditOthersArrearsSalary;
+//import com.spp.pages.EditOthersBonus;
+//import com.spp.pages.EditOthersCommissionReceived;
+//import com.spp.pages.EditOthersCommutationOfPension;
+//import com.spp.pages.EditOthersGratuity;
+//import com.spp.pages.EditOthersLeaveEncashmentInService;
+//import com.spp.pages.EditOthersLeaveEncashmentOnRetirement;
+//import com.spp.pages.EditOthersOthers;
+//import com.spp.pages.EditOthersPensionReceived;
+//import com.spp.pages.EditOthersProfitInlieuofSalary;
+//import com.spp.pages.EditOthersRetrenchmentCompensation;
+//import com.spp.pages.EditOthersSalaryPaidtoForeignDeplomatExemptFromSalary;
+//import com.spp.pages.EditOthersSalaryReceivedFromUNO;
+//import com.spp.pages.EditOthersUserDefined2;
 import com.spp.pages.EditPerquisitesClubExpenses;
 import com.spp.pages.EditPerquisitesCarOtherAutomotive;
 import com.spp.pages.EditPerquisitesLeaveTravelConcession;
@@ -50,13 +68,24 @@ import com.spp.pages.EditPerquisitesHotelAccommodation;
 import com.spp.pages.EditPerquisitesInterestCreditPF;
 import com.spp.pages.EditPerquisitesInterestfreeorconcessionalloans;
 import com.spp.pages.EditPerquisitesMedical;
+import com.spp.pages.EditPerquisitesOtherPerquisites;
 import com.spp.pages.EditPerquisitesPersonalAttendant;
 import com.spp.pages.EditPerquisitesRentFreeAccommodation;
+import com.spp.pages.EditPerquisitesStockOptionsnonqualifiedoptions;
+import com.spp.pages.EditPerquisitesSuperannuation;
 import com.spp.pages.EditPerquisitesSweeper;
 import com.spp.pages.EditPerquisitesTaxPaidByEmployer;
+import com.spp.pages.EditPerquisitesUseofmovableassetsbyemployees;
+import com.spp.pages.EditPerquisitesUserDefined2;
 import com.spp.pages.EditPerquisitesWatchman;
 import com.spp.pages.EditPerquisitesWater;
+//import com.spp.pages.EditVIADeductionsDeductionsinrespectofspecifiedinvestmentssavings80C;
+//import com.spp.pages.EditnameOTHERSUserDefined;
 import com.spp.pages.EditnameOtherAllowance;
+import com.spp.pages.EditnameOtherPerquisites;
+//import com.spp.pages.EditnameOthers;
+//import com.spp.pages.EditnameUserDefined;
+import com.spp.pages.EditnameUserDefined2;
 import com.spp.pages.SelectLimitBorderAreaRemoteAreaAllowance;
 import com.spp.pages.SelectLimitDifficultAreaOrDisturbedAreaAllowance;
 import com.spp.pages.SelectLimitHighAltitudeAllowance;
@@ -1132,8 +1161,8 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickDetails();
 		Thread.sleep(2000);
 		ab.ClickPerquisites();
-	}*/
-	/*@Test(priority=46)
+	}
+	@Test(priority=46)
 	public void EditPerquisitesSweeper_SC_1102() throws Exception{
 		EditPerquisitesSweeper ab=new EditPerquisitesSweeper(driver);
 		ab.ClickTDS();
@@ -1293,7 +1322,7 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickDetails();
 		Thread.sleep(2000);
 		ab.ClickPerquisites();
-	}*/
+	}
 	@Test(priority=53)
 	public void EditPerquisitesInterestfreeorconcessionalloans_SC_1109() throws Exception{
 		EditPerquisitesInterestfreeorconcessionalloans ab=new EditPerquisitesInterestfreeorconcessionalloans(driver);
@@ -1454,6 +1483,637 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickDetails();
 		Thread.sleep(2000);
 		ab.ClickPerquisites();
+	}*/
+	@Test(priority=60)
+	public void EditPerquisitesUseofmovableassetsbyemployees_SC_1116() throws Exception{
+		EditPerquisitesUseofmovableassetsbyemployees ab=new EditPerquisitesUseofmovableassetsbyemployees(driver);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickPerquisites();
+		Thread.sleep(2000);
+		ab.ClickMovableAssets();
+		ab.EnterEditedValues("20");
+		ab.clickUpdateBtn();
+		String i=ab.getMessage();
+		Assert.assertEquals(i, "Updated successfully.");
+		Thread.sleep(2000);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickPerquisites();
 	}
+	@Test(priority=61)
+	public void EditPerquisitesStockOptionsnonqualifiedoptions_SC_1117() throws Exception{
+		EditPerquisitesStockOptionsnonqualifiedoptions ab=new EditPerquisitesStockOptionsnonqualifiedoptions(driver);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickPerquisites();
+		Thread.sleep(2000);
+		ab.ClickStockOptions();
+		ab.EnterEditedValues("20");
+		ab.clickUpdateBtn();
+		String i=ab.getMessage();
+		Assert.assertEquals(i, "Updated successfully.");
+		Thread.sleep(2000);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickPerquisites();
+	}
+	@Test(priority=62)
+	public void EditPerquisitesOtherPerquisites_SC_1118() throws Exception{
+		EditPerquisitesOtherPerquisites ab=new EditPerquisitesOtherPerquisites(driver);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickPerquisites();
+		Thread.sleep(2000);
+		ab.ClickOtherPerquisites();
+		ab.EnterEditedValues("20");
+		ab.clickUpdateBtn();
+		String i=ab.getMessage();
+		Assert.assertEquals(i, "Updated successfully.");
+		Thread.sleep(2000);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickPerquisites();
+	}
+	@Test(priority=63)
+	public void EditPerquisitesSuperannuation_SC_1119() throws Exception{
+		EditPerquisitesSuperannuation ab=new EditPerquisitesSuperannuation(driver);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickPerquisites();
+		Thread.sleep(2000);
+		ab.ClickSuperannuation();
+		ab.EnterEditedValues("20");
+		ab.clickUpdateBtn();
+		String i=ab.getMessage();
+		Assert.assertEquals(i, "Updated successfully.");
+		Thread.sleep(2000);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickPerquisites();
+	}
+	@Test(priority=64)
+	public void EditnameOtherPerquisites_SC_1120() throws Exception{
+		EditnameOtherPerquisites ab=new EditnameOtherPerquisites(driver);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickPerquisites();
+		Thread.sleep(2000);
+		ab.clickEditName();
+		ab.EnterName("Paid Perquisites");
+		ab.ClickSaveBtn();
+		Thread.sleep(2000);
+		String i=ab.getMessage();
+		Assert.assertEquals(i, "Updated successfully.");
+	}
+	@Test(priority=65)
+	public void EditPerquisitesUserDefined2_SC_1121() throws Exception{
+		EditPerquisitesUserDefined2 ab=new EditPerquisitesUserDefined2(driver);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickPerquisites();
+		Thread.sleep(2000);
+		ab.ClickUserDefined2();
+		ab.EnterEditedValues("20");
+		ab.clickUpdateBtn();
+		String i=ab.getMessage();
+		Assert.assertEquals(i, "Updated successfully.");
+		Thread.sleep(2000);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickPerquisites();
+	}
+	@Test(priority=66)
+	public void EditnameUserDefined2_SC_1122() throws Exception{
+		EditnameUserDefined2 ab=new EditnameUserDefined2(driver);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickPerquisites();
+		Thread.sleep(2000);
+		ab.clickEditName();
+		ab.EnterName("Paid Perquisites");
+		ab.ClickSaveBtn();
+		Thread.sleep(2000);
+		String i=ab.getMessage();
+		Assert.assertEquals(i, "Updated successfully.");
+	}
+	/*@Test(priority=67)
+	public void EditnameUserDefined_SC_1123() throws Exception{
+		EditnameUserDefined ab=new EditnameUserDefined(driver);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickAllowances();
+		Thread.sleep(2000);
+		ab.ClickEditName();
+		ab.EnterHeadingName("Paid Allowance");
+		ab.ClickSaveBtn();
+		Thread.sleep(2000);
+		String i=ab.getMessage();
+		Assert.assertEquals(i, "Updated successfully.");
+	}
+	@Test(priority=68)
+	public void EditOthersPensionReceived_SC_1124() throws Exception{
+		EditOthersPensionReceived ab=new EditOthersPensionReceived(driver);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickOthersTab();
+		Thread.sleep(2000);
+		ab.ClickPensionReceived();
+		ab.EnterEditedValues("20");
+		ab.ClickUpdateBtn();
+		String i=ab.getMessage();
+		Assert.assertEquals(i, "Updated successfully.");
+		Thread.sleep(2000);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickOthersTab();
+	}
+	@Test(priority=69)
+	public void EditOthersCommissionReceived_SC_1125() throws Exception{
+		EditOthersCommissionReceived ab=new EditOthersCommissionReceived(driver);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickOthersTab();
+		Thread.sleep(2000);
+		ab.ClickCommissionReceived();
+		ab.EnterEditedValues("20");
+		ab.ClickUpdateBtn();
+		String i=ab.getMessage();
+		Assert.assertEquals(i, "Updated successfully.");
+		Thread.sleep(2000);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickOthersTab();
+	}
+	@Test(priority=70)
+	public void EditOthersProfitInlieuofSalary_SC_1126() throws Exception{
+		EditOthersProfitInlieuofSalary ab=new EditOthersProfitInlieuofSalary(driver);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickOthersTab();
+		Thread.sleep(2000);
+		ab.ClickProfitInLieu();
+		ab.EnterEditedValues("20");
+		ab.ClickUpdateBtn();
+		String i=ab.getMessage();
+		Assert.assertEquals(i, "Updated successfully.");
+		Thread.sleep(2000);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickOthersTab();
+	}
+	@Test(priority=71)
+	public void EditOthersBonus_SC_1127() throws Exception{
+		EditOthersBonus ab=new EditOthersBonus(driver);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickOthersTab();
+		Thread.sleep(2000);
+		ab.ClickBonus();
+		ab.EnterEditedValues("20");
+		ab.ClickUpdateBtn();
+		String i=ab.getMessage();
+		Assert.assertEquals(i, "Updated successfully.");
+		Thread.sleep(2000);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickOthersTab();
+	}
+	@Test(priority=72)
+	public void EditOthersAdvanceSalary_SC_1128() throws Exception{
+		EditOthersAdvanceSalary ab=new EditOthersAdvanceSalary(driver);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickOthersTab();
+		Thread.sleep(2000);
+		ab.ClickAdvanceSalary();
+		ab.EnterEditedValues("20");
+		ab.ClickUpdateBtn();
+		String i=ab.getMessage();
+		Assert.assertEquals(i, "Updated successfully.");
+		Thread.sleep(2000);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickOthersTab();
+	}
+	@Test(priority=73)
+	public void EditOthersSalaryReceivedFromUNO_SC_1129() throws Exception{
+		EditOthersSalaryReceivedFromUNO ab=new EditOthersSalaryReceivedFromUNO(driver);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickOthersTab();
+		Thread.sleep(2000);
+		ab.ClickSalaryFromUNO();
+		ab.EnterEditedValues("20");
+		ab.ClickUpdateBtn();
+		String i=ab.getMessage();
+		Assert.assertEquals(i, "Updated successfully.");
+		Thread.sleep(2000);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickOthersTab();
+	}
+	@Test(priority=74)
+	public void EditOthersSalaryPaidtoForeignDeplomatExemptFromSalary_SC_1130() throws Exception{
+		EditOthersSalaryPaidtoForeignDeplomatExemptFromSalary ab=new EditOthersSalaryPaidtoForeignDeplomatExemptFromSalary(driver);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickOthersTab();
+		Thread.sleep(2000);
+		ab.ClickSalaryPaidForeignDeplomat();
+		ab.EnterEditedValues("20");
+		ab.ClickUpdateBtn();
+		String i=ab.getMessage();
+		Assert.assertEquals(i, "Updated successfully.");
+		Thread.sleep(2000);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickOthersTab();
+	}
+	@Test(priority=75)
+	public void EditOthersAmountReceivedFromUnrecognizedProvidentFund_SC_1131() throws Exception{
+		EditOthersAmountReceivedFromUnrecognizedProvidentFund ab=new EditOthersAmountReceivedFromUnrecognizedProvidentFund(driver);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickOthersTab();
+		Thread.sleep(2000);
+		ab.ClickAmtRecFromUnrecognixedPF();
+		ab.EnterEditedValues("20");
+		ab.ClickUpdateBtn();
+		String i=ab.getMessage();
+		Assert.assertEquals(i, "Updated successfully.");
+		Thread.sleep(2000);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickOthersTab();
+	}
+	@Test(priority=76)
+	public void EditOthersArrearsSalary_SC_1132() throws Exception{
+		EditOthersArrearsSalary ab=new EditOthersArrearsSalary(driver);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickOthersTab();
+		Thread.sleep(2000);
+		ab.ClickArrearsSalary();
+		ab.EnterEditedValues("20");
+		ab.ClickUpdateBtn();
+		String i=ab.getMessage();
+		Assert.assertEquals(i, "Updated successfully.");
+		Thread.sleep(2000);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickOthersTab();
+	}
+	@Test(priority=76)
+	public void EditOthersAmountReceivedOnKeymenInsuranceIncludingBonus_SC_1133() throws Exception{
+		EditOthersAmountReceivedOnKeymenInsuranceIncludingBonus ab=new EditOthersAmountReceivedOnKeymenInsuranceIncludingBonus(driver);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickOthersTab();
+		Thread.sleep(2000);
+		ab.ClickAmountReceivedOnKeymenInsurance();
+		ab.EnterEditedValues("20");
+		ab.ClickUpdateBtn();
+		String i=ab.getMessage();
+		Assert.assertEquals(i, "Updated successfully.");
+		Thread.sleep(2000);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickOthersTab();
+	}
+	@Test(priority=77)
+	public void EditOthersLeaveEncashmentInService_SC_1134() throws Exception{
+		EditOthersLeaveEncashmentInService ab=new EditOthersLeaveEncashmentInService(driver);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickOthersTab();
+		Thread.sleep(2000);
+		ab.ClickLeaveEncashmentInService();
+		ab.EnterEditedValues("20");
+		ab.ClickUpdateBtn();
+		String i=ab.getMessage();
+		Assert.assertEquals(i, "Updated successfully.");
+		Thread.sleep(2000);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickOthersTab();
+	}
+	@Test(priority=78)
+	public void EditOthersLeaveEncashmentOnRetirement_SC_1135() throws Exception{
+		EditOthersLeaveEncashmentOnRetirement ab=new EditOthersLeaveEncashmentOnRetirement(driver);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickOthersTab();
+		Thread.sleep(2000);
+		ab.ClickLeaveEncashmentOnRetirement();
+		ab.EnterEditedValues("20");
+		ab.ClickUpdateBtn();
+		String i=ab.getMessage();
+		Assert.assertEquals(i, "Updated successfully.");
+		Thread.sleep(2000);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickOthersTab();
+	}
+	@Test(priority=79)
+	public void EditOthersGratuity_SC_1136() throws Exception{
+		EditOthersGratuity ab=new EditOthersGratuity(driver);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickOthersTab();
+		Thread.sleep(2000);
+		ab.ClickGratuity();
+		ab.EnterEditedValues("20");
+		ab.ClickUpdateBtn();
+		String i=ab.getMessage();
+		Assert.assertEquals(i, "Updated successfully.");
+		Thread.sleep(2000);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickOthersTab();
+	}
+	@Test(priority=80)
+	public void EditOthersCommutationOfPension_SC_1137() throws Exception{
+		EditOthersCommutationOfPension ab=new EditOthersCommutationOfPension(driver);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickOthersTab();
+		Thread.sleep(2000);
+		ab.ClickCommutationOfPension();
+		ab.EnterEditedValues("20");
+		ab.ClickUpdateBtn();
+		String i=ab.getMessage();
+		Assert.assertEquals(i, "Updated successfully.");
+		Thread.sleep(2000);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickOthersTab();
+	}
+	@Test(priority=81)
+	public void EditOthersRetrenchmentCompensation_SC_1138() throws Exception{
+		EditOthersRetrenchmentCompensation ab=new EditOthersRetrenchmentCompensation(driver);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickOthersTab();
+		Thread.sleep(2000);
+		ab.ClickRetrenchmentCompensation();
+		ab.EnterEditedValues("20");
+		ab.ClickUpdateBtn();
+		String i=ab.getMessage();
+		Assert.assertEquals(i, "Updated successfully.");
+		Thread.sleep(2000);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickOthersTab();
+	}
+	@Test(priority=82)
+	public void EditOthersAmountReceivedOnVoluntaryRetirement_SC_1139() throws Exception{
+		EditOthersAmountReceivedOnVoluntaryRetirement ab=new EditOthersAmountReceivedOnVoluntaryRetirement(driver);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickOthersTab();
+		Thread.sleep(2000);
+		ab.ClickAmountReceivedOnVoluntaryRetirement();
+		ab.EnterEditedValues("20");
+		ab.ClickUpdateBtn();
+		String i=ab.getMessage();
+		Assert.assertEquals(i, "Updated successfully.");
+		Thread.sleep(2000);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickOthersTab();
+	}
+	@Test(priority=83)
+	public void EditOthersOthers_SC_1140() throws Exception{
+		EditOthersOthers ab=new EditOthersOthers(driver);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickOthersTab();
+		Thread.sleep(2000);
+		ab.ClickEOthers();
+		ab.EnterEditedValues("20");
+		ab.ClickUpdateBtn();
+		String i=ab.getMessage();
+		Assert.assertEquals(i, "Updated successfully.");
+		Thread.sleep(2000);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickOthersTab();
+	}
+	@Test(priority=84)
+	public void EditOthersUserDefined2_SC_1141() throws Exception{
+		EditOthersUserDefined2 ab=new EditOthersUserDefined2(driver);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickOthersTab();
+		Thread.sleep(2000);
+		ab.ClickUserDefined2();
+		ab.EnterEditedValues("20");
+		ab.ClickUpdateBtn();
+		String i=ab.getMessage();
+		Assert.assertEquals(i, "Updated successfully.");
+		Thread.sleep(2000);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickOthersTab();
+	}
+	@Test(priority=85)
+	public void EditnameOthers_SC_1142() throws Exception{
+		EditnameOthers ab=new EditnameOthers(driver);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickOthersTab();
+		Thread.sleep(2000);
+		ab.ClickEditName();
+		ab.EnterEditHeading("20");
+		ab.ClickSaveBtn();
+		String i=ab.getMessage();
+		Assert.assertEquals(i, "Updated successfully.");
+		Thread.sleep(2000);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickOthersTab();
+	}
+	@Test(priority=86)
+	public void EditnameOTHERSUserDefined_SC_1143() throws Exception{
+		EditnameOTHERSUserDefined ab=new EditnameOTHERSUserDefined(driver);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickOthersTab();
+		Thread.sleep(2000);
+		ab.ClickEditName();
+		ab.EnterEditHeading("20");
+		ab.ClickSaveBtn();
+		String i=ab.getMessage();
+		Assert.assertEquals(i, "Updated successfully.");
+		Thread.sleep(2000);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickOthersTab();
+	}
+	@Test(priority=87)
+	public void EditVIADeductionsDeductionsinrespectofspecifiedinvestmentssavings80C_SC_1144() throws Exception{
+		EditVIADeductionsDeductionsinrespectofspecifiedinvestmentssavings80C ab=new EditVIADeductionsDeductionsinrespectofspecifiedinvestmentssavings80C(driver);
+		
+	}*/
 }
 	
