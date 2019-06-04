@@ -33,24 +33,24 @@ import com.spp.pages.EditMainComponentBasic;
 import com.spp.pages.EditMainComponentsCommisionasaofturnover;
 import com.spp.pages.EditMainComponentsDAFormingpartofsalary;
 import com.spp.pages.EditMainComponentsDANotformingpartofsalary;
-//import com.spp.pages.EditOthersAdvanceSalary;
-//import com.spp.pages.EditOthersAmountReceivedFromUnrecognizedProvidentFund;
-//import com.spp.pages.EditOthersAmountReceivedOnKeymenInsuranceIncludingBonus;
-//import com.spp.pages.EditOthersAmountReceivedOnVoluntaryRetirement;
-//import com.spp.pages.EditOthersArrearsSalary;
-//import com.spp.pages.EditOthersBonus;
-//import com.spp.pages.EditOthersCommissionReceived;
-//import com.spp.pages.EditOthersCommutationOfPension;
-//import com.spp.pages.EditOthersGratuity;
-//import com.spp.pages.EditOthersLeaveEncashmentInService;
-//import com.spp.pages.EditOthersLeaveEncashmentOnRetirement;
-//import com.spp.pages.EditOthersOthers;
-//import com.spp.pages.EditOthersPensionReceived;
-//import com.spp.pages.EditOthersProfitInlieuofSalary;
-//import com.spp.pages.EditOthersRetrenchmentCompensation;
-//import com.spp.pages.EditOthersSalaryPaidtoForeignDeplomatExemptFromSalary;
-//import com.spp.pages.EditOthersSalaryReceivedFromUNO;
-//import com.spp.pages.EditOthersUserDefined2;
+import com.spp.pages.EditOthersAdvanceSalary;
+import com.spp.pages.EditOthersAmountReceivedFromUnrecognizedProvidentFund;
+import com.spp.pages.EditOthersAmountReceivedOnKeymenInsuranceIncludingBonus;
+import com.spp.pages.EditOthersAmountReceivedOnVoluntaryRetirement;
+import com.spp.pages.EditOthersArrearsSalary;
+import com.spp.pages.EditOthersBonus;
+import com.spp.pages.EditOthersCommissionReceived;
+import com.spp.pages.EditOthersCommutationOfPension;
+import com.spp.pages.EditOthersGratuity;
+import com.spp.pages.EditOthersLeaveEncashmentInService;
+import com.spp.pages.EditOthersLeaveEncashmentOnRetirement;
+import com.spp.pages.EditOthersOthers;
+import com.spp.pages.EditOthersPensionReceived;
+import com.spp.pages.EditOthersProfitInlieuofSalary;
+import com.spp.pages.EditOthersRetrenchmentCompensation;
+import com.spp.pages.EditOthersSalaryPaidtoForeignDeplomatExemptFromSalary;
+import com.spp.pages.EditOthersSalaryReceivedFromUNO;
+import com.spp.pages.EditOthersUserDefined2;
 import com.spp.pages.EditPerquisitesClubExpenses;
 import com.spp.pages.EditPerquisitesCarOtherAutomotive;
 import com.spp.pages.EditPerquisitesLeaveTravelConcession;
@@ -79,12 +79,12 @@ import com.spp.pages.EditPerquisitesUseofmovableassetsbyemployees;
 import com.spp.pages.EditPerquisitesUserDefined2;
 import com.spp.pages.EditPerquisitesWatchman;
 import com.spp.pages.EditPerquisitesWater;
-//import com.spp.pages.EditVIADeductionsDeductionsinrespectofspecifiedinvestmentssavings80C;
-//import com.spp.pages.EditnameOTHERSUserDefined;
+import com.spp.pages.EditVIADeductionsDeductionsinrespectofspecifiedinvestmentssavings80C;
+import com.spp.pages.EditnameOTHERSUserDefined;
 import com.spp.pages.EditnameOtherAllowance;
 import com.spp.pages.EditnameOtherPerquisites;
-//import com.spp.pages.EditnameOthers;
-//import com.spp.pages.EditnameUserDefined;
+import com.spp.pages.EditnameOthers;
+import com.spp.pages.EditnameUserDefined;
 import com.spp.pages.EditnameUserDefined2;
 import com.spp.pages.SelectLimitBorderAreaRemoteAreaAllowance;
 import com.spp.pages.SelectLimitDifficultAreaOrDisturbedAreaAllowance;
@@ -1483,7 +1483,7 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickDetails();
 		Thread.sleep(2000);
 		ab.ClickPerquisites();
-	}*/
+	}
 	@Test(priority=60)
 	public void EditPerquisitesUseofmovableassetsbyemployees_SC_1116() throws Exception{
 		EditPerquisitesUseofmovableassetsbyemployees ab=new EditPerquisitesUseofmovableassetsbyemployees(driver);
@@ -1593,7 +1593,7 @@ public class ComputationDetails extends BaseTest {
 		String i=ab.getMessage();
 		Assert.assertEquals(i, "Updated successfully.");
 	}
-	@Test(priority=65)
+	/*@Test(priority=65)
 	public void EditPerquisitesUserDefined2_SC_1121() throws Exception{
 		EditPerquisitesUserDefined2 ab=new EditPerquisitesUserDefined2(driver);
 		ab.ClickTDS();
@@ -1632,8 +1632,9 @@ public class ComputationDetails extends BaseTest {
 		Thread.sleep(2000);
 		String i=ab.getMessage();
 		Assert.assertEquals(i, "Updated successfully.");
-	}
-	/*@Test(priority=67)
+	}*/
+	
+	@Test(priority=67)
 	public void EditnameUserDefined_SC_1123() throws Exception{
 		EditnameUserDefined ab=new EditnameUserDefined(driver);
 		ab.ClickTDS();
@@ -1788,7 +1789,7 @@ public class ComputationDetails extends BaseTest {
 		Thread.sleep(2000);
 		ab.ClickOthersTab();
 	}
-	@Test(priority=74)
+	/*@Test(priority=74)
 	public void EditOthersSalaryPaidtoForeignDeplomatExemptFromSalary_SC_1130() throws Exception{
 		EditOthersSalaryPaidtoForeignDeplomatExemptFromSalary ab=new EditOthersSalaryPaidtoForeignDeplomatExemptFromSalary(driver);
 		ab.ClickTDS();
