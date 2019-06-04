@@ -34,23 +34,23 @@ import com.spp.pages.EditMainComponentsCommisionasaofturnover;
 import com.spp.pages.EditMainComponentsDAFormingpartofsalary;
 import com.spp.pages.EditMainComponentsDANotformingpartofsalary;
 import com.spp.pages.EditOthersAdvanceSalary;
-import com.spp.pages.EditOthersAmountReceivedFromUnrecognizedProvidentFund;
-import com.spp.pages.EditOthersAmountReceivedOnKeymenInsuranceIncludingBonus;
-import com.spp.pages.EditOthersAmountReceivedOnVoluntaryRetirement;
-import com.spp.pages.EditOthersArrearsSalary;
+//import com.spp.pages.EditOthersAmountReceivedFromUnrecognizedProvidentFund;
+//import com.spp.pages.EditOthersAmountReceivedOnKeymenInsuranceIncludingBonus;
+//import com.spp.pages.EditOthersAmountReceivedOnVoluntaryRetirement;
+//import com.spp.pages.EditOthersArrearsSalary;
 import com.spp.pages.EditOthersBonus;
 import com.spp.pages.EditOthersCommissionReceived;
-import com.spp.pages.EditOthersCommutationOfPension;
-import com.spp.pages.EditOthersGratuity;
-import com.spp.pages.EditOthersLeaveEncashmentInService;
-import com.spp.pages.EditOthersLeaveEncashmentOnRetirement;
-import com.spp.pages.EditOthersOthers;
+//import com.spp.pages.EditOthersCommutationOfPension;
+//import com.spp.pages.EditOthersGratuity;
+//import com.spp.pages.EditOthersLeaveEncashmentInService;
+//import com.spp.pages.EditOthersLeaveEncashmentOnRetirement;
+//import com.spp.pages.EditOthersOthers;
 import com.spp.pages.EditOthersPensionReceived;
 import com.spp.pages.EditOthersProfitInlieuofSalary;
-import com.spp.pages.EditOthersRetrenchmentCompensation;
-import com.spp.pages.EditOthersSalaryPaidtoForeignDeplomatExemptFromSalary;
+//import com.spp.pages.EditOthersRetrenchmentCompensation;
+//import com.spp.pages.EditOthersSalaryPaidtoForeignDeplomatExemptFromSalary;
 import com.spp.pages.EditOthersSalaryReceivedFromUNO;
-import com.spp.pages.EditOthersUserDefined2;
+//import com.spp.pages.EditOthersUserDefined2;
 import com.spp.pages.EditPerquisitesClubExpenses;
 import com.spp.pages.EditPerquisitesCarOtherAutomotive;
 import com.spp.pages.EditPerquisitesLeaveTravelConcession;
@@ -76,16 +76,16 @@ import com.spp.pages.EditPerquisitesSuperannuation;
 import com.spp.pages.EditPerquisitesSweeper;
 import com.spp.pages.EditPerquisitesTaxPaidByEmployer;
 import com.spp.pages.EditPerquisitesUseofmovableassetsbyemployees;
-import com.spp.pages.EditPerquisitesUserDefined2;
+//import com.spp.pages.EditPerquisitesUserDefined2;
 import com.spp.pages.EditPerquisitesWatchman;
 import com.spp.pages.EditPerquisitesWater;
-import com.spp.pages.EditVIADeductionsDeductionsinrespectofspecifiedinvestmentssavings80C;
-import com.spp.pages.EditnameOTHERSUserDefined;
+//import com.spp.pages.EditVIADeductionsDeductionsinrespectofspecifiedinvestmentssavings80C;
+//import com.spp.pages.EditnameOTHERSUserDefined;
 import com.spp.pages.EditnameOtherAllowance;
 import com.spp.pages.EditnameOtherPerquisites;
-import com.spp.pages.EditnameOthers;
+//import com.spp.pages.EditnameOthers;
 import com.spp.pages.EditnameUserDefined;
-import com.spp.pages.EditnameUserDefined2;
+//import com.spp.pages.EditnameUserDefined2;
 import com.spp.pages.SelectLimitBorderAreaRemoteAreaAllowance;
 import com.spp.pages.SelectLimitDifficultAreaOrDisturbedAreaAllowance;
 import com.spp.pages.SelectLimitHighAltitudeAllowance;
@@ -1858,7 +1858,7 @@ public class ComputationDetails extends BaseTest {
 		Thread.sleep(2000);
 		ab.ClickOthersTab();
 	}
-	@Test(priority=76)
+	@Test(priority=77)
 	public void EditOthersAmountReceivedOnKeymenInsuranceIncludingBonus_SC_1133() throws Exception{
 		EditOthersAmountReceivedOnKeymenInsuranceIncludingBonus ab=new EditOthersAmountReceivedOnKeymenInsuranceIncludingBonus(driver);
 		ab.ClickTDS();
@@ -1881,7 +1881,7 @@ public class ComputationDetails extends BaseTest {
 		Thread.sleep(2000);
 		ab.ClickOthersTab();
 	}
-	@Test(priority=77)
+	@Test(priority=78)
 	public void EditOthersLeaveEncashmentInService_SC_1134() throws Exception{
 		EditOthersLeaveEncashmentInService ab=new EditOthersLeaveEncashmentInService(driver);
 		ab.ClickTDS();
@@ -1904,7 +1904,7 @@ public class ComputationDetails extends BaseTest {
 		Thread.sleep(2000);
 		ab.ClickOthersTab();
 	}
-	@Test(priority=78)
+	@Test(priority=79)
 	public void EditOthersLeaveEncashmentOnRetirement_SC_1135() throws Exception{
 		EditOthersLeaveEncashmentOnRetirement ab=new EditOthersLeaveEncashmentOnRetirement(driver);
 		ab.ClickTDS();
@@ -1927,7 +1927,7 @@ public class ComputationDetails extends BaseTest {
 		Thread.sleep(2000);
 		ab.ClickOthersTab();
 	}
-	@Test(priority=79)
+	@Test(priority=80)
 	public void EditOthersGratuity_SC_1136() throws Exception{
 		EditOthersGratuity ab=new EditOthersGratuity(driver);
 		ab.ClickTDS();
@@ -1950,7 +1950,7 @@ public class ComputationDetails extends BaseTest {
 		Thread.sleep(2000);
 		ab.ClickOthersTab();
 	}
-	@Test(priority=80)
+	@Test(priority=81)
 	public void EditOthersCommutationOfPension_SC_1137() throws Exception{
 		EditOthersCommutationOfPension ab=new EditOthersCommutationOfPension(driver);
 		ab.ClickTDS();
@@ -1973,7 +1973,7 @@ public class ComputationDetails extends BaseTest {
 		Thread.sleep(2000);
 		ab.ClickOthersTab();
 	}
-	@Test(priority=81)
+	@Test(priority=82)
 	public void EditOthersRetrenchmentCompensation_SC_1138() throws Exception{
 		EditOthersRetrenchmentCompensation ab=new EditOthersRetrenchmentCompensation(driver);
 		ab.ClickTDS();
@@ -1996,7 +1996,7 @@ public class ComputationDetails extends BaseTest {
 		Thread.sleep(2000);
 		ab.ClickOthersTab();
 	}
-	@Test(priority=82)
+	@Test(priority=83)
 	public void EditOthersAmountReceivedOnVoluntaryRetirement_SC_1139() throws Exception{
 		EditOthersAmountReceivedOnVoluntaryRetirement ab=new EditOthersAmountReceivedOnVoluntaryRetirement(driver);
 		ab.ClickTDS();
@@ -2019,7 +2019,7 @@ public class ComputationDetails extends BaseTest {
 		Thread.sleep(2000);
 		ab.ClickOthersTab();
 	}
-	@Test(priority=83)
+	@Test(priority=84)
 	public void EditOthersOthers_SC_1140() throws Exception{
 		EditOthersOthers ab=new EditOthersOthers(driver);
 		ab.ClickTDS();
@@ -2042,7 +2042,7 @@ public class ComputationDetails extends BaseTest {
 		Thread.sleep(2000);
 		ab.ClickOthersTab();
 	}
-	@Test(priority=84)
+	@Test(priority=85)
 	public void EditOthersUserDefined2_SC_1141() throws Exception{
 		EditOthersUserDefined2 ab=new EditOthersUserDefined2(driver);
 		ab.ClickTDS();
@@ -2065,7 +2065,7 @@ public class ComputationDetails extends BaseTest {
 		Thread.sleep(2000);
 		ab.ClickOthersTab();
 	}
-	@Test(priority=85)
+	@Test(priority=86)
 	public void EditnameOthers_SC_1142() throws Exception{
 		EditnameOthers ab=new EditnameOthers(driver);
 		ab.ClickTDS();
@@ -2088,7 +2088,7 @@ public class ComputationDetails extends BaseTest {
 		Thread.sleep(2000);
 		ab.ClickOthersTab();
 	}
-	@Test(priority=86)
+	@Test(priority=87)
 	public void EditnameOTHERSUserDefined_SC_1143() throws Exception{
 		EditnameOTHERSUserDefined ab=new EditnameOTHERSUserDefined(driver);
 		ab.ClickTDS();
@@ -2110,8 +2110,8 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickDetails();
 		Thread.sleep(2000);
 		ab.ClickOthersTab();
-	}
-	@Test(priority=87)
+	}*/
+	/*@Test(priority=88)
 	public void EditVIADeductionsDeductionsinrespectofspecifiedinvestmentssavings80C_SC_1144() throws Exception{
 		EditVIADeductionsDeductionsinrespectofspecifiedinvestmentssavings80C ab=new EditVIADeductionsDeductionsinrespectofspecifiedinvestmentssavings80C(driver);
 		
