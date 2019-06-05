@@ -34,21 +34,21 @@ import com.spp.pages.EditMainComponentsCommisionasaofturnover;
 import com.spp.pages.EditMainComponentsDAFormingpartofsalary;
 import com.spp.pages.EditMainComponentsDANotformingpartofsalary;
 import com.spp.pages.EditOthersAdvanceSalary;
-//import com.spp.pages.EditOthersAmountReceivedFromUnrecognizedProvidentFund;
-//import com.spp.pages.EditOthersAmountReceivedOnKeymenInsuranceIncludingBonus;
+import com.spp.pages.EditOthersAmountReceivedFromUnrecognizedProvidentFund;
+import com.spp.pages.EditOthersAmountReceivedOnKeymenInsuranceIncludingBonus;
 //import com.spp.pages.EditOthersAmountReceivedOnVoluntaryRetirement;
-//import com.spp.pages.EditOthersArrearsSalary;
+import com.spp.pages.EditOthersArrearsSalary;
 import com.spp.pages.EditOthersBonus;
 import com.spp.pages.EditOthersCommissionReceived;
 //import com.spp.pages.EditOthersCommutationOfPension;
-//import com.spp.pages.EditOthersGratuity;
-//import com.spp.pages.EditOthersLeaveEncashmentInService;
-//import com.spp.pages.EditOthersLeaveEncashmentOnRetirement;
+import com.spp.pages.EditOthersGratuity;
+import com.spp.pages.EditOthersLeaveEncashmentInService;
+import com.spp.pages.EditOthersLeaveEncashmentOnRetirement;
 //import com.spp.pages.EditOthersOthers;
 import com.spp.pages.EditOthersPensionReceived;
 import com.spp.pages.EditOthersProfitInlieuofSalary;
 //import com.spp.pages.EditOthersRetrenchmentCompensation;
-//import com.spp.pages.EditOthersSalaryPaidtoForeignDeplomatExemptFromSalary;
+import com.spp.pages.EditOthersSalaryPaidtoForeignDeplomatExemptFromSalary;
 import com.spp.pages.EditOthersSalaryReceivedFromUNO;
 //import com.spp.pages.EditOthersUserDefined2;
 import com.spp.pages.EditPerquisitesClubExpenses;
@@ -76,16 +76,29 @@ import com.spp.pages.EditPerquisitesSuperannuation;
 import com.spp.pages.EditPerquisitesSweeper;
 import com.spp.pages.EditPerquisitesTaxPaidByEmployer;
 import com.spp.pages.EditPerquisitesUseofmovableassetsbyemployees;
-//import com.spp.pages.EditPerquisitesUserDefined2;
+import com.spp.pages.EditPerquisitesUserDefined2;
 import com.spp.pages.EditPerquisitesWatchman;
 import com.spp.pages.EditPerquisitesWater;
+//import com.spp.pages.EditVIADeductionsContributionstoPensionfundsfromcentralgovernmentemployer80CCD2;
+//import com.spp.pages.EditVIADeductionsContributionstopensionfundsfromtheassessee80CCD1B;
+//import com.spp.pages.EditVIADeductionsExpensesonmedicaltreatmentMaintenanceetconHandicappeddependents80DD;
+//import com.spp.pages.EditVIADeductionsInvestmentmadeunderanequitysavingsscheme80CCG;
+//import com.spp.pages.EditVIADeductionsMedicalinsurancepremiumpaid80D;
+//import com.spp.pages.EditVIADeductionsMedicalinsurancepremiumpaid80DForparents;
+//import com.spp.pages.EditVIADeductionsMedicalinsurancepremiumpaid80DForparentsIncaseifVeryseniorcitizen;
+//import com.spp.pages.EditVIADeductionsMedicalinsurancepremiumpaid80DSenior;
+//import com.spp.pages.EditVIADeductionsMedicalinsurancepremiumpaid80DSeniorForparents;
+//import com.spp.pages.EditVIADeductionsMedicalinsurancepremiumpaid80DSeniorIncaseifVeryseniorcitizen;
+//import com.spp.pages.EditVIADeductionsContributionstoPensionfundsfromcentralgovernmentemployees80CCD1;
+//import com.spp.pages.EditVIADeductionsDeductionsinrespectofspecifiedinvestmentssavings80C;
+//import com.spp.pages.EditVIDeductionsContributionstospecifiedpensionfunds80CCC;
 //import com.spp.pages.EditVIADeductionsDeductionsinrespectofspecifiedinvestmentssavings80C;
 //import com.spp.pages.EditnameOTHERSUserDefined;
 import com.spp.pages.EditnameOtherAllowance;
 import com.spp.pages.EditnameOtherPerquisites;
 //import com.spp.pages.EditnameOthers;
 import com.spp.pages.EditnameUserDefined;
-//import com.spp.pages.EditnameUserDefined2;
+import com.spp.pages.EditnameUserDefined2;
 import com.spp.pages.SelectLimitBorderAreaRemoteAreaAllowance;
 import com.spp.pages.SelectLimitDifficultAreaOrDisturbedAreaAllowance;
 import com.spp.pages.SelectLimitHighAltitudeAllowance;
@@ -1593,7 +1606,7 @@ public class ComputationDetails extends BaseTest {
 		String i=ab.getMessage();
 		Assert.assertEquals(i, "Updated successfully.");
 	}
-	/*@Test(priority=65)
+	@Test(priority=65)
 	public void EditPerquisitesUserDefined2_SC_1121() throws Exception{
 		EditPerquisitesUserDefined2 ab=new EditPerquisitesUserDefined2(driver);
 		ab.ClickTDS();
@@ -1632,8 +1645,7 @@ public class ComputationDetails extends BaseTest {
 		Thread.sleep(2000);
 		String i=ab.getMessage();
 		Assert.assertEquals(i, "Updated successfully.");
-	}*/
-	
+	}
 	@Test(priority=67)
 	public void EditnameUserDefined_SC_1123() throws Exception{
 		EditnameUserDefined ab=new EditnameUserDefined(driver);
@@ -1788,8 +1800,8 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickDetails();
 		Thread.sleep(2000);
 		ab.ClickOthersTab();
-	}
-	/*@Test(priority=74)
+	}*/
+	@Test(priority=74)
 	public void EditOthersSalaryPaidtoForeignDeplomatExemptFromSalary_SC_1130() throws Exception{
 		EditOthersSalaryPaidtoForeignDeplomatExemptFromSalary ab=new EditOthersSalaryPaidtoForeignDeplomatExemptFromSalary(driver);
 		ab.ClickTDS();
@@ -1950,7 +1962,7 @@ public class ComputationDetails extends BaseTest {
 		Thread.sleep(2000);
 		ab.ClickOthersTab();
 	}
-	@Test(priority=81)
+	/*@Test(priority=81)
 	public void EditOthersCommutationOfPension_SC_1137() throws Exception{
 		EditOthersCommutationOfPension ab=new EditOthersCommutationOfPension(driver);
 		ab.ClickTDS();
@@ -2110,11 +2122,276 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickDetails();
 		Thread.sleep(2000);
 		ab.ClickOthersTab();
-	}*/
-	/*@Test(priority=88)
+	}
+	@Test(priority=88)
 	public void EditVIADeductionsDeductionsinrespectofspecifiedinvestmentssavings80C_SC_1144() throws Exception{
 		EditVIADeductionsDeductionsinrespectofspecifiedinvestmentssavings80C ab=new EditVIADeductionsDeductionsinrespectofspecifiedinvestmentssavings80C(driver);
-		
-	}*/
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickVIDeduction();
+		Thread.sleep(3000);
+		ab.ClickDeductions();
+		Thread.sleep(2000);
+		ab.EnterDate("01 May 2019");
+		ab.SelectParticulars("Annuity plan of LIC");
+		ab.EnterGrossAmount("5");
+		ab.EnterProofAmount("3");
+		ab.EnterRemarks("Done");
+		ab.clickSave();
+		//String i=ab.getMessage();
+		//Assert.assertEquals(i, "Saved successfully.");
+		Thread.sleep(2000);
+		ab.ClickDelete();
+		ab.clickSave();
+	}
+	@Test(priority=89)
+	public void EditVIDeductionsContributionstospecifiedpensionfunds80CCC_SC_1145() throws Exception{
+		EditVIDeductionsContributionstospecifiedpensionfunds80CCC ab=new EditVIDeductionsContributionstospecifiedpensionfunds80CCC(driver);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickVIDeduction();
+		Thread.sleep(3000);
+		ab.ClickDeductions();
+		Thread.sleep(2000);
+		ab.EnterGrossAmt("30");
+		ab.EnterNarrations("Done");
+		ab.ClickSaveBtn();
+		String i=ab.getMessage();
+		Assert.assertEquals(i, "Saved successfully.");
+	}
+	@Test(priority=90)
+	public void EditVIADeductionsContributionstoPensionfundsfromcentralgovernmentemployees80CCD1_SC_1146() throws Exception{
+		EditVIADeductionsContributionstoPensionfundsfromcentralgovernmentemployees80CCD1 ab=new EditVIADeductionsContributionstoPensionfundsfromcentralgovernmentemployees80CCD1(driver);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickVIDeduction();
+		Thread.sleep(3000);
+		ab.ClickDeductions();
+		Thread.sleep(2000);
+		ab.EnterGrossAmt("30");
+		ab.EnterNarrations("Done");
+		ab.ClickSaveBtn();
+		String i=ab.getMessage();
+		Assert.assertEquals(i, "Saved successfully.");
+	}
+	@Test(priority=91)
+	public void EditVIADeductionsContributionstoPensionfundsfromcentralgovernmentemployer80CCD2_SC_1147() throws Exception{
+		EditVIADeductionsContributionstoPensionfundsfromcentralgovernmentemployer80CCD2 ab=new EditVIADeductionsContributionstoPensionfundsfromcentralgovernmentemployer80CCD2(driver);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickVIDeduction();
+		Thread.sleep(3000);
+		ab.ClickDeductions();
+		Thread.sleep(2000);
+		ab.EnterGrossAmt("30");
+		ab.EnterNarrations("Done");
+		ab.ClickSaveBtn();
+		String i=ab.getMessage();
+		Assert.assertEquals(i, "Saved successfully.");
+	}
+	@Test(priority=92)
+	public void EditVIADeductionsContributionstopensionfundsfromtheassessee80CCD1B_SC_1148() throws Exception{
+		EditVIADeductionsContributionstopensionfundsfromtheassessee80CCD1B ab=new EditVIADeductionsContributionstopensionfundsfromtheassessee80CCD1B(driver);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickVIDeduction();
+		Thread.sleep(3000);
+		ab.ClickDeductions();
+		Thread.sleep(2000);
+		ab.EnterGrossAmt("30");
+		ab.EnterNarrations("Done");
+		ab.ClickSaveBtn();
+		String i=ab.getMessage();
+		Assert.assertEquals(i, "Saved successfully.");
+	}
+	@Test(priority=93)
+	public void EditVIADeductionsInvestmentmadeunderanequitysavingsscheme80CCG_SC_1149() throws Exception{
+		EditVIADeductionsInvestmentmadeunderanequitysavingsscheme80CCG ab=new EditVIADeductionsInvestmentmadeunderanequitysavingsscheme80CCG(driver);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickVIDeduction();
+		Thread.sleep(3000);
+		ab.ClickDeductions();
+		Thread.sleep(2000);
+		ab.EnterGrossAmt("30");
+		ab.EnterNarrations("Done");
+		ab.ClickSaveBtn();
+		String i=ab.getMessage();
+		Assert.assertEquals(i, "Saved successfully.");
+	}
+	@Test(priority=94)
+	public void EditVIADeductionsMedicalinsurancepremiumpaid80D_SC_1150() throws Exception{
+		EditVIADeductionsMedicalinsurancepremiumpaid80D ab=new EditVIADeductionsMedicalinsurancepremiumpaid80D(driver);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickVIDeduction();
+		Thread.sleep(3000);
+		ab.ClickDeductions();
+		Thread.sleep(2000);
+		ab.EnterHealthInsurancePremium("20");
+		ab.EnterPreventiveHealthCheckup("10");
+		ab.Clickcompute();
+		String j=ab.getMessage();
+		Assert.assertEquals(j, "Qualifying Amount Calculated");
+		Thread.sleep(2000);
+		ab.ClickSaveBtn();
+		String i=ab.getMessage();
+		Assert.assertEquals(i, "Saved successfully.");
+	}
+	@Test(priority=95)
+	public void EditVIADeductionsMedicalinsurancepremiumpaid80DSenior_SC_1151() throws Exception{
+		EditVIADeductionsMedicalinsurancepremiumpaid80DSenior ab=new EditVIADeductionsMedicalinsurancepremiumpaid80DSenior(driver);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickVIDeduction();
+		Thread.sleep(3000);
+		ab.ClickDeductions();
+		Thread.sleep(2000);
+		ab.CheckboxSenior();
+		ab.EnterHealthInsurancePremium("20");
+		ab.EnterPreventiveHealthCheckup("10");
+		ab.Clickcompute();
+		String j=ab.getMessage();
+		Assert.assertEquals(j, "Qualifying Amount Calculated");
+		Thread.sleep(2000);
+		ab.ClickSaveBtn();
+		String i=ab.getMessage();
+		Assert.assertEquals(i, "Saved successfully.");
+	}
+	@Test(priority=96)
+	public void EditVIADeductionsMedicalinsurancepremiumpaid80DForparents_SC_1152() throws Exception{
+		EditVIADeductionsMedicalinsurancepremiumpaid80DForparents ab=new EditVIADeductionsMedicalinsurancepremiumpaid80DForparents(driver);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickVIDeduction();
+		Thread.sleep(3000);
+		ab.ClickDeductions();
+		Thread.sleep(2000);
+		ab.EnterHealthInsurancePremium("20");
+		ab.EnterPreventiveHealthCheckup("10");
+		ab.Clickcompute();
+		String j=ab.getMessage();
+		Assert.assertEquals(j, "Qualifying Amount Calculated");
+		Thread.sleep(2000);
+		ab.ClickSaveBtn();
+		String i=ab.getMessage();
+		Assert.assertEquals(i, "Saved successfully.");
+	}
+	@Test(priority=97)
+	public void EditVIADeductionsMedicalinsurancepremiumpaid80DSeniorForparents_SC_1153() throws Exception{
+		EditVIADeductionsMedicalinsurancepremiumpaid80DSeniorForparents ab=new EditVIADeductionsMedicalinsurancepremiumpaid80DSeniorForparents(driver);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickVIDeduction();
+		Thread.sleep(3000);
+		ab.ClickDeductions();
+		Thread.sleep(2000);
+		ab.CheckboxSenior();
+		ab.EnterHealthInsurancePremium("20");
+		ab.EnterPreventiveHealthCheckup("10");
+		ab.Clickcompute();
+		String j=ab.getMessage();
+		Assert.assertEquals(j, "Qualifying Amount Calculated");
+		Thread.sleep(2000);
+		ab.ClickSaveBtn();
+		String i=ab.getMessage();
+		Assert.assertEquals(i, "Saved successfully.");
+	}
+	@Test(priority=98)
+	public void EditVIADeductionsMedicalinsurancepremiumpaid80DSeniorIncaseifVeryseniorcitizen_SC_1154() throws Exception{
+		EditVIADeductionsMedicalinsurancepremiumpaid80DSeniorIncaseifVeryseniorcitizen ab=new EditVIADeductionsMedicalinsurancepremiumpaid80DSeniorIncaseifVeryseniorcitizen(driver);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickVIDeduction();
+		Thread.sleep(3000);
+		ab.ClickDeductions();
+		Thread.sleep(2000);
+		ab.CheckboxSenior();
+		ab.EnterHealthInsurancePremium("20");
+		ab.EnterPreventiveHealthCheckup("10");
+		ab.EnterMedicalExpenditure("5000");
+		ab.Clickcompute();
+		String j=ab.getMessage();
+		Assert.assertEquals(j, "Qualifying Amount Calculated");
+		Thread.sleep(2000);
+		ab.ClickSaveBtn();
+		String i=ab.getMessage();
+		Assert.assertEquals(i, "Saved successfully.");
+	}
+	@Test(priority=99)
+	public void EditVIADeductionsMedicalinsurancepremiumpaid80DForparentsIncaseifVeryseniorcitizen_SC_1155() throws Exception{
+		EditVIADeductionsMedicalinsurancepremiumpaid80DForparentsIncaseifVeryseniorcitizen ab=new EditVIADeductionsMedicalinsurancepremiumpaid80DForparentsIncaseifVeryseniorcitizen(driver);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickVIDeduction();
+		Thread.sleep(3000);
+		ab.ClickDeductions();
+		Thread.sleep(2000);
+		ab.CheckboxSenior();
+		ab.EnterHealthInsurancePremium("20");
+		ab.EnterPreventiveHealthCheckup("10");
+		ab.EnterMedicalExpenditure("5000");
+		ab.Clickcompute();
+		String j=ab.getMessage();
+		Assert.assertEquals(j, "Qualifying Amount Calculated");
+		Thread.sleep(2000);
+		ab.ClickSaveBtn();
+		String i=ab.getMessage();
+		Assert.assertEquals(i, "Saved successfully.");
+	}
+	@Test(priority=100)
+	public void EditVIADeductionsExpensesonmedicaltreatmentMaintenanceetconHandicappeddependents80DD_SC_1156() throws Exception{
+		EditVIADeductionsExpensesonmedicaltreatmentMaintenanceetconHandicappeddependents80DD ab=new EditVIADeductionsExpensesonmedicaltreatmentMaintenanceetconHandicappeddependents80DD(driver);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickVIDeduction();
+		Thread.sleep(3000);
+		ab.ClickDeductions();
+		Thread.sleep(2000);
+		ab.EnterNarrations("Done-24");
+		ab.clickSaveBtn();
+		String i=ab.getMessage();
+		Assert.assertEquals(i, "Saved successfully.");
+		}*/
 }
+
 	
