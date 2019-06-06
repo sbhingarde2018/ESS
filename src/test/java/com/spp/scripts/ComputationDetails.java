@@ -36,21 +36,21 @@ import com.spp.pages.EditMainComponentsDANotformingpartofsalary;
 import com.spp.pages.EditOthersAdvanceSalary;
 import com.spp.pages.EditOthersAmountReceivedFromUnrecognizedProvidentFund;
 import com.spp.pages.EditOthersAmountReceivedOnKeymenInsuranceIncludingBonus;
-//import com.spp.pages.EditOthersAmountReceivedOnVoluntaryRetirement;
+import com.spp.pages.EditOthersAmountReceivedOnVoluntaryRetirement;
 import com.spp.pages.EditOthersArrearsSalary;
 import com.spp.pages.EditOthersBonus;
 import com.spp.pages.EditOthersCommissionReceived;
-//import com.spp.pages.EditOthersCommutationOfPension;
+import com.spp.pages.EditOthersCommutationOfPension;
 import com.spp.pages.EditOthersGratuity;
 import com.spp.pages.EditOthersLeaveEncashmentInService;
 import com.spp.pages.EditOthersLeaveEncashmentOnRetirement;
-//import com.spp.pages.EditOthersOthers;
+import com.spp.pages.EditOthersOthers;
 import com.spp.pages.EditOthersPensionReceived;
 import com.spp.pages.EditOthersProfitInlieuofSalary;
-//import com.spp.pages.EditOthersRetrenchmentCompensation;
+import com.spp.pages.EditOthersRetrenchmentCompensation;
 import com.spp.pages.EditOthersSalaryPaidtoForeignDeplomatExemptFromSalary;
 import com.spp.pages.EditOthersSalaryReceivedFromUNO;
-//import com.spp.pages.EditOthersUserDefined2;
+import com.spp.pages.EditOthersUserDefined2;
 import com.spp.pages.EditPerquisitesClubExpenses;
 import com.spp.pages.EditPerquisitesCarOtherAutomotive;
 import com.spp.pages.EditPerquisitesLeaveTravelConcession;
@@ -1800,7 +1800,7 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickDetails();
 		Thread.sleep(2000);
 		ab.ClickOthersTab();
-	}*/
+	}
 	@Test(priority=74)
 	public void EditOthersSalaryPaidtoForeignDeplomatExemptFromSalary_SC_1130() throws Exception{
 		EditOthersSalaryPaidtoForeignDeplomatExemptFromSalary ab=new EditOthersSalaryPaidtoForeignDeplomatExemptFromSalary(driver);
@@ -1961,8 +1961,8 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickDetails();
 		Thread.sleep(2000);
 		ab.ClickOthersTab();
-	}
-	/*@Test(priority=81)
+	}*/
+	@Test(priority=81)
 	public void EditOthersCommutationOfPension_SC_1137() throws Exception{
 		EditOthersCommutationOfPension ab=new EditOthersCommutationOfPension(driver);
 		ab.ClickTDS();
@@ -2077,7 +2077,7 @@ public class ComputationDetails extends BaseTest {
 		Thread.sleep(2000);
 		ab.ClickOthersTab();
 	}
-	@Test(priority=86)
+	/*@Test(priority=86)
 	public void EditnameOthers_SC_1142() throws Exception{
 		EditnameOthers ab=new EditnameOthers(driver);
 		ab.ClickTDS();
