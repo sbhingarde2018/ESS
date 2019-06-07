@@ -79,8 +79,8 @@ import com.spp.pages.EditPerquisitesUseofmovableassetsbyemployees;
 import com.spp.pages.EditPerquisitesUserDefined2;
 import com.spp.pages.EditPerquisitesWatchman;
 import com.spp.pages.EditPerquisitesWater;
-//import com.spp.pages.EditVIADeductionsContributionstoPensionfundsfromcentralgovernmentemployer80CCD2;
-//import com.spp.pages.EditVIADeductionsContributionstopensionfundsfromtheassessee80CCD1B;
+import com.spp.pages.EditVIADeductionsContributionstoPensionfundsfromcentralgovernmentemployer80CCD2;
+import com.spp.pages.EditVIADeductionsContributionstopensionfundsfromtheassessee80CCD1B;
 //import com.spp.pages.EditVIADeductionsExpensesonmedicaltreatmentMaintenanceetconHandicappeddependents80DD;
 //import com.spp.pages.EditVIADeductionsInvestmentmadeunderanequitysavingsscheme80CCG;
 //import com.spp.pages.EditVIADeductionsMedicalinsurancepremiumpaid80D;
@@ -89,14 +89,14 @@ import com.spp.pages.EditPerquisitesWater;
 //import com.spp.pages.EditVIADeductionsMedicalinsurancepremiumpaid80DSenior;
 //import com.spp.pages.EditVIADeductionsMedicalinsurancepremiumpaid80DSeniorForparents;
 //import com.spp.pages.EditVIADeductionsMedicalinsurancepremiumpaid80DSeniorIncaseifVeryseniorcitizen;
-//import com.spp.pages.EditVIADeductionsContributionstoPensionfundsfromcentralgovernmentemployees80CCD1;
+import com.spp.pages.EditVIADeductionsContributionstoPensionfundsfromcentralgovernmentemployees80CCD1;
+import com.spp.pages.EditVIADeductionsDeductionsinrespectofspecifiedinvestmentssavings80C;
+import com.spp.pages.EditVIDeductionsContributionstospecifiedpensionfunds80CCC;
 //import com.spp.pages.EditVIADeductionsDeductionsinrespectofspecifiedinvestmentssavings80C;
-//import com.spp.pages.EditVIDeductionsContributionstospecifiedpensionfunds80CCC;
-//import com.spp.pages.EditVIADeductionsDeductionsinrespectofspecifiedinvestmentssavings80C;
-//import com.spp.pages.EditnameOTHERSUserDefined;
+import com.spp.pages.EditnameOTHERSUserDefined;
 import com.spp.pages.EditnameOtherAllowance;
 import com.spp.pages.EditnameOtherPerquisites;
-//import com.spp.pages.EditnameOthers;
+import com.spp.pages.EditnameOthers;
 import com.spp.pages.EditnameUserDefined;
 import com.spp.pages.EditnameUserDefined2;
 import com.spp.pages.SelectLimitBorderAreaRemoteAreaAllowance;
@@ -1961,7 +1961,7 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickDetails();
 		Thread.sleep(2000);
 		ab.ClickOthersTab();
-	}*/
+	}
 	@Test(priority=81)
 	public void EditOthersCommutationOfPension_SC_1137() throws Exception{
 		EditOthersCommutationOfPension ab=new EditOthersCommutationOfPension(driver);
@@ -2076,8 +2076,8 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickDetails();
 		Thread.sleep(2000);
 		ab.ClickOthersTab();
-	}
-	/*@Test(priority=86)
+	}*/
+	@Test(priority=86)
 	public void EditnameOthers_SC_1142() throws Exception{
 		EditnameOthers ab=new EditnameOthers(driver);
 		ab.ClickTDS();
@@ -2163,7 +2163,7 @@ public class ComputationDetails extends BaseTest {
 		ab.EnterNarrations("Done");
 		ab.ClickSaveBtn();
 		String i=ab.getMessage();
-		Assert.assertEquals(i, "Saved successfully.");
+		Assert.assertEquals(i, "Saved Successfully.");
 	}
 	@Test(priority=90)
 	public void EditVIADeductionsContributionstoPensionfundsfromcentralgovernmentemployees80CCD1_SC_1146() throws Exception{
@@ -2181,7 +2181,7 @@ public class ComputationDetails extends BaseTest {
 		ab.EnterNarrations("Done");
 		ab.ClickSaveBtn();
 		String i=ab.getMessage();
-		Assert.assertEquals(i, "Saved successfully.");
+		Assert.assertEquals(i, "Saved Successfully.");
 	}
 	@Test(priority=91)
 	public void EditVIADeductionsContributionstoPensionfundsfromcentralgovernmentemployer80CCD2_SC_1147() throws Exception{
@@ -2199,7 +2199,7 @@ public class ComputationDetails extends BaseTest {
 		ab.EnterNarrations("Done");
 		ab.ClickSaveBtn();
 		String i=ab.getMessage();
-		Assert.assertEquals(i, "Saved successfully.");
+		Assert.assertEquals(i, "Saved Successfully.");
 	}
 	@Test(priority=92)
 	public void EditVIADeductionsContributionstopensionfundsfromtheassessee80CCD1B_SC_1148() throws Exception{
@@ -2217,9 +2217,9 @@ public class ComputationDetails extends BaseTest {
 		ab.EnterNarrations("Done");
 		ab.ClickSaveBtn();
 		String i=ab.getMessage();
-		Assert.assertEquals(i, "Saved successfully.");
+		Assert.assertEquals(i, "Saved Successfully.");
 	}
-	@Test(priority=93)
+	/*@Test(priority=93)
 	public void EditVIADeductionsInvestmentmadeunderanequitysavingsscheme80CCG_SC_1149() throws Exception{
 		EditVIADeductionsInvestmentmadeunderanequitysavingsscheme80CCG ab=new EditVIADeductionsInvestmentmadeunderanequitysavingsscheme80CCG(driver);
 		ab.ClickTDS();
