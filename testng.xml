@@ -4,7 +4,7 @@
   <test name="Test">
     <classes>
     
-   <!--  <class name="com.spp.scripts.Computation"/>-->
+   <class name="com.spp.scripts.Computation"/>
    <class name="com.spp.scripts.ComputationDetails"/>
    <!--<class name="com.spp.scripts.ApplyLeave"/>
    <class name="com.spp.scripts.LeaveEncashment"/>

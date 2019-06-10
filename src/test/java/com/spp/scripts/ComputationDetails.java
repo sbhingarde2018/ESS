@@ -108,7 +108,7 @@ import com.spp.pages.SelectLimitSpecialCompensatoryHillyAreaAllowance;
 import com.spp.pages.SelectLimitUncongenialClimateAllowance;
 
 public class ComputationDetails extends BaseTest {
-	/*@Test(priority=0)
+	@Test(priority=0)
 	public void EditMainComponentBasic_SC_1055() throws Exception{
 		EditMainComponentBasic ab=new EditMainComponentBasic(driver);
 		ab.ClickTDS();
@@ -2076,7 +2076,7 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickDetails();
 		Thread.sleep(2000);
 		ab.ClickOthersTab();
-	}*/
+	}
 	@Test(priority=86)
 	public void EditnameOthers_SC_1142() throws Exception{
 		EditnameOthers ab=new EditnameOthers(driver);
