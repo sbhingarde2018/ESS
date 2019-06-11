@@ -4,83 +4,6 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import com.spp.common.BaseTest;
 import com.spp.generics.Utility;
-import com.spp.pages.EditAllowancesAllowanceForRenderingServicesOutsideIndia;
-import com.spp.pages.EditAllowancesAllowanceReceivedByEmployeeOfUNO;
-import com.spp.pages.EditAllowancesAllowanceToHighCourtJudge;
-import com.spp.pages.EditAllowancesAllowanceforTransportEmployees;
-import com.spp.pages.EditAllowancesBorderAreaRemoteAreaAllowance;
-import com.spp.pages.EditAllowancesChildrenHostelAllowance;
-import com.spp.pages.EditAllowancesCompensatoryFieldAreaAllowance;
-import com.spp.pages.EditAllowancesCompensatoryModifiedFieldAreaAllowance;
-import com.spp.pages.EditAllowancesConveyanceTransportAllowance;
-import com.spp.pages.EditAllowancesCounterInsurgencyAllowanceGrantedToMembersofArmedForces;
-import com.spp.pages.EditAllowancesDifficultAreaOrDisturbedAreaAllowance;
-import com.spp.pages.EditAllowancesEntertainmentAllowance;
-import com.spp.pages.EditAllowancesHighAltitudeAllowance;
-import com.spp.pages.EditAllowancesHighAltitudeAllowanceforarmedforces;
-import com.spp.pages.EditAllowancesHouseRentAllowance;
-import com.spp.pages.EditAllowancesIslandDutyAllowance;
-import com.spp.pages.EditAllowancesOtherAllowance;
-import com.spp.pages.EditAllowancesSnowBoundAreaOrAvalancheAllowance;
-import com.spp.pages.EditAllowancesSpecialCompensatoryHighlyActiveFieldAreaAllowance;
-import com.spp.pages.EditAllowancesSpecialCompensatoryHillyAreaAllowance;
-import com.spp.pages.EditAllowancesSumptuaryAllowanceHCSCJudges;
-import com.spp.pages.EditAllowancesTribalAreaScheduledAreaAgencyAreaAllowance;
-import com.spp.pages.EditAllowancesUncongenialClimateAllowance;
-import com.spp.pages.EditAllowancesUndergroundAllowance;
-import com.spp.pages.EditAllowancesUserDefined;
-import com.spp.pages.EditMainComponentBasic;
-import com.spp.pages.EditMainComponentsCommisionasaofturnover;
-import com.spp.pages.EditMainComponentsDAFormingpartofsalary;
-import com.spp.pages.EditMainComponentsDANotformingpartofsalary;
-import com.spp.pages.EditOthersAdvanceSalary;
-import com.spp.pages.EditOthersAmountReceivedFromUnrecognizedProvidentFund;
-import com.spp.pages.EditOthersAmountReceivedOnKeymenInsuranceIncludingBonus;
-import com.spp.pages.EditOthersAmountReceivedOnVoluntaryRetirement;
-import com.spp.pages.EditOthersArrearsSalary;
-import com.spp.pages.EditOthersBonus;
-import com.spp.pages.EditOthersCommissionReceived;
-import com.spp.pages.EditOthersCommutationOfPension;
-import com.spp.pages.EditOthersGratuity;
-import com.spp.pages.EditOthersLeaveEncashmentInService;
-import com.spp.pages.EditOthersLeaveEncashmentOnRetirement;
-import com.spp.pages.EditOthersOthers;
-import com.spp.pages.EditOthersPensionReceived;
-import com.spp.pages.EditOthersProfitInlieuofSalary;
-import com.spp.pages.EditOthersRetrenchmentCompensation;
-import com.spp.pages.EditOthersSalaryPaidtoForeignDeplomatExemptFromSalary;
-import com.spp.pages.EditOthersSalaryReceivedFromUNO;
-import com.spp.pages.EditOthersUserDefined2;
-import com.spp.pages.EditPerquisitesClubExpenses;
-import com.spp.pages.EditPerquisitesCarOtherAutomotive;
-import com.spp.pages.EditPerquisitesLeaveTravelConcession;
-import com.spp.pages.EditPerquisitesElectricity;
-import com.spp.pages.EditPerquisitesEmployerContributionToPF;
-import com.spp.pages.EditPerquisitesFeespaidthroughCreditCard;
-import com.spp.pages.EditPerquisitesFreeEducationforhouseholdmembers;
-import com.spp.pages.EditPerquisitesFreeeducationforEmployeesChildren;
-import com.spp.pages.EditPerquisitesFreefoodandnonalcoholicbeverges;
-import com.spp.pages.EditPerquisitesGardener;
-import com.spp.pages.EditPerquisitesGas;
-import com.spp.pages.EditPerquisitesGiftsVouchers;
-import com.spp.pages.EditPerquisitesHolidayExpenses;
-import com.spp.pages.EditPerquisitesHotelAccommodation;
-import com.spp.pages.EditPerquisitesInterestCreditPF;
-import com.spp.pages.EditPerquisitesInterestfreeorconcessionalloans;
-import com.spp.pages.EditPerquisitesMedical;
-import com.spp.pages.EditPerquisitesOtherPerquisites;
-import com.spp.pages.EditPerquisitesPersonalAttendant;
-import com.spp.pages.EditPerquisitesRentFreeAccommodation;
-import com.spp.pages.EditPerquisitesStockOptionsnonqualifiedoptions;
-import com.spp.pages.EditPerquisitesSuperannuation;
-import com.spp.pages.EditPerquisitesSweeper;
-import com.spp.pages.EditPerquisitesTaxPaidByEmployer;
-import com.spp.pages.EditPerquisitesUseofmovableassetsbyemployees;
-import com.spp.pages.EditPerquisitesUserDefined2;
-import com.spp.pages.EditPerquisitesWatchman;
-import com.spp.pages.EditPerquisitesWater;
-import com.spp.pages.EditVIADeductionsContributionstoPensionfundsfromcentralgovernmentemployer80CCD2;
-import com.spp.pages.EditVIADeductionsContributionstopensionfundsfromtheassessee80CCD1B;
 //import com.spp.pages.EditVIADeductionsExpensesonmedicaltreatmentMaintenanceetconHandicappeddependents80DD;
 //import com.spp.pages.EditVIADeductionsInvestmentmadeunderanequitysavingsscheme80CCG;
 //import com.spp.pages.EditVIADeductionsMedicalinsurancepremiumpaid80D;
@@ -89,26 +12,11 @@ import com.spp.pages.EditVIADeductionsContributionstopensionfundsfromtheassessee
 //import com.spp.pages.EditVIADeductionsMedicalinsurancepremiumpaid80DSenior;
 //import com.spp.pages.EditVIADeductionsMedicalinsurancepremiumpaid80DSeniorForparents;
 //import com.spp.pages.EditVIADeductionsMedicalinsurancepremiumpaid80DSeniorIncaseifVeryseniorcitizen;
-import com.spp.pages.EditVIADeductionsContributionstoPensionfundsfromcentralgovernmentemployees80CCD1;
-import com.spp.pages.EditVIADeductionsDeductionsinrespectofspecifiedinvestmentssavings80C;
-import com.spp.pages.EditVIDeductionsContributionstospecifiedpensionfunds80CCC;
 //import com.spp.pages.EditVIADeductionsDeductionsinrespectofspecifiedinvestmentssavings80C;
-import com.spp.pages.EditnameOTHERSUserDefined;
-import com.spp.pages.EditnameOtherAllowance;
-import com.spp.pages.EditnameOtherPerquisites;
-import com.spp.pages.EditnameOthers;
-import com.spp.pages.EditnameUserDefined;
-import com.spp.pages.EditnameUserDefined2;
-import com.spp.pages.SelectLimitBorderAreaRemoteAreaAllowance;
-import com.spp.pages.SelectLimitDifficultAreaOrDisturbedAreaAllowance;
-import com.spp.pages.SelectLimitHighAltitudeAllowance;
-import com.spp.pages.SelectLimitHighAltitudeAllowanceforarmedforces;
-import com.spp.pages.SelectLimitSnowBoundAreaOrAvalancheAllowance;
-import com.spp.pages.SelectLimitSpecialCompensatoryHillyAreaAllowance;
-import com.spp.pages.SelectLimitUncongenialClimateAllowance;
+import com.spp.pages.*;
 
 public class ComputationDetails extends BaseTest {
-	@Test(priority=0)
+	/*@Test(priority=0)
 	public void EditMainComponentBasic_SC_1055() throws Exception{
 		EditMainComponentBasic ab=new EditMainComponentBasic(driver);
 		ab.ClickTDS();
@@ -2218,8 +2126,8 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickSaveBtn();
 		String i=ab.getMessage();
 		Assert.assertEquals(i, "Saved Successfully.");
-	}
-	/*@Test(priority=93)
+	}*/
+	@Test(priority=93)
 	public void EditVIADeductionsInvestmentmadeunderanequitysavingsscheme80CCG_SC_1149() throws Exception{
 		EditVIADeductionsInvestmentmadeunderanequitysavingsscheme80CCG ab=new EditVIADeductionsInvestmentmadeunderanequitysavingsscheme80CCG(driver);
 		ab.ClickTDS();
@@ -2235,7 +2143,7 @@ public class ComputationDetails extends BaseTest {
 		ab.EnterNarrations("Done");
 		ab.ClickSaveBtn();
 		String i=ab.getMessage();
-		Assert.assertEquals(i, "Saved successfully.");
+		Assert.assertEquals(i, "Saved Successfully.");
 	}
 	@Test(priority=94)
 	public void EditVIADeductionsMedicalinsurancepremiumpaid80D_SC_1150() throws Exception{
@@ -2254,10 +2162,10 @@ public class ComputationDetails extends BaseTest {
 		ab.Clickcompute();
 		String j=ab.getMessage();
 		Assert.assertEquals(j, "Qualifying Amount Calculated");
-		Thread.sleep(2000);
+		Thread.sleep(5000);
 		ab.ClickSaveBtn();
-		String i=ab.getMessage();
-		Assert.assertEquals(i, "Saved successfully.");
+		//String i=ab.getMessage();
+		//Assert.assertEquals(i, "Saved Successfully.");
 	}
 	@Test(priority=95)
 	public void EditVIADeductionsMedicalinsurancepremiumpaid80DSenior_SC_1151() throws Exception{
@@ -2277,10 +2185,14 @@ public class ComputationDetails extends BaseTest {
 		ab.Clickcompute();
 		String j=ab.getMessage();
 		Assert.assertEquals(j, "Qualifying Amount Calculated");
+		Thread.sleep(5000);
+		ab.ClickSaveBtn();
+		//String i=ab.getMessage();
+		//Assert.assertEquals(i, "Saved successfully.");
+		ab.CheckboxSenior();
+		ab.Clickcompute();
 		Thread.sleep(2000);
 		ab.ClickSaveBtn();
-		String i=ab.getMessage();
-		Assert.assertEquals(i, "Saved successfully.");
 	}
 	@Test(priority=96)
 	public void EditVIADeductionsMedicalinsurancepremiumpaid80DForparents_SC_1152() throws Exception{
@@ -2299,10 +2211,10 @@ public class ComputationDetails extends BaseTest {
 		ab.Clickcompute();
 		String j=ab.getMessage();
 		Assert.assertEquals(j, "Qualifying Amount Calculated");
-		Thread.sleep(2000);
+		Thread.sleep(5000);
 		ab.ClickSaveBtn();
-		String i=ab.getMessage();
-		Assert.assertEquals(i, "Saved successfully.");
+		//String i=ab.getMessage();
+		//Assert.assertEquals(i, "Saved successfully.");
 	}
 	@Test(priority=97)
 	public void EditVIADeductionsMedicalinsurancepremiumpaid80DSeniorForparents_SC_1153() throws Exception{
@@ -2322,10 +2234,15 @@ public class ComputationDetails extends BaseTest {
 		ab.Clickcompute();
 		String j=ab.getMessage();
 		Assert.assertEquals(j, "Qualifying Amount Calculated");
+		Thread.sleep(5000);
+		ab.ClickSaveBtn();
+		//String i=ab.getMessage();
+		//Assert.assertEquals(i, "Saved successfully.");
+		Thread.sleep(2000);
+		ab.CheckboxSenior();
+		ab.Clickcompute();
 		Thread.sleep(2000);
 		ab.ClickSaveBtn();
-		String i=ab.getMessage();
-		Assert.assertEquals(i, "Saved successfully.");
 	}
 	@Test(priority=98)
 	public void EditVIADeductionsMedicalinsurancepremiumpaid80DSeniorIncaseifVeryseniorcitizen_SC_1154() throws Exception{
@@ -2348,8 +2265,13 @@ public class ComputationDetails extends BaseTest {
 		Assert.assertEquals(j, "Qualifying Amount Calculated");
 		Thread.sleep(2000);
 		ab.ClickSaveBtn();
-		String i=ab.getMessage();
-		Assert.assertEquals(i, "Saved successfully.");
+		//String i=ab.getMessage();
+		//Assert.assertEquals(i, "Saved successfully.");
+		Thread.sleep(2000);
+		ab.CheckboxSenior();
+		ab.Clickcompute();
+		Thread.sleep(2000);
+		ab.ClickSaveBtn();
 	}
 	@Test(priority=99)
 	public void EditVIADeductionsMedicalinsurancepremiumpaid80DForparentsIncaseifVeryseniorcitizen_SC_1155() throws Exception{
@@ -2372,10 +2294,15 @@ public class ComputationDetails extends BaseTest {
 		Assert.assertEquals(j, "Qualifying Amount Calculated");
 		Thread.sleep(2000);
 		ab.ClickSaveBtn();
-		String i=ab.getMessage();
-		Assert.assertEquals(i, "Saved successfully.");
+		//String i=ab.getMessage();
+		//Assert.assertEquals(i, "Saved successfully.");
+		Thread.sleep(2000);
+		ab.CheckboxSenior();
+		ab.Clickcompute();
+		Thread.sleep(2000);
+		ab.ClickSaveBtn();
 	}
-	@Test(priority=100)
+	/*@Test(priority=100)
 	public void EditVIADeductionsExpensesonmedicaltreatmentMaintenanceetconHandicappeddependents80DD_SC_1156() throws Exception{
 		EditVIADeductionsExpensesonmedicaltreatmentMaintenanceetconHandicappeddependents80DD ab=new EditVIADeductionsExpensesonmedicaltreatmentMaintenanceetconHandicappeddependents80DD(driver);
 		ab.ClickTDS();
@@ -2391,6 +2318,114 @@ public class ComputationDetails extends BaseTest {
 		ab.clickSaveBtn();
 		String i=ab.getMessage();
 		Assert.assertEquals(i, "Saved successfully.");
+		}
+	@Test(priority=101)
+	public void EditVIADeductionsExpensesonmedicaltreatmentMaintenanceetcSeveredisability_SC_1157() throws Exception{
+		EditVIADeductionsExpensesonmedicaltreatmentMaintenanceetcSeveredisability ab=new EditVIADeductionsExpensesonmedicaltreatmentMaintenanceetcSeveredisability(driver);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickVIDeduction();
+		Thread.sleep(3000);
+		ab.ClickDeductions();
+		Thread.sleep(2000);
+		ab.ClickCheckBox1();
+		ab.ClickCheckBox2();
+		Thread.sleep(1000);
+		ab.EnterNarrations("Done-24");
+		ab.clickSaveBtn();
+		String i=ab.getMessage();
+		Assert.assertEquals(i, "Saved successfully.");
+	}
+	@Test(priority=102)
+	public void EditVIADeductionsExpenditureforMedicaltreatment80DDB_SC_1158() throws Exception{
+		EditVIADeductionsExpenditureforMedicaltreatment80DDB ab=new EditVIADeductionsExpenditureforMedicaltreatment80DDB(driver);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickVIDeduction();
+		Thread.sleep(3000);
+		ab.ClickDeductions();
+		Thread.sleep(2000);
+		ab.EnterEditedGrossAmount("10");
+		ab.EnterNarrations("Done-24");
+		ab.clickSaveBtn();
+		String i=ab.getMessage();
+		Assert.assertEquals(i, "Saved successfully.");
+	}
+	@Test(priority=103)
+	public void EditVIADeductionsInterestpaidonhighereducationloan80E_SC_1159() throws Exception{
+		EditVIADeductionsInterestpaidonhighereducationloan80E ab=new EditVIADeductionsInterestpaidonhighereducationloan80E(driver);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickVIDeduction();
+		Thread.sleep(3000);
+		ab.ClickDeductions();
+		Thread.sleep(2000);
+		ab.EnterEditedGrossAmount("10");
+		ab.EnterNarrations("Done-24");
+		ab.clickSaveBtn();
+		String i=ab.getMessage();
+		Assert.assertEquals(i, "Saved successfully.");
+	}
+	@Test(priority=104)
+	public void VIADeductionsDeductioninrespectofinterestonloanstakenforresidentialhouseproperty80EE_SC_1160() throws Exception{
+		VIADeductionsDeductioninrespectofinterestonloanstakenforresidentialhouseproperty80EE ab=new VIADeductionsDeductioninrespectofinterestonloanstakenforresidentialhouseproperty80EE(driver);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickVIDeduction();
+		Thread.sleep(3000);
+		ab.ClickDeductions();
+		Thread.sleep(2000);
+		ab.EnterEditedGrossAmount("10");
+		ab.EnterNarrations("Done-24");
+		ab.clickSaveBtn();
+		String i=ab.getMessage();
+		Assert.assertEquals(i, "Saved successfully.");
+	}
+	@Test(priority=105)
+	public void VIADeductionsDonationstospecifiedfundsInstitutions80G_SC_1161() throws Exception{
+		VIADeductionsDonationstospecifiedfundsInstitutions80G ab=new VIADeductionsDonationstospecifiedfundsInstitutions80G(driver);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickVIDeduction();
+		Thread.sleep(3000);
+		ab.SelectParticulars("National Defence Fund");
+		ab.EnterSalary("0.05");
+		ab.EnterNameoftheDonee("Mr.Iyyer");
+		ab.EnterAddressoftheDonee("5, 8th Cross, 2nd Block, Jayanagar");
+		ab.EnterCity("Bangalore");
+		ab.SelectState("Karnataka");
+		ab.EnterPincode("560026");
+		ab.EnterPanOfDonee("BNZPM2501F");
+		ab.ClickSaveBtn();
+		String i=ab.getMessage();
+		Assert.assertEquals(i, "Saved successfully.");
+		}
+	@Test(priority=106)
+	public void DeleteVIADeductionsDonationstospecifiedfundsInstitutions80G_SC_1162() throws Exception{
+		DeleteVIADeductionsDonationstospecifiedfundsInstitutions80G ab=new DeleteVIADeductionsDonationstospecifiedfundsInstitutions80G(driver);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickVIDeduction();
+		Thread.sleep(3000);
+		ab.ClickDelete();
 		}*/
 }
 
