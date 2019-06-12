@@ -4,18 +4,25 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import com.spp.common.BaseTest;
 import com.spp.generics.Utility;
-//import com.spp.pages.EditVIADeductionsExpensesonmedicaltreatmentMaintenanceetconHandicappeddependents80DD;
-//import com.spp.pages.EditVIADeductionsInvestmentmadeunderanequitysavingsscheme80CCG;
-//import com.spp.pages.EditVIADeductionsMedicalinsurancepremiumpaid80D;
-//import com.spp.pages.EditVIADeductionsMedicalinsurancepremiumpaid80DForparents;
-//import com.spp.pages.EditVIADeductionsMedicalinsurancepremiumpaid80DForparentsIncaseifVeryseniorcitizen;
-//import com.spp.pages.EditVIADeductionsMedicalinsurancepremiumpaid80DSenior;
-//import com.spp.pages.EditVIADeductionsMedicalinsurancepremiumpaid80DSeniorForparents;
-//import com.spp.pages.EditVIADeductionsMedicalinsurancepremiumpaid80DSeniorIncaseifVeryseniorcitizen;
-//import com.spp.pages.EditVIADeductionsDeductionsinrespectofspecifiedinvestmentssavings80C;
-import com.spp.pages.*;
+import com.spp.pages.EditVIADeductionsExpensesonmedicaltreatmentMaintenanceetconHandicappeddependents80DD;
+import com.spp.pages.EditVIADeductionsInterestpaidonhighereducationloan80E;
+import com.spp.pages.EditVIADeductionsInvestmentmadeunderanequitysavingsscheme80CCG;
+import com.spp.pages.EditVIADeductionsMedicalinsurancepremiumpaid80D;
+import com.spp.pages.EditVIADeductionsMedicalinsurancepremiumpaid80DForparents;
+import com.spp.pages.EditVIADeductionsMedicalinsurancepremiumpaid80DForparentsIncaseifVeryseniorcitizen;
+import com.spp.pages.EditVIADeductionsMedicalinsurancepremiumpaid80DSenior;
+import com.spp.pages.EditVIADeductionsMedicalinsurancepremiumpaid80DSeniorForparents;
+import com.spp.pages.EditVIADeductionsMedicalinsurancepremiumpaid80DSeniorIncaseifVeryseniorcitizen;
+import com.spp.pages.VIADeductionsDeductioninrespectofinterestonloanstakenforresidentialhouseproperty80EE;
+import com.spp.pages.VIADeductionsDonationstospecifiedfundsInstitutions80G;
+import com.spp.pages.DeleteVIADeductionsDonationstospecifiedfundsInstitutions80G;
+import com.spp.pages.EditVIADeductionsDeductionsinrespectofspecifiedinvestmentssavings80C;
+import com.spp.pages.EditVIADeductionsExpenditureforMedicaltreatment80DDB;
+import com.spp.pages.EditVIADeductionsExpensesonmedicaltreatmentMaintenanceetcSeveredisability;
+
 
 public class ComputationDetails extends BaseTest {
+	
 	/*@Test(priority=0)
 	public void EditMainComponentBasic_SC_1055() throws Exception{
 		EditMainComponentBasic ab=new EditMainComponentBasic(driver);
@@ -2127,7 +2134,7 @@ public class ComputationDetails extends BaseTest {
 		String i=ab.getMessage();
 		Assert.assertEquals(i, "Saved Successfully.");
 	}*/
-	@Test(priority=93)
+	/*@Test(priority=93)
 	public void EditVIADeductionsInvestmentmadeunderanequitysavingsscheme80CCG_SC_1149() throws Exception{
 		EditVIADeductionsInvestmentmadeunderanequitysavingsscheme80CCG ab=new EditVIADeductionsInvestmentmadeunderanequitysavingsscheme80CCG(driver);
 		ab.ClickTDS();
@@ -2301,8 +2308,8 @@ public class ComputationDetails extends BaseTest {
 		ab.Clickcompute();
 		Thread.sleep(2000);
 		ab.ClickSaveBtn();
-	}
-	/*@Test(priority=100)
+	}*/
+	@Test(priority=100)
 	public void EditVIADeductionsExpensesonmedicaltreatmentMaintenanceetconHandicappeddependents80DD_SC_1156() throws Exception{
 		EditVIADeductionsExpensesonmedicaltreatmentMaintenanceetconHandicappeddependents80DD ab=new EditVIADeductionsExpensesonmedicaltreatmentMaintenanceetconHandicappeddependents80DD(driver);
 		ab.ClickTDS();
@@ -2317,7 +2324,7 @@ public class ComputationDetails extends BaseTest {
 		ab.EnterNarrations("Done-24");
 		ab.clickSaveBtn();
 		String i=ab.getMessage();
-		Assert.assertEquals(i, "Saved successfully.");
+		Assert.assertEquals(i, "Saved Successfully.");
 		}
 	@Test(priority=101)
 	public void EditVIADeductionsExpensesonmedicaltreatmentMaintenanceetcSeveredisability_SC_1157() throws Exception{
@@ -2337,7 +2344,7 @@ public class ComputationDetails extends BaseTest {
 		ab.EnterNarrations("Done-24");
 		ab.clickSaveBtn();
 		String i=ab.getMessage();
-		Assert.assertEquals(i, "Saved successfully.");
+		Assert.assertEquals(i, "Saved Successfully.");
 	}
 	@Test(priority=102)
 	public void EditVIADeductionsExpenditureforMedicaltreatment80DDB_SC_1158() throws Exception{
@@ -2355,7 +2362,7 @@ public class ComputationDetails extends BaseTest {
 		ab.EnterNarrations("Done-24");
 		ab.clickSaveBtn();
 		String i=ab.getMessage();
-		Assert.assertEquals(i, "Saved successfully.");
+		Assert.assertEquals(i, "Saved Successfully.");
 	}
 	@Test(priority=103)
 	public void EditVIADeductionsInterestpaidonhighereducationloan80E_SC_1159() throws Exception{
@@ -2373,7 +2380,7 @@ public class ComputationDetails extends BaseTest {
 		ab.EnterNarrations("Done-24");
 		ab.clickSaveBtn();
 		String i=ab.getMessage();
-		Assert.assertEquals(i, "Saved successfully.");
+		Assert.assertEquals(i, "Saved Successfully.");
 	}
 	@Test(priority=104)
 	public void VIADeductionsDeductioninrespectofinterestonloanstakenforresidentialhouseproperty80EE_SC_1160() throws Exception{
@@ -2391,9 +2398,9 @@ public class ComputationDetails extends BaseTest {
 		ab.EnterNarrations("Done-24");
 		ab.clickSaveBtn();
 		String i=ab.getMessage();
-		Assert.assertEquals(i, "Saved successfully.");
+		Assert.assertEquals(i, "Saved Successfully.");
 	}
-	@Test(priority=105)
+	/*@Test(priority=105)
 	public void VIADeductionsDonationstospecifiedfundsInstitutions80G_SC_1161() throws Exception{
 		VIADeductionsDonationstospecifiedfundsInstitutions80G ab=new VIADeductionsDonationstospecifiedfundsInstitutions80G(driver);
 		ab.ClickTDS();
@@ -2401,6 +2408,7 @@ public class ComputationDetails extends BaseTest {
 		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
+		ab.resizeWindow();
 		ab.ClickVIDeduction();
 		Thread.sleep(3000);
 		ab.SelectParticulars("National Defence Fund");
