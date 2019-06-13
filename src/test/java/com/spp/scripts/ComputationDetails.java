@@ -4,22 +4,15 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import com.spp.common.BaseTest;
 import com.spp.generics.Utility;
-import com.spp.pages.EditVIADeductionsExpensesonmedicaltreatmentMaintenanceetconHandicappeddependents80DD;
-import com.spp.pages.EditVIADeductionsInterestpaidonhighereducationloan80E;
-import com.spp.pages.EditVIADeductionsInvestmentmadeunderanequitysavingsscheme80CCG;
-import com.spp.pages.EditVIADeductionsMedicalinsurancepremiumpaid80D;
-import com.spp.pages.EditVIADeductionsMedicalinsurancepremiumpaid80DForparents;
-import com.spp.pages.EditVIADeductionsMedicalinsurancepremiumpaid80DForparentsIncaseifVeryseniorcitizen;
-import com.spp.pages.EditVIADeductionsMedicalinsurancepremiumpaid80DSenior;
-import com.spp.pages.EditVIADeductionsMedicalinsurancepremiumpaid80DSeniorForparents;
-import com.spp.pages.EditVIADeductionsMedicalinsurancepremiumpaid80DSeniorIncaseifVeryseniorcitizen;
-import com.spp.pages.VIADeductionsDeductioninrespectofinterestonloanstakenforresidentialhouseproperty80EE;
-import com.spp.pages.VIADeductionsDonationstospecifiedfundsInstitutions80G;
-import com.spp.pages.DeleteVIADeductionsDonationstospecifiedfundsInstitutions80G;
-import com.spp.pages.EditVIADeductionsDeductionsinrespectofspecifiedinvestmentssavings80C;
+import com.spp.pages.EditMainComponentBasic;
+import com.spp.pages.EditMainComponentsCommisionasaofturnover;
+import com.spp.pages.EditMainComponentsDAFormingpartofsalary;
+import com.spp.pages.EditMainComponentsDANotformingpartofsalary;
 import com.spp.pages.EditVIADeductionsExpenditureforMedicaltreatment80DDB;
 import com.spp.pages.EditVIADeductionsExpensesonmedicaltreatmentMaintenanceetcSeveredisability;
-
+import com.spp.pages.EditVIADeductionsExpensesonmedicaltreatmentMaintenanceetconHandicappeddependents80DD;
+import com.spp.pages.EditVIADeductionsInterestpaidonhighereducationloan80E;
+import com.spp.pages.VIADeductionsDeductioninrespectofinterestonloanstakenforresidentialhouseproperty80EE;
 
 public class ComputationDetails extends BaseTest {
 	
@@ -2133,8 +2126,8 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickSaveBtn();
 		String i=ab.getMessage();
 		Assert.assertEquals(i, "Saved Successfully.");
-	}*/
-	/*@Test(priority=93)
+	}
+	@Test(priority=93)
 	public void EditVIADeductionsInvestmentmadeunderanequitysavingsscheme80CCG_SC_1149() throws Exception{
 		EditVIADeductionsInvestmentmadeunderanequitysavingsscheme80CCG ab=new EditVIADeductionsInvestmentmadeunderanequitysavingsscheme80CCG(driver);
 		ab.ClickTDS();
@@ -2408,7 +2401,6 @@ public class ComputationDetails extends BaseTest {
 		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
-		ab.resizeWindow();
 		ab.ClickVIDeduction();
 		Thread.sleep(3000);
 		ab.SelectParticulars("National Defence Fund");
@@ -2434,7 +2426,66 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickVIDeduction();
 		Thread.sleep(3000);
 		ab.ClickDelete();
-		}*/
+		}
+	@Test(priority=107)
+	public void DonationsforscientificresearchRuraldevelopmentetc80GGA_SC_1163() throws Exception{
+		DonationsforscientificresearchRuraldevelopmentetc80GGA ab=new DonationsforscientificresearchRuraldevelopmentetc80GGA(driver);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickVIDeduction();
+		Thread.sleep(3000);
+		ab.EnterParticulars("20");
+		ab.EnterGrossAmount("8");
+		ab.ClickSaveBtn();
+	}
+	@Test(priority=108)
+	public void DeleteVIADeductionsDonationsforscientificresearchRuraldevelopmentetc80GGA_SC_1164() throws Exception{
+		DeleteVIADeductionsDonationsforscientificresearchRuraldevelopmentetc80GGA ab=new DeleteVIADeductionsDonationsforscientificresearchRuraldevelopmentetc80GGA(driver);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickVIDeduction();
+		Thread.sleep(3000);
+		ab.ClickDeductions();
+		ab.ClickDelete();
+	}
+	/*@Test(priority=109)
+	public void EditVIADeductionsDeductioninrespectofrentpaid80GG_SC_1165() throws Exception{
+		EditVIADeductionsDeductioninrespectofrentpaid80GG ab=new EditVIADeductionsDeductioninrespectofrentpaid80GG(driver);
+		
+	}
+	@Test(priority=110)
+	public void EditVIADeductionsContributionstopoliticalparties80GGC_SC_1166() throws Exception{
+		EditVIADeductionsContributionstopoliticalparties80GGC ab=new EditVIADeductionsContributionstopoliticalparties80GGC(driver);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickVIDeduction();
+		Thread.sleep(3000);
+		ab.EnterParticulars("10");
+		ab.EnterGrossAmount("10");
+		ab.ClickSaveBtn();
+	}
+	@Test(priority=111)
+	public void DeleteVIADeductionsContributionstopoliticalparties80GGC_SC_1167() throws Exception{
+		DeleteVIADeductionsContributionstopoliticalparties80GGC ab=new DeleteVIADeductionsContributionstopoliticalparties80GGC(driver);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickVIDeduction();
+		Thread.sleep(3000);
+		ab.ClickDeductions();
+		ab.ClickDelete();
+	}*/
 }
 
 	
