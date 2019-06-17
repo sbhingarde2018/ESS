@@ -12,8 +12,15 @@ import com.spp.pages.DeleteVIADeductionsRoyaltyonPatents80RRB;
 import com.spp.pages.DonationsforscientificresearchRuraldevelopmentetc80GGA;
 import com.spp.pages.EditMainComponentBasic;
 import com.spp.pages.EditVIADeductionsContributionstopoliticalparties80GGC;
+import com.spp.pages.EditVIADeductionsDeductioninrespectofinterestincometoseniorcitizen80TTB;
+import com.spp.pages.EditVIADeductionsDeductioninrespectofinterestondepositsinsavingsaccount80TTA;
+import com.spp.pages.EditVIADeductionsIncomeofblindorphysicallyhandicappedindividual80U;
 import com.spp.pages.EditVIADeductionsRoyaltyIncomeetcofAuthorsofcertainbooks80QQB;
 import com.spp.pages.EditVIADeductionsRoyaltyonPatents80RRB;
+import com.spp.pages.SaveIncomeFromOtherSourcesInterestFromBanks;
+import com.spp.pages.SaveIncomeFromOtherSourcesInterestonKVP;
+import com.spp.pages.SaveIncomeFromOtherSourcesInterestonNSC;
+import com.spp.pages.SaveIncomeFromOtherSourcesInterestonSecurities;
 import com.spp.pages.VIADeductionsDonationstospecifiedfundsInstitutions80G;
 
 
@@ -2396,7 +2403,7 @@ public class ComputationDetails extends BaseTest {
 		String i=ab.getMessage();
 		Assert.assertEquals(i, "Saved Successfully.");
 	}*/
-	@Test(priority=105)
+	/*@Test(priority=105)
 	public void VIADeductionsDonationstospecifiedfundsInstitutions80G_SC_1161() throws Exception{
 		VIADeductionsDonationstospecifiedfundsInstitutions80G ab=new VIADeductionsDonationstospecifiedfundsInstitutions80G(driver);
 		ab.ClickTDS();
@@ -2462,7 +2469,7 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickDeductions();
 		Thread.sleep(3000);
 		ab.ClickDelete();
-	}
+	}*/
 	/*@Test(priority=109)
 	public void EditVIADeductionsDeductioninrespectofrentpaid80GG_SC_1165() throws Exception{
 		EditVIADeductionsDeductioninrespectofrentpaid80GG ab=new EditVIADeductionsDeductioninrespectofrentpaid80GG(driver);
@@ -2479,7 +2486,7 @@ public class ComputationDetails extends BaseTest {
 		ab.EnterNoofMonths("2");
 		ab.ClickComputeBtn();
 	}*/
-	@Test(priority=110)
+	/*@Test(priority=110)
 	public void EditVIADeductionsContributionstopoliticalparties80GGC_SC_1166() throws Exception{
 		EditVIADeductionsContributionstopoliticalparties80GGC ab=new EditVIADeductionsContributionstopoliticalparties80GGC(driver);
 		ab.ClickTDS();
@@ -2567,6 +2574,122 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickDeductions();
 		Thread.sleep(3000);
 		ab.ClickDelete();
+	}*/
+	@Test(priority=116)
+	public void EditVIADeductionsIncomeofblindorphysicallyhandicappedindividual80U_SC_1172() throws Exception {
+		EditVIADeductionsIncomeofblindorphysicallyhandicappedindividual80U ab=new EditVIADeductionsIncomeofblindorphysicallyhandicappedindividual80U(driver);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickVIDeduction();
+		Thread.sleep(3000);
+		ab.ClickDeductions();
+		Thread.sleep(3000);
+		ab.EnterEditedGrossAmount("20");
+		ab.EnterNarrations("Done");
+		ab.ClickSaveBtn();
+	}
+	@Test(priority=117)
+	public void EditVIADeductionsDeductioninrespectofinterestondepositsinsavingsaccount80TTA_SC_1173() throws Exception {
+		EditVIADeductionsDeductioninrespectofinterestondepositsinsavingsaccount80TTA ab=new EditVIADeductionsDeductioninrespectofinterestondepositsinsavingsaccount80TTA(driver);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickVIDeduction();
+		Thread.sleep(3000);
+		ab.ClickDeductions();
+		Thread.sleep(3000);
+		ab.EnterEditedGrossAmount("20");
+		ab.EnterNarrations("Done");
+		ab.ClickSaveBtn();
+	}
+	@Test(priority=118)
+	public void EditVIADeductionsDeductioninrespectofinterestincometoseniorcitizen80TTB_SC_1174() throws Exception {
+		EditVIADeductionsDeductioninrespectofinterestincometoseniorcitizen80TTB ab=new EditVIADeductionsDeductioninrespectofinterestincometoseniorcitizen80TTB(driver);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickVIDeduction();
+		Thread.sleep(3000);
+		ab.ClickDeductions();
+		Thread.sleep(3000);
+		ab.EnterEditedGrossAmount("20");
+		ab.EnterNarrations("Done");
+		ab.ClickSaveBtn();
+	}
+	@Test(priority=119)
+	public void SaveIncomeFromOtherSourcesInterestFromBanks_SC_1175() throws Exception {
+		SaveIncomeFromOtherSourcesInterestFromBanks ab=new SaveIncomeFromOtherSourcesInterestFromBanks(driver);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickIncomeFromOtherSources();
+		Thread.sleep(3000);
+		ab.EnterNetAmount("10000");
+		ab.EnterExemption("2000");
+		ab.EnterLessDedus("100");
+		ab.ClickSaveBtn();
+		String i=ab.getMessage();
+		Assert.assertEquals(i, "Saved Successfully.");
+		}
+	@Test(priority=120)
+	public void SaveIncomeFromOtherSourcesInterestonNSC_SC_1176() throws Exception {
+		SaveIncomeFromOtherSourcesInterestonNSC ab=new SaveIncomeFromOtherSourcesInterestonNSC(driver);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickIncomeFromOtherSources();
+		Thread.sleep(3000);
+		ab.EnterNetAmount("10000");
+		ab.EnterExemption("2000");
+		ab.EnterLessDedus("100");
+		ab.ClickSaveBtn();
+		String i=ab.getMessage();
+		Assert.assertEquals(i, "Saved Successfully.");
+	}
+	@Test(priority=121)
+	public void SaveIncomeFromOtherSourcesInterestonKVP_SC_1177() throws Exception {
+		SaveIncomeFromOtherSourcesInterestonKVP ab=new SaveIncomeFromOtherSourcesInterestonKVP(driver);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickIncomeFromOtherSources();
+		Thread.sleep(3000);
+		ab.EnterNetAmount("10000");
+		ab.EnterExemption("2000");
+		ab.EnterLessDedus("100");
+		ab.ClickSaveBtn();
+		String i=ab.getMessage();
+		Assert.assertEquals(i, "Saved Successfully.");
+	}
+	@Test(priority=122)
+	public void SaveIncomeFromOtherSourcesInterestonSecurities_SC_1178() throws Exception {
+		SaveIncomeFromOtherSourcesInterestonSecurities ab=new SaveIncomeFromOtherSourcesInterestonSecurities(driver);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickIncomeFromOtherSources();
+		Thread.sleep(3000);
+		ab.EnterNetAmount("10000");
+		ab.EnterExemption("2000");
+		ab.EnterLessDedus("100");
+		ab.ClickSaveBtn();
+		String i=ab.getMessage();
+		Assert.assertEquals(i, "Saved Successfully.");
 	}
 }
 
