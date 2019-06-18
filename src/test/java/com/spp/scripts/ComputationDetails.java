@@ -5,21 +5,21 @@ import org.testng.annotations.Test;
 import com.spp.common.BaseTest;
 import com.spp.generics.Utility;
 import com.spp.pages.DeleteLetOutProperty;
-import com.spp.pages.DeleteSelfOccupiedProperty;
-import com.spp.pages.DeleteVIADeductionsContributionstopoliticalparties80GGC;
-import com.spp.pages.DeleteVIADeductionsDonationsforscientificresearchRuraldevelopmentetc80GGA;
-import com.spp.pages.DeleteVIADeductionsDonationstospecifiedfundsInstitutions80G;
-import com.spp.pages.DeleteVIADeductionsRoyaltyIncomeetcofAuthorsofcertainbooks80QQB;
-import com.spp.pages.DeleteVIADeductionsRoyaltyonPatents80RRB;
-import com.spp.pages.DonationsforscientificresearchRuraldevelopmentetc80GGA;
+//import com.spp.pages.DeleteSelfOccupiedProperty;
+//import com.spp.pages.DeleteVIADeductionsContributionstopoliticalparties80GGC;
+//import com.spp.pages.DeleteVIADeductionsDonationsforscientificresearchRuraldevelopmentetc80GGA;
+//import com.spp.pages.DeleteVIADeductionsDonationstospecifiedfundsInstitutions80G;
+//import com.spp.pages.DeleteVIADeductionsRoyaltyIncomeetcofAuthorsofcertainbooks80QQB;
+//import com.spp.pages.DeleteVIADeductionsRoyaltyonPatents80RRB;
+//import com.spp.pages.DonationsforscientificresearchRuraldevelopmentetc80GGA;
 import com.spp.pages.EditLetOutProperty;
-import com.spp.pages.EditMainComponentBasic;
-import com.spp.pages.EditVIADeductionsContributionstopoliticalparties80GGC;
-import com.spp.pages.EditVIADeductionsDeductioninrespectofinterestincometoseniorcitizen80TTB;
-import com.spp.pages.EditVIADeductionsDeductioninrespectofinterestondepositsinsavingsaccount80TTA;
-import com.spp.pages.EditVIADeductionsIncomeofblindorphysicallyhandicappedindividual80U;
-import com.spp.pages.EditVIADeductionsRoyaltyIncomeetcofAuthorsofcertainbooks80QQB;
-import com.spp.pages.EditVIADeductionsRoyaltyonPatents80RRB;
+//import com.spp.pages.EditMainComponentBasic;
+//import com.spp.pages.EditVIADeductionsContributionstopoliticalparties80GGC;
+//import com.spp.pages.EditVIADeductionsDeductioninrespectofinterestincometoseniorcitizen80TTB;
+//import com.spp.pages.EditVIADeductionsDeductioninrespectofinterestondepositsinsavingsaccount80TTA;
+//import com.spp.pages.EditVIADeductionsIncomeofblindorphysicallyhandicappedindividual80U;
+//import com.spp.pages.EditVIADeductionsRoyaltyIncomeetcofAuthorsofcertainbooks80QQB;
+//import com.spp.pages.EditVIADeductionsRoyaltyonPatents80RRB;
 import com.spp.pages.PopulateandCreateLetOutProperty;
 import com.spp.pages.PopulateandSaveSelfOccupiedProperty;
 import com.spp.pages.PopulateandUpdateSelfOccupiedProperty;
@@ -28,7 +28,7 @@ import com.spp.pages.SaveIncomeFromOtherSourcesInterestOthers;
 import com.spp.pages.SaveIncomeFromOtherSourcesInterestonKVP;
 import com.spp.pages.SaveIncomeFromOtherSourcesInterestonNSC;
 import com.spp.pages.SaveIncomeFromOtherSourcesInterestonSecurities;
-import com.spp.pages.VIADeductionsDonationstospecifiedfundsInstitutions80G;
+//import com.spp.pages.VIADeductionsDonationstospecifiedfundsInstitutions80G;
 
 
 public class ComputationDetails extends BaseTest {
@@ -2813,7 +2813,7 @@ public class ComputationDetails extends BaseTest {
 		String i=ab.getMessage();
 		Assert.assertEquals(i, "Self occupied property updated successfully");
 	}
-	/*@Test(priority=129)
+/*	@Test(priority=129)
 	public void DeleteSelfOccupiedProperty_SC_1187() throws Exception {
 		DeleteSelfOccupiedProperty ab=new DeleteSelfOccupiedProperty(driver);
 		ab.ClickTDS();
@@ -2830,7 +2830,10 @@ public class ComputationDetails extends BaseTest {
 		Thread.sleep(2000);
 		ab.ClickDelete();
 		ab.switchToPopUpAndAccept(driver);
-	}*/
+	}
+	@Test(priority=130)
+	public void 
+}*/
 }
 
 
