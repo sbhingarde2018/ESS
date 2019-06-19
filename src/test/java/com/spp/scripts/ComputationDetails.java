@@ -6,6 +6,7 @@ import com.spp.common.BaseTest;
 import com.spp.generics.Utility;
 //import com.spp.pages.DeleteLetOutProperty;
 import com.spp.pages.DeleteSelfOccupiedProperty;
+import com.spp.pages.EditVIADeductionsDeductioninrespectofrentpaid80GG;
 //import com.spp.pages.DeleteSelfOccupiedProperty;
 //import com.spp.pages.DeleteVIADeductionsContributionstopoliticalparties80GGC;
 //import com.spp.pages.DeleteVIADeductionsDonationsforscientificresearchRuraldevelopmentetc80GGA;
@@ -2482,7 +2483,7 @@ public class ComputationDetails extends BaseTest {
 		Thread.sleep(3000);
 		ab.ClickDelete();
 	}*/
-	/*@Test(priority=109)
+	@Test(priority=109)
 	public void EditVIADeductionsDeductioninrespectofrentpaid80GG_SC_1165() throws Exception{
 		EditVIADeductionsDeductioninrespectofrentpaid80GG ab=new EditVIADeductionsDeductioninrespectofrentpaid80GG(driver);
 		ab.ClickTDS();
@@ -2494,10 +2495,12 @@ public class ComputationDetails extends BaseTest {
 		Thread.sleep(3000);
 		ab.ClickDeductions();
 		Thread.sleep(3000);
-		ab.EnterRentPaid("12000");
+		ab.EnterRentPaid("5000");
 		ab.EnterNoofMonths("2");
 		ab.ClickComputeBtn();
-	}*/
+		Thread.sleep(3000);
+		ab.ClickSaveBtn();
+	}
 	/*@Test(priority=110)
 	public void EditVIADeductionsContributionstopoliticalparties80GGC_SC_1166() throws Exception{
 		EditVIADeductionsContributionstopoliticalparties80GGC ab=new EditVIADeductionsContributionstopoliticalparties80GGC(driver);
