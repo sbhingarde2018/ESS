@@ -4,7 +4,8 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import com.spp.common.BaseTest;
 import com.spp.generics.Utility;
-import com.spp.pages.DeleteLetOutProperty;
+//import com.spp.pages.DeleteLetOutProperty;
+import com.spp.pages.DeleteSelfOccupiedProperty;
 //import com.spp.pages.DeleteSelfOccupiedProperty;
 //import com.spp.pages.DeleteVIADeductionsContributionstopoliticalparties80GGC;
 //import com.spp.pages.DeleteVIADeductionsDonationsforscientificresearchRuraldevelopmentetc80GGA;
@@ -12,7 +13,10 @@ import com.spp.pages.DeleteLetOutProperty;
 //import com.spp.pages.DeleteVIADeductionsRoyaltyIncomeetcofAuthorsofcertainbooks80QQB;
 //import com.spp.pages.DeleteVIADeductionsRoyaltyonPatents80RRB;
 //import com.spp.pages.DonationsforscientificresearchRuraldevelopmentetc80GGA;
-import com.spp.pages.EditLetOutProperty;
+//import com.spp.pages.EditLetOutProperty;
+import com.spp.pages.PopulateLetOutProperty;
+import com.spp.pages.PopulateSelfOccupiedProperty;
+import com.spp.pages.PopulateSelfOccupiedPropertyLoanBorrowedAfter31Mar1999No;
 //import com.spp.pages.EditMainComponentBasic;
 //import com.spp.pages.EditVIADeductionsContributionstopoliticalparties80GGC;
 //import com.spp.pages.EditVIADeductionsDeductioninrespectofinterestincometoseniorcitizen80TTB;
@@ -20,14 +24,15 @@ import com.spp.pages.EditLetOutProperty;
 //import com.spp.pages.EditVIADeductionsIncomeofblindorphysicallyhandicappedindividual80U;
 //import com.spp.pages.EditVIADeductionsRoyaltyIncomeetcofAuthorsofcertainbooks80QQB;
 //import com.spp.pages.EditVIADeductionsRoyaltyonPatents80RRB;
-import com.spp.pages.PopulateandCreateLetOutProperty;
-import com.spp.pages.PopulateandSaveSelfOccupiedProperty;
-import com.spp.pages.PopulateandUpdateSelfOccupiedProperty;
-import com.spp.pages.SaveIncomeFromOtherSourcesInterestFromBanks;
-import com.spp.pages.SaveIncomeFromOtherSourcesInterestOthers;
-import com.spp.pages.SaveIncomeFromOtherSourcesInterestonKVP;
-import com.spp.pages.SaveIncomeFromOtherSourcesInterestonNSC;
-import com.spp.pages.SaveIncomeFromOtherSourcesInterestonSecurities;
+//import com.spp.pages.PopulateandCreateLetOutProperty;
+//import com.spp.pages.PopulateandSaveSelfOccupiedProperty;
+import com.spp.pages.PopulateandSaveSelfOccupiedPropertyLoanBorrowedAfter31Mar1999No;
+//import com.spp.pages.PopulateandUpdateSelfOccupiedProperty;
+//import com.spp.pages.SaveIncomeFromOtherSourcesInterestFromBanks;
+//import com.spp.pages.SaveIncomeFromOtherSourcesInterestOthers;
+//import com.spp.pages.SaveIncomeFromOtherSourcesInterestonKVP;
+//import com.spp.pages.SaveIncomeFromOtherSourcesInterestonNSC;
+//import com.spp.pages.SaveIncomeFromOtherSourcesInterestonSecurities;
 //import com.spp.pages.VIADeductionsDonationstospecifiedfundsInstitutions80G;
 
 
@@ -2630,7 +2635,7 @@ public class ComputationDetails extends BaseTest {
 		ab.EnterNarrations("Done");
 		ab.ClickSaveBtn();
 	}*/
-	@Test(priority=119)
+	/*@Test(priority=119)
 	public void SaveIncomeFromOtherSourcesInterestFromBanks_SC_1175() throws Exception {
 		SaveIncomeFromOtherSourcesInterestFromBanks ab=new SaveIncomeFromOtherSourcesInterestFromBanks(driver);
 		ab.ClickTDS();
@@ -2812,8 +2817,8 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickPopulateandUpdate();
 		String i=ab.getMessage();
 		Assert.assertEquals(i, "Self occupied property updated successfully");
-	}
-/*	@Test(priority=129)
+	}*/
+	@Test(priority=129)
 	public void DeleteSelfOccupiedProperty_SC_1187() throws Exception {
 		DeleteSelfOccupiedProperty ab=new DeleteSelfOccupiedProperty(driver);
 		ab.ClickTDS();
@@ -2832,8 +2837,81 @@ public class ComputationDetails extends BaseTest {
 		ab.switchToPopUpAndAccept(driver);
 	}
 	@Test(priority=130)
-	public void 
-}*/
+	public void PopulateSelfOccupiedProperty_SC_1188() throws Exception {
+		PopulateSelfOccupiedProperty ab=new PopulateSelfOccupiedProperty(driver);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickHouseRentProperty();
+		Thread.sleep(2000);
+		ab.ClickSelfOccupiedProperty();
+		ab.EnterGrossAnnualValue("20");
+		ab.EnterShareinPercentage("30");
+		ab.EnterInterestPaidOnBorrowedCapital("20");
+		ab.ClickLoanBorrowedYes();
+		ab.EnterPreConstructionInterest("15");
+		ab.ClickPopulate();
+		}
+	@Test(priority=131)
+	public void PopulateSelfOccupiedPropertyLoanBorrowedAfter31Mar1999No_SC_1189() throws Exception {
+		PopulateSelfOccupiedPropertyLoanBorrowedAfter31Mar1999No ab=new PopulateSelfOccupiedPropertyLoanBorrowedAfter31Mar1999No(driver);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickHouseRentProperty();
+		Thread.sleep(2000);
+		ab.ClickSelfOccupiedProperty();
+		ab.EnterGrossAnnualValue("20");
+		ab.EnterShareinPercentage("30");
+		ab.EnterInterestPaidOnBorrowedCapital("20");
+		ab.EnterPreConstructionInterest("15");
+		ab.ClickPopulate();
+	}
+	@Test(priority=132)
+	public void PopulateandSaveSelfOccupiedPropertyLoanBorrowedAfter31Mar1999No_SC_1190() throws Exception {
+		PopulateandSaveSelfOccupiedPropertyLoanBorrowedAfter31Mar1999No ab=new PopulateandSaveSelfOccupiedPropertyLoanBorrowedAfter31Mar1999No(driver);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickHouseRentProperty();
+		Thread.sleep(2000);
+		ab.ClickSelfOccupiedProperty();
+		ab.EnterGrossAnnualValue("20");
+		ab.EnterShareinPercentage("30");
+		ab.EnterInterestPaidOnBorrowedCapital("20");
+		ab.EnterPreConstructionInterest("15");
+		ab.ClickPopulateAndSave();
+		String i=ab.getMessage();
+		Assert.assertEquals(i, "Self occupied property created successfully");
+	}
+	@Test(priority=133)
+	public void PopulateLetOutProperty_SC_1191() throws Exception {
+		PopulateLetOutProperty ab=new PopulateLetOutProperty(driver);
+		ab.ClickTDS();
+		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickHouseRentProperty();
+		Thread.sleep(2000);
+		ab.ClickLetOutProperty();
+		ab.ClickAdd();
+		Thread.sleep(2000);
+		ab.EnterGrossAnnualValue("50");
+		ab.EnterMunicipalTaxesPaid("20");
+		ab.EnterPercentageOfShareinProperty("60");
+		ab.EnterInterest("10");
+		ab.EnterPreConstructionInterest("15");
+		ab.EnterArrearsOfRentRec("10");
+		ab.EnterNotChargedEarlier("10");
+		ab.ClickPopulate();
+	}
 }
 
 
