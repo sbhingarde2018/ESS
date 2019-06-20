@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 import com.spp.common.BaseTest;
 import com.spp.generics.Utility;
 //import com.spp.pages.DeleteLetOutProperty;
-import com.spp.pages.DeleteSelfOccupiedProperty;
+//import com.spp.pages.DeleteSelfOccupiedProperty;
 import com.spp.pages.EditVIADeductionsDeductioninrespectofrentpaid80GG;
 //import com.spp.pages.DeleteSelfOccupiedProperty;
 //import com.spp.pages.DeleteVIADeductionsContributionstopoliticalparties80GGC;
@@ -15,9 +15,9 @@ import com.spp.pages.EditVIADeductionsDeductioninrespectofrentpaid80GG;
 //import com.spp.pages.DeleteVIADeductionsRoyaltyonPatents80RRB;
 //import com.spp.pages.DonationsforscientificresearchRuraldevelopmentetc80GGA;
 //import com.spp.pages.EditLetOutProperty;
-import com.spp.pages.PopulateLetOutProperty;
-import com.spp.pages.PopulateSelfOccupiedProperty;
-import com.spp.pages.PopulateSelfOccupiedPropertyLoanBorrowedAfter31Mar1999No;
+//import com.spp.pages.PopulateLetOutProperty;
+//import com.spp.pages.PopulateSelfOccupiedProperty;
+//import com.spp.pages.PopulateSelfOccupiedPropertyLoanBorrowedAfter31Mar1999No;
 //import com.spp.pages.EditMainComponentBasic;
 //import com.spp.pages.EditVIADeductionsContributionstopoliticalparties80GGC;
 //import com.spp.pages.EditVIADeductionsDeductioninrespectofinterestincometoseniorcitizen80TTB;
@@ -27,7 +27,7 @@ import com.spp.pages.PopulateSelfOccupiedPropertyLoanBorrowedAfter31Mar1999No;
 //import com.spp.pages.EditVIADeductionsRoyaltyonPatents80RRB;
 //import com.spp.pages.PopulateandCreateLetOutProperty;
 //import com.spp.pages.PopulateandSaveSelfOccupiedProperty;
-import com.spp.pages.PopulateandSaveSelfOccupiedPropertyLoanBorrowedAfter31Mar1999No;
+//import com.spp.pages.PopulateandSaveSelfOccupiedPropertyLoanBorrowedAfter31Mar1999No;
 //import com.spp.pages.PopulateandUpdateSelfOccupiedProperty;
 //import com.spp.pages.SaveIncomeFromOtherSourcesInterestFromBanks;
 //import com.spp.pages.SaveIncomeFromOtherSourcesInterestOthers;
@@ -2821,7 +2821,7 @@ public class ComputationDetails extends BaseTest {
 		String i=ab.getMessage();
 		Assert.assertEquals(i, "Self occupied property updated successfully");
 	}*/
-	@Test(priority=129)
+	/*@Test(priority=129)
 	public void DeleteSelfOccupiedProperty_SC_1187() throws Exception {
 		DeleteSelfOccupiedProperty ab=new DeleteSelfOccupiedProperty(driver);
 		ab.ClickTDS();
@@ -2914,7 +2914,7 @@ public class ComputationDetails extends BaseTest {
 		ab.EnterArrearsOfRentRec("10");
 		ab.EnterNotChargedEarlier("10");
 		ab.ClickPopulate();
-	}
+	}*/
 }
 
 
