@@ -4,9 +4,9 @@
   <test name="Test">
     <classes>
     
-    <class name="com.spp.scripts.ComputationDetails"/>
-  	<class name="com.spp.scripts.MonthlyDeductions"/>
-  	<class name="com.spp.scripts.TDSReports"/>
+  <class name="com.spp.scripts.ExporttoTDSExcel"/>
+  <class name="com.spp.scripts.DeductorDetails"/>
+  	<!-- <class name="com.spp.scripts.TDSReports"/> -->
    <!--<class name="com.spp.scripts.ApplyLeave"/>
    <class name="com.spp.scripts.LeaveEncashment"/>
    <class name="com.spp.scripts.MonthlyAttendance"/>
