@@ -12,7 +12,7 @@ public class AddNewEmployeeTDS extends BasePage{
 	WebElement Employee;
 	@FindBy(xpath="//*[@id=\"menu\"]/li[4]/div/div/ul/li[1]/a")
 	WebElement EmployeeDetails;
-	@FindBy(xpath="//*[@id=\"ui-accordion-accordion-panel-0\"]/ul/li[1]/a")
+	@FindBy(xpath="//*[@id=\"ui-id-2\"]/ul/li[1]/a")
 	WebElement AddNewEmployee;
 	@FindBy(id="employee_emp_id")
 	WebElement EnterEmployeeId;

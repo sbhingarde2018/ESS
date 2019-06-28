@@ -17,8 +17,10 @@ public class TDSComputation extends BasePage{
 	WebElement SelectFinancialYear;
 	@FindBy(id="filter_head")
 	WebElement ClickOnFilter;
-	@FindBy(xpath="//*[@id=\"bf_form\"]/div[9]/button[1]")
+	@FindBy(xpath="//*[@id=\"bf_form\"]/div[10]/button[1]")
 	WebElement ClickOnLoad;
+	@FindBy(xpath="//*[@id=\"employee_tax_compute\"]/div[5]/input")
+	WebElement Compute;
 	
 	public TDSComputation(WebDriver driver) {
 		super(driver);
@@ -35,5 +37,11 @@ public class TDSComputation extends BasePage{
 	}
 	public void clickonfilter() {
 		ClickOnFilter.click();
+	}
+	public void ClickOnLoad() {
+		ClickOnLoad.click();
+	}
+	public void ClickOnCompute() {
+		Compute.click();
 	}
 }

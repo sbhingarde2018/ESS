@@ -22,7 +22,6 @@ public class CreateArrear extends BasePage{
 	WebElement ArrearName;
 	@FindBy(id="arrear_arrear_description")
 	WebElement ArrearDescription;
-	
 	@FindBy(id="arrear_arrear_from_month")
 	WebElement ArrearFrom;
 	@FindBy(id="to_month")

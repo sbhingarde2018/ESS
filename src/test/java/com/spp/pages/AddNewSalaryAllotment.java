@@ -11,25 +11,25 @@ public class AddNewSalaryAllotment extends BasePage{
 
 	@FindBy(id="emp_detail")
 	WebElement ClickOnEmployee;
-	@FindBy(xpath="//a[text()='Salary Rate Details']")
+	@FindBy(xpath="//*[@id=\"menu\"]/li[4]/div/div/ul/li[4]/a")
 	WebElement ClickOnSalaryRateDetails;
-	@FindBy(xpath="//*[@id=\"main\"]/div[2]/nav/ul/li[1]/a/span")
+	@FindBy(xpath="//*[@id=\"main\"]/div[2]/nav/ul/li[2]/a/span")
 	WebElement ClickonListingEmployee;
 	@FindBy(id="filter_head")
 	WebElement ClickonFilter;
-	@FindBy(xpath="//button[text()='LOAD']")
+	@FindBy(xpath="//*[@id=\"bf_form\"]/div[10]/button[1]")
 	WebElement ClickOnLoad;
-	@FindBy(xpath="//*[@id=\"notalloted_paginate\"]/span/a[2]")
+	@FindBy(xpath="//*[@id=\"main\"]/div[2]/nav/ul/li[1]/a") 
 	WebElement SelectPageTwo;
-	@FindBy(xpath="//*[@id=\"notalloted\"]/tbody/tr/td[contains(text(),'Krunal')]/parent::tr/td[4]/a")
+	@FindBy(xpath="//*[@id=\"notalloted\"]/tbody/tr/td[contains(text(),'Raj')]/parent::tr/td[4]/a")
 	WebElement ClickOnAllotSalary;
 	@FindBy(id="month_year")
 	WebElement SelectMonthYear;
 	@FindBy(id="gross_sal_formula")
 	WebElement EnterGrossSal;
-	@FindBy(xpath="//*[@id=\"sal_allotment\"]/table/tbody/tr[6]/td/input[1]")
+	@FindBy(xpath="//*[@id=\"sal_allotment\"]/table/tbody/tr[3]/td/input[1]")
 	WebElement ClickOnSave;
-	@FindBy(xpath="//strong[text()='Salary Allotted successfully']")
+	@FindBy(xpath="//*[@id=\"main\"]/div[1]/strong")
 	WebElement SuccessfullMessage;
 	
 	public AddNewSalaryAllotment(WebDriver driver) {
