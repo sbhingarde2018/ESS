@@ -12,9 +12,9 @@ public class CreateSalaryHeadusingEmployee extends BasePage{
 	WebElement ClickOnEmployee;
 	@FindBy(xpath="//*[@id=\"menu\"]/li[4]/div/div/ul/li[4]/a")
 	WebElement ClickOnSalaryRateDetails;
-	@FindBy(xpath="//*[@id=\"ui-accordion-accordion-header-1\"]/h3")
+	@FindBy(xpath="//*[@id=\"ui-id-3\"]/h3")
 	WebElement ClickonGeneralLinks;
-	@FindBy(xpath="//*[@id=\"ui-accordion-accordion-panel-1\"]/li[1]/a")
+	@FindBy(xpath="//*[@id=\"ui-id-4\"]/li[1]/a")
 	WebElement ClickOnSalaryHead;
 	@FindBy(xpath="//*[@id=\"main\"]/div[3]/span/a")
 	WebElement AddNewSalaryHead;

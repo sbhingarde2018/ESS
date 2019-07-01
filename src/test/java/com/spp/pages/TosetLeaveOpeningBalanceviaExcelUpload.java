@@ -16,7 +16,7 @@ public class TosetLeaveOpeningBalanceviaExcelUpload extends BasePage{
 	WebElement UploadLink;
 	@FindBy(xpath="//*[@id='bf_form']/div[10]/button[1]")
 	WebElement LoadButton;
-	@FindBy(xpath="//*[@id='ui-accordion-accordion-panel-0']/li/a[contains(text(),'Generate Opening Balance Template')]")
+	@FindBy(xpath="//*[@id=\"ui-id-2\"]/li[1]/a")
 	WebElement ClickGenerateSample;
 	@FindBy(xpath="//*[@id=\"menu\"]/li[4]/div/div/ul/li[10]/a")
 	WebElement SetOpeningBalance;

@@ -13,11 +13,11 @@ public class CheckifEmployeeLeaveAllotAvailDateSettingsGeneralLinkredirectstoEmp
 	WebElement ClickOnEmployee;
 	@FindBy(xpath="//*[@id=\"menu\"]/li[4]/div/div/ul/li[9]/a")
 	WebElement ClickOnLeaveAllotDate;
-	@FindBy(xpath="//*[@id=\"ui-accordion-accordion-header-1\"]/h3")
+	@FindBy(xpath="//*[@id=\"ui-id-3\"]/h3")
 	WebElement ClickOnGeneralLinks;
-	@FindBy(xpath="//*[@id=\"ui-accordion-accordion-panel-1\"]/li/a")
+	@FindBy(xpath="//*[@id=\"ui-id-4\"]/li/a")
 	WebElement ClickOnEmployeeMaster;
-	@FindBy(xpath="//*[@id=\"ui-accordion-accordion-panel-0\"]/ul/li[1]/a")
+	@FindBy(xpath="//*[@id=\"ui-id-2\"]/ul/li[1]/a")
 	WebElement AddNewEmployee;
 	@FindBy(id="employee_emp_id")
 	WebElement employeeid;
@@ -134,8 +134,5 @@ public class CheckifEmployeeLeaveAllotAvailDateSettingsGeneralLinkredirectstoEmp
     }
     public String getMessage(){
 		return successfullmessage.getText();
-	}
-	
-	
-	
+	}	
 }

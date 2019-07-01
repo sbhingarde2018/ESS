@@ -22,7 +22,7 @@ import com.spp.pages.CreateReimbursementAllotment;
 import com.spp.pages.ExportToExcelBulkReimbursementErrorLog;
 public class ReimbursementAllotment extends BaseTest{
 	
-	/*@Test(priority=0)
+	@Test(priority=0)
 	public void CreateReimMaster_SC_387() throws Exception{
 		CreateReimbursementMaster rm = new CreateReimbursementMaster(driver);
 		Thread.sleep(6000);
@@ -227,9 +227,9 @@ public class ReimbursementAllotment extends BaseTest{
 		ty.selectReimbursementModuleType("Reimbursement allotments");
 		ty.selectLogDate("31 March 2019");
 		ty.selectExportToExcelButton();				
-		}*/
+		}
 	
-	/*@Test(priority=11)
+	@Test(priority=11)
 	public void CreateReimbursementAllotment_SC_289() throws Exception{
 	CreateReimbursementAllotment rt = new CreateReimbursementAllotment(driver);
 		rt.clickMastserLink();		
@@ -265,7 +265,7 @@ public class ReimbursementAllotment extends BaseTest{
 		rt.clickMastserLink();
 		rt.clickReimbursementMaster();
 		rt.clickDeleteMasterButton();	
-		}*/	
+		}
 			
 	@Test(priority=13)
 	public void CheckifEmployeeReimbursementAllotmentGeneralLinkReimMasterredirectstoMaster_SC_471() throws Exception{

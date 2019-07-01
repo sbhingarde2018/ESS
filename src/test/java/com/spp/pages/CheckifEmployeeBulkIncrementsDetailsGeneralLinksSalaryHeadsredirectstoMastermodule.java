@@ -14,7 +14,7 @@ public class CheckifEmployeeBulkIncrementsDetailsGeneralLinksSalaryHeadsredirect
 	WebElement ClickOnBulkIncrementDetails;
 	@FindBy(xpath="//*[@id=\"ui-accordion-accordion-header-0\"]/h3")
 	WebElement ClickonGeneralLinks;
-	@FindBy(xpath="//*[@id=\"ui-accordion-accordion-panel-0\"]/li[1]/a")
+	@FindBy(xpath="//*[@id=\"ui-id-2\"]/li[1]/a")
 	WebElement ClickOnSalaryHead;
 	@FindBy(xpath="//*[@id=\"main\"]/div[3]/span/a")
 	WebElement AddNewSalaryHead;

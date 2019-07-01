@@ -14,9 +14,9 @@ public class CheckifEmployeeManualLeaveAllotmentGeneralLinkredirectstoEmployeeMa
 	WebElement ClickOnManualLeaveAllot;
 	@FindBy(xpath="//*[@id=\"ui-accordion-accordion-header-1\"]/h3")
 	WebElement ClickOnGeneralLinks;
-	@FindBy(xpath="//*[@id=\"ui-accordion-accordion-panel-0\"]/li/a")
+	@FindBy(xpath="//*[@id=\"ui-id-2\"]/li/a")
 	WebElement ClickOnEmployeeMaster;
-	@FindBy(xpath="//*[@id=\"ui-accordion-accordion-panel-0\"]/ul/li[1]/a")
+	@FindBy(xpath="//*[@id=\"ui-id-2\"]/ul/li[1]/a")
 	WebElement AddNewEmployee;
 	@FindBy(id="employee_emp_id")
 	WebElement employeeid;

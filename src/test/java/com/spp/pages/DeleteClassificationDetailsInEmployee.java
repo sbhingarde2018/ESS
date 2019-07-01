@@ -19,9 +19,9 @@ public class DeleteClassificationDetailsInEmployee extends BasePage{
 	WebElement ClickOnLoad;
 	@FindBy(xpath="//*[@id=\"bf_non_classified_emp_form\"]/div[2]/button[1]")
 	WebElement Load2;
-	@FindBy(xpath="//*[@id='employees_dtable']/tbody/tr/td[contains(text(),'Anil')]/parent::tr/td[6]/a[1]")
+	@FindBy(xpath="//*[@id='employees_dtable']/tbody/tr/td[contains(text(),'Geeta')]/parent::tr/td[6]/a[1]")
 	WebElement ClickOnView; 
-	@FindBy(xpath="//*[@id='employees_dtable']/tbody/tr/td[contains(text(),'Anil')]/parent::tr/td[6]/a[2]")
+	@FindBy(xpath="//*[@id='employees_dtable']/tbody/tr/td[contains(text(),'Geeta')]/parent::tr/td[6]/a[2]")
 	WebElement DeleteEmployee;
 	@FindBy(xpath="//*[@id=\"classification_details\"]/a")
 	WebElement ClickClassificationDetail;

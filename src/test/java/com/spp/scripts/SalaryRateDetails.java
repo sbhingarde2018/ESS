@@ -18,7 +18,7 @@ import com.spp.pages.EditClassificationDetailsChangeSalaryStructureofanemployee;
 
 public class SalaryRateDetails extends BaseTest {
 
-	/*@Test(priority=0)
+	@Test(priority=0)
 	public void verifyAllotSalaryToEmployee_SC_98() throws Exception {
 	AllotSalaryToEmployee rr= new AllotSalaryToEmployee(driver);
 		rr.clickEmployeeLink();
@@ -134,7 +134,7 @@ public class SalaryRateDetails extends BaseTest {
 		Thread.sleep(3000);
 		aa.SelectSaveButton();
 		aa.exitFullscreen();
-	}*/
+	}
 	
 	@Test(priority=3)
 	public void EditClassificationDetailsChangeSalaryStructureofanemployee_SC_410() throws Exception{

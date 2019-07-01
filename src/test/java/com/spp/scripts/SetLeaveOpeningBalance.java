@@ -12,12 +12,12 @@ import org.testng.Assert;
 
 public class SetLeaveOpeningBalance extends BaseTest{
 	
-	/*@Test(priority=0)
+	@Test(priority=0)
 	public void SetOpeningBalanceForEmployee_SC_104() throws Exception{
 	SetOpeningBalanceForEmployee ty = new SetOpeningBalanceForEmployee(driver);
 		ty.selectEmployee();
 		ty.selectSetOpeningBalance();
-		ty.selectLeaveType("Leave (L)");
+		ty.selectLeaveType("Casual Leave (CL)");
 		ty.selectGetEmployeeButtone();
 		ty.resizeWindow();
 		Thread.sleep(4000);
@@ -72,7 +72,7 @@ public class SetLeaveOpeningBalance extends BaseTest{
 		Thread.sleep(2000);
 		la.switchToPopUpAndAccept(driver);
 		la.exitFullscreen();
-		}*/
+		}
 	
 	@Test(priority=2)
 	public void TosetLeaveOpeningBalanceviaExcelUpload_SC_105() throws Exception{
@@ -91,7 +91,7 @@ public class SetLeaveOpeningBalance extends BaseTest{
 		Thread.sleep(3000);
 		obj.clickExcelTemplateUpload();
 		Thread.sleep(3000);
-		obj.clickChooseFile("C:\\Users\\alfalabs\\Downloads\\LeaveOpeningBalanceUploadExcel20190415-6447-1hjlvu8.xlsx");
+		obj.clickChooseFile("C:\\Users\\Aministrator\\Downloads\\LeaveOpeningBalanceUploadExcel20190415-6447-1hjlvu8.xlsx");
 		Thread.sleep(3000);
 		obj.clickUploadLink();
 		Thread.sleep(3000);

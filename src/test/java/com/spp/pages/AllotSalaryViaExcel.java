@@ -18,9 +18,8 @@ public class AllotSalaryViaExcel extends BasePage {
 	WebElement employeeLink;	
 	@FindBy(linkText="Salary Rate Details")
 	WebElement SalaryRateDetails;
-	@FindBy(xpath="//*[@id=\"ui-accordion-accordion-panel-0\"]/li[2]/a")
+	@FindBy(xpath="//*[@id=\"ui-id-2\"]/li[2]/a")
 	WebElement SalaryRateTemplate;	
-
 	@FindBy(id="paymonth")
 	WebElement MonthYear;
 	@FindBy(id="salary_group_id")
@@ -51,6 +50,8 @@ public class AllotSalaryViaExcel extends BasePage {
 	WebElement EarningsSalAllot;
 	@FindBy(xpath="//input[@value='Save']")
 	WebElement SaveButton;
+	@FindBy(xpath="//*[@id='generate_excel']/tbody/tr/td[contains(text(),'JOHN')]/parent::tr/td/input")
+	WebElement Uncheck;
 	
 public void clickEmployeeLink() {
 	   employeeLink.click();
@@ -111,6 +112,9 @@ public void SalAllotEarnings(String value) throws Exception {
 public void SelectSaveButton() {
 	
 	SaveButton.click();
+}
+public void uncheckCheckbox() {
+	Uncheck.click();
 }
 
 }

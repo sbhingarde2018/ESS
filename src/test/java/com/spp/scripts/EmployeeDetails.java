@@ -42,10 +42,10 @@ public class EmployeeDetails extends BaseTest{
 		Thread.sleep(1000);
 		at.enterEmployeeId("ID001");
 		at.enterEmployeeRefNo("Ref-"+Utility.getRandNum(10, 100));
-		at.enterEmployeeName("Anil");
+		at.enterEmployeeName("Nandani");
 		at.enterFathername("Anand");
 		at.enterdob("14 June 1980");
-		at.selectGender("Female");
+		at.selectGender("Male");
 		at.selectMaritalStatus("Single");
 		at.enterdoj("01 November 2018");
 		at.entersaldate("01 November 2018");
@@ -56,7 +56,7 @@ public class EmployeeDetails extends BaseTest{
 		at.selectstatdetails();
 		at.checkTDS();
 		at.selectpanoption("ADD PAN");
-		at.enterpanno("PRAPM"+Utility.getRandNum(4441, 4966)+"P");
+		at.enterpanno("PRAPM"+Utility.getRandNum(4441, 4966)+"T");
 		at.entereffectivedatePAN("01 November 2018");
 		Thread.sleep(1000);
 		at.selectclassificationdetail();
@@ -71,9 +71,9 @@ public class EmployeeDetails extends BaseTest{
 		at.createemployee();
 		String s=at.getMessage();
 		Assert.assertEquals(s, "Employee successfully created");
-						
 	}
-	/*@Test(priority=1)
+	
+	@Test(priority=1)
 	public void CheckDeleteClassificationDetailsInEmployee_SC_421() throws Exception {
 	DeleteClassificationDetailsInEmployee ce = new DeleteClassificationDetailsInEmployee(driver);
 		ce.clickonemployee();
@@ -119,7 +119,7 @@ public class EmployeeDetails extends BaseTest{
 		Assert.assertEquals(s, "Employee detail was successfully created.");
 		}
 			
-	@Test(priority=3)
+	/*@Test(priority=3)
 	public void CheckDeleteClassificationDetailsInEmployeeExtra1_SC_421() throws Exception {
 	DeleteClassificationDetailsInEmployee ce = new DeleteClassificationDetailsInEmployee(driver);
 		ce.clickonemployee();
@@ -136,9 +136,9 @@ public class EmployeeDetails extends BaseTest{
 		String message = ce.getMessage();
 		Assert.assertEquals(message, "Employee detail was successfully deleted.");
 		ce.exitFullscreen();
-	}
+	}*/
 	
-	@Test(priority=4)
+	/*@Test(priority=4)
 	public void DeleteEmployee1() throws Exception {
 		DeleteClassificationDetailsInEmployee ce = new DeleteClassificationDetailsInEmployee(driver);
 		ce.clickonemployee();
@@ -151,7 +151,7 @@ public class EmployeeDetails extends BaseTest{
 		ce.deleteemployee();
 		ce.switchToPopUpAndAccept(driver);
 		Thread.sleep(5000);
-	}
+	}*/
 	
 	@Test(priority=5)
 	public void AddEmployeewithClassificationDetail_SC_440() throws Exception{
@@ -160,9 +160,9 @@ public class EmployeeDetails extends BaseTest{
 			at.clickEmployeeDetails();
 			at.clickAddNewEmployee();
 			Thread.sleep(1000);
-			at.enterEmployeeId("ID001");
+			at.enterEmployeeId("ID505");
 			at.enterEmployeeRefNo("Ref-"+Utility.getRandNum(100, 200));
-			at.enterEmployeeName("Anil");
+			at.enterEmployeeName("Nisha");
 			at.enterFathername("Anand");
 			at.enterdob("14 June 1980");
 			at.selectGender("Female");
@@ -176,7 +176,7 @@ public class EmployeeDetails extends BaseTest{
 			at.selectstatdetails();
 			at.checkTDS();
 			at.selectpanoption("ADD PAN");
-			at.enterpanno("PRAPM"+Utility.getRandNum(4441, 4966)+"P");
+			at.enterpanno("PRAPM"+Utility.getRandNum(4441, 4966)+"S");
 			at.entereffectivedatePAN("01 January 2018");
 			Thread.sleep(1000);
 			at.selectclassificationdetail();
@@ -451,27 +451,27 @@ public class EmployeeDetails extends BaseTest{
 		cr.selectpaymonth("Nov/2018");
 		Thread.sleep(2000);
 		cr.generatestatreport();
-	
 	}
 	
-		@Test(priority=18)
-		public void verifyDataTemplateGeneration_SC_96() throws InterruptedException, IOException {
-		GenerateDataTemplate gxl = new GenerateDataTemplate(driver);
-			gxl.clickEmployeeTab();
-			gxl.clickEmployeeDetailsLink();
-			gxl.clickImportExportTab();
-			gxl.clickGenerateDataTemplateTab();
-			gxl.SelectExcelType("Employees Data Template");
-			gxl.clickGetEmployees();
-			Thread.sleep(3000);
-			gxl.SelectEmpWithoutClassificationButton();
-			gxl.LoadEmployees();
-			Thread.sleep(3000);
-			gxl.DownloadTemplate();
-		}
-			@Test(priority=19)
-		public void DeleteHrCategoryDetailsofEmployee_SC_458() throws Exception{
-		DeleteHrCategoryDetailsofEmployee de=new DeleteHrCategoryDetailsofEmployee(driver);
+	@Test(priority=18)
+	public void verifyDataTemplateGeneration_SC_96() throws InterruptedException, IOException {
+	GenerateDataTemplate gxl = new GenerateDataTemplate(driver);
+		gxl.clickEmployeeTab();
+		gxl.clickEmployeeDetailsLink();
+		gxl.clickImportExportTab();
+		gxl.clickGenerateDataTemplateTab();
+		gxl.SelectExcelType("Employees Data Template");
+		gxl.clickGetEmployees();
+		Thread.sleep(3000);
+		gxl.SelectEmpWithoutClassificationButton();
+		gxl.LoadEmployees();
+		Thread.sleep(3000);
+		gxl.DownloadTemplate();
+	}
+		
+	@Test(priority=19)
+	public void DeleteHrCategoryDetailsofEmployee_SC_458() throws Exception {
+	DeleteHrCategoryDetailsofEmployee de=new DeleteHrCategoryDetailsofEmployee(driver);
 		de.clickonemployee();
 		de.clickonemployeedetails();
 		de.clickonfilter();
@@ -496,12 +496,6 @@ public class EmployeeDetails extends BaseTest{
 		de.exitFullscreen();
 	}
 	
-	
-	
-	
-	
-
-	
 	@Test(priority=20)
 	public void CreateEmployeeviaExcelImport_SC_95() throws InterruptedException {
 	CreateEmployeeviaExcelImport xl=new CreateEmployeeviaExcelImport(driver);
@@ -519,7 +513,7 @@ public class EmployeeDetails extends BaseTest{
 	String message = xl.getSuccessmessage();
 	Assert.assertEquals(message, "Successfully Imported");
 }
-	@Test(priority=21)
+	/*@Test(priority=21)
 	public void CheckDeleteClassificationDetailsInEmployeeExtra() throws Exception {
 	DeleteClassificationDetailsInEmployee ce = new DeleteClassificationDetailsInEmployee(driver);
 		ce.clickonemployee();
@@ -534,7 +528,7 @@ public class EmployeeDetails extends BaseTest{
 		ce.switchToPopUpAndAccept(driver);
 		String message = ce.getMessage();
 		Assert.assertEquals(message, "Employee detail was successfully deleted.");
-	}
+	}*/
 	@Test(priority=22)
 	public void DeleteEmployee() throws Exception {
 		DeleteClassificationDetailsInEmployee ce = new DeleteClassificationDetailsInEmployee(driver);
@@ -548,5 +542,5 @@ public class EmployeeDetails extends BaseTest{
 		ce.deleteemployee();
 		ce.switchToPopUpAndAccept(driver);
 		Thread.sleep(5000);
-	}*/
+	}
 }

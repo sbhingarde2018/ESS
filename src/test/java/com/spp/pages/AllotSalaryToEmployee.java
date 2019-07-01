@@ -21,7 +21,7 @@ public class AllotSalaryToEmployee extends BasePage {
 	WebElement AdvancedFilterIcon;
 	@FindBy(xpath="//*[@id='bf_form']/div[10]/button[1]")
 	WebElement LoadButton;
-	@FindBy(xpath="//*[@id='notalloted']/tbody/tr/td[contains(text(),'Tina')]/parent::tr/td/a")
+	@FindBy(xpath="//*[@id='notalloted']/tbody/tr/td[contains(text(),'Riya')]/parent::tr/td/a")
 	WebElement AllotSalaryButton;
 	@FindBy(id="month_year")
 	WebElement EffectiveFrom;

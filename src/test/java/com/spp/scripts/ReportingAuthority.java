@@ -32,7 +32,7 @@ public class ReportingAuthority extends BaseTest {
 		rt.selectReportingAuthorityPage();
 		rt.exitFullscreen();
 }
-	/*@Test(priority=1)
+	@Test(priority=1)
 	public void UnlinkEmployee_SC_378() throws Exception{
 		UnlinkEmployee rt = new UnlinkEmployee(driver);
 		rt.selectEmployee();
@@ -61,5 +61,5 @@ public class ReportingAuthority extends BaseTest {
 		rt.selectLinkEmployee();
 		String y=rt.getMessage1();
 		Assert.assertEquals(y, "Employees linked successfully.");
-	}*/		
+	}	
 }

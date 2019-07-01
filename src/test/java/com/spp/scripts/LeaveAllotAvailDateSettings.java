@@ -11,12 +11,12 @@ import com.spp.pages.UpdateLeaveAllotAvailDateSettingsInBulk;
 
 public class LeaveAllotAvailDateSettings extends BaseTest {
 	
-	/*@Test(priority=0)
+	@Test(priority=0)
 	public void UpdateLeaveAllotAvailDateSettingsInBulk_SC_107() throws Exception{
 	UpdateLeaveAllotAvailDateSettingsInBulk af=new UpdateLeaveAllotAvailDateSettingsInBulk(driver);
 		af.selectEmployee();
 		af.selectLeaveAllotAvail();
-		af.selectLeaveType("Leave (L)");
+		af.selectLeaveType("Casual Leave (CL)");
 		af.resizeWindow();
 		af.selectGetEmployee();
 		Thread.sleep(5000);
@@ -98,7 +98,7 @@ public class LeaveAllotAvailDateSettings extends BaseTest {
 		laads.selectMoreLink();
 		Thread.sleep(3000);
 		laads.exitFullscreen();
-	}*/
+	}
 	
 	@Test(priority=3)
 	public void TocheckEmployeeswithDOJ01AprilareloadedintheAllotAvailDateConfigurations_SC_1633() throws Exception{

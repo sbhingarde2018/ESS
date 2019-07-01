@@ -19,9 +19,13 @@ public class UpdateRestrictPFContributionOfEmployee extends BasePage{
     WebElement Employee;
 	@FindBy(xpath="//*[@id=\"menu\"]/li[4]/div/div/ul/li[3]/a")
 	WebElement PfContribution;
-	@FindBy(xpath="//*[@id='employees_table']/tbody/tr[1]/td[4]/input")
+	@FindBy(id="Restrict_Employee_PF_check_box")
+	WebElement Employeecheck;
+	@FindBy(id="Restrict_Employer_PF_check_box")
+	WebElement Employercheck;
+	@FindBy(xpath="//*[@id=\"employees_table\"]/tbody/tr[6]/td[4]")
 	WebElement CheckBox1;
-	@FindBy(xpath="//*[@id='employees_table']/tbody/tr[1]/td[5]/input")
+	@FindBy(xpath="//*[@id=\"employees_table\"]/tbody/tr[6]/td[5]")
 	WebElement CheckBox2;
 	@FindBy(xpath="//*[@id=\"RestrictPFESIForm\"]/div[3]/input")
 	WebElement UpdateButton;
@@ -47,5 +51,11 @@ public class UpdateRestrictPFContributionOfEmployee extends BasePage{
 	}
   public String getPFMessage() {
 	  return SuccessfulMessage.getText();
+  }
+  public void UncheckEmp() {
+	  Employeecheck.click();
+  }
+  public void UncheckEmpr() {
+	  Employercheck.click();
   }
 }
