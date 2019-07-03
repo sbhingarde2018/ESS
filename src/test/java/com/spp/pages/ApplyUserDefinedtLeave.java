@@ -14,9 +14,9 @@ public class ApplyUserDefinedtLeave extends BasePage{
 	WebElement ClickOnApplyLeave;
 	@FindBy(id="filter_head")
 	WebElement ClickOnFilterHead;
-	@FindBy(xpath="//*[@id=\"bf_form\"]/div[9]/button[1]")
+	@FindBy(xpath="//*[@id=\"bf_form\"]/div[10]/button[1]")
 	WebElement ClickOnLoad;
-	@FindBy(xpath="//*[@id=\"dt_leave_details\"]/tbody/tr/td[contains(text(),'Ankit')]/parent::tr/td[3]/a")
+	@FindBy(xpath="//*[@id=\"dt_leave_details\"]/tbody/tr/td[contains(text(),'Geeta')]/parent::tr/td[3]/a")
 	WebElement ApplyLeave;
 	@FindBy(id="leave_detail_leave_definition_id")
 	WebElement SelectLeaveType;

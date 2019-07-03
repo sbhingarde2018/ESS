@@ -24,7 +24,7 @@ public class AttendanceIntegration extends BaseTest{
 		Thread.sleep(2000);
 		agm.changeFileType();
 		Thread.sleep(2000);
-		agm.addSampleFile("C:\\Users\\alfalabs\\Desktop\\AttendanceIntegration.txt");
+		agm.addSampleFile("C:\\Users\\Alfalabs\\Desktop\\AttendanceIntegration.txt");
 		Thread.sleep(2000);
 		agm.writeStartingrow("1");
 		agm.clickNext();

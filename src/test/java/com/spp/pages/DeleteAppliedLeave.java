@@ -17,7 +17,7 @@ public class DeleteAppliedLeave extends BasePage{
 	WebElement ClickOnFilterHead;
 	@FindBy(xpath="//*[@id=\"bf_form\"]/div[10]/button[1]")
 	WebElement ClickOnLoad;
-	@FindBy(xpath="//*[@id=\"dt_leave_details\"]/tbody/tr/td[contains(text(),'Tina')]/parent::tr/td[3]/a")
+	@FindBy(xpath="//*[@id=\"dt_leave_details\"]/tbody/tr/td[contains(text(),'Geeta')]/parent::tr/td[3]/a")
 	WebElement ApplyLeave;
 	@FindBy(xpath="//*[@id=\"main\"]/div[2]/nav/ul/li[3]/a")
 	WebElement SwitchLeaveHistory;
@@ -31,6 +31,8 @@ public class DeleteAppliedLeave extends BasePage{
 	WebElement CheckLeaveHistory;
 	@FindBy(id="to_date")
 	WebElement LeaveHistoryToDate;
+	@FindBy(id="from_date")
+	WebElement LeaveHistoryFromDate;	
 	@FindBy(xpath="//*[@id='leave_range_data']/div[3]/div/div/input[2]")
 	WebElement SearchButton;
 	
@@ -75,5 +77,10 @@ public class DeleteAppliedLeave extends BasePage{
 	}
 	public void clickSearchButton(){
 		SearchButton.click();
+	}
+	public void enterHistoryFromDate(String value){
+		LeaveHistoryFromDate.clear();
+		LeaveHistoryFromDate.sendKeys(value);
+		LeaveHistoryFromDate.sendKeys(Keys.TAB);
 	}
 }

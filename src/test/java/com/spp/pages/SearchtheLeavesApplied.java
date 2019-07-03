@@ -16,7 +16,7 @@ public class SearchtheLeavesApplied extends BasePage{
 	WebElement ClickOnFilterHead;
 	@FindBy(xpath="//*[@id=\"bf_form\"]/div[10]/button[1]")
 	WebElement ClickOnLoad;
-	@FindBy(xpath="//*[@id='dt_leave_details']/tbody/tr/td[contains(text(),'Tina')]/parent::tr/td[3]/a")
+	@FindBy(xpath="//*[@id='dt_leave_details']/tbody/tr/td[contains(text(),'Geeta')]/parent::tr/td[3]/a")
 	WebElement ApplyLeave;
 	@FindBy(xpath="//*[@id=\"main\"]/div[2]/nav/ul/li[3]/a")
 	WebElement CheckLeaveHistory;

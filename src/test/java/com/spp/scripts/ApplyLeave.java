@@ -31,9 +31,9 @@ public class ApplyLeave extends BaseTest{
 		Thread.sleep(2000);
 		dl.selectleavetype("Compensatory Work (CW)");
 		Thread.sleep(2000);
-		dl.selectfromdate("14 June 2019");
+		dl.selectfromdate("14 August 2019");
 		Thread.sleep(2000);
-		dl.selecttodate("14 June 2019");
+		dl.selecttodate("14 August 2019");
 		Thread.sleep(2000);
 		dl.clickonapply();
 		//System.out.println("click on apply");
@@ -46,7 +46,7 @@ public class ApplyLeave extends BaseTest{
 		dl.exitFullscreen();
 	}
 	
-	/*@Test(priority=1)
+	@Test(priority=1)
 	public void ApplyUserDefinedtLeave_SC_110() throws Exception{
 		ApplyUserDefinedtLeave dl=new ApplyUserDefinedtLeave(driver);
 		dl.clickonleave();
@@ -59,10 +59,10 @@ public class ApplyLeave extends BaseTest{
 		Thread.sleep(2000);
 		dl.applyleave();
 		Thread.sleep(2000);
-		dl.selectleavetype("Leave (L)");
-		dl.selectfromdate("03 September 2018");
+		dl.selectleavetype("Casual Leave (CL)");
+		dl.selectfromdate("14 August 2019");
 		Thread.sleep(2000);
-		dl.selecttodate("04 September 2018");
+		dl.selecttodate("14 August 2019");
 		Thread.sleep(5000);
 		dl.clickonapply();
 		String s=dl.getMessage();
@@ -71,7 +71,7 @@ public class ApplyLeave extends BaseTest{
 		dl.checkleavehistory();
 		Thread.sleep(2000);
 		dl.checkleavesummary();
-	}*/
+	}
 	
 	@Test(priority=2)
 	public void SearchtheLeavesApplied_SC_477() throws Exception{
@@ -89,8 +89,8 @@ public class ApplyLeave extends BaseTest{
 		Thread.sleep(1000);
 		dl.checkleavehistory();
 		Thread.sleep(1000);
-		//dl.selectfromdate("01 August 2018");
-		dl.selectodate("30 November 2019");
+		dl.selectfromdate("01 August 2019");
+		dl.selectodate("14 August 2019");
 		dl.clickonsearch();
 		Thread.sleep(5000);
 		dl.exitFullscreen();
@@ -113,8 +113,8 @@ public class ApplyLeave extends BaseTest{
 		Thread.sleep(1000);
 		st.checkleavehistory();
 		Thread.sleep(1000);
-		//st.selectfromdate("01 August 2018");
-		st.selectodate("30 November 2019");
+		st.selectfromdate("01 August 2018");
+		st.selectodate("14 August 2019");
 		Thread.sleep(2000);
 		st.clickonsearch();
 		Thread.sleep(2000);
@@ -138,7 +138,8 @@ public class ApplyLeave extends BaseTest{
 		dl.applyleave();
 		dl.checkleavehistory();
 		Thread.sleep(2000);
-		dl.enterHistoryToDate("30 November 2019");
+		dl.enterHistoryFromDate("01 August 2019");
+		dl.enterHistoryToDate("14 August 2019");
 		Thread.sleep(2000);
 		dl.clickSearchButton();
 		Thread.sleep(2000);
@@ -167,9 +168,9 @@ public class ApplyLeave extends BaseTest{
 		dl.clickonemployeemaster();
 		Thread.sleep(2000);
 		dl.addnewemployee();
-		dl.enterEmployeeid("ABC123566");
-		dl.enterEmployeeref("Ref-"+Utility.getRandNum(100, 200));
-		dl.enterEmployeename("ShantiPriya");
+		dl.enterEmployeeid("ABC1237");
+		dl.enterEmployeeref("RefTest1-"+Utility.getRandNum(100, 200));
+		dl.enterEmployeename("Shanti");
 		dl.enterEmployeefather("Harish");
 		dl.selectDateofBirth("06 June 1995");
 		dl.selectGender("Female");
