@@ -4,16 +4,16 @@
   <test name="Test">
     <classes>
     
-  <class name="com.spp.scripts.EmployeeDetails"/>
-  <class name="com.spp.scripts.RestrictPFContribution"/>
-  <class name="com.spp.scripts.SalaryRateDetails"/>
-  <class name="com.spp.scripts.BulkIncrementDetails"/>
-  <class name="com.spp.scripts.BulkClassificationChange"/>
-  <class name="com.spp.scripts.ReimbursementAllotment"/>
+  <class name="com.spp.scripts.AdditionalSalary"/>
+ <!-- <class name="com.spp.scripts.LeaveEncashment"/>
+  <class name="com.spp.scripts.MonthlyLeaveSummary"/>
+  <class name="com.spp.scripts.MonthlyAttendance"/>
+  <class name="com.spp.scripts.AttendanceIntegration"/> -->
+ <!--  <class name="com.spp.scripts.ReimbursementAllotment"/>
   <class name="com.spp.scripts.LeaveAllotAvailDateSettings"/>
   <class name="com.spp.scripts.SetLeaveOpeningBalance"/>
   <class name="com.spp.scripts.ManualLeaveAllotmentscript"/>
-  <class name="com.spp.scripts.ReportingAuthority"/>
+  <class name="com.spp.scripts.ReportingAuthority"/> -->
   
  <!-- <class name="com.spp.scripts.Form16"/> --> 
   	<!-- <class name="com.spp.scripts.TDSReports"/> -->
