@@ -24,7 +24,7 @@ public class AllotSalaryToAdditionalSalaryDeductionHeadLumpsum extends BasePage{
 	WebElement AddEmployees;
 	@FindBy(id="filter_head")
 	WebElement AdvanceFilter;
-	@FindBy(xpath="//*[@id=\"bf_form\"]/div[9]/button[1]")
+	@FindBy(xpath="//*[@id=\"bf_form\"]/div[10]/button[1]")
 	WebElement Load;
 	@FindBy(id="select_all_employee")
 	WebElement SelectAllBox;
@@ -34,7 +34,7 @@ public class AllotSalaryToAdditionalSalaryDeductionHeadLumpsum extends BasePage{
 	WebElement Amount;
 	@FindBy(xpath="//*[@id=\"addn_sal_form\"]/div[7]/div/input")
 	WebElement AllotButton;
-	@FindBy(xpath="//*[@id=\"main\"]/div[2]/strong")
+	@FindBy(xpath="//*[@id=\"show_message\"]/div/strong")
 	WebElement successfullMessage;
 	@FindBy(xpath="//*[@id=\"additional_salary\"]/tbody/tr/td[5]/a")
 	WebElement DeleteButton;

@@ -16,26 +16,28 @@ public class AllotSalaryToAdditionalSalaryEarningHeadLumpsum extends BasePage{
 	WebElement PayMonth;
 	@FindBy(xpath="//*[@id=\"addn_salary\"]/div[2]/div/input")
 	WebElement GetValues;
-	@FindBy(xpath="//*[@id=\"tabs-3\"]/div[2]/table/tbody/tr[1]/td[5]/a")
+	@FindBy(xpath="//*[@id=\"tabs-3\"]/div[2]/table/tbody/tr/td[5]/a") 
 	WebElement Allot;
 	@FindBy(xpath="//*[@id=\"main\"]/div[3]/span/a")
 	WebElement AddEmployees;
 	@FindBy(id="filter_head")
 	WebElement AdvanceFilter;
-	@FindBy(xpath="//*[@id=\"bf_form\"]/div[9]/button[1]")
+	@FindBy(xpath="//*[@id=\"bf_form\"]/div[10]/button[1]")
 	WebElement Load;
 	@FindBy(id="select_all_employee")
 	WebElement SelectAllBox;
-	@FindBy(xpath="//*[@id=\"add_employees\"]/tbody/tr[1]/td[1]/input")
+	@FindBy(xpath="//*[@id=\"add_employees\"]/tbody/tr[9]/td[1]")
 	WebElement EmployeeBox;
 	@FindBy(id="amount")
 	WebElement Amount;
 	@FindBy(xpath="//*[@id=\"addn_sal_form\"]/div[7]/div/input")
 	WebElement AllotButton;
-	@FindBy(xpath="//*[@id=\"main\"]/div[2]/strong")
+	@FindBy(xpath="//*[@id=\"show_message\"]/div/strong")
 	WebElement successfullMessage;
-	@FindBy(xpath="//*[@id=\"additional_salary\"]/tbody/tr/td[5]/a")
+	@FindBy(xpath="//*[@id=\"tabs-3\"]/div[2]/table/tbody/tr/td[6]/a")
 	WebElement DeleteButton;
+	
+	
 	public AllotSalaryToAdditionalSalaryEarningHeadLumpsum(WebDriver driver) {
 		super(driver);
 		PageFactory.initElements(driver,this);
