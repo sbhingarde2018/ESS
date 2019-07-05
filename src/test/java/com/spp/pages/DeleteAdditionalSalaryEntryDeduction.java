@@ -18,9 +18,9 @@ public class DeleteAdditionalSalaryEntryDeduction extends BasePage{
 	WebElement GetValues;
 	@FindBy(xpath="//*[@id=\"main\"]/div[2]/div[2]/nav/ul/li[2]/a/span")
 	WebElement DeductionTab;
-	@FindBy(xpath="//*[@id=\"main\"]/div[2]/div[4]/div[2]/div[2]/table/tbody/tr[1]/td[5]/a")
+	@FindBy(xpath="//*[@id=\"tabs-4\"]/div[2]/table/tbody/tr/td[5]/a")
 	WebElement Allot;
-	@FindBy(xpath="//*[@id=\"additional_salary\"]/tbody/tr[1]/td[5]/a")
+	@FindBy(xpath="//tbody/tr[1]/td[5]/a")
 	WebElement Delete;
 	@FindBy(xpath="//*[@id=\"show_message\"]/div/strong")
 	WebElement successfullMessage;

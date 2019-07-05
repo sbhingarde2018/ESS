@@ -18,15 +18,15 @@ public class EditAdditionalSalaryEntryADDITIONALSALARYEARNING extends BasePage{
 	WebElement GetValues;
 	@FindBy(xpath="//*[@id=\"main\"]/div[2]/div[2]/nav/ul/li[2]/a/span")
 	WebElement DeductionTab;
-	@FindBy(xpath="//*[@id='main']/div[2]/div[4]/div[1]/div[2]/table/tbody/tr[1]/td[5]/a")
+	@FindBy(xpath="//*[@id=\"tabs-3\"]/div[2]/table/tbody/tr/td[5]/a")
 	WebElement Allot;
-	@FindBy(xpath="//*[@id=\"additional_salary\"]/tbody/tr/td[4]/a")
+	@FindBy(xpath="//tbody/tr[1]/td[4]/a")
 	WebElement ClickEdit;
 	@FindBy(id="additional_salary_entry_amount")
 	WebElement EnterAmount;
-	@FindBy(xpath="//input[@value='Update']")
+	@FindBy(xpath="//*[@id=\"additional_salary_entry_form\"]/div[3]/input")
 	WebElement UpdateButton;
-	@FindBy(xpath="//strong[text()='Additional salary succesfully updated']")
+	@FindBy(xpath="//*[@id=\"main\"]/div[2]/strong")
 	WebElement successfullmessage;
 public EditAdditionalSalaryEntryADDITIONALSALARYEARNING(WebDriver driver) {
 	super(driver);

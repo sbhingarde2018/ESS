@@ -12,7 +12,7 @@ public class CheckifSalaryAdditionalSalaryGeneralLinkAdditionalSalaryReportredir
 	WebElement SalaryLink;
 	@FindBy(xpath="//*[@id=\"menu\"]/li[6]/div/div[1]/ul/li[2]/a")
 	WebElement AdditionalSalary;
-	@FindBy(xpath="//*[@id=\"ui-accordion-accordion-panel-0\"]/li[2]/a")
+	@FindBy(xpath="//*[@id=\"ui-id-2\"]/li[2]/a")
 	WebElement AdditionalSalaryReport;
 	@FindBy(id="paymonth_id")
 	WebElement SelectPaymonth;
@@ -20,7 +20,7 @@ public class CheckifSalaryAdditionalSalaryGeneralLinkAdditionalSalaryReportredir
 	WebElement GetEmployees;
 	@FindBy(id="filter_head")
 	WebElement AdvanceFilter;
-	@FindBy(xpath="//*[@id=\"bf_form\"]/div[9]/button[1]")
+	@FindBy(xpath="//*[@id=\"bf_form\"]/div[10]/button[1]")
 	WebElement ClickOnLoad;
 	@FindBy(id="addition_sal_report_submit")
 	WebElement GetExcelReport;

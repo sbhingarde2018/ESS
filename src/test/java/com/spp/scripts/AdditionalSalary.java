@@ -188,58 +188,13 @@ public class AdditionalSalary extends BaseTest {
 		cc.switchToPopUpAndAccept(driver);
 		String d=cc.getMessage();
 		Assert.assertEquals(d, "Additional salary head successfully deleted");	
-}
-
-	/*@Test(priority=1)
-	public void EditAdditionalSalaryEarningHead_SC_495() throws Exception{
-		EditAdditionalSalaryEarningHead cc=new EditAdditionalSalaryEarningHead(driver);
-		cc.clickSalaryLink();
-		cc.selectAdditionalSalary();
-		cc.ClickPayMonths("Aug/2019");
-		cc.selectGetValues();
-		Thread.sleep(2000);
-		cc.clickedit();
-		Thread.sleep(5000);
-		cc.enterAdditionalHeadingName("Gift Test");
-		Thread.sleep(5000);
-		cc.updatebutton();
-		String d=cc.getmessage();
-		Assert.assertEquals(d, "Additional salary head successfully updated");
 	}
-
-	@Test(priority=4)
-	public void EditAdditionalSalaryEntryADDITIONALSALARYEARNING_SC_127() throws InterruptedException{
-		EditAdditionalSalaryEntryADDITIONALSALARYEARNING cc=new EditAdditionalSalaryEntryADDITIONALSALARYEARNING(driver);
-		cc.clickSalaryLink();
-		cc.selectAdditionalSalary();
-		cc.selectPaymonth("Apr/2013");
-		cc.selectGetValues();
-		Thread.sleep(2000);
-		cc.ClickAllot();
-		Thread.sleep(3000);
-		cc.clickedit();
-		Thread.sleep(2000);
-		cc.enteramount("200");
-		cc.updatebutton();
-		String d=cc.getmessage();
-		Assert.assertEquals(d, "Additional salary succesfully updated");
-}
-	@Test(priority=5)
+	@Test(priority=8)
 	public void DeleteAdditionalSalaryEntryEarning_SC_368() throws InterruptedException{
 		DeleteAdditionalSalaryEntryEarning cc=new DeleteAdditionalSalaryEntryEarning(driver);
 		cc.clickSalaryLink();
 		cc.selectAdditionalSalary();
 		Thread.sleep(2000);
-		cc.ClickAllot();
-		cc.ClickAddEmployee();
-		cc.ClickAdvanceFilter();
-		Thread.sleep(4000);
-		cc.ClickLoad();
-		Thread.sleep(3000);
-		cc.ClickSelectAllBoxs();
-		cc.ClickEmployeeBox();
-		cc.ClickSelectAllBoxs();
-		cc.ClickAmount("500");
 		cc.ClickAllotButton();
 		Thread.sleep(3000);
 		cc.ClickDelete();
@@ -250,33 +205,81 @@ public class AdditionalSalary extends BaseTest {
 		cc.switchToPopUpAndAccept(driver);
 		String d=cc.getMessage();
 		Assert.assertEquals(d, "Additional Salary Entry is successfully deleted");
-		
-}
-	
-	@Test(priority=8)
-	public void EditAdditionalSalaryDeductionHead_SC_496() throws Exception{
-		EditAdditionalSalaryDeductionHead cc=new EditAdditionalSalaryDeductionHead(driver);
+	}
+	@Test(priority=9)
+	public void DeleteAdditionalSalaryEntryDeduction_SC_369() throws InterruptedException{
+		DeleteAdditionalSalaryEntryDeduction cc=new DeleteAdditionalSalaryEntryDeduction(driver);
 		cc.clickSalaryLink();
 		cc.selectAdditionalSalary();
-		cc.ClickPayMonths("Apr/2013");
+		Thread.sleep(3000);
+		cc.selectDeductionTab();
+		cc.ClickAllot();
+		Thread.sleep(3000);
+		cc.ClickDelete();
+		Thread.sleep(3000);
+		cc.switchToPopUpAndDismiss(driver);
+		cc.ClickDelete();
+		Thread.sleep(3000);
+		cc.switchToPopUpAndAccept(driver);
+		String d=cc.getMessage();
+		Assert.assertEquals(d, "Additional Salary Entry is successfully deleted");	
+	}
+	@Test(priority=10)
+	public void EditAdditionalSalaryEarningHead_SC_495() throws Exception{
+		EditAdditionalSalaryEarningHead cc=new EditAdditionalSalaryEarningHead(driver);
+		cc.clickSalaryLink();
+		cc.selectAdditionalSalary();
+		cc.ClickPayMonths("Sep/2020");
 		cc.selectGetValues();
 		Thread.sleep(2000);
-		cc.selectDeductionTab();
 		cc.clickedit();
 		Thread.sleep(5000);
-		cc.enterAdditionalHeadingName("Lunch");
+		cc.enterAdditionalHeadingName("Gift Test1234");
 		Thread.sleep(5000);
 		cc.updatebutton();
 		String d=cc.getmessage();
 		Assert.assertEquals(d, "Additional salary head successfully updated");
 	}
-
+	@Test(priority=8)
+	public void EditAdditionalSalaryDeductionHead_SC_496() throws Exception{
+		EditAdditionalSalaryDeductionHead cc=new EditAdditionalSalaryDeductionHead(driver);
+		cc.clickSalaryLink();
+		cc.selectAdditionalSalary();
+		cc.ClickPayMonths("Sep/2020");
+		cc.selectGetValues();
+		Thread.sleep(2000);
+		cc.selectDeductionTab();
+		cc.clickedit();
+		Thread.sleep(5000);
+		cc.enterAdditionalHeadingName("Lunch12");
+		Thread.sleep(5000);
+		cc.updatebutton();
+		String d=cc.getmessage();
+		Assert.assertEquals(d, "Additional salary head successfully updated");
+	}
+	@Test(priority=4)
+	public void EditAdditionalSalaryEntryADDITIONALSALARYEARNING_SC_497() throws InterruptedException{
+		EditAdditionalSalaryEntryADDITIONALSALARYEARNING cc=new EditAdditionalSalaryEntryADDITIONALSALARYEARNING(driver);
+		cc.clickSalaryLink();
+		cc.selectAdditionalSalary();
+		cc.selectPaymonth("Sep/2020");
+		cc.selectGetValues();
+		Thread.sleep(2000);
+		cc.ClickAllot();
+		Thread.sleep(3000);
+		cc.clickedit();
+		Thread.sleep(2000);
+		cc.enteramount("200");
+		cc.updatebutton();
+		String d=cc.getmessage();
+		Assert.assertEquals(d, "Additional salary succesfully updated");
+	}
 	@Test(priority=11)
-	public void EditAdditionalSalaryEntryADDITIONALSALARYDEDUCTION_SC_127() throws InterruptedException{
+	public void EditAdditionalSalaryEntryADDITIONALSALARYDEDUCTION_SC_498() throws InterruptedException{
 		EditAdditionalSalaryEntryADDITIONALSALARYDEDUCTION cc=new EditAdditionalSalaryEntryADDITIONALSALARYDEDUCTION(driver);
 		cc.clickSalaryLink();
 		cc.selectAdditionalSalary();
-		cc.selectPaymonth("Apr/2013");
+		cc.selectPaymonth("Sep/2020");
 		cc.selectGetValues();
 		cc.selectDeductionTab();
 		Thread.sleep(2000);
@@ -289,25 +292,6 @@ public class AdditionalSalary extends BaseTest {
 		String d=cc.getmessage();
 		Assert.assertEquals(d, "Additional salary succesfully updated");
 	}
-	@Test(priority=12)
-	public void DeleteAdditionalSalaryEntryDeduction_SC_369() throws InterruptedException{
-		DeleteAdditionalSalaryEntryDeduction cc=new DeleteAdditionalSalaryEntryDeduction(driver);
-		cc.clickSalaryLink();
-		cc.selectAdditionalSalary();
-		cc.selectPaymonth("Apr/2013");
-		cc.selectGetValues();
-		cc.selectDeductionTab();
-		cc.ClickAllot();
-		cc.ClickDelete();
-		Thread.sleep(3000);
-		cc.switchToPopUpAndDismiss(driver);
-		cc.ClickDelete();
-		Thread.sleep(3000);
-		cc.switchToPopUpAndAccept(driver);
-		String d=cc.getMessage();
-	Assert.assertEquals(d, "Additional Salary Entry is successfully deleted");	
-	}
-
 	@Test(priority=14)
 	public void CheckifSalaryAdditionalSalaryGeneralLinkAdditionalSalaryReportredirectstoReport_SC_499() throws InterruptedException {
 		CheckifSalaryAdditionalSalaryGeneralLinkAdditionalSalaryReportredirectstoReport cc=new CheckifSalaryAdditionalSalaryGeneralLinkAdditionalSalaryReportredirectstoReport(driver);
@@ -316,13 +300,18 @@ public class AdditionalSalary extends BaseTest {
 		Thread.sleep(2000);
 		cc.selectadditionalsalaryreport();
 		Thread.sleep(3000);
-		cc.selectPaymonth("Apr/2013");
+		cc.selectPaymonth("Sep/2020");
 		cc.getemployees();
 		Thread.sleep(5000);
-		cc.ClickAdvanceFilter();
+		//cc.ClickAdvanceFilter();
+		//Thread.sleep(4000);
+		cc.resizeWindow();
 		Thread.sleep(4000);
 		cc.ClickLoad();
 		Thread.sleep(3000);
+		cc.exitFullscreen();
+		Thread.sleep(3000);
 		cc.getexcelreport();
-	}*/
+		Thread.sleep(3000);
+	}
 }
