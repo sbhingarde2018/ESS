@@ -12,31 +12,26 @@ public class CheckArrearsSalaryStructureRedirectToMasterModule extends BasePage 
 	WebElement SalaryLink;
 	@FindBy(xpath="//*[@id=\"menu\"]/li[6]/div/div[1]/ul/li[3]/a")
 	WebElement Arrears;
-	@FindBy(xpath="//*[@id=\"ui-accordion-accordion-header-1\"]/h3")
+	@FindBy(xpath="//*[@id=\"ui-id-3\"]/h3")
 	WebElement GeneralLink;
-	@FindBy(xpath="//*[@id=\"ui-accordion-accordion-panel-1\"]/li[3]/a")
+	@FindBy(xpath="//*[@id=\"ui-id-4\"]/li[3]/a")
 	WebElement SalaryStructure;
-	
 	@FindBy(xpath="//*[@id=\"main\"]/div[2]/span/a")
 	WebElement NewSalaryStructure;
-	
 	@FindBy(id="salary_group_salary_group_name")
 	WebElement StructureName;
-	
-	
 	@FindBy(xpath="//*[@id=\"salary_group\"]/div[3]/input")
 	WebElement CreateButton;
-	
 	@FindBy(xpath="//*[@id=\"main\"]/div[2]/strong")
 	WebElement SuccessfulMessage;
-	
 	@FindBy(xpath="//*[@id='main']/div[3]/table/tbody/tr/td[contains(text(),'Structure1')]/parent::tr/td[5]/a")
 	WebElement ClickDelete;
-		
 	@FindBy(id="master")
 	WebElement masterlink;
 	@FindBy(xpath="//a[text()='Salary Structure']")
 	WebElement salarystructurelink;
+	
+	
 	public CheckArrearsSalaryStructureRedirectToMasterModule(WebDriver driver) {
 		super(driver);
 		PageFactory.initElements(driver,this);

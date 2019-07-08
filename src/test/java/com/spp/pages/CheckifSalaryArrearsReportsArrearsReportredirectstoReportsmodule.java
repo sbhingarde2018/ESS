@@ -15,15 +15,15 @@ public class CheckifSalaryArrearsReportsArrearsReportredirectstoReportsmodule ex
 	WebElement Arrears;
 	@FindBy(id="report")
 	WebElement ClickOnReports;
-	@FindBy(xpath="//*[@id=\"menu\"]/li[8]/div/div[3]/ul/li[1]/a")
+	@FindBy(xpath="//*[@id=\"ui-id-2\"]/li/a")
 	WebElement ClickOnArrearReport;
 	@FindBy(id="report_type")
 	WebElement SelectReportType;
 	@FindBy(id="month_year")
 	WebElement SelectPayMonth;
-	@FindBy(id="arrears_filter")
+	@FindBy(id="arrears_filter") //*[@id="main"]/section/p/a[2]
 	WebElement GetEmployees;
-	@FindBy(xpath="//*[@id=\"bf_form\"]/div[9]/button[1]")
+	@FindBy(xpath="//*[@id=\"bf_form\"]/div[10]/button[1]")
 	WebElement ClickonLoad;
 	@FindBy(id="employee_ids_")
 	WebElement SelectEmployee;

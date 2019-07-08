@@ -12,13 +12,13 @@ public class CheckifSalaryArrearsGeneralLinkPaymonthsredirectstoCreateNewPaymont
 	WebElement ClickOnSalary;
 	@FindBy(xpath="//*[@id=\"menu\"]/li[6]/div/div[1]/ul/li[3]/a")
 	WebElement Arrears;
-	@FindBy(xpath="//*[@id=\"ui-accordion-accordion-header-1\"]/h3")
+	@FindBy(xpath="//*[@id=\"ui-id-3\"]/h3")
 	WebElement ClickonGeneralLinks;
-	@FindBy(xpath="//*[@id=\"ui-accordion-accordion-panel-1\"]/li[1]/a")
+	@FindBy(xpath="//*[@id=\"ui-id-4\"]/li[1]/a")
 	WebElement ClickOnPaymonths;
-	@FindBy(css="input[type=submit]")
+	@FindBy(xpath="//*[@id=\"create_paymonth_form\"]/div[4]/div/div/fieldset/div[2]/input")
 	WebElement CreatePaymonth;
-	@FindBy(xpath="//*[@id=\"paymonth-lists\"]/form/div[3]/table/tbody/tr[1]/td[8]/a/img")
+	@FindBy(xpath="//form/div[3]/table/tbody/tr[1]/td[8]/a/img")
 	WebElement ClickDelete;
 	@FindBy(xpath="//*[@id=\"main\"]/div[3]/div/div/fieldset/div[2]/form/div/input[2]")
 	WebElement DeleteConfirm;

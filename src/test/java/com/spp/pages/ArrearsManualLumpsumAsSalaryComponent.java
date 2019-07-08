@@ -20,7 +20,7 @@ public class ArrearsManualLumpsumAsSalaryComponent extends BasePage {
 	WebElement ArrearDescription;
 	@FindBy(xpath="//*[@id=\"new_arrear\"]/div[4]/div[1]/div[1]/div[1]/table/tbody/tr[2]/td/fieldset/table/tbody/tr/td[1]/table/tbody/tr/td[2]/input")
 	WebElement ManualCheckBox;
-	@FindBy(xpath="//*[@id=\"arrear_manual\"]/table/tbody/tr/td[2]/input")
+	@FindBy(xpath="//*[@id=\"arrear_calc_type_manual_0\"]")
 	WebElement LumpsumCheckBox;
 	@FindBy(id="arrear_arrear_from_month")
 	WebElement ArrearFrom;
