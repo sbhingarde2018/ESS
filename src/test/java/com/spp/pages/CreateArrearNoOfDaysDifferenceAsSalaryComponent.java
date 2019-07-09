@@ -44,7 +44,7 @@ public class CreateArrearNoOfDaysDifferenceAsSalaryComponent extends BasePage{
 	WebElement CreateButton;
 	@FindBy(xpath="//*[@id=\"main\"]/div[1]/strong")
 	WebElement successfullMessage;
-	@FindBy(xpath="//*[@id=\"main\"]/div[3]/table/tbody/tr/td[6]/a")
+	@FindBy(xpath="//table/tbody/tr/td[contains(text(),'Salary_ArrearSal')]/parent::tr/td[6]/a/img")
 	WebElement DeleteButton;
 	
 //@FindBy(xpath="//*[@id=\"main\"]/div[2]/table/tbody/tr/td[1][contains(text(),'new')]/parent::tr/td[6]/a/img")
