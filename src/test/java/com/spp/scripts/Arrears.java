@@ -21,18 +21,18 @@ import com.spp.pages.CreateArrearAsSalaryComponent;
 import com.spp.pages.CreateArrearAsSalaryComponentInPayPart;
 import com.spp.pages.CreateArrearAsSalaryComponentRestrictNegative;
 import com.spp.pages.CreateArrearAsSalaryComponentRestrictNegativePayPart;
-//import com.spp.pages.CreateArrearBankAdvicePayPart;
-//import com.spp.pages.CreateArrearBankAdviceRestrictNegativePayPart;
-//import com.spp.pages.CreateArrearCashPayPart;
+import com.spp.pages.CreateArrearBankAdvicePayPart;
+import com.spp.pages.CreateArrearBankAdviceRestrictNegativePayPart;
+import com.spp.pages.CreateArrearCashPayPart;
 import com.spp.pages.CreateArrearIndependentOfSalaryBankAdvice;
-//import com.spp.pages.CreateArrearIndependentOfSalaryBankAdviceRestrictNegative;
+import com.spp.pages.CreateArrearIndependentOfSalaryBankAdviceRestrictNegative;
 import com.spp.pages.CreateArrearIndependentOfSalaryCash;
 import com.spp.pages.CreateArrearIndependentOfSalaryCashRestrictNegative;
-//import com.spp.pages.CreateArrearIndependentOfSalaryCashRestrictNegativePayPart;
+import com.spp.pages.CreateArrearIndependentOfSalaryCashRestrictNegativePayPart;
 import com.spp.pages.CreateArrearIndependentOfSalaryInstruments;
 import com.spp.pages.CreateArrearIndependentOfSalaryInstrumentsRestrictNegative;
-//import com.spp.pages.CreateArrearInstrumentsPayPart;
-//import com.spp.pages.CreateArrearInstrumentsRestrictNegativePayPart;
+import com.spp.pages.CreateArrearInstrumentsPayPart;
+import com.spp.pages.CreateArrearInstrumentsRestrictNegativePayPart;
 import com.spp.pages.CreateArrearMergedWithSalaryComponent;
 import com.spp.pages.CreateArrearMergedWithSalaryComponentInPayPart;
 import com.spp.pages.CreateArrearMergesWithSalaryComponentRestrictNegative;
@@ -393,7 +393,7 @@ public class Arrears extends BaseTest {
 		Thread.sleep(2000);
 		cc.selectDeleteButton();
 	}*/
-	@Test(priority=15)
+	/*@Test(priority=15)
 	public void CreateArrearNoOfDaysDifferenceAsSalaryComponent_SC_516() throws InterruptedException{
 		CreateArrearNoOfDaysDifferenceAsSalaryComponent cc=new CreateArrearNoOfDaysDifferenceAsSalaryComponent(driver);
 		cc.clickSalaryLink();
@@ -653,23 +653,23 @@ public class Arrears extends BaseTest {
 		Assert.assertEquals(t, "Arrear was successfully created.");
 		Thread.sleep(3000);
 		cc.selectDeleteButton();
-  }
+  }*/
 	
-	/*@Test(priority=19)
+	@Test(priority=25)
 	public void CreateArrearIndependentOfSalaryBankAdviceRestrictNegative_SC_526() throws InterruptedException{
 		  CreateArrearIndependentOfSalaryBankAdviceRestrictNegative cc=new CreateArrearIndependentOfSalaryBankAdviceRestrictNegative(driver);
 			cc.clickSalaryLink();
 			cc.selectArrears();
 			cc.selectCreateArrear();
-			cc.EnterArrearName("Salary_Arrear");
+			cc.EnterArrearName("Salary_ArrearSal");
 			//cc.EnterArrearName("new_"+num);
 			cc.EnterArrearDescription("Salary_Arrear");
 			cc.ClickAutomationCheckBox();
-			cc.selectArrearFrom("Apr/2013");
-			cc.selectArrearTo("Apr/2013");
+			cc.selectArrearFrom("Aug/2019");
+			cc.selectArrearTo("Aug/2019");
 			Thread.sleep(3000);
-			cc.selectRefMonth("Apr/2013");
-			cc.selectPaymonth("Apr/2013");
+			cc.selectRefMonth("Aug/2019");
+			cc.selectPaymonth("Aug/2019");
 			cc.ClickRestrictNegative();
 			cc.ClickIndependentOfSalary();
 			cc.ClickBankAdvice();
@@ -682,21 +682,21 @@ public class Arrears extends BaseTest {
 			cc.selectDeleteButton();
 	}  	
 	
-	@Test(priority=20)
+	@Test(priority=26)
 	public void CreateArrearCashPayPart_SC_527() throws InterruptedException{
 		CreateArrearCashPayPart cc=new CreateArrearCashPayPart(driver);
 		cc.clickSalaryLink();
 		cc.selectArrears();
 		cc.selectCreateArrear();
-		cc.EnterArrearName("Salary_Arrear");
+		cc.EnterArrearName("Salary_ArrearSal");
 		//cc.EnterArrearName("new_"+num);
 		cc.EnterArrearDescription("Salary_Arrear");
 		cc.ClickAutomationCheckBox();
-		cc.selectArrearFrom("Apr/2013");
-		cc.selectArrearTo("Apr/2013");
+		cc.selectArrearFrom("Aug/2019");
+		cc.selectArrearTo("Aug/2019");
 		Thread.sleep(3000);
-		cc.selectRefMonth("Apr/2013");
-		cc.selectPaymonth("Apr/2013");
+		cc.selectRefMonth("Aug/2019");
+		cc.selectPaymonth("Aug/2019");
 		cc.ClickPayPart();
 		cc.ClickNumber("2");
 		cc.ClickIndependentOfSalary();
@@ -711,21 +711,21 @@ public class Arrears extends BaseTest {
 		cc.selectDeleteButton();
 }
 	
-	@Test(priority=21)
+	@Test(priority=27)
 	public void CreateArrearInstrumentsPayPart_SC_528() throws InterruptedException{
 		CreateArrearInstrumentsPayPart cc=new CreateArrearInstrumentsPayPart(driver);
 		cc.clickSalaryLink();
 		cc.selectArrears();
 		cc.selectCreateArrear();
-		cc.EnterArrearName("Salary_Arrear");
+		cc.EnterArrearName("Salary_ArrearSal");
 		//cc.EnterArrearName("new_"+num);
 		cc.EnterArrearDescription("Salary_Arrear");
 		cc.ClickAutomationCheckBox();
-		cc.selectArrearFrom("Apr/2013");
-		cc.selectArrearTo("Apr/2013");
+		cc.selectArrearFrom("Aug/2019");
+		cc.selectArrearTo("Aug/2019");
 		Thread.sleep(3000);
-		cc.selectRefMonth("Apr/2013");
-		cc.selectPaymonth("Apr/2013");
+		cc.selectRefMonth("Aug/2019");
+		cc.selectPaymonth("Aug/2019");
 		cc.ClickPayPart();
 		cc.ClickNumber("2");
 		cc.ClickIndependentOfSalary();
@@ -740,21 +740,21 @@ public class Arrears extends BaseTest {
 		cc.selectDeleteButton();
 }
 	
-	@Test(priority=22)
+	@Test(priority=28)
 	public void CreateArrearBankAdvicePayPart_SC_529() throws InterruptedException{
 		CreateArrearBankAdvicePayPart cc=new CreateArrearBankAdvicePayPart(driver);
 		cc.clickSalaryLink();
 		cc.selectArrears();
 		cc.selectCreateArrear();
-		cc.EnterArrearName("Salary_Arrear");
+		cc.EnterArrearName("Salary_ArrearSal");
 		//cc.EnterArrearName("new_"+num);
 		cc.EnterArrearDescription("Salary_Arrear");
 		cc.ClickAutomationCheckBox();
-		cc.selectArrearFrom("Apr/2013");
-		cc.selectArrearTo("Apr/2013");
+		cc.selectArrearFrom("Aug/2019");
+		cc.selectArrearTo("Aug/2019");
 		Thread.sleep(3000);
-		cc.selectRefMonth("Apr/2013");
-		cc.selectPaymonth("Apr/2013");
+		cc.selectRefMonth("Aug/2019");
+		cc.selectPaymonth("Aug/2019");
 		cc.ClickPayPart();
 		cc.ClickNumber("2");
 		cc.ClickIndependentOfSalary();
@@ -768,91 +768,91 @@ public class Arrears extends BaseTest {
 		Thread.sleep(3000);
 		cc.selectDeleteButton();
 }	
-	@Test(priority=23)
+	@Test(priority=29)
 	public void CreateArrearIndependentOfSalaryCashRestrictNegativePayPart_SC_530() throws InterruptedException{
 	  CreateArrearIndependentOfSalaryCashRestrictNegativePayPart cc=new CreateArrearIndependentOfSalaryCashRestrictNegativePayPart(driver);
 		cc.clickSalaryLink();
 		cc.selectArrears();
 		cc.selectCreateArrear();
-		cc.EnterArrearName("Salary_Arrear");
+		cc.EnterArrearName("Salary_ArrearSal");
 		//cc.EnterArrearName("new_"+num);
 		cc.EnterArrearDescription("Salary_Arrear");
 		cc.ClickAutomationCheckBox();
-		cc.selectArrearFrom("Apr/2013");
-		cc.selectArrearTo("Apr/2013");
+		cc.selectArrearFrom("Aug/2019");
+		cc.selectArrearTo("Aug/2019");
 		Thread.sleep(3000);
-		cc.selectRefMonth("Apr/2013");
-		cc.selectPaymonth("Apr/2013");
+		cc.selectRefMonth("Aug/2019");
+		cc.selectPaymonth("Aug/2019");
 		cc.ClickRestrictNegative();
 		cc.ClickPayPart();
 		cc.ClickNumber("2");
 		cc.ClickIndependentOfSalary();
 		cc.ClickCash();
 		cc.ClickAdvancedSettingsTab();
-		cc.ClickStatutory();
+		//cc.ClickStatutory();
 		cc.ClickCreateButton();
 		String t=cc.getMessage();
 		Assert.assertEquals(t, "Arrear was successfully created.");
 		Thread.sleep(3000);
 		cc.selectDeleteButton();
 }	
-	@Test(priority=24)
+	@Test(priority=30)
 	public void CreateArrearInstrumentsRestrictNegativePayPart_SC_531() throws InterruptedException{
 	  CreateArrearInstrumentsRestrictNegativePayPart cc=new CreateArrearInstrumentsRestrictNegativePayPart(driver);
 		cc.clickSalaryLink();
 		cc.selectArrears();
 		cc.selectCreateArrear();
-		cc.EnterArrearName("Salary_Arrear");
+		cc.EnterArrearName("Salary_ArrearSal");
 		//cc.EnterArrearName("new_"+num);
 		cc.EnterArrearDescription("Salary_Arrear");
 		cc.ClickAutomationCheckBox();
-		cc.selectArrearFrom("Apr/2013");
-		cc.selectArrearTo("Apr/2013");
+		cc.selectArrearFrom("Aug/2019");
+		cc.selectArrearTo("Aug/2019");
 		Thread.sleep(3000);
-		cc.selectRefMonth("Apr/2013");
-		cc.selectPaymonth("Apr/2013");
+		cc.selectRefMonth("Aug/2019");
+		cc.selectPaymonth("Aug/2019");
 		cc.ClickRestrictNegative();
 		cc.ClickPayPart();
 		cc.ClickNumber("2");
 		cc.ClickIndependentOfSalary();
 		cc.ClickInstruments();
 		cc.ClickAdvancedSettingsTab();
-		cc.ClickStatutory();
+		//cc.ClickStatutory();
 		cc.ClickCreateButton();
 		String t=cc.getMessage();
 		Assert.assertEquals(t, "Arrear was successfully created.");
 		Thread.sleep(3000);
 		cc.selectDeleteButton();
   }	
-	@Test(priority=25)
+	@Test(priority=31)
 	public void CreateArrearBankAdviceRestrictNegativePayPart_SC_532() throws InterruptedException{
 		  CreateArrearBankAdviceRestrictNegativePayPart cc=new CreateArrearBankAdviceRestrictNegativePayPart(driver);
 			cc.clickSalaryLink();
 			cc.selectArrears();
 			cc.selectCreateArrear();
-			cc.EnterArrearName("Salary_Arrear");
+			cc.EnterArrearName("Salary_ArrearSal");
 			//cc.EnterArrearName("new_"+num);
 			cc.EnterArrearDescription("Salary_Arrear");
 			cc.ClickAutomationCheckBox();
-			cc.selectArrearFrom("Apr/2013");
-			cc.selectArrearTo("Apr/2013");
+			cc.selectArrearFrom("Aug/2019");
+			cc.selectArrearTo("Aug/2019");
 			Thread.sleep(3000);
-			cc.selectRefMonth("Apr/2013");
-			cc.selectPaymonth("Apr/2013");
+			cc.selectRefMonth("Aug/2019");
+			cc.selectPaymonth("Aug/2019");
 			cc.ClickRestrictNegative();
 			cc.ClickPayPart();
 			cc.ClickNumber("2");
 			cc.ClickIndependentOfSalary();
 			cc.ClickBankAdvice();
 			cc.ClickAdvancedSettingsTab();
-			cc.ClickStatutory();
+			//cc.ClickStatutory();
 			cc.ClickCreateButton();
 			String t=cc.getMessage();
 			Assert.assertEquals(t, "Arrear was successfully created.");
 			Thread.sleep(3000);
 			cc.selectDeleteButton();
 	}
-	@Test(priority=26)
+	/*@Test(priority=26)
 	public void CreateArrearNoOfDaysCashSC_533() throws InterruptedException{
 		CreateArrearNoOfDaysCash cc=new CreateArrearNoOfDaysCash(driver);
 		cc.clickSalaryLink();
