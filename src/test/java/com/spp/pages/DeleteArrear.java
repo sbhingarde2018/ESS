@@ -12,9 +12,8 @@ public class DeleteArrear extends BasePage{
 	WebElement SalaryLink;
 	@FindBy(xpath="//*[@id=\"menu\"]/li[6]/div/div[1]/ul/li[3]/a")
 	WebElement Arrears;
-	@FindBy(xpath="//*[@id=\"main\"]/div[2]/table/tbody/tr/td[6]/a/img")
+	@FindBy(xpath="//table/tbody/tr/td[contains(text(),'Salary_ArrearSal')]/parent::tr/td[6]/a/img")
 	WebElement Delete;
-	
 	@FindBy(xpath="//*[@id=\"main\"]/div[1]/strong")
 	WebElement successfullMessage;
 	

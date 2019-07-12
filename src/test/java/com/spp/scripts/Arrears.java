@@ -2,7 +2,6 @@ package com.spp.scripts;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
 import com.spp.common.BaseTest;
 import com.spp.generics.Utility;
 import com.spp.pages.ArrearsManualLumpsumAsSalaryComponent;
@@ -47,16 +46,16 @@ import com.spp.pages.CreateArrearNoOfDaysDifferenceInstruments;
 import com.spp.pages.CreateArrearNoOfDaysDifferenceMergedWithSalaryComponent;
 import com.spp.pages.CreateArrearNoOfDaysInstruments;
 import com.spp.pages.CreateArrearNoOfDaysMergedWithSalaryComponent;
-//import com.spp.pages.CreateArrearsManualLumpsumBankAdvice;
-//import com.spp.pages.CreateArrearsManualLumpsumCash;
-//import com.spp.pages.CreateArrearsManualLumpsumInstruments;
-//import com.spp.pages.CreateArrearsManualSalaryHeadWisInstruments;
-//import com.spp.pages.CreateArrearsManualSalaryHeadWiseBankAdvice;
+import com.spp.pages.CreateArrearsManualLumpsumBankAdvice;
+import com.spp.pages.CreateArrearsManualLumpsumCash;
+import com.spp.pages.CreateArrearsManualLumpsumInstruments;
+import com.spp.pages.CreateArrearsManualSalaryHeadWisInstruments;
+import com.spp.pages.CreateArrearsManualSalaryHeadWiseBankAdvice;
 import com.spp.pages.CreateArrearsManualSalaryHeadWiseCash;
 import com.spp.pages.CreateArrearsManualSalaryHeadWiseMergedWithSalaryComponent;
-//import com.spp.pages.DeleteArrear;
+import com.spp.pages.DeleteArrear;
 //import com.spp.pages.DeleteComputationDetails;
-//import com.spp.pages.EditArrear;
+import com.spp.pages.EditArrear;
 
 
 public class Arrears extends BaseTest {
@@ -852,7 +851,7 @@ public class Arrears extends BaseTest {
 			Thread.sleep(3000);
 			cc.selectDeleteButton();
 	}*/
-	@Test(priority=32)
+	/*@Test(priority=32)
 	public void CreateArrearNoOfDaysCash_SC_533() throws InterruptedException{
 		CreateArrearNoOfDaysCash cc=new CreateArrearNoOfDaysCash(driver);
 		cc.clickSalaryLink();
@@ -1046,21 +1045,20 @@ public class Arrears extends BaseTest {
 		Assert.assertEquals(t, "Arrear was successfully created.");
 		Thread.sleep(3000);
 		cc.selectDeleteButton();
-	}
-	/*@Test(priority=34)
+	}*/
+	@Test(priority=40)
 	public void CreateArrearsManualSalaryHeadWisInstruments_SC_541() throws InterruptedException{
 		CreateArrearsManualSalaryHeadWisInstruments cc=new CreateArrearsManualSalaryHeadWisInstruments(driver);
 		cc.clickSalaryLink();
 		cc.selectArrears();
 		cc.selectCreateArrear();
-		cc.EnterArrearName("Salary_Arrear");
-		//cc.EnterArrearName("new_"+num);
+		cc.EnterArrearName("Salary_ArrearSal");
 		cc.EnterArrearDescription("Salary_Arrear");
 		cc.ClickManualCheckBox();
-		cc.selectArrearFrom("Apr/2013");
-		cc.selectArrearTo("Apr/2013");
+		cc.selectArrearFrom("Aug/2019");
+		cc.selectArrearTo("Aug/2019");
 		Thread.sleep(3000);
-		cc.selectPaymonth("Apr/2013");
+		cc.selectPaymonth("Aug/2019");
 		cc.ClickIndependentOfSalary();
 		cc.ClickInstruments();
 		cc.ClickAdvancedSettingsTab();
@@ -1071,68 +1069,65 @@ public class Arrears extends BaseTest {
 		Thread.sleep(3000);
 		cc.selectDeleteButton();
 	}
-	@Test(priority=35)
+	@Test(priority=41)
 	public void CreateArrearsManualSalaryHeadWiseBankAdvice_SC_542() throws InterruptedException{
 		CreateArrearsManualSalaryHeadWiseBankAdvice cc=new CreateArrearsManualSalaryHeadWiseBankAdvice(driver);
 		cc.clickSalaryLink();
 		cc.selectArrears();
 		cc.selectCreateArrear();
-		cc.EnterArrearName("Salary_Arrear");
-		//cc.EnterArrearName("new_"+num);
+		cc.EnterArrearName("Salary_ArrearSal");
 		cc.EnterArrearDescription("Salary_Arrear");
 		cc.ClickManualCheckBox();
-		cc.selectArrearFrom("Apr/2013");
-		cc.selectArrearTo("Apr/2013");
+		cc.selectArrearFrom("Aug/2019");
+		cc.selectArrearTo("Aug/2019");
 		Thread.sleep(3000);
-		cc.selectPaymonth("Apr/2013");
+		cc.selectPaymonth("Aug/2019");
 		cc.ClickIndependentOfSalary();
 		cc.ClickBankAdvice();
 		cc.ClickAdvancedSettingsTab();
-		cc.ClickStatutory();
+		//cc.ClickStatutory();
 		cc.ClickCreateButton();
 		String t=cc.getMessage();
 		Assert.assertEquals(t, "Arrear was successfully created.");
 		Thread.sleep(3000);
 		cc.selectDeleteButton();
 	}
-	@Test(priority=36)
+	@Test(priority=42)
 	public void CreateArrearsManualLumpsumCash_SC_543() throws InterruptedException{
 		CreateArrearsManualLumpsumCash cc=new CreateArrearsManualLumpsumCash(driver);
 		cc.clickSalaryLink();
 		cc.selectArrears();
 		cc.selectCreateArrear();
-		cc.EnterArrearName("Salary_Arrear");
-		//cc.EnterArrearName("new_"+num);
+		cc.EnterArrearName("Salary_ArrearSal");
 		cc.EnterArrearDescription("Salary_Arrear");
 		cc.ClickManualCheckBox();
 		cc.ClickLumpsum();		
-		cc.selectArrearFrom("Apr/2013");
+		cc.selectArrearFrom("Aug/2019");
 		Thread.sleep(3000);
-		cc.selectPaymonth("Apr/2013");
+		cc.selectPaymonth("Aug/2019");
 		cc.ClickIndependentOfSalary();
 		cc.ClickCash();
 		cc.ClickAdvancedSettingsTab();
-		cc.ClickStatutory();
+		//cc.ClickStatutory();
 		cc.ClickCreateButton();
 		String t=cc.getMessage();
 		Assert.assertEquals(t, "Arrear was successfully created.");
 		Thread.sleep(3000);
 		cc.selectDeleteButton();
 	}
-	@Test(priority=37)
+	@Test(priority=43)
 	public void CreateArrearsManualLumpsumInstruments_SC_544() throws InterruptedException{
 		CreateArrearsManualLumpsumInstruments cc=new CreateArrearsManualLumpsumInstruments(driver);
 		cc.clickSalaryLink();
 		cc.selectArrears();
 		cc.selectCreateArrear();
-		cc.EnterArrearName("Salary_Arrear");
-		//cc.EnterArrearName("new_"+num);
+		cc.EnterArrearName("Salary_ArrearSal");
 		cc.EnterArrearDescription("Salary_Arrear");
 		cc.ClickManualCheckBox();
 		cc.ClickLumpsum();		
-		cc.selectArrearFrom("Apr/2013");
+		cc.selectArrearFrom("Aug/2019");
 		Thread.sleep(3000);
-		cc.selectPaymonth("Apr/2013");
+		cc.selectPaymonth("Aug/2019");
 		cc.ClickIndependentOfSalary();
 		cc.ClickInstruments();
 		cc.ClickAdvancedSettingsTab();
@@ -1143,20 +1138,19 @@ public class Arrears extends BaseTest {
 		Thread.sleep(3000);
 		cc.selectDeleteButton();
 	}
-	@Test(priority=38)
+	@Test(priority=44)
 	public void CreateArrearsManualLumpsumBankAdvice_SC_545() throws InterruptedException{
 		CreateArrearsManualLumpsumBankAdvice cc=new CreateArrearsManualLumpsumBankAdvice(driver);
 		cc.clickSalaryLink();
 		cc.selectArrears();
 		cc.selectCreateArrear();
-		cc.EnterArrearName("Salary_Arrear");
-		//cc.EnterArrearName("new_"+num);
+		cc.EnterArrearName("Salary_ArrearSal");
 		cc.EnterArrearDescription("Salary_Arrear");
 		cc.ClickManualCheckBox();
 		cc.ClickLumpsum();		
-		cc.selectArrearFrom("Apr/2013");
+		cc.selectArrearFrom("Aug/2019");
 		Thread.sleep(3000);
-		cc.selectPaymonth("Apr/2013");
+		cc.selectPaymonth("Aug/2019");
 		cc.ClickIndependentOfSalary();
 		cc.ClickBankAdvice();
 		cc.ClickAdvancedSettingsTab();
@@ -1164,11 +1158,34 @@ public class Arrears extends BaseTest {
 		cc.ClickCreateButton();
 		String t=cc.getMessage();
 		Assert.assertEquals(t, "Arrear was successfully created.");
-		Thread.sleep(3000);
-		cc.selectDeleteButton();
+		Thread.sleep(2000);
 	}
-
-	@Test(priority=39)
+	@Test(priority=45)
+	public void EditArrear_SC_546() throws InterruptedException{
+		EditArrear cc=new EditArrear(driver);
+		cc.clickSalaryLink();
+		cc.selectArrears();
+		cc.selectEditArrear();
+		cc.EnterArrearName("Salary_ArrearSal");
+		cc.ClickUpdateButton();
+		String t=cc.getMessage();
+		Assert.assertEquals(t, "Arrear was successfully updated.");
+	}
+	@Test(priority=46)
+	public void DeleteArrear_SC_547() throws InterruptedException{
+		DeleteArrear cc=new DeleteArrear(driver);
+		cc.clickSalaryLink();
+		cc.selectArrears();
+		cc.selectDelete();
+		cc.switchToPopUpAndDismiss();
+		Thread.sleep(1000);
+		cc.selectDelete();
+		cc.switchToPopUpAndAccept(driver);
+		String t=cc.getMessage();
+		Assert.assertEquals(t, "Arrear deleted successfully");
+	}
+	
+	/*@Test(priority=39)
 	public void CreateArrear_SC_335() throws InterruptedException{
 		CreateArrear cc=new CreateArrear(driver);
 		cc.clickSalaryLink();
@@ -1186,31 +1203,6 @@ public class Arrears extends BaseTest {
 		cc.ClickCreateButton();
 		String t=cc.getMessage();
 		Assert.assertEquals(t, "Arrear was successfully created.");
-	}
-
-	@Test(priority=40)
-	public void EditArrear_SC_546() throws InterruptedException{
-		EditArrear cc=new EditArrear(driver);
-		cc.clickSalaryLink();
-		cc.selectArrears();
-		cc.selectEditArrear();
-		cc.EnterArrearName("Salary_Arrear");
-		cc.ClickUpdateButton();
-		String t=cc.getMessage();
-		Assert.assertEquals(t, "Arrear was successfully updated.");
-	}
-	@Test(priority=41)
-	public void DeleteArrear_SC_547() throws InterruptedException{
-		DeleteArrear cc=new DeleteArrear(driver);
-		cc.clickSalaryLink();
-		cc.selectArrears();
-		cc.selectDelete();
-		cc.switchToPopUpAndDismiss();
-		Thread.sleep(1000);
-		cc.selectDelete();
-		cc.switchToPopUpAndAccept(driver);
-		String t=cc.getMessage();
-		Assert.assertEquals(t, "Arrear deleted successfully");
 	}
 	@Test(priority=47)  
 	public void DeleteComputationDetails_SC_555() throws InterruptedException{
