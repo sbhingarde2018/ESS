@@ -12,7 +12,7 @@ public class DeleteComputationDetails extends BasePage{
 	WebElement SalaryLink;
 	@FindBy(xpath="//*[@id=\"menu\"]/li[6]/div/div[1]/ul/li[3]/a")
 	WebElement Arrears;
-	@FindBy(xpath="//*[@id=\"main\"]/div/table/tbody/tr[6]/td[4]/a")
+	@FindBy(xpath="//table/tbody/tr/td[contains(text(),'Salary_ArrearSal7')]/parent::tr/td[4]/a")
 	WebElement computation;
 	@FindBy(linkText="Add Employees")
 	WebElement AddEmployee;
@@ -26,7 +26,7 @@ public class DeleteComputationDetails extends BasePage{
 	WebElement Employee;
 	@FindBy(xpath="//*[@id=\"EmployeesArrears\"]/div[3]/div/div/input")
 	WebElement Save;
-	@FindBy(xpath="//*[@id=\"manual_headwise_arrears\"]/tbody/tr/td[6]/a")
+	@FindBy(xpath="//tbody/tr[1]/td[6]/a")
 	WebElement Delete;
 	@FindBy(xpath="//*[@id=\"main\"]/div[3]/fieldset/table/tbody/tr[3]/td[1]/table[1]/tbody/tr[2]/td[1]/input")
 	WebElement Basic;
