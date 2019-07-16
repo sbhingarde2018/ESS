@@ -66,7 +66,7 @@ import com.spp.pages.EditArrear;
 
 public class Arrears extends BaseTest {
 
-	/*@Test(priority=0)
+	@Test(priority=0)
 	public void ArrearsManualSalaryHeadWiseAsSalaryComponent_SC_132() throws InterruptedException{
 	ArrearsManualSalaryHeadWiseAsSalaryComponent cc=new ArrearsManualSalaryHeadWiseAsSalaryComponent(driver);
 		cc.clickSalaryLink();
@@ -397,8 +397,8 @@ public class Arrears extends BaseTest {
 		Assert.assertEquals(t, "Arrear was successfully created.");
 		Thread.sleep(2000);
 		cc.selectDeleteButton();
-	}*/
-	/*@Test(priority=15)
+	}
+	@Test(priority=15)
 	public void CreateArrearNoOfDaysDifferenceAsSalaryComponent_SC_516() throws InterruptedException{
 		CreateArrearNoOfDaysDifferenceAsSalaryComponent cc=new CreateArrearNoOfDaysDifferenceAsSalaryComponent(driver);
 		cc.clickSalaryLink();
@@ -658,9 +658,9 @@ public class Arrears extends BaseTest {
 		Assert.assertEquals(t, "Arrear was successfully created.");
 		Thread.sleep(3000);
 		cc.selectDeleteButton();
-  }*/
+  }
 	
-	/*@Test(priority=25)
+	@Test(priority=25)
 	public void CreateArrearIndependentOfSalaryBankAdviceRestrictNegative_SC_526() throws InterruptedException{
 		  CreateArrearIndependentOfSalaryBankAdviceRestrictNegative cc=new CreateArrearIndependentOfSalaryBankAdviceRestrictNegative(driver);
 			cc.clickSalaryLink();
@@ -856,8 +856,8 @@ public class Arrears extends BaseTest {
 			Assert.assertEquals(t, "Arrear was successfully created.");
 			Thread.sleep(3000);
 			cc.selectDeleteButton();
-	}*/
-	/*@Test(priority=32)
+	}
+	@Test(priority=32)
 	public void CreateArrearNoOfDaysCash_SC_533() throws InterruptedException{
 		CreateArrearNoOfDaysCash cc=new CreateArrearNoOfDaysCash(driver);
 		cc.clickSalaryLink();
@@ -1006,14 +1006,14 @@ public class Arrears extends BaseTest {
 		Assert.assertEquals(t, "Arrear was successfully created.");
 		Thread.sleep(3000);
 		cc.selectDeleteButton();
-	}*/
-	/*@Test(priority=38)
+	}
+	@Test(priority=38)
 	public void CreateArrearsManualSalaryHeadWiseMergedWithSalaryComponent_SC_539() throws InterruptedException{
 		CreateArrearsManualSalaryHeadWiseMergedWithSalaryComponent cc=new CreateArrearsManualSalaryHeadWiseMergedWithSalaryComponent(driver);
 		cc.clickSalaryLink();
 		cc.selectArrears();
 		cc.selectCreateArrear();
-		cc.EnterArrearName("Salary_ArrearSal1");
+		cc.EnterArrearName("Salary_ArrearTestTest");
 		cc.EnterArrearDescription("Salary_Arrear");
 		cc.ClickManualCheckBox();
 		cc.selectArrearFrom("Aug/2019");
@@ -1035,7 +1035,7 @@ public class Arrears extends BaseTest {
 		cc.clickSalaryLink();
 		cc.selectArrears();
 		cc.selectCreateArrear();
-		cc.EnterArrearName("Salary_ArrearSal2");
+		cc.EnterArrearName("Salary_ArrearTestEdit");
 		cc.EnterArrearDescription("Salary_Arrear");
 		cc.ClickManualCheckBox();
 		cc.selectArrearFrom("Aug/2019");
@@ -1189,7 +1189,7 @@ public class Arrears extends BaseTest {
 		cc.switchToPopUpAndAccept(driver);
 		String t=cc.getMessage();
 		Assert.assertEquals(t, "Arrear deleted successfully");
-	}*/
+	}
 	@Test(priority=47)
 	public void ComputationDetailsToAnArrearSC539_SC_548() throws InterruptedException{
 		ComputationDetailsToAnArrear cc=new ComputationDetailsToAnArrear(driver);

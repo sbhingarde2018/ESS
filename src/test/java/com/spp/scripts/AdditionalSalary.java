@@ -195,6 +195,10 @@ public class AdditionalSalary extends BaseTest {
 		cc.clickSalaryLink();
 		cc.selectAdditionalSalary();
 		Thread.sleep(2000);
+		cc.selectPaymonth("Sep/2020");
+		Thread.sleep(2000);
+		cc.selectGetValues();
+		Thread.sleep(2000);
 		cc.ClickAllotButton();
 		Thread.sleep(3000);
 		cc.ClickDelete();
@@ -211,7 +215,11 @@ public class AdditionalSalary extends BaseTest {
 		DeleteAdditionalSalaryEntryDeduction cc=new DeleteAdditionalSalaryEntryDeduction(driver);
 		cc.clickSalaryLink();
 		cc.selectAdditionalSalary();
+		Thread.sleep(2000);
+		cc.selectPaymonth("Sep/2020");
 		Thread.sleep(3000);
+		cc.selectGetValues();
+		Thread.sleep(2000);
 		cc.selectDeductionTab();
 		cc.ClickAllot();
 		Thread.sleep(3000);
