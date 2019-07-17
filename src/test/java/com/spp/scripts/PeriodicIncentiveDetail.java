@@ -44,7 +44,7 @@ public class PeriodicIncentiveDetail extends BaseTest{
 		cs.navigatemasterlink();
 		cs.clickPeriodicIncentiveMaster();
 		cs.clickAddPeriodicIncentive();
-		cs.clickName("Default");
+		cs.clickName("Default1");
 		cs.clickCreateButton();
 		String d=cs.getMessage();
 		Assert.assertEquals(d, "Periodic Incentive successfully created");	
@@ -56,21 +56,23 @@ public class PeriodicIncentiveDetail extends BaseTest{
 		pi.navigatesalary();
 		pi.clickPeriodicInsuranceDetails();
 		pi.clickAddEmployee();
+		pi.resizeWindow();
 		Thread.sleep(5000);
 		pi.clickLoad();
 		Thread.sleep(5000);
+		pi.exitFullscreen();   
 		pi.clickView();
 		pi.clickAddNewGroup();
 		pi.clickPeriodicInsuranceName("Default");
-		pi.clickStartMonth("Apr/2013");
-		pi.clickEndMonth("Apr/2013");
+		pi.clickStartMonth("Jul/2019");
+		pi.clickEndMonth("Jul/2019");
 		pi.clickAmount("300");
-		pi.clickRemark("sdfdsf");
+		pi.clickRemark("asdffj");
 		pi.clickCreateButton();
 		String r=pi.getMessage();
 		Assert.assertEquals(r, "Periodic Incentive successfully created");
 		Thread.sleep(3000);
-		pi.clickDeleteButton();
+		//pi.clickDeleteButton();
 		}	
 	@Test(priority=2)
 	public void PeriodicIncentiveDetailMultiAllotment_SC_314() throws Exception{
@@ -78,33 +80,77 @@ public class PeriodicIncentiveDetail extends BaseTest{
 		pi.navigatesalary();
 		pi.clickPeriodicInsuranceDetails();
 		pi.clickAddEmployee();
+		pi.resizeWindow();
 		Thread.sleep(5000);
 		pi.clickLoad();
 		Thread.sleep(5000);
+		pi.exitFullscreen();
 		pi.clickUnTick();
 		pi.clickTick1();
 		pi.clickMultiAllotmentButton();
 		pi.clickPeriodicInsuranceName("Default");
-		pi.clickStartMonth("Apr/2013");
-		pi.clickEndMonth("Apr/2013");
+		pi.clickStartMonth("Jul/2019");
+		pi.clickEndMonth("Jul/2019");
 		pi.clickAmount("300");
-		pi.clickRemark("sdfdsf");
+		pi.clickRemark("zcgdfh");
 		pi.clickCreateButton();
 		Thread.sleep(5000);
 		pi.clickProceed();
 		String r=pi.getMessage();
 		Assert.assertEquals(r, "Periodic Incentive successfully created");
-		
 		}	
+	
 	 @Test(priority=3)
-		public void EditEMIDetailInPeriodicIncentive_SC_507() throws Exception{
+	 public void GeneratePeriodicIncentiveDetailReport_SC_374() throws Exception{
+		GeneratePeriodicIncentiveDetailReport pi=new GeneratePeriodicIncentiveDetailReport(driver);
+		pi.navigatesalary();
+		pi.clickPeriodicIncentiveDetails();
+		Thread.sleep(4000);
+		//pi.clickReport();
+		pi.clickStandingInstructionDetailReport();
+		pi.clickSIType("Periodic Incentive");
+		pi.clickReports("Detailed Report");
+		pi.clickFrom("Jul/2019");
+		pi.clickTo("Jul/2019");
+		pi.ClickGetEmployees();
+		pi.resizeWindow();
+		Thread.sleep(3000);
+		pi.clickLoad();
+		pi.exitFullscreen();
+		Thread.sleep(3000);
+		//String s=pi.getMessage();
+		//Assert.assertEquals(s, "Employees Successfully Loaded.");
+		pi.clickEmployee();
+		pi.clickGenerateReport();
+		Thread.sleep(3000);
+}
+	 @Test(priority=4)
+	 public void DeletePeriodicIncentiveDetail_SC_375() throws Exception{
+		DeletePeriodicIncentiveDetail pi=new DeletePeriodicIncentiveDetail(driver);
+		pi.navigatesalary();
+		pi.clickPeriodicInsuranceDetails();
+		pi.clickAddEmployee();
+		pi.resizeWindow();
+		Thread.sleep(5000);
+		pi.clickLoad();
+		Thread.sleep(5000);
+		pi.exitFullscreen();
+		pi.clickView();
+		pi.clickDeleteButton1();
+		Thread.sleep(4000);
+		pi.clickDeleteButton2();
+	 	 }
+	 @Test(priority=5)
+	 public void EditEMIDetailInPeriodicIncentive_SC_507() throws Exception{
 		 EditEMIDetailInPeriodicIncentive am=new EditEMIDetailInPeriodicIncentive(driver);
 		 am.navigatesalary();
 		 am.clickPeriodicIncentiveDetails();
 		 am.clickAddEmployee();
+		 am.resizeWindow();
 		 Thread.sleep(3000);
 		 am.clickLoad();
 		 Thread.sleep(3000);
+		 am.exitFullscreen();
 		 am.clickView();
 		 am.ClickDetail();
 		 am.clickEdit();
@@ -114,7 +160,7 @@ public class PeriodicIncentiveDetail extends BaseTest{
 		 String s=am.getMessage();
 		 Assert.assertEquals(s, "Details Successfully updated");
 }	
-	 @Test(priority=4)
+	/* @Test(priority=6)
 		public void DeleteEMIDetailInPeriodicIncentive_SC_564() throws Exception{
 		 DeleteEMIDetailInPeriodicIncentive am=new DeleteEMIDetailInPeriodicIncentive(driver);
 		 am.navigatesalary();
@@ -137,19 +183,7 @@ public class PeriodicIncentiveDetail extends BaseTest{
 		 Assert.assertEquals(r, "Details Successfully Deleted.");
 
 	}
-	 @Test(priority=5)
-		public void DeletePeriodicIncentiveDetail_SC_375() throws Exception{
-			DeletePeriodicIncentiveDetail pi=new DeletePeriodicIncentiveDetail(driver);
-			pi.navigatesalary();
-			pi.clickPeriodicInsuranceDetails();
-			pi.clickAddEmployee();
-			Thread.sleep(5000);
-			pi.clickLoad();
-			Thread.sleep(5000);
-			pi.clickView();
-			pi.clickDeleteButton1();
-			Thread.sleep(4000);
-			pi.clickDeleteButton2();
+	
 	}
 	 @Test(priority=6)
 		public void AddNewPeriodicIncentivePFPTESIMonthly_SC_565() throws Exception{
@@ -671,33 +705,13 @@ public class PeriodicIncentiveDetail extends BaseTest{
 	   pi.clickPeriodicIncentiveMaster();
 	   pi.clickdeletemaster();
 	   
-	}
-	
-	
-	
-	
-	
-	
-	
-	 /*	@Test(priority=0)
-		public void GeneratePeriodicIncentiveDetailReport_SC_374() throws Exception{
-			GeneratePeriodicIncentiveDetailReport pi=new GeneratePeriodicIncentiveDetailReport(driver);
-			pi.navigatesalary();
-			pi.clickPeriodicIncentiveDetails();
-			Thread.sleep(4000);
-			pi.clickReport();
-			pi.clickStandingInstructionDetailReport();
-			pi.clickSIType("Periodic Incentive");
-			pi.clickReports("Detailed Report");
-			pi.clickFrom("Apr/2013");
-			pi.clickTo("Apr/2013");
-			pi.ClickGetEmployees();
-			Thread.sleep(3000);
-			pi.clickLoad();
-			Thread.sleep(3000);
-			String s=pi.getMessage();
-			Assert.assertEquals(s, "Employees Successfully Loaded.");
-			//pi.clickEmployee();
-			 pi.clickGenerateReport();
 	}*/
+	
+	
+	
+	
+	
+	
+	
+	
 }

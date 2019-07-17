@@ -10,13 +10,13 @@ import com.spp.common.BasePage;
 public class GeneratePeriodicIncentiveDetailReport extends BasePage{
 	@FindBy(id="salary")
 	WebElement salarylink;
-	@FindBy(xpath="//*[@id=\"menu\"]/li[6]/div/div[1]/ul/li[5]/a")
+	@FindBy(xpath="//*[@id=\"menu\"]/li[6]/div/div[1]/ul/li[6]/a")
 	WebElement PeriodicIncentiveDetails;
 	@FindBy(xpath="//*[@id=\"menu\"]/li[8]/a")
 	WebElement Report;
-	@FindBy(xpath="//*[@id=\"menu\"]/li[8]/div/div[3]/ul/li[7]/a")
+	@FindBy(xpath="//*[@id=\"ui-id-2\"]/li/a")
 	WebElement StandingInstructionDetailReport;
-	@FindBy(xpath="//*[@id=\"si_detail_employees\"]/tbody/tr[1]/td[6]/a")
+	@FindBy(id="si_type")
 	WebElement SIType;
 	@FindBy(id="report_type")
 	WebElement Reports;
@@ -42,6 +42,15 @@ public class GeneratePeriodicIncentiveDetailReport extends BasePage{
 	WebElement SuccessfulMessage;
 	@FindBy(xpath="//*[@id=\"standing_detail_list\"]/div[2]/table/tbody/tr/td[2][contains(text(),'Periodic_12')]/parent::tr/td[8]/a")
 	WebElement DeleteButton;
+	@FindBy(id="filter")
+	WebElement GetEmployees;
+	@FindBy(xpath="//*[@id=\"bf_form\"]/div[10]/button[1]")
+	WebElement Load;
+	@FindBy(xpath="//*[@id=\"standing_instruction_form\"]/div[5]/input")
+	WebElement GenerateReport;
+	@FindBy(id="employee_data_")
+	WebElement Employee;
+	
 	public GeneratePeriodicIncentiveDetailReport(WebDriver driver){
 		super(driver);
 		PageFactory.initElements(driver, this);
@@ -70,16 +79,13 @@ public class GeneratePeriodicIncentiveDetailReport extends BasePage{
 		dropDownSelect(From,value);
 		
 	}
-/*	public void clickTo(String value) throws Exception{
+	public void clickTo(String value) throws Exception{
 			dropDownSelect(To,value);
 	}
 	
-	public void clickGroupBy(String value) throws Exception{
-		dropDownSelect(GroupBy,value);
-   }
-	public void clickTo(String value) throws Exception{
+	public void clickTo1(String value) throws Exception {
 		dropDownSelect(To,value);
-   }*/
+   }
 	public void clickAmount(String value) throws Exception{
 		Amount.sendKeys(value);
 	}
@@ -102,6 +108,18 @@ public class GeneratePeriodicIncentiveDetailReport extends BasePage{
 		DeleteButton.click();
 		switchToPopUpAndAccept(driver);
 	}
-
+	public void ClickGetEmployees() throws Exception{
+		GetEmployees.click();
+	}
+	public void clickLoad() throws Exception{
+		Load.click();
+	}
+	public void clickGenerateReport() throws Exception{
+		GenerateReport.click();
+	}
+	public void clickEmployee() throws Exception{
+		Employee.click();
+	}
+	
 
 }

@@ -4,8 +4,8 @@
   <test name="Test">
     <classes>
     
-   <class name="com.spp.scripts.AdditionalSalary"/>
- 	<class name="com.spp.scripts.Arrears"/>
+  <!-- <class name="com.spp.scripts.AdditionalSalary"/> --> 
+ 	<class name="com.spp.scripts.PeriodicIncentiveDetail"/>
  	<!-- <class name="com.spp.scripts.LeaveEncashment"/>
   <class name="com.spp.scripts.MonthlyLeaveSummary"/>
   <class name="com.spp.scripts.MonthlyAttendance"/>
