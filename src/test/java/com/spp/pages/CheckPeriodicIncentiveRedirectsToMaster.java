@@ -10,21 +10,21 @@ import com.spp.common.BasePage;
 public class CheckPeriodicIncentiveRedirectsToMaster extends BasePage{
 	@FindBy(id="salary")
 	WebElement salarylink;
-	@FindBy(linkText="Periodic Incentive Detail")
+	@FindBy(xpath="//*[@id=\"menu\"]/li[6]/div/div[1]/ul/li[6]/a")
 	WebElement PeriodicIncentiveDetails;
-	@FindBy(xpath="//*[@id=\"ui-accordion-accordion-header-1\"]/h3")
+	@FindBy(xpath="//*[@id=\"ui-id-3\"]/h3")
 	WebElement GeneralLink;
-	@FindBy(linkText="Periodic Incentive Master")
+	@FindBy(xpath="//*[@id=\"ui-id-4\"]/li[1]/a")
 	WebElement PeriodicMaster;
-	@FindBy(linkText="Add New Periodic Incentive Master")
+	@FindBy(xpath="//div[1]/span/a")
 	WebElement AddNewPeriodicMaster;
 	@FindBy(id="standing_instruction_master_si_name")
 	WebElement PeriodicName;
-	@FindBy(xpath="//*[@id=\"standing_instruction_master_form\"]/div[6]/input")
+	@FindBy(xpath="//*[@id=\"standing_instruction_master_form\"]/div[7]/input")
 	WebElement CreateButton;
 	@FindBy(xpath="//*[@id=\"main\"]/div[2]/strong")
 	WebElement successfulMessage;
-	@FindBy(xpath="//*[@id=\"standing_instr_list\"]/div[2]/table/tbody/tr[1]/td[4]/a")
+	@FindBy(xpath="//td[contains(text(),'Periodic_IncentiveTest')]/parent::tr/td[5]/a")
 	WebElement ClickDeleteMaster;
 	
 	public CheckPeriodicIncentiveRedirectsToMaster(WebDriver driver){

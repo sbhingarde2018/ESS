@@ -10,13 +10,13 @@ import com.spp.common.BasePage;
 public class CheckifSalaryPerodicIncentiveGeneralLinksEmployeeMasterredirectstoEmployee extends BasePage{
 	@FindBy(id="salary")
 	WebElement ClickOnSalary;
-	@FindBy(xpath="//a[text()='Periodic Incentive Detail']")
+	@FindBy(xpath="//*[@id=\"menu\"]/li[6]/div/div[1]/ul/li[6]/a")
 	WebElement ClickOnPerodicIncentiveDetail;
-	@FindBy(xpath="//*[@id=\"ui-accordion-accordion-header-1\"]/h3")
+	@FindBy(xpath="//*[@id=\"ui-id-3\"]/h3")
 	WebElement ClickonGeneralLinks;
-	@FindBy(xpath="//*[@id=\"ui-accordion-accordion-panel-1\"]/li[2]/a")
+	@FindBy(xpath="//*[@id=\"ui-id-4\"]/li[2]/a")
 	WebElement ClickOnEmployeeMaster;
-	@FindBy(xpath="//a[text()='Add New Employee']")
+	@FindBy(xpath="//*[@id=\"ui-id-2\"]/ul/li[1]/a")
 	WebElement AddNewEmployee;
 	@FindBy(id="employee_emp_id")
 	WebElement employeeid;
@@ -62,9 +62,9 @@ public class CheckifSalaryPerodicIncentiveGeneralLinksEmployeeMasterredirectstoE
 	WebElement ClickOnEmployDetails;
 	@FindBy(id="filter_head")
 	WebElement ClickOnFilterHead;
-	@FindBy(xpath="//*[@id=\"bf_form\"]/div[9]/button[1]")
+	@FindBy(xpath="//*[@id=\"bf_form\"]/div[10]/button[1]")
 	WebElement ClickOnLoad;
-	@FindBy(xpath="//*[@id=\"employees_dtable\"]/tbody/tr/td[contains(text(),'Aditya')]/parent::tr/td[6]/a[2]")
+	@FindBy(xpath="//tbody/tr/td[contains(text(),'Preeti')]/parent::tr/td[6]/a[2]")
 	WebElement DeleteEmployee;
 	
 	
