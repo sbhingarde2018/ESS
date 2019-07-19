@@ -10,11 +10,11 @@ import com.spp.common.BasePage;
 public class AddNewPeriodicIncentivePTMonthly extends BasePage{
 	@FindBy(id="salary")
 	WebElement salarylink;
-	@FindBy(linkText="Periodic Incentive Detail")
+	@FindBy(xpath="//*[@id=\"menu\"]/li[6]/div/div[1]/ul/li[6]/a")
 	WebElement PeriodicIncentiveDetails;
 	@FindBy(xpath="//*[@id=\"add_employees\"]")
 	WebElement AddEmployee;
-	@FindBy(xpath="//*[@id=\"bf_form\"]/div[9]/button[1]")
+	@FindBy(xpath="//*[@id=\"bf_form\"]/div[10]/button[1]")
 	WebElement Load;
 	@FindBy(xpath="//*[@id=\"si_detail_employees\"]/tbody/tr[1]/td[6]/a")
 	WebElement View;
