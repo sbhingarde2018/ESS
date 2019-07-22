@@ -4,9 +4,9 @@ import org.testng.annotations.Test;
 import com.spp.common.BaseTest;
 //import com.spp.generics.Utility;
 import com.spp.pages.AddNewPeriodicIncentiveDetailPremiumPaymentHalfYearly;
-//import com.spp.pages.AddNewPeriodicIncentiveDetailPremiumPaymentYearly;
-//import com.spp.pages.AddNewPeriodicIncentiveDetailStatutoryDeductionPTYearly;
-//import com.spp.pages.AddNewPeriodicIncentiveDetailStatutoryDeductionYearly;
+import com.spp.pages.AddNewPeriodicIncentiveDetailPremiumPaymentYearly;
+import com.spp.pages.AddNewPeriodicIncentiveDetailStatutoryDeductionPTYearly;
+import com.spp.pages.AddNewPeriodicIncentiveDetailStatutoryDeductionYearly;
 import com.spp.pages.AddNewPeriodicIncentiveESIMonthly;
 import com.spp.pages.AddNewPeriodicIncentiveESIQuarterly;
 import com.spp.pages.AddNewPeriodicIncentivePFMonthly;
@@ -17,7 +17,7 @@ import com.spp.pages.AddNewPeriodicIncentivePFPTESIYearly;
 import com.spp.pages.AddNewPeriodicIncentivePFQuarterly;
 import com.spp.pages.AddNewPeriodicIncentivePTMonthly;
 import com.spp.pages.AddNewPeriodicIncentivePTQuarterly;
-//import com.spp.pages.AddNewPeriodicIncentiveStatutoryDeductionHalfYearly;
+import com.spp.pages.AddNewPeriodicIncentiveStatutoryDeductionHalfYearly;
 //import com.spp.pages.CheckLoanDetailsRedirectsToMaster;
 import com.spp.pages.CheckPeriodicIncentiveRedirectsToMaster;
 //import com.spp.pages.CheckifSalaryLoanGeneralLinksEmployeeMasterredirectstoEmployee;
@@ -389,7 +389,7 @@ public class PeriodicIncentiveDetail extends BaseTest{
 		Thread.sleep(5000);
 		//pi.clickDeleteButton();
 	}*/
-	@Test(priority=14)
+	/*@Test(priority=14)
 	public void AddNewPeriodicIncentivePTMonthly_SC_570() throws Exception{
 		AddNewPeriodicIncentivePTMonthly pi=new AddNewPeriodicIncentivePTMonthly(driver);
 		pi.navigatesalary();
@@ -561,185 +561,190 @@ public class PeriodicIncentiveDetail extends BaseTest{
 	   Assert.assertEquals(r, "Periodic Incentive successfully created");
 	   Thread.sleep(3000);
 	  // pi.clickDeleteButton();
-	}
+	}*/
 	
-	/*@Test(priority=21)
+	@Test(priority=21)
 	public void AddNewPeriodicIncentiveStatutoryDeductionPFHalfYearly_SC_629() throws Exception{
 		AddNewPeriodicIncentiveStatutoryDeductionHalfYearly pi=new AddNewPeriodicIncentiveStatutoryDeductionHalfYearly(driver);
 		pi.navigatesalary();
 		pi.clickPeriodicIncentiveDetails();
 		pi.clickAddEmployee();
+		pi.resizeWindow();
 		Thread.sleep(5000);
 		pi.clickLoad();
 		Thread.sleep(5000);	
+		pi.exitFullscreen();
 		pi.clickView();
 		pi.clickAddPeriodicIncentive();
 		pi.clickPeriodicIncentiveName("Default");
 		pi.clickAmount("4444");
-		pi.clickStartMonth("Apr/2013");
-		pi.clickEndMonth("Apr/2013");
+		pi.clickStartMonth("Jul/2019");
+		pi.clickEndMonth("Jul/2019");
 		pi.clickPF();
 		pi.selectpremiumpaymenthalfyearly();
 		pi.clickCreateButton();
 		String r=pi.getMessage();
 		Assert.assertEquals(r, "Periodic Incentive successfully created");
 		Thread.sleep(5000);
-		pi.clickDeleteButton();
+		//pi.clickDeleteButton();
 	}
 	
-	
-	@Test(priority=21)
+	@Test(priority=22)
 	public void AddNewPeriodicIncentiveDetailPremiumPaymentYearly_SC_630() throws Exception{
 	   AddNewPeriodicIncentiveDetailPremiumPaymentYearly pi=new AddNewPeriodicIncentiveDetailPremiumPaymentYearly(driver);
 	   pi.navigatesalary();
 	   pi.clickPeriodicIncentiveDetails();
 	   pi.clickAddEmployee();
+	   pi.resizeWindow();
 	   Thread.sleep(5000);
 	   pi.clickLoad();
 	   Thread.sleep(5000);	
+	   pi.exitFullscreen();
 	   pi.clickView();
 	   pi.clickAddPeriodicIncentive();
 	   pi.clickPeriodicIncentiveName("Default");
 	   pi.clickAmount("4444");
-	   pi.clickStartMonth("Apr/2013");
-	   pi.clickEndMonth("Apr/2013");
+	   pi.clickStartMonth("Jul/2019");
+	   pi.clickEndMonth("Jul/2019");
 	   pi.selectpremiumpaymentyearly();
 	   pi.clickCreateButton();
 	   String r=pi.getMessage();
 	   Assert.assertEquals(r, "Periodic Incentive successfully created");
 	   Thread.sleep(3000);
-	   pi.clickDeleteButton();
+	   //pi.clickDeleteButton();
 	}
 	
-	@Test(priority=22)
+	@Test(priority=23)
 	public void AddNewPeriodicIncentiveDetailStatutoryDeductionPTYearly_SC_631() throws Exception{
 		AddNewPeriodicIncentiveDetailStatutoryDeductionPTYearly pi=new AddNewPeriodicIncentiveDetailStatutoryDeductionPTYearly(driver);
 	   pi.navigatesalary();
 	   pi.clickPeriodicIncentiveDetails();
 	   pi.clickAddEmployee();
+	   pi.resizeWindow();
 	   Thread.sleep(5000);
 	   pi.clickLoad();
 	   Thread.sleep(5000);	
+	   pi.exitFullscreen();
 	   pi.clickView();
 	   pi.clickAddPeriodicIncentive();
 	   pi.clickPeriodicIncentiveName("Default");
 	   pi.clickAmount("4444");
-	   pi.clickStartMonth("Apr/2013");
-	   pi.clickEndMonth("Apr/2013");
+	   pi.clickStartMonth("Jul/2019");
+	   pi.clickEndMonth("Jul/2019");
 	   pi.clickPT();
 	   pi.selectpremiumpaymentyearly();
 	   pi.clickCreateButton();
 	   String r=pi.getMessage();
 	   Assert.assertEquals(r, "Periodic Incentive successfully created");
 	   Thread.sleep(3000);
-	   pi.clickDeleteButton();
+	   //pi.clickDeleteButton();
 	}
 	
-	@Test(priority=23)
+	@Test(priority=24)
 	public void AddNewPeriodicIncentiveDetailStatutoryDeductionESIHalfYearly_SC_632() throws Exception{
 		AddNewPeriodicIncentiveStatutoryDeductionHalfYearly pi=new AddNewPeriodicIncentiveStatutoryDeductionHalfYearly(driver);
 	   pi.navigatesalary();
 	   pi.clickPeriodicIncentiveDetails();
 	   pi.clickAddEmployee();
+	   pi.resizeWindow();
 	   Thread.sleep(5000);
 	   pi.clickLoad();
-	   Thread.sleep(5000);	
+	   Thread.sleep(5000);
+	   pi.exitFullscreen();
 	   pi.clickView();
 	   pi.clickAddPeriodicIncentive();
 	   pi.clickPeriodicIncentiveName("Default");
 	   pi.clickAmount("4444");
-	   pi.clickStartMonth("Apr/2013");
-	   pi.clickEndMonth("Apr/2013");
+	   pi.clickStartMonth("Jul/2019");
+	   pi.clickEndMonth("Jul/2019");
 	   pi.clickESI();
 	   pi.selectpremiumpaymenthalfyearly();
 	   pi.clickCreateButton();
 	   String r=pi.getMessage();
 	   Assert.assertEquals(r, "Periodic Incentive successfully created");
 	   Thread.sleep(3000);
-	   pi.clickDeleteButton();
+	   //pi.clickDeleteButton();
 	}
 	
-	@Test(priority=24)
+	@Test(priority=25)
 	public void AddNewPeriodicIncentiveDetailStatutoryPFDeductionYearly_SC_633() throws Exception{
-		AddNewPeriodicIncentiveDetailStatutoryDeductionYearly pi=new AddNewPeriodicIncentiveDetailStatutoryDeductionYearly(driver);
+	   AddNewPeriodicIncentiveDetailStatutoryDeductionYearly pi=new AddNewPeriodicIncentiveDetailStatutoryDeductionYearly(driver);
 	   pi.navigatesalary();
 	   pi.clickPeriodicIncentiveDetails();
 	   pi.clickAddEmployee();
+	   pi.resizeWindow();
 	   Thread.sleep(5000);
 	   pi.clickLoad();
 	   Thread.sleep(5000);	
+	   pi.exitFullscreen();
 	   pi.clickView();
 	   pi.clickAddPeriodicIncentive();
 	   pi.clickPeriodicIncentiveName("Default");
 	   pi.clickAmount("4444");
-	   pi.clickStartMonth("Apr/2013");
-	   pi.clickEndMonth("Apr/2013");
+	   pi.clickStartMonth("Jul/2019");
+	   pi.clickEndMonth("Jul/2019");
 	   pi.clickPF();
 	   pi.selectpremiumpaymentyearly();
 	   pi.clickCreateButton();
 	   String r=pi.getMessage();
 	   Assert.assertEquals(r, "Periodic Incentive successfully created");
 	   Thread.sleep(3000);
-	   pi.clickDeleteButton();
+	   //pi.clickDeleteButton();
 	}
 	
-	@Test(priority=25)
+	@Test(priority=26)
 	public void AddNewPeriodicIncentiveDetailStatutoryESIDeductionYearly_SC_634() throws Exception{
 	   AddNewPeriodicIncentiveDetailStatutoryDeductionYearly pi=new AddNewPeriodicIncentiveDetailStatutoryDeductionYearly(driver);
 	   pi.navigatesalary();
 	   pi.clickPeriodicIncentiveDetails();
 	   pi.clickAddEmployee();
+	   pi.resizeWindow();
 	   Thread.sleep(5000);
 	   pi.clickLoad();
 	   Thread.sleep(5000);	
+	   pi.exitFullscreen();
 	   pi.clickView();
 	   pi.clickAddPeriodicIncentive();
 	   pi.clickPeriodicIncentiveName("Default");
 	   pi.clickAmount("4444");
-	   pi.clickStartMonth("Apr/2013");
-	   pi.clickEndMonth("Apr/2013");
+	   pi.clickStartMonth("Jul/2019");
+	   pi.clickEndMonth("Jul/2019");
 	   pi.clickESI();
 	   pi.selectpremiumpaymentyearly();
 	   pi.clickCreateButton();
 	   String r=pi.getMessage();
 	   Assert.assertEquals(r, "Periodic Incentive successfully created");
 	   Thread.sleep(3000);
-	   pi.clickDeleteButton();
+	  //pi.clickDeleteButton();
 	}
-	@Test(priority=26)
+	@Test(priority=27)
 	public void AddNewPeriodicIncentiveDetailStatutoryDeductionYearly_SC_635() throws Exception{
 		AddNewPeriodicIncentiveStatutoryDeductionHalfYearly pi=new AddNewPeriodicIncentiveStatutoryDeductionHalfYearly(driver);
 	   pi.navigatesalary();
 	   pi.clickPeriodicIncentiveDetails();
 	   pi.clickAddEmployee();
+	   pi.resizeWindow();
 	   Thread.sleep(5000);
 	   pi.clickLoad();
 	   Thread.sleep(5000);	
+	   pi.exitFullscreen();
 	   pi.clickView();
 	   pi.clickAddPeriodicIncentive();
 	   pi.clickPeriodicIncentiveName("Default");
 	   pi.clickAmount("4444");
-	   pi.clickStartMonth("Apr/2013");
-	   pi.clickEndMonth("Apr/2013");
+	   pi.clickStartMonth("Jul/2019");
+	   pi.clickEndMonth("Jul/2019");
 	   pi.clickPT();
 	   pi.selectpremiumpaymenthalfyearly();
 	   pi.clickCreateButton();
 	   String r=pi.getMessage();
 	   Assert.assertEquals(r, "Periodic Incentive successfully created");
 	   Thread.sleep(3000);
-	   pi.clickDeleteButton();
-	   Thread.sleep(3000);
-	   pi.navigatemasterlink();
-	   pi.clickPeriodicIncentiveMaster();
-	   pi.clickdeletemaster();
+	   //pi.clickDeleteButton();
+	   //Thread.sleep(3000);
+	   //pi.navigatemasterlink();
+	   //pi.clickPeriodicIncentiveMaster();
+	   //pi.clickdeletemaster();
 	   
-	}*/
-	
-	
-	
-	
-	
-	
-	
-	
+	}
 }
