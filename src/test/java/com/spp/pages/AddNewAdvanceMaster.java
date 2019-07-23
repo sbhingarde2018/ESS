@@ -13,7 +13,7 @@ public class AddNewAdvanceMaster extends BasePage{
 	WebElement masterLink;
 	@FindBy(xpath="//*[@id=\"menu\"]/li[3]/div/div[2]/ul/li[3]/a")
 	WebElement AdvanceMaster;
-	@FindBy(xpath="//*[@id='standing_instr_list']/div[1]/span/a")
+	@FindBy(xpath="//*[@id=\"standing_instr_list\"]/div[1]/span/a")
 	WebElement AddNewAdvanceMaster;
 	@FindBy(id="standing_instruction_master_si_name")
 	WebElement AdvanceName;
@@ -33,7 +33,8 @@ public class AddNewAdvanceMaster extends BasePage{
 	WebElement EnterInterestRate;
 	@FindBy(id="standing_instruction_master_emi_recovery")
 	WebElement EMIRecovery;
-
+	@FindBy(xpath="//td[contains(text(),'Default2')]/parent::tr/td[4]/a")
+	WebElement Delete;
 	
 	public AddNewAdvanceMaster(WebDriver driver) {
 		super(driver);
@@ -84,5 +85,8 @@ public class AddNewAdvanceMaster extends BasePage{
 		maxAllowed.clear();
 		maxAllowed.sendKeys(value);
 	}
-
+    public void ClickDelete() throws Exception{
+    	Delete.click();
+    	
+	}
 }

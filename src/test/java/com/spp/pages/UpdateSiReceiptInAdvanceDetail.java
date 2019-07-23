@@ -10,21 +10,21 @@ import com.spp.common.BasePage;
 public class UpdateSiReceiptInAdvanceDetail extends BasePage{
 	@FindBy(id="salary")
 	WebElement salarylink;
-	@FindBy(xpath="//*[@id=\"menu\"]/li[6]/div/div[1]/ul/li[6]/a")
+	@FindBy(xpath="//*[@id=\"menu\"]/li[6]/div/div[1]/ul/li[7]/a")
 	WebElement AdvanceDetails;
 	@FindBy(xpath="//*[@id=\"add_employees\"]")
 	WebElement AddEmployee;
-	@FindBy(xpath="//*[@id=\"bf_form\"]/div[9]/button[1]")
+	@FindBy(xpath="//*[@id=\"bf_form\"]/div[10]/button[1]")
 	WebElement Load;
 	@FindBy(id="filter")
 	WebElement MultiAllotment;
 	@FindBy(xpath="//*[@id=\"si_detail_employees\"]/tbody/tr[1]/td[6]/a")
 	WebElement View;
-	@FindBy(xpath="//*[@id=\"standing_detail_list\"]/div[2]/table/tbody/tr[1]/td[7]/a")
+	@FindBy(xpath="//div[2]/table/tbody/tr/td[contains(text(),'01 July 2019')]/parent::tr/td[7]/a")
 	WebElement Detail;
-	@FindBy(xpath="//*[@id=\"main\"]/div/div[2]/nav/ul/li[2]/a/span")
+	@FindBy(xpath="//*[@id=\"main\"]/div/div[2]/nav/ul/li[3]/a")
 	WebElement ReceiptDetail;
-	@FindBy(xpath="//*[@id=\"si_receipts\"]/table/tbody/tr[1]/td[4]/a")
+	@FindBy(xpath="//table/tbody/tr[1]/td[contains(text(),'01 July 2019')]/parent::tr/td[4]/a")
 	WebElement Edit;
 	@FindBy(id="receipt_amount")
 	WebElement Amount;
@@ -32,7 +32,8 @@ public class UpdateSiReceiptInAdvanceDetail extends BasePage{
 	WebElement UpdateButton;
 	@FindBy(id="popup_ok")
 	WebElement YesButton;
-	
+	@FindBy(id="si_date")
+	WebElement Date;
 	
 	@FindBy(xpath="//*[@id=\"show_message\"]/div/strong")
 	WebElement SuccessfulMessage;
@@ -84,5 +85,8 @@ public class UpdateSiReceiptInAdvanceDetail extends BasePage{
 	public String getMessage() {
 		return SuccessfulMessage.getText();
 	}
-
+	public void EnterDate(String value) throws Exception{
+		Date.clear();
+		Date.sendKeys(value);
+	}
 }
