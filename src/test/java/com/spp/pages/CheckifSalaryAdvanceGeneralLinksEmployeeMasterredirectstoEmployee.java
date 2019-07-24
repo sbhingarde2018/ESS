@@ -12,11 +12,11 @@ public class CheckifSalaryAdvanceGeneralLinksEmployeeMasterredirectstoEmployee e
 	WebElement ClickOnSalary;
 	@FindBy(xpath="//a[text()='Advance Detail']")
 	WebElement ClickOnAdvanceDetail;
-	@FindBy(xpath="//*[@id=\"ui-accordion-accordion-header-1\"]/h3")
+	@FindBy(xpath="//*[@id=\"ui-id-3\"]/h3")
 	WebElement ClickonGeneralLinks;
-	@FindBy(xpath="//*[@id=\"ui-accordion-accordion-panel-1\"]/li[2]/a")
+	@FindBy(xpath="//*[@id=\"ui-id-4\"]/li[2]/a")
 	WebElement ClickOnEmployeeMaster;
-	@FindBy(xpath="//a[text()='Add New Employee']")
+	@FindBy(xpath="//*[@id=\"ui-id-2\"]/ul/li[1]/a")
 	WebElement AddNewEmployee;
 	@FindBy(id="employee_emp_id")
 	WebElement employeeid;
@@ -62,16 +62,16 @@ public class CheckifSalaryAdvanceGeneralLinksEmployeeMasterredirectstoEmployee e
 	WebElement SelectEmployeeDetails;
 	@FindBy(id="filter_head")
 	WebElement ClickOnFilterHead;
-	@FindBy(xpath="//*[@id=\"bf_form\"]/div[9]/button[1]")
+	@FindBy(xpath="//*[@id=\"bf_form\"]/div[10]/button[1]")
 	WebElement Load;
-	@FindBy(xpath="//*[@id=\"employees_dtable\"]/tbody/tr/td[contains(text(),'Aman')]/parent::tr/td[6]/a[2]")
+	@FindBy(xpath="//*[@id=\"employees_dtable\"]/tbody/tr/td[contains(text(),'Amaan')]/parent::tr/td[6]/a[2]")
 	WebElement DeleteEmployee;
 	@FindBy(id="emp_detail")
 	WebElement ClickOnEmployee;
 	@FindBy(xpath="//*[@id=\"menu\"]/li[4]/div/div/ul/li[1]/a")
 	WebElement ClickOnEmployDetails;
 	
-	@FindBy(xpath="//*[@id=\"bf_form\"]/div[9]/button[1]")
+	@FindBy(xpath="//*[@id=\"bf_form\"]/div[10]/button[1]")
 	WebElement ClickOnLoad;
 	
 	public CheckifSalaryAdvanceGeneralLinksEmployeeMasterredirectstoEmployee(WebDriver driver) {

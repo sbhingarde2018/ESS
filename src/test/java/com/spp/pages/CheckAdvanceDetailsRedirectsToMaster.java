@@ -10,11 +10,11 @@ import com.spp.common.BasePage;
 public class CheckAdvanceDetailsRedirectsToMaster extends BasePage{
 	@FindBy(id="salary")
 	WebElement salarylink;
-	@FindBy(xpath="//*[@id=\"menu\"]/li[6]/div/div[1]/ul/li[6]/a")
+	@FindBy(xpath="//*[@id=\"menu\"]/li[6]/div/div[1]/ul/li[7]/a")
 	WebElement AdvanceDetails;
-	@FindBy(xpath="//*[@id=\"ui-accordion-accordion-header-1\"]/h3")
+	@FindBy(xpath="//*[@id=\"ui-id-3\"]/h3")
 	WebElement GeneralLink;
-	@FindBy(xpath="//*[@id=\"ui-accordion-accordion-panel-1\"]/li[1]/a")
+	@FindBy(xpath="//*[@id=\"ui-id-4\"]/li[1]/a")
 	WebElement AdvanceDetail;
 	@FindBy(xpath="//*[@id='standing_instr_list']/div[1]/span/a")
 	WebElement AddNewAdvanceMaster;
@@ -26,6 +26,8 @@ public class CheckAdvanceDetailsRedirectsToMaster extends BasePage{
 	WebElement CreateButton;
 	@FindBy(xpath="//*[@id='main']/div[2]/strong")
 	WebElement successfulMessage;
+	@FindBy(xpath="//td[contains(text(),'Default3')]/parent::tr/td[4]/a")
+	WebElement Delete;
 	
 	public CheckAdvanceDetailsRedirectsToMaster(WebDriver driver){
 		super(driver);
@@ -62,4 +64,7 @@ public class CheckAdvanceDetailsRedirectsToMaster extends BasePage{
     public String getMessage() {
     	return successfulMessage.getText();
 }
+    public void clickDelete(){
+    	Delete.click();
+    }	
 }

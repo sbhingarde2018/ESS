@@ -10,11 +10,11 @@ import com.spp.common.BasePage;
 public class DeleteEMIDetailsInAdvanceDetail extends BasePage{
 	@FindBy(id="salary")
 	WebElement salarylink;
-	@FindBy(xpath="//*[@id=\"menu\"]/li[6]/div/div[1]/ul/li[6]/a")
+	@FindBy(xpath="//*[@id=\"menu\"]/li[6]/div/div[1]/ul/li[7]/a")
 	WebElement AdvanceDetails;
 	@FindBy(xpath="//*[@id=\"add_employees\"]")
 	WebElement AddEmployee;
-	@FindBy(xpath="//*[@id=\"bf_form\"]/div[9]/button[1]")
+	@FindBy(xpath="//*[@id=\"bf_form\"]/div[10]/button[1]")
 	WebElement Load;
 	@FindBy(id="filter")
 	WebElement MultiAllotment;
@@ -22,12 +22,14 @@ public class DeleteEMIDetailsInAdvanceDetail extends BasePage{
 	WebElement View;
 	@FindBy(xpath="//*[@id=\"standing_detail_list\"]/div[2]/table/tbody/tr[1]/td[7]/a")
 	WebElement Detail;
-	@FindBy(id="delete_emi")
+	@FindBy(xpath="//*[@id=\"delete_emi\"]/img")
 	WebElement Delete;
 	@FindBy(id="popup_ok")
 	WebElement YesButton;
 	@FindBy(xpath="//*[@id=\"show_message\"]/div/strong")
 	WebElement SuccessfulMessage;
+	@FindBy(xpath="//*[@id=\"main\"]/div/div[2]/nav/ul/li[2]/a/span")
+	WebElement EmiDetils;
 	
 	public DeleteEMIDetailsInAdvanceDetail(WebDriver driver){
 		super(driver);
@@ -65,5 +67,8 @@ public class DeleteEMIDetailsInAdvanceDetail extends BasePage{
 	public String getMessage() {
 		return SuccessfulMessage.getText();
 	}
+	public void clickEmiDetils() throws Exception{
+		EmiDetils.click();
+		}
 
 }

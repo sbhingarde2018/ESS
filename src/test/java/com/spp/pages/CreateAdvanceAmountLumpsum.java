@@ -11,11 +11,11 @@ import com.spp.common.BasePage;
 public class CreateAdvanceAmountLumpsum extends BasePage{
 	@FindBy(id="salary")
 	WebElement salarylink;
-	@FindBy(xpath="//*[@id=\"menu\"]/li[6]/div/div[1]/ul/li[6]/a")
+	@FindBy(xpath="//*[@id=\"menu\"]/li[6]/div/div[1]/ul/li[7]/a")
 	WebElement AdvanceDetails;
 	@FindBy(xpath="//*[@id=\"add_employees\"]")
 	WebElement AddEmployee;
-	@FindBy(xpath="//*[@id=\"bf_form\"]/div[9]/button[1]")
+	@FindBy(xpath="//*[@id=\"bf_form\"]/div[10]/button[1]")
 	WebElement Load;
 	@FindBy(xpath="//*[@id=\"si_detail_employees\"]/tbody/tr[1]/td[6]/a")
 	WebElement View;
@@ -23,9 +23,9 @@ public class CreateAdvanceAmountLumpsum extends BasePage{
 	WebElement AddNewAdvanceDetails;
 	@FindBy(id="standing_instruction_detail_standing_instruction_master_id")
 	WebElement AdvanceName;
-	@FindBy(id="standing_instruction_detail_actual_amount")
+	@FindBy(xpath="//*[@id=\"standing_instruction_detail_actual_amount\"]")
 	WebElement Amount;
-	@FindBy(id="standing_instruction_detail_lumpsum_amount")
+	@FindBy(xpath="//*[@id=\"standing_instruction_detail_lumpsum_amount\"]")
 	WebElement InstallmentAmount;
 	@FindBy(id="sal_date")
 	WebElement AdvanceDate;
@@ -41,6 +41,10 @@ public class CreateAdvanceAmountLumpsum extends BasePage{
 	WebElement SuccessfulMessage;
 	@FindBy(xpath="//*[@id=\"standing_detail_list\"]/div[2]/table/tbody/tr/td[2][contains(text(),'head1')]/parent::tr/td[8]/a")
 	WebElement DeleteButton;
+	@FindBy(xpath="//*[@id=\"lump\"]")
+	WebElement Lumpsum;
+	
+	
 	public CreateAdvanceAmountLumpsum(WebDriver driver){
 		super(driver);
 		PageFactory.initElements(driver, this);
@@ -81,7 +85,7 @@ public class CreateAdvanceAmountLumpsum extends BasePage{
 		AdvanceDate.sendKeys(Keys.TAB);
 	}
 	public void clickNoInstallment(String value) throws Exception{
-		NoInstallment.sendKeys(value);
+			NoInstallment.sendKeys(value);
 	}
 	public void clickRecoverFrom(String value) throws Exception{
 		RecoverFrom.sendKeys(value);
@@ -97,5 +101,9 @@ public class CreateAdvanceAmountLumpsum extends BasePage{
 		DeleteButton.click();
 		switchToPopUpAndAccept(driver);
 	}
+
+	public void clickLumpsum() throws Exception{
+		Lumpsum.click();
+}
 }
 

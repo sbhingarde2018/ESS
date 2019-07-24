@@ -10,15 +10,15 @@ import com.spp.common.BasePage;
 public class CheckAdvanceDetailsRedirectsToReports extends BasePage{
 	@FindBy(id="salary")
 	WebElement salarylink;
-	@FindBy(xpath="//*[@id=\"menu\"]/li[6]/div/div[1]/ul/li[6]/a")
+	@FindBy(xpath="//*[@id=\"menu\"]/li[6]/div/div[1]/ul/li[7]/a")
 	WebElement AdvanceDetails;
 	@FindBy(xpath="//*[@id=\"add_employees\"]")
 	WebElement AddEmployee;
-	@FindBy(xpath="//*[@id=\"bf_form\"]/div[9]/button[1]")
+	@FindBy(xpath="//*[@id=\"bf_form\"]/div[10]/button[1]")
 	WebElement Load;
 	@FindBy(id="report")
 	WebElement Reports;
-	@FindBy(xpath="//*[@id=\"menu\"]/li[8]/div/div[3]/ul/li[7]/a")
+	@FindBy(xpath="//*[@id=\"ui-id-2\"]/li/a")
 	WebElement StandingInstructions;
 	@FindBy(id="si_type")
 	WebElement SIType;
@@ -30,13 +30,15 @@ public class CheckAdvanceDetailsRedirectsToReports extends BasePage{
 	WebElement SITo;
 	@FindBy(id="filter")
 	WebElement GetEmployees;
-	
 	@FindBy(xpath="//*[@id=\"si_detail_employees\"]/tbody/tr[1]/td[1]/input")
 	WebElement Employee;
 	@FindBy(xpath="//*[@id=\"show_message\"]/div/strong")
 	WebElement SuccessfulMessage;
 	@FindBy(xpath="//*[@id=\"standing_instruction_form\"]/div[5]/input")
 	WebElement GenerateReport;
+	@FindBy(xpath="(//tr/td/input)[1]")
+	WebElement SelectEmployees;
+	
 	public CheckAdvanceDetailsRedirectsToReports(WebDriver driver){
 		super(driver);
 		PageFactory.initElements(driver, this);
@@ -85,5 +87,7 @@ public class CheckAdvanceDetailsRedirectsToReports extends BasePage{
 	public String getMessage() {
 		return SuccessfulMessage.getText();
 	}
-
+	public void SelectEmployees() throws Exception{
+		SelectEmployees.click();
+		}
 }
