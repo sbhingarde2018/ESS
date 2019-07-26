@@ -5,7 +5,8 @@
     <classes>
     
   <!-- <class name="com.spp.scripts.PeriodicIncentiveDetail"/> --> 
- 	<class name="com.spp.scripts.AdvanceDetail"/>
+ 	<class name="com.spp.scripts.AdvanceDetails"/>
+ 	<class name="com.spp.scripts.LoanDetail"/>
  	<!-- <class name="com.spp.scripts.LeaveEncashment"/>
   <class name="com.spp.scripts.MonthlyLeaveSummary"/>
   <class name="com.spp.scripts.MonthlyAttendance"/>

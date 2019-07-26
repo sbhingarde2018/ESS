@@ -9,17 +9,17 @@ import com.spp.generics.Utility;
 //import com.spp.pages.CheckAdvanceDetailsRedirectsToReports;
 //import com.spp.pages.CheckAdvanceMasterCreatedWithoutClubbedInSalary;
 //import com.spp.pages.CheckifSalaryAdvanceGeneralLinksEmployeeMasterredirectstoEmployee;
-//import com.spp.pages.CreateADInterestamountNOIHigher10Rupee;
-import com.spp.pages.CreateADInterestamountNOIHigher10RupeeNoRecovery;
-//import com.spp.pages.CreateADInterestamountNOIHigher1Rupee;
-import com.spp.pages.CreateADInterestamountNOIHigher1RupeeNoRecovery;
-//import com.spp.pages.CreateADInterestamountNOIHigher50Rupee;
-import com.spp.pages.CreateADInterestamountNOIHigher50RupeeNoRecovery;
-import com.spp.pages.CreateADNoOfInstallmentsHigher10Rupee;
-import com.spp.pages.CreateADNoOfInstallmentsHigher10RupeeNoRecovery;
-import com.spp.pages.CreateADNoOfInstallmentsHigher1RupeeNoRecovery;
-import com.spp.pages.CreateADNoOfInstallmentsHigher50Rupee;
-import com.spp.pages.CreateADNoOfInstallmentsHigher50RupeeNoRecovery;
+import com.spp.pages.CreateADInterestamountNOIHigher10Rupee;
+//import com.spp.pages.CreateADInterestamountNOIHigher10RupeeNoRecovery;
+import com.spp.pages.CreateADInterestamountNOIHigher1Rupee;
+//import com.spp.pages.CreateADInterestamountNOIHigher1RupeeNoRecovery;
+import com.spp.pages.CreateADInterestamountNOIHigher50Rupee;
+//import com.spp.pages.CreateADInterestamountNOIHigher50RupeeNoRecovery;
+//import com.spp.pages.CreateADNoOfInstallmentsHigher10Rupee;
+//import com.spp.pages.CreateADNoOfInstallmentsHigher10RupeeNoRecovery;
+//import com.spp.pages.CreateADNoOfInstallmentsHigher1RupeeNoRecovery;
+//import com.spp.pages.CreateADNoOfInstallmentsHigher50Rupee;
+//import com.spp.pages.CreateADNoOfInstallmentsHigher50RupeeNoRecovery;
 //import com.spp.pages.CreateAdvanceAmountLumpsum;
 //import com.spp.pages.CreateAdvanceDetailLumpsumNoRecovery;
 //import com.spp.pages.CreateSIReceiptInAdvanceDetail;
@@ -395,7 +395,7 @@ public class AdvanceDetails extends BaseTest {
 		 am.clickDeleteButton();
 		 	 
 }*/
-	  @Test(priority=14)
+	 /* @Test(priority=14)
 		public void CreateADNoOfInstallmentsHigher1RupeeNoRecovery_SC_581() throws Exception{
 		 CreateADNoOfInstallmentsHigher1RupeeNoRecovery am=new CreateADNoOfInstallmentsHigher1RupeeNoRecovery(driver);
 		 am.navigatesalary();
@@ -624,26 +624,28 @@ public class AdvanceDetails extends BaseTest {
 		 Thread.sleep(4000);
 		 am.clickDeleteButton();
 	 
-	 }
-	/* @Test(priority=22)
+	 }*/
+	 @Test(priority=22)
 		public void CreateADInterestamountNOIHigher1Rupee_SC_589() throws Exception{
 		 CreateADInterestamountNOIHigher1Rupee am=new CreateADInterestamountNOIHigher1Rupee(driver);
 		 am.navigatesalary();
 		 am.clickAdvanceDetails();
 		 am.clickAddEmployee();
+		 am.resizeWindow();
 		 Thread.sleep(3000);
 		 am.clickLoad();
 		 Thread.sleep(3000);
+		 am.exitFullscreen();
 		 am.clickView();
 		 am.AddNewAdvanceDetails();
-		 am.clickAdvanceName("Default");
-		 am.clickSAdvanceDate("24 April 2013");
+		 am.clickAdvanceName("Default1");
+		 am.clickSAdvanceDate("01 July 2019");
 		 Thread.sleep(2000);
 		 am.clickAmount("500");
 		 am.clickInterestAmount("100");
 		 am.clickNoOfInstallments();
-		 am.clickNoInstallment("10");
-		 am.clickRecoverFrom("May/2013");
+		 am.clickNoInstallment("1");
+		 am.clickRecoverFrom("Aug/2019");
 		 am.clickHigher1Rupee();
 		 am.clickCreateButton();
 		 String d=am.getMessage();
@@ -658,19 +660,21 @@ public class AdvanceDetails extends BaseTest {
 		 am.navigatesalary();
 		 am.clickAdvanceDetails();
 		 am.clickAddEmployee();
+		 am.resizeWindow();
 		 Thread.sleep(3000);
 		 am.clickLoad();
 		 Thread.sleep(3000);
+		 am.exitFullscreen();
 		 am.clickView();
 		 am.AddNewAdvanceDetails();
-		 am.clickAdvanceName("Default");
-		 am.clickSAdvanceDate("24 April 2013");
+		 am.clickAdvanceName("Default1");
+		 am.clickSAdvanceDate("01 July 2019");
 		 Thread.sleep(2000);
 		 am.clickAmount("500");
 		 am.clickInterestAmount("100");
 		 am.clickNoOfInstallments();
-		 am.clickNoInstallment("10");
-		 am.clickRecoverFrom("May/2013");
+		 am.clickNoInstallment("1");
+		 am.clickRecoverFrom("Aug/2019");
 		 am.clickHigher10Rupee();
 		 am.clickCreateButton();
 		 String d=am.getMessage();
@@ -685,30 +689,28 @@ public class AdvanceDetails extends BaseTest {
 		 am.navigatesalary();
 		 am.clickAdvanceDetails();
 		 am.clickAddEmployee();
+		 am.resizeWindow();
 		 Thread.sleep(3000);
 		 am.clickLoad();
 		 Thread.sleep(3000);
+		 am.exitFullscreen();
 		 am.clickView();
 		 am.AddNewAdvanceDetails();
-		 am.clickAdvanceName("Default");
-		 am.clickSAdvanceDate("24 April 2013");
+		 am.clickAdvanceName("Default1");
+		 am.clickSAdvanceDate("01 July 2019");
 		 Thread.sleep(2000);
 		 am.clickAmount("500");
 		 am.clickInterestAmount("100");
 		 am.clickNoOfInstallments();
-		 am.clickNoInstallment("10");
-		 am.clickRecoverFrom("May/2013");
+		 am.clickNoInstallment("1");
+		 am.clickRecoverFrom("Aug/2019");
 		 am.clickHigher50Rupee();
 		 am.clickCreateButton();
 		 String d=am.getMessage();
 		 Assert.assertEquals(d, "Advance successfully created");
 		 Thread.sleep(4000);
 		 am.clickDeleteButton();
-		 Thread.sleep(3000);
-		 am.clickMastserLink();
-		 am.clickAdvanceMaster();
-		 am.clickDeleteAdvanceButton();
 	 
-}*/
+	 }
 
 }

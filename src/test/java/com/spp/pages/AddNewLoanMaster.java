@@ -32,7 +32,7 @@ public class AddNewLoanMaster extends BasePage{
 	WebElement createLoan;
 	@FindBy(xpath="//strong[text()='Loan successfully created ']")
 	WebElement successfullMessage;
-	@FindBy(xpath="//*[@id=\"standing_instr_list\"]/div[2]/table/tbody[2]/tr[3]/td[5]/a")
+	@FindBy(xpath="//td[contains(text(),'Bike loan1')]/parent::tr/td[4]/a")
 	WebElement DeleteButton;
 
 	public AddNewLoanMaster(WebDriver driver){

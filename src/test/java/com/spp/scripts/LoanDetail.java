@@ -42,7 +42,7 @@ public class LoanDetail extends BaseTest{
 		lm.navigateMaster();
 		lm.clickLoanMaster();
 		lm.clickAddLoanMaster();
-		lm.enterLoanName("Bike loan_"+Utility.getRandNum(1, 1000));
+		lm.enterLoanName("Bike loan1");
 		lm.enterMaximumAmount("20000");
 		lm.clickCreateLoan();
 		String s=lm.getMessage();
@@ -55,18 +55,20 @@ public class LoanDetail extends BaseTest{
 		 am.navigatesalary();
 		 am.clickLoanDetails();
 		 am.clickAddEmployee();
+		 am.resizeWindow();
 		 Thread.sleep(3000);
 		 am.clickLoad();
 		 Thread.sleep(3000);
+		 am.exitFullscreen();
 		 am.clickView();
 		 am.clickAddNewLoan();
-		 am.clickLoanName("Bike loan");
-		 am.selectLoanDate("01 April 2018");
-		 am.selectInstitutionName("nwr hg-12345");
-		 am.clickLoanAccountNo("656");
+		 am.clickLoanName("LoanTest");
+		 am.selectLoanDate("01 July 2019");
+		 am.selectInstitutionName("AxisBank-abcbranch");
+		 am.clickLoanAccountNo("590");
 		 am.clickAmount("500");
 		 am.clickInstallmentAmount("100");
-		 am.clickRecoverDate("May/2018");
+		 am.clickRecoverDate("Aug/2019");
 		 am.clickCreateButton();
 		 String s=am.getMessage();
 		 Assert.assertEquals(s, "Loan successfully created");
@@ -79,17 +81,19 @@ public class LoanDetail extends BaseTest{
 		 am.navigatesalary();
 		 am.clickLoanDetails();
 		 am.clickAddEmployee();
+		 am.resizeWindow();
 		 Thread.sleep(3000);
 		 am.clickLoad();
 		 Thread.sleep(3000);
+		 am.exitFullscreen();
 		 am.clickMultiAllotment();
-		 am.clickLoanName("Bike loan");
-		 am.selectLoanDate("01 April 2018");
-		 am.selectInstitutionName("nwr hg-12345");
-		 am.clickLoanAccountNo("656");
+		 am.clickLoanName("LoanTest");
+		 am.selectLoanDate("01 July 2019");
+		 am.selectInstitutionName("AxisBank-abcbranch");
+		 am.clickLoanAccountNo("234");
 		 am.clickAmount("500");
 		 am.clickInstallmentAmount("100");
-		 am.clickRecoverDate("May/2018");
+		 am.clickRecoverDate("Aug/2019");
 		 am.clickCreateButton();
 		 am.clickProceed();
 		 String s=am.getMessage();
@@ -102,14 +106,16 @@ public class LoanDetail extends BaseTest{
 		 am.navigatesalary();
 		 am.clickLoanDetails();
 		 am.clickAddEmployee();
+		 am.resizeWindow();
 		 Thread.sleep(3000);
 		 am.clickLoad();
 		 Thread.sleep(3000);
+		 am.exitFullscreen();
 		 am.clickView();
 		 am.ClickDetail();
 		 am.ClickReceiptDetail();
-		 am.clickDate("24 May 2018");
-		 am.clickAmount("500");
+		 am.clickDate("01 July 2019");
+		 am.clickAmount("700");
 		 am.clickconfirmButton();
 		 am.clickYesButton();
 		 am.clickYesButton();
@@ -122,22 +128,24 @@ public class LoanDetail extends BaseTest{
 		 am.navigatesalary();
 		 am.clickLoanDetails();
 		 am.clickAddEmployee();
+		 am.resizeWindow();
 		 Thread.sleep(3000);
 		 am.clickLoad();
 		 Thread.sleep(3000);
+		 am.exitFullscreen();
 		 am.clickView();
 		 am.ClickDetail();
 		 am.ClickReceiptDetail();
 		 am.clickEdit();
 		 Thread.sleep(3000);
-		 am.clickAmount("600");
+		 am.clickAmount("740");
 		 am.clickUpdateButton();
 		 am.clickYesButton();
 		 am.clickYesButton();
 		 String s=am.getMessage();
 		 Assert.assertEquals(s, "Receipt Successfully Updated.");
 }
-	 @Test(priority=5)
+	/* @Test(priority=5)
 		public void DeleteSiReceiptInLoanDetail_SC_401() throws Exception{
 		 DeleteSiReceiptInLoanDetail am=new DeleteSiReceiptInLoanDetail(driver);
 		 am.navigatesalary();
@@ -195,7 +203,7 @@ public class LoanDetail extends BaseTest{
 		// am.clickEmployee();
 		 am.clickGenerateReport();
 		 
-}*/
+}
 	 @Test(priority=8)
 		public void CheckLoanDetailsRedirectsToMaster_SC_611() throws Exception{
 		 CheckLoanDetailsRedirectsToMaster am=new CheckLoanDetailsRedirectsToMaster(driver);
@@ -651,5 +659,5 @@ public class LoanDetail extends BaseTest{
 		 si.selectFinancialInst();
 		 si.deletefinancialinsti();
 		 
-	}
+	}*/
 }
