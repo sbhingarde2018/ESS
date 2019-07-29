@@ -39,7 +39,7 @@ public class CreateADNoOfInstallmentsHigher50Rupee extends BasePage{
 	WebElement CreateButton;
 	@FindBy(xpath="//*[@id=\"main\"]/div[2]/strong")
 	WebElement SuccessfulMessage;
-	@FindBy(xpath="//div[2]/table/tbody/tr[1]/td[8]/a")
+	@FindBy(xpath="//div[2]/table/tbody/tr/td[contains(text(),'Default9')]/parent::tr/td[8]/a")
 	WebElement DeleteButton;
 	
 	public CreateADNoOfInstallmentsHigher50Rupee(WebDriver driver){
