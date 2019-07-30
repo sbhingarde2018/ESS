@@ -145,7 +145,7 @@ public class LoanDetail extends BaseTest{
 		 String s=am.getMessage();
 		 Assert.assertEquals(s, "Receipt Successfully Updated.");
 }*/
-	 @Test(priority=5)
+	/* @Test(priority=5)
 		public void DeleteSiReceiptInLoanDetail_SC_401() throws Exception{
 		 DeleteSiReceiptInLoanDetail am=new DeleteSiReceiptInLoanDetail(driver);
 		 am.navigatesalary();
@@ -365,51 +365,225 @@ public class LoanDetail extends BaseTest{
 			String s=si.getMessage();
 			Assert.assertEquals(s, "Loan successfully created");
 			si.clickDeleteButton();
-		}
+		}*/
 		
-	/* @Test(priority=6)
+	@Test(priority=13)
+	public void CreateLoanAmountInterestAmountNoOfInstallmentsHigher1rupeeNoRecovery_SC_604() throws Exception{
+	CreateLoanAmountInterestAmountNoOfInstallmentsHigher1rupeeNoRecovery si=new CreateLoanAmountInterestAmountNoOfInstallmentsHigher1rupeeNoRecovery(driver);
+	 si.clickonsalary();
+	 si.clickonloandetail();
+	 si.clickAddEmployee();
+	 si.resizeWindow();
+	 Thread.sleep(3000);
+	 si.clickLoad();
+	 Thread.sleep(3000);
+	 si.exitFullscreen();
+	 si.clickView();
+	 si.clickAddNewLoan();
+	 si.clickLoanName("LoanTest");
+	 si.selectLoanDate("01 July 2019");
+	 si.selectInstitutionName("AxisBank-abcbranch");
+	 si.clickLoanAccountNo("131");
+	 si.clickAmount("5000");
+	 si.enterinterestamount("1000");
+	 si.checknoofinstallments();
+	 si.noofinstallments("1");
+	 si.clickRecoverDate("Aug/2019");
+	 si.roundoffhighestrupee();
+	 si.norecovery();
+	 si.clickCreateButton();
+	 String s=si.getMessage();
+	 Assert.assertEquals(s, "Loan successfully created");
+	 si.clickDeleteButton();
+	}
+	@Test(priority=14)
+	public void CreateLoanAmountInterestAmountNoOfInstallmentsHigher10rupeeNoRecovery_SC_603() throws Exception{
+	CreateLoanAmountInterestAmountNoOfInstallmentsHigher10rupeeNoRecovery si=new CreateLoanAmountInterestAmountNoOfInstallmentsHigher10rupeeNoRecovery(driver);
+	 si.clickonsalary();
+	 si.clickonloandetail();
+	 si.clickAddEmployee();
+	 si.resizeWindow();
+	 Thread.sleep(3000);
+	 si.clickLoad();
+	 Thread.sleep(3000);
+	 si.exitFullscreen();
+	 si.clickView();
+	 si.clickAddNewLoan();
+	 si.clickLoanName("LoanTest");
+	 si.selectLoanDate("01 July 2019");
+	 si.selectInstitutionName("AxisBank-abcbranch");
+	 si.clickLoanAccountNo("132");
+	 si.clickAmount("500");
+	 si.enterinterestamount("100");
+	 si.checknoofinstallments();
+	 si.noofinstallments("1");
+	 si.clickRecoverDate("Aug/2019");
+	 si.roundoffhighestrupee();
+	 si.norecovery();
+	 si.clickCreateButton();
+	 String s=si.getMessage();
+	 Assert.assertEquals(s, "Loan successfully created");
+	 si.clickDeleteButton();
+	}
+	@Test(priority=15)
+	public void CreateLoanAmountInterestAmountNoOfInstallmentsHigher50rupeeNoRecovery_SC_605() throws Exception{
+	CreateLoanAmountInterestAmountNoOfInstallmentsHigher50rupeeNoRecovery si=new CreateLoanAmountInterestAmountNoOfInstallmentsHigher50rupeeNoRecovery(driver);
+	 si.clickonsalary();
+	 si.clickonloandetail();
+	 si.clickAddEmployee();
+	 si.resizeWindow();
+	 Thread.sleep(3000);
+	 si.clickLoad();
+	 Thread.sleep(3000);
+	 si.exitFullscreen();
+	 si.clickView();
+	 si.clickAddNewLoan();
+	 si.clickLoanName("LoanTest");
+	 si.selectLoanDate("01 July 2019");
+	 si.selectInstitutionName("AxisBank-abcbranch");
+	 si.clickLoanAccountNo("133");
+	 si.clickAmount("500");
+	 si.enterinterestamount("100");
+	 si.checknoofinstallments();
+	 si.noofinstallments("1");
+	 si.clickRecoverDate("Aug/2019");
+	 si.roundoffhighestrupee();
+	 si.norecovery();
+	 si.clickCreateButton();
+	 String s=si.getMessage();
+	 Assert.assertEquals(s, "Loan successfully created");
+	 si.clickDeleteButton();
+	}
+	@Test(priority=16)
+	public void CreateLoanAmountInterestAmountNoOfInstallmentsHigher1rupee_SC_606() throws Exception{
+	CreateLoanAmountInterestAmountNoOfInstallmentsHigher1rupeeNoRecovery si=new CreateLoanAmountInterestAmountNoOfInstallmentsHigher1rupeeNoRecovery(driver);
+	 si.clickonsalary();
+	 si.clickonloandetail();
+	 si.clickAddEmployee();
+	 si.resizeWindow();
+	 Thread.sleep(3000);
+	 si.clickLoad();
+	 Thread.sleep(3000);
+	 si.exitFullscreen();
+	 si.clickView();
+	 si.clickAddNewLoan();
+	 si.clickLoanName("LoanTest");
+	 si.selectLoanDate("01 July 2019");
+	 si.selectInstitutionName("AxisBank-abcbranch");
+	 si.clickLoanAccountNo("134");
+	 si.clickAmount("5000");
+	 si.enterinterestamount("121");
+	 si.checknoofinstallments();
+	 si.noofinstallments("1");
+	 si.clickRecoverDate("Aug/2019");
+	 si.roundoffhighestrupee();
+	 si.clickCreateButton();
+	 String s=si.getMessage();
+	 Assert.assertEquals(s, "Loan successfully created");
+	 si.clickDeleteButton();
+	}
+	@Test(priority=17)
+	public void CreateLoanAmountInterestAmountNoOfInstallmentsHigher10rupee_SC_607() throws Exception{
+	CreateLoanAmountInterestAmountNoOfInstallmentsHigher10rupeeNoRecovery si=new CreateLoanAmountInterestAmountNoOfInstallmentsHigher10rupeeNoRecovery(driver);
+	 si.clickonsalary();
+	 si.clickonloandetail();
+	 si.clickAddEmployee();
+	 si.resizeWindow();
+	 Thread.sleep(3000);
+	 si.clickLoad();
+	 Thread.sleep(3000);
+	 si.exitFullscreen();
+	 si.clickView();
+	 si.clickAddNewLoan();
+	 si.clickLoanName("LoanTest");
+	 si.selectLoanDate("01 July 2019");
+	 si.selectInstitutionName("AxisBank-abcbranch");
+	 si.clickLoanAccountNo("135");
+	 si.clickAmount("500");
+	 si.enterinterestamount("100");
+	 si.checknoofinstallments();
+	 si.noofinstallments("1");
+	 si.clickRecoverDate("Aug/2019");
+	 si.roundoffhighestrupee();
+	 si.clickCreateButton();
+	 String s=si.getMessage();
+	 Assert.assertEquals(s, "Loan successfully created");
+	// si.clickDeleteButton();
+	}
+	@Test(priority=18)
+	public void CreateLoanAmountInterestAmountNoOfInstallmentsHigher50rupee_SC_608() throws Exception{
+	CreateLoanAmountInterestAmountNoOfInstallmentsHigher50rupeeNoRecovery si=new CreateLoanAmountInterestAmountNoOfInstallmentsHigher50rupeeNoRecovery(driver);
+	 si.clickonsalary();
+	 si.clickonloandetail();
+	 si.clickAddEmployee();
+	 si.resizeWindow();
+	 Thread.sleep(3000);
+	 si.clickLoad();
+	 Thread.sleep(3000);
+	 si.exitFullscreen();
+	 si.clickView();
+	 si.clickAddNewLoan();
+	 si.clickLoanName("LoanTest");
+	 si.selectLoanDate("01 July 2019");
+	 si.selectInstitutionName("AxisBank-abcbranch");
+	 si.clickLoanAccountNo("136");
+	 si.clickAmount("500");
+	 si.enterinterestamount("100");
+	 si.checknoofinstallments();
+	 si.noofinstallments("1");
+	 si.clickRecoverDate("Aug/2019");
+	 si.roundoffhighestrupee();
+	 si.clickCreateButton();
+	 String s=si.getMessage();
+	 Assert.assertEquals(s, "Loan successfully created");
+	 si.clickDeleteButton();
+ 
+	}
+	 @Test(priority=19)
 		public void DeleteLoanDetail_SC_609() throws Exception{
 		 DeleteLoanDetail am=new DeleteLoanDetail(driver);
 		 am.navigatesalary();
 		 am.clickLoanDetails();
 		 am.clickAddEmployee();
+		 am.resizeWindow();
 		 Thread.sleep(3000);
 		 am.clickLoad();
 		 Thread.sleep(3000);
+		 am.exitFullscreen();
 		 am.clickView();
+		 Thread.sleep(3000);
 		 am.clickDelete();
 		 am.switchToPopUpAndDismiss(driver);
 		 am.clickDelete();
 		 am.switchToPopUpAndAccept(driver);
 		 String s=am.getMessage();
 		 Assert.assertEquals(s, "Loan successfully deleted");
-}
-	 @Test(priority=7)
+	 }
+	 @Test(priority=20)
 		public void CheckLoanDetailsRedirectsToReports_SC_610() throws Exception{
 		 CheckLoanDetailsRedirectsToReports am=new CheckLoanDetailsRedirectsToReports(driver);
 		 am.navigatesalary();
 		 am.clickLoanDetails();
-		 am.clickAddEmployee();
-		 Thread.sleep(3000);
-		 am.clickLoad();
-		 Thread.sleep(4000);
-		 am.clickReports();
+		 //am.clickReports();
 		 am.clickStandingInstructions();
 		 am.ClickSIType("Loan");
 		 am.ClickReportType("EMI Report");
-		 am.ClickSIFrom("Nov/2017");
-		 am.ClickSIToe("Jul/2018");
+		 am.ClickSIFrom("Jul/2019");
+		 am.ClickSIToe("Aug/2019");
 		 am.ClickGetEmployees();
+		 am.resizeWindow();
 		 Thread.sleep(3000);
 		 am.clickLoad();
 		 Thread.sleep(3000);
-		 String s=am.getMessage();
-		 Assert.assertEquals(s, "Employees Successfully Loaded.");
+		 am.exitFullscreen();
+		 am.clickEmployee();
+		 //String s=am.getMessage();
+		// Assert.assertEquals(s, "Employees Successfully Loaded.");
 		// am.clickEmployee();
 		 am.clickGenerateReport();
-		 
-}
-	 @Test(priority=8)
+	 } 
+	 
+/*	 @Test(priority=8)
 		public void CheckLoanDetailsRedirectsToMaster_SC_611() throws Exception{
 		 CheckLoanDetailsRedirectsToMaster am=new CheckLoanDetailsRedirectsToMaster(driver);
 		 am.navigatesalary();
@@ -492,177 +666,11 @@ public class LoanDetail extends BaseTest{
 			si.createemployee();
 			String s=si.getMessage();
 	 		Assert.assertEquals(s, "Employee successfully created");
-		}
-	
-	}
-	
-	}
-	@Test(priority=19)
-	public void CreateLoanAmountInterestAmountNoOfInstallmentsHigher1rupeeNoRecovery_SC_604() throws Exception{
-		CreateLoanAmountInterestAmountNoOfInstallmentsHigher1rupeeNoRecovery si=new CreateLoanAmountInterestAmountNoOfInstallmentsHigher1rupeeNoRecovery(driver);
-		si.clickonsalary();
-		si.clickonloandetail();
-		 si.clickAddEmployee();
-		 Thread.sleep(3000);
-		 si.clickLoad();
-		 Thread.sleep(3000);
-		 si.clickView();
-		 si.clickAddNewLoan();
-		 si.clickLoanName("Bike_Loan");
-		 si.selectLoanDate("01 April 2013");
-		 si.selectInstitutionName("HDFC Bank-FORT MUMBAI");
-		 si.clickLoanAccountNo("656");
-		 si.clickAmount("5000");
-		 si.enterinterestamount("1000");
-		 si.checknoofinstallments();
-		 si.noofinstallments("5");
-		 si.clickRecoverDate("May/2013");
-		 si.roundoffhighestrupee();
-		 si.norecovery();
-		 si.clickCreateButton();
-		 String s=si.getMessage();
-		 Assert.assertEquals(s, "Loan successfully created");
-		 si.clickDeleteButton();
-	}
-	@Test(priority=20)
-	public void CreateLoanAmountInterestAmountNoOfInstallmentsHigher10rupeeNoRecovery_SC_603() throws Exception{
-		CreateLoanAmountInterestAmountNoOfInstallmentsHigher10rupeeNoRecovery si=new CreateLoanAmountInterestAmountNoOfInstallmentsHigher10rupeeNoRecovery(driver);
-		si.clickonsalary();
-		si.clickonloandetail();
-		 si.clickAddEmployee();
-		 Thread.sleep(3000);
-		 si.clickLoad();
-		 Thread.sleep(3000);
-		 si.clickView();
-		 si.clickAddNewLoan();
-		 si.clickLoanName("Bike_Loan");
-		 si.selectLoanDate("01 April 2013");
-		 si.selectInstitutionName("HDFC Bank-FORT MUMBAI");
-		 si.clickLoanAccountNo("656");
-		 si.clickAmount("5000");
-		 si.enterinterestamount("1000");
-		 si.checknoofinstallments();
-		 si.noofinstallments("5");
-		 si.clickRecoverDate("May/2013");
-		 si.roundoffhighestrupee();
-		 si.norecovery();
-		 si.clickCreateButton();
-		 String s=si.getMessage();
-		 Assert.assertEquals(s, "Loan successfully created");
-		 si.clickDeleteButton();
-	}
-	@Test(priority=21)
-	public void CreateLoanAmountInterestAmountNoOfInstallmentsHigher50rupeeNoRecovery_SC_605() throws Exception{
-		CreateLoanAmountInterestAmountNoOfInstallmentsHigher50rupeeNoRecovery si=new CreateLoanAmountInterestAmountNoOfInstallmentsHigher50rupeeNoRecovery(driver);
-		si.clickonsalary();
-		si.clickonloandetail();
-		 si.clickAddEmployee();
-		 Thread.sleep(3000);
-		 si.clickLoad();
-		 Thread.sleep(3000);
-		 si.clickView();
-		 si.clickAddNewLoan();
-		 si.clickLoanName("Bike_Loan");
-		 si.selectLoanDate("01 April 2013");
-		 si.selectInstitutionName("HDFC Bank-FORT MUMBAI");
-		 si.clickLoanAccountNo("656");
-		 si.clickAmount("5000");
-		 si.enterinterestamount("1000");
-		 si.checknoofinstallments();
-		 si.noofinstallments("5");
-		 si.clickRecoverDate("May/2013");
-		 si.roundoffhighestrupee();
-		 si.norecovery();
-		 si.clickCreateButton();
-		 String s=si.getMessage();
-		 Assert.assertEquals(s, "Loan successfully created");
-		 si.clickDeleteButton();
-	}
-	@Test(priority=22)
-	public void CreateLoanAmountInterestAmountNoOfInstallmentsHigher1rupee_SC_606() throws Exception{
-		CreateLoanAmountInterestAmountNoOfInstallmentsHigher1rupeeNoRecovery si=new CreateLoanAmountInterestAmountNoOfInstallmentsHigher1rupeeNoRecovery(driver);
-		si.clickonsalary();
-		si.clickonloandetail();
-		 si.clickAddEmployee();
-		 Thread.sleep(3000);
-		 si.clickLoad();
-		 Thread.sleep(3000);
-		 si.clickView();
-		 si.clickAddNewLoan();
-		 si.clickLoanName("Bike_Loan");
-		 si.selectLoanDate("01 April 2013");
-		 si.selectInstitutionName("HDFC Bank-FORT MUMBAI");
-		 si.clickLoanAccountNo("656");
-		 si.clickAmount("5000");
-		 si.enterinterestamount("1000");
-		 si.checknoofinstallments();
-		 si.noofinstallments("5");
-		 si.clickRecoverDate("May/2013");
-		 si.roundoffhighestrupee();
-		 si.clickCreateButton();
-		 String s=si.getMessage();
-		 Assert.assertEquals(s, "Loan successfully created");
-		 si.clickDeleteButton();
-	}
-	@Test(priority=23)
-	public void CreateLoanAmountInterestAmountNoOfInstallmentsHigher10rupee_SC_607() throws Exception{
-		CreateLoanAmountInterestAmountNoOfInstallmentsHigher10rupeeNoRecovery si=new CreateLoanAmountInterestAmountNoOfInstallmentsHigher10rupeeNoRecovery(driver);
-		si.clickonsalary();
-		si.clickonloandetail();
-		 si.clickAddEmployee();
-		 Thread.sleep(3000);
-		 si.clickLoad();
-		 Thread.sleep(3000);
-		 si.clickView();
-		 si.clickAddNewLoan();
-		 si.clickLoanName("Bike_Loan");
-		 si.selectLoanDate("01 April 2013");
-		 si.selectInstitutionName("HDFC Bank-FORT MUMBAI");
-		 si.clickLoanAccountNo("656");
-		 si.clickAmount("5000");
-		 si.enterinterestamount("1000");
-		 si.checknoofinstallments();
-		 si.noofinstallments("5");
-		 si.clickRecoverDate("May/2013");
-		 si.roundoffhighestrupee();
-		 si.clickCreateButton();
-		 String s=si.getMessage();
-		 Assert.assertEquals(s, "Loan successfully created");
-		 si.clickDeleteButton();
-	}
-	@Test(priority=24)
-	public void CreateLoanAmountInterestAmountNoOfInstallmentsHigher50rupee_SC_608() throws Exception{
-		CreateLoanAmountInterestAmountNoOfInstallmentsHigher50rupeeNoRecovery si=new CreateLoanAmountInterestAmountNoOfInstallmentsHigher50rupeeNoRecovery(driver);
-		si.clickonsalary();
-		si.clickonloandetail();
-		 si.clickAddEmployee();
-		 Thread.sleep(3000);
-		 si.clickLoad();
-		 Thread.sleep(3000);
-		 si.clickView();
-		 si.clickAddNewLoan();
-		 si.clickLoanName("Bike_Loan");
-		 si.selectLoanDate("01 April 2013");
-		 si.selectInstitutionName("HDFC Bank-FORT MUMBAI");
-		 si.clickLoanAccountNo("656");
-		 si.clickAmount("5000");
-		 si.enterinterestamount("1000");
-		 si.checknoofinstallments();
-		 si.noofinstallments("5");
-		 si.clickRecoverDate("May/2013");
-		 si.roundoffhighestrupee();
-		 si.clickCreateButton();
-		 String s=si.getMessage();
-		 Assert.assertEquals(s, "Loan successfully created");
-		 si.clickDeleteButton();
-		 Thread.sleep(3000);
-		 si.navigateMaster();
-		 si.selectloanmaster();
-		 si.deleteloanmaster();
-		 Thread.sleep(3000);
-		 si.navigateMaster();
-		 si.selectFinancialInst();
-		 si.deletefinancialinsti();
-		 
-	}*/
+		}*/
+	 
 }
+	
+	
+	
+	
+

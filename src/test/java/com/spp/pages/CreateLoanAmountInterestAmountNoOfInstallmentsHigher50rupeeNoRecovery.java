@@ -18,9 +18,9 @@ public class CreateLoanAmountInterestAmountNoOfInstallmentsHigher50rupeeNoRecove
 	WebElement ClickOnEmployeeMaster;
 	@FindBy(xpath="//*[@id=\"add_employees\"]")
 	WebElement AddEmployee;
-	@FindBy(xpath="//*[@id=\"bf_form\"]/div[9]/button[1]")
+	@FindBy(xpath="//*[@id=\"bf_form\"]/div[10]/button[1]")
 	WebElement Load;
-	@FindBy(xpath="//*[@id=\"si_detail_employees\"]/tbody/tr[1]/td[6]/a")
+	@FindBy(xpath="//*[@id=\"si_detail_employees\"]/tbody/tr[2]/td[6]/a")
 	WebElement View;
 	@FindBy(xpath="//*[@id=\"standing_detail_list\"]/div[1]/span/a")
 	WebElement AddNewLoan;
@@ -52,21 +52,20 @@ public class CreateLoanAmountInterestAmountNoOfInstallmentsHigher50rupeeNoRecove
 	WebElement DeleteButton;
 	@FindBy(id="standing_instruction_detail_no_of_instalment")
 	WebElement EnterNoofInstallments;
-
 	@FindBy(id="master")
 	WebElement ClickOnMaster;
 	@FindBy(xpath="//*[@id=\"menu\"]/li[3]/div/div[2]/ul/li[4]/a")
 	WebElement SelectLoanMaster;
-	@FindBy(xpath="//*[@id=\"standing_instr_list\"]/div[2]/table/tbody/tr/td[5]/a")
+	@FindBy(xpath="//div[2]/table/tbody/tr[1]/td[8]/a")
 	WebElement DeleteLoanMaster;
 	@FindBy(id="inst")
 	WebElement CheckNoofInstallments;
-@FindBy(id="standing_instruction_detail_interest_amount")
-WebElement EnterInterestAmount;
-@FindBy(xpath="//a[text()='Financial Institution (Bank)']")
-WebElement financialInstitution;
-@FindBy(xpath="//*[@id=\"financial_institutions\"]/tbody/tr/td[contains(text(),'HDFC Bank')]/parent::tr/td[9]/a")
-WebElement DeleteFinancialInstitution;
+	@FindBy(id="standing_instruction_detail_interest_amount")
+	WebElement EnterInterestAmount;
+	@FindBy(xpath="//a[text()='Financial Institution (Bank)']")
+	WebElement financialInstitution;
+	@FindBy(xpath="//*[@id=\"financial_institutions\"]/tbody/tr/td[contains(text(),'HDFC Bank')]/parent::tr/td[9]/a")
+	WebElement DeleteFinancialInstitution;
 
 public CreateLoanAmountInterestAmountNoOfInstallmentsHigher50rupeeNoRecovery(WebDriver driver) {
 	super(driver);
