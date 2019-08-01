@@ -19,7 +19,7 @@ public class DeleteEMIDetailsInLoanDetail extends BasePage{
 	WebElement LoanDetails;
 	@FindBy(xpath="//*[@id=\"add_employees\"]")
 	WebElement AddEmployee;
-	@FindBy(xpath="//*[@id=\"bf_form\"]/div[9]/button[1]")
+	@FindBy(xpath="//*[@id=\"bf_form\"]/div[10]/button[1]")
 	WebElement Load;
 //	@FindBy(id="filter")
 //	WebElement MultiAllotment;
@@ -27,12 +27,14 @@ public class DeleteEMIDetailsInLoanDetail extends BasePage{
 	WebElement View;
 	@FindBy(xpath="//*[@id=\"standing_detail_list\"]/div[2]/table/tbody/tr[1]/td[7]/a")
 	WebElement Detail;
-	@FindBy(id="delete_emi")
+	@FindBy(xpath="//table/tbody/tr[1]/td[5]/a")
 	WebElement Delete;
 	@FindBy(id="popup_ok")
 	WebElement YesButton;
 	@FindBy(xpath="//*[@id=\"show_message\"]/div/strong")
 	WebElement SuccessfulMessage;
+	@FindBy(xpath="//*[@id=\"main\"]/div/div[2]/nav/ul/li[2]/a")
+	WebElement EmiDetail;
 
 	public void navigatesalary() throws Exception{
 		salarylink.click();
@@ -64,6 +66,9 @@ public class DeleteEMIDetailsInLoanDetail extends BasePage{
 		}
 	public String getMessage() {
 		return SuccessfulMessage.getText();
+	}
+	public void ClickEmiDetail() throws Exception{
+		EmiDetail.click();
 	}
 
 }

@@ -367,7 +367,7 @@ public class LoanDetail extends BaseTest{
 			si.clickDeleteButton();
 		}*/
 		
-	@Test(priority=13)
+/*	@Test(priority=13)
 	public void CreateLoanAmountInterestAmountNoOfInstallmentsHigher1rupeeNoRecovery_SC_604() throws Exception{
 	CreateLoanAmountInterestAmountNoOfInstallmentsHigher1rupeeNoRecovery si=new CreateLoanAmountInterestAmountNoOfInstallmentsHigher1rupeeNoRecovery(driver);
 	 si.clickonsalary();
@@ -581,9 +581,9 @@ public class LoanDetail extends BaseTest{
 		// Assert.assertEquals(s, "Employees Successfully Loaded.");
 		// am.clickEmployee();
 		 am.clickGenerateReport();
-	 } 
+	 } */
 	 
-/*	 @Test(priority=8)
+	 @Test(priority=21)
 		public void CheckLoanDetailsRedirectsToMaster_SC_611() throws Exception{
 		 CheckLoanDetailsRedirectsToMaster am=new CheckLoanDetailsRedirectsToMaster(driver);
 		 am.navigatesalary();
@@ -591,53 +591,16 @@ public class LoanDetail extends BaseTest{
 		 am.clickGeneralLink();
 		 am.clickLoanMasterl();
 		 am.clickAddNewLoanMaster();
-		 am.clickLoanName("master_"+Utility.getRandNum(10, 10000));
+		 am.clickLoanName("master_12");
 		 Thread.sleep(2000);
 		 am.ClickMaxAmount("5000");
 		 //ld.clickClubbedinSalaryBox();
 		 am.clickCreateButton();
 		 String d=am.getMessage();
 		 Assert.assertEquals(d, "Loan successfully created");
-}
-	 @Test(priority=9)
-		public void EditEMIDetailsInLoanDetail_SC_613() throws Exception{
-		 EditEMIDetailsInLoanDetail am=new EditEMIDetailsInLoanDetail(driver);
-		 am.navigatesalary();
-		 am.clickLoanDetails();
-		 am.clickAddEmployee();
-		 Thread.sleep(3000);
-		 am.clickLoad();
-		 Thread.sleep(3000);
-		 am.clickView();
-		 am.ClickDetail();
-		 am.clickEdit();
-		 Thread.sleep(3000);
-		 am.clickAmount("600");
-		 am.clickUpdateButton();
-		 am.clickYesButton();
-		// am.clickYesButton();
-		 String s=am.getMessage();
-		 Assert.assertEquals(s, "EMI Details Successfully updated.");
-}
-	 @Test(priority=10)
-	 public void DeleteEMIDetailsInLoanDetail_SC_614() throws Exception{
-		 DeleteEMIDetailsInLoanDetail am=new DeleteEMIDetailsInLoanDetail(driver);
-		 am.navigatesalary();
-		 am.clickLoanDetails();
-		 am.clickAddEmployee();
-		 Thread.sleep(3000);
-		 am.clickLoad();
-		 Thread.sleep(3000);
-		 am.clickView();
-		 am.ClickDetail();
-		 am.ClickDelete();
-		 am.clickYesButton();
-		 String s=am.getMessage();
-		 Assert.assertEquals(s, "EMI Details Successfully Deleted");
-}
-	 
-	 
-	 @Test(priority=11)
+		 am.clickDeleteButton();
+	 }
+	 @Test(priority=22)
 		public void CheckifSalaryLoanGeneralLinksEmployeeMasterredirectstoEmployee_SC_612() throws Exception{
 		 CheckifSalaryLoanGeneralLinksEmployeeMasterredirectstoEmployee si=new CheckifSalaryLoanGeneralLinksEmployeeMasterredirectstoEmployee(driver);
 			si.clickonsalary();
@@ -646,9 +609,9 @@ public class LoanDetail extends BaseTest{
 			Thread.sleep(2000);
 			si.clickonemployeemaster();
 			si.addnewemployee();
-			si.enterEmployeeid("mno12345");
-			si.enterEmployeeref("12345mno");
-			si.enterEmployeename("Ajay");
+			si.enterEmployeeid("AMN123");
+			si.enterEmployeeref("AM321");
+			si.enterEmployeename("Amaan");
 			si.enterEmployeefather("Harish");
 			si.selectDateofBirth("06 June 1995");
 			si.selectGender("Male");
@@ -659,15 +622,66 @@ public class LoanDetail extends BaseTest{
 			si.selectState("Maharashtra");
 			si.selectclassificationdetail();
 			si.selectsalstructure("Structure");
-			si.selectbranch("Chennai");
+			si.selectbranch("default");
 			si.selectattendancestructure("Karnataka");
 			si.selectbank("CASH");
-			si.selectleavepolicy("PolicyNo1");
+			si.selectleavepolicy("Default");
 			si.createemployee();
 			String s=si.getMessage();
 	 		Assert.assertEquals(s, "Employee successfully created");
-		}*/
-	 
+	 		si.clickemployee();
+	 		si.selectemployeedetails();
+	 		si.clickonfilterhead();
+	 		si.resizeWindow();
+	 		Thread.sleep(3000);
+	 		si.clickLoad();
+	 		Thread.sleep(3000);
+	 		si.exitFullscreen();
+	 		si.deleteemployee();
+	 		
+	}
+	 @Test(priority=23)
+		public void EditEMIDetailsInLoanDetail_SC_613() throws Exception{
+		 EditEMIDetailsInLoanDetail am=new EditEMIDetailsInLoanDetail(driver);
+		 am.navigatesalary();
+		 am.clickLoanDetails();
+		 am.clickAddEmployee();
+		 am.resizeWindow();
+		 Thread.sleep(3000);
+		 am.clickLoad();
+		 Thread.sleep(3000);
+		 am.exitFullscreen();
+		 am.clickView();
+		 am.ClickDetail();
+		 am.ClickEmiDetail();
+		 am.clickEdit();
+		 Thread.sleep(3000);
+		 am.clickAmount("600");
+		 am.clickUpdateButton();
+		 am.clickYesButton();
+		 am.clickYesButton();
+		 String s=am.getMessage();
+		 Assert.assertEquals(s, "EMI Details Successfully updated.");
+	 }
+	 @Test(priority=24)
+	 public void DeleteEMIDetailsInLoanDetail_SC_614() throws Exception{
+		 DeleteEMIDetailsInLoanDetail am=new DeleteEMIDetailsInLoanDetail(driver);
+		 am.navigatesalary();
+		 am.clickLoanDetails();
+		 am.clickAddEmployee();
+		 am.resizeWindow();
+		 Thread.sleep(3000);
+		 am.clickLoad();
+		 Thread.sleep(3000);
+		 am.exitFullscreen();
+		 am.clickView();
+		 am.ClickDetail();
+		 am.ClickEmiDetail();
+		 am.ClickDelete();
+		 am.clickYesButton();
+		 String s=am.getMessage();
+		 Assert.assertEquals(s, "EMI Details Successfully Deleted");
+	 }
 }
 	
 	

@@ -12,9 +12,9 @@ public class CheckLoanDetailsRedirectsToMaster extends BasePage{
 	WebElement salarylink;
 	@FindBy(linkText="Loan Detail")
 	WebElement LoanDetails;
-	@FindBy(xpath="//*[@id=\"ui-accordion-accordion-header-1\"]/h3")
+	@FindBy(xpath="//*[@id=\"ui-id-3\"]/h3")
 	WebElement GeneralLink;
-	@FindBy(xpath="//*[@id=\"ui-accordion-accordion-panel-1\"]/li[1]/a")
+	@FindBy(xpath="//*[@id=\"ui-id-4\"]/li[1]/a")
 	WebElement LoanMaster;
 	@FindBy(xpath="//*[@id='standing_instr_list']/div[1]/span/a")
 	WebElement AddNewLoanMaster;
@@ -26,7 +26,9 @@ public class CheckLoanDetailsRedirectsToMaster extends BasePage{
 	WebElement CreateButton;
 	@FindBy(xpath="//*[@id='main']/div[2]/strong")
 	WebElement successfulMessage;
-	
+	@FindBy(xpath="//td[contains(text(),'master_12')]/parent::tr/td[4]/a")
+	WebElement DeleteButton;
+
 	public CheckLoanDetailsRedirectsToMaster(WebDriver driver){
 		super(driver);
 		PageFactory.initElements(driver, this);
@@ -62,4 +64,8 @@ public class CheckLoanDetailsRedirectsToMaster extends BasePage{
     public String getMessage() {
     	return successfulMessage.getText();
 }
+    public void clickDeleteButton() throws Exception{
+		DeleteButton.click();
+		switchToPopUpAndAccept(driver);
+	}
 }

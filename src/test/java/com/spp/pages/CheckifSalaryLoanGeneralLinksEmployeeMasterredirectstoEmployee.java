@@ -12,9 +12,9 @@ public class CheckifSalaryLoanGeneralLinksEmployeeMasterredirectstoEmployee exte
 	WebElement ClickOnSalary;
 	@FindBy(xpath="//a[text()='Loan Detail']")
 	WebElement ClickOnLoanDetail;
-	@FindBy(xpath="//*[@id=\"ui-accordion-accordion-header-1\"]/h3")
+	@FindBy(xpath="//*[@id=\"ui-id-3\"]/h3")
 	WebElement ClickonGeneralLinks;
-	@FindBy(xpath="//*[@id=\"ui-accordion-accordion-panel-1\"]/li[2]/a")
+	@FindBy(xpath="//*[@id=\"ui-id-4\"]/li[2]/a")
 	WebElement ClickOnEmployeeMaster;
 	@FindBy(xpath="//a[text()='Add New Employee']")
 	WebElement AddNewEmployee;
@@ -56,7 +56,23 @@ public class CheckifSalaryLoanGeneralLinksEmployeeMasterredirectstoEmployee exte
 	WebElement CreateEmployee;
 	@FindBy(xpath="//*[@id=\"main\"]/div[2]/strong")
 	WebElement successfullmessage;
+	@FindBy(id="emp_detail")
+	WebElement ClickEmployee;
+	@FindBy(xpath="//*[@id=\"menu\"]/li[4]/div/div/ul/li[1]/a")
+	WebElement SelectEmployeeDetails;
+	@FindBy(id="filter_head")
+	WebElement ClickOnFilterHead;
+	@FindBy(xpath="//*[@id=\"bf_form\"]/div[10]/button[1]")
+	WebElement Load;
+	@FindBy(xpath="//*[@id=\"employees_dtable\"]/tbody/tr/td[contains(text(),'Amaan')]/parent::tr/td[6]/a[2]")
+	WebElement DeleteEmployee;
+	@FindBy(id="emp_detail")
+	WebElement ClickOnEmployee;
+	@FindBy(xpath="//*[@id=\"menu\"]/li[4]/div/div/ul/li[1]/a")
+	WebElement ClickOnEmployDetails;
 	
+	@FindBy(xpath="//*[@id=\"bf_form\"]/div[10]/button[1]")
+	WebElement ClickOnLoad;
 	
 	
 	
@@ -137,5 +153,34 @@ public class CheckifSalaryLoanGeneralLinksEmployeeMasterredirectstoEmployee exte
     public String getMessage(){
 		return successfullmessage.getText();
 	}
-
+    public void clickemployee() {
+    	ClickEmployee.click();
+    }
+    public void selectemployeedetails() {
+    	SelectEmployeeDetails.click();
+    }
+    public void clickonfilterhead() {
+    	ClickOnFilterHead.click();
+    }
+    public void clickLoad() throws Exception{
+    	Load.click();
+    }
+    public void deleteemployee() {
+    	DeleteEmployee.click();
+    	switchToPopUpAndAccept(driver);
+    }
+    public void clickonemployee() {
+		ClickOnEmployee.click();
+	}
+	public void clickonemployeedetails() {
+		ClickOnEmployDetails.click();
+	}
+	public void clickonfilter() {
+		ClickOnFilterHead.click();
+	}
+	public void clickonload() {
+		ClickOnLoad.click();
+	}
 }
+
+
