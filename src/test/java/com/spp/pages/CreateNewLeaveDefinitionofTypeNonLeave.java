@@ -24,7 +24,7 @@ public class CreateNewLeaveDefinitionofTypeNonLeave extends BasePage{
 	WebElement CreateLeave;
 	@FindBy(xpath="//strong[text()='Leave definition successfully created.']")
 	WebElement message;
-	@FindBy(xpath="//*[@id='leave_definitions']/div/table/tbody/tr/td[contains(text(),'Non Leave')]/parent::tr/td[7]/a")
+	@FindBy(xpath="//div/table/tbody/tr/td[contains(text(),'Non Leave45')]/parent::tr/td[7]/a")
 	WebElement ClickDelete;
 	@FindBy(id="leave_definition_leave")
 	WebElement CheckboxLeave;
