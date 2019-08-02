@@ -17,9 +17,9 @@ public class CheckifSalaryInsuranceGeneralLinksInsuranceMasterredirectstoMaster 
 	WebElement ClickOnSalary;
 	@FindBy(xpath="//a[text()='Insurance Detail']")
 	WebElement ClickOnInsuranceDetail;
-	@FindBy(xpath="//*[@id=\"ui-accordion-accordion-header-1\"]/h3")
+	@FindBy(xpath="//*[@id=\"ui-id-3\"]/h3")
 	WebElement ClickonGeneralLinks;
-	@FindBy(xpath="//*[@id=\"ui-accordion-accordion-panel-1\"]/li[1]/a")
+	@FindBy(xpath="//*[@id=\"ui-id-4\"]/li[1]/a")
 	WebElement ClickOnInsuranceMaster;
 	@FindBy(xpath="//a[text()='Add New Insurance Master']")
 	WebElement AddNewInsuranceMaster;
@@ -29,7 +29,7 @@ public class CheckifSalaryInsuranceGeneralLinksInsuranceMasterredirectstoMaster 
 	WebElement CreateInsurance;
 	@FindBy(xpath="//strong[text()='Insurance successfully created ']")
 	WebElement successfullMessage;
-	@FindBy(xpath="//*[@id=\"standing_instr_list\"]/div[2]/table/tbody/tr/td[4]/a")
+	@FindBy(xpath="//td[contains(text(),'InsuranceLIC')]/parent::tr/td[4]/a")
 	WebElement ClickDeleteInsuranceMaster;
 	@FindBy(id="add_employees")
 	WebElement ClickAddEmployees;

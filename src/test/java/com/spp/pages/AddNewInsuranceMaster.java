@@ -23,7 +23,7 @@ public class AddNewInsuranceMaster extends BasePage {
 	WebElement Createinsurance; 
 	@FindBy(xpath="//*[@id=\"main\"]/div[2]/strong")
 	WebElement SuccessfulMessage;
-	@FindBy(xpath="//*[@id=\"standing_instr_list\"]/div[2]/table/tbody[2]/tr[1]/td[4]/a")
+	@FindBy(xpath="//td[contains(text(),'LIC')]/parent::tr/td[4]/a")
 	WebElement DeleteButton;
 	
 	
@@ -57,7 +57,7 @@ public class AddNewInsuranceMaster extends BasePage {
 	public String getMessage() {
 		return SuccessfulMessage.getText();
 	}
-	public void clickDeleteButton(String InsuranceMaster) throws Exception{
+	public void clickDeleteButton() throws Exception{
 		DeleteButton.click();
 		switchToPopUpAndAccept(driver);
 	}

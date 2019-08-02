@@ -13,9 +13,9 @@ public class CheckifSalaryInsuranceGeneralLinksEmployeeMasterredirectstoEmployee
 	WebElement ClickOnSalary;
 	@FindBy(xpath="//a[text()='Insurance Detail']")
 	WebElement ClickOnInsuranceDetail;
-	@FindBy(xpath="//*[@id=\"ui-accordion-accordion-header-1\"]/h3")
+	@FindBy(xpath="//*[@id=\"ui-id-3\"]/h3")
 	WebElement ClickonGeneralLinks;
-	@FindBy(xpath="//*[@id=\"ui-accordion-accordion-panel-1\"]/li[2]/a")
+	@FindBy(xpath="//*[@id=\"ui-id-4\"]/li[2]/a")
 	WebElement ClickOnEmployeeMaster;
 	@FindBy(xpath="//a[text()='Add New Employee']")
 	WebElement AddNewEmployee;
@@ -65,7 +65,7 @@ public class CheckifSalaryInsuranceGeneralLinksEmployeeMasterredirectstoEmployee
 	WebElement ClickOnEmployDetails;
 	@FindBy(id="filter_head")
 	WebElement ClickOnFilterHead;
-	@FindBy(xpath="//*[@id=\"bf_form\"]/div[9]/button[1]")
+	@FindBy(xpath="//*[@id=\"bf_form\"]/div[10]/button[1]")
 	WebElement ClickOnLoad;
 	@FindBy(id="master")
 	WebElement masterLink;

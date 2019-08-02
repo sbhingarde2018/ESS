@@ -70,7 +70,8 @@ public class CheckifSalaryLoanGeneralLinksEmployeeMasterredirectstoEmployee exte
 	WebElement ClickOnEmployee;
 	@FindBy(xpath="//*[@id=\"menu\"]/li[4]/div/div/ul/li[1]/a")
 	WebElement ClickOnEmployDetails;
-	
+	@FindBy(xpath="//*[@id=\"employees_dtable_paginate\"]/span/a[2]")
+	WebElement ClickPage;
 	@FindBy(xpath="//*[@id=\"bf_form\"]/div[10]/button[1]")
 	WebElement ClickOnLoad;
 	
@@ -180,6 +181,9 @@ public class CheckifSalaryLoanGeneralLinksEmployeeMasterredirectstoEmployee exte
 	}
 	public void clickonload() {
 		ClickOnLoad.click();
+	}
+	public void ClickPage() {
+		ClickPage.click();
 	}
 }
 

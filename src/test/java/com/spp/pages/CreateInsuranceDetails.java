@@ -35,13 +35,13 @@ public class CreateInsuranceDetails extends BasePage {
 	WebElement CreateFinancialInstitution;
 	@FindBy(id="salary")
 	WebElement ClickOnSalary;
-	@FindBy(xpath="//*[@id=\"menu\"]/li[6]/div/div[1]/ul/li[8]/a")
+	@FindBy(xpath="//*[@id=\"menu\"]/li[6]/div/div[1]/ul/li[9]/a")
 	WebElement InsuranceDetails;
 	@FindBy(xpath="//*[@id=\"add_employees\"]")
 	WebElement AddEmployee;
 	@FindBy(xpath="//*[@id=\"bf_form\"]/div/button[contains(text(),'LOAD')]")
 	WebElement Load;
-	@FindBy(xpath="//*[@id=\"si_detail_employees\"]/tbody/tr[2]/td[6]/a")
+	@FindBy(xpath="//*[@id=\"si_detail_employees\"]/tbody/tr[1]/td[6]/a")
 	WebElement View;
 	@FindBy(xpath="//*[@id=\"standing_detail_list\"]/div[1]/span/a")
 	WebElement AddNewInsuranceDetails;
@@ -127,11 +127,11 @@ public class CreateInsuranceDetails extends BasePage {
 		AddEmployee.click();
 	}
 	public void clickLoad() throws Exception{
-		resizeWindow();
-		Thread.sleep(5000);
+		//resizeWindow();
+		//Thread.sleep(5000);
 		Load.click();
-		Thread.sleep(5000);
-		exitFullscreen();
+		//Thread.sleep(5000);
+		//exitFullscreen();
 		
 	}
 	public void clickView() throws Exception{
