@@ -22,6 +22,9 @@ public class CreatePaymonth extends BasePage {
 	WebElement DeleteButton;
 	@FindBy(xpath="//*[@id=\"main\"]/div[3]/div/div/fieldset/div[2]/form/div/input[2]")
 	WebElement DeletePaymonth;
+	
+	
+	
 	public CreatePaymonth(WebDriver driver) {
 		super(driver);
 		PageFactory.initElements(driver,this);

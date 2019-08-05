@@ -21,7 +21,7 @@ import com.spp.pages.SalaryInsuranceReportsStandingInsDetailReportredirectstoRep
 public class InsuranceDetail extends BaseTest{
 
 	
-	@Test(priority=0)
+	/*@Test(priority=0)
 	public void AddNewInsuranceMaster_SC_302() throws Exception{
 		AddNewInsuranceMaster pi=new AddNewInsuranceMaster(driver);
 		pi.navigateMaster();	
@@ -209,24 +209,26 @@ public class InsuranceDetail extends BaseTest{
  		si.exitFullscreen();
  		si.deleteemployee();
 		
-	}
-	/*@Test(priority=5)
+	}*/
+	@Test(priority=8)
 	public void CreateInsurancePremiumPaymentQuarterly_SC_618() throws Exception{
 		CreateInsurancePremiumPaymentQuarterly pi=new CreateInsurancePremiumPaymentQuarterly(driver);
 		pi.clickonsalary();	
 		pi.clickoninsurancedetail();
 		pi.clickaddemployees();
+		pi.resizeWindow();
 		Thread.sleep(3000);
 		pi.clickonload();
 		Thread.sleep(3000);
+		pi.exitFullscreen();
 		pi.clickonview();
 		pi.clickAddNewInsuranceDetails();
-		pi.selectInsuranceName("LIC");
+		pi.selectInsuranceName("Insurance_Master");
 		pi.clickInsuranceNo("567");
-		pi.clickStartMonth("Apr/2013");
-		pi.clickEndMonth("Apr/2013");
+		pi.clickStartMonth("Aug/2019");
+		pi.clickEndMonth("Aug/2019");
 		pi.clickAmount("5000");
-		pi.selectInstitutionName("HDFC Bank-FORT MUMBAI");
+		pi.selectInstitutionName("AxisBankBranch-ABCD");
 		pi.clickRemark("fgfhgjhgh");
 		pi.clickquaterly();
 		pi.clickCreateInsurancebutton();
@@ -235,23 +237,25 @@ public class InsuranceDetail extends BaseTest{
 		Thread.sleep(3000);
 		pi.clickdelete();
 	}
-	@Test(priority=6)
+	@Test(priority=9)
 	public void CreateInsurancePremiumPaymentHalfYearly_SC_619() throws Exception{
 		CreateInsurancePremiumPaymentHalfYearly pi=new CreateInsurancePremiumPaymentHalfYearly(driver);
 		pi.clickonsalary();	
 		pi.clickoninsurancedetail();
 		pi.clickaddemployees();
+		pi.resizeWindow();
 		Thread.sleep(3000);
 		pi.clickonload();
 		Thread.sleep(3000);
+		pi.exitFullscreen();
 		pi.clickonview();
 		pi.clickAddNewInsuranceDetails();
-		pi.selectInsuranceName("LIC");
+		pi.selectInsuranceName("Insurance_Master");
 		pi.clickInsuranceNo("5678");
-		pi.clickStartMonth("Apr/2013");
-		pi.clickEndMonth("Apr/2013");
+		pi.clickStartMonth("Aug/2019");
+		pi.clickEndMonth("Aug/2019");
 		pi.clickAmount("5000");
-		pi.selectInstitutionName("HDFC Bank-FORT MUMBAI");
+		pi.selectInstitutionName("AxisBankBranch-ABCD");
 		pi.clickRemark("fgfhgjhgh");
 		pi.clickhalfyearly();
 		pi.clickCreateInsurancebutton();
@@ -260,23 +264,25 @@ public class InsuranceDetail extends BaseTest{
 		Thread.sleep(3000);
 		pi.clickdelete();
 	}
-	@Test(priority=7)
+	@Test(priority=10)
 	public void CreateInsurancePremiumPaymentYearly_SC_620() throws Exception{
 		CreateInsurancePremiumPaymentYearly pi=new CreateInsurancePremiumPaymentYearly(driver);
 		pi.clickonsalary();	
 		pi.clickoninsurancedetail();
 		pi.clickaddemployees();
+		pi.resizeWindow();
 		Thread.sleep(3000);
 		pi.clickonload();
 		Thread.sleep(3000);
+		pi.exitFullscreen();
 		pi.clickonview();
 		pi.clickAddNewInsuranceDetails();
-		pi.selectInsuranceName("LIC");
+		pi.selectInsuranceName("Insurance_Master");
 		pi.clickInsuranceNo("5678");
-		pi.clickStartMonth("Apr/2013");
-		pi.clickEndMonth("Apr/2013");
+		pi.clickStartMonth("Aug/2019");
+		pi.clickEndMonth("Aug/2019");
 		pi.clickAmount("5000");
-		pi.selectInstitutionName("HDFC Bank-FORT MUMBAI");
+		pi.selectInstitutionName("AxisBankBranch-ABCD");
 		pi.clickRemark("fgfhgjhgh");
 		pi.clickyearly();
 		pi.clickCreateInsurancebutton();
@@ -285,39 +291,45 @@ public class InsuranceDetail extends BaseTest{
 		
 	}
 	
-	@Test(priority=8)
+	@Test(priority=11)
 	public void CreatePayment_SC_621() throws Exception{
 		CreatePayment pi=new CreatePayment(driver);
 		pi.clickonsalary();	
 		pi.clickoninsurancedetail();
 		pi.clickaddemployees();
+		pi.resizeWindow();
 		Thread.sleep(3000);
 		pi.clickonload();
 		Thread.sleep(3000);
+		pi.exitFullscreen();
 		pi.clickonview();
 		pi.clickondetail();
-		pi.selectfrommonth("Apr/2013");
-		pi.selecttomonth("Apr/2013");
+		pi.selectfrommonth("Sep/2019");
+		pi.selecttomonth("Sep/2019");
 		pi.entermodifiedamount("12000");
-		pi.enterinstitutionname("HDFC Bank-FORT MUMBAI");
+		pi.enterinstitutionname("AxisBankBranch-ABCD");
 		pi.enterremarks("dnjkh");
 		pi.createpayment();
 		String c=pi.getMessage();
-		Assert.assertEquals(c, "Details Successfully created.");
-		Thread.sleep(5000);
+		Assert.assertEquals(c, "Emi Details created successfully");
+		//Thread.sleep(5000);
+		//pi.ClickDetails1();
+		Thread.sleep(3000);
 		pi.clickonsalary();	
 		pi.clickoninsurancedetail();
 		Thread.sleep(2000);
 		pi.clickaddemployees();
+		pi.resizeWindow();
 		Thread.sleep(3000);
 		pi.clickonload();
 		Thread.sleep(3000);
+		pi.exitFullscreen();
 		pi.clickonview();
 		pi.clickdelete();
 		Thread.sleep(5000);
-		pi.navigateMaster();
-		pi.clickInsuranceMaster();
-		pi.clickdeleteInsuranceMaster();
-	}*/
+		//pi.navigateMaster();
+		//pi.clickInsuranceMaster();
+		//pi.clickdeleteInsuranceMaster();
+	}
 }
 

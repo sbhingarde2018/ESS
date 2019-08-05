@@ -14,9 +14,9 @@ public class CreateInsurancePremiumPaymentYearly extends BasePage{
 	WebElement ClickOnInsuranceDetail;
 	@FindBy(id="add_employees")
 	WebElement ClickAddEmployees;
-	@FindBy(xpath="//button[text()='LOAD']")
+	@FindBy(xpath="//*[@id=\"bf_form\"]/div/button[contains(text(),'LOAD')]")
 	WebElement ClickOnLoad;
-	@FindBy(xpath="//*[@id=\"si_detail_employees\"]/tbody/tr/td[contains(text(),'Akshay')]/parent::tr/td[6]/a")
+	@FindBy(xpath="//*[@id=\"si_detail_employees\"]/tbody/tr/td[contains(text(),'Pooja')]/parent::tr/td[6]/a")
 	WebElement ClickOnView;
 	@FindBy(xpath="//*[@id=\"standing_detail_list\"]/div[1]/span/a")
 	WebElement AddNewInsuranceDetails;

@@ -637,6 +637,8 @@ public class LoanDetail extends BaseTest{
 	 		si.clickLoad();
 	 		Thread.sleep(3000);
 	 		si.exitFullscreen();
+	 		si.ClickPage();
+	 		Thread.sleep(2000);
 	 		si.deleteemployee();
 	 		
 	}

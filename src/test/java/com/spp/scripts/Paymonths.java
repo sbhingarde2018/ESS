@@ -20,12 +20,14 @@ public class Paymonths extends BaseTest{
 		cc.selectPaymonthsLink();
 		//cc.enterMonthName("Oct/2018");
 		cc.ClickCreateButton();
+		Thread.sleep(3000);
+		cc.switchToPopUpAndDismiss();
 		String s=cc.getMessage();
 		Assert.assertEquals(s, "Paymonth created successfully");
 		Thread.sleep(4000);
-		cc.clickDeleteButton();
-		cc.clickDeletePaymonth();
-		Thread.sleep(4000);
+		//cc.clickDeleteButton();
+		//cc.clickDeletePaymonth();
+		//Thread.sleep(4000);
 
 }
 	@Test(priority=1)
@@ -51,8 +53,8 @@ public class Paymonths extends BaseTest{
 //		String s=cc.getMessage();
 //		Assert.assertEquals(s, "Paymonth successfully deleted");
 		Thread.sleep(4000);
-		cc.enterMonthName("Jun/2013");
-		cc.ClickCreateButton();
+		//cc.enterMonthName("Jun/2013");
+		//cc.ClickCreateButton();
 }
 	@Test(priority=3)
 	public void LockPaymonth_SC_124() throws InterruptedException{

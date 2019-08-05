@@ -99,7 +99,7 @@ public class AdditionalSalary extends BaseTest {
 		cc.selectAddNewSalaryHeading();
 		cc.ClickPayMonths("Aug/2019");
 		cc.SelectSalaryType("Special Deduction");
-		cc.enterAdditionalHeadingName("DeducTest");
+		cc.enterAdditionalHeadingName("DeducTest12");
 		cc.clickCreateButton();
 		String f=cc.getMessage();
 		Assert.assertEquals(f, "Additional salary head successfully created");

@@ -18,9 +18,9 @@ public class CreatePayment extends BasePage{
 	WebElement ClickOnInsuranceDetail;
 	@FindBy(id="add_employees")
 	WebElement ClickAddEmployees;
-	@FindBy(xpath="//button[text()='LOAD']")
+	@FindBy(xpath="//*[@id=\"bf_form\"]/div/button[contains(text(),'LOAD')]")
 	WebElement ClickOnLoad;
-	@FindBy(xpath="//*[@id=\"si_detail_employees\"]/tbody/tr/td[contains(text(),'Akshay')]/parent::tr/td[6]/a")
+	@FindBy(xpath="//*[@id=\"si_detail_employees\"]/tbody/tr/td[contains(text(),'Pooja')]/parent::tr/td[6]/a")
 	WebElement ClickOnView;
 	@FindBy(xpath="//*[@id=\"standing_detail_list\"]/div[2]/table/tbody/tr/td[8]/a")
 	WebElement ClickOnDetail;
@@ -36,12 +36,16 @@ public class CreatePayment extends BasePage{
 	WebElement EnterRemarks;
 	@FindBy(id="act_save")
 	WebElement CreatePayment;
-	@FindBy(xpath="//strong[text()='Details Successfully created.']")
+	@FindBy(xpath="//strong[text()='Emi Details created successfully']")
 	WebElement successfullmessage;
 	@FindBy(xpath="//*[@id=\"standing_detail_list\"]/div[2]/table/tbody/tr/td[9]/a")
 	WebElement Delete;
 	@FindBy(xpath="//*[@id=\"standing_instr_list\"]/div[2]/table/tbody/tr/td[4]/a")
 	WebElement ClickDeleteInsuranceMaster;
+	@FindBy(xpath="//div[2]/table/tbody/tr[1]/td[8]/a")
+	WebElement Details1;
+	
+	
 	public CreatePayment(WebDriver driver) {
 		super(driver);
 		PageFactory.initElements(driver, this);
@@ -99,5 +103,8 @@ public class CreatePayment extends BasePage{
 	public void clickdeleteInsuranceMaster() {
 		ClickDeleteInsuranceMaster.click();
 		switchToPopUpAndAccept(driver);
+	}
+	public void ClickDetails1() {
+		Details1.click();
 	}
 }
