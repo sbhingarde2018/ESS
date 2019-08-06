@@ -73,7 +73,7 @@ public class Arrears extends BaseTest {
 		cc.selectArrears();
 		Thread.sleep(2000);
 		cc.selectCreateArrear();
-		cc.EnterArrearName("Salary_ArrearTest");
+		cc.EnterArrearName("Salary_ArrearMS");
 		cc.EnterArrearDescription("Salary Arrears");
 		cc.ClickManualCheckBox();
 		cc.selectArrearFrom("Mar/2020");
@@ -88,7 +88,7 @@ public class Arrears extends BaseTest {
 		//cc.selectDeleteButton();
 		
 	}
-	@Test(priority=1)
+  @Test(priority=1)
 	public void ComputationDetailsToArrear_SC_133() throws InterruptedException{
 	ComputationDetailsToArrear cc=new ComputationDetailsToArrear(driver);
 		cc.clickSalaryLink();
@@ -103,9 +103,9 @@ public class Arrears extends BaseTest {
 		//String y=cc.getMessage();
 		//Assert.assertEquals(y, "Employees Added Successfully.");
 		//Thread.sleep(4000);
-		//cc.ClickSelectAll();
-		//Thread.sleep(2000);
-		//cc.ClickSelectEmpl();
+		cc.ClickSelectAll();
+		Thread.sleep(2000);
+		cc.ClickSelectEmpl();
 		cc.ClickSave();
 		Thread.sleep(3000);
 		cc.ClickMoreLink();
@@ -122,7 +122,7 @@ public class Arrears extends BaseTest {
 		cc.clickSalaryLink();
 		cc.selectArrears();
 		cc.selectCreateArrear();
-		cc.EnterArrearName("Salary_ArrearTest1");
+		cc.EnterArrearName("Salary_ArrearLS");
 		cc.EnterArrearDescription("Salary Arrears");
 		cc.ClickManualCheckBox();
 		cc.ClickLumpsumCheckBox();
@@ -151,6 +151,8 @@ public class Arrears extends BaseTest {
 		//String y=cc.getMessage();
 		//Assert.assertEquals(y, "Employees Added Successfully.");
 		cc.exitFullscreen();
+		cc.ClickSelectAll();
+		cc.ClickSelectEmpl();
 		cc.ClickSave();
 		cc.ClickMoreLink();
 		cc.EnterBasic("200");
@@ -159,6 +161,13 @@ public class Arrears extends BaseTest {
 		cc.UpdateButton();
 		Thread.sleep(4000);
 		cc.ClickEmployee();
+		Thread.sleep(2000);
+		cc.clickSalaryLink();
+		cc.selectArrears();
+		cc.selectComputaion();
+		cc.ClickDelete();
+		Thread.sleep(2000);
+		cc.switchToPopUpAndAccept(driver);
 	}
 	@Test(priority=4) 
 	public void CheckifSalaryArrearsReportsArrearsReportredirectstoReportsmodule_SC_500() throws InterruptedException {
@@ -170,7 +179,7 @@ public class Arrears extends BaseTest {
 		cs.clickonarrearreport();
 		Thread.sleep(2000);
 		cs.selectreporttype("Arrear Salary Report");
-		cs.selectpaymonth("Nov/2019");
+		cs.selectpaymonth("Mar/2020");
 		cs.getemployees();
 		cs.resizeWindow();
 		Thread.sleep(3000);
@@ -205,11 +214,12 @@ public class Arrears extends BaseTest {
 		cc.EnterSalaryHead();
 		cc.ClickAddNewSalaryHead();
 		Thread.sleep(2000);
-		cc.EnterHeadName("Work");
-		cc.EnterShortName("W");
+		cc.EnterHeadName("WorkWork");
+		cc.EnterShortName("WW");
 		cc.ClickCreateButton();
 		String y=cc.getMessage();
 		Assert.assertEquals(y, "Salary head successfully created");
+		Thread.sleep(3000);
 		cc.ClickDelete();
 	}
 	@Test(priority=7)
@@ -1013,13 +1023,13 @@ public class Arrears extends BaseTest {
 		cc.clickSalaryLink();
 		cc.selectArrears();
 		cc.selectCreateArrear();
-		cc.EnterArrearName("Salary_ArrearTestTest");
+		cc.EnterArrearName("Arreartest1");
 		cc.EnterArrearDescription("Salary_Arrear");
 		cc.ClickManualCheckBox();
-		cc.selectArrearFrom("Aug/2019");
-		cc.selectArrearTo("Aug/2019");
+		cc.selectArrearFrom("Jun/2019");
+		cc.selectArrearTo("Jun/2019");
 		Thread.sleep(3000);
-		cc.selectPaymonth("Aug/2019");
+		cc.selectPaymonth("Jun/2019");
 		cc.ClickMergedWithSalary();
 		cc.ClickAdvancedSettingsTab();
 		//cc.ClickStatutory();
@@ -1035,13 +1045,13 @@ public class Arrears extends BaseTest {
 		cc.clickSalaryLink();
 		cc.selectArrears();
 		cc.selectCreateArrear();
-		cc.EnterArrearName("Salary_ArrearTestEdit");
+		cc.EnterArrearName("Arreartest2");
 		cc.EnterArrearDescription("Salary_Arrear");
 		cc.ClickManualCheckBox();
-		cc.selectArrearFrom("Aug/2019");
-		cc.selectArrearTo("Aug/2019");
+		cc.selectArrearFrom("Jun/2019");
+		cc.selectArrearTo("Jun/2019");
 		Thread.sleep(3000);
-		cc.selectPaymonth("Aug/2019");
+		cc.selectPaymonth("Jun/2019");
 		cc.ClickIndependentOfSalary();
 		cc.ClickCash();
 		cc.ClickAdvancedSettingsTab();
@@ -1058,13 +1068,13 @@ public class Arrears extends BaseTest {
 		cc.clickSalaryLink();
 		cc.selectArrears();
 		cc.selectCreateArrear();
-		cc.EnterArrearName("Salary_ArrearSal3");
+		cc.EnterArrearName("Arreartest3");
 		cc.EnterArrearDescription("Salary_Arrear");
 		cc.ClickManualCheckBox();
-		cc.selectArrearFrom("Aug/2019");
-		cc.selectArrearTo("Aug/2019");
+		cc.selectArrearFrom("Jun/2019");
+		cc.selectArrearTo("Jun/2019");
 		Thread.sleep(3000);
-		cc.selectPaymonth("Aug/2019");
+		cc.selectPaymonth("Jun/2019");
 		cc.ClickIndependentOfSalary();
 		cc.ClickInstruments();
 		cc.ClickAdvancedSettingsTab();
@@ -1081,13 +1091,13 @@ public class Arrears extends BaseTest {
 		cc.clickSalaryLink();
 		cc.selectArrears();
 		cc.selectCreateArrear();
-		cc.EnterArrearName("Salary_ArrearSal4");
+		cc.EnterArrearName("Arreartest4");
 		cc.EnterArrearDescription("Salary_Arrear");
 		cc.ClickManualCheckBox();
-		cc.selectArrearFrom("Aug/2019");
-		cc.selectArrearTo("Aug/2019");
+		cc.selectArrearFrom("Jun/2019");
+		cc.selectArrearTo("Jun/2019");
 		Thread.sleep(3000);
-		cc.selectPaymonth("Aug/2019");
+		cc.selectPaymonth("Jun/2019");
 		cc.ClickIndependentOfSalary();
 		cc.ClickBankAdvice();
 		cc.ClickAdvancedSettingsTab();
@@ -1104,13 +1114,13 @@ public class Arrears extends BaseTest {
 		cc.clickSalaryLink();
 		cc.selectArrears();
 		cc.selectCreateArrear();
-		cc.EnterArrearName("Salary_ArrearSal5");
+		cc.EnterArrearName("Arreartest5");
 		cc.EnterArrearDescription("Salary_Arrear");
 		cc.ClickManualCheckBox();
 		cc.ClickLumpsum();		
-		cc.selectArrearFrom("Aug/2019");
+		cc.selectArrearFrom("Jun/2019");
 		Thread.sleep(3000);
-		cc.selectPaymonth("Aug/2019");
+		cc.selectPaymonth("Jun/2019");
 		cc.ClickIndependentOfSalary();
 		cc.ClickCash();
 		cc.ClickAdvancedSettingsTab();
@@ -1127,13 +1137,13 @@ public class Arrears extends BaseTest {
 		cc.clickSalaryLink();
 		cc.selectArrears();
 		cc.selectCreateArrear();
-		cc.EnterArrearName("Salary_ArrearSal6");
+		cc.EnterArrearName("Arreartest6");
 		cc.EnterArrearDescription("Salary_Arrear");
 		cc.ClickManualCheckBox();
 		cc.ClickLumpsum();		
-		cc.selectArrearFrom("Aug/2019");
+		cc.selectArrearFrom("Jun/2019");
 		Thread.sleep(3000);
-		cc.selectPaymonth("Aug/2019");
+		cc.selectPaymonth("Jun/2019");
 		cc.ClickIndependentOfSalary();
 		cc.ClickInstruments();
 		cc.ClickAdvancedSettingsTab();
@@ -1150,13 +1160,13 @@ public class Arrears extends BaseTest {
 		cc.clickSalaryLink();
 		cc.selectArrears();
 		cc.selectCreateArrear();
-		cc.EnterArrearName("Salary_ArrearSal7");
+		cc.EnterArrearName("Arreartest7");
 		cc.EnterArrearDescription("Salary_Arrear");
 		cc.ClickManualCheckBox();
 		cc.ClickLumpsum();		
-		cc.selectArrearFrom("Aug/2019");
+		cc.selectArrearFrom("Jun/2019");
 		Thread.sleep(3000);
-		cc.selectPaymonth("Aug/2019");
+		cc.selectPaymonth("Jun/2019");
 		cc.ClickIndependentOfSalary();
 		cc.ClickBankAdvice();
 		cc.ClickAdvancedSettingsTab();
@@ -1166,13 +1176,13 @@ public class Arrears extends BaseTest {
 		Assert.assertEquals(t, "Arrear was successfully created.");
 		Thread.sleep(2000);
 	}
-	@Test(priority=45)
+  @Test(priority=45)
 	public void EditArrear_SC_546() throws InterruptedException{
 		EditArrear cc=new EditArrear(driver);
 		cc.clickSalaryLink();
 		cc.selectArrears();
 		cc.selectEditArrear();
-		cc.EnterArrearName("Salary_ArrearSal");
+		cc.EnterArrearName("Salary_ArrearSal909");
 		cc.ClickUpdateButton();
 		String t=cc.getMessage();
 		Assert.assertEquals(t, "Arrear was successfully updated.");
@@ -1195,6 +1205,9 @@ public class Arrears extends BaseTest {
 		ComputationDetailsToAnArrear cc=new ComputationDetailsToAnArrear(driver);
 		cc.clickSalaryLink();
 		cc.selectArrears();
+		Thread.sleep(3000);
+		//cc.clickPageNavigation();
+		Thread.sleep(3000);
 		cc.selectComputation();
 		Thread.sleep(3000);
 		cc.SelectAddEmployee();
@@ -1215,14 +1228,20 @@ public class Arrears extends BaseTest {
 		Thread.sleep(3000);
 		cc.clickSalaryLink();
 		cc.selectArrears();
+		Thread.sleep(3000);
+		//cc.clickPageNavigation();
+		Thread.sleep(3000);
 		cc.selectComputation();
-		cc.ClickDelete();
+		//cc.ClickDelete();
 	}
 	@Test(priority=48)  
 	public void ComputationDetailsToAnArrearSC540_SC_549() throws InterruptedException{
 		ComputationDetailsToAnArrear540 cc=new ComputationDetailsToAnArrear540(driver);
 		cc.clickSalaryLink();
 		cc.selectArrears();
+		Thread.sleep(3000);
+		//cc.clickPageNavigation();
+		Thread.sleep(3000);
 		cc.selectComputation();
 		Thread.sleep(3000);
 		cc.SelectAddEmployee();
@@ -1243,6 +1262,9 @@ public class Arrears extends BaseTest {
 		Thread.sleep(3000);
 		cc.clickSalaryLink();
 		cc.selectArrears();
+		Thread.sleep(3000);
+		//cc.clickPageNavigation();
+		Thread.sleep(3000);
 		cc.selectComputation();
 		
 	}
@@ -1251,6 +1273,9 @@ public class Arrears extends BaseTest {
 		ComputationDetailsToAnArrear541 cc=new ComputationDetailsToAnArrear541(driver);
 		cc.clickSalaryLink();
 		cc.selectArrears();
+		Thread.sleep(3000);
+		//cc.clickPageNavigation();
+		Thread.sleep(3000);
 		cc.selectComputation();
 		Thread.sleep(3000);
 		cc.SelectAddEmployee();
@@ -1271,6 +1296,9 @@ public class Arrears extends BaseTest {
 		Thread.sleep(3000);
 		cc.clickSalaryLink();
 		cc.selectArrears();
+		Thread.sleep(3000);
+		//cc.clickPageNavigation();
+		Thread.sleep(3000);
 		cc.selectComputation();
 		
 	}
@@ -1279,6 +1307,9 @@ public class Arrears extends BaseTest {
 		ComputationDetailsToAnArrear542 cc=new ComputationDetailsToAnArrear542(driver);
 		cc.clickSalaryLink();
 		cc.selectArrears();
+		Thread.sleep(3000);
+		//cc.clickPageNavigation();
+		Thread.sleep(3000);
 		cc.selectComputation();
 		Thread.sleep(3000);
 		cc.SelectAddEmployee();
@@ -1299,6 +1330,9 @@ public class Arrears extends BaseTest {
 		Thread.sleep(3000);
 		cc.clickSalaryLink();
 		cc.selectArrears();
+		Thread.sleep(3000);
+		//cc.clickPageNavigation();
+		Thread.sleep(3000);
 		cc.selectComputation();
 		
 	}
@@ -1307,6 +1341,9 @@ public class Arrears extends BaseTest {
 		ComputationDetailsToAnArrear543 cc=new ComputationDetailsToAnArrear543(driver);
 		cc.clickSalaryLink();
 		cc.selectArrears();
+		Thread.sleep(3000);
+		//cc.clickPageNavigation();
+		Thread.sleep(3000);
 		cc.selectComputation();
 		Thread.sleep(3000);
 		cc.SelectAddEmployee();
@@ -1327,6 +1364,9 @@ public class Arrears extends BaseTest {
 		Thread.sleep(3000);
 		cc.clickSalaryLink();
 		cc.selectArrears();
+		Thread.sleep(3000);
+		//cc.clickPageNavigation();
+		Thread.sleep(3000);
 		cc.selectComputation();
 		
 	}
@@ -1335,6 +1375,9 @@ public class Arrears extends BaseTest {
 		ComputationDetailsToAnArrear544 cc=new ComputationDetailsToAnArrear544(driver);
 		cc.clickSalaryLink();
 		cc.selectArrears();
+		Thread.sleep(3000);
+		//cc.clickPageNavigation();
+		Thread.sleep(3000);
 		cc.selectComputation();
 		Thread.sleep(3000);
 		cc.SelectAddEmployee();
@@ -1355,6 +1398,9 @@ public class Arrears extends BaseTest {
 		Thread.sleep(3000);
 		cc.clickSalaryLink();
 		cc.selectArrears();
+		Thread.sleep(3000);
+		//cc.clickPageNavigation();
+		Thread.sleep(3000);
 		cc.selectComputation();
 		
 	}
@@ -1363,6 +1409,9 @@ public class Arrears extends BaseTest {
 		ComputationDetailsToAnArrear545 cc=new ComputationDetailsToAnArrear545(driver);
 		cc.clickSalaryLink();
 		cc.selectArrears();
+		Thread.sleep(3000);
+		//cc.clickPageNavigation();
+		Thread.sleep(3000);
 		cc.selectComputation();
 		Thread.sleep(3000);
 		cc.SelectAddEmployee();
@@ -1383,6 +1432,9 @@ public class Arrears extends BaseTest {
 		Thread.sleep(3000);
 		cc.clickSalaryLink();
 		cc.selectArrears();
+		Thread.sleep(3000);
+		//cc.clickPageNavigation();
+		Thread.sleep(3000);
 		cc.selectComputation();
 	}
 	@Test(priority=54)  

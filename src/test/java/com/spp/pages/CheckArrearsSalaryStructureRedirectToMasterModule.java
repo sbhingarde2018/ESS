@@ -24,7 +24,7 @@ public class CheckArrearsSalaryStructureRedirectToMasterModule extends BasePage 
 	WebElement CreateButton;
 	@FindBy(xpath="//*[@id=\"main\"]/div[2]/strong")
 	WebElement SuccessfulMessage;
-	@FindBy(xpath="//*[@id='main']/div[3]/table/tbody/tr/td[contains(text(),'Structure1')]/parent::tr/td[5]/a")
+	@FindBy(xpath="//div[3]/table/tbody/tr/td[contains(text(),'Structure1')]/parent::tr/td[5]/a")
 	WebElement ClickDelete;
 	@FindBy(id="master")
 	WebElement masterlink;

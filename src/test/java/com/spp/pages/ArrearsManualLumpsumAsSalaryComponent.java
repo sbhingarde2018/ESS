@@ -38,7 +38,7 @@ public class ArrearsManualLumpsumAsSalaryComponent extends BasePage {
 	WebElement successfullMessage;
 	@FindBy(id="select_all")
 	WebElement ConsiderforCalc;
-	@FindBy(xpath="//*[@id=\"main\"]/div[3]/table/tbody/tr/td[6]/a")
+	@FindBy(xpath="//table/tbody/tr/td[contains(text(),'Salary_ArrearLS')]/parent::tr/td[6]/a/img")
 	WebElement DeleteButton;
 	public ArrearsManualLumpsumAsSalaryComponent(WebDriver driver) {
 		super(driver);

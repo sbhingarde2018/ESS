@@ -11,11 +11,11 @@ public class ComputationDetailsToAnArrear extends BasePage{
 	WebElement SalaryLink;
 	@FindBy(xpath="//*[@id=\"menu\"]/li[6]/div/div[1]/ul/li[3]/a")
 	WebElement Arrears;
-	@FindBy(xpath="//table/tbody/tr/td[contains(text(),'Salary_ArrearSal1')]/parent::tr/td[4]/a")
+	@FindBy(xpath="//table/tbody/tr/td[contains(text(),'Arreartest1')]/parent::tr/td[4]/a")
 	WebElement computation;
 	@FindBy(linkText="Add Employees")
 	WebElement AddEmployee;
-	@FindBy(xpath="//*[@id=\"bf_form\"]/div[10]/button[1]")
+	@FindBy(xpath="//*[@id=\"bf_form\"]/div/button[contains(text(),'LOAD')]")
 	WebElement Load;
 	@FindBy(xpath="//*[@id=\"show_message\"]/div/strong")
 	WebElement SuccessfullMessage;
@@ -37,6 +37,8 @@ public class ComputationDetailsToAnArrear extends BasePage{
 	WebElement NewArrear;
 	@FindBy(xpath="//tbody/tr[1]/td[6]/a")
 	WebElement Delete;
+	@FindBy(xpath="//*[@id=\"main\"]/div[3]/a[1]")
+	WebElement PageNavigation;
 	
 public ComputationDetailsToAnArrear(WebDriver driver) {
 		super(driver);
@@ -94,4 +96,8 @@ public ComputationDetailsToAnArrear(WebDriver driver) {
 		Delete.click();
 		switchToPopUpAndAccept(driver);
 	}
+	public void clickPageNavigation(){
+		PageNavigation.click();
+	}
+
 }

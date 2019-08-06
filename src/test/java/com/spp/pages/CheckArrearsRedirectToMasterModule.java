@@ -27,7 +27,7 @@ public class CheckArrearsRedirectToMasterModule extends BasePage{
 		WebElement CreateButton;
 		@FindBy(xpath="//*[@id=\"main\"]/div[1]/strong")
 		WebElement SuccessfulMessage;
-		@FindBy(xpath="//*[@id='earning_heads']/tbody/tr/td[contains(text(),'Work')]/parent::tr/td[5]/a[2]")
+		@FindBy(xpath="//*[@id='earning_heads']/tbody/tr/td[contains(text(),'WorkWork')]/parent::tr/td[5]/a[2]")
 		WebElement ClickDelete;
 		
 			

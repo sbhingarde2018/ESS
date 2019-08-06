@@ -12,7 +12,7 @@ public class EditArrear extends BasePage{
 	WebElement SalaryLink;
 	@FindBy(xpath="//*[@id=\"menu\"]/li[6]/div/div[1]/ul/li[3]/a")
 	WebElement Arrears;
-	@FindBy(xpath="//table/tbody/tr/td[contains(text(),'Salary_ArrearSal')]/parent::tr/td[5]/a")
+	@FindBy(xpath="//table/tbody/tr/td[contains(text(),'Salary_ArrearLS')]/parent::tr/td[5]/a")
 	WebElement EditArrear;
 	@FindBy(id="arrear_arrear_name")
 	WebElement ArrearName;

@@ -12,11 +12,11 @@ public class ComputationDetailsToArrear extends BasePage{
 	WebElement SalaryLink;
 	@FindBy(xpath="//*[@id=\"menu\"]/li[6]/div/div[1]/ul/li[3]/a")
 	WebElement Arrears;
-	@FindBy(xpath="//table/tbody/tr/td[contains(text(),'Salary_ArrearTest')]/parent::tr/td[4]/a")
+	@FindBy(xpath="//table/tbody/tr/td[contains(text(),'Salary_ArrearMS')]/parent::tr/td[4]/a")
 	WebElement Computaion;
 	@FindBy(id="manual_arrears")
 	WebElement AddEmployee;
-	@FindBy(xpath="//*[@id=\"bf_form\"]/div[10]/button[1]")
+	@FindBy(xpath="//*[@id=\"bf_form\"]/div/button[contains(text(),'LOAD')]")
 	WebElement Load;
 	@FindBy(xpath="//*[@id=\"show_message\"]/div/strong")
 	WebElement successfullMessage;
@@ -32,9 +32,9 @@ public class ComputationDetailsToArrear extends BasePage{
 	WebElement UpdateButton;
 	@FindBy(xpath="//div[@id='main']/section/p/a[2]")
 	WebElement Employee;
-	@FindBy(id="select_all")
+	@FindBy(xpath="//*[@id=\"select_all\"]")
 	WebElement SelectAll;
-	@FindBy(xpath="//*[@id=\"arrear_add_emp\"]/tbody/tr[9]/td[1]")
+	@FindBy(xpath="//tbody/tr[2]/td[1]/input")
 	WebElement SelectEmp;
 	
 	public ComputationDetailsToArrear(WebDriver driver) {
