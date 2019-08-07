@@ -13,21 +13,20 @@ public class DeleteSiReceiptInAdvanceDetail extends BasePage{
 	WebElement AdvanceDetails;
 	@FindBy(xpath="//*[@id=\"add_employees\"]")
 	WebElement AddEmployee;
-	@FindBy(xpath="//*[@id=\"bf_form\"]/div[10]/button[1]")
+	@FindBy(xpath="//*[@id=\"bf_form\"]/div/button[contains(text(),'LOAD')]")
 	WebElement Load;
 	@FindBy(id="filter")
 	WebElement MultiAllotment;
-	@FindBy(xpath="//*[@id=\"si_detail_employees\"]/tbody/tr[1]/td[6]/a")
+	@FindBy(xpath="//tbody/tr[5]/td[6]/a")
 	WebElement View;
-	@FindBy(xpath="//div[2]/table/tbody/tr/td[contains(text(),'01 July 2019')]/parent::tr/td[7]/a")
+	@FindBy(xpath="//div[2]/table/tbody/tr/td[contains(text(),'August')]/parent::tr/td[7]/a")
 	WebElement Detail;
 	@FindBy(xpath="//*[@id=\"main\"]/div/div[2]/nav/ul/li[3]/a")
 	WebElement ReceiptDetail;
-	@FindBy(xpath="//table/tbody/tr[1]/td[contains(text(),'01 July 2019')]/parent::tr/td[5]/a")
+	@FindBy(xpath="//table/tbody/tr[1]/td[contains(text(),'August')]/parent::tr/td[5]/a")
 	WebElement Delete;
 	@FindBy(id="popup_ok")
 	WebElement YesButton;
-	
 	@FindBy(xpath="//*[@id=\"show_message\"]/div/strong")
 	WebElement SuccessfulMessage;
 	

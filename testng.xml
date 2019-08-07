@@ -4,12 +4,12 @@
   <test name="Test">
     <classes>
     
-   <class name="com.spp.scripts.Arrears"/>
- <!--  <class name="com.spp.scripts.LeaveDefinitions"/>  -->
+   <!--  <class name="com.spp.scripts.Arrears"/>
+ <class name="com.spp.scripts.LeaveDefinitions"/>  -->
  <!--	 <class name="com.spp.scripts.InsuranceDetail"/> --> 
  	<!--   <class name="com.spp.scripts.Paymonths"/>
      <class name="com.spp.scripts.AdditionalSalary"/> -->
-     <!-- <class name="com.spp.scripts.AdvanceDetails"/>-->
+    <class name="com.spp.scripts.AdvanceDetails"/>
 <!-- <class name="com.spp.scripts.AttendanceIntegration"/>
  <class name="com.spp.scripts.ReimbursementAllotment"/>
   <class name="com.spp.scripts.LeaveAllotAvailDateSettings"/>

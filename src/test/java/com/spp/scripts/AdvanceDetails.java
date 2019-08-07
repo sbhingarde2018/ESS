@@ -3,46 +3,46 @@ package com.spp.scripts;
 import org.testng.annotations.Test;
 import com.spp.common.BaseTest;
 import com.spp.generics.Utility;
-//import com.spp.pages.AddNewAdvanceMaster;
+import com.spp.pages.AddNewAdvanceMaster;
 //import com.spp.pages.CheckAdvanceDetailsRedirectsToEmployee;
-//import com.spp.pages.CheckAdvanceDetailsRedirectsToMaster;
-//import com.spp.pages.CheckAdvanceDetailsRedirectsToReports;
+import com.spp.pages.CheckAdvanceDetailsRedirectsToMaster;
+import com.spp.pages.CheckAdvanceDetailsRedirectsToReports;
 //import com.spp.pages.CheckAdvanceMasterCreatedWithoutClubbedInSalary;
-//import com.spp.pages.CheckifSalaryAdvanceGeneralLinksEmployeeMasterredirectstoEmployee;
+import com.spp.pages.CheckifSalaryAdvanceGeneralLinksEmployeeMasterredirectstoEmployee;
 import com.spp.pages.CreateADInterestamountNOIHigher10Rupee;
-//import com.spp.pages.CreateADInterestamountNOIHigher10RupeeNoRecovery;
+import com.spp.pages.CreateADInterestamountNOIHigher10RupeeNoRecovery;
 import com.spp.pages.CreateADInterestamountNOIHigher1Rupee;
-//import com.spp.pages.CreateADInterestamountNOIHigher1RupeeNoRecovery;
+import com.spp.pages.CreateADInterestamountNOIHigher1RupeeNoRecovery;
 import com.spp.pages.CreateADInterestamountNOIHigher50Rupee;
-//import com.spp.pages.CreateADInterestamountNOIHigher50RupeeNoRecovery;
-//import com.spp.pages.CreateADNoOfInstallmentsHigher10Rupee;
-//import com.spp.pages.CreateADNoOfInstallmentsHigher10RupeeNoRecovery;
-//import com.spp.pages.CreateADNoOfInstallmentsHigher1RupeeNoRecovery;
-//import com.spp.pages.CreateADNoOfInstallmentsHigher50Rupee;
-//import com.spp.pages.CreateADNoOfInstallmentsHigher50RupeeNoRecovery;
-//import com.spp.pages.CreateAdvanceAmountLumpsum;
-//import com.spp.pages.CreateAdvanceDetailLumpsumNoRecovery;
-//import com.spp.pages.CreateSIReceiptInAdvanceDetail;
-//import com.spp.pages.DeleteAdvanceDetail;
-//import com.spp.pages.DeleteEMIDetailsInAdvanceDetail;
-//import com.spp.pages.DeleteSiReceiptInAdvanceDetail;
-//import com.spp.pages.EditEMIDetailsInAdvanceDetail;
-//import com.spp.pages.SalaryAdvanceDetailMultiAllotment;
-//import com.spp.pages.SalaryAdvanceDetailSingleAllotment;
+import com.spp.pages.CreateADInterestamountNOIHigher50RupeeNoRecovery;
+import com.spp.pages.CreateADNoOfInstallmentsHigher10Rupee;
+import com.spp.pages.CreateADNoOfInstallmentsHigher10RupeeNoRecovery;
+import com.spp.pages.CreateADNoOfInstallmentsHigher1RupeeNoRecovery;
+import com.spp.pages.CreateADNoOfInstallmentsHigher50Rupee;
+import com.spp.pages.CreateADNoOfInstallmentsHigher50RupeeNoRecovery;
+import com.spp.pages.CreateAdvanceAmountLumpsum;
+import com.spp.pages.CreateAdvanceDetailLumpsumNoRecovery;
+import com.spp.pages.CreateSIReceiptInAdvanceDetail;
+import com.spp.pages.DeleteAdvanceDetail;
+import com.spp.pages.DeleteEMIDetailsInAdvanceDetail;
+import com.spp.pages.DeleteSiReceiptInAdvanceDetail;
+import com.spp.pages.EditEMIDetailsInAdvanceDetail;
+import com.spp.pages.SalaryAdvanceDetailMultiAllotment;
+import com.spp.pages.SalaryAdvanceDetailSingleAllotment;
 //import com.spp.pages.UpdateAdvanceMaster;
-//import com.spp.pages.UpdateSiReceiptInAdvanceDetail;
+import com.spp.pages.UpdateSiReceiptInAdvanceDetail;
 import junit.framework.Assert;
 
 
 public class AdvanceDetails extends BaseTest {
 
-	/*@Test(priority=0)
+	@Test(priority=0)
 	public void AddNewAdvanceMaster_SC_295() throws Exception{
 		AddNewAdvanceMaster ld=new AddNewAdvanceMaster(driver);
 		ld.clickMastserLink();
 		ld.clickAdvanceMaster();
 		ld.clickAddNewAdvanceMaster();
-		ld.clickAdvanceName("Default2");
+		ld.clickAdvanceName("Default5");
 		Thread.sleep(2000);
 		ld.ClickMaxAmount("15000");
 		ld.enterinterestrate("15");
@@ -73,7 +73,7 @@ public class AdvanceDetails extends BaseTest {
 		 am.clickAmount("500");
 		 am.clickNoOfInstallments();
 		// am.clickNoInstallment("1");
-		 am.clickRecoverFrom("May/2013");
+		 am.clickRecoverFrom("Aug/2019");
 		 am.clickCreateButton();
 		 String d=am.getMessage();
 		 Assert.assertEquals(d, "Advance successfully created");
@@ -93,15 +93,15 @@ public class AdvanceDetails extends BaseTest {
 		 Thread.sleep(3000);
 		 am.exitFullscreen();
 		 am.clickMultiAllotment();
-//		 am.clickView();
-//		 am.AddNewAdvanceDetails();
+		 //am.clickView();
+		 //am.AddNewAdvanceDetails();
 		 am.clickAdvanceName("Default1");
 		 am.clickSAdvanceDate("01 July 2019");
 		 Thread.sleep(2000);
 		 am.clickAmount("500");
 		//am.clickNoOfInstallments();
-	//	am.clickInstallmentAmount("100");
-		 am.clickRecoverFrom("Apr/2013");
+		//am.clickInstallmentAmount("100");
+		 am.clickRecoverFrom("Aug/2019");
 		 am.clickCreateButton();
 		 am.clickProceed();
 		 String d=am.getMessage();
@@ -122,7 +122,7 @@ public class AdvanceDetails extends BaseTest {
 		 am.clickView();
 		 am.ClickDetail();
 		 am.ClickReceiptDetail();
-		 am.clickDate("01 July 2019");
+		 am.clickDate("01 August 2019");
 		 am.clickAmount("500");
 		 am.clickconfirmButton();
 		 am.clickYesButton();
@@ -150,7 +150,8 @@ public class AdvanceDetails extends BaseTest {
 		 Thread.sleep(5000);
 		 am.clickUpdateButton();
 		 am.clickYesButton();
-		 //am.clickYesButton();
+		 Thread.sleep(2000);
+		 am.clickYesButton();
 		 String s=am.getMessage();
 		 Assert.assertEquals(s, "Receipt Successfully Updated.");
 }
@@ -173,31 +174,8 @@ public class AdvanceDetails extends BaseTest {
 		 am.clickYesButton();
 		 String s=am.getMessage();
 		 Assert.assertEquals(s, "Receipt Successfully Deleted");
-}
-	
-	@Test(priority=6)
-	public void EditEMIDetailsInAdvanceDetail_SC_577() throws Exception{
-	 EditEMIDetailsInAdvanceDetail am=new EditEMIDetailsInAdvanceDetail(driver);
-	 am.navigatesalary();
-	 am.clickAdvanceDetails();
-	 am.clickAddEmployee();
-	 am.resizeWindow();
-	 Thread.sleep(3000);
-	 am.clickLoad();
-	 Thread.sleep(3000);
-	 am.exitFullscreen();
-	 am.clickView();
-	 am.ClickDetail();
-	 am.clickEdit();
-	 Thread.sleep(3000);
-	 am.clickAmount("600");
-	 Thread.sleep(5000);
-	 am.clickUpdateButton();
-	 am.clickYesButton();
-	// am.clickYesButton();
-	 String s=am.getMessage();
-	 Assert.assertEquals(s, "EMI Details Successfully updated.");
-}
+
+	 }
 	
 	@Test(priority=7)
 	public void CheckAdvanceDetailsRedirectsToReports_SC_560() throws Exception{
@@ -313,8 +291,33 @@ public class AdvanceDetails extends BaseTest {
 	 //am.clickAdvanceMaster();
 	 //am.deleteadvancemaster();
 	 }
-	 
 
+	@Test(priority=6)
+	public void EditEMIDetailsInAdvanceDetail_SC_577() throws Exception{
+		EditEMIDetailsInAdvanceDetail am=new EditEMIDetailsInAdvanceDetail(driver);
+		am.navigatesalary();
+		am.clickAdvanceDetails();
+		am.clickAddEmployee();
+		am.resizeWindow();
+		Thread.sleep(3000);
+		am.clickLoad();
+		Thread.sleep(3000);
+		am.exitFullscreen();
+		am.clickView();
+		am.ClickDetail();
+		am.ClickEmiDetail();
+		Thread.sleep(2000);
+		am.clickEdit();
+		Thread.sleep(3000);
+		am.clickAmount("600");
+		Thread.sleep(5000);
+		am.clickUpdateButton();
+		am.clickYesButton();
+		//am.clickYesButton();
+		String s=am.getMessage();
+		Assert.assertEquals(s, "EMI Details Successfully updated.");
+	 
+	}
  	 @Test(priority=11)
 	public void CreateAdvanceAmountLumpsum_SC_578() throws Exception{
 	 CreateAdvanceAmountLumpsum am=new CreateAdvanceAmountLumpsum(driver);
@@ -394,8 +397,8 @@ public class AdvanceDetails extends BaseTest {
 		 Thread.sleep(4000);
 		 am.clickDeleteButton();
 		 	 
-}*/
-	 /* @Test(priority=14)
+}
+	  @Test(priority=14)
 		public void CreateADNoOfInstallmentsHigher1RupeeNoRecovery_SC_581() throws Exception{
 		 CreateADNoOfInstallmentsHigher1RupeeNoRecovery am=new CreateADNoOfInstallmentsHigher1RupeeNoRecovery(driver);
 		 am.navigatesalary();
@@ -622,9 +625,9 @@ public class AdvanceDetails extends BaseTest {
 		 String d=am.getMessage();
 		 Assert.assertEquals(d, "Advance successfully created");
 		 Thread.sleep(4000);
-		 am.clickDeleteButton();
+		 //am.clickDeleteButton();
 	 
-	 }*/
+	 }
 	 @Test(priority=22)
 		public void CreateADInterestamountNOIHigher1Rupee_SC_589() throws Exception{
 		 CreateADInterestamountNOIHigher1Rupee am=new CreateADInterestamountNOIHigher1Rupee(driver);
