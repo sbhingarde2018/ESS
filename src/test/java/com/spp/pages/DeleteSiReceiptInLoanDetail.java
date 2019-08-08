@@ -16,17 +16,17 @@ public class DeleteSiReceiptInLoanDetail extends BasePage{
 	WebElement LoanDetails;
 	@FindBy(xpath="//*[@id=\"add_employees\"]")
 	WebElement AddEmployee;
-	@FindBy(xpath="//*[@id=\"bf_form\"]/div[10]/button[1]")
+	@FindBy(xpath="//*[@id=\"bf_form\"]/div/button[contains(text(),'LOAD')]")
 	WebElement Load;
 	@FindBy(id="filter")
 	WebElement MultiAllotment;
-	@FindBy(xpath="//*[@id=\"si_detail_employees\"]/tbody/tr[1]/td[6]/a")
+	@FindBy(xpath="//*[@id=\"si_detail_employees\"]/tbody/tr[2]/td[6]/a")
 	WebElement View;
 	@FindBy(xpath="//*[@id=\"standing_detail_list\"]/div[2]/table/tbody/tr[1]/td[7]/a")
 	WebElement Detail;
 	@FindBy(xpath="//*[@id=\"main\"]/div/div[2]/nav/ul/li[3]/a/span")
 	WebElement ReceiptDetail;
-	@FindBy(xpath="//table/tbody/tr/td[contains(text(),'01 July 2019')]/parent::tr[1]/td[5]/a")
+	@FindBy(xpath="//table/tbody/tr/td[contains(text(),'July')]/parent::tr[1]/td[5]/a")
 	WebElement Delete;
 	@FindBy(id="popup_ok")
 	WebElement YesButton;

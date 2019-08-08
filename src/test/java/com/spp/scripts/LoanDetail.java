@@ -35,7 +35,7 @@ import junit.framework.Assert;
 
 public class LoanDetail extends BaseTest{
 
-	/*@Test(priority=0)
+	@Test(priority=0)
 	public void AddNewLoanMaster_SC_297() throws Exception{
 		AddNewLoanMaster lm=new AddNewLoanMaster(driver);
 		Thread.sleep(5000);
@@ -144,8 +144,8 @@ public class LoanDetail extends BaseTest{
 		 am.clickYesButton();
 		 String s=am.getMessage();
 		 Assert.assertEquals(s, "Receipt Successfully Updated.");
-}*/
-	/* @Test(priority=5)
+}
+	 @Test(priority=5)
 		public void DeleteSiReceiptInLoanDetail_SC_401() throws Exception{
 		 DeleteSiReceiptInLoanDetail am=new DeleteSiReceiptInLoanDetail(driver);
 		 am.navigatesalary();
@@ -365,9 +365,9 @@ public class LoanDetail extends BaseTest{
 			String s=si.getMessage();
 			Assert.assertEquals(s, "Loan successfully created");
 			si.clickDeleteButton();
-		}*/
+		}
 		
-/*	@Test(priority=13)
+	@Test(priority=13)
 	public void CreateLoanAmountInterestAmountNoOfInstallmentsHigher1rupeeNoRecovery_SC_604() throws Exception{
 	CreateLoanAmountInterestAmountNoOfInstallmentsHigher1rupeeNoRecovery si=new CreateLoanAmountInterestAmountNoOfInstallmentsHigher1rupeeNoRecovery(driver);
 	 si.clickonsalary();
@@ -581,7 +581,7 @@ public class LoanDetail extends BaseTest{
 		// Assert.assertEquals(s, "Employees Successfully Loaded.");
 		// am.clickEmployee();
 		 am.clickGenerateReport();
-	 } */
+	 } 
 	 
 	 @Test(priority=21)
 		public void CheckLoanDetailsRedirectsToMaster_SC_611() throws Exception{
@@ -609,14 +609,14 @@ public class LoanDetail extends BaseTest{
 			Thread.sleep(2000);
 			si.clickonemployeemaster();
 			si.addnewemployee();
-			si.enterEmployeeid("AMN123");
-			si.enterEmployeeref("AM321");
+			si.enterEmployeeid("AMN1234");
+			si.enterEmployeeref("AM3211");
 			si.enterEmployeename("Amaan");
 			si.enterEmployeefather("Harish");
 			si.selectDateofBirth("06 June 1995");
 			si.selectGender("Male");
 			si.selectMaritalStatus("Single");
-			si.selectDateofJoining("06 July 2018");
+			si.selectDateofJoining("06 July 2014");
 			Thread.sleep(500);
 			si.clickPresentAddress();
 			si.selectState("Maharashtra");
@@ -637,7 +637,7 @@ public class LoanDetail extends BaseTest{
 	 		si.clickLoad();
 	 		Thread.sleep(3000);
 	 		si.exitFullscreen();
-	 		si.ClickPage();
+	 		//si.ClickPage();
 	 		Thread.sleep(2000);
 	 		si.deleteemployee();
 	 		
@@ -661,7 +661,7 @@ public class LoanDetail extends BaseTest{
 		 am.clickAmount("600");
 		 am.clickUpdateButton();
 		 am.clickYesButton();
-		 am.clickYesButton();
+		// am.clickYesButton();
 		 String s=am.getMessage();
 		 Assert.assertEquals(s, "EMI Details Successfully updated.");
 	 }

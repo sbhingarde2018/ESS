@@ -14,7 +14,7 @@ public class UpdateSiReceiptInLoanDetail extends BasePage{
 	WebElement LoanDetails;
 	@FindBy(xpath="//*[@id=\"add_employees\"]")
 	WebElement AddEmployee;
-	@FindBy(xpath="//*[@id=\"bf_form\"]/div[10]/button[1]")
+	@FindBy(xpath="//*[@id=\"bf_form\"]/div/button[contains(text(),'LOAD')]")
 	WebElement Load;
 	@FindBy(id="filter")
 	WebElement MultiAllotment;

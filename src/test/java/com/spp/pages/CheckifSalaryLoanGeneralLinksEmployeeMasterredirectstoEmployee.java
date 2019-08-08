@@ -62,9 +62,9 @@ public class CheckifSalaryLoanGeneralLinksEmployeeMasterredirectstoEmployee exte
 	WebElement SelectEmployeeDetails;
 	@FindBy(id="filter_head")
 	WebElement ClickOnFilterHead;
-	@FindBy(xpath="//*[@id=\"bf_form\"]/div[10]/button[1]")
+	@FindBy(xpath="//*[@id=\"bf_form\"]/div/button[contains(text(),'LOAD')]")
 	WebElement Load;
-	@FindBy(xpath="//*[@id=\"employees_dtable\"]/tbody/tr/td[contains(text(),'Amaan')]/parent::tr/td[6]/a[2]")
+	@FindBy(xpath="//tbody/tr/td[contains(text(),'Amaan')]/parent::tr/td[6]/a[2]")
 	WebElement DeleteEmployee;
 	@FindBy(id="emp_detail")
 	WebElement ClickOnEmployee;
