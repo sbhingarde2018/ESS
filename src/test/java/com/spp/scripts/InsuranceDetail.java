@@ -21,7 +21,7 @@ import com.spp.pages.SalaryInsuranceReportsStandingInsDetailReportredirectstoRep
 public class InsuranceDetail extends BaseTest{
 
 	
-	/*@Test(priority=0)
+	@Test(priority=0)
 	public void AddNewInsuranceMaster_SC_302() throws Exception{
 		AddNewInsuranceMaster pi=new AddNewInsuranceMaster(driver);
 		pi.navigateMaster();	
@@ -209,7 +209,7 @@ public class InsuranceDetail extends BaseTest{
  		si.exitFullscreen();
  		si.deleteemployee();
 		
-	}*/
+	}
 	@Test(priority=8)
 	public void CreateInsurancePremiumPaymentQuarterly_SC_618() throws Exception{
 		CreateInsurancePremiumPaymentQuarterly pi=new CreateInsurancePremiumPaymentQuarterly(driver);
