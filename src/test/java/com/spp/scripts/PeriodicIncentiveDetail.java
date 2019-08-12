@@ -3,34 +3,34 @@ package com.spp.scripts;
 import org.testng.annotations.Test;
 import com.spp.common.BaseTest;
 //import com.spp.generics.Utility;
-import com.spp.pages.AddNewPeriodicIncentiveDetailPremiumPaymentHalfYearly;
-import com.spp.pages.AddNewPeriodicIncentiveDetailPremiumPaymentYearly;
-import com.spp.pages.AddNewPeriodicIncentiveDetailStatutoryDeductionPTYearly;
-import com.spp.pages.AddNewPeriodicIncentiveDetailStatutoryDeductionYearly;
-import com.spp.pages.AddNewPeriodicIncentiveESIMonthly;
-import com.spp.pages.AddNewPeriodicIncentiveESIQuarterly;
-import com.spp.pages.AddNewPeriodicIncentivePFMonthly;
-import com.spp.pages.AddNewPeriodicIncentivePFPTESIHalfYearly;
-import com.spp.pages.AddNewPeriodicIncentivePFPTESIMonthly;
-import com.spp.pages.AddNewPeriodicIncentivePFPTESIQuarterly;
-import com.spp.pages.AddNewPeriodicIncentivePFPTESIYearly;
-import com.spp.pages.AddNewPeriodicIncentivePFQuarterly;
-import com.spp.pages.AddNewPeriodicIncentivePTMonthly;
-import com.spp.pages.AddNewPeriodicIncentivePTQuarterly;
-import com.spp.pages.AddNewPeriodicIncentiveStatutoryDeductionHalfYearly;
+//import com.spp.pages.AddNewPeriodicIncentiveDetailPremiumPaymentHalfYearly;
+//import com.spp.pages.AddNewPeriodicIncentiveDetailPremiumPaymentYearly;
+//import com.spp.pages.AddNewPeriodicIncentiveDetailStatutoryDeductionPTYearly;
+//import com.spp.pages.AddNewPeriodicIncentiveDetailStatutoryDeductionYearly;
+//import com.spp.pages.AddNewPeriodicIncentiveESIMonthly;
+//import com.spp.pages.AddNewPeriodicIncentiveESIQuarterly;
+//import com.spp.pages.AddNewPeriodicIncentivePFMonthly;
+//import com.spp.pages.AddNewPeriodicIncentivePFPTESIHalfYearly;
+//import com.spp.pages.AddNewPeriodicIncentivePFPTESIMonthly;
+//import com.spp.pages.AddNewPeriodicIncentivePFPTESIQuarterly;
+//import com.spp.pages.AddNewPeriodicIncentivePFPTESIYearly;
+//import com.spp.pages.AddNewPeriodicIncentivePFQuarterly;
+//import com.spp.pages.AddNewPeriodicIncentivePTMonthly;
+//import com.spp.pages.AddNewPeriodicIncentivePTQuarterly;
+//import com.spp.pages.AddNewPeriodicIncentiveStatutoryDeductionHalfYearly;
 //import com.spp.pages.CheckLoanDetailsRedirectsToMaster;
-import com.spp.pages.CheckPeriodicIncentiveRedirectsToMaster;
+//import com.spp.pages.CheckPeriodicIncentiveRedirectsToMaster;
 //import com.spp.pages.CheckifSalaryLoanGeneralLinksEmployeeMasterredirectstoEmployee;
-import com.spp.pages.CheckifSalaryPerodicIncentiveGeneralLinksEmployeeMasterredirectstoEmployee;
+//import com.spp.pages.CheckifSalaryPerodicIncentiveGeneralLinksEmployeeMasterredirectstoEmployee;
 //import com.spp.pages.CreatePerodicIncMstrwithoutClubbInSalHead;
-import com.spp.pages.DeleteEMIDetailInPeriodicIncentive;
+//import com.spp.pages.DeleteEMIDetailInPeriodicIncentive;
 //import com.spp.pages.DeletePeriodicIncentiveDetail;
 //import com.spp.pages.EditEMIDetailInPeriodicIncentive;
-import com.spp.pages.GeneratePeriodicIncentiveDetailReport;
+//import com.spp.pages.GeneratePeriodicIncentiveDetailReport;
 //import com.spp.pages.GroupInsuranceDetailMultiAllotment;
 //import com.spp.pages.GroupInsuranceDetailSingleAllotment;
-import com.spp.pages.PeriodicIncentiveDetailInSingleAllotment;
-import com.spp.pages.PeriodicIncentiveDetailMultiAllotment;
+//import com.spp.pages.PeriodicIncentiveDetailInSingleAllotment;
+//import com.spp.pages.PeriodicIncentiveDetailMultiAllotment;
 
 import junit.framework.Assert;
 
@@ -563,7 +563,7 @@ public class PeriodicIncentiveDetail extends BaseTest{
 	  // pi.clickDeleteButton();
 	}*/
 	
-	@Test(priority=21)
+/*	@Test(priority=21)
 	public void AddNewPeriodicIncentiveStatutoryDeductionPFHalfYearly_SC_629() throws Exception{
 		AddNewPeriodicIncentiveStatutoryDeductionHalfYearly pi=new AddNewPeriodicIncentiveStatutoryDeductionHalfYearly(driver);
 		pi.navigatesalary();
@@ -746,5 +746,5 @@ public class PeriodicIncentiveDetail extends BaseTest{
 	   //pi.clickPeriodicIncentiveMaster();
 	   //pi.clickdeletemaster();
 	   
-	}
+	}*/
 }
