@@ -4,18 +4,18 @@
   <test name="Test">
     <classes>
     
-   <!--  <class name="com.spp.scripts.Arrears"/>
- <class name="com.spp.scripts.LeaveDefinitions"/>  -->
- <!--	 <class name="com.spp.scripts.InsuranceDetail"/> --> 
- 	<!--   <class name="com.spp.scripts.Paymonths"/>
-     <class name="com.spp.scripts.AdditionalSalary"/> -->
-    <class name="com.spp.scripts.ExGratia"/>
-<!-- <class name="com.spp.scripts.AttendanceIntegration"/>
- <class name="com.spp.scripts.ReimbursementAllotment"/>
-  <class name="com.spp.scripts.LeaveAllotAvailDateSettings"/>
-  <class name="com.spp.scripts.SetLeaveOpeningBalance"/>
-  <class name="com.spp.scripts.ManualLeaveAllotmentscript"/>
-  <class name="com.spp.scripts.ReportingAuthority"/> -->
+    <!--  <class name="com.spp.scripts.Paymonths"/>-->
+ 	  <class name="com.spp.scripts.AdditionalSalary"/>
+ 	<!-- <class name="com.spp.scripts.Arrears"/> -->
+ 	<!--<class name="com.spp.scripts.ReimbursementClaim"/>-->
+     <class name="com.spp.scripts.AdvanceDetails"/> 
+    <class name="com.spp.scripts.LoanDetail"/>
+	<class name="com.spp.scripts.InsuranceDetail"/>
+ 	<class name="com.spp.scripts.GroupInsuranceDetail"/>
+ 	<class name="com.spp.scripts.PeriodicIncentiveDetail"/>
+ 	<class name="com.spp.scripts.Bonus"/>
+  	<class name="com.spp.scripts.ExGratia"/>
+ 	<!--<class name="com.spp.scripts.FullandFinalSettlement"/>-->
   
  <!-- <class name="com.spp.scripts.Form16"/> --> 
   	<!-- <class name="com.spp.scripts.TDSReports"/> -->

@@ -22,13 +22,13 @@ public class DeleteAdditionalSalaryEntryDeduction extends BasePage{
 	WebElement Allot;
 	@FindBy(xpath="//tbody/tr[1]/td[5]/a")
 	WebElement Delete;
-	@FindBy(xpath="//*[@id=\"show_message\"]/div/strong")
+	@FindBy(xpath="//strong[contains(text(),'Additional Salary Entry is successfully deleted')]")
 	WebElement successfullMessage;
 	@FindBy(xpath="//*[@id=\"main\"]/div[3]/span/a")
 	WebElement AddEmployees;
 	@FindBy(id="filter_head")
 	WebElement AdvanceFilter;
-	@FindBy(xpath="//*[@id=\"bf_form\"]/div[9]/button[1]")
+	@FindBy(xpath="//*[@id=\"bf_form\"]/div/button[contains(text(),'LOAD')]")
 	WebElement Load;
 	@FindBy(id="select_all_employee")
 	WebElement SelectAllBox;
@@ -36,7 +36,7 @@ public class DeleteAdditionalSalaryEntryDeduction extends BasePage{
 	WebElement EmployeeBox;
 	@FindBy(id="amount")
 	WebElement Amount;
-	@FindBy(xpath="//*[@id=\"addn_sal_form\"]/div[7]/div/input")
+	@FindBy(xpath="//input[@name='commit']")
 	WebElement AllotButton;
 
 	public DeleteAdditionalSalaryEntryDeduction(WebDriver driver) {

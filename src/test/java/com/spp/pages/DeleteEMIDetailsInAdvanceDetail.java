@@ -18,18 +18,22 @@ public class DeleteEMIDetailsInAdvanceDetail extends BasePage{
 	WebElement Load;
 	@FindBy(id="filter")
 	WebElement MultiAllotment;
-	@FindBy(xpath="//*[@id=\"si_detail_employees\"]/tbody/tr[6]/td[6]/a")
+	@FindBy(xpath="//tbody/tr[10]/td[6]/a")
 	WebElement View;
-	@FindBy(xpath="//div[2]/table/tbody/tr/td[contains(text(),'01 July 2019')]/parent::tr/td[7]/a")
+	@FindBy(xpath="//div[2]/table/tbody/tr/td[7]/a")
 	WebElement Detail;
-	@FindBy(xpath="//table/tbody/tr[1]/td[5]/a")
+	@FindBy(xpath="//table/tbody/tr[1]/td[contains(text(),'Aug/2019')]/parent::tr/td[5]/a")
 	WebElement Delete;
 	@FindBy(id="popup_ok")
 	WebElement YesButton;
 	@FindBy(xpath="//*[@id=\"show_message\"]/div/strong")
 	WebElement SuccessfulMessage;
-	@FindBy(xpath="//*[@id=\"main\"]/div/div[2]/nav/ul/li[2]/a/span")
+	@FindBy(xpath="//span[contains(text(),'EMI details')]")
 	WebElement EmiDetils;
+	@FindBy(xpath="//a[contains(text(),'Reya(TATA643666)')]")
+	WebElement GoToAdvance;
+	@FindBy(xpath="//div[2]/table/tbody/tr/td[8]/a")
+	WebElement DeleteAdvance;
 	
 	public DeleteEMIDetailsInAdvanceDetail(WebDriver driver){
 		super(driver);
@@ -62,13 +66,21 @@ public class DeleteEMIDetailsInAdvanceDetail extends BasePage{
 		Delete.click();
 	}
 	public void clickYesButton() throws Exception{
-		YesButton.click();
-		}
+		boolean popupvisible=isVisible(YesButton);
+		if (popupvisible)
+		{
+			YesButton.click();}
+			}
 	public String getMessage() {
 		return SuccessfulMessage.getText();
 	}
 	public void clickEmiDetils() throws Exception{
 		EmiDetils.click();
 		}
-
+	public void ClickGoToAdvance() throws Exception{
+		GoToAdvance.click();
+	}
+	public void ClickDeleteAdvance() throws Exception{
+		DeleteAdvance.click();
+	}
 }

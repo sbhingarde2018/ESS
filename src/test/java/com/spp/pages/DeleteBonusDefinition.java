@@ -12,7 +12,7 @@ public class DeleteBonusDefinition extends BasePage{
 	WebElement Salary;
 	@FindBy(xpath="//*[@id=\"menu\"]/li[6]/div/div[1]/ul/li[11]/a")
 	WebElement Bonus;
-	@FindBy(xpath="//*[@id=\"bonus_or_exgratia\"]/div/table/tbody/tr/td[4]/a")
+	@FindBy(xpath="//div/table/tbody/tr/td[contains(text(),'Christmas')]/parent::tr/td[4]/a/img")
 	WebElement ClickOnDelete;
 	@FindBy(xpath="//strong[text()='Bonus successfully deleted']")
 	WebElement successfullmessage;

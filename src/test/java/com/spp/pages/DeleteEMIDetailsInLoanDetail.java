@@ -23,9 +23,9 @@ public class DeleteEMIDetailsInLoanDetail extends BasePage{
 	WebElement Load;
 //	@FindBy(id="filter")
 //	WebElement MultiAllotment;
-	@FindBy(xpath="//*[@id=\"si_detail_employees\"]/tbody/tr[3]/td[6]/a")
+	@FindBy(xpath="//tbody/tr/td[contains(text(),'Reya')]/parent::tr/td[6]/a")
 	WebElement View;
-	@FindBy(xpath="//*[@id=\"standing_detail_list\"]/div[2]/table/tbody/tr[1]/td[7]/a")
+	@FindBy(xpath="//div[2]/table/tbody/tr/td[7]/a")
 	WebElement Detail;
 	@FindBy(xpath="//table/tbody/tr[1]/td[5]/a")
 	WebElement Delete;
@@ -33,9 +33,13 @@ public class DeleteEMIDetailsInLoanDetail extends BasePage{
 	WebElement YesButton;
 	@FindBy(xpath="//*[@id=\"show_message\"]/div/strong")
 	WebElement SuccessfulMessage;
-	@FindBy(xpath="//*[@id=\"main\"]/div/div[2]/nav/ul/li[2]/a")
+	@FindBy(xpath="//span[contains(text(),'EMI details')]")
 	WebElement EmiDetail;
-
+	@FindBy(xpath="//a[contains(text(),'Reya(TATA643666)')]")
+	WebElement NavigateLoan;
+	@FindBy(xpath="//div[2]/table/tbody/tr/td[8]/a")
+	WebElement DeleteLoan;
+	
 	public void navigatesalary() throws Exception{
 		salarylink.click();
 	}
@@ -70,5 +74,10 @@ public class DeleteEMIDetailsInLoanDetail extends BasePage{
 	public void ClickEmiDetail() throws Exception{
 		EmiDetail.click();
 	}
-
+	public void NavigateLoan() throws Exception{
+		NavigateLoan.click();
+	}
+	public void DeleteLoan() throws Exception{
+		DeleteLoan.click();
+	}
 }

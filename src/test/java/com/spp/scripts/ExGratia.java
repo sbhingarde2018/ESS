@@ -60,5 +60,10 @@ public class ExGratia extends BaseTest {
 		cc.switchToPopUpAndAccept(driver);
 		String i=cc.getMessage();
 		Assert.assertEquals(i, "Pateti Computation deleted");
+		cc.ClickAddEmp();
+		cc.resizeWindow();
+		Thread.sleep(3000);
+		cc.ClickLoad();
+		Thread.sleep(3000);
 	}
 }

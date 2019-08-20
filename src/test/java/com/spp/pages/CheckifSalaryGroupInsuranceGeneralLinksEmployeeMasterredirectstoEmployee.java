@@ -11,11 +11,11 @@ public class CheckifSalaryGroupInsuranceGeneralLinksEmployeeMasterredirectstoEmp
 		
 		@FindBy(id="salary")
 		WebElement ClickOnSalary;
-		@FindBy(xpath="//a[text()='Group Insurance Detail']")
+		@FindBy(xpath="//a[contains(text(),'Group Insurance Detail')]")
 		WebElement ClickOnGroupInsuranceDetail;
-		@FindBy(xpath="//*[@id=\"ui-accordion-accordion-header-1\"]/h3")
+		@FindBy(xpath="//h3[contains(text(),'General Links')]")
 		WebElement ClickonGeneralLinks;
-		@FindBy(xpath="//*[@id=\"ui-accordion-accordion-panel-1\"]/li[2]/a")
+		@FindBy(xpath="//ul[@id='ui-id-4']//a[contains(text(),'Employee Master')]")
 		WebElement ClickOnEmployeeMaster;
 		@FindBy(xpath="//a[text()='Add New Employee']")
 		WebElement AddNewEmployee;
@@ -63,7 +63,7 @@ public class CheckifSalaryGroupInsuranceGeneralLinksEmployeeMasterredirectstoEmp
 		WebElement ClickOnEmployDetails;
 		@FindBy(id="filter_head")
 		WebElement ClickOnFilterHead;
-		@FindBy(xpath="//button[text()='LOAD']")
+		@FindBy(xpath="//form[@id='bf_form']//button[contains(text(),'LOAD')]")
 		WebElement ClickOnLoad;
 		@FindBy(xpath="//*[@id=\"employees_dtable\"]/tbody/tr/td[contains(text(),'Aditya')]/parent::tr/td[6]/a[2]")
 		WebElement DeleteEmployee;
@@ -75,13 +75,13 @@ public class CheckifSalaryGroupInsuranceGeneralLinksEmployeeMasterredirectstoEmp
 		WebElement financialInstitution;
 		@FindBy(xpath="//*[@class=\"action-delete\"]")
 		WebElement DeleteFinancialInstitution;
-		
 		@FindBy(id="master")
 		WebElement masterlink;
 		@FindBy(xpath="//*[@id=\"menu\"]/li[3]/div/div[2]/ul/li[6]/a")
 		WebElement GroupInsurance;
 		@FindBy(xpath="//*[@id=\"standing_instr_list\"]/div[2]/table/tbody/tr/td[4]/a")
 		WebElement DeleteMaster;
+		
 		public CheckifSalaryGroupInsuranceGeneralLinksEmployeeMasterredirectstoEmployee(WebDriver driver) {
 			super(driver);
 			PageFactory.initElements(driver, this);

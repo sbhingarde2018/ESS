@@ -8,15 +8,13 @@ import org.openqa.selenium.support.PageFactory;
 import com.spp.common.BasePage;
 
 public class CheckifSalaryGroupInsuranceGeneralLinksInsuranceMasterredirectstoMaster extends BasePage {
-
-	 
 		@FindBy(id="salary")
 		WebElement ClickOnSalary;
-		@FindBy(xpath="//a[text()='Group Insurance Detail']")
+		@FindBy(xpath="//a[contains(text(),'Group Insurance Detail')]")
 		WebElement ClickOnGroupInsuranceDetail;
-		@FindBy(xpath="//*[@id=\"ui-accordion-accordion-header-1\"]/h3")
+		@FindBy(xpath="//h3[contains(text(),'General Links')]")
 		WebElement ClickonGeneralLinks;
-		@FindBy(xpath="//*[@id=\"ui-accordion-accordion-panel-1\"]/li[1]/a")
+		@FindBy(xpath="//ul[@id='ui-id-4']//a[contains(text(),'Group Insurance Master')]")
 		WebElement ClickOnInsuranceMaster;
 		@FindBy(xpath="//a[text()='Add New Group Insurance Master']")
 		WebElement AddNewInsuranceMaster;
@@ -32,7 +30,7 @@ public class CheckifSalaryGroupInsuranceGeneralLinksInsuranceMasterredirectstoMa
 		WebElement masterLink;
 		@FindBy(xpath="//a[text()='Financial Institution (Bank)']")
 		WebElement financialInstitution;
-		@FindBy(xpath="//*[@class=\"action-delete\"]")
+		@FindBy(xpath="//td[contains(text(),'Insurance_Master')]/parent::tr/td[4]/a")
 		WebElement DeleteFinancialInstitution;
 		
 		

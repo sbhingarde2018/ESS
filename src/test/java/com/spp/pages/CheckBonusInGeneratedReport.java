@@ -8,9 +8,9 @@ import org.openqa.selenium.support.PageFactory;
 import com.spp.common.BasePage;
 
 public class CheckBonusInGeneratedReport extends BasePage{
-	@FindBy(id="report") 
+	@FindBy(xpath="//a[@id='report']") 
 	WebElement Report;
-	@FindBy(xpath="//*[@id='menu']/li[8]/div/div[3]/ul/li[3]/a")
+	@FindBy(xpath="//a[contains(text(),'Bonus Report')]")
 	WebElement BonusReport;
 	@FindBy(id="report_type")
 	WebElement Reports;
@@ -18,7 +18,7 @@ public class CheckBonusInGeneratedReport extends BasePage{
 	WebElement MonthYear;
 	@FindBy(id="filter")
 	WebElement GetEmployee;
-	@FindBy(xpath="//*[@id='bf_form']/div[10]/button[1]")
+	@FindBy(xpath="//form[@id='bf_form']//button[contains(text(),'LOAD')]")
 	WebElement Load;
 	@FindBy(id="exgratia_bonus_submit")
 	WebElement GenerateReport;

@@ -10,7 +10,7 @@ import com.spp.common.BasePage;
 public class AddNewPeriodicIncentivePFPTESIYearly extends BasePage{
 	@FindBy(id="master")
 	WebElement masterlink;
-	@FindBy(xpath="//*[@id=\"menu\"]/li[3]/div/div[2]/ul/li[7]/a")
+	@FindBy(xpath="//*[@id=\"menu\"]/li[6]/div/div[1]/ul/li[6]/a")
 	WebElement PeriodicIncentiveMaster;
 	@FindBy(id="salary")
 	WebElement salarylink;
@@ -48,6 +48,7 @@ public class AddNewPeriodicIncentivePFPTESIYearly extends BasePage{
 	WebElement DeleteButton;
 	@FindBy(xpath="//*[@id=\"standing_instr_list\"]/div[2]/table/tbody/tr[1]/td[4]/a")
 	WebElement ClickDeleteMaster;
+	
 	public AddNewPeriodicIncentivePFPTESIYearly(WebDriver driver){
 		super(driver);
 		PageFactory.initElements(driver, this);

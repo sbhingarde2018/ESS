@@ -32,15 +32,15 @@ public class GroupInsuranceDetailSingleAllotment extends BasePage{
 	WebElement CreateFinancialInstitution;
 	@FindBy(id="salary")
 	WebElement salarylink;
-	@FindBy(xpath="//*[@id=\"menu\"]/li[6]/div/div[1]/ul/li[5]/a")
+	@FindBy(xpath="//a[contains(text(),'Group Insurance Detail')]")
 	WebElement GroupInsuranceDetails;
-	@FindBy(xpath="//*[@id=\"add_employees\"]")
+	@FindBy(xpath="//button[@id='add_employees']")
 	WebElement AddEmployee;
-	@FindBy(xpath="//*[@id=\"bf_form\"]/div[9]/button[1]")
+	@FindBy(xpath="//form[@id='bf_form']//button[contains(text(),'LOAD')]")
 	WebElement Load;
-	@FindBy(xpath="//*[@id=\"si_detail_employees\"]/tbody/tr[1]/td[6]/a")
+	@FindBy(xpath="//tbody/tr[1]/td[6]/a")
 	WebElement View;
-	@FindBy(xpath="//*[@id=\"standing_detail_list\"]/div[1]/span/a")
+	@FindBy(xpath="//a[contains(text(),'Add New Group Insurance Detail')]")
 	WebElement AddNewGroup;
 	@FindBy(id="standing_instruction_detail_standing_instruction_master_id")
 	WebElement GroupInsuranceName;
@@ -62,10 +62,11 @@ public class GroupInsuranceDetailSingleAllotment extends BasePage{
 	WebElement CreateButton;	
 	@FindBy(xpath="//*[@id=\"main\"]/div[2]/strong")
 	WebElement SuccessfulMessage;
-	@FindBy(xpath="//*[@id=\"standing_detail_list\"]/div[2]/table/tbody/tr[1]/td[9]/a")
+	@FindBy(xpath="//div[2]/table/tbody/tr/td[9]/a/img")
 	WebElement DeleteButton;
 	@FindBy(id="select_all")
 	WebElement SelectAll;
+	
 	public GroupInsuranceDetailSingleAllotment(WebDriver driver){
 		super(driver);
 		PageFactory.initElements(driver, this);

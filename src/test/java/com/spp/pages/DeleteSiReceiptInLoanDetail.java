@@ -20,11 +20,11 @@ public class DeleteSiReceiptInLoanDetail extends BasePage{
 	WebElement Load;
 	@FindBy(id="filter")
 	WebElement MultiAllotment;
-	@FindBy(xpath="//*[@id=\"si_detail_employees\"]/tbody/tr[2]/td[6]/a")
+	@FindBy(xpath="//tbody/tr/td[contains(text(),'Tina')]/parent::tr/td[6]/a")
 	WebElement View;
-	@FindBy(xpath="//*[@id=\"standing_detail_list\"]/div[2]/table/tbody/tr[1]/td[7]/a")
+	@FindBy(xpath="//div[2]/table/tbody/tr/td[contains(text(),'03 July 2019')]/parent::tr/td[7]/a")
 	WebElement Detail;
-	@FindBy(xpath="//*[@id=\"main\"]/div/div[2]/nav/ul/li[3]/a/span")
+	@FindBy(xpath="//span[contains(text(),'Receipt details')]")
 	WebElement ReceiptDetail;
 	@FindBy(xpath="//table/tbody/tr/td[contains(text(),'July')]/parent::tr[1]/td[5]/a")
 	WebElement Delete;
@@ -72,8 +72,11 @@ public class DeleteSiReceiptInLoanDetail extends BasePage{
 	}
 		
 	public void clickYesButton() throws Exception{
-		YesButton.click();
-		}
+		boolean popupvisible=isVisible(YesButton);
+		if (popupvisible)
+		{
+			YesButton.click();}
+			}
 	public String getMessage() {
 		return SuccessfulMessage.getText();
 	}

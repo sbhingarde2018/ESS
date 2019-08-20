@@ -22,8 +22,10 @@ public class AddNewGroupInsuranceMaster extends BasePage{
 	WebElement CreateButton;
 	@FindBy(xpath="//*[@id=\"main\"]/div[2]/strong")
 	WebElement SuccessfulMessage;
-	@FindBy(xpath="//*[@id=\"standing_instr_list\"]/div[2]/table/tbody[2]/tr/td[1][contains(text(),'Group')]/parent::tr/td[4]/a")
+	@FindBy(xpath="//div[2]/table/tbody[2]/tr/td[1][contains(text(),'Group_Insurance_Test')]/parent::tr/td[4]/a")
 	WebElement Delete;
+	
+	
 	public AddNewGroupInsuranceMaster(WebDriver driver){
 		super(driver);
 		PageFactory.initElements(driver, this);

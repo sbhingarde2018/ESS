@@ -15,13 +15,12 @@ public class SalaryAdvanceDetailMultiAllotment extends BasePage		{
 	WebElement AdvanceDetails;
 	@FindBy(xpath="//*[@id=\"add_employees\"]")
 	WebElement AddEmployee;
-	@FindBy(xpath="//*[@id=\"bf_form\"]/div[10]/button[1]")
+	@FindBy(xpath="//*[@id=\"bf_form\"]/div/button[contains(text(),'LOAD')]")
 	WebElement Load;
 	@FindBy(id="filter")
 	WebElement MultiAllotment;
 	@FindBy(xpath="//*[@id=\"si_detail_employees\"]/tbody/tr[1]/td[6]/a")
 	WebElement View;
-	
 	@FindBy(xpath="//*[@id=\"standing_detail_list\"]/div[1]/span/a")
 	WebElement AddNewAdvanceDetails;
 	@FindBy(id="standing_instruction_detail_standing_instruction_master_id")
@@ -34,7 +33,6 @@ public class SalaryAdvanceDetailMultiAllotment extends BasePage		{
 	WebElement AdvanceDate;
 	@FindBy(id="standing_instruction_detail_lumpsum_amount")
 	WebElement InstallmentAmount;
-	
 	@FindBy(xpath="//*[@id=\"new_standing_instruction_detail\"]/div[3]/fieldset/div[5]/div/input")
 	WebElement RecoverFrom;
 	@FindBy(id="update_save")
@@ -45,6 +43,12 @@ public class SalaryAdvanceDetailMultiAllotment extends BasePage		{
 	WebElement SuccessfulMessage;
 	@FindBy(xpath="//*[@id=\"standing_detail_list\"]/div[2]/table/tbody/tr[1]/td[8]/a")
 	WebElement DeleteButton;
+	@FindBy(xpath="//input[@id='select_all']")
+	WebElement DeselectEmp;
+	@FindBy(xpath="//tr//td[contains(text(),'Jaya')]/parent::tr/td[1]/input")
+	WebElement Emp1;
+	@FindBy(xpath="//tr//td[contains(text(),'Reya')]/parent::tr/td[1]/input")
+	WebElement Emp2;
 	
 	public SalaryAdvanceDetailMultiAllotment(WebDriver driver){
 		super(driver);
@@ -110,5 +114,15 @@ public class SalaryAdvanceDetailMultiAllotment extends BasePage		{
 		DeleteButton.click();
 		switchToPopUpAndAccept(driver);
 	}
+	public void clickDSEmp() throws Exception{
+		DeselectEmp.click();
 	
+	}
+	public void clickEmp1() throws Exception{
+		Emp1.click();
+	
+	}
+	public void clickEmp2() throws Exception{
+		Emp2.click();
+	}
 }

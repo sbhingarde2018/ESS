@@ -12,7 +12,7 @@ public class EditBonusDefinition extends BasePage{
 	WebElement Salary;
 	@FindBy(xpath="//*[@id=\"menu\"]/li[6]/div/div[1]/ul/li[11]/a")
 	WebElement Bonus;
-	@FindBy(xpath="//*[@id='bonus_or_exgratia']/div/table/tbody/tr/td[2]/a")
+	@FindBy(xpath="//div/table/tbody/tr/td[contains(text(),'Christmas')]/parent::tr/td[2]/a")
 	WebElement ClickOnEdit;
 	@FindBy(id="bonus_exgratia_definition_max_amount")
 	WebElement EditMaxBonusAmt;
@@ -20,6 +20,7 @@ public class EditBonusDefinition extends BasePage{
 	WebElement UpdateBonus;
 	@FindBy(xpath="//strong[text()='Bonus successfully updated']")
 	WebElement successfullmessage;
+	
 	public EditBonusDefinition(WebDriver driver) {
 		super(driver);
 		PageFactory.initElements(driver,this);

@@ -10,16 +10,18 @@ import com.spp.common.BasePage;
 public class CheckInstitutionNameInGroupInsurance extends BasePage{
 	@FindBy(id="salary")
 	WebElement salarylink;
-	@FindBy(xpath="//*[@id=\"menu\"]/li[6]/div/div[1]/ul/li[9]/a")
+	@FindBy(xpath="//a[contains(text(),'Group Insurance Detail')]")
 	WebElement GroupInsuranceDetails;
 	@FindBy(xpath="//*[@id=\"add_employees\"]")
 	WebElement AddEmployee;
-	@FindBy(xpath="//*[@id=\"bf_form\"]/div[9]/button[1]")
+	@FindBy(xpath="//form[@id='bf_form']//button[contains(text(),'LOAD')]")
 	WebElement Load;
 	@FindBy(id="filter")
 	WebElement MultiAllotmentButton;
 	@FindBy(id="standing_instruction_detail_financial_institution_id")
 	WebElement InstitutionName;
+	@FindBy(xpath="//*[@id=\"main\"]/div[3]/strong")
+	WebElement SuccessfulMessage;
 
 	public CheckInstitutionNameInGroupInsurance(WebDriver driver){
 		super(driver);
@@ -46,6 +48,9 @@ public class CheckInstitutionNameInGroupInsurance extends BasePage{
 	
 	public void selectInstitutionName(String value){
 		dropDownSelect(InstitutionName, value);
+	}
+	public String getMessage() {
+		return SuccessfulMessage.getText();
 	}
 	
 }

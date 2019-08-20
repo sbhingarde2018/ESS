@@ -46,7 +46,7 @@ public class AddNewBonusDefinitionAllowManualEditingModeofPaymentDDDoNotConsider
 	WebElement CreateBonus;
 	@FindBy(xpath="//*[@id=\"main\"]/div[2]/strong")
 	WebElement SuccessfulMessage;
-	@FindBy(xpath="//*[@id='bonus_or_exgratia']/div/table/tbody/tr[1]/td[4]/a")
+	@FindBy(xpath="//div/table/tbody/tr/td[contains(text(),'Diwali209')]/parent::tr/td[4]/a/img")
 	WebElement DeleteButton;
 	
 	public AddNewBonusDefinitionAllowManualEditingModeofPaymentDDDoNotConsiderPreviousYear(WebDriver driver) {

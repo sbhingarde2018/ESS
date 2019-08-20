@@ -40,7 +40,6 @@ public class AddNewBonusDefinitionAllowManualEditingPTonBonusDoNotConsiderPrevio
 	WebElement SelectCurrentMonth;
 	@FindBy(id="bonus_exgratia_definition_pt_consider_month_respective_month")
 	WebElement SelectRespectiveMonth;
-	
 	@FindBy(id="bonus_exgratia_definition_pt_consider_year_dont_consider_previous_year")
 	WebElement Donotconsiderpreviousyear;
 	@FindBy(id="bonus_exgratia_definition_round_off_nearest_rupee")
@@ -49,7 +48,7 @@ public class AddNewBonusDefinitionAllowManualEditingPTonBonusDoNotConsiderPrevio
 	WebElement CreateBonus;
 	@FindBy(xpath="//*[@id=\"main\"]/div[2]/strong")
 	WebElement SuccessfulMessage;
-	@FindBy(xpath="//*[@id='bonus_or_exgratia']/div/table/tbody/tr[1]/td[4]/a")
+	@FindBy(xpath="//div/table/tbody/tr/td[contains(text(),'Diwali184')]/parent::tr/td[4]/a/img")
 	WebElement DeleteButton;
 	
 	public AddNewBonusDefinitionAllowManualEditingPTonBonusDoNotConsiderPreviousYear(WebDriver driver) {

@@ -128,7 +128,7 @@ public class AdditionalSalary extends BaseTest {
 		cc.ClickAllotButton();
 		//String d=cc.getMessage();
 		//Assert.assertEquals(d, "Amount updated successfully for Selected Employees");
-}
+	}
 	@Test(priority=5)
 	public void AllotSalaryToAdditionalSalaryDeductionHeadFormula_SC_130() throws InterruptedException{
 		AllotSalaryToAdditionalSalaryDeductionHeadFormula cc=new AllotSalaryToAdditionalSalaryDeductionHeadFormula(driver);
@@ -199,7 +199,25 @@ public class AdditionalSalary extends BaseTest {
 		Thread.sleep(2000);
 		cc.selectGetValues();
 		Thread.sleep(2000);
+		cc.ClickAllot();
+		Thread.sleep(2000);
+		cc.ClickAddEmployee();
+		cc.ClickAdvanceFilter();
+		cc.resizeWindow();
+		Thread.sleep(2000);
+		cc.ClickLoad();
+		Thread.sleep(2000);
+		cc.ClickAmount("2000");
 		cc.ClickAllotButton();
+		Thread.sleep(3000);
+		cc.clickSalaryLink();
+		cc.selectAdditionalSalary();
+		Thread.sleep(2000);
+		cc.selectPaymonth("Sep/2020");
+		Thread.sleep(2000);
+		cc.selectGetValues();
+		Thread.sleep(2000);
+		cc.ClickAllot();
 		Thread.sleep(3000);
 		cc.ClickDelete();
 		Thread.sleep(3000);
@@ -221,6 +239,28 @@ public class AdditionalSalary extends BaseTest {
 		cc.selectGetValues();
 		Thread.sleep(2000);
 		cc.selectDeductionTab();
+		Thread.sleep(2000);
+		cc.ClickAllot();
+		Thread.sleep(2000);
+		cc.ClickAddEmployee();
+		cc.ClickAdvanceFilter();
+		cc.resizeWindow();
+		Thread.sleep(2000);
+		cc.ClickLoad();
+		Thread.sleep(2000);
+		cc.exitFullscreen();
+		cc.ClickAmount("2000");
+		cc.ClickAllotButton();
+		Thread.sleep(3000);
+		cc.clickSalaryLink();
+		cc.selectAdditionalSalary();
+		Thread.sleep(2000);
+		cc.selectPaymonth("Sep/2020");
+		Thread.sleep(2000);
+		cc.selectGetValues();
+		Thread.sleep(2000);
+		cc.selectDeductionTab();
+		Thread.sleep(2000);
 		cc.ClickAllot();
 		Thread.sleep(3000);
 		cc.ClickDelete();

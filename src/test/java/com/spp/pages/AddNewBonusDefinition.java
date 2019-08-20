@@ -30,8 +30,9 @@ public class AddNewBonusDefinition extends BasePage{
 	WebElement CreateBonus;
 	@FindBy(xpath="//*[@id=\"main\"]/div[2]/strong")
 	WebElement SuccessfulMessage;
-	@FindBy(xpath="//*[@id='bonus_or_exgratia']/div/table/tbody/tr[1]/td[4]/a")
+	@FindBy(xpath="//div/table/tbody/tr/td[contains(text(),'Eid')]/parent::tr/td[4]/a/img")
 	WebElement DeleteButton;
+	
 	public AddNewBonusDefinition(WebDriver driver) {
 		super(driver);
 		PageFactory.initElements(driver,this);
@@ -40,7 +41,6 @@ public class AddNewBonusDefinition extends BasePage{
 	public void clickSalary(){
 		Salary.click();
 	}
-	
 	public void selectBonus(){
 		Bonus.click();
 	}
@@ -69,10 +69,7 @@ public class AddNewBonusDefinition extends BasePage{
 	}
 	public void clickCreateBonus(){
 		CreateBonus.click();
-	}
-
-
-		
+	}	
 	public String getMessage(){
 		return SuccessfulMessage.getText();
 	}

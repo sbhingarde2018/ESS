@@ -12,11 +12,11 @@ public class ComputeBonus extends BasePage{
 	WebElement Salary;
 	@FindBy(xpath="//*[@id=\"menu\"]/li[6]/div/div[1]/ul/li[11]/a")
 	WebElement Bonus;
-	@FindBy(xpath="//*[@id=\"bonus_or_exgratia\"]/div/table/tbody/tr[1]/td[3]/a")
+	@FindBy(xpath="//div/table/tbody/tr/td[contains(text(),'Holi12')]/parent::tr/td[3]/a")
 	WebElement Compute;
 	@FindBy(id="filter_head")
 	WebElement ClickOnFilter;
-	@FindBy(xpath="//*[@id='bf_form']/div[10]/button[1]")
+	@FindBy(xpath="//form[@id='bf_form']//button[contains(text(),'LOAD')]")
 	WebElement ClickOnLoad;
 	@FindBy(xpath="//*[@id=\"bec_employees\"]/tbody/tr/td[7]/a")
 	WebElement ClickOnEdit;

@@ -15,9 +15,9 @@ public class CreateADNoOfInstallmentsHigher50Rupee extends BasePage{
 	WebElement AdvanceDetails;
 	@FindBy(xpath="//*[@id=\"add_employees\"]")
 	WebElement AddEmployee;
-	@FindBy(xpath="//*[@id=\"bf_form\"]/div[10]/button[1]")
+	@FindBy(xpath="//*[@id=\"bf_form\"]/div/button[contains(text(),'LOAD')]")
 	WebElement Load;
-	@FindBy(xpath="//*[@id=\"si_detail_employees\"]/tbody/tr[2]/td[6]/a")
+	@FindBy(xpath="//*[@id=\"si_detail_employees\"]/tbody/tr[1]/td[6]/a")
 	WebElement View;
 	@FindBy(xpath="//*[@id=\"standing_detail_list\"]/div[1]/span/a")
 	WebElement AddNewAdvanceDetails;
@@ -39,7 +39,7 @@ public class CreateADNoOfInstallmentsHigher50Rupee extends BasePage{
 	WebElement CreateButton;
 	@FindBy(xpath="//*[@id=\"main\"]/div[2]/strong")
 	WebElement SuccessfulMessage;
-	@FindBy(xpath="//div[2]/table/tbody/tr/td[contains(text(),'Default9')]/parent::tr/td[8]/a")
+	@FindBy(xpath="//div[2]/table/tbody/tr/td[contains(text(),'Default1')]/parent::tr/td[8]/a")
 	WebElement DeleteButton;
 	
 	public CreateADNoOfInstallmentsHigher50Rupee(WebDriver driver){

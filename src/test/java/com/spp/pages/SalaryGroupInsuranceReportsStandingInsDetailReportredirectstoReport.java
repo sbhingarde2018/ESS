@@ -11,7 +11,7 @@ public class SalaryGroupInsuranceReportsStandingInsDetailReportredirectstoReport
 
 	@FindBy(id="salary")
 	WebElement ClickOnSalary;
-	@FindBy(xpath="//a[text()='Group Insurance Detail']")
+	@FindBy(xpath="//a[contains(text(),'Group Insurance Detail')]")
 	WebElement ClickOnGroupInsuranceDetail;
 	@FindBy(xpath="//a[text()='Standing Ins. Detail Report']")
 	WebElement ClickonStandInsDetailRpt;
@@ -29,7 +29,7 @@ public class SalaryGroupInsuranceReportsStandingInsDetailReportredirectstoReport
 	WebElement SelectOrderBy;
 	@FindBy(id="filter")
 	WebElement GetEmployees;
-	@FindBy(xpath="//button[text()='LOAD']")
+	@FindBy(xpath="//form[@id='bf_form']//button[contains(text(),'LOAD')]")
 	WebElement ClickOnLoad;
 	@FindBy(id="employee_data_")
 	WebElement SelectEmployees;

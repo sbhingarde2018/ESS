@@ -16,14 +16,18 @@ public class UpdateBonus extends BasePage{
 	WebElement Compute;
 	@FindBy(id="filter_head")
 	WebElement ClickOnFilter;
-	@FindBy(xpath="//*[@id=\"bf_form\"]/div[9]/button[1]")
+	@FindBy(xpath="//form[@id='bf_form']//button[contains(text(),'LOAD')]")
 	WebElement ClickOnLoad;
-	@FindBy(xpath="//*[@id='bec_employees']/tbody/tr/td[normalize-space()='Anil']/parent::tr/td[7]/a")
+	@FindBy(xpath="//tbody/tr[1]/td[7]/a")
 	WebElement ClickOnEdit;
 	@FindBy(id="bonus_exgratia_calculation_amount_given")
 	WebElement EnterBonusAmount;
-	@FindBy(css="input[type=submit]")
+	@FindBy(xpath="//input[@name='commit']")
 	WebElement ClickOnUpdate;
+	@FindBy(xpath="//*[@id=\"main\"]/div[2]/strong")
+	WebElement SuccessMessage;
+	
+	
 	public UpdateBonus(WebDriver driver) {
 		super(driver);
 		PageFactory.initElements(driver,this);
@@ -55,5 +59,7 @@ public class UpdateBonus extends BasePage{
 	public void clickonupdatebutton() {
 		ClickOnUpdate.click();
 	}
-	
+	public String getMessage() {
+    	return SuccessMessage.getText();
+	}
 }

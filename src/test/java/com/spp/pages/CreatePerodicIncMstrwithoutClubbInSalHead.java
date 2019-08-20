@@ -24,11 +24,11 @@ public class CreatePerodicIncMstrwithoutClubbInSalHead extends BasePage{
 	WebElement CreateButton;
 	@FindBy(xpath="//strong[text()='Periodic Incentive successfully created ']")
 	WebElement SuccessfulMessage;
-	@FindBy(xpath="//*[@id='standing_instr_list']/div[2]/table/tbody[2]/tr/td[1][contains(text(),'Periodic')]/parent::tr/td[4]/a[1]")
+	@FindBy(xpath="//td[contains(text(),'Default90')]/parent::tr/td[5]/a")
 	List<WebElement> Delete;
-	@FindBy(xpath="//*[@class=\"action-delete\"]")
+	@FindBy(xpath="//td[contains(text(),'Default90')]/parent::tr/td[5]/a")
 	WebElement ClickDelete;
-	@FindBy (xpath="//*[@id='standing_instr_list']/div[2]/table/tbody[2]/tr/td[contains(text(),'PerodicIncentiveMaster')]/parent::tr/td[2]")
+	@FindBy(xpath="//*[@id='standing_instr_list']/div[2]/table/tbody[2]/tr/td[contains(text(),'PerodicIncentiveMaster')]/parent::tr/td[2]")
 	WebElement CheckIfNo;
 	
 	public CreatePerodicIncMstrwithoutClubbInSalHead(WebDriver driver){

@@ -25,7 +25,7 @@ public class SalaryExGratiaAddNewExGratiadefinition extends BasePage {
 	WebElement PayMonth;
 	@FindBy(id="create_heading_name")
 	WebElement CreateExGratia;
-	@FindBy(xpath="//div/table/tbody/tr[2]/td[contains(text(),'GratiaTest')]/parent::tr/td[4]/a/img")
+	@FindBy(xpath="//div/table/tbody/tr/td[contains(text(),'GratiaTest')]/parent::tr/td[4]/a/img")
 	WebElement Delete;
 	@FindBy(xpath="//*[@id=\"main\"]/div[2]/strong")
 	WebElement SuccessMessage;

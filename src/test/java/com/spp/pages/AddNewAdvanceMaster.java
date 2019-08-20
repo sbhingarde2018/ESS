@@ -23,7 +23,7 @@ public class AddNewAdvanceMaster extends BasePage{
 	WebElement CreateButton;
 	@FindBy(id="standing_instruction_master_max_allowed")
 	WebElement maxAllowed;
-	@FindBy(xpath="//strong[text()='Advance successfully created ']")
+	@FindBy(xpath="//strong[contains(text(),'Advance successfully created')]")
 	WebElement successfulMessage;
 	@FindBy(id="standing_instruction_master_clubbed_in_salary_head")
 	WebElement ClubbedInSal;
@@ -33,7 +33,7 @@ public class AddNewAdvanceMaster extends BasePage{
 	WebElement EnterInterestRate;
 	@FindBy(id="standing_instruction_master_emi_recovery")
 	WebElement EMIRecovery;
-	@FindBy(xpath="//td[contains(text(),'Default2')]/parent::tr/td[4]/a")
+	@FindBy(xpath="//td[contains(text(),'Default5')]/parent::tr/td[4]/a")
 	WebElement Delete;
 	
 	public AddNewAdvanceMaster(WebDriver driver) {

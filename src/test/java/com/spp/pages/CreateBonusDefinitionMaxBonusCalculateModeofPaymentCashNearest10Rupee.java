@@ -42,7 +42,7 @@ public class CreateBonusDefinitionMaxBonusCalculateModeofPaymentCashNearest10Rup
 	WebElement CreateBonus;
 	@FindBy(xpath="//*[@id=\"main\"]/div[2]/strong")
 	WebElement SuccessfulMessage;
-	@FindBy(xpath="//*[@id='bonus_or_exgratia']/div/table/tbody/tr[1]/td[4]/a")
+	@FindBy(xpath="//div/table/tbody/tr/td[contains(text(),'Diwali226')]/parent::tr/td[4]/a/img")
 	WebElement DeleteButton;
 	@FindBy(id="bonus_exgratia_definition_mode_of_payment")
 	WebElement SelectModeofPayment;

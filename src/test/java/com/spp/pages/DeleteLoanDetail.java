@@ -18,7 +18,7 @@ public class DeleteLoanDetail extends BasePage{
 	WebElement Load;
 	@FindBy(id="filter")
 	WebElement MultiAllotment;
-	@FindBy(xpath="//*[@id=\"si_detail_employees\"]/tbody/tr[2]/td[6]/a")
+	@FindBy(xpath="//tbody/tr[9]/td[contains(text(),'Jaya')]/parent::tr/td[6]/a")
 	WebElement View;
 	@FindBy(xpath="//div[2]/table/tbody/tr[1]/td[8]/a")
 	WebElement Delete;

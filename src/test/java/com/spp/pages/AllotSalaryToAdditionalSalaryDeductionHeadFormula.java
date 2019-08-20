@@ -24,7 +24,7 @@ public class AllotSalaryToAdditionalSalaryDeductionHeadFormula extends BasePage 
 	WebElement AddEmployees;
 	@FindBy(id="filter_head")
 	WebElement AdvanceFilter;
-	@FindBy(xpath="//*[@id=\"bf_form\"]/div[10]/button[1]")
+	@FindBy(xpath="//form[@id='bf_form']//button[contains(text(),'LOAD')]")
 	WebElement Load;
 	@FindBy(id="select_all_employee")
 	WebElement SelectAllBox;

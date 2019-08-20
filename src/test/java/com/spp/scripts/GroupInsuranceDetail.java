@@ -28,41 +28,30 @@ public class GroupInsuranceDetail extends BaseTest{
 		pi.navigateMaster();
 		pi.clickGroupInsurance();
 		pi.clickAddNewMaster();
-		pi.clickName("Group_Insurance");
+		pi.clickName("Group_Insurance_Test");
 		pi.clickCreateButton();
 		String f=pi.getMessage();
 		Assert.assertEquals(f, "Group Insurance successfully created");
-		
-	
-}
+		pi.clickDelete();
+	}
 	
 	@Test(priority=1)
 	public void GroupInsuranceDetailSingleAllotment_SC_311() throws Exception{
 		GroupInsuranceDetailSingleAllotment pi=new GroupInsuranceDetailSingleAllotment(driver);
-		pi.navigateMaster();
-		pi.selectFinancialInst();
-		pi.addnewfinanInsti();
-		pi.selectAccoutType("Group Insurance");
-		pi.enterInstName("HDFC Bank");
-		pi.enterBranchCode("FORT MUMBAI");
-		pi.enterEmail("hdfc@gmail.com");
-		pi.enterAddress("FORT MUMBAI");
-		pi.enterPinCode("400085");
-		pi.enterIFSCCode("HDFC0000060");
-		pi.createfinanceinsti();
-		Thread.sleep(5000);
 		pi.navigatesalary();
 		pi.clickGroupInsuranceDetails();
 		pi.clickAddEmployee();
+		pi.resizeWindow();
 		Thread.sleep(5000);
 		pi.clickLoad();
 		Thread.sleep(5000);
+		pi.exitFullscreen();
 		pi.clickView();
 		pi.clickAddNewGroup();
 		pi.clickGroupInsuranceName("Group_Insurance");
-		pi.clickInsuranceNo(Utility.getRandNum(1, 100));
-		pi.clickStartMonth("Apr/2013");
-		pi.clickEndMonth("Apr/2013");
+		pi.clickInsuranceNo("100");
+		pi.clickStartMonth("Apr/2019");
+		pi.clickEndMonth("Apr/2019");
 		pi.clickAmount("300");
 		pi.selectInstitutionName("HDFC Bank-FORT MUMBAI");
 		pi.clickRemark("sdfdsf");
@@ -78,18 +67,20 @@ public class GroupInsuranceDetail extends BaseTest{
 		pi.navigatesalary();
 		pi.clickGroupInsuranceDetails();
 		pi.clickAddEmployee();
+		pi.resizeWindow();
 		Thread.sleep(5000);
 		pi.clickLoad();
-		Thread.sleep(5000);	
+		Thread.sleep(5000);
+		pi.exitFullscreen();
 		pi.selectall();
-		Thread.sleep(2000);
-		pi.selectall();
+		pi.clickTick1();
+		pi.clickTick2();
 		pi.clickMultiAllotmentButton();
 		Thread.sleep(5000);
 		pi.clickGroupInsuranceName("Group_Insurance");
 		pi.clickAmount("4444");
-		pi.clickStartMonth("Apr/2013");
-		pi.clickEndMonth("Apr/2013");
+		pi.clickStartMonth("Apr/2019");
+		pi.clickEndMonth("Apr/2019");
 		pi.selectInstitutionName("HDFC Bank-FORT MUMBAI");
 		pi.clickAccountNumber("8555");
 		pi.clickRemark("dsfdgf");
@@ -99,34 +90,37 @@ public class GroupInsuranceDetail extends BaseTest{
 		pi.clickProceed();
 		String r=pi.getMessage();
 		Assert.assertEquals(r, "Group Insurance successfully created");
-		
-		
-
-}
-		@Test(priority=3)
+		}
+	
+	@Test(priority=3)
 	public void CheckInstitutionNameInGroupInsurance_SC_323() throws Exception{
 		CheckInstitutionNameInGroupInsurance pi=new CheckInstitutionNameInGroupInsurance(driver);
 		pi.navigatesalary();
 		pi.clickGroupInsuranceDetails();
 		pi.clickAddEmployee();
+		pi.resizeWindow();
 		Thread.sleep(3000);
 		pi.clickLoad();
 		Thread.sleep(3000);	
+		pi.exitFullscreen();
 		pi.clickMultiAllotmentButton();
 		Thread.sleep(5000);
 		pi.selectInstitutionName("HDFC Bank-FORT MUMBAI");
-		System.out.println("Institution Name is displayed");
+		//String r=pi.getMessage();
+		//Assert.assertEquals(r, "Institution Name is displayed");
 }
 	
-		@Test(priority=4)
+	@Test(priority=4)
 	public void EditEMIDetail_SC_380() throws Exception{
 		EditEMIDetailsGroupInsuranceDetails pi=new EditEMIDetailsGroupInsuranceDetails(driver);
 		pi.navigatesalary();
 		pi.clickgroupInsuranceDetails();
 		pi.clickAddEmployee();
+		pi.resizeWindow();
 		Thread.sleep(5000);
 		pi.clickLoad();
 		Thread.sleep(5000);
+		pi.exitFullscreen();
 		pi.clickView();
 		pi.clickDetails();
 		Thread.sleep(5000);
@@ -137,15 +131,17 @@ public class GroupInsuranceDetail extends BaseTest{
 		String t=pi.getMessage();
 		Assert.assertEquals(t, "Details Successfully updated");
 } 
-@Test(priority=5)
+	@Test(priority=5)
 	public void DeleteEMIDetailInGroupInsuranceDetail_SC_385() throws Exception{
 		DeleteEMIDetailInGroupInsuranceDetail pi=new DeleteEMIDetailInGroupInsuranceDetail(driver);
 		pi.navigatesalary();
 		pi.clickGroupInsuranceDetails();
 		pi.clickAddEmployee();
+		pi.resizeWindow();
 		Thread.sleep(5000);
 		pi.clickLoad();
 		Thread.sleep(5000);
+		pi.exitFullscreen();
 		pi.clickView();
 		pi.clickDetail();
 		pi.clickDelete();
@@ -155,103 +151,54 @@ public class GroupInsuranceDetail extends BaseTest{
 		pi.clickYesButton();
 		String r=pi.getMessage();
 		Assert.assertEquals(r, "Details Successfully Deleted.");
+		Thread.sleep(3000);
+		pi.NavigateBack();
+		pi.ClickDeleteGi();
+		pi.switchToPopUpAndAccept(driver);
+		
 } 
-		@Test(priority=6)
+	@Test(priority=6)
 	public void DeleteGroupInsuranceDetail_SC_381() throws Exception{
 		DeleteGroupInsuranceDetail pi=new DeleteGroupInsuranceDetail(driver);
 		pi.navigatesalary();
 		pi.clickGroupInsuranceDetails();
 		pi.clickAddEmployee();
+		pi.resizeWindow();
 		Thread.sleep(5000);
 		pi.clickLoad();
 		Thread.sleep(5000);
+		pi.exitFullscreen();
 		pi.clickView();
 		pi.clickDelete1();
-		Thread.sleep(3000);
-		pi.clickDelete2();
 		String r=pi.getMessage();
-		Assert.assertEquals(r, "Group Insurance successfully deleted");
-		
+		Assert.assertEquals(r, "Group Insurance successfully deleted");	
 }
-	
-	
-		@Test(priority=7)
-		public void CreateGroupInsurancePremiumPaymentQuarterly_SC_625() throws Exception{
-			CreateGroupInsurancePremiumPaymentQuarterly pi=new CreateGroupInsurancePremiumPaymentQuarterly(driver);
-			pi.clickonsalary();	
-			pi.clickongroupinsurancedetail();
-			pi.clickaddemployees();
-			Thread.sleep(3000);
-			pi.clickonload();
-			Thread.sleep(3000);
-			pi.clickonview();
-			Thread.sleep(2000);
-			pi.clickAddNewInsuranceDetails();
-			pi.selectGroupInsuranceName("Group_Insurance");
-			pi.clickGroupInsuranceNo("56776");
-			pi.clickStartMonth("Apr/2013");
-			pi.clickEndMonth("Apr/2013");
-			pi.clickAmount("5000");
-			pi.selectInstitutionName("HDFC Bank-FORT MUMBAI");
-			pi.clickRemark("fgfhgjhgh");
-			pi.clickquarterly();
-			pi.clickCreateGroupInsurancebutton();
-			String c=pi.getMessage();
-			Assert.assertEquals(c, "Group Insurance successfully created");
-			pi.clickdelete();
-		}
-		@Test(priority=8)
-		public void CreateGroupInsurancePremiumPaymentHalfYearly_SC_626() throws Exception{
-			CreateGroupInsurancePremiumPaymentHalfYearly pi=new CreateGroupInsurancePremiumPaymentHalfYearly(driver);
-			pi.clickonsalary();	
-			pi.clickongroupinsurancedetail();
-			pi.clickaddemployees();
-			Thread.sleep(3000);
-			pi.clickonload();
-			Thread.sleep(3000);
-			pi.clickonview();
-			Thread.sleep(2000);
-			pi.clickAddNewInsuranceDetails();
-			pi.selectGroupInsuranceName("Group_Insurance");
-			pi.clickGroupInsuranceNo("56776");
-			pi.clickStartMonth("Apr/2013");
-			pi.clickEndMonth("Apr/2013");
-			pi.clickAmount("5000");
-			pi.selectInstitutionName("HDFC Bank-FORT MUMBAI");
-			pi.clickRemark("fgfhgjhgh");
-			pi.clickhalfyearly();
-			pi.clickCreateGroupInsurancebutton();
-			String c=pi.getMessage();
-			Assert.assertEquals(c, "Group Insurance successfully created");
-			pi.clickdelete();
-		}
-		@Test(priority=9)
-		public void CreateGroupInsurancePremiumPaymentYearly_SC_627() throws Exception{
-			CreateGroupInsurancePremiumPaymentYearly pi=new CreateGroupInsurancePremiumPaymentYearly(driver);
-			pi.clickonsalary();	
-			pi.clickongroupinsurancedetail();
-			pi.clickaddemployees();
-			Thread.sleep(3000);
-			pi.clickonload();
-			Thread.sleep(3000);
-			pi.clickonview();
-			Thread.sleep(2000);
-			pi.clickAddNewInsuranceDetails();
-			pi.selectGroupInsuranceName("Group_Insurance");
-			pi.clickGroupInsuranceNo("56776");
-			pi.clickStartMonth("Apr/2013");
-			pi.clickEndMonth("Apr/2013");
-			pi.clickAmount("5000");
-			pi.selectInstitutionName("HDFC Bank-FORT MUMBAI");
-			pi.clickRemark("fgfhgjhgh");
-			pi.clickyearly();
-			pi.clickCreateGroupInsurancebutton();
-			String c=pi.getMessage();
-			Assert.assertEquals(c, "Group Insurance successfully created");
-			pi.clickdelete();
-		}
-	
-	@Test(priority=11)
+	@Test(priority=7)
+	public void CheckifSalaryGroupInsuranceReportsStandingInsDetailReportredirectstoReport_SC_622() throws Exception{
+		SalaryGroupInsuranceReportsStandingInsDetailReportredirectstoReport si=new SalaryGroupInsuranceReportsStandingInsDetailReportredirectstoReport(driver);
+		si.clickonsalary();
+		si.clickongroupinsurancedetail();
+		si.clickonstandInsdetailrpt();
+		Thread.sleep(1000);
+		si.selectsitype("Insurance");
+		si.selectreporttype("Detailed Report");
+		si.selectmonthfrom("Aug/2019");
+		si.selectmonthto("Aug/2019");
+		si.selectgroupby("Employee Name");
+		si.selectorderby("Insurance Name");
+		si.clickgetemployees();
+		si.resizeWindow();
+		Thread.sleep(3000);
+		si.clickonload();
+		Thread.sleep(3000);
+		si.exitFullscreen();
+		//String s=si.getMessage();
+		//Assert.assertEquals(s, "Employees Successfully Loaded.");
+		Thread.sleep(2000);
+		si.selectemployee();
+		si.clickongeneratereport();
+	}
+	@Test(priority=8)
 	public void CheckifSalaryGroupInsuranceGeneralLinksInsuranceMasterredirectstoMaster_SC_623() throws Exception{
 		CheckifSalaryGroupInsuranceGeneralLinksInsuranceMasterredirectstoMaster si=new CheckifSalaryGroupInsuranceGeneralLinksInsuranceMasterredirectstoMaster(driver);
 		si.clickonsalary();
@@ -269,15 +216,11 @@ public class GroupInsuranceDetail extends BaseTest{
 		si.deletemaster();
 		si.switchToPopUpAndAccept(driver);
 		Thread.sleep(5000);
-		si.clickMastserLink();
-		si.selectFinancialInstitution();
-		si.deletefinancialinsti();
+		//si.clickMastserLink();
+		//si.selectFinancialInstitution();
+		//si.deletefinancialinsti();
 	}
-	
-	
-	
-	
-	@Test(priority=10)
+	@Test(priority=9)
 	public void CheckifSalaryGroupInsuranceGeneralLinksEmployeeMasterredirectstoEmployee_SC_624() throws Exception {
 		CheckifSalaryGroupInsuranceGeneralLinksEmployeeMasterredirectstoEmployee si=new CheckifSalaryGroupInsuranceGeneralLinksEmployeeMasterredirectstoEmployee(driver);
 		si.clickonsalary();
@@ -288,7 +231,7 @@ public class GroupInsuranceDetail extends BaseTest{
 		si.addnewemployee();
 		si.enterEmployeeid("ABC12345");
 		si.enterEmployeeref("12345");
-		si.enterEmployeename("Aditya");
+		si.enterEmployeename("Adityaa");
 		si.enterEmployeefather("Harish");
 		si.selectDateofBirth("06 June 1995");
 		si.selectGender("Female");
@@ -313,39 +256,92 @@ public class GroupInsuranceDetail extends BaseTest{
 		si.clickonemployee();
 		si.clickonemployeedetails();
 		si.clickonfilter();
+		si.resizeWindow();
 		Thread.sleep(2000);
 		si.clickonload();
 		Thread.sleep(2000);
+		si.exitFullscreen();
 		si.deleteemployee();
-		Thread.sleep(2000);
-		si.navigateMaster();
-		si.clickGroupInsurance();
-		si.deletemaster();
-		si.switchToPopUpAndAccept(driver);
 	}
-	
-	/*@Test(priority=12)
-	public void CheckifSalaryGroupInsuranceReportsStandingInsDetailReportredirectstoReport_SC_622() throws Exception{
-		SalaryGroupInsuranceReportsStandingInsDetailReportredirectstoReport si=new SalaryGroupInsuranceReportsStandingInsDetailReportredirectstoReport(driver);
-		si.clickonsalary();
-		si.clickongroupinsurancedetail();
-		si.clickonstandInsdetailrpt();
-		Thread.sleep(1000);
-		si.selectsitype("Insurance");
-		si.selectreporttype("Detailed Report");
-		si.selectmonthfrom("Apr/2013");
-		si.selectmonthto("Apr/2013");
-		si.selectgroupby("Employee Name");
-		si.selectorderby("Insurance Name");
-		si.clickgetemployees();
-		Thread.sleep(3000);
-		si.clickonload();
-		Thread.sleep(3000);
-		String s=si.getMessage();
-		Assert.assertEquals(s, "Employees Successfully Loaded.");
-		Thread.sleep(2000);
-		si.selectemployee();
-		si.clickongeneratereport();
-	}*/
-	
+		@Test(priority=10)
+		public void CreateGroupInsurancePremiumPaymentQuarterly_SC_625() throws Exception{
+			CreateGroupInsurancePremiumPaymentQuarterly pi=new CreateGroupInsurancePremiumPaymentQuarterly(driver);
+			pi.clickonsalary();	
+			pi.clickongroupinsurancedetail();
+			pi.clickaddemployees();
+			Thread.sleep(3000);
+			pi.resizeWindow();
+			pi.clickonload();
+			Thread.sleep(3000);
+			pi.exitFullscreen();
+			pi.clickonview();
+			Thread.sleep(2000);
+			pi.clickAddNewInsuranceDetails();
+			pi.selectGroupInsuranceName("Group_Insurance");
+			pi.clickGroupInsuranceNo("56776");
+			pi.clickStartMonth("Apr/2019");
+			pi.clickEndMonth("Apr/2019");
+			pi.clickAmount("500");
+			pi.selectInstitutionName("HDFC Bank-FORT MUMBAI");
+			pi.clickRemark("fgfhgjhgh");
+			pi.clickquarterly();
+			pi.clickCreateGroupInsurancebutton();
+			String c=pi.getMessage();
+			Assert.assertEquals(c, "Group Insurance successfully created");
+			pi.clickdelete();
+		}
+		@Test(priority=11)
+		public void CreateGroupInsurancePremiumPaymentHalfYearly_SC_626() throws Exception{
+			CreateGroupInsurancePremiumPaymentHalfYearly pi=new CreateGroupInsurancePremiumPaymentHalfYearly(driver);
+			pi.clickonsalary();	
+			pi.clickongroupinsurancedetail();
+			pi.clickaddemployees();
+			pi.resizeWindow();
+			Thread.sleep(3000);
+			pi.clickonload();
+			pi.exitFullscreen();
+			Thread.sleep(3000);
+			pi.clickonview();
+			Thread.sleep(2000);
+			pi.clickAddNewInsuranceDetails();
+			pi.selectGroupInsuranceName("Group_Insurance");
+			pi.clickGroupInsuranceNo("56776");
+			pi.clickStartMonth("Apr/2019");
+			pi.clickEndMonth("Apr/2019");
+			pi.clickAmount("500");
+			pi.selectInstitutionName("HDFC Bank-FORT MUMBAI");
+			pi.clickRemark("fgfhgjhgh");
+			pi.clickhalfyearly();
+			pi.clickCreateGroupInsurancebutton();
+			String c=pi.getMessage();
+			Assert.assertEquals(c, "Group Insurance successfully created");
+			pi.clickdelete();
+		}
+		@Test(priority=12)
+		public void CreateGroupInsurancePremiumPaymentYearly_SC_627() throws Exception{
+			CreateGroupInsurancePremiumPaymentYearly pi=new CreateGroupInsurancePremiumPaymentYearly(driver);
+			pi.clickonsalary();	
+			pi.clickongroupinsurancedetail();
+			pi.clickaddemployees();
+			pi.resizeWindow();
+			Thread.sleep(3000);
+			pi.clickonload();
+			Thread.sleep(3000);
+			pi.exitFullscreen();
+			pi.clickonview();
+			Thread.sleep(2000);
+			pi.clickAddNewInsuranceDetails();
+			pi.selectGroupInsuranceName("Group_Insurance");
+			pi.clickGroupInsuranceNo("56776");
+			pi.clickStartMonth("Apr/2019");
+			pi.clickEndMonth("Apr/2019");
+			pi.clickAmount("500");
+			pi.selectInstitutionName("HDFC Bank-FORT MUMBAI");
+			pi.clickRemark("fgfhgjhgh");
+			pi.clickyearly();
+			pi.clickCreateGroupInsurancebutton();
+			String c=pi.getMessage();
+			Assert.assertEquals(c, "Group Insurance successfully created");
+			pi.clickdelete();
+		}	
 }

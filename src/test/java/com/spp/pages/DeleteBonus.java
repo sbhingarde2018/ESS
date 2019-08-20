@@ -14,11 +14,11 @@ public class DeleteBonus extends BasePage{
 	WebElement Bonus;
 	@FindBy(xpath="//*[@id='bonus_or_exgratia']/div/table/tbody/tr[1]/td[3]/a")
 	WebElement Compute;
-	@FindBy(id="add_employees")
+	@FindBy(xpath="//button[@id='add_employees']")
 	WebElement AddEmployee;
-	@FindBy(xpath="//*[@id=\"bf_form\"]/div[9]/button[1]")
+	@FindBy(xpath="//form[@id='bf_form']//button[contains(text(),'LOAD')]")
 	WebElement Load;
-	@FindBy(xpath="//*[@id='bec_employees']/tbody/tr/td[normalize-space()='Anil']/parent::tr/td[8]/a")
+	@FindBy(xpath="//tbody/tr[1]/td[8]/a/img")
 	WebElement Delete;
 	@FindBy(xpath="//*[@id='bec_employees']/tbody/tr[1]/td[8]/a")
 	WebElement Delete1;

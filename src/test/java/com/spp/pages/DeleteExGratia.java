@@ -20,7 +20,11 @@ public class DeleteExGratia extends BasePage {
 	WebElement ExgratiaGiven;
 	@FindBy(xpath="//*[@id=\"main\"]/div[2]/strong")
 	WebElement SuccessMessage;
-
+	@FindBy(xpath="//button[@id='add_employees']")
+	WebElement AddEmp;
+	@FindBy(xpath="//form[@id='bf_form']//button[contains(text(),'LOAD')]")
+	WebElement Load;
+	
 	public DeleteExGratia(WebDriver driver) {
 	super(driver);
 	PageFactory.initElements(driver,this);
@@ -39,5 +43,11 @@ public class DeleteExGratia extends BasePage {
 	}
 	public String getMessage() {
     	return SuccessMessage.getText();
+	}
+	public void ClickAddEmp() {
+		AddEmp.click();
+	}
+	public void ClickLoad() {
+		Load.click();
 	}
 }

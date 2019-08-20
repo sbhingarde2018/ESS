@@ -10,13 +10,13 @@ import com.spp.common.BasePage;
 public class CreateGroupInsurancePremiumPaymentYearly extends BasePage {
 	@FindBy(id="salary")
 	WebElement ClickOnSalary;
-	@FindBy(xpath="//a[text()='Group Insurance Detail']")
+	@FindBy(xpath="//a[contains(text(),'Group Insurance Detail')]")
 	WebElement ClickOnGroupInsuranceDetail;
 	@FindBy(id="add_employees")
 	WebElement ClickAddEmployees;
-	@FindBy(xpath="//button[text()='LOAD']")
+	@FindBy(xpath="//form[@id='bf_form']//button[contains(text(),'LOAD')]")
 	WebElement ClickOnLoad;
-	@FindBy(xpath="//*[@id=\"si_detail_employees\"]/tbody/tr/td[contains(text(),'Akshay')]/parent::tr/td[6]/a")
+	@FindBy(xpath="//tbody/tr[1]/td[6]/a")
 	WebElement ClickOnView;
 	@FindBy(xpath="//*[@id=\"standing_detail_list\"]/div[1]/span/a")
 	WebElement AddNewGroupInsuranceDetails;

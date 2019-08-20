@@ -54,7 +54,7 @@ public class CheckifSalaryAdvanceGeneralLinksEmployeeMasterredirectstoEmployee e
 	WebElement SelectDesignation;
 	@FindBy(xpath="//*[@id=\"create_employee_form\"]/div[2]/div/div/div[8]/input")
 	WebElement CreateEmployee;
-	@FindBy(xpath="//*[@id=\"main\"]/div[2]/strong")
+	@FindBy(xpath="//strong[contains(text(),'Employee successfully created')]")
 	WebElement successfullmessage;
 	@FindBy(id="emp_detail")
 	WebElement ClickEmployee;
@@ -62,7 +62,7 @@ public class CheckifSalaryAdvanceGeneralLinksEmployeeMasterredirectstoEmployee e
 	WebElement SelectEmployeeDetails;
 	@FindBy(id="filter_head")
 	WebElement ClickOnFilterHead;
-	@FindBy(xpath="//*[@id=\"bf_form\"]/div[10]/button[1]")
+	@FindBy(xpath="//*[@id=\"bf_form\"]/div/button[contains(text(),'LOAD')]")
 	WebElement Load;
 	@FindBy(xpath="//*[@id=\"employees_dtable\"]/tbody/tr/td[contains(text(),'Amaan')]/parent::tr/td[6]/a[2]")
 	WebElement DeleteEmployee;

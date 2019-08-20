@@ -18,11 +18,11 @@ public class EditEMIDetailsInLoanDetail extends BasePage{
 	WebElement Load;
 	@FindBy(id="filter")
 	WebElement MultiAllotment;
-	@FindBy(xpath="//*[@id=\"si_detail_employees\"]/tbody/tr[3]/td[6]/a")
+	@FindBy(xpath="//tbody/tr/td[contains(text(),'Reya')]/parent::tr/td[6]/a")
 	WebElement View;
-	@FindBy(xpath="//*[@id=\"standing_detail_list\"]/div[2]/table/tbody/tr[1]/td[7]/a")
+	@FindBy(xpath="//div[2]/table/tbody/tr/td[7]/a")
 	WebElement Detail;
-	@FindBy(xpath="//*[@id=\"main\"]/div/div[2]/nav/ul/li[2]/a")
+	@FindBy(xpath="//span[contains(text(),'EMI details')]")
 	WebElement EmiDetail;
 	@FindBy(xpath="//table/tbody/tr[1]/td[4]/a")
 	WebElement Edit;
@@ -79,8 +79,11 @@ public class EditEMIDetailsInLoanDetail extends BasePage{
 	}
 	
 	public void clickYesButton() throws Exception{
-		YesButton.click();
-		}
+		boolean popupvisible=isVisible(YesButton);
+		if (popupvisible)
+		{
+			YesButton.click();}
+			}
 	public String getMessage() {
 		return SuccessfulMessage.getText();
 	}

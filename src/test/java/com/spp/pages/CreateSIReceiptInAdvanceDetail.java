@@ -19,11 +19,11 @@ public class CreateSIReceiptInAdvanceDetail extends BasePage{
 	WebElement Load;
 	@FindBy(id="filter")
 	WebElement MultiAllotment;
-	@FindBy(xpath="//tbody/tr[5]/td[6]/a")
+	@FindBy(xpath="//tbody/tr/td[contains(text(),'Raj')]/parent::tr/td[6]/a")
 	WebElement View;
-	@FindBy(xpath="//div[2]/table/tbody/tr/td[contains(text(),'August')]/parent::tr/td[7]/a")
+	@FindBy(xpath="//div[2]/table/tbody/tr/td[contains(text(),'9090')]/parent::tr/td[7]/a")
 	WebElement Detail;
-	@FindBy(xpath="//*[@id=\"main\"]/div/div[2]/nav/ul/li[3]/a")
+	@FindBy(xpath="//span[contains(text(),'Receipt details')]")
 	WebElement ReceiptDetail;
 	@FindBy(id="si_date")
 	WebElement Date;
@@ -78,8 +78,11 @@ public class CreateSIReceiptInAdvanceDetail extends BasePage{
 	}
 	
 	public void clickYesButton() throws Exception{
-		YesButton.click();
-		}
+		boolean popupvisible=isVisible(YesButton);
+		if (popupvisible)
+		{
+			YesButton.click();}
+			}
 	public String getMessage() {
 		return SuccessfulMessage.getText();
 	}

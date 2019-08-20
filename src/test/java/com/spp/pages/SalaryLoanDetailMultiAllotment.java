@@ -41,6 +41,13 @@ public class SalaryLoanDetailMultiAllotment extends BasePage {
 	WebElement SuccessfulMessage;
 	@FindBy(xpath="//*[@id=\"standing_detail_list\"]/div[2]/table/tbody/tr[1]/td[8]/a")
 	WebElement DeleteButton;
+	@FindBy(xpath="//input[@id='select_all']")
+	WebElement DeselectEmp;
+	@FindBy(xpath="//tr//td[contains(text(),'Jaya')]/parent::tr/td[1]/input")
+	WebElement Emp1;
+	@FindBy(xpath="//tr//td[contains(text(),'Reya')]/parent::tr/td[1]/input")
+	WebElement Emp2;
+	
 	public SalaryLoanDetailMultiAllotment(WebDriver driver){
 		super(driver);
 		PageFactory.initElements(driver, this);
@@ -101,5 +108,17 @@ public class SalaryLoanDetailMultiAllotment extends BasePage {
 		DeleteButton.click();
 		switchToPopUpAndAccept(driver);
 	}
-
+	public void clickDSEmp() throws Exception{
+		DeselectEmp.click();
+	
+	}
+	public void clickEmp1() throws Exception{
+		Emp1.click();
+	
+	}
+	public void clickEmp2() throws Exception{
+		Emp2.click();
+	}
 }
+
+

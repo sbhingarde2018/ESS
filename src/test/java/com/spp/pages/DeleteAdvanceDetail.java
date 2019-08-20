@@ -18,11 +18,11 @@ public class DeleteAdvanceDetail extends BasePage{
 	WebElement AdvanceDetails;
 	@FindBy(xpath="//*[@id=\"add_employees\"]")
 	WebElement AddEmployee;
-	@FindBy(xpath="//*[@id=\"bf_form\"]/div[10]/button[1]")
+	@FindBy(xpath="//*[@id=\"bf_form\"]/div/button[contains(text(),'LOAD')]")
 	WebElement Load;
 	@FindBy(id="filter")
 	WebElement MultiAllotment;
-	@FindBy(xpath="//*[@id=\"si_detail_employees\"]/tbody/tr[1]/td[6]/a")
+	@FindBy(xpath="//tbody/tr[9]/td[6]/a")
 	WebElement View;
 	@FindBy(xpath="//div[2]/table/tbody/tr[1]/td[8]/a")
 	WebElement Delete;

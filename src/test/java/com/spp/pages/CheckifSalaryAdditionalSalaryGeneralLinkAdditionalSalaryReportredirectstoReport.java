@@ -20,7 +20,7 @@ public class CheckifSalaryAdditionalSalaryGeneralLinkAdditionalSalaryReportredir
 	WebElement GetEmployees;
 	@FindBy(id="filter_head")
 	WebElement AdvanceFilter;
-	@FindBy(xpath="//*[@id=\"bf_form\"]/div[10]/button[1]")
+	@FindBy(xpath="//form[@id='bf_form']//button[contains(text(),'LOAD')]")
 	WebElement ClickOnLoad;
 	@FindBy(id="addition_sal_report_submit")
 	WebElement GetExcelReport;

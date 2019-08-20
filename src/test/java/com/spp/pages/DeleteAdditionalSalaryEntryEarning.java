@@ -16,7 +16,7 @@ public class DeleteAdditionalSalaryEntryEarning extends BasePage{
 	WebElement PayMonth;
 	@FindBy(xpath="//*[@id=\"addn_salary\"]/div[2]/div/input")
 	WebElement GetValues;
-	@FindBy(xpath="//*[@id=\"main\"]/div[2]/div[4]/div[1]/div[2]/table/tbody/tr[1]/td[5]/a")
+	@FindBy(xpath="//div[2]/table/tbody/tr[1]/td[5]/a")
 	WebElement Allot;
 	@FindBy(xpath="//tbody/tr[1]/td[5]/a")
 	WebElement Delete;
@@ -26,7 +26,7 @@ public class DeleteAdditionalSalaryEntryEarning extends BasePage{
 	WebElement AddEmployees;
 	@FindBy(id="filter_head")
 	WebElement AdvanceFilter;
-	@FindBy(xpath="//*[@id=\"bf_form\"]/div[9]/button[1]")
+	@FindBy(xpath="//*[@id=\"bf_form\"]/div/button[contains(text(),'LOAD')]")
 	WebElement Load;
 	@FindBy(id="select_all_employee")
 	WebElement SelectAllBox;
@@ -34,7 +34,7 @@ public class DeleteAdditionalSalaryEntryEarning extends BasePage{
 	WebElement EmployeeBox;
 	@FindBy(id="amount")
 	WebElement Amount;
-	@FindBy(xpath="//*[@id=\"tabs-3\"]/div[2]/table/tbody/tr/td[5]/a")
+	@FindBy(xpath="//input[@name='commit']")
 	WebElement AllotButton;
 
 	public DeleteAdditionalSalaryEntryEarning(WebDriver driver) {

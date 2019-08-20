@@ -10,19 +10,19 @@ import com.spp.common.BasePage;
 public class DeleteGroupInsuranceDetail extends BasePage{
 	@FindBy(id="master")
 	WebElement masterlink;
-	@FindBy(xpath="//*[@id=\"menu\"]/li[3]/div/div[2]/ul/li[6]/a")
+	@FindBy(xpath="//a[contains(text(),'Group Insurance Detail')]")
 	WebElement GroupInsurance;
 	@FindBy(id="salary")
 	WebElement salarylink;
-	@FindBy(xpath="//*[@id=\"menu\"]/li[6]/div/div[1]/ul/li[9]/a")
+	@FindBy(xpath="//a[contains(text(),'Group Insurance Detail')]")
 	WebElement GroupInsuranceDetails;
 	@FindBy(xpath="//*[@id=\"add_employees\"]")
 	WebElement AddEmployee;
-	@FindBy(xpath="//*[@id=\"bf_form\"]/div[9]/button[1]")
+	@FindBy(xpath="//form[@id='bf_form']//button[contains(text(),'LOAD')]")
 	WebElement Load;
-	@FindBy(xpath="//*[@id=\"si_detail_employees\"]/tbody/tr[1]/td[6]/a")
+	@FindBy(xpath="//tbody/tr/td[contains(text(),'Reya')]/parent::tr/td[6]/a")
 	WebElement View;
-	@FindBy(xpath="//*[@id=\"standing_detail_list\"]/div[2]/table/tbody/tr[1]/td[9]/a")
+	@FindBy(xpath="//div[2]/table/tbody/tr/td[9]/a/img")
 	WebElement Delete;
 	@FindBy(xpath="//*[@id=\"main\"]/div[2]/strong")
 	WebElement SuccessfulMessage;
@@ -60,11 +60,6 @@ public class DeleteGroupInsuranceDetail extends BasePage{
 		View.click();
 	}
 	public void clickDelete1() throws Exception{
-		Delete.click();
-		switchToPopUpAndDismiss(driver);
-	}
-
-	public void clickDelete2() throws Exception{
 		Delete.click();
 		switchToPopUpAndAccept(driver);
 	}
