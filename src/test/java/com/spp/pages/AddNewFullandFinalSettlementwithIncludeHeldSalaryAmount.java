@@ -34,7 +34,7 @@ public class AddNewFullandFinalSettlementwithIncludeHeldSalaryAmount extends Bas
 	WebElement CreateFNF;
 	@FindBy(xpath="//strong[text()='Full And Final Settlement successfully created']")
 	WebElement SuccessMessage;
-	@FindBy(xpath="//*[@id=\"employees\"]/tbody/tr/td[6]/a")
+	@FindBy(xpath="//td[contains(text(),'Rehan')]/parent::tr/td[6]/a/img")
 	WebElement ClickDelete;
 	@FindBy(xpath="//*[@id=\"employees\"]/tbody/tr/td[5]/a")
 	WebElement ClickOnDetails;
