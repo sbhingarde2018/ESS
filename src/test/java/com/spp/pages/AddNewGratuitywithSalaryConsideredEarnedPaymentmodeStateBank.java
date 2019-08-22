@@ -6,8 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import com.spp.common.BasePage;
 
-public class AddNewGratuity extends BasePage{
-
+public class AddNewGratuitywithSalaryConsideredEarnedPaymentmodeStateBank extends BasePage {
 	@FindBy(id="salary")
 	WebElement ClickOnSalary;
 	@FindBy(xpath="//a[text()='Gratuity']")
@@ -22,14 +21,18 @@ public class AddNewGratuity extends BasePage{
 	WebElement SalaryConsidered;
 	@FindBy(id="gratuity_date_of_payment")
 	WebElement DateofPayment;
+	@FindBy(id="gratuity_cheque_dd_no")
+	WebElement ChequeNo;
 	@FindBy(xpath="//button[contains(text(),'Compute')]")
 	WebElement Compute;
 	@FindBy(xpath="//input[@id='create_gratuity']")
 	WebElement CreateGratuity;
 	@FindBy(xpath="//*[@id=\"main\"]/div[2]/strong")
 	WebElement SuccessMessage;
+	@FindBy(xpath="//div/table/tbody/tr/td[5]/a/img")
+	WebElement Delete;
 	
-	public AddNewGratuity(WebDriver driver) {
+	public AddNewGratuitywithSalaryConsideredEarnedPaymentmodeStateBank(WebDriver driver) {
 		super(driver);
 		PageFactory.initElements(driver, this);
 	}
@@ -48,6 +51,10 @@ public class AddNewGratuity extends BasePage{
 	public void selectmodeofPayment(String value) {
 		dropDownSelect(SelectMOP, value);
 	}
+	public void EnterChequeNo(String value) {
+		ChequeNo.clear();
+		ChequeNo.sendKeys(value);
+	}
 	public void selectSalaryConsidered() {
 		if(!SalaryConsidered.isSelected()) {
 			SalaryConsidered.click();
@@ -64,5 +71,9 @@ public class AddNewGratuity extends BasePage{
 	}
 	public String getMessage() {
     	return SuccessMessage.getText();
+	}	
+	public void clickDelete() {
+		Delete.click();
+		switchToPopUpAndAccept(driver);
 	}
 }

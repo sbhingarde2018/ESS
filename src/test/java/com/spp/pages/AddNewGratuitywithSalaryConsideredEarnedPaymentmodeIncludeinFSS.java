@@ -6,8 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import com.spp.common.BasePage;
 
-public class AddNewGratuity extends BasePage{
-
+public class AddNewGratuitywithSalaryConsideredEarnedPaymentmodeIncludeinFSS extends BasePage {
 	@FindBy(id="salary")
 	WebElement ClickOnSalary;
 	@FindBy(xpath="//a[text()='Gratuity']")
@@ -28,8 +27,11 @@ public class AddNewGratuity extends BasePage{
 	WebElement CreateGratuity;
 	@FindBy(xpath="//*[@id=\"main\"]/div[2]/strong")
 	WebElement SuccessMessage;
+	@FindBy(xpath="//div/table/tbody/tr/td[5]/a/img")
+	WebElement Delete;
 	
-	public AddNewGratuity(WebDriver driver) {
+	
+	public AddNewGratuitywithSalaryConsideredEarnedPaymentmodeIncludeinFSS(WebDriver driver) {
 		super(driver);
 		PageFactory.initElements(driver, this);
 	}
@@ -64,5 +66,9 @@ public class AddNewGratuity extends BasePage{
 	}
 	public String getMessage() {
     	return SuccessMessage.getText();
+	}	
+	public void clickDelete() {
+		Delete.click();
+		switchToPopUpAndAccept(driver);
 	}
 }
