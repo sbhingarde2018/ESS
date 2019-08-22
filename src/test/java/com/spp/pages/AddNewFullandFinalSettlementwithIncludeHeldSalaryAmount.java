@@ -46,7 +46,7 @@ public class AddNewFullandFinalSettlementwithIncludeHeldSalaryAmount extends Bas
 	WebElement EnterAmount;
 	@FindBy(id="new_head_update")
 	WebElement CreateHead;
-	@FindBy(xpath="//*[@id=\"full_and_final_settlement_pending_loan_detail_\"]")
+	@FindBy(xpath="//input[@id='full_and_final_settlement_pending_loan_amount']")
 	WebElement SelectLoan;
 	@FindBy(id="full_and_final_settlement_open_component_lists_")
 	WebElement SelectHead;

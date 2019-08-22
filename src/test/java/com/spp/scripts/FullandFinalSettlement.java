@@ -375,7 +375,7 @@ public class FullandFinalSettlement extends BaseTest{
 		ad.clickdelete();
 	}
 	
-/*	@Test(priority=22)
+	@Test(priority=22)
 	public void AddNewFullandFinalSettlementwithIncludePendingLoanAmount_SC_976() throws Exception {
 		AddNewFullandFinalSettlementwithIncludeHeldSalaryAmount ad = new AddNewFullandFinalSettlementwithIncludeHeldSalaryAmount(driver);
 		ad.clickonsalary();
@@ -388,12 +388,12 @@ public class FullandFinalSettlement extends BaseTest{
 		ad.createfnf();
 		String e=ad.getmessage();
 		Assert.assertEquals(e, "Full And Final Settlement successfully created");
-		ad.clickdelete();
+		//ad.clickdelete();
 	}
 	
 	@Test(priority=23)
 	public void DeleteFullandFinalSettlement_SC_977() throws Exception {
-	AddNewFullandFinalSettlementwithIncludeHeldSalaryAmount ad = new AddNewFullandFinalSettlementwithIncludeHeldSalaryAmount(driver);
+		AddNewFullandFinalSettlementwithIncludeHeldSalaryAmount ad = new AddNewFullandFinalSettlementwithIncludeHeldSalaryAmount(driver);
 		ad.clickonsalary();
 		ad.clickonFNF();
 		ad.clickdelete1();
@@ -703,7 +703,7 @@ public class FullandFinalSettlement extends BaseTest{
 		String e=ad.getmessage();
 		Assert.assertEquals(e, "Full And Final Settlement successfully created");
 		ad.clickdelete();
-	}*/
+	}
 	
 	
 

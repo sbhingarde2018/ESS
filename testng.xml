@@ -16,6 +16,7 @@
  	<class name="com.spp.scripts.Bonus"/>
   	<class name="com.spp.scripts.ExGratia"/>-->
  	<class name="com.spp.scripts.FullandFinalSettlement"/>
+  	<!--<class name="com.spp.scripts.Gratuity"/>-->
   
  <!-- <class name="com.spp.scripts.Form16"/> --> 
   	<!-- <class name="com.spp.scripts.TDSReports"/> -->
