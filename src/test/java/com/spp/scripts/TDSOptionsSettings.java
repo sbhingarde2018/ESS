@@ -4,7 +4,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import com.spp.common.BaseTest;
 import com.spp.generics.Utility;
-//import com.spp.pages.TocheckTaxcalculationbasedonDeclaredAmount;
+import com.spp.pages.TocheckTaxcalculationbasedonDeclaredAmount;
 //import com.spp.pages.TocheckTaxcalculationbasedonProofAmount;
 import com.spp.pages.TocheckifProofAmountcanbesetforTDSCalculation;
 import com.spp.pages.TocheckifbydefaultsettingisbasedonDeclaredAmount;
@@ -25,7 +25,7 @@ public class TDSOptionsSettings extends BaseTest {
 		ab.ClickOPtionsSettings();
 		ab.ClickProofAmount();
 		Thread.sleep(2000);
-		ab.SelectMonthYear("Jun/2019");
+		ab.SelectMonthYear("May/2020");
 		ab.ClickSaveBtn();
 		//String i=ab.getMessage();
 		//Assert.assertEquals(i, "Tds Computation Settings Saved Successfully");
@@ -33,7 +33,7 @@ public class TDSOptionsSettings extends BaseTest {
 		ab.ClickDeclaredAmount();
 		ab.ClickSaveBtn();
 	}
-	/*@Test(priority=2)
+	@Test(priority=2)
 	public void TocheckTaxcalculationbasedonDeclaredAmount_SC_1037() throws Exception {
 		TocheckTaxcalculationbasedonDeclaredAmount ab=new TocheckTaxcalculationbasedonDeclaredAmount(driver);
 		ab.ClickTDS();
@@ -49,6 +49,10 @@ public class TDSOptionsSettings extends BaseTest {
 		ab.EnterGrossAmount("10000");
 		ab.EnterProofAmount("5000");
 		ab.ClickSaveBtn();
+		Thread.sleep(2000);
+		ab.ClickTDS();
+		
+		
 	}
 	@Test(priority=3)
 	public void TocheckTaxcalculationbasedonProofAmount_SC_1040() throws Exception {
@@ -72,7 +76,7 @@ public class TDSOptionsSettings extends BaseTest {
 		ab.EnterGrossAmount("10000");
 		ab.EnterProofAmount("5000");
 		ab.ClickSaveBtn();
-	}*/
+	}
 	@Test(priority=4)
 	public void ToseeifthesettingrevertsbacktoDeclaredAmountwithstartofnewfinancialyear_SC_1042() throws Exception {
 		ToseeifthesettingrevertsbacktoDeclaredAmountwithstartofnewfinancialyear ab=new ToseeifthesettingrevertsbacktoDeclaredAmountwithstartofnewfinancialyear(driver);

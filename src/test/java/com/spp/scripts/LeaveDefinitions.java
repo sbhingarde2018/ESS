@@ -68,7 +68,7 @@ public class LeaveDefinitions extends BaseTest {
 		String s=ld.getmessage();
 		Assert.assertEquals(s, "Leave definition successfully deleted.");
 	}
-	/*@Test(priority=4)
+	@Test(priority=4)
 	public void CreateLeaveDefinitionwithoutAffectSalaryandAllot_SC_447() throws Exception{
 		CreateLeaveDefinitionwithoutAffectSalaryandAllot ld=new CreateLeaveDefinitionwithoutAffectSalaryandAllot(driver);
 		ld.clickonmaster();
@@ -82,5 +82,5 @@ public class LeaveDefinitions extends BaseTest {
 		ld.clickonmaster();
 		ld.clickleavedefinitions();
 		ld.clickdelete();
-	}	*/
+	}
 }

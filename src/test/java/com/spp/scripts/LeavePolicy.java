@@ -145,7 +145,7 @@ public class LeavePolicy extends BaseTest {
 		System.out.println("Leave Definition Page is Displayed");
 	}
 	
-	/*@Test(priority=7)
+	@Test(priority=7)
 	public void verifyUpdatedLeaveBeahaviour_SC_272() throws InterruptedException{
 		LeaveBehaviourSettings lb=new LeaveBehaviourSettings(driver);
 		lb.clickMastserLink();
@@ -400,7 +400,7 @@ public class LeavePolicy extends BaseTest {
 		hs.clickApplyButton();
 		Thread.sleep(6000);
 		hs.exitFullscreen();
-	}*/
+	}
 	
 	@Test(priority=13) 
     public void CheckForCarryOverInLeavePolicys_SC_283() throws InterruptedException{
@@ -564,7 +564,7 @@ public class LeavePolicy extends BaseTest {
    		Thread.sleep(8000);
 		}
 	
-	/*@Test(enabled=false)
+	@Test(enabled=false)
 	public void CheckExcessCasualLeaveTakenAsLOP_SC_276() throws InterruptedException{
 		CheckExcessCasualLeaveTakenAsLOP lb=new CheckExcessCasualLeaveTakenAsLOP(driver);
 		lb.clickMastserLink();
@@ -598,9 +598,9 @@ public class LeavePolicy extends BaseTest {
 		lb.selectView();
 		Thread.sleep(7000);
 		lb.clickDeleteButton();
-		}*/
+		}
 	
-	/*@Test(enabled=false)
+	@Test(enabled=false)
 	public void CheckForPrioritySettingsInLeavePolicy_SC_278() throws InterruptedException{
 		CheckForPrioritySettingsInLeavePolicy lb=new CheckForPrioritySettingsInLeavePolicy(driver);
 		lb.clickMastserLink();
@@ -1065,8 +1065,8 @@ public class LeavePolicy extends BaseTest {
  	lb.clickAutoAllotTab();
  	lb.clickLeaveAllotmentBox();
  	lb.clickUpdateButton();    
-}*/
-     /*@Test(priority=27) 
+}
+     @Test(priority=27) 
      public void UpdateAutoAllotSettingsMonthly_SC_356() throws InterruptedException{
     	 UpdateAutoAllotSettingsMonthly lb=new UpdateAutoAllotSettingsMonthly(driver);
  	lb.clickMastserLink();
@@ -1102,7 +1102,7 @@ public class LeavePolicy extends BaseTest {
  	lb.clickLeaveAllotmentBox();
  	lb.clickUpdateButton();  
 }
-*/   /*  @Test(priority=28) 
+     @Test(priority=28) 
 	public void CheckAutoAllotSettingsMonthly_SC_357() throws InterruptedException{
 	    	 CheckAutoAllotSettingsMonthly lb=new CheckAutoAllotSettingsMonthly(driver);
 	lb.clickReport();
@@ -1176,8 +1176,8 @@ public class LeavePolicy extends BaseTest {
 	lb.clickEmployee2();
 	lb.clickGenerateReport();
 	Thread.sleep(7000);
-}*/
-	/*@Test(priority=31) 
+}
+	@Test(priority=31) 
      public void UpdateAutoAllotSettingsQuarterly_SC_360() throws InterruptedException{
     	 UpdateAutoAllotSettingsQuarterly lb=new UpdateAutoAllotSettingsQuarterly(driver);
  	lb.clickMastserLink();
@@ -1211,9 +1211,9 @@ public class LeavePolicy extends BaseTest {
  	lb.clickAutoAllotTab();
  	lb.clickLeaveAllotmentBox();
  	lb.clickUpdateButton();     
-}*/
+}
 
-   /*  @Test(priority=32) 
+    @Test(priority=32) 
  	public void CheckAutoAllotSettingsQuarterly_SC_361() throws InterruptedException{
     	 CheckAutoAllotSettingsQuarterly lb=new CheckAutoAllotSettingsQuarterly(driver);
  	lb.clickReport();
@@ -1231,8 +1231,8 @@ public class LeavePolicy extends BaseTest {
  	lb.clickEmployee2();
  	lb.clickGenerateReport();
  	Thread.sleep(7000);
- }*/
-    /*@Test(priority=33) 
+ }
+    @Test(priority=33) 
     public void UpdateAutoAllotSettingsHalfYearly_SC_362() throws InterruptedException{
     UpdateAutoAllotSettingsHalfYearly lb=new UpdateAutoAllotSettingsHalfYearly(driver);
  	lb.clickMastserLink();
@@ -1266,8 +1266,8 @@ public class LeavePolicy extends BaseTest {
  	lb.clickAutoAllotTab();
  	lb.clickLeaveAllotmentBox();
  	lb.clickUpdateButton();     
-}*/
-   /*  @Test(priority=34) 
+}
+   @Test(priority=34) 
   	public void CheckAutoAllotSettingsHalfYearly_SC_363() throws InterruptedException{
     	 CheckAutoAllotSettingsHalfYearly lb=new CheckAutoAllotSettingsHalfYearly(driver);
   	lb.clickReport();
@@ -1285,8 +1285,8 @@ public class LeavePolicy extends BaseTest {
   	lb.clickEmployee2();
   	lb.clickGenerateReport();
   	Thread.sleep(7000);
-}*/
-	/*@Test(priority=35) 
+}
+	@Test(priority=35) 
     public void UpdateAutoAllotSettingsYearly_SC_364() throws InterruptedException{
    	 UpdateAutoAllotSettingsYearly lb=new UpdateAutoAllotSettingsYearly(driver);
 	lb.clickMastserLink();
@@ -1320,8 +1320,8 @@ public class LeavePolicy extends BaseTest {
 	lb.clickAutoAllotTab();
 	lb.clickLeaveAllotmentBox();
 	lb.clickUpdateButton();     
-}*/
-	/*@Test(priority=36) 
+}
+	@Test(priority=36) 
   	public void CheckAutoAllotSettingsYearly_SC_365() throws InterruptedException{
     	 CheckAutoAllotSettingsYearly lb=new CheckAutoAllotSettingsYearly(driver);
   	lb.clickReport();
@@ -1607,8 +1607,8 @@ public class LeavePolicy extends BaseTest {
 		mc.enterToDate("25 July 2018");
 		Thread.sleep(2000);
 		mc.selectApplyButton();
-	}*/
-/*	@Test(priority=43) not running
+	}
+	@Test(priority=43) not running
 	public void CheckforMinimumNodaysshouldbeappliedtoavailtheCasualLeave_SC_308() throws InterruptedException{
 		CheckforMinimumNodaysshouldbeappliedtoavailtheCasualLeave mc=new CheckforMinimumNodaysshouldbeappliedtoavailtheCasualLeave(driver);
 		mc.clickMastserLink();
@@ -1804,15 +1804,15 @@ public class LeavePolicy extends BaseTest {
 		Thread.sleep(500);	
 		el.clickonsave();
 		String p=el.getalertmessage();
-		Assert.assertEquals(p, "Encash limit exceeded in a year.");
-	}*/
+		Assert.assertEquals(p, "Encash limit exceeded in a year.");*/
+	}
 	
-	/*@Test(priority=36)
+	@Test(priority=36)
 	public void DeleteClone() throws Exception {
 		UpdateAutoAllotSettingsMonthly up = new UpdateAutoAllotSettingsMonthly(driver);
 		up.clickMastserLink();
 		up.selectLeavePolicy();
 		up.deleteClone();
-	}*/
+	}
 	
 }

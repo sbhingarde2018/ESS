@@ -56,7 +56,7 @@ public class BulkIncrementDetails extends BaseTest {
 		be.ClickDelete();
 		}
 	
-	/*@Test(priority=2)
+	@Test(priority=2)
 	public void CheckifEmployeeBulkSalaryRateDetailsGeneralLinksSalaryHeadsredirectstoMastermodule_SC_467() throws Exception { 
 	CheckifEmployeeBulkSalaryRateDetailsGeneralLinksSalaryHeadsredirectstoMastermodule be=new CheckifEmployeeBulkSalaryRateDetailsGeneralLinksSalaryHeadsredirectstoMastermodule(driver);
 		be.clickonemployee();
@@ -105,5 +105,5 @@ public class BulkIncrementDetails extends BaseTest {
 		Thread.sleep(3000);
 		bb.selectCloseButton();
 		bb.exitFullscreen();
-		}*/
+		}
 }

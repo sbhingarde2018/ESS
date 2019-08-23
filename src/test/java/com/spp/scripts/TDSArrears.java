@@ -26,7 +26,7 @@ public class TDSArrears extends BaseTest {
 		at.clickAddNewEmployee();
 		Thread.sleep(3000);
 		at.enterEmployeeId("TATA53866");
-		at.enterEmployeeRefNo("TATA753666");
+		at.enterEmployeeRefNo("TATA721666");
 		at.enterEmployeeName("Rihana");
 		at.enterFathername("Neil");
 		at.enterdob("14 June 1980");

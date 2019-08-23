@@ -42,6 +42,7 @@ public class AdvanceMaster extends BaseTest {
 		ld.clickDeleteButton();
 		ld.switchToPopUpAndAccept(driver);
 	}
+	
 	@Test(priority=1)
 	public void CheckAdvanceMasterCreatedWithClubbedInSalary_SC_6() throws Exception{
 		CheckAdvanceMasterCreatedWithClubbedInSalary ld=new CheckAdvanceMasterCreatedWithClubbedInSalary(driver);
@@ -54,6 +55,7 @@ public class AdvanceMaster extends BaseTest {
 		String d=ld.getMessage();
 		Assert.assertEquals(d, "Advance successfully created");
 	}
+	
 	@Test(priority=2)
 	public void CheckAdvanceMasterEdited_SC_7() throws Exception{
 		CheckAdvanceMasterEdited ld=new CheckAdvanceMasterEdited(driver);
@@ -95,7 +97,7 @@ public class AdvanceMaster extends BaseTest {
 		String d=ld.getMessage();
 		Assert.assertEquals(d, "Advance successfully created");
 	}
-	/*@Test(priority=5)
+	@Test(priority=5)
 	public void UpdateAdvanceMaster_SC_148() throws Exception{
 		UpdateAdvanceMaster am=new UpdateAdvanceMaster(driver);
 		am.navigateMaster();
@@ -371,5 +373,5 @@ public class AdvanceMaster extends BaseTest {
 		ld.clickAdvanceMaster();
 		ld.clickdelete();
 		ld.switchToPopUpAndAccept(driver);
-	}*/  	
+	}	
 }

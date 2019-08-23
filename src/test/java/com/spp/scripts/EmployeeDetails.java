@@ -119,7 +119,7 @@ public class EmployeeDetails extends BaseTest{
 		Assert.assertEquals(s, "Employee detail was successfully created.");
 		}
 			
-	/*@Test(priority=3)
+	@Test(priority=3)
 	public void CheckDeleteClassificationDetailsInEmployeeExtra1_SC_421() throws Exception {
 	DeleteClassificationDetailsInEmployee ce = new DeleteClassificationDetailsInEmployee(driver);
 		ce.clickonemployee();
@@ -136,9 +136,9 @@ public class EmployeeDetails extends BaseTest{
 		String message = ce.getMessage();
 		Assert.assertEquals(message, "Employee detail was successfully deleted.");
 		ce.exitFullscreen();
-	}*/
+	}
 	
-	/*@Test(priority=4)
+	@Test(priority=4)
 	public void DeleteEmployee1() throws Exception {
 		DeleteClassificationDetailsInEmployee ce = new DeleteClassificationDetailsInEmployee(driver);
 		ce.clickonemployee();
@@ -151,7 +151,7 @@ public class EmployeeDetails extends BaseTest{
 		ce.deleteemployee();
 		ce.switchToPopUpAndAccept(driver);
 		Thread.sleep(5000);
-	}*/
+	}
 	
 	@Test(priority=5)
 	public void AddEmployeewithClassificationDetail_SC_440() throws Exception{
@@ -513,7 +513,7 @@ public class EmployeeDetails extends BaseTest{
 	String message = xl.getSuccessmessage();
 	Assert.assertEquals(message, "Successfully Imported");
 }
-	/*@Test(priority=21)
+	@Test(priority=21)
 	public void CheckDeleteClassificationDetailsInEmployeeExtra() throws Exception {
 	DeleteClassificationDetailsInEmployee ce = new DeleteClassificationDetailsInEmployee(driver);
 		ce.clickonemployee();
@@ -528,7 +528,7 @@ public class EmployeeDetails extends BaseTest{
 		ce.switchToPopUpAndAccept(driver);
 		String message = ce.getMessage();
 		Assert.assertEquals(message, "Employee detail was successfully deleted.");
-	}*/
+	}
 	@Test(priority=22)
 	public void DeleteEmployee() throws Exception {
 		DeleteClassificationDetailsInEmployee ce = new DeleteClassificationDetailsInEmployee(driver);

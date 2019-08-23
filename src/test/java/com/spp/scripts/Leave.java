@@ -15,7 +15,7 @@ import com.spp.pages.UpdateLeaveDefinition;
 
 public class Leave extends BaseTest {
 
-/*@Test(priority=0)
+	@Test(priority=0)
 	public void verifyAddLeaveDefinitions_SC_33() throws Exception{
 		AddLeaveDefinitions ld=new AddLeaveDefinitions(driver);
 		ld.clickMastserLink();
@@ -80,6 +80,6 @@ public class Leave extends BaseTest {
 		String s=ld.getTextMessage();
 		Assert.assertEquals(s, "Leave definition successfully created.");
 		ld.clickdelete();
-	}*/
+	}
 	
 }

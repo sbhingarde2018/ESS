@@ -63,7 +63,7 @@ import com.spp.pages.UpdatePeriodicIncentive;
 
 public class StandingInstructionTestCase extends BaseTest{
 
-  /*@Test(priority=0)
+  @Test(priority=0)
 	public void verifyCreatedAdvanceMaster_SC_140() throws Exception{
 		AddAdvanceMaster am=new AddAdvanceMaster(driver);
 		Thread.sleep(5000);
@@ -230,7 +230,7 @@ public class StandingInstructionTestCase extends BaseTest{
 		Assert.assertEquals(s, "Group Insurance successfully deleted");
 	}
 	
-	@Test(priority=12)
+	/*@Test(priority=12)
 	public void verifyAddedPeriodicIncentive_SC_24() throws Exception{
 		CheckPeriodicIncMstrcanbeEdited pi=new CheckPeriodicIncMstrcanbeEdited(driver);
 		Thread.sleep(5000);
@@ -242,10 +242,10 @@ public class StandingInstructionTestCase extends BaseTest{
 		pi.clickCreatePeriodicIncentive();
 		String s=pi.getMessage();
 		Assert.assertEquals(s, "Periodic Incentive successfully created");
-	}
+	}*/
 	
 	
-	/*@Test(priority=13)
+	@Test(priority=13)
 	public void verifyUpdatedPeriodicIncentive_SC_26() throws Exception{
 		UpdatePeriodicIncentive pi=new UpdatePeriodicIncentive(driver);
 		Thread.sleep(5000);
@@ -534,7 +534,7 @@ public class StandingInstructionTestCase extends BaseTest{
 		Assert.assertTrue(c.contains("Insurance successfully"));
 	
 	}   
-	@Test(priority=25)
+	/*@Test(priority=25)
 	public void DeleteEMIDetail_SC_384() throws Exception{
 		DeleteEMIDetail pi=new DeleteEMIDetail(driver);
 		pi.navigateMaster();	
@@ -553,7 +553,7 @@ public class StandingInstructionTestCase extends BaseTest{
 		String c=pi.getMessage();
 		System.out.println(c);
 		Assert.assertTrue(c.contains("Details Successfully"));
-}  
+}  */
 	@Test(priority=26)
 	public void CreateInsuranceDetails_SC_303() throws Exception{
 		CreateInsuranceDetails pi=new CreateInsuranceDetails(driver);
@@ -579,7 +579,7 @@ public class StandingInstructionTestCase extends BaseTest{
 		pi.clickDeleteButton();
 		
 	}  
-		@Test(priority=27)
+		/*@Test(priority=27)
 	public void EditEMIDetail_SC_382() throws Exception{
 		EditEMIDetail pi=new EditEMIDetail(driver);
 		pi.navigatesalary();	
@@ -596,7 +596,7 @@ public class StandingInstructionTestCase extends BaseTest{
 		pi.clickUpdate();
 		String d=pi.getMessage();
 		Assert.assertEquals(d, "Details Successfully updated");
-}
+}*/
 	@Test(priority=28)
 	public void AddNewGroupInsuranceMaster_SC_304() throws Exception{
 		AddNewGroupInsuranceMaster pi=new AddNewGroupInsuranceMaster(driver);
@@ -625,7 +625,7 @@ public class StandingInstructionTestCase extends BaseTest{
 		pi.clickDelete();											
 
 } 
-	@Test(priority=30)
+	/*@Test(priority=30)
 	public void EditEMIDetail_SC_380() throws Exception{
 	EditEMIDetail pi=new EditEMIDetail(driver);
 		pi.navigatesalary();
@@ -643,7 +643,7 @@ public class StandingInstructionTestCase extends BaseTest{
 		pi.clickUpdate();
 		String t=pi.getMessage();
 		Assert.assertEquals(t, "Details Successfully updated");
-} 
+} */
 	@Test(priority=31)
 	public void GroupInsuranceDetailSingleAllotment_SC_311() throws Exception{
 		GroupInsuranceDetailSingleAllotment pi=new GroupInsuranceDetailSingleAllotment(driver);
@@ -721,7 +721,7 @@ public class StandingInstructionTestCase extends BaseTest{
 		pi.clickView();
 		pi.clickDelete1();
 		Thread.sleep(3000);
-		pi.clickDelete2();
+		//pi.clickDelete2();
 		
 		String r=pi.getMessage();
 		Assert.assertEquals(r, "Group Insurance successfully deleted");
@@ -802,7 +802,7 @@ public class StandingInstructionTestCase extends BaseTest{
 		pi.clickReports("Detailed Report");
 		pi.clickFrom("Feb/2017");
 		pi.clickTo("Jan/2018");
-		pi.clickGroupBy("");
+		//pi.clickGroupBy("");
 }
 	@Test(priority=39)
 	public void DeletePeriodicIncentiveDetail_SC_375() throws Exception{
@@ -1089,7 +1089,7 @@ public class StandingInstructionTestCase extends BaseTest{
 		pi.clickCreateGroupInsurancebutton();
 		String c=pi.getMessage();
 		Assert.assertEquals(c, "Group Insurance successfully created");
-	}*/
+	}
 	@Test(priority=49)
 	public void CreateGroupInsurancePremiumPaymentHalfYearly_SC_626() throws Exception{
 		CreateGroupInsurancePremiumPaymentHalfYearly pi=new CreateGroupInsurancePremiumPaymentHalfYearly(driver);

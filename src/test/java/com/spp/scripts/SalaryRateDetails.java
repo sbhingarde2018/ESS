@@ -94,7 +94,7 @@ public class SalaryRateDetails extends BaseTest {
 		rr.exitFullscreen();
 	}
 	
-	@Test(priority=2)
+/*	@Test(priority=2)
 	public void verifyAllotSalaryViaExcel_SC_100() throws Exception {
 		AllotSalaryViaExcel aa= new AllotSalaryViaExcel(driver);
 		aa.clickEmployeeLink();
@@ -134,7 +134,7 @@ public class SalaryRateDetails extends BaseTest {
 		Thread.sleep(3000);
 		aa.SelectSaveButton();
 		aa.exitFullscreen();
-	}
+	}*/
 	
 	@Test(priority=3)
 	public void EditClassificationDetailsChangeSalaryStructureofanemployee_SC_410() throws Exception{

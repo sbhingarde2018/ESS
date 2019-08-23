@@ -37,7 +37,7 @@ import com.spp.pages.UpdateMasterWeeklyOff;
 import junit.framework.Assert;
 
 public class SalarySheetTestPlan extends BaseTest{
-	/*
+	
 	@Test(priority=0)
  	public void UpdateCalculationTypeNotApplicable_SC_157() throws Exception{
 		UpdateCalculationTypeNotApplicable sh=new UpdateCalculationTypeNotApplicable(driver);
@@ -590,28 +590,6 @@ public class SalarySheetTestPlan extends BaseTest{
 				rr.SelectSaveButton();
 		 		String s=rr.getMessage();
 		 		Assert.assertEquals(s, "Salary Allotted successfully");
-}
-	 @Test(priority=32)
-		public void EditEmployeeDOL_SC_205() throws Exception{
-		 EditEmployeeDOL ww=new EditEmployeeDOL(driver);
-			ww.clickEmployeeLink();
-			ww.selectEmployeeDetails();
-			ww.selectFilterHead();
-			System.out.println("done1");
-			Thread.sleep(3000);
-			//ww.clickEmployeewithoutClass();
-			//System.out.println("done2");
-			ww.selectLoadButton();
-			Thread.sleep(4000);
-			ww.selectViewButton();
-			ww.selectEditEmployee();
-			ww.selectSeparationInfo();
-			ww.selectDateOfLeaving("01 November 2018");
-			ww.selectReasonForLeaving("On Leave");
-			//Thread.sleep(3000);
-			ww.clickUpdateButton();
-			String r=ww.getMessage();
-	 		Assert.assertEquals(r, "Employee detail successfully updated.");
 } 
 	 @Test(priority=33)
   public void EditSalaryRateDetailsDOL_SC_215() throws Exception {
@@ -1085,7 +1063,7 @@ public class SalarySheetTestPlan extends BaseTest{
 				 	 rt.selectGetEmployee();
 				 	 Thread.sleep(3000);
 				 	 rt.selectLoad();
-			}*/
+			}
 				 	
 				 @Test(priority=60)
 				 public void GenerateSalarySheetReport_SC_258() throws Exception{

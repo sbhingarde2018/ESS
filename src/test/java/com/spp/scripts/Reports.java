@@ -87,7 +87,7 @@ public class Reports extends BaseTest {
 		String t=pt.getMessageforemployee();
 		Assert.assertEquals(t, "Employee successfully created");
 	}
-	/*@Test(priority=1)
+	@Test(priority=1)
 	public void PTChallanMaharashtraNewFormatVerifyingslbsinreport_SC_175() throws Exception{
 		PTChallanMaharashtraNewFormatVerifyingslbsinreport pt=new PTChallanMaharashtraNewFormatVerifyingslbsinreport(driver);
 		pt.clickonreport();
@@ -136,5 +136,5 @@ public class Reports extends BaseTest {
 		pt.enterlessexcesspaid("20");
 		Thread.sleep(500);
 		pt.clickonpreview();
-	}*/
+	}
 }
