@@ -38,7 +38,7 @@ import com.spp.pages.UploadaDocument;
 
 public class CompanyTestcase01 extends BaseTest{
 
-	@Test(priority=0)
+	/*@Test(priority=0)
 	public void verifyEditCompany_SC_46C() throws Exception{  
 		Editcompanydetails ed=new Editcompanydetails(driver);
 		Thread.sleep(5000);
@@ -61,7 +61,8 @@ public class CompanyTestcase01 extends BaseTest{
 		ed.updateCompanyButton();
 		String s=ed.getMessage();
 		Assert.assertEquals(s,"Company was successfully updated.");
-	}
+	}*/
+	
 	@Test(priority=1)
 	public void verifyBranchPage_SC_47_54_55_56() throws Exception{
 		BranchPage bp=new BranchPage(driver);
@@ -111,7 +112,26 @@ public class CompanyTestcase01 extends BaseTest{
 		String s3=bp.getPTMessage();
 		Assert.assertEquals(s3, "PT detail successfully created.");
 	}
-	@Test(priority=2)
+	
+	/*@Test(priority=2)
+	public void UploadDocument_SC_57() throws Exception{
+		UploadaDocument up=new UploadaDocument(driver);//DELETE DOCUMENT BEFORE RUNNING
+		up.clickonmaster();
+		up.clickoncompany();
+		Thread.sleep(2000);
+		up.clickondocument();
+		Thread.sleep(2000);
+		up.addnewdocument();
+		up.uploadfile("C:\\Users\\Alfalabs\\Documents\\Document1.xlsx");
+		Thread.sleep(2000);
+		up.enterremarks("Upload file");
+		Thread.sleep(2000);
+		up.uploadnewdocument();
+		String s=up.getMessage();
+		Assert.assertEquals(s,"Company Document Was Successfully Uploaded");	
+	}
+	
+	@Test(priority=3)
 	public void veifyUpdatedBranch_SC_177C() throws Exception{
 		EditBranch ed=new EditBranch(driver);
 		ed.navigateMaster();
@@ -125,7 +145,8 @@ public class CompanyTestcase01 extends BaseTest{
 		String s=ed.getMessage();
 		Assert.assertEquals(s, "Branch details successfully updated.");
 	}
-	@Test(priority=3)
+	
+	@Test(priority=4)
 	public void verifyEditAssignedPFGroupInBranch_SC_178C() throws Exception{
 		EditAssignedPFGroupInBranch db=new EditAssignedPFGroupInBranch(driver);//pf group should be present
 		db.navigateMaster();
@@ -140,7 +161,8 @@ public class CompanyTestcase01 extends BaseTest{
 		String s=db.getMessage();
 		Assert.assertEquals(s, "PF detail successfully updated.");
 	}
-	@Test(priority=4)
+	
+	@Test(priority=5)
 	public void verifyEditAssignedESIGroupInBranch_SC_179C() throws Exception{
 		EditAssignedESIGroupInBranch db=new EditAssignedESIGroupInBranch(driver);//esi group should be present
 		db.navigateMaster();
@@ -155,7 +177,8 @@ public class CompanyTestcase01 extends BaseTest{
 		String s=db.getMessage();
 		Assert.assertEquals(s, "ESI detail successfully updated.");
 	}
-	@Test(priority=5)
+	
+	@Test(priority=6)
 	public void verifyEditAssignedPTGroupInBranch_SC_180C() throws Exception{
 		EditAssignedPTGroupInBranch db=new EditAssignedPTGroupInBranch(driver);//pt group should be present
 		db.navigateMaster();
@@ -170,7 +193,48 @@ public class CompanyTestcase01 extends BaseTest{
 		String s=db.getMessage();
 		Assert.assertEquals(s, "PT detail successfully updated.");
 	} 
-	@Test(priority=6)
+	
+	@Test(priority=7)
+	public void verifyDeletedBranch_SC_181C() throws Exception{
+		DeleteBranch db=new DeleteBranch(driver);
+		db.navigateMaster();
+		db.clickCompanayLink();
+		db.clickBranchLink();
+		db.clickDeleteBranchButton();
+		db.switchToPopUpAndDismiss();
+		Thread.sleep(2000);
+		db.clickDeleteBranchButton();
+		db.switchToPopUpAndAccept(driver);
+		String s=db.getMessage();
+		Assert.assertEquals(s, "Branch is successfully destroyed.");
+	} 
+	
+	@Test(priority=8)
+	public void DownloadUploadedDocument_SC_183() throws Exception{
+		DownloadUploadedDocument du=new DownloadUploadedDocument(driver);
+		du.clickonmaster();
+		du.clickoncompany();
+		Thread.sleep(2000);
+		du.clickondocument();
+		Thread.sleep(2000);
+		du.clickondownload();	
+	}
+	
+	@Test(priority=9)
+	public void verifyDeleteUploadedDocument_SC_184C() throws Exception{
+		DeleteUploadedDocument db=new DeleteUploadedDocument(driver);
+		db.navigateMaster();
+		db.clickCompanayLink();
+		db.clickDocumentLink();
+		db.clickDeleteButton();
+		db.switchToPopUpAndDismiss();
+		db.clickDeleteButton();
+		db.switchToPopUpAndAccept(driver);
+		String f=db.getMessage();
+		Assert.assertEquals(f, "Company Document Was Successfully Deleted");
+	}
+	
+	@Test(priority=10)
 	public void verifyDeleteAssignedPFGroupInBranch_SC_424() throws Exception{
 		DeleteAssignedPFGroupinBranch db=new DeleteAssignedPFGroupinBranch(driver);
 		db.navigateMaster();
@@ -189,7 +253,8 @@ public class CompanyTestcase01 extends BaseTest{
 		String s=db.getMessage();
 		Assert.assertEquals(s,"PF details successfully deleted.");
 	}
-	@Test(priority=7)
+	
+	@Test(priority=11)
 	public void verifyDeleteAssignedESIGroupInBranch_SC_425() throws Exception{
 		DeleteAssignedESIGroupInBranch db=new DeleteAssignedESIGroupInBranch(driver);
 		db.navigateMaster();
@@ -208,7 +273,8 @@ public class CompanyTestcase01 extends BaseTest{
 		String s=db.getMessage();
 		Assert.assertEquals(s,"ESI details successfully deleted.");	
 	}
-	@Test(priority=8)
+	
+	@Test(priority=12)
 	public void verifyDeleteAssignedPTGroupInBranch_SC_426() throws Exception{
 		DeleteAssignedPTGroupInBranch db=new DeleteAssignedPTGroupInBranch(driver);
 		db.navigateMaster();
@@ -226,56 +292,5 @@ public class CompanyTestcase01 extends BaseTest{
 		db.switchToPopUpAndAccept(driver);
 		String s=db.getMessage();
 		Assert.assertEquals(s,"PT details successfully deleted.");	
-	}
-	@Test(priority=9)
-	public void verifyDeletedBranch_SC_181C() throws Exception{
-		DeleteBranch db=new DeleteBranch(driver);
-		db.navigateMaster();
-		db.clickCompanayLink();
-		db.clickBranchLink();
-		db.clickDeleteBranchButton();
-		db.switchToPopUpAndDismiss();
-		Thread.sleep(2000);
-		db.clickDeleteBranchButton();
-		db.switchToPopUpAndAccept(driver);
-		String s=db.getMessage();
-		Assert.assertEquals(s, "Branch is successfully destroyed.");
-	} 
-	@Test(priority=10)
-	public void UploadDocument_SC_57() throws Exception{
-		UploadaDocument up=new UploadaDocument(driver);//DELETE DOCUMENT BEFORE RUNNING
-		up.clickonmaster();
-		up.clickoncompany();
-		Thread.sleep(2000);
-		up.clickondocument();
-		Thread.sleep(2000);
-		up.addnewdocument();
-		up.uploadfile("C:\\Users\\alfalabs\\Documents\\Document1.xlsx");
-		Thread.sleep(2000);
-		up.enterremarks("Upload file");
-		Thread.sleep(2000);
-		up.uploadnewdocument();
-		String s=up.getMessage();
-		Assert.assertEquals(s,"Company Document Was Successfully Uploaded");	
-	}
-	@Test(priority=11)
-	public void DownloadUploadedDocument_SC_183() throws Exception{
-		DownloadUploadedDocument du=new DownloadUploadedDocument(driver);
-		du.clickonmaster();
-		du.clickoncompany();
-		Thread.sleep(2000);
-		du.clickondocument();
-		Thread.sleep(2000);
-		du.clickondownload();	
-	}
-	@Test(priority=12)
-	public void verifyDeleteUploadedDocument_SC_184C() throws Exception{
-		DeleteUploadedDocument db=new DeleteUploadedDocument(driver);
-		db.navigateMaster();
-		db.clickCompanayLink();
-		db.clickDocumentLink();
-		db.clickDeleteButton();
-		String f=db.getMessage();
-		Assert.assertEquals(f, "Company Document Was Successfully Deleted");
-	}
+	}*/
 }

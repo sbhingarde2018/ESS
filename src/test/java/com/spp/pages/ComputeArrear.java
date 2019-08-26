@@ -14,19 +14,14 @@ public class ComputeArrear extends BasePage{
 	WebElement Arrears;
 	@FindBy(xpath="//*[@id=\"main\"]/div[2]/table/tbody/tr[1]/td[4]/a")
 	WebElement Computation;
-	@FindBy(id="manual_arrears")
+	@FindBy(id="add_employees")
 	WebElement AddEmployee;
-	
-	@FindBy(xpath="//*[@id=\"bf_form\"]/div[9]/button[1]")
+	@FindBy(xpath="//*[@id=\"bf_form\"]/div[10]/button[1]")
 	WebElement Load;
-	
 	@FindBy(xpath="//*[@id=\"show_message\"]/div/strong")
 	WebElement successfullMessage;
-	
-	
-	@FindBy(xpath="//*[@id=\"EmployeesArrears\"]/div[3]/div/div/input")
+	@FindBy(id="save_employee_arrear")
 	WebElement Save;
-	
 	@FindBy(xpath="//*[@id=\"manual_headwise_arrears\"]/tbody/tr[1]/td[7]/a")
 	WebElement MoreLink;
 	@FindBy(xpath="//*[@id=\"main\"]/div[3]/fieldset/table/tbody/tr[3]/td[1]/table[1]/tbody/tr[2]/td/input")

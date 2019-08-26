@@ -12,11 +12,11 @@ public class DeleteAssignedPFGroupinBranch extends BasePage{
 	WebElement masterlink;
 	@FindBy(xpath="//*[@id=\"menu\"]/li[3]/div/div[1]/ul/li[1]/a")
 	WebElement ClickOnCompany;
-	@FindBy(xpath="//*[@id=\"ui-accordion-accordion-panel-0\"]/li[2]/a")
+	@FindBy(xpath="//li[@class='active']//a[contains(text(),'Branch')]")
 	WebElement ClickOnBranch;
-	@FindBy(xpath="//*[@id=\"branches\"]/div/table/tbody/tr[2]/td[5]/a")
+	@FindBy(xpath="//div/table/tbody/tr/td[5]/a")
 	WebElement ClickOnEdit;
-	@FindBy(xpath="//*[@id=\"main\"]/div[6]/nav/ul/li[2]/a")
+	@FindBy(xpath="//span[contains(text(),'PF Detail')]")
 	WebElement ClickOnPFDetail;
 	@FindBy(xpath="//*[@id='pf_group_list']/div[2]/table/tbody/tr[1]/td[5]/a")
 	WebElement ClickOnDelete;

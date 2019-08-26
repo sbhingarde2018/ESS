@@ -13,7 +13,7 @@ public class VIADeductionsDonationstospecifiedfundsInstitutions80G extends BaseP
 	WebElement ComputationDetails;
 	@FindBy(xpath="//*[@id=\"computed_employee_tds\"]/tbody/tr/td [contains(text(),'Tina')]/parent::tr/td[4]/a")
 	WebElement Details;
-	@FindBy(xpath="//*[@id=\"ui-accordion-accordion-panel-0\"]/li[2]/a")
+	@FindBy(xpath="//*[@id=\"ui-id-2\"]/li[2]/a")
 	WebElement VIDeductions;
 	@FindBy(xpath="//td[contains(text(),\"Donations to specified funds/Institutions 80G\")]/following::a[1]")  
 	WebElement DonationstospecifiedfundsInstitutions80G;

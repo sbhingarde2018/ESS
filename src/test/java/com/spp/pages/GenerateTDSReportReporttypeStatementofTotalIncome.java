@@ -19,6 +19,8 @@ public class GenerateTDSReportReporttypeStatementofTotalIncome extends BasePage 
 	WebElement GetEmployees;
 	@FindBy(xpath="//*[@id=\"bf_form\"]/div[10]/button[1]")
 	WebElement Load;
+	@FindBy(id="employee_ids_")
+	WebElement SelectEmp;
 	@FindBy(id="generate_report")
 	WebElement GenerateReport;
 	
@@ -48,5 +50,7 @@ public class GenerateTDSReportReporttypeStatementofTotalIncome extends BasePage 
 	public void ClickGenerateReport() {
 		GenerateReport.click();
 	}
-
+	public void ClickSelectEmpt() {
+		SelectEmp.click();
+	}
 }

@@ -4,42 +4,12 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import com.spp.common.BaseTest;
 import com.spp.generics.Utility;
-//import com.spp.pages.DeleteLetOutProperty;
-//import com.spp.pages.DeleteSelfOccupiedProperty;
-import com.spp.pages.EditVIADeductionsDeductioninrespectofrentpaid80GG;
-//import com.spp.pages.DeleteSelfOccupiedProperty;
-//import com.spp.pages.DeleteVIADeductionsContributionstopoliticalparties80GGC;
-//import com.spp.pages.DeleteVIADeductionsDonationsforscientificresearchRuraldevelopmentetc80GGA;
-//import com.spp.pages.DeleteVIADeductionsDonationstospecifiedfundsInstitutions80G;
-//import com.spp.pages.DeleteVIADeductionsRoyaltyIncomeetcofAuthorsofcertainbooks80QQB;
-//import com.spp.pages.DeleteVIADeductionsRoyaltyonPatents80RRB;
-//import com.spp.pages.DonationsforscientificresearchRuraldevelopmentetc80GGA;
-//import com.spp.pages.EditLetOutProperty;
-//import com.spp.pages.PopulateLetOutProperty;
-//import com.spp.pages.PopulateSelfOccupiedProperty;
-//import com.spp.pages.PopulateSelfOccupiedPropertyLoanBorrowedAfter31Mar1999No;
-//import com.spp.pages.EditMainComponentBasic;
-//import com.spp.pages.EditVIADeductionsContributionstopoliticalparties80GGC;
-//import com.spp.pages.EditVIADeductionsDeductioninrespectofinterestincometoseniorcitizen80TTB;
-//import com.spp.pages.EditVIADeductionsDeductioninrespectofinterestondepositsinsavingsaccount80TTA;
-//import com.spp.pages.EditVIADeductionsIncomeofblindorphysicallyhandicappedindividual80U;
-//import com.spp.pages.EditVIADeductionsRoyaltyIncomeetcofAuthorsofcertainbooks80QQB;
-//import com.spp.pages.EditVIADeductionsRoyaltyonPatents80RRB;
-//import com.spp.pages.PopulateandCreateLetOutProperty;
-//import com.spp.pages.PopulateandSaveSelfOccupiedProperty;
-//import com.spp.pages.PopulateandSaveSelfOccupiedPropertyLoanBorrowedAfter31Mar1999No;
-//import com.spp.pages.PopulateandUpdateSelfOccupiedProperty;
-//import com.spp.pages.SaveIncomeFromOtherSourcesInterestFromBanks;
-//import com.spp.pages.SaveIncomeFromOtherSourcesInterestOthers;
-//import com.spp.pages.SaveIncomeFromOtherSourcesInterestonKVP;
-//import com.spp.pages.SaveIncomeFromOtherSourcesInterestonNSC;
-//import com.spp.pages.SaveIncomeFromOtherSourcesInterestonSecurities;
-//import com.spp.pages.VIADeductionsDonationstospecifiedfundsInstitutions80G;
+import com.spp.pages.*;
 
 
 public class ComputationDetails extends BaseTest {
 	
-	/*@Test(priority=0)
+	@Test(priority=0)
 	public void EditMainComponentBasic_SC_1055() throws Exception{
 		EditMainComponentBasic ab=new EditMainComponentBasic(driver);
 		ab.ClickTDS();
@@ -2415,8 +2385,8 @@ public class ComputationDetails extends BaseTest {
 		ab.clickSaveBtn();
 		String i=ab.getMessage();
 		Assert.assertEquals(i, "Saved Successfully.");
-	}*/
-	/*@Test(priority=105)
+	}
+	@Test(priority=105)
 	public void VIADeductionsDonationstospecifiedfundsInstitutions80G_SC_1161() throws Exception{
 		VIADeductionsDonationstospecifiedfundsInstitutions80G ab=new VIADeductionsDonationstospecifiedfundsInstitutions80G(driver);
 		ab.ClickTDS();
@@ -2482,7 +2452,7 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickDeductions();
 		Thread.sleep(3000);
 		ab.ClickDelete();
-	}*/
+	}
 	@Test(priority=109)
 	public void EditVIADeductionsDeductioninrespectofrentpaid80GG_SC_1165() throws Exception{
 		EditVIADeductionsDeductioninrespectofrentpaid80GG ab=new EditVIADeductionsDeductioninrespectofrentpaid80GG(driver);
@@ -2501,7 +2471,7 @@ public class ComputationDetails extends BaseTest {
 		Thread.sleep(3000);
 		ab.ClickSaveBtn();
 	}
-	/*@Test(priority=110)
+	@Test(priority=110)
 	public void EditVIADeductionsContributionstopoliticalparties80GGC_SC_1166() throws Exception{
 		EditVIADeductionsContributionstopoliticalparties80GGC ab=new EditVIADeductionsContributionstopoliticalparties80GGC(driver);
 		ab.ClickTDS();
@@ -2589,8 +2559,8 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickDeductions();
 		Thread.sleep(3000);
 		ab.ClickDelete();
-	}*/
-	/*@Test(priority=116)
+	}
+	@Test(priority=116)
 	public void EditVIADeductionsIncomeofblindorphysicallyhandicappedindividual80U_SC_1172() throws Exception {
 		EditVIADeductionsIncomeofblindorphysicallyhandicappedindividual80U ab=new EditVIADeductionsIncomeofblindorphysicallyhandicappedindividual80U(driver);
 		ab.ClickTDS();
@@ -2637,8 +2607,8 @@ public class ComputationDetails extends BaseTest {
 		ab.EnterEditedGrossAmount("20");
 		ab.EnterNarrations("Done");
 		ab.ClickSaveBtn();
-	}*/
-	/*@Test(priority=119)
+	}
+	@Test(priority=119)
 	public void SaveIncomeFromOtherSourcesInterestFromBanks_SC_1175() throws Exception {
 		SaveIncomeFromOtherSourcesInterestFromBanks ab=new SaveIncomeFromOtherSourcesInterestFromBanks(driver);
 		ab.ClickTDS();
@@ -2820,8 +2790,8 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickPopulateandUpdate();
 		String i=ab.getMessage();
 		Assert.assertEquals(i, "Self occupied property updated successfully");
-	}*/
-	/*@Test(priority=129)
+	}
+	@Test(priority=129)
 	public void DeleteSelfOccupiedProperty_SC_1187() throws Exception {
 		DeleteSelfOccupiedProperty ab=new DeleteSelfOccupiedProperty(driver);
 		ab.ClickTDS();
@@ -2838,6 +2808,7 @@ public class ComputationDetails extends BaseTest {
 		Thread.sleep(2000);
 		ab.ClickDelete();
 		ab.switchToPopUpAndAccept(driver);
+		Thread.sleep(2000);
 	}
 	@Test(priority=130)
 	public void PopulateSelfOccupiedProperty_SC_1188() throws Exception {
@@ -2914,7 +2885,7 @@ public class ComputationDetails extends BaseTest {
 		ab.EnterArrearsOfRentRec("10");
 		ab.EnterNotChargedEarlier("10");
 		ab.ClickPopulate();
-	}*/
+	}
 }
 
 

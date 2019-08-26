@@ -13,15 +13,15 @@ public class UploadaDocument extends BasePage{
 	WebElement ClickOnMaster;
 	@FindBy(xpath="//*[@id=\"menu\"]/li[3]/div/div[1]/ul/li[1]/a")
 	WebElement ClickOnCompany;
-	@FindBy(xpath="//*[@id=\"ui-accordion-accordion-panel-0\"]/li[3]/a")
+	@FindBy(xpath="//a[contains(text(),'Documents')]")
 	WebElement ClickOnDocuments;
-	@FindBy(xpath="//*[@id='main']/div[1]/span/a")
+	@FindBy(xpath="//a[contains(text(),'Add New Document')]")
 	WebElement AddNewDocument;
 	@FindBy(id="company_document_file_path")
 	WebElement UploadFile;
 	@FindBy(id="company_document_remarks")
 	WebElement EnterRemarks;
-	@FindBy(xpath="//*[@id=\"company_document_save\"]/fieldset/div[3]/input")
+	@FindBy(xpath="//input[@name='commit']")
 	WebElement UploadNewDocument;
 	@FindBy(xpath="//*[@id=\"main\"]/div[1]/strong")
 	WebElement successfullmessage;

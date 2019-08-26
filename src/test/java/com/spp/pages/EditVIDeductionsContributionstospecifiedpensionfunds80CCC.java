@@ -13,7 +13,7 @@ public class EditVIDeductionsContributionstospecifiedpensionfunds80CCC extends B
 	WebElement ComputationDetails;
 	@FindBy(xpath="//*[@id=\"computed_employee_tds\"]/tbody/tr/td [contains(text(),'Tina')]/parent::tr/td[4]/a")
 	WebElement Details;
-	@FindBy(xpath="//*[@id=\"ui-accordion-accordion-panel-0\"]/li[2]/a")
+	@FindBy(xpath="//*[@id=\"ui-id-2\"]/li[2]/a")
 	WebElement VIDeductions;
 	@FindBy(xpath="//*[@id=\"six_a_ded_details\"]/table/tbody/tr[2]/td[3]/a")
 	WebElement Contributionstospecifiedpensionfunds80CCC;

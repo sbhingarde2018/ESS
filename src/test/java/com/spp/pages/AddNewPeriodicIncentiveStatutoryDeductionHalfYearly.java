@@ -7,7 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.spp.common.BasePage;
 
-public class AddNewPeriodicIncentiveDetailStatutoryDeductionPTYearly extends BasePage{
+public class AddNewPeriodicIncentiveStatutoryDeductionHalfYearly extends BasePage{
 	@FindBy(id="salary")
 	WebElement salarylink;
 	@FindBy(linkText="Periodic Incentive Detail")
@@ -34,8 +34,8 @@ public class AddNewPeriodicIncentiveDetailStatutoryDeductionPTYearly extends Bas
 	WebElement PT;
 	@FindBy(id="standing_instruction_detail_esi")
 	WebElement ESI;
-	@FindBy(xpath="//div[4]/table[2]/tbody/tr/td[5]/label/input")
-	WebElement Yearly;
+	@FindBy(xpath="//*[@id=\"new_standing_instruction_detail\"]/div[4]/table[2]/tbody/tr/td[4]/label/input")
+	WebElement HalfYearly;
 	@FindBy(id="update_save")
 	WebElement CreateButton;	
 	@FindBy(xpath="//*[@id=\"main\"]/div[2]/strong")
@@ -44,9 +44,13 @@ public class AddNewPeriodicIncentiveDetailStatutoryDeductionPTYearly extends Bas
 	WebElement DeleteButton;
 	@FindBy(id="p_payment_6")
 	WebElement SelectPremiumPaymentHalfYearly;
-	@FindBy(id="p_payment_12")
-	WebElement SelectPremiumPaymentYearly;
-	public AddNewPeriodicIncentiveDetailStatutoryDeductionPTYearly(WebDriver driver){
+	@FindBy(xpath="//*[@id=\"standing_instr_list\"]/div[2]/table/tbody/tr[1]/td[4]/a")
+	WebElement ClickDeleteMaster;
+	@FindBy(id="master")
+	WebElement masterlink;
+	@FindBy(xpath="//*[@id=\"menu\"]/li[3]/div/div[2]/ul/li[7]/a")
+	WebElement PeriodicIncentiveMaster;
+	public AddNewPeriodicIncentiveStatutoryDeductionHalfYearly(WebDriver driver){
 		super(driver);
 		PageFactory.initElements(driver, this);
 	}
@@ -110,7 +114,15 @@ public class AddNewPeriodicIncentiveDetailStatutoryDeductionPTYearly extends Bas
 	public void selectpremiumpaymenthalfyearly() {
 		SelectPremiumPaymentHalfYearly.click();
 	}
-	public void selectpremiumpaymentyearly() {
-		SelectPremiumPaymentYearly.click();
+	public void navigatemasterlink() throws Exception{
+		masterlink.click();
+	}
+	
+	public void clickPeriodicIncentiveMaster() throws Exception{
+		PeriodicIncentiveMaster.click();
+	}
+	public void clickdeletemaster() {
+		ClickDeleteMaster.click();
+		switchToPopUpAndAccept(driver);
 	}
 }

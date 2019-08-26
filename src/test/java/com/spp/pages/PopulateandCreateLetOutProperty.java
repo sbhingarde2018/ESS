@@ -96,5 +96,4 @@ public class PopulateandCreateLetOutProperty extends BasePage {
 	public String getMessage() {
 		return UpdateSuccess.getText();
 	}
-	
 }

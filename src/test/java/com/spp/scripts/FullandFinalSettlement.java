@@ -89,7 +89,9 @@ public class FullandFinalSettlement extends BaseTest{
 		ad.ClickSalary();
 		ad.ClickFullFinalSettlement();
 		ad.ClickGeneralLink();
+		Thread.sleep(2000);
 		ad.ClickEmployeeMaster();
+		Thread.sleep(2000);
 		ad.ClickAddEmp();
 		Thread.sleep(2000);
 		ad.enterEmployeeid("AMN1234");
@@ -100,7 +102,7 @@ public class FullandFinalSettlement extends BaseTest{
 		ad.selectGender("Male");
 		ad.selectMaritalStatus("Single");
 		ad.selectDateofJoining("06 July 2014");
-		Thread.sleep(500);
+		Thread.sleep(5000);
 		ad.clickPresentAddress();
 		ad.selectState("Maharashtra");
 		ad.selectclassificationdetail();

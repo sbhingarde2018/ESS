@@ -18,9 +18,9 @@ public class DeleteUploadedDocument extends BasePage {
 	WebElement masterlink;
 	@FindBy(xpath="//ul[@id='menu']//a[text()='Company']")
 	WebElement companylink;
-	@FindBy(xpath="//*[@id=\"ui-accordion-accordion-panel-0\"]/li[3]/a")
+	@FindBy(xpath="//a[contains(text(),'Documents')]")
 	WebElement DocumentLink;
-	@FindBy(xpath="//*[@id=\"main\"]/div[2]/table/thead/tr[2]/td[6]/a")
+	@FindBy(xpath="//div[3]/table/thead/tr[2]/td[6]/a")
 	WebElement DeleteButton; 
 	@FindBy(xpath="//*[@id=\"main\"]/div[1]/strong")
 	WebElement SuccessfulMessage;
@@ -38,7 +38,7 @@ public class DeleteUploadedDocument extends BasePage {
     }
 	public void clickDeleteButton() throws Exception{
 		DeleteButton.click();
-		switchToPopUpAndAccept(driver);
+		//switchToPopUpAndAccept(driver);
     }
 	 public String getMessage() {
 		 return SuccessfulMessage.getText();

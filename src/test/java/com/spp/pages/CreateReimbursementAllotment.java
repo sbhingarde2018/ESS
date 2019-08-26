@@ -4,26 +4,19 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
 import com.spp.common.BasePage;
 
-public class CreateReimbursementAllotment extends BasePage {
-	public CreateReimbursementAllotment(WebDriver driver) {
-		super(driver);
-		// TODO Auto-generated constructor stub
-		PageFactory.initElements(driver, this);
-	}
-	@FindBy(id="emp_detail")
+	public class CreateReimbursementAllotment extends BasePage {
+	@FindBy(xpath="//*[@id=\"emp_detail\"]")
 	WebElement Employee;
 	@FindBy(xpath="//*[@id=\"menu\"]/li[4]/div/div/ul/li[8]/a")
 	WebElement ReimbursementAllotment;
 	@FindBy(xpath="//*[@id=\"allotments_list\"]/div[1]/span/a")
 	WebElement NewReimbursement;
-	@FindBy(xpath="//*[@id=\"employees_table\"]/tbody/tr/td[contains(text(),'Ashish')]/parent::tr/td[5]/input")
+	@FindBy(xpath="//*[@id=\"employees_table\"]/tbody/tr[1]/td[5]/input")
 	WebElement AddEmployee;
 	@FindBy(xpath="//*[@id=\"main\"]/div/div[2]/form/div[3]/input")
 	WebElement AllotButton;
-	//@FindBy(xpath="//*[@id=\"new_reimbursement_allotment\"]/div[2]/fieldset/div[1]/div[1]/div")
 	@FindBy(id="reimbursement_master_id")
 	WebElement Name;
 	@FindBy(xpath="//*[@id='year_type']/div/select")
@@ -32,7 +25,7 @@ public class CreateReimbursementAllotment extends BasePage {
 	WebElement AllotmentDate;
 	@FindBy(xpath="//*[@id='amount']/div/input")
 	WebElement Amount;
-	@FindBy(id="submit")
+	@FindBy(xpath="//*[@id=\"submit\"]")
 	WebElement CreateReimbursementButton;
 	@FindBy(xpath="//*[@id=\"reimbursement_allotment_result_response\"]/div/strong")
 	WebElement SuccessfulMessage;
@@ -45,7 +38,7 @@ public class CreateReimbursementAllotment extends BasePage {
 	WebElement masterLink;
 	@FindBy(xpath="//a[text()='Reimbursement Master']")
 	WebElement reimbursemnetLink;
-	@FindBy(xpath="//a[text()='Add New Reimbursement']")
+	@FindBy(xpath="//div[1]/span/a")
 	WebElement addReimbursement;
 	@FindBy(id="reimbursement_master_reimbursement_type")
 	WebElement reimbursementType;
@@ -57,12 +50,19 @@ public class CreateReimbursementAllotment extends BasePage {
 	WebElement LumpsumType;
 	@FindBy(id="reimbursement_master_clubbed_in_salary")
 	WebElement salaryHead;
-	@FindBy(xpath="//input[@value='Create Reimbursement Master']")
+	@FindBy(xpath="//*[@id=\"main\"]/div/div[2]/form/div[3]/input")
 	WebElement createReimbursementMaster;
 	@FindBy(xpath="//*[@id=\"allotment_link\"]/img")
 	WebElement FunctionKey;
-	@FindBy(id="sum_amount")
+	@FindBy(xpath="//*[@id=\"allotment_details\"]/tbody/tr[1]/td[2]/input")
 	WebElement SumAmount;
+	@FindBy(xpath="//tbody/tr/td[7]/a[2]")
+	WebElement Delete;
+
+		public CreateReimbursementAllotment(WebDriver driver) {
+			super(driver);
+			PageFactory.initElements(driver, this);
+		}
 	
 	public void clickMastserLink(){	
 		masterLink.click();
@@ -148,5 +148,15 @@ public class CreateReimbursementAllotment extends BasePage {
 	}
 	public void EnterSumAmount(String Value) {
 		SumAmount.sendKeys(Value);
+	}
+	public void ClickEmployee() {
+		Employee.click();
+	}
+	public void ClickRA() {
+		ReimbursementAllotment.click();
+	}
+	public void ClickDelete() {
+		Delete.click();
+		
 	}
 }

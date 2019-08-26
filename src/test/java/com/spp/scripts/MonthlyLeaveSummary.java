@@ -14,7 +14,7 @@ import junit.framework.Assert;
 
 public class MonthlyLeaveSummary extends BaseTest{
 
-	/*@Test(priority=0)
+	@Test(priority=0)
 	public void GenerateMonthlyLeaveSummary_SC_118() throws Exception{
 	GenerateMonthlyLeaveSummary gm=new GenerateMonthlyLeaveSummary(driver);
 		gm.clickonleave();
@@ -81,7 +81,7 @@ public class MonthlyLeaveSummary extends BaseTest{
 		Thread.sleep(2000);
 		gm.exitFullscreen();
 		Thread.sleep(2000);
-	}*/
+	}
 	
 	@Test(priority=2)
 	public void CheckifLeaveMonthlyLeaveSummaryGeneralLinkEmployeeMasterredirectstoEmployeeMaster_SC_486() throws Exception{

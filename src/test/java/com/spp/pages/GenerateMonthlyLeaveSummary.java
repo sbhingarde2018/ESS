@@ -1,11 +1,18 @@
 package com.spp.pages;
 
+import java.io.File;
 import java.io.IOException;
+import java.net.URISyntaxException;
+import java.net.URL;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
 
 import org.apache.poi.EncryptedDocumentException;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -72,9 +79,14 @@ WebElement SelectOrderBy;
 	}
 	
 	public ArrayList<String> getColumn() throws EncryptedDocumentException, InvalidFormatException, IOException {
-		ExcelUtil exc = new ExcelUtil("C:\\Users\\Administrator\\Downloads\\excel_leave_report.xls","excel_leave_report");
+		ExcelUtil exc = new ExcelUtil("C:\\Users\\Administrator\\Downloads\\excel_leave_report.xls","excel_leave_report", "JaiSriRam");
 		ArrayList<String> arrayList = new ArrayList<String>(Arrays.asList(exc.getColumn("C")));
-		return arrayList;
-				
+		return arrayList;			
 	}
+	
+	/*public void readDownloadFile() throws URISyntaxException, IOException {
+		String content = new String(Files.readAllBytes(Paths.get("C:\\Users\\Administrator\\Downloads\\excel_leave_report.xls")));
+		Document doc = Jsoup.parse(content);
+		doc.select(cssQuery);
+	}*/
 }

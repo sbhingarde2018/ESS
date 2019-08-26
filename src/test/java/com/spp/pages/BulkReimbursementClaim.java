@@ -8,11 +8,6 @@ import org.openqa.selenium.support.PageFactory;
 import com.spp.common.BasePage;
 
 public class BulkReimbursementClaim extends BasePage{
-	public BulkReimbursementClaim(WebDriver driver) {
-		super(driver);
-		// TODO Auto-generated constructor stub
-		PageFactory.initElements(driver, this);
-	}
 	@FindBy(id="salary")
 	WebElement Salary;
 	@FindBy(xpath="//*[@id=\"menu\"]/li[6]/div/div[1]/ul/li[4]/a")
@@ -23,13 +18,10 @@ public class BulkReimbursementClaim extends BasePage{
 	WebElement Name;
 	@FindBy(id="financial_year")
 	WebElement FinancialYear;
-
-	//@FindBy(xpath="//*[@id=\"new_reimbursement_allotment\"]/div[2]/fieldset/div[1]/div[1]/div")
 	@FindBy(id="paymonth_id")
 	WebElement IssuedOn;
 	@FindBy(id="paid_date")
 	WebElement ClaimDate;
-	
 	@FindBy(id="reimbursement_claim_paymonth_id")
 	WebElement PaidMonth;
 	@FindBy(xpath="//*[@id=\"main\"]/div[4]/form/div[2]/div/input")
@@ -48,6 +40,10 @@ public class BulkReimbursementClaim extends BasePage{
 	//@FindBy(xpath="//*[@id=\"reimbursement_allotments\"]/tbody/tr/td[2][contains(text(),'Reim. LTA')]/parent::tr/td[8]/a")
 	WebElement DeleteButton;
 	
+	public BulkReimbursementClaim(WebDriver driver) {
+		super(driver);
+		PageFactory.initElements(driver, this);
+	}
 	public void selectSalary() {
 		Salary.click();
 	}

@@ -12,9 +12,9 @@ public class DownloadUploadedDocument extends BasePage{
 	WebElement ClickOnMaster;
 	@FindBy(xpath="//*[@id=\"menu\"]/li[3]/div/div[1]/ul/li[1]/a")
 	WebElement ClickOnCompany;
-	@FindBy(xpath="//*[@id=\"ui-accordion-accordion-panel-0\"]/li[3]/a")
+	@FindBy(xpath="//a[contains(text(),'Documents')]")
 	WebElement ClickOnDocuments;
-	@FindBy(xpath="//*[@id='main']/div[2]/table/thead/tr[2]/td[contains(text(),'Upload file')]/parent::tr/td[5]/a")
+	@FindBy(xpath="//a[@class='action-download']")
 	WebElement DownloadFile;
 	
 	public DownloadUploadedDocument(WebDriver driver) {

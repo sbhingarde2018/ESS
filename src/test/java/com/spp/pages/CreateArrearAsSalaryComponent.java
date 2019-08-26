@@ -39,9 +39,6 @@ public class CreateArrearAsSalaryComponent extends BasePage{
 	@FindBy(xpath="//table/tbody/tr/td[contains(text(),'Salary_ArrearSal')]/parent::tr/td[6]/a/img")
 	WebElement DeleteButton;
 	
-//@FindBy(xpath="//*[@id=\"main\"]/div[2]/table/tbody/tr/td[1][contains(text(),'new')]/parent::tr/td[6]/a/img")
-//List<WebElement> xyz;
-	
 public CreateArrearAsSalaryComponent(WebDriver driver) {
 		super(driver);
 		PageFactory.initElements(driver,this);

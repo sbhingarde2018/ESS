@@ -7,7 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.spp.common.BasePage;
 
-public class AddNewPeriodicIncentiveDetailStatutoryDeductionPTYearly extends BasePage{
+public class AddNewPeriodicIncentiveDetailStatutoryDeductionYearly extends BasePage{
 	@FindBy(id="salary")
 	WebElement salarylink;
 	@FindBy(linkText="Periodic Incentive Detail")
@@ -34,8 +34,8 @@ public class AddNewPeriodicIncentiveDetailStatutoryDeductionPTYearly extends Bas
 	WebElement PT;
 	@FindBy(id="standing_instruction_detail_esi")
 	WebElement ESI;
-	@FindBy(xpath="//div[4]/table[2]/tbody/tr/td[5]/label/input")
-	WebElement Yearly;
+	@FindBy(xpath="//*[@id=\"new_standing_instruction_detail\"]/div[4]/table[2]/tbody/tr/td[4]/label/input")
+	WebElement HalfYearly;
 	@FindBy(id="update_save")
 	WebElement CreateButton;	
 	@FindBy(xpath="//*[@id=\"main\"]/div[2]/strong")
@@ -46,7 +46,7 @@ public class AddNewPeriodicIncentiveDetailStatutoryDeductionPTYearly extends Bas
 	WebElement SelectPremiumPaymentHalfYearly;
 	@FindBy(id="p_payment_12")
 	WebElement SelectPremiumPaymentYearly;
-	public AddNewPeriodicIncentiveDetailStatutoryDeductionPTYearly(WebDriver driver){
+	public AddNewPeriodicIncentiveDetailStatutoryDeductionYearly(WebDriver driver){
 		super(driver);
 		PageFactory.initElements(driver, this);
 	}
