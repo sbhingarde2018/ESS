@@ -38,7 +38,7 @@ import com.spp.pages.UploadaDocument;
 
 public class CompanyTestcase01 extends BaseTest{
 
-	/*@Test(priority=0)
+	@Test(priority=0)
 	public void verifyEditCompany_SC_46C() throws Exception{  
 		Editcompanydetails ed=new Editcompanydetails(driver);
 		Thread.sleep(5000);
@@ -61,7 +61,7 @@ public class CompanyTestcase01 extends BaseTest{
 		ed.updateCompanyButton();
 		String s=ed.getMessage();
 		Assert.assertEquals(s,"Company was successfully updated.");
-	}*/
+	}
 	
 	@Test(priority=1)
 	public void verifyBranchPage_SC_47_54_55_56() throws Exception{
@@ -113,7 +113,7 @@ public class CompanyTestcase01 extends BaseTest{
 		Assert.assertEquals(s3, "PT detail successfully created.");
 	}
 	
-	/*@Test(priority=2)
+	@Test(priority=2)
 	public void UploadDocument_SC_57() throws Exception{
 		UploadaDocument up=new UploadaDocument(driver);//DELETE DOCUMENT BEFORE RUNNING
 		up.clickonmaster();
@@ -194,7 +194,7 @@ public class CompanyTestcase01 extends BaseTest{
 		Assert.assertEquals(s, "PT detail successfully updated.");
 	} 
 	
-	@Test(priority=7)
+	@Test(priority=12)
 	public void verifyDeletedBranch_SC_181C() throws Exception{
 		DeleteBranch db=new DeleteBranch(driver);
 		db.navigateMaster();
@@ -209,7 +209,7 @@ public class CompanyTestcase01 extends BaseTest{
 		Assert.assertEquals(s, "Branch is successfully destroyed.");
 	} 
 	
-	@Test(priority=8)
+	@Test(priority=7)
 	public void DownloadUploadedDocument_SC_183() throws Exception{
 		DownloadUploadedDocument du=new DownloadUploadedDocument(driver);
 		du.clickonmaster();
@@ -220,7 +220,7 @@ public class CompanyTestcase01 extends BaseTest{
 		du.clickondownload();	
 	}
 	
-	@Test(priority=9)
+	@Test(priority=8)
 	public void verifyDeleteUploadedDocument_SC_184C() throws Exception{
 		DeleteUploadedDocument db=new DeleteUploadedDocument(driver);
 		db.navigateMaster();
@@ -234,7 +234,7 @@ public class CompanyTestcase01 extends BaseTest{
 		Assert.assertEquals(f, "Company Document Was Successfully Deleted");
 	}
 	
-	@Test(priority=10)
+	@Test(priority=9)
 	public void verifyDeleteAssignedPFGroupInBranch_SC_424() throws Exception{
 		DeleteAssignedPFGroupinBranch db=new DeleteAssignedPFGroupinBranch(driver);
 		db.navigateMaster();
@@ -254,7 +254,7 @@ public class CompanyTestcase01 extends BaseTest{
 		Assert.assertEquals(s,"PF details successfully deleted.");
 	}
 	
-	@Test(priority=11)
+	@Test(priority=10)
 	public void verifyDeleteAssignedESIGroupInBranch_SC_425() throws Exception{
 		DeleteAssignedESIGroupInBranch db=new DeleteAssignedESIGroupInBranch(driver);
 		db.navigateMaster();
@@ -274,7 +274,7 @@ public class CompanyTestcase01 extends BaseTest{
 		Assert.assertEquals(s,"ESI details successfully deleted.");	
 	}
 	
-	@Test(priority=12)
+	@Test(priority=11)
 	public void verifyDeleteAssignedPTGroupInBranch_SC_426() throws Exception{
 		DeleteAssignedPTGroupInBranch db=new DeleteAssignedPTGroupInBranch(driver);
 		db.navigateMaster();
@@ -292,5 +292,5 @@ public class CompanyTestcase01 extends BaseTest{
 		db.switchToPopUpAndAccept(driver);
 		String s=db.getMessage();
 		Assert.assertEquals(s,"PT details successfully deleted.");	
-	}*/
+	}
 }

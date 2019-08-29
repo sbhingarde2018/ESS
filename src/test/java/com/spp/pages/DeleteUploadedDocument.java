@@ -20,7 +20,7 @@ public class DeleteUploadedDocument extends BasePage {
 	WebElement companylink;
 	@FindBy(xpath="//a[contains(text(),'Documents')]")
 	WebElement DocumentLink;
-	@FindBy(xpath="//div[3]/table/thead/tr[2]/td[6]/a")
+	@FindBy(xpath="//div[2]/table/thead/tr[2]/td[6]/a")
 	WebElement DeleteButton; 
 	@FindBy(xpath="//*[@id=\"main\"]/div[1]/strong")
 	WebElement SuccessfulMessage;

@@ -13,7 +13,7 @@ public class DeleteBranch extends BasePage{
 	WebElement companylink;
 	@FindBy(xpath="//a[text()='Branch']")
 	WebElement banchlink;
-	@FindBy(xpath="//div[@id='branches']//tr[2]//td[6]//a[text()='Delete']")
+	@FindBy(xpath="//div/table/tbody/tr[2]/td[contains(text(),'Chennai')]/parent::tr/td[6]/a")
 	WebElement deletebranchbutton;
 	@FindBy(xpath="//strong[text()='Branch is successfully destroyed.']")
 	WebElement successfullMessage;

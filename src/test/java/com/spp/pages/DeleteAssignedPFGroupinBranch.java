@@ -12,9 +12,9 @@ public class DeleteAssignedPFGroupinBranch extends BasePage{
 	WebElement masterlink;
 	@FindBy(xpath="//*[@id=\"menu\"]/li[3]/div/div[1]/ul/li[1]/a")
 	WebElement ClickOnCompany;
-	@FindBy(xpath="//li[@class='active']//a[contains(text(),'Branch')]")
+	@FindBy(xpath="//a[text()='Branch']")
 	WebElement ClickOnBranch;
-	@FindBy(xpath="//div/table/tbody/tr/td[5]/a")
+	@FindBy(xpath="//div/table/tbody/tr[2]/td[contains(text(),'Chennai')]/parent::tr/td[5]/a")
 	WebElement ClickOnEdit;
 	@FindBy(xpath="//span[contains(text(),'PF Detail')]")
 	WebElement ClickOnPFDetail;
