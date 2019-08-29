@@ -4,7 +4,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.spp.common.BaseTest;
-import com.spp.pages.CheckifEmployeeLeaveAllotAvailDateSettingsGeneralLinkredirectstoEmployeeMaster;
+//import com.spp.pages.CheckifEmployeeLeaveAllotAvailDateSettingsGeneralLinkredirectstoEmployeeMaster;
 import com.spp.pages.CheckifEmployeeManualLeaveAllotmentGeneralLinkredirectstoEmployeeMaster;
 import com.spp.pages.ManualLeaveAllotment;
 

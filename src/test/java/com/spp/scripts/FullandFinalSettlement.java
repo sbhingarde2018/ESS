@@ -7,11 +7,11 @@ import com.spp.common.BaseTest;
 import com.spp.pages.AddNewFullandFinalSettlementwithIncludeHeldSalaryAmount;
 import com.spp.pages.CheckifSalaryFullAndFinalSettlementGeneralLinksEmployeeMasterredirectstoEmployee;
 import com.spp.pages.CheckifSalaryFullAndFinalSettlementReportsFullandFinalReportredirectstoReports;
-import com.spp.pages.CreateDeductionHead;
-import com.spp.pages.CreateNewEarning;
-import com.spp.pages.DeleteEarningHead;
-import com.spp.pages.UpdateEarningHead;
-import com.spp.pages.UpdateRemark;
+//import com.spp.pages.CreateDeductionHead;
+//import com.spp.pages.CreateNewEarning;
+//import com.spp.pages.DeleteEarningHead;
+//import com.spp.pages.UpdateEarningHead;
+//import com.spp.pages.UpdateRemark;
 
 public class FullandFinalSettlement extends BaseTest{
 

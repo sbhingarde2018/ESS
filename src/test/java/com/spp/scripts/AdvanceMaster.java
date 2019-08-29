@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 
 import com.spp.common.BaseTest;
 import com.spp.generics.Utility;
-import com.spp.pages.AddAdvanceMaster;
+//import com.spp.pages.AddAdvanceMaster;
 import com.spp.pages.AddNewAdvanceMaster;
 import com.spp.pages.CheckAdvanceMasterCreatedWithClubbedInSalary;
 import com.spp.pages.CheckAdvanceMasterCreatedWithoutClubbedInSalary;

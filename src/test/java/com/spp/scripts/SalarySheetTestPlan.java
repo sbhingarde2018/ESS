@@ -1,12 +1,11 @@
 package com.spp.scripts;
 
-import org.openqa.selenium.JavascriptExecutor;
+//import org.openqa.selenium.JavascriptExecutor;
 import org.testng.annotations.Test;
-
 import com.spp.common.BaseTest;
-import com.spp.pages.AllotSalaryNotOnGross;
-import com.spp.pages.AllotSalaryToEmployee;
-import com.spp.pages.AssignEmployee;
+//import com.spp.pages.AllotSalaryNotOnGross;
+//import com.spp.pages.AllotSalaryToEmployee;
+//import com.spp.pages.AssignEmployee;
 import com.spp.pages.CheckPaydaysPresentdaysAndBasic;
 import com.spp.pages.CheckSalaryHead;
 import com.spp.pages.EditEmployee;
@@ -26,7 +25,7 @@ import com.spp.pages.GenerateSalarySheetReportCalculationTypeNotApplicable;
 import com.spp.pages.GenerateSalarySheetToCheckPayDays;
 import com.spp.pages.GenerateSalarySheetToCheckPresentDays;
 import com.spp.pages.GenerateSalarySheetToCheckPresentDaysAndPayDays;
-import com.spp.pages.GetBulkReimbursementErrorLogExcel;
+//import com.spp.pages.GetBulkReimbursementErrorLogExcel;
 import com.spp.pages.ProcessSalaryCalculationTypeNotApplicable;
 import com.spp.pages.PublishSalary;
 import com.spp.pages.PublishSalary182;

@@ -13,7 +13,7 @@ public class EditPTGroup extends BasePage{
 	WebElement companystatutorylink;
 	@FindBy(xpath="//a[text()='PT Group']")
 	WebElement ptlink;
-	@FindBy(xpath="//table[@id='dt_pt_groups']//tr[2]//td[4]//a[text()='edit']")
+	@FindBy(xpath="//tbody/tr[2]/td[contains(text(),'PT_ATest')]/parent::tr/td[4]/span[1]/a/img")
 	WebElement editPTGroupIcon;
 	@FindBy(id="pt_group_id")
 	WebElement ptgroupname;

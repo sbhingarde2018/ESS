@@ -1,14 +1,12 @@
 package com.spp.scripts;
 
-import org.openqa.selenium.JavascriptExecutor;
+//import org.openqa.selenium.JavascriptExecutor;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
-
 import com.spp.common.BaseTest;
 import com.spp.pages.AllotSalaryNotOnGross;
 import com.spp.pages.AllotSalaryToEmployee;
-import com.spp.pages.AllotSalaryViaExcel;
+//import com.spp.pages.AllotSalaryViaExcel;
 import com.spp.pages.AllotSalarytoanemployeeAfterchangingSalaryStructure;
 import com.spp.pages.AssignNewHeadtoStructure;
 import com.spp.pages.CheckIfSalHeadisAssignInSalStructure;

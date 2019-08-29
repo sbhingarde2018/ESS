@@ -1,10 +1,8 @@
 package com.spp.scripts;
 
-import java.awt.event.KeyEvent;
-
+//import java.awt.event.KeyEvent;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
 import com.spp.common.BaseTest;
 import com.spp.generics.Utility;
 import com.spp.pages.AddLeaves;
@@ -33,8 +31,8 @@ import com.spp.pages.CheckForLapseUnavailedOnInLeavePolicy;
 import com.spp.pages.CheckForLowerLimitInLeavePolicy;
 import com.spp.pages.CheckForPrioritySettingsInLeavePolicy;
 import com.spp.pages.CheckForUpperLimitInLeavePolicy;
-import com.spp.pages.CheckMaxNoOfCasualLeaveAllowedAvailForMonth;
-import com.spp.pages.CheckMaxNoOfEarnedLeaveAllowedAvailForYear;
+//import com.spp.pages.CheckMaxNoOfCasualLeaveAllowedAvailForMonth;
+//import com.spp.pages.CheckMaxNoOfEarnedLeaveAllowedAvailForYear;
 import com.spp.pages.CheckPriordaystoapplycasualleave;
 import com.spp.pages.CheckforMaxCasualLeavethatcanbeavailedforinstance;
 import com.spp.pages.CheckforMaxEarnedLeavecanbeEncashedinayear;
@@ -1608,7 +1606,7 @@ public class LeavePolicy extends BaseTest {
 		Thread.sleep(2000);
 		mc.selectApplyButton();
 	}
-	@Test(priority=43) not running
+	@Test(priority=43) //not running
 	public void CheckforMinimumNodaysshouldbeappliedtoavailtheCasualLeave_SC_308() throws InterruptedException{
 		CheckforMinimumNodaysshouldbeappliedtoavailtheCasualLeave mc=new CheckforMinimumNodaysshouldbeappliedtoavailtheCasualLeave(driver);
 		mc.clickMastserLink();

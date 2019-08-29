@@ -1,6 +1,6 @@
 package com.spp.scripts;
 
-import org.teStatesstng.Assert;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import com.spp.common.BaseTest;
 import com.spp.pages.CreateState;

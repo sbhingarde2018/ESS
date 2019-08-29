@@ -6,7 +6,7 @@ import com.spp.common.BaseTest;
 import com.spp.generics.Utility;
 import com.spp.pages.ApplyDefaultLeave;
 import com.spp.pages.ApplyUserDefinedtLeave;
-import com.spp.pages.CheckifEmployeeLeaveAllotAvailDateSettingsGeneralLinkredirectstoEmployeeMaster;
+//import com.spp.pages.CheckifEmployeeLeaveAllotAvailDateSettingsGeneralLinkredirectstoEmployeeMaster;
 import com.spp.pages.CheckifLeaveApplyLeaveGeneralLinkEmployeeMasterredirectstoEmployeeMaster;
 import com.spp.pages.DeleteAppliedLeave;
 import com.spp.pages.SearchtheLeavesApplied;

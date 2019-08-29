@@ -5,9 +5,9 @@ import org.testng.annotations.Test;
 
 import com.spp.common.BaseTest;
 import com.spp.generics.Utility;
-import com.spp.pages.CreateaNewLeaveDefinitionoftypeNonLeave;
+//import com.spp.pages.CreateaNewLeaveDefinitionoftypeNonLeave;
 import com.spp.pages.AddLeaveDefinitions;
-import com.spp.pages.CreateNewLeaveDefinitionOfTypeLeave;
+//import com.spp.pages.CreateNewLeaveDefinitionOfTypeLeave;
 import com.spp.pages.CreateNewLeaveDefinitionofTypeNonLeave;
 import com.spp.pages.CreateNewLeavewithoutAffectSalandAllot;
 import com.spp.pages.DeleteLeaveDefinition;

@@ -14,7 +14,7 @@ public class EditESIAndESIRate extends BasePage{
 	WebElement companystatutorylink;
 	@FindBy(xpath="//a[text()='ESI Group']")
 	WebElement esilink;
-	@FindBy(xpath="//*[@id='dt_esi_groups']/tbody/tr[2]/td[4]/span[1]")
+	@FindBy(xpath="//tbody/tr[2]/td[contains(text(),'ESI_ATest')]/parent::tr/td[4]/span[1]/a/img")
 	WebElement editESIicon;
 	@FindBy(id="esi_group_id")
 	WebElement esiname;

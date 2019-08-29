@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 import com.spp.common.BaseTest;
 import com.spp.generics.Utility;
 import com.spp.pages.CheckGrpIncMstrcanbeEdited;
-import com.spp.pages.CheckPeriodicIncMstrcanbeEdited;
+//import com.spp.pages.CheckPeriodicIncMstrcanbeEdited;
 import com.spp.pages.CreateGrpInsrnceMstrwithoutClubbInSal;
 import com.spp.pages.CreateGrpInsunceMstrwithClubbInSal;
 import com.spp.pages.DeleteGroupInsuranceMaster;

@@ -15,13 +15,13 @@ public class DeletePTGroupRate extends BasePage{
 	WebElement companystatutorylink;
 	@FindBy(xpath="//a[text()='PT Group']")
 	WebElement PTGroup;
-	@FindBy(xpath="//tbody/tr[2]/td[contains(text(),'PF')]/parent::tr/td[4]/span[1]/a/img")
+	@FindBy(xpath="//tbody/tr[2]/td[contains(text(),'PT-ATest')]/parent::tr/td[4]/span[1]/a/img")
 	WebElement EditLink;
 	@FindBy(xpath="//*[@id='main']/div[3]/nav/ul/li[2]/a/span")
 	WebElement PTRate;
 	@FindBy(xpath="//*[@id='ptrate_list']/div[2]/table/tbody/tr/td[4]/a[1]")
 	WebElement Settings;
-	@FindBy(xpath="//*[@id='pt_rate_list']/div[2]/table/tbody/tr[1]/td[9]/a")
+	@FindBy(xpath="//div[2]/table/tbody/tr/td[4]/a[2]")
 	WebElement DeleteButton;
 	@FindBy(xpath="//*[@id='pt_rate_result']/div/strong")
 	WebElement SuccessfulMessage;

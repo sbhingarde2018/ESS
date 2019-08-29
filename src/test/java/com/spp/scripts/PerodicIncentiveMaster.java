@@ -7,7 +7,7 @@ import com.spp.generics.Utility;
 import com.spp.pages.CheckPeriodicIncMstrcanbeEdited;
 import com.spp.pages.CreatePeriodicIncMstrwithClubbInSal;
 import com.spp.pages.CreatePerodicIncMstrwithoutClubbInSalHead;
-import com.spp.pages.DeleteInsuranceMaster;
+//import com.spp.pages.DeleteInsuranceMaster;
 import com.spp.pages.DeletePeriodicIncetive;
 
 import junit.framework.Assert;

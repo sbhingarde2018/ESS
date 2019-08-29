@@ -14,7 +14,7 @@ import com.spp.pages.CreateGroupInsurancePremiumPaymentQuarterly;
 import com.spp.pages.CreateGroupInsurancePremiumPaymentYearly;
 import com.spp.pages.DeleteEMIDetailInGroupInsuranceDetail;
 import com.spp.pages.DeleteGroupInsuranceDetail;
-import com.spp.pages.EditEMIDetailInsuranceDetails;
+//import com.spp.pages.EditEMIDetailInsuranceDetails;
 import com.spp.pages.EditEMIDetailsGroupInsuranceDetails;
 import com.spp.pages.GroupInsuranceDetailMultiAllotment;
 import com.spp.pages.GroupInsuranceDetailSingleAllotment;

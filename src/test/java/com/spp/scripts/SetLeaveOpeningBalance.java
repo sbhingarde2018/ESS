@@ -3,7 +3,7 @@ package com.spp.scripts;
 import org.testng.annotations.Test;
 
 import com.spp.common.BaseTest;
-import com.spp.pages.CheckifEmployeeLeaveAllotAvailDateSettingsGeneralLinkredirectstoEmployeeMaster;
+//import com.spp.pages.CheckifEmployeeLeaveAllotAvailDateSettingsGeneralLinkredirectstoEmployeeMaster;
 import com.spp.pages.CheckifEmployeeSetLeaveOpeningBalanceGeneralLinkEmployeeMasterredirectstoEmployeeMastertoAddNewEmployee;
 import com.spp.pages.SetOpeningBalanceForEmployee;
 import com.spp.pages.TosetLeaveOpeningBalanceviaExcelUpload;

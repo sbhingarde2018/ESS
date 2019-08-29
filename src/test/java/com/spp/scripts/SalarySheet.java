@@ -1,13 +1,9 @@
 package com.spp.scripts;
 
-
-
-import java.io.IOException;
-
+//import java.io.IOException;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
 import com.spp.common.BaseTest;
 import com.spp.generics.Utility;
 import com.spp.pages.GenerateSalarySheet;
