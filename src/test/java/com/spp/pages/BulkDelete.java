@@ -48,8 +48,8 @@ public class BulkDelete extends BasePage {
 	public String getMessage(){
 		return successfullMessage.getText();
 	}
-	public void BulkDelete() {
+	/*public void BulkDelete() {
 		BulkDelete.click();
-	}
+	}*/
 
 }

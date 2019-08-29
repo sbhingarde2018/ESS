@@ -79,10 +79,10 @@ WebElement SelectOrderBy;
 	}
 	
 	public ArrayList<String> getColumn() throws EncryptedDocumentException, InvalidFormatException, IOException {
-		ExcelUtil exc = new ExcelUtil("C:\\Users\\Administrator\\Downloads\\excel_leave_report.xls","excel_leave_report", "JaiSriRam");
+		/*ExcelUtil exc = new ExcelUtil("C:\\Users\\Administrator\\Downloads\\excel_leave_report.xls","excel_leave_report", "JaiSriRam");
 		ArrayList<String> arrayList = new ArrayList<String>(Arrays.asList(exc.getColumn("C")));
 		return arrayList;			
-	}
+	}*/
 	
 	/*public void readDownloadFile() throws URISyntaxException, IOException {
 		String content = new String(Files.readAllBytes(Paths.get("C:\\Users\\Administrator\\Downloads\\excel_leave_report.xls")));

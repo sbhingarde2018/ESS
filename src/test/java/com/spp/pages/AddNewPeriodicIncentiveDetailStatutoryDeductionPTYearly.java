@@ -93,9 +93,9 @@ public class AddNewPeriodicIncentiveDetailStatutoryDeductionPTYearly extends Bas
 	public void clickESI() throws Exception{
 		ESI.click();
 	}
-	public void clickHalfYearly() throws Exception{
-		HalfYearly.click();
-	}
+	//public void clickHalfYearly() throws Exception{
+		//HalfYearly.click();
+	
 	public void clickCreateButton() throws Exception{
 		CreateButton.click();
 	}
