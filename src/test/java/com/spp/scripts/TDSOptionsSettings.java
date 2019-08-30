@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 import com.spp.common.BaseTest;
 import com.spp.generics.Utility;
 import com.spp.pages.TocheckTaxcalculationbasedonDeclaredAmount;
-//import com.spp.pages.TocheckTaxcalculationbasedonProofAmount;
+import com.spp.pages.TocheckTaxcalculationbasedonProofAmount;
 import com.spp.pages.TocheckifProofAmountcanbesetforTDSCalculation;
 import com.spp.pages.TocheckifbydefaultsettingisbasedonDeclaredAmount;
 import com.spp.pages.ToseeifthesettingrevertsbacktoDeclaredAmountwithstartofnewfinancialyear;

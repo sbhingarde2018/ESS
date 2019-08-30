@@ -123,7 +123,7 @@ public class ReimbursementAllotment extends BaseTest{
 		ty.selectEmployee();
 		ty.selectReimbursementAllotment();
 		ty.selectBulkDeleteLink();
-		ty.BulkDelete();
+		//ty.BulkDelete();
 		ty.selectDeleteReimbursementAllotmentsButton();
 		String d=ty.getMessage();
 		Assert.assertEquals(d, "Reimbursement Allotments were successfully deleted");

@@ -8,7 +8,6 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
-
 import org.apache.poi.EncryptedDocumentException;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.jsoup.Jsoup;
@@ -78,8 +77,8 @@ WebElement SelectOrderBy;
 		GenerateReport.click();
 	}
 	
-	public ArrayList<String> getColumn() throws EncryptedDocumentException, InvalidFormatException, IOException {
-		/*ExcelUtil exc = new ExcelUtil("C:\\Users\\Administrator\\Downloads\\excel_leave_report.xls","excel_leave_report", "JaiSriRam");
+	/*public ArrayList<String> getColumn() throws EncryptedDocumentException, InvalidFormatException, IOException {
+		ExcelUtil exc = new ExcelUtil("C:\\Users\\Administrator\\Downloads\\excel_leave_report.xls","excel_leave_report", "JaiSriRam");
 		ArrayList<String> arrayList = new ArrayList<String>(Arrays.asList(exc.getColumn("C")));
 		return arrayList;			
 	}*/
