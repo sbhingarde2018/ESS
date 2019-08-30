@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]">
+  <test name="Test(failed)">
+    <classes>
+      <class name="com.spp.scripts.AttendanceConfigurations">
+        <methods>
+          <include name="verifyDeletedAttendanceConfig"/>
+          <include name="verifyUpdatedAttendanceConfig"/>
+          <include name="preCondition"/>
+          <include name="verifyCreatedAttendanceConfiguration"/>
+          <include name="initBrowser"/>
+          <include name="initApplication"/>
+          <include name="initFrameWork"/>
+        </methods>
+      </class> <!-- com.spp.scripts.AttendanceConfigurations -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
