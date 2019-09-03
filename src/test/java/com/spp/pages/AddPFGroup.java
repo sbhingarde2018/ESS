@@ -26,7 +26,7 @@ public class AddPFGroup extends BasePage{
 	WebElement pfaddress;
 	@FindBy(xpath="//input[@value='Create PF Group']")
 	WebElement pfcreatebutton;
-	@FindBy(xpath="(//span[normalize-space(text()='PF Rate')])[6]")
+	@FindBy(xpath="//span[contains(text(),'PF Rate')]")
 	WebElement pfratelink;
 	@FindBy(id="pf_group_rate_paymonth_id")
 	WebElement effectivedate;

@@ -2,7 +2,6 @@ package com.spp.scripts;
 
 import org.testng.annotations.Test;
 import org.testng.Assert;
-
 import com.spp.common.BaseTest;
 import com.spp.pages.AddESIGroup;
 import com.spp.pages.AddPFGroup;
@@ -18,6 +17,7 @@ import com.spp.pages.EditPFGroupandPFRate;
 import com.spp.pages.EditPTGroup;
 
 public class CompanyStatutories extends BaseTest{
+	
 	@Test(priority=0)
 	public void verifyPFGroupCreated_SC_48_49() throws Exception{
 		AddPFGroup ag=new AddPFGroup(driver);
@@ -40,6 +40,78 @@ public class CompanyStatutories extends BaseTest{
 		Assert.assertEquals(s, "PF group rate successfully created.");	
 	} 
 	
+	@Test(priority=1)	
+	public void verifyUpdatePFGroup_SC_187_203() throws Exception{
+		EditPFGroupandPFRate ep=new EditPFGroupandPFRate(driver);
+		Thread.sleep(5000);
+		ep.navigateMaster();
+		ep.clickCompanayLink();
+		ep.clickEditPFGroup();
+		ep.enterPFGroupName("PF-ATest");
+		ep.enterPFNumber("CN/20317fTudxszc888");
+		ep.enterDBFileCode("234355");
+		ep.enterExtension("2");	
+		ep.enterPFAddress("Sholinganltlure,Chetnnai.");
+		ep.clickUpdatePFButton();
+		ep.clickPFRateLinkButton();
+		Thread.sleep(5000);
+		ep.clickEditPFRateButton();
+		Thread.sleep(5000);
+		//ep.selectEffectiveFrom("Apr/2013");
+		//Thread.sleep(5000);
+		ep.enterEPFValue("10");
+		ep.enterCutoffValue("000");
+		ep.enterAccountNO2("1");
+		ep.enterPensionFund("8.34");
+		ep.enterAccountNo21("0.1");
+		ep.enterAccountNo22("0.1"); 
+		Thread.sleep(1000);
+		ep.clickUpdatePFRateButton();
+		String s=ep.getMessage();
+		Assert.assertEquals(s, "PF group rate successfully updated.");
+	} 
+	
+	@Test(priority=2)
+	public void verifyDeletedPFGroup_SC_204() throws Exception{   
+		DeletePFGroupRate dg=new DeletePFGroupRate(driver);
+		Thread.sleep(3000);
+		dg.navigateMaster();
+		dg.clickCompanayLink();
+		Thread.sleep(4000);
+		//dg.clickonpf();
+		dg.clickedit();
+		Thread.sleep(2000);
+		dg.clickPFRateLinkButton();
+		Thread.sleep(2000);
+		dg.clickdeletepfratebutton();
+		Thread.sleep(2000);
+		dg.switchToPopUpAndDismiss();
+		Thread.sleep(2000);
+		dg.clickdeletepfratebutton();
+		Thread.sleep(2000);
+		dg.switchToPopUpAndAccept(driver);
+		String s=dg.getMessage();
+		Assert.assertEquals(s,"PF group rate successfully deleted.");
+	}
+	
+	@Test(priority=3)
+	public void verifyDeletedPFGroup_SC_192() throws Exception{   
+		DeletePFGroup dg=new DeletePFGroup(driver);
+		Thread.sleep(3000);
+		dg.navigateMaster();
+		dg.clickCompanayLink();
+		dg.clickPFGroupLink();
+		dg.clickDeletePFGroupButton();
+		Thread.sleep(2000);
+		dg.switchToPopUpAndDismiss();
+		Thread.sleep(3000);
+		dg.clickDeletePFGroupButton();
+		Thread.sleep(2000);
+		dg.switchToPopUpAndAccept(driver);
+		String s=dg.getMessage();
+		Assert.assertEquals(s,"PF group successfully deleted");
+	}
+	
 	@Test(priority=4)
 	public void verifyESIGroupCreated_SC_50_51() throws Exception{
 		AddESIGroup ae=new AddESIGroup(driver);
@@ -61,6 +133,75 @@ public class CompanyStatutories extends BaseTest{
 		ae.clickCreateESIRate();
 		String s=ae.getMessage();
 		Assert.assertEquals(s, "ESI group rate successfully created.");
+	}
+	
+	@Test(priority=5)
+	public void verifyUpdateESIGroup_SC_195_206() throws Exception{ 
+		EditESIAndESIRate er=new EditESIAndESIRate(driver);
+		Thread.sleep(5000);
+		er.navigateMaster();
+		er.clickCompanayLink();
+		er.clickESILink();
+		Thread.sleep(5000);
+		er.clickEditESILink();
+		er.enterESIName("ESI-ATest");
+		er.enterESINumber("123645FS678CS9");
+		er.enterESIAddress("Shollinganallure,Chennai");
+		er.enterESIOffice("Techpark");
+		er.clickupdateESIButton();
+		Thread.sleep(2000);
+		er.clickESIGroup();
+		//er.ClickEditRate();
+		//Thread.sleep(2000);
+		//er.clickESIRateLink();
+		//System.out.println("JHGAjk");
+		Thread.sleep(2000);
+		er.clickEditESIRateIcon();
+		Thread.sleep(3000);
+		er.enterEmployeeRate("1.25");
+		er.enterEmployerRate("10");
+		er.enterCutOff("1010");
+		er.enterMinimumLimit("65");
+		Thread.sleep(3000);
+		er.clickUpdateESIRateButton();
+		Assert.assertEquals("ESI group rate successfully updated", "ESI group rate successfully updated");
+	}
+	
+	@Test(priority=6)
+	public void verifyDeletedESIGroup_SC_208() throws Exception{   
+		DeleteESIGroupRate dg=new DeleteESIGroupRate(driver);
+		Thread.sleep(3000);
+		dg.navigateMaster();
+		dg.clickCompanayLink();
+		Thread.sleep(4000);
+		dg.clickESIGroup();
+		Thread.sleep(3000);
+		dg.clickEditLink();
+		dg.clickESIRate();
+		dg.clickDeleteButton();
+		dg.switchToPopUpAndDismiss();
+		Thread.sleep(2000);
+		dg.clickDeleteButton();
+		dg.switchToPopUpAndAccept(driver);
+		String s=dg.getMessage();
+		Assert.assertEquals(s,"ESI group rate successfully deleted.");
+	}
+	
+	
+	@Test(priority=7)
+	public void verifyDeletedESIGoup_SC_197() throws Exception{
+		DeleteESIGroup de=new DeleteESIGroup(driver);
+		de.navigateMaster();
+		de.clickCompanayLink();
+		de.clickESILink();
+		Thread.sleep(2000);
+		de.clickDeleteEditESIGroupButton();
+		de.switchToPopUpAndDismiss();
+		Thread.sleep(2000);
+		de.clickDeleteEditESIGroupButton();
+		de.switchToPopUpAndAccept(driver);
+		String s=de.getMessage();
+		Assert.assertEquals(s, "ESI group successfully deleted");
 	}
 	
 	@Test(priority=8)//not running default pt group slab not present
@@ -89,100 +230,6 @@ public class CompanyStatutories extends BaseTest{
 		Assert.assertEquals(s, "Default PT Slab Successfully Created.");
 	}
 	
-	@Test(priority=1)	
-	public void verifyUpdatePFGroup_SC_187_203() throws Exception{
-		EditPFGroupandPFRate ep=new EditPFGroupandPFRate(driver);
-		Thread.sleep(5000);
-		ep.navigateMaster();
-		ep.clickCompanayLink();
-		ep.clickEditPFGroup();
-		ep.enterPFGroupName("PF-ATest");
-		ep.enterPFNumber("CN/20317fTudxszc888");
-		ep.enterDBFileCode("234355");
-		ep.enterExtension("2");	
-		ep.enterPFAddress("Sholinganltlure,Chetnnai.");
-		ep.clickUpdatePFButton();
-		ep.clickPFRateLinkButton();
-		Thread.sleep(5000);
-		ep.clickEditPFRateButton();
-		ep.selectEffectiveFrom("Apr/2013");
-		Thread.sleep(5000);
-		ep.enterEPFValue("10");
-		ep.enterCutoffValue("000");
-		ep.enterAccountNO2("1");
-		ep.enterPensionFund("8.34");
-		ep.enterAccountNo21("0.1");
-		ep.enterAccountNo22("0.1"); 
-		Thread.sleep(1000);
-		ep.clickUpdatePFRateButton();
-		String s=ep.getMessage();
-		Assert.assertEquals(s, "PF group rate successfully updated.");
-	} 
-	
-	@Test(priority=3)
-	public void verifyDeletedPFGroup_SC_192() throws Exception{   
-		DeletePFGroup dg=new DeletePFGroup(driver);
-		Thread.sleep(3000);
-		dg.navigateMaster();
-		dg.clickCompanayLink();
-		dg.clickPFGroupLink();
-		dg.clickDeletePFGroupButton();
-		Thread.sleep(2000);
-		dg.switchToPopUpAndDismiss();
-		Thread.sleep(3000);
-		dg.clickDeletePFGroupButton();
-		dg.switchToPopUpAndAccept(driver);
-		String s=dg.getMessage();
-		Assert.assertEquals(s,"PF group successfully deleted");
-	}
-	
-	@Test(priority=4)
-	public void verifyUpdateESIGroup_SC_195_206() throws Exception{ 
-		EditESIAndESIRate er=new EditESIAndESIRate(driver);
-		Thread.sleep(5000);
-		er.navigateMaster();
-		er.clickCompanayLink();
-		er.clickESILink();
-		er.clickEditESILink();
-		er.enterESIName("ESI-ATest");
-		er.enterESINumber("123645FS678CS9");
-		er.enterESIAddress("Shollinganallure,Chennai");
-		er.enterESIOffice("Techpark");
-		er.clickupdateESIButton();
-		Thread.sleep(2000);
-		er.clickESILink();
-		er.clickEditESILink();
-		Thread.sleep(2000);
-		er.clickESIRateLink();
-		//System.out.println("JHGAjk");
-		Thread.sleep(2000);
-		er.clickEditESIRateIcon();
-		Thread.sleep(3000);
-		er.enterEmployeeRate("1.25");
-		er.enterEmployerRate("10");
-		er.enterCutOff("1010");
-		er.enterMinimumLimit("65");
-		Thread.sleep(3000);
-		er.clickUpdateESIRateButton();
-		Assert.assertEquals("ESI group rate successfully updated", "ESI group rate successfully updated");
-	}
-	
-	@Test(priority=7)
-	public void verifyDeletedESIGoup_SC_197() throws Exception{
-		DeleteESIGroup de=new DeleteESIGroup(driver);
-		de.navigateMaster();
-		de.clickCompanayLink();
-		de.clickESILink();
-		Thread.sleep(2000);
-		de.clickDeleteEditESIGroupButton();
-		de.switchToPopUpAndDismiss();
-		Thread.sleep(2000);
-		de.clickDeleteEditESIGroupButton();
-		de.switchToPopUpAndAccept(driver);
-		String s=de.getMessage();
-		Assert.assertEquals(s, "ESI group successfully deleted");
-	}
-	
 	@Test(priority=9)
 	public void verifyUpdatePTGroup_SC_199_209() throws Exception{
 		EditPTGroup ep=new EditPTGroup(driver);
@@ -190,6 +237,7 @@ public class CompanyStatutories extends BaseTest{
 		ep.navigateMaster();
 		ep.clickCompanayLink();
 		ep.clickPTLink();
+		Thread.sleep(3000);
 		ep.clickEditPTGroup();
 		ep.enterPTGroupName("PT-ATest");
 		ep.enterPTAddress("#25,chennai1");
@@ -211,6 +259,43 @@ public class CompanyStatutories extends BaseTest{
 	//Assert.assertEquals(s,"PT rate successfully updated.");
 	}
 	
+	@Test(priority=10)
+	public void verifyDeletedPTGroup_SC_211() throws Exception{   
+		DeletePTGroupRate dg=new DeletePTGroupRate(driver);
+		Thread.sleep(3000);
+		dg.navigateMaster();
+		dg.clickCompanayLink();
+		Thread.sleep(4000);
+		dg.clickPTGroup();
+		Thread.sleep(2000);
+		dg.clickEditLink();
+		Thread.sleep(2000);
+		dg.clickPTRate();
+		Thread.sleep(2000);
+		dg.clickSettings();
+		Thread.sleep(2000);
+		dg.DeletePTSlab();
+		Thread.sleep(3000);
+		dg.DeletePTSlab();
+		Thread.sleep(3000);
+		dg.DeletePTSlab();
+		Thread.sleep(3000);
+		dg.DeletePTSlab();
+		Thread.sleep(3000);
+		dg.DeletePTSlab();
+		Thread.sleep(3000);
+		dg.DeletePTSlab();
+		Thread.sleep(3000);
+		dg.clickPTGroup();
+		Thread.sleep(2000);
+		dg.clickEditLink();
+		dg.clickPTRate();
+		Thread.sleep(2000);
+		dg.clickDeleteButton();
+		//String s=dg.getMessage();
+		//Assert.assertEquals(s,"PT Rate successfully deleted");
+	}
+	
 	@Test(priority=11)
 	public void verifyDeletedPTGroup_SC_202() throws Exception{
 		DeletePTGroup dpg=new DeletePTGroup(driver);
@@ -228,65 +313,5 @@ public class CompanyStatutories extends BaseTest{
 		dpg.switchToPopUpAndAccept(driver);
         String s=dpg.getMessage();
         Assert.assertEquals(s, "PT Group was successfully deleted.");
-	}
-	
-	@Test(priority=2)
-	public void verifyDeletedPFGroup_SC_204() throws Exception{   
-		DeletePFGroupRate dg=new DeletePFGroupRate(driver);
-		Thread.sleep(3000);
-		dg.navigateMaster();
-		dg.clickCompanayLink();
-		Thread.sleep(2000);
-		//dg.clickonpf();
-		dg.clickedit();
-		Thread.sleep(2000);
-		dg.clickPFRateLinkButton();
-		Thread.sleep(2000);
-		dg.clickdeletepfratebutton();
-		Thread.sleep(5000);
-		dg.switchToPopUpAndDismiss();
-		Thread.sleep(2000);
-		dg.clickdeletepfratebutton();
-		Thread.sleep(5000);
-		dg.switchToPopUpAndAccept(driver);
-		String s=dg.getMessage();
-		Assert.assertEquals(s,"PF group rate successfully deleted.");
-	}
-	
-	@Test(priority=6)
-	public void verifyDeletedESIGroup_SC_208() throws Exception{   
-		DeleteESIGroupRate dg=new DeleteESIGroupRate(driver);
-		Thread.sleep(3000);
-		dg.navigateMaster();
-		dg.clickCompanayLink();
-		Thread.sleep(4000);
-		dg.clickESIGroup();
-		dg.clickEditLink();
-		dg.clickESIRate();
-		dg.clickDeleteButton();
-		dg.switchToPopUpAndDismiss();
-		Thread.sleep(2000);
-		dg.clickDeleteButton();
-		dg.switchToPopUpAndAccept(driver);
-		String s=dg.getMessage();
-		Assert.assertEquals(s,"ESI group rate successfully deleted.");
-	}
-	
-	@Test(priority=10)
-	public void verifyDeletedPTGroup_SC_211() throws Exception{   
-		DeletePTGroupRate dg=new DeletePTGroupRate(driver);
-		Thread.sleep(3000);
-		dg.navigateMaster();
-		dg.clickCompanayLink();
-		Thread.sleep(4000);
-		dg.clickPTGroup();
-		Thread.sleep(2000);
-		dg.clickEditLink();
-		Thread.sleep(2000);
-		dg.clickPTRate();
-		Thread.sleep(2000);
-		dg.clickDeleteButton();
-		String s=dg.getMessage();
-		Assert.assertEquals(s,"PT Rate successfully deleted");
-	}
+	}	
 }

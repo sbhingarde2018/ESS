@@ -12,7 +12,7 @@ public class DeleteAdvanceMaster extends BasePage{
 	WebElement masterlink;
 	@FindBy(xpath="//a[text()='Advance Master']")
 	WebElement advanceMaster;
-	@FindBy(xpath="//*[@id='standing_instr_list']/div[2]/table/tbody/tr/td[contains(text(),'Advance_Master')]/parent::tr/td[5]/a")
+	@FindBy(xpath="//td[contains(text(),'Advance_MasterTest')]/parent::tr/td[4]/a")
 	WebElement Deletebutton;
 	@FindBy(xpath="//strong[text()='Advance successfully deleted']")
 	WebElement successfullMessage;

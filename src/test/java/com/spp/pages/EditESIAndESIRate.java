@@ -14,8 +14,12 @@ public class EditESIAndESIRate extends BasePage{
 	WebElement companystatutorylink;
 	@FindBy(xpath="//a[text()='ESI Group']")
 	WebElement esilink;
-	@FindBy(xpath="//tbody/tr[2]/td[contains(text(),'ESI_ATest')]/parent::tr/td[4]/span[1]/a/img")
+	@FindBy(xpath="//span[contains(text(),'ESI Rate')]")
+	WebElement esiRate;
+	@FindBy(xpath="//tbody/tr/td[contains(text(),'ESI_ATest')]/parent::tr/td[4]/span[1]/a")
 	WebElement editESIicon;
+	@FindBy(xpath="//div[2]/table/tbody/tr/td[6]/a")
+	WebElement EditRate;
 	@FindBy(id="esi_group_id")
 	WebElement esiname;
 	@FindBy(id="esi_group_esi_no")
@@ -28,7 +32,7 @@ public class EditESIAndESIRate extends BasePage{
 	WebElement updateESIbutton;
 	@FindBy(xpath="(//span[normalize-space(text()='ESI Rate')])[6]")
 	WebElement esiratelink;
-	@FindBy(xpath="//*[@id='esi_grp_rate_list']/div[2]/table/tbody/tr/td[6]/a")
+	@FindBy(xpath="//div[2]/table/tbody/tr/td[6]/a")
 	WebElement editESIrateicon;
 	@FindBy(id="esi_group_rate_employee_rate")
 	WebElement Employeerate;
@@ -57,6 +61,11 @@ public class EditESIAndESIRate extends BasePage{
 	public void clickESILink() throws Exception{
 		esilink.click();
 	}
+	
+	public void clickESIGroup() throws Exception{
+		esiRate.click();
+	}
+	
 	
 	public void clickEditESILink() throws Exception{
 		editESIicon.click();
@@ -116,5 +125,8 @@ public class EditESIAndESIRate extends BasePage{
 	
 	public void clickUpdateESIRateButton() throws Exception{
 		updateESIratebutton.click();
+	}
+	public void ClickEditRate() {
+		EditRate.click();
 	}
 }

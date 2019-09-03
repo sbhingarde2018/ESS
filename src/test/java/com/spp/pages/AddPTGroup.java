@@ -29,7 +29,7 @@ public class AddPTGroup extends BasePage{
 	WebElement returnperiod;
 	@FindBy(xpath="//input[@value='Create PT Group']")
 	WebElement creatept;
-	@FindBy(xpath="(//span[normalize-space(text()='PT Rate')])[6]")
+	@FindBy(xpath="//span[contains(text(),'PT Rate')]")
 	WebElement ptratelink;
 	@FindBy(id="pt_group_rate_paymonth_id")
 	WebElement effectivefrom;

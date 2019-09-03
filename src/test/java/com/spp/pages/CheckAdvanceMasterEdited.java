@@ -12,14 +12,13 @@ public class CheckAdvanceMasterEdited extends BasePage{
 	WebElement masterLink;
 	@FindBy(xpath="//*[@id=\"menu\"]/li[3]/div/div[2]/ul/li[3]/a")
 	WebElement AdvanceMaster;
-	
 	@FindBy(id="standing_instruction_master_si_name")
 	WebElement AdvanceName;
 	@FindBy(xpath="//*[@id=\"standing_instruction_master_form\"]/div[8]/input")
 	WebElement UpdateButton;
 	@FindBy(xpath="//*[@id=\"main\"]/div[2]/strong")
 	WebElement successfulMessage;
-	@FindBy(xpath="//*[@id='standing_instr_list']/div/table/tbody/tr/td[contains(text(),'Advance_Master')]/parent::tr/td[3]/a")
+	@FindBy(xpath="//td[contains(text(),'Advance_Master21')]/parent::tr/td[3]/a")
 	WebElement EditButton;
 	
 	public CheckAdvanceMasterEdited(WebDriver driver) {

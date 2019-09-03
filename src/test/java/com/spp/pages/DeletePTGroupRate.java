@@ -15,7 +15,7 @@ public class DeletePTGroupRate extends BasePage{
 	WebElement companystatutorylink;
 	@FindBy(xpath="//a[text()='PT Group']")
 	WebElement PTGroup;
-	@FindBy(xpath="//tbody/tr[2]/td[contains(text(),'PT-ATest')]/parent::tr/td[4]/span[1]/a/img")
+	@FindBy(xpath="//tbody/tr/td[contains(text(),'PT-ATest')]/parent::tr/td[4]/span[1]/a")
 	WebElement EditLink;
 	@FindBy(xpath="//*[@id='main']/div[3]/nav/ul/li[2]/a/span")
 	WebElement PTRate;
@@ -25,8 +25,10 @@ public class DeletePTGroupRate extends BasePage{
 	WebElement DeleteButton;
 	@FindBy(xpath="//*[@id='pt_rate_result']/div/strong")
 	WebElement SuccessfulMessage;
-	@FindBy(xpath="//*[@id='ptrate_list']/div[2]/table/tbody/tr/td[4]/a[2]")
+	@FindBy(xpath="//div[2]/table/tbody/tr[1]/td[9]/a")
 	WebElement DeleteSlab;
+	@FindBy(xpath="//section[@class='breadcrumb']//a[1]")
+	WebElement BreadCrumb;
 	
 	public DeletePTGroupRate(WebDriver driver){
 		super(driver);
@@ -67,5 +69,8 @@ public class DeletePTGroupRate extends BasePage{
 	public void DeletePTSlab() {
 		DeleteSlab.click();
 		switchToPopUpAndAccept(driver);
+	}
+	public void clickBreadCrumb() throws Exception{
+		BreadCrumb.click();
 	}
 }

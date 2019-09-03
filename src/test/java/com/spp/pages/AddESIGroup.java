@@ -24,7 +24,7 @@ public class AddESIGroup extends BasePage {
 	WebElement esioffice;
 	@FindBy(xpath="//input[@value='Create ESI Group']")
 	WebElement createesibutton;
-	@FindBy(xpath="(//span[normalize-space(text()='ESI Rate')])[6]")
+	@FindBy(xpath="//span[contains(text(),'ESI Rate')]")
 	WebElement esiratelink;
 	@FindBy(id="esi_group_rate_paymonth_id")
 	WebElement effdate;

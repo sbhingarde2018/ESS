@@ -15,7 +15,7 @@ public class SalaryHeadExcelUpload extends BasePage{
 	WebElement salaryheads;
 	@FindBy(xpath="//a[text()='Generate Sample Template']")
 	WebElement GenerateSampleTemplate;
-	@FindBy(xpath="//*[@id='ui-accordion-accordion-panel-0']/li[2]/a")
+	@FindBy(xpath="//a[contains(text(),'Excel Template Upload')]")
 	WebElement ExcelTemplateUploadLink;
 	@FindBy(id="excel_file")
 	WebElement ChooseFile;
@@ -25,11 +25,11 @@ public class SalaryHeadExcelUpload extends BasePage{
 	WebElement SuccessfulMessage;
 	@FindBy(xpath="//*[@id=\"main\"]/section/p/a")
 	WebElement SalaryHeadsLink;
-	@FindBy(xpath="//*[@id=\"main\"]/div[5]/nav/ul/li[2]/a/span")
+	@FindBy(xpath="//span[contains(text(),'Deduction')]")
 	WebElement DeductionTab;
-	@FindBy(xpath="//*[@id='earning_heads']/tbody/tr/td[contains(text(),'TA')]/parent::tr/td/a[text()='Delete']")
+	@FindBy(xpath="//tbody/tr/td[contains(text(),'BasicHeadEarn')]/parent::tr/td[5]/a[2]")
 	WebElement DeleteUploadedEarningHead;
-	@FindBy(xpath="//*[@id='deduction_heads']/tbody/tr/td[contains(text(),'RA')]/parent::tr/td/a[text()='Delete']")
+	@FindBy(xpath="//tbody/tr/td[contains(text(),'BasicHeadDeduct')]/parent::tr/td[5]/a[2]")
 	WebElement DeleteUploadedDeductionHead;
 	
 	

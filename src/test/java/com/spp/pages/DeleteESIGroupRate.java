@@ -16,7 +16,7 @@ public class DeleteESIGroupRate extends BasePage {
 	WebElement companystatutorylink;
 	@FindBy(xpath="//a[text()='ESI Group']")
 	WebElement ESIGroup;
-	@FindBy(xpath="//tbody/tr[2]/td[contains(text(),'ESI-ATest')]/parent::tr/td[4]/span[1]/a/img")
+	@FindBy(xpath="//tbody/tr/td[contains(text(),'ESI-ATest')]/parent::tr/td[4]/span[1]/a")
 	WebElement EditLink;
 	@FindBy(xpath="//*[@id=\"main\"]/div[3]/nav/ul/li[2]/a/span")
 	WebElement ESIRate;

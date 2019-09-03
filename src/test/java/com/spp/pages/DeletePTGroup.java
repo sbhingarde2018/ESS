@@ -19,7 +19,7 @@ public class DeletePTGroup extends BasePage{
 	WebElement ptratelink;
 	@FindBy(xpath="//a[text()='Settings']")
 	WebElement settingslink;
-	@FindBy(xpath="//tbody/tr[4]/td[contains(text(),'PT-ATest')]/parent::tr/td[4]/span[2]/a")
+	@FindBy(xpath="//tbody/tr/td[contains(text(),'PT-ATest')]/parent::tr/td[4]/span[2]/a")
 	WebElement DeleteFirstPT;
 	@FindBy(xpath="//a[text()='delete']")
 	WebElement deleteSettings;

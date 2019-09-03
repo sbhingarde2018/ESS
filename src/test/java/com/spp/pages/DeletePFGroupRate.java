@@ -13,11 +13,11 @@ public class DeletePFGroupRate extends BasePage{
 	WebElement companystatutorylink;
 	@FindBy(xpath="//*[@id=\"ui-accordion-accordion-panel-0\"]/li[1]/a")
 	WebElement ClickonPF;
-	@FindBy(xpath="PF-ATest")
+	@FindBy(xpath="//tbody/tr/td[contains(text(),'PF-ATest')]/parent::tr/td[4]/span[1]/a/img")
 	WebElement ClickOnEdit;
 	@FindBy(xpath="//span[contains(text(), 'PF Rate')]")
 	WebElement pfratelink;
-	@FindBy(xpath="//div[2]/table/tbody/tr/td[4]/a[2]")
+	@FindBy(xpath="//div[2]/table/tbody/tr/td[6]/a/img")
 	WebElement deletepfratebutton;
 	@FindBy(xpath="//a[text()='PF Group']")
 	WebElement PfGrouplink;

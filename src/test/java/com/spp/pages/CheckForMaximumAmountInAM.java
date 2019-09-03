@@ -23,7 +23,6 @@ public class CheckForMaximumAmountInAM extends BasePage {
 	WebElement UpdateButton;
 	@FindBy(xpath="//*[@id=\"main\"]/div[2]/strong")
 	WebElement successfulMessage;
-	
 	@FindBy(id="salary")
 	WebElement Salary;
 	@FindBy(xpath="//*[@id='menu']/li[6]/div/div[1]/ul/li[7]/a")
@@ -36,7 +35,6 @@ public class CheckForMaximumAmountInAM extends BasePage {
 	WebElement ViewLink;
 	@FindBy(xpath="//*[@id='standing_detail_list']/div[1]/span/a")
 	WebElement AddNewAdvanceLink;
-	
 	@FindBy(id="standing_instruction_detail_standing_instruction_master_id")
 	WebElement AdvanceName;
 	@FindBy(id="standing_instruction_detail_actual_amount")
@@ -47,7 +45,6 @@ public class CheckForMaximumAmountInAM extends BasePage {
 	WebElement NoOfInstallments;
 	@FindBy(id="standing_instruction_detail_no_of_instalment")
 	WebElement Installments;
-	
 	@FindBy(id="dpMonthYear")
 	WebElement RecoveryDate;
 	@FindBy(id="update_save")

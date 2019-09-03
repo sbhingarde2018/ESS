@@ -13,7 +13,7 @@ public class EditPTGroup extends BasePage{
 	WebElement companystatutorylink;
 	@FindBy(xpath="//a[text()='PT Group']")
 	WebElement ptlink;
-	@FindBy(xpath="//tbody/tr[2]/td[contains(text(),'PT_ATest')]/parent::tr/td[4]/span[1]/a/img")
+	@FindBy(xpath="//tbody/tr/td[contains(text(),'PT_ATest')]/parent::tr/td[4]/span[1]/a")
 	WebElement editPTGroupIcon;
 	@FindBy(id="pt_group_id")
 	WebElement ptgroupname;
@@ -29,11 +29,11 @@ public class EditPTGroup extends BasePage{
 	WebElement PTLock;
 	@FindBy(xpath="//input[@value='Update PT Group']")
 	WebElement updatePTgroupButton;
-	@FindBy(xpath="(//span[normalize-space(text()='PT Rate')])[6]")
+	@FindBy(xpath="//span[contains(text(),'PT Rate')]")
 	WebElement ptratelink;
 	@FindBy(xpath="//a[text()='Settings']")
 	WebElement settingslink;
-	@FindBy(xpath="//*[@id=\"pt_rate_list\"]/div[2]/table/tbody/tr[1]/td[8]/a")
+	@FindBy(xpath="//div[2]/table/tbody/tr[1]/td[8]/a")
 	WebElement editPTrateLink;
 	@FindBy(id="pt_rate_min_sal_range")
 	WebElement Minimumfield;
