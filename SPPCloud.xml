@@ -4,27 +4,26 @@
      <format property="time.stamp" pattern="dd-MMM-yyyy_HH-mm-ss"/>
 	</tstamp>	
 
-	<property name="dire" value="C:\Users\Alfa\Desktop\Relyon\Merging\target\surefire-reports\"/>
+	<property name="dire" value="D:\Merging\target\surefire-reports"/>
 
  
   <target name="email">	  
 	  <mail mailhost="sg2plcpnl0215.prod.sin2.secureserver.net" 
 			mailport="587" 
-			user="shraddha.bhingarde@alfalabs.in" 
+			user="alice.david@alfalabs.in" 
 			password="@lfa1absTest" 
 			subject="SPP Cloud Test Execution Report ${time.stamp}"
 			messagefile="${dire}/emailable-report.html"
 			messagemimetype="text/html"
 		>
-		<from address="shraddha.bhingarde@alfalabs.in"/>
-		<replyto address="shraddha.bhingarde@alfalabs.in"/>
-		<to address="shraddha.bhingarde@alfalabs.in"/>
-		<!--<to address="manjunathsm@gmail.com"/>
-		<to address="manjunath.sm@relyonsoft.com"/>
-		<to address="alice.david@alfalabs.in"/>	
-		<cc address="manish.malsisaria@alfalabs.in"/>
-		<cc address="harmeet.bhatia@alfalabs.in"/>-->
-		
+		<from address="alice.david@alfalabs.in"/>
+		<replyto address="alice.david@alfalabs.in"/>
+	    <to address="alice.david@alfalabs.in"/>
+        <to address="ritu.bisht@alfalabs.in"/>
+     	<to address="harmeet.bhatia@alfalabs.in"/> 
+		<to address="manjunathsm@gmail.com"/>
+		<to address="manjunath.sm@relyonsoft.com "/>
+		<to address="samrat.b@relyonsoft.com"/>
 		<attachments>
          <filelist files="${dire}/emailable-report.html" />
 		</attachments>
