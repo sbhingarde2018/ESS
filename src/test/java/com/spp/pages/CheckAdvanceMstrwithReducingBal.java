@@ -27,7 +27,7 @@ public class CheckAdvanceMstrwithReducingBal extends BasePage{
 	WebElement createAdvance;
 	@FindBy(xpath="//strong[text()='Advance successfully created ']")
 	WebElement successfullMessage;
-	@FindBy(xpath="//*[@id='standing_instr_list']/div[2]/table/tbody/tr/td[contains(text(),'Advance_Master')]/parent::tr/td[5]/a")
+	@FindBy(xpath="//div[2]/table/tbody/tr/td[contains(text(),'Advance_Master22')]/parent::tr/td[4]/a")
 	WebElement Deletebutton;
 	@FindBy(xpath="//*[@id='standing_instr_list']/div[2]/table/tbody[2]/tr/td[contains(text(),'Advance_Master')]/parent::tr/td[2]")
 	WebElement ReduceBalYes;

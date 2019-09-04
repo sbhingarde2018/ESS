@@ -13,7 +13,7 @@ public class CheckNoOfInstallmentsInAM extends BasePage{
 	WebElement masterLink;
 	@FindBy(xpath="//*[@id=\"menu\"]/li[3]/div/div[2]/ul/li[3]/a")
 	WebElement AdvanceMaster;
-	@FindBy(xpath="//*[@id='standing_instr_list']/div[2]/table/tbody/tr/td[contains(text(),'Advance_Master')]/parent::tr/td[4]/a")
+	@FindBy(xpath="//td[contains(text(),'ABCDAdvance')]/parent::tr/td[3]/a")
 	WebElement Edit;
 	@FindBy(xpath="//*[@id='standing_instr_list']/div[2]/table/tbody/tr/td[contains(text(),'Advance_Master')]/parent::tr/td[1]")
 	WebElement SelectedAdvanceMaster;
@@ -23,20 +23,18 @@ public class CheckNoOfInstallmentsInAM extends BasePage{
 	WebElement UpdateButton;
 	@FindBy(xpath="//*[@id=\"main\"]/div[2]/strong")
 	WebElement successfulMessage;
-	
 	@FindBy(id="salary")
 	WebElement Salary;
 	@FindBy(xpath="//*[@id='menu']/li[6]/div/div[1]/ul/li[7]/a")
 	WebElement AdvanceDetailsLink;
 	@FindBy(id="add_employees")
 	WebElement AddEmployee;
-	@FindBy(xpath="//*[@id=\"bf_form\"]/div[9]/button[1]")
+	@FindBy(xpath="//form[@id='bf_form']//button[contains(text(),'LOAD')]")
 	WebElement Load;
-	@FindBy(xpath="//*[@id='si_detail_employees']/tbody/tr[2]/td[contains(text(),'Tina')]/parent::tr/td[6]/a")
+	@FindBy(xpath="//tbody/tr[2]/td[6]/a")
 	WebElement ViewLink;
 	@FindBy(xpath="//*[@id='standing_detail_list']/div[1]/span/a")
 	WebElement AddNewAdvanceLink;
-	
 	@FindBy(id="standing_instruction_detail_standing_instruction_master_id")
 	WebElement AdvanceName;
 	@FindBy(id="standing_instruction_detail_actual_amount")
@@ -51,7 +49,7 @@ public class CheckNoOfInstallmentsInAM extends BasePage{
 	WebElement CreateAdvance;
 	@FindBy(xpath="//*[@id='main']/div[2]/strong")
 	WebElement SuccessfulMessage;
-	@FindBy(xpath="//*[@id='standing_detail_list']/div[2]/table/tbody/tr[1]/td[8]/a")
+	@FindBy(xpath="//div[2]/table/tbody/tr[1]/td[8]/a")
 	WebElement deleteadvancedetails;
 	
 	public CheckNoOfInstallmentsInAM(WebDriver driver) {
@@ -125,15 +123,14 @@ public class CheckNoOfInstallmentsInAM extends BasePage{
 		RecoveryDate.sendKeys(value);
 	}
     public void clickCreateAdvance(){
-
-		CreateAdvance.click(); 
+    	CreateAdvance.click(); 
 	}
     public String getMessage() {
     	return SuccessfulMessage.getText();
 }
    
 
-	public void deleteadvancedetails(String advanceMaster) {
+	public void deleteadvancedetails() {
 		// TODO Auto-generated method stub
 		deleteadvancedetails.click();
 	}

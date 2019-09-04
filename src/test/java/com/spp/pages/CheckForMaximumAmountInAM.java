@@ -11,9 +11,9 @@ import com.spp.common.BasePage;
 public class CheckForMaximumAmountInAM extends BasePage {
 	@FindBy(id="master")
 	WebElement masterLink;
-	@FindBy(xpath="//*[@id=\"menu\"]/li[3]/div/div[2]/ul/li[3]/a")
+	@FindBy(xpath="//div[@class='col_3']//a[contains(text(),'Advance Master')]")
 	WebElement AdvanceMaster;
-	@FindBy(xpath="//*[@id='standing_instr_list']/div[2]/table/tbody/tr/td[contains(text(),'Advance_Master')]/parent::tr/td[4]/a")
+	@FindBy(xpath="//td[contains(text(),'ABCDAdvance')]/parent::tr/td[3]/a")
 	WebElement Edit;
 	@FindBy(xpath="//*[@id='standing_instr_list']/div[2]/table/tbody/tr/td[contains(text(),'Advance_Master')]/parent::tr/td[1]")
 	WebElement SelectedAdvanceMaster;
@@ -29,9 +29,9 @@ public class CheckForMaximumAmountInAM extends BasePage {
 	WebElement AdvanceDetailsLink;
 	@FindBy(id="add_employees")
 	WebElement AddEmployee;
-	@FindBy(xpath="//*[@id=\"bf_form\"]/div[9]/button[1]")
+	@FindBy(xpath="//form[@id='bf_form']//button[contains(text(),'LOAD')]")
 	WebElement Load;
-	@FindBy(xpath="//*[@id='si_detail_employees']/tbody/tr[2]/td[contains(text(),'Tina')]/parent::tr/td[6]/a")
+	@FindBy(xpath="//tbody/tr[1]/td[6]/a")
 	WebElement ViewLink;
 	@FindBy(xpath="//*[@id='standing_detail_list']/div[1]/span/a")
 	WebElement AddNewAdvanceLink;
@@ -132,8 +132,7 @@ public class CheckForMaximumAmountInAM extends BasePage {
 	}
    
     public void clickCreateAdvance(){
-
-		CreateAdvance.click();
+    	CreateAdvance.click();
 	}
     public String getAlertMessage1() {
     	return switchToPopUpAndgetText(driver);
