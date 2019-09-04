@@ -83,7 +83,7 @@ public class SalaryStructure extends BaseTest {
   		Thread.sleep(5000);
   		cs.clickCloneSalaryStructure();
   		Thread.sleep(4000);
-  		cs.enterSalaryStructureName("Clone 22_"+Utility.getRandNum(4000, 5000));
+  		cs.enterSalaryStructureName("Clone 22");
   		cs.clickCloneOfDropDown();
   		cs.selectCloneOfDropDown();
   		cs.clickCreateSalaryStructure();
