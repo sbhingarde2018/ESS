@@ -12,7 +12,7 @@ public class CheckGrpIncMstrcanbeEdited extends BasePage {
 	WebElement masterlink;
 	@FindBy(xpath="//a[text()='Group Insurance Master']")
 	WebElement groupInsurance;
-	@FindBy(xpath="//*[@class=\"action-edit\"]")
+	@FindBy(xpath="//td[contains(text(),'Group_Insurance_MasterCS')]/parent::tr/td[3]/a")
 	WebElement ClickOnEdit;
 	@FindBy(xpath="//a[text()='Add New Insurance Master']")
 	WebElement addGroupInsurance;

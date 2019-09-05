@@ -31,7 +31,7 @@ public class CreateLoanMasterwithoutClubbedInSalary extends BasePage {
 	WebElement CreateLoanMaster;
 	@FindBy(xpath="//*[@id=\"main\"]/div[2]/strong") 
 	WebElement successfullMessage;
-	@FindBy(xpath="//*[@id=\"standing_instr_list\"]/div[2]/table/tbody/tr/td[5]/a")
+	@FindBy(xpath="//td[contains(text(),'LoanMaster')]/parent::tr/td[4]/a")
 	WebElement ClickDelete;
 	
 	public CreateLoanMasterwithoutClubbedInSalary(WebDriver driver) {

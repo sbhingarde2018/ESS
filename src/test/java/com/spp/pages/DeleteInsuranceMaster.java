@@ -13,7 +13,7 @@ public class DeleteInsuranceMaster extends BasePage {
 	WebElement masterlink;
 	@FindBy(xpath="//a[text()='Insurance Master']")
 	WebElement insuranceMaster;
-	@FindBy(xpath="//*[@class=\"action-delete\"]")
+	@FindBy(xpath="//td[contains(text(),'Insurance_MasterE')]/parent::tr/td[4]/a")
 	WebElement deleteInsurance;
 	@FindBy(xpath="//strong[text()='Insurance successfully deleted']")
 	WebElement successfullMessage;

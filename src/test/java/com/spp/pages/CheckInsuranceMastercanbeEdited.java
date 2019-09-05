@@ -14,7 +14,7 @@ public class CheckInsuranceMastercanbeEdited extends BasePage{
 	WebElement ClickOnInsuranceMaster;
 	@FindBy(xpath="//a[text()='Add New Insurance Master']")
 	WebElement AddNewInsuranceMaster;
-	@FindBy(xpath="//*[@class=\"action-edit\"]")
+	@FindBy(xpath="//td[contains(text(),'Insurance_Master21')]/parent::tr/td[3]/a")
 	WebElement ClickOnEdit;
 	@FindBy(id="standing_instruction_master_si_name")
 	WebElement EnterInsuranceName;

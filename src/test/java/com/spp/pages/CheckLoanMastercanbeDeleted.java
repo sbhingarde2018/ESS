@@ -14,7 +14,7 @@ public class CheckLoanMastercanbeDeleted extends BasePage{
 	WebElement ClickOnMaster;
 	@FindBy(xpath="//*[@id=\"menu\"]/li[3]/div/div[2]/ul/li[4]/a")
 	WebElement SelectLoanMaster;
-	@FindBy(xpath="//*[@id=\"standing_instr_list\"]/div[2]/table/tbody/tr/td[5]/a")
+	@FindBy(xpath="//td[contains(text(),'LoanMaster1')]/parent::tr/td[4]/a")
 	WebElement ClickonDelete;
 	@FindBy(xpath="//*[@id=\"main\"]/div[2]/strong")
 	WebElement successfulMessage;

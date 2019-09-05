@@ -13,7 +13,7 @@ public class CheckPeriodicIncMstrcanbeEdited extends BasePage{
 	WebElement masterlink;
 	@FindBy(xpath="//a[text()='Periodic Incentive Master']")
 	WebElement periodicIncentive;
-	@FindBy(xpath="//*[@class=\"action-edit\"]")
+	@FindBy(xpath="//td[contains(text(),'PerodicIncentiveMasterWCS')]/parent::tr/td[4]/a")
 	WebElement clickonedit;
 	@FindBy(xpath="//a[text()='Add New Periodic Incentive Master']")
 	WebElement addPeriodicIncentive;
@@ -21,7 +21,7 @@ public class CheckPeriodicIncMstrcanbeEdited extends BasePage{
 	WebElement periodicIncentiveName;
 	@FindBy(id="standing_instruction_master_clubbed_in_salary_head")
 	WebElement UntickClubbedInSalary;
-	@FindBy(xpath="//*[@id=\"standing_instruction_master_form\"]/div[6]/input")
+	@FindBy(xpath="//input[@name='commit']")
 	WebElement updateperiodicincentive;
 	@FindBy(xpath="//strong[text()='Periodic Incentive successfully updated']")
 	WebElement successfullMessage;

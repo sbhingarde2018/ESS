@@ -30,13 +30,13 @@ public class CheckforMaximumAmountInLM extends BasePage{
 	WebElement CreateFinancialInstitution;
 	@FindBy(id="master")
 	WebElement ClickOnMaster;
-	@FindBy(xpath="//*[@id=\"menu\"]/li[3]/div/div[2]/ul/li[4]/a")
+	@FindBy(xpath="//div[@class='col_3']//a[contains(text(),'Loan Master')]")
 	WebElement SelectLoanMaster;
 	@FindBy(id="standing_instruction_master_si_name")
 	WebElement EnterLoanName;
 	@FindBy(xpath="//*[@id=\"standing_instr_list\"]/div[1]/span/a")
 	WebElement AddNewLoanMaster;
-	@FindBy(xpath="//*[@class=\"action-edit\"]")
+	@FindBy(xpath="//td[contains(text(),'Default')]/parent::tr/td[3]/a")
 	WebElement ClickonEdit;
 	@FindBy(id="standing_instruction_master_max_amount")
 	WebElement EnterMaxAmount;
@@ -50,9 +50,9 @@ public class CheckforMaximumAmountInLM extends BasePage{
 	WebElement ClickonLoanDetail;
 	@FindBy(id="add_employees")
 	WebElement AddEmployees;
-	@FindBy(xpath="//*[@id=\"bf_form\"]/div[9]/button[1]")
+	@FindBy(xpath="//form[@id='bf_form']//button[contains(text(),'LOAD')]")
 	WebElement ClickOnLoad;
-	@FindBy(xpath="//*[@id=\"si_detail_employees\"]/tbody/tr[1]/td[6]/a")
+	@FindBy(xpath="//tbody/tr[1]/td[6]/a")
 	WebElement ClickOnView;
 	@FindBy(xpath="//*[@id=\"standing_detail_list\"]/div[1]/span/a")
 	WebElement AddNewLoanDetail;
@@ -76,9 +76,9 @@ public class CheckforMaximumAmountInLM extends BasePage{
 	WebElement successfulmessage;
 	@FindBy(xpath="//*[@id=\"standing_instruction_master_form\"]/div[8]/input")
 	WebElement CreateLoanMaster;
-	
 	@FindBy(xpath="//*[@id=\"financial_institutions\"]/tbody/tr/td[contains(text(),'HDFC Bank')]/parent::tr/td[9]/a")
 	WebElement DeleteFinancialInstitution;
+	
 	
 	public CheckforMaximumAmountInLM(WebDriver driver) {
 		super(driver);

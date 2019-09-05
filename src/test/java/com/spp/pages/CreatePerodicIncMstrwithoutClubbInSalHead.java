@@ -26,7 +26,7 @@ public class CreatePerodicIncMstrwithoutClubbInSalHead extends BasePage{
 	WebElement SuccessfulMessage;
 	@FindBy(xpath="//td[contains(text(),'Default90')]/parent::tr/td[5]/a")
 	List<WebElement> Delete;
-	@FindBy(xpath="//td[contains(text(),'Default90')]/parent::tr/td[5]/a")
+	@FindBy(xpath="//td[contains(text(),'PerodicIncentiveMasterWCSH')]/parent::tr/td[5]/a")
 	WebElement ClickDelete;
 	@FindBy(xpath="//*[@id='standing_instr_list']/div[2]/table/tbody[2]/tr/td[contains(text(),'PerodicIncentiveMaster')]/parent::tr/td[2]")
 	WebElement CheckIfNo;

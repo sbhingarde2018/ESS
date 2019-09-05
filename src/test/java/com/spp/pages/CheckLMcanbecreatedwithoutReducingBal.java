@@ -32,7 +32,7 @@ public class CheckLMcanbecreatedwithoutReducingBal extends BasePage{
 	WebElement CreateLoanMaster;
 	@FindBy(xpath="//*[@id=\"main\"]/div[2]/strong") 
 	WebElement successfullMessage;
-	@FindBy(xpath="//*[@id=\"standing_instr_list\"]/div[2]/table/tbody/tr/td[5]/a")
+	@FindBy(xpath="//td[contains(text(),'LoanMasterWRB')]/parent::tr/td[4]/a")
 	WebElement ClickDelete;
 	
 	public CheckLMcanbecreatedwithoutReducingBal(WebDriver driver) {

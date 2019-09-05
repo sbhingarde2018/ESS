@@ -13,7 +13,7 @@ public class CheckforInterestRateinLM extends BasePage{
 	WebElement ClickOnMaster;
 	@FindBy(xpath="//*[@id=\"menu\"]/li[3]/div/div[2]/ul/li[4]/a")
 	WebElement SelectLoanMaster;
-	@FindBy(xpath="//*[@id=\"standing_instr_list\"]/div[2]/table/tbody[2]/tr/td[4]/a")
+	@FindBy(xpath="//td[contains(text(),'Default')]/parent::tr/td[3]/a")
 	WebElement ClickonEdit;
 	@FindBy(id="standing_instruction_master_interest_rate")
 	WebElement EnterInterestRate;
@@ -27,9 +27,9 @@ public class CheckforInterestRateinLM extends BasePage{
 	WebElement ClickonLoanDetail;
 	@FindBy(id="add_employees")
 	WebElement AddEmployees;
-	@FindBy(xpath="//*[@id=\"bf_form\"]/div[9]/button[1]")
+	@FindBy(xpath="//*[@id=\"bf_form\"]/div/button[contains(text(),'LOAD')]")
 	WebElement ClickOnLoad;
-	@FindBy(xpath="//*[@id=\"si_detail_employees\"]/tbody/tr[1]/td[6]/a")
+	@FindBy(xpath="//tbody/tr[1]/td[6]/a")
 	WebElement ClickOnView;
 	@FindBy(xpath="//*[@id=\"standing_detail_list\"]/div[1]/span/a")
 	WebElement AddNewLoanDetail;

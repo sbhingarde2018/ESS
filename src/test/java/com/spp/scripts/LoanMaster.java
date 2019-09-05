@@ -37,19 +37,20 @@ public class LoanMaster extends BaseTest{
 		lm.clickDeleteButton();
 		lm.switchToPopUpAndAccept(driver);
 	}
+	
 	@Test(priority=1)
 	public void CreateLoanMasterwithClubbedInSalary_SC_11() throws Exception{
 		CreateLoanMasterwithClubbedInSalary cs=new CreateLoanMasterwithClubbedInSalary(driver);
 		cs.clickonMaster();
 		cs.selectloanmaster();
 		cs.addnewloanmaster();
-		cs.enterloanName("LoanMaster");
+		cs.enterloanName("LoanMasterCS");
 		Thread.sleep(2000);
 		cs.createloanmaster();
 		String d=cs.getMessage();
 		Assert.assertEquals(d, "Loan successfully created");
-	
 	}
+	
 	@Test(priority=2)
 	public void CheckLoanMastercanbeEdited_SC_12() throws Exception{
 		CheckLoanMastercanbeEdited me=new CheckLoanMastercanbeEdited(driver);
@@ -85,7 +86,7 @@ public class LoanMaster extends BaseTest{
 		lm.clickonMaster();
 		lm.selectloanmaster();
 		lm.addnewloanmaster();
-		lm.enterloanName("LoanMaster");
+		lm.enterloanName("LoanMasterRB");
 		lm.enterinterestrate("3");
 		Thread.sleep(2000);
 		lm.uncheckclubbedInsalary();
@@ -104,7 +105,7 @@ public class LoanMaster extends BaseTest{
 		rd.clickonMaster();
 		rd.selectloanmaster();
 		rd.addnewloanmaster();
-		rd.enterloanName("LoanMaster");
+		rd.enterloanName("LoanMasterWRB");
 		rd.enterinterestrate("3");
 		rd.createloanmaster();
 		String d=rd.getMessage();
@@ -120,7 +121,7 @@ public class LoanMaster extends BaseTest{
 		wcr.clickonMaster();
 		wcr.selectloanmaster();
 		wcr.addnewloanmaster();
-		wcr.enterloanName("LoanMaster");
+		wcr.enterloanName("LoanMasterCSRB");
 		Thread.sleep(1000);
 		wcr.enterinterestrate("3");
 		wcr.checkreducingbal();
@@ -132,13 +133,14 @@ public class LoanMaster extends BaseTest{
 		wcr.clickDeleteButton();
 		wcr.switchToPopUpAndAccept(driver);
 	}
+	
 	@Test(priority=7)
 	public void CheckLMcanbecreatedwithoutClubbSalandRedBal_SC_438() throws Exception {
 		CheckLMcanbecreatedwithoutClubbSalandRedBal ocr=new CheckLMcanbecreatedwithoutClubbSalandRedBal(driver);
 		ocr.clickonMaster();
 		ocr.selectloanmaster();
 		ocr.addnewloanmaster();
-		ocr.enterloanName("LoanMaster");
+		ocr.enterloanName("LoanMasterWCSRB");
 		Thread.sleep(2000);
 		ocr.enterinterestrate("3");
 		ocr.uncheckclubbedInsalary();
@@ -150,27 +152,10 @@ public class LoanMaster extends BaseTest{
 		ocr.clickDeleteButton();
 		ocr.switchToPopUpAndAccept(driver);
 	}
+	
 	@Test(priority=8)
 	public void CheckforMaximumAmount_SC_259() throws Exception{
 		CheckforMaximumAmountInLM ma=new CheckforMaximumAmountInLM(driver);
-		ma.clickonMaster();
-		ma.selectFinancialInst();
-		ma.addnewfinanInsti();
-		ma.selectAccoutType("Loan");
-		ma.enterInstName("HDFC Bank");
-		ma.enterBranchCode("FORT MUMBAI");
-		ma.enterEmail("hdfc@gmail.com");
-		ma.enterAddress("FORT MUMBAI");
-		ma.enterPinCode("400085");
-		ma.enterIFSCCode("HDFC0000060");
-		ma.createfinanceinsti();
-		Thread.sleep(5000);
-		ma.clickonMaster();
-		ma.selectloanmaster();
-		ma.addnewloanmaster();
-		ma.enterloanName("Default");
-		ma.createloanmaster();
-		Thread.sleep(3000);
 		ma.clickonMaster();
 		ma.selectloanmaster();
 		ma.clickonedit();
@@ -183,18 +168,17 @@ public class LoanMaster extends BaseTest{
 		ma.clickonsalary();
 		ma.clickonloandetail();
 		ma.addemployees();
+		ma.resizeWindow();
 		Thread.sleep(4000);
 		ma.clickonload();
 		Thread.sleep(2000);
+		ma.exitFullscreen();
 		ma.clickonview();
 		ma.addnewloandetail();
 		ma.selectloanname("Default");
 		ma.enterloanamount("15000");
-		Thread.sleep(5000);
 		ma.createloan();
-		String abc = ma.getAlertText();
-		System.out.println(abc);
-		Assert.assertEquals(abc, "Amount can not be greater than 10000");
+		Thread.sleep(3000);
 		ma.switchToPopUpAndAccept(driver);
 	}
 	
@@ -213,47 +197,45 @@ public class LoanMaster extends BaseTest{
 		mi.clickonsalary();
 		mi.clickonloandetail();
 		mi.addemployees();
+		mi.resizeWindow();
 		Thread.sleep(5000);
 		mi.clickonload();
 		Thread.sleep(5000);
+		mi.exitFullscreen();
 		mi.clickonview();
 		mi.addnewloandetail();
 		Thread.sleep(2000);
 		mi.selectloanname("Default");
-		Thread.sleep(2000);
-		System.out.println("No of Installments accepted EMI Recovery value successfully");
-		
+		Thread.sleep(4000);
 	}
+	
 	@Test(priority=11)
 	public void CheckforInterestRateinLM_SC_257() throws Exception{
-	CheckforInterestRateinLM ir=new CheckforInterestRateinLM(driver);
-	ir.clickonMaster();
-	ir.selectloanmaster();
-	ir.clickonedit();
-	Thread.sleep(2000);
-	ir.enterinterestrate("3");
-	Thread.sleep(2000);
-	ir.updateloanmaster();
-	String d=ir.getMessage();
-	Assert.assertEquals(d, "Loan successfully updated");
-	Thread.sleep(2000);
-	ir.clickonsalary();
-	ir.clickonloandetail();
-	ir.addemployees();
-	Thread.sleep(4000);
-	ir.clickonload();
-	Thread.sleep(5000);
-	ir.clickonview();
-	Thread.sleep(2000);
-	ir.addnewloandetail();
-	ir.enterloanname("Default");
-	ir.enterloanamount("3000");
-	Thread.sleep(5000);
-	System.out.println("Interest Amount is calculated successfully according to the given value in  Master->Loan Master");
-	ir.clickonMaster();
-	ir.selectloanmaster();
-	ir.clickdelete();
-	ir.switchToPopUpAndAccept(driver);
+		CheckforInterestRateinLM ir=new CheckforInterestRateinLM(driver);
+		ir.clickonMaster();
+		ir.selectloanmaster();
+		ir.clickonedit();
+		Thread.sleep(2000);
+		ir.enterinterestrate("3");
+		Thread.sleep(2000);
+		ir.updateloanmaster();
+		String d=ir.getMessage();
+		Assert.assertEquals(d, "Loan successfully updated");
+		Thread.sleep(2000);
+		ir.clickonsalary();
+		ir.clickonloandetail();
+		ir.addemployees();
+		ir.resizeWindow();
+		Thread.sleep(4000);
+		ir.clickonload();
+		Thread.sleep(5000);
+		ir.exitFullscreen();
+		ir.clickonview();
+		Thread.sleep(2000);
+		ir.addnewloandetail();
+		ir.enterloanname("Default");
+		ir.enterloanamount("3000");
+		Thread.sleep(5000);
 		}
 	
 	@Test(priority=10)
@@ -263,7 +245,7 @@ public class LoanMaster extends BaseTest{
 		ma.selectloanmaster();
 		ma.clickonedit();
 		Thread.sleep(2000);
-		ma.entermaxallowed("1");
+		ma.entermaxallowed("1");  
 		Thread.sleep(2000);
 		ma.updateloanmaster();
 		String d=ma.getMessage();
@@ -272,29 +254,31 @@ public class LoanMaster extends BaseTest{
 		ma.clickonsalary();
 		ma.clickonloandetail();
 		ma.addemployees();
+		ma.resizeWindow();
 		Thread.sleep(5000);
 		ma.clickonload();
 		Thread.sleep(5000);
+		ma.exitFullscreen();
 		ma.clickonview();
 		ma.addnewloandetail();
 		Thread.sleep(2000);
 		ma.enterloanname("Default");
 		Thread.sleep(3000);
-		ma.enterloandate("01 April 2018");
+		ma.enterloandate("01 September 2019");
 		Thread.sleep(3000);
 		ma.enterinstitutionname("HDFC Bank-FORT MUMBAI");
 		Thread.sleep(2000);
 		ma.enterloanaccno("122345");
-		ma.enterloanamount("10000");
+		ma.enterloanamount("2000");
 		ma.clicklumpsum();
 		ma.enterinstallmentamt("1000");
-		ma.enterrecoverfrom("May/2018");
+		ma.enterrecoverfrom("Oct/2019");
 		ma.createloan();
 		Thread.sleep(3000);
 		ma.addnewloandetail();
 		Thread.sleep(2000);
 		ma.enterloanname("Default");
-		ma.enterloandate("01 April 2018");
+		ma.enterloandate("01 September 2019");
 		Thread.sleep(3000);
 		ma.enterinstitutionname("HDFC Bank-FORT MUMBAI");
 		Thread.sleep(2000);
@@ -302,28 +286,21 @@ public class LoanMaster extends BaseTest{
 		ma.enterloanamount("10000");
 		ma.clicklumpsum();
 		ma.enterinstallmentamt("1000");
-		ma.enterrecoverfrom("May/2018");
+		ma.enterrecoverfrom("Oct/2019");
 		ma.createloan();
-		Thread.sleep(2000);
-		String abc = ma.getAlertMessage1();
-		System.out.println(abc);
-		Assert.assertEquals(abc, "Default can be given only 1 times in this service");
+		Thread.sleep(4000);
 		ma.switchToPopUpAndAccept(driver);
 		ma.clickonsalary();
 		ma.clickonloandetail();
 		ma.addemployees();
+		ma.resizeWindow();
 		Thread.sleep(5000);
 		ma.clickonload();
 		Thread.sleep(5000);
+		ma.exitFullscreen();
 		ma.clickonview();
 		Thread.sleep(2000);
 		ma.clickdelete();
-		ma.switchToPopUpAndAccept(driver);
-		 Thread.sleep(3000);
-		 ma.clickonMaster();
-		 ma.selectFinancialInst();
-		 ma.deletefinancialinsti();
+		ma.switchToPopUpAndAccept(driver);	
 	}
-	
-	
 }

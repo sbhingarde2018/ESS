@@ -14,7 +14,7 @@ public class CheckLoanMastercanbeEdited extends BasePage {
 	WebElement SelectLoanMaster;
 	@FindBy(xpath="//*[@id=\"standing_instr_list\"]/div[1]/span/a")
 	WebElement AddNewLoanMaster;
-	@FindBy(xpath="//*[@class=\"action-edit\"]")
+	@FindBy(xpath="//td[contains(text(),'LoanMasterCS')]/parent::tr/td[3]/a")
 	WebElement ClickonEdit;
 	@FindBy(id="standing_instruction_master_si_name")
 	WebElement EditLoanMasterName;

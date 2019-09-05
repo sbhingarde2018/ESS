@@ -23,7 +23,7 @@ public class CreateIMwithoutClubbedInSal extends BasePage{
 	WebElement CreateInsurance;
 	@FindBy(xpath="//*[@id=\"main\"]/div[2]/strong")
 	WebElement successfulmessage;
-	@FindBy(xpath="//*[@class=\"action-delete\"]")
+	@FindBy(xpath="//td[contains(text(),'Insurance_Master20')]/parent::tr/td[4]/a")
 	WebElement ClickDelete;
 	@FindBy(xpath="//*[@id='standing_instr_list']/div[2]/table/tbody[2]/tr/td[contains(text(),'Insurance_Master')]/parent::tr/td[2]")
 	WebElement ClubbedInSalNo;

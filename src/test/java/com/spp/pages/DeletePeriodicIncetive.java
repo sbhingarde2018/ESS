@@ -12,7 +12,7 @@ public class DeletePeriodicIncetive extends BasePage{
 	WebElement masterlink;
 	@FindBy(xpath="//a[text()='Periodic Incentive Master']")
 	WebElement periodicIncentive;
-	@FindBy(xpath="(//a[text()='Delete'])[1]")
+	@FindBy(xpath="//td[contains(text(),'PerodicIncentiveMasterE')]/parent::tr/td[5]/a")
 	WebElement deletePeriodicIncetive;
 	@FindBy(xpath="//strong[text()='Periodic Incentive successfully deleted']")
 	WebElement successfullMessage;

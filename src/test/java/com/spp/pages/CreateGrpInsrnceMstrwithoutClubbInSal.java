@@ -22,7 +22,7 @@ public class CreateGrpInsrnceMstrwithoutClubbInSal extends BasePage {
 	WebElement createGroupInsurance;
 	@FindBy(xpath="//strong[text()='Group Insurance successfully created ']")
 	WebElement successfullMessage;
-	@FindBy(xpath="//*[@class=\"action-delete\"]")
+	@FindBy(xpath="//td[contains(text(),'Group_Insurance_MasterWCS')]/parent::tr/td[4]/a")
 	WebElement ClickDelete;
 	@FindBy (xpath="//*[@id='standing_instr_list']/div[2]/table/tbody[2]/tr/td[contains(text(),'Group_Insurance_Master')]/parent::tr/td[2]")
 	WebElement CheckNo;
