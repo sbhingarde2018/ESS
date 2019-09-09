@@ -12,7 +12,7 @@ public class DeleteLeavePolicy extends BasePage{
 	WebElement masterLink;
 	@FindBy(xpath="//a[text()='Leave Policy']")
 	WebElement leavePolicy;
-	@FindBy(xpath="//*[@id=\"leave-policy-master-list\"]/table/tbody/tr/td[contains(text(),'LeavePolicyMaster')]/parent::tr/td[6]/a")
+	@FindBy(xpath="//table/tbody/tr/td[contains(text(),'LeavePolicyTest')]/parent::tr/td[6]/a")
 	WebElement deleteButton;
 	@FindBy(xpath="//strong[text()='Leave policy master successfully deleted']")
 	WebElement successfullMessage;

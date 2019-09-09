@@ -13,9 +13,9 @@ public class CheckForAllowHalfDayInLeaveModule extends BasePage {
 	WebElement masterLink;
 	@FindBy(xpath="//*[@id=\"menu\"]/li[3]/div/div[3]/ul/li[2]/a")
 	WebElement leavePolicy;
-	@FindBy(xpath="//*[@id='leave-policy-master-list']/table/tbody/tr/td[contains(text(),'Default')]/parent::tr/td[4]/a")
+	@FindBy(xpath="//table/tbody/tr/td[contains(text(),'ClonePolicy')]/parent::tr/td[4]/a")
 	WebElement addLeaves;
-	@FindBy(xpath="//*[@id='leave_policy_setting_details']/div/table/tbody/tr/td[contains(text(),'Leave')]/parent::tr/td[3]/a")
+	@FindBy(xpath="//div[2]/table/tbody/tr/td[contains(text(),'Casual Leave')]/parent::tr/td[3]/a")
 	WebElement settingsLink;
     @FindBy(id="leave_policy_head_wise_setting_behaviour_settings_max_leave_month")
     WebElement AvailForMonth;
@@ -31,9 +31,9 @@ public class CheckForAllowHalfDayInLeaveModule extends BasePage {
     WebElement AppyLeaveLink;
     @FindBy(id="filter_head")
     WebElement Filter;
-    @FindBy(xpath="//*[@id=\"bf_form\"]/div[10]/button[1]")
+    @FindBy(xpath="//*[@id=\"bf_form\"]/div/button[contains(text(),'LOAD')]")
     WebElement Load;
-    @FindBy(xpath="//*[@id='dt_leave_details']/tbody/tr/td[contains(text(),'Tina')]/parent::tr/td/a")
+    @FindBy(xpath="//tbody/tr/td[contains(text(),'Zain')]/parent::tr/td[3]/a")
     WebElement ClickOnAPPLYLEAVE;
 	@FindBy(id="leave_detail_leave_definition_id")
 	WebElement LeaveType;
@@ -41,7 +41,7 @@ public class CheckForAllowHalfDayInLeaveModule extends BasePage {
 	WebElement FromDate;
 	@FindBy(id="leave_detail_to_date")
 	WebElement ToDate;
-	@FindBy(id="to_date")
+	@FindBy(id="from_date")
 	WebElement LeaveHistoryToDate;
 	@FindBy(xpath="//input[contains(@name,'second')]")
 	WebElement SecondHalf;
@@ -49,7 +49,7 @@ public class CheckForAllowHalfDayInLeaveModule extends BasePage {
 	WebElement ApplyButton;
 	@FindBy(xpath="//*[@id=\"apply_leave_response\"]/div/strong")
 	WebElement Message2;
-	@FindBy(xpath="//*[@id='main']/div[2]/nav/ul/li[3]/a/span")
+	@FindBy(xpath="//div[3]/nav/ul/li[3]/a/span")
 	WebElement LeaveHistory;
 	@FindBy(xpath="//*[@id='leave_detail_for_employee']/table/tbody/tr/td[4]/a")
 	WebElement View;
@@ -59,8 +59,10 @@ public class CheckForAllowHalfDayInLeaveModule extends BasePage {
 	WebElement SearchButton;
 	@FindBy(id="leave_policy_head_wise_setting_behaviour_settings_max_leave_month")
     WebElement casualLeaveallowedavaiformonth;
-	 @FindBy(id="leave_policy_head_wise_setting_behaviour_settings_max_leave_year")
-	    WebElement casualLeaveallowedavailforyear;
+	@FindBy(id="leave_policy_head_wise_setting_behaviour_settings_max_leave_year")
+	WebElement casualLeaveallowedavailforyear;
+	
+	 
 	public CheckForAllowHalfDayInLeaveModule(WebDriver driver) {
 		super(driver);
 		PageFactory.initElements(driver,this);
@@ -152,14 +154,15 @@ public class CheckForAllowHalfDayInLeaveModule extends BasePage {
 	public void clickSearchButton(){
 		SearchButton.click();
 	}
-	public void selectLeaveHistory(){
-		LeaveHistory.click();
+	public void clickLeaveHistory(){
+		jsclick(LeaveHistory);
 	}
 	public void selectView(){
 		View.click();
 	}
-	public void clickDeleteButton(){
+	public void clickDeleteButton() throws InterruptedException {
 		DeleteButton.click();
+		Thread.sleep(2000);
 		switchToPopUpAndAccept(driver);
 	}
 }

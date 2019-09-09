@@ -17,11 +17,11 @@ public class EncashmentSettings extends BasePage{
 	WebElement masterLink;
 	@FindBy(xpath="//a[text()='Leave Policy']")
 	WebElement leavePolicy;
-    @FindBy(xpath="//div[@id='leave-policy-master-list']//tr[1]//td[4]//a[text()='Add Leaves']")
+    @FindBy(xpath="//table/tbody/tr/td[contains(text(),'ClonePolicy')]/parent::tr/td[4]/a")
 	WebElement addLeaves;
-    @FindBy(xpath="//*[@id=\"leave_policy_setting_details\"]/div[2]/table/tbody/tr[5]/td[3]/a")
+    @FindBy(xpath="//div[2]/table/tbody/tr/td[contains(text(),'Casual Leave')]/parent::tr/td[3]/a")
     WebElement settingsLink;
-	@FindBy(xpath="//div[@id='main']//div[3]//li[2]//span[normalize-space(text()='Lapse/Carry Over/Encashment')]")
+	@FindBy(xpath="//span[contains(text(),'Lapse/Carry Over/Encashment')]")
 	WebElement encashmentTab;
 	@FindBy(id="leave_policy_head_wise_setting_encashment_settings_encash")
 	WebElement allowEncahment;
@@ -40,7 +40,47 @@ public class EncashmentSettings extends BasePage{
 	WebElement successfullMessage;
 	@FindBy(xpath="//input[@checked='checked' and @id='leave_policy_head_wise_setting_encashment_settings_encash']/parent::td")
 	WebElement allowearned;
-
+	@FindBy(id="leave")
+	WebElement LeaveLink;
+	@FindBy(linkText="Apply Leave")
+	WebElement AppyLeaveLink;
+	@FindBy(id="filter_head")
+    WebElement Filter;
+    @FindBy(xpath="//*[@id=\"bf_form\"]/div/button[contains(text(),'LOAD')]")
+    WebElement Load;
+    @FindBy(xpath="//tbody/tr/td[contains(text(),'Zain')]/parent::tr/td[3]/a")
+    WebElement ApplyLeave;
+	@FindBy(id="leave_detail_leave_definition_id")
+	WebElement LeaveType;
+	@FindBy(id="leave_detail_from_date")
+	WebElement FromDate;
+	@FindBy(id="leave_detail_to_date")
+	WebElement ToDate;
+	@FindBy(id="apply")
+	WebElement ApplyButton;
+	@FindBy(xpath="//*[@id=\"apply_leave_response\"]/div/strong")
+	WebElement Message2;
+	@FindBy(xpath="//div[3]/nav/ul/li[3]/a/span")
+	WebElement LeaveHistory;
+	@FindBy(xpath="//*[@id=\"leave_detail_for_employee\"]/table/tbody/tr/td[4]/a")
+	WebElement CView;
+	@FindBy(xpath="//*[@id=\"batch_details\"]/form/table[3]/tbody/tr[2]/td/input[3]")
+	WebElement DeleteButton;
+	@FindBy(id="leave_policy_head_wise_setting_behaviour_settings_avail_excess_leave")
+	WebElement AllowAccessCasual;
+	@FindBy(id="leave_policy_head_wise_setting_behaviour_settings_excess_setting_priority_setting")
+	WebElement PrioritySettings;
+	@FindBy(xpath="//td[contains(text(),'Compensatory Off')]")
+	WebElement CompensatoryOff;	
+	@FindBy(xpath="//*[@id=\"leave_encashment_leave_definition_id\"]")
+	WebElement SelectLeave;
+	@FindBy(xpath="//a[@class='tooltip-left']")
+	WebElement AddNewLeaveEnc;
+	@FindBy(xpath="//a[contains(text(),'Leave Encashment')]")
+	WebElement AppyLeaveEnc;
+	@FindBy(xpath="//tbody/tr[1]/td[3]/a")
+	 WebElement View;
+	
 	public EncashmentSettings(WebDriver driver) {
 		super(driver);
 		PageFactory.initElements(driver, this);
@@ -63,7 +103,7 @@ public class EncashmentSettings extends BasePage{
 	}
 	
 	public void clickLapseTab(){
-		encashmentTab.click();
+		jsclick(encashmentTab);
 	}
  
 	//public void clickAllowEncahment(){
@@ -117,5 +157,77 @@ public class EncashmentSettings extends BasePage{
 	
 	public String getMessage(){
 		return successfullMessage.getText();
+	}
+	
+	public void clickLeaveLink(){
+		LeaveLink.click();
+	}
+	public void clickFilter(){
+		Filter.click();
+	}
+	
+	public void clickLoad(){
+		Load.click();
+	}
+	public void clickApplyLeave(){
+		ApplyLeave.click();
+	}
+	public void selectLeaveType(String value){
+		dropDownSelect(LeaveType, value);
+	}
+	public void enterFromDate(String value){
+		FromDate.sendKeys(value);
+	}
+	public void enterToDate(String value){
+		ToDate.sendKeys(value);
+		ToDate.sendKeys(Keys.TAB);
+	}
+	
+	public void clickApplyButton(){
+		ApplyButton.click();
+	}
+	public String getMessage2(){
+		return Message2.getText();
+	}
+	public void selectLeaveHistory(){
+		 jsclick(LeaveHistory);
+	}
+	public void selectView(){
+		View.click();
+	}
+	public void clickDeleteButton(){
+		DeleteButton.click();
+		switchToPopUpAndAccept(driver);
+	}
+	public void clickAllowAccessCasual(){
+		if(AllowAccessCasual.isSelected()) {
+			System.out.println("Already Selected");
+		}
+		else {
+			AllowAccessCasual.click();
+		}
+	}
+	public void clickPrioritySettings(){
+		if(PrioritySettings.isSelected()) {
+			System.out.println("Already Selected");
+		}
+		else {
+			PrioritySettings.click();
+		}
+	}
+	public void clickCompensatoryOff(){
+		CompensatoryOff.click();
+	}
+	public void clickSelectLeave(){
+		SelectLeave.click();
+	}
+	public void clickAddNewLeaveEnc(){
+		AddNewLeaveEnc.click();
+	}
+	public void clickLeaveEncashment(){
+		AppyLeaveEnc.click();
+	}
+	public void clickView(){
+		View.click();
 	}
 }

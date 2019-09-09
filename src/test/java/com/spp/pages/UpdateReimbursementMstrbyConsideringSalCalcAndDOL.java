@@ -16,7 +16,7 @@ public class UpdateReimbursementMstrbyConsideringSalCalcAndDOL extends BasePage 
 	WebElement AddNewReimbursement;
 	@FindBy(id="reimbursement_master_reimbursement_name")
 	WebElement EnterReimbursementName;
-	@FindBy(xpath="(//a[text()='Edit'])[1]")
+	@FindBy(xpath="//tbody/tr/td[contains(text(),'Canteen')]/parent::tr/td[4]/a")
 	WebElement ClickOnEdit;
 	@FindBy(xpath="//*[@id=\"edit_radio_allotment\"][2]")
 	WebElement SelectAllotment;

@@ -30,7 +30,7 @@ public class AddReimbursementMaster extends BasePage{
 	WebElement successfullMassege;
 	@FindBy(xpath="//*[@id=\"main\"]/section/p/a")
 	WebElement Pagechange;
-	@FindBy(xpath="//*[@class='action-delete']")
+	@FindBy(xpath="//tbody/tr/td[contains(text(),'Canteen')]/parent::tr/td[5]/a")
 	WebElement DeleteButton;
 	@FindBy(id = "reimbursement_master_tds_ref_option_id")
 	WebElement TDSRef;

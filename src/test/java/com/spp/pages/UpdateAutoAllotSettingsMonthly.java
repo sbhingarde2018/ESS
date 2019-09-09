@@ -75,8 +75,7 @@ public class UpdateAutoAllotSettingsMonthly extends BasePage{
 	WebElement Employee2;
 	@FindBy(id="leave_report_submit")
 	WebElement GenerateReport;
-	
-	@FindBy(xpath="//*[@id=\"leave-policy-master-list\"]/table/tbody/tr/td[contains(text(),'ClonePolicy')]/parent::tr/td[6]/a")
+	@FindBy(xpath="//table/tbody/tr/td[contains(text(),'ClonePolicy1')]/parent::tr/td[6]/a")
 	WebElement DeleteClone;
 
 	

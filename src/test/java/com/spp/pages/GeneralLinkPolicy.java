@@ -12,9 +12,9 @@ public class GeneralLinkPolicy extends BasePage {
 	WebElement masterLink;
 	@FindBy(xpath="//a[text()='Leave Policy']")
 	WebElement leavePolicy;
-	@FindBy(xpath="//div[@id='ui-accordion-accordion-header-1']//h3")
+	@FindBy(xpath="//h3[contains(text(),'General Links')]")
 	WebElement generaLink;
-	@FindBy(xpath="//ul[@id='ui-accordion-accordion-panel-1']//a[text()='Leave Definitions']")
+	@FindBy(xpath="//ul[@id='ui-id-4']//a[contains(text(),'Leave Definitions')]")
 	WebElement leaveDefinitionLink;
 	@FindBy(xpath="//div[@id='main']//p")
 	WebElement successfullMessage;

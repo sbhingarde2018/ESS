@@ -16,7 +16,7 @@ public class UpdateReimbursementMstrbyConsideringRestrictClaimAmt extends BasePa
 	WebElement AddNewReimbursement;
 	@FindBy(id="reimbursement_master_reimbursement_name")
 	WebElement EnterReimbursementName;
-	@FindBy(xpath="(//a[text()='Edit'])[1]")
+	@FindBy(xpath="//tbody/tr/td[contains(text(),'Canteen')]/parent::tr/td[4]/a")
 	WebElement ClickOnEdit;
 	@FindBy(xpath="//*[@id=\"edit_radio_allotment\"][2]")
 	WebElement SelectAllotment;
@@ -32,6 +32,8 @@ public class UpdateReimbursementMstrbyConsideringRestrictClaimAmt extends BasePa
 	WebElement UpdateReimbursementMstr;
 	@FindBy(xpath="//*[@id=\"main\"]/div[2]/strong")
 	WebElement successfulmessage;
+	@FindBy(xpath="//tbody/tr/td[contains(text(),'Canteen')]/parent::tr/td[5]/a")
+	WebElement DeleteButton;
 	
 	public UpdateReimbursementMstrbyConsideringRestrictClaimAmt(WebDriver driver) {
 		super(driver);
@@ -70,6 +72,10 @@ public class UpdateReimbursementMstrbyConsideringRestrictClaimAmt extends BasePa
 	}
 	public String getMessage(){
 		return successfulmessage.getText();
+	}
+	public void clickDeleteButton() throws Exception{
+		DeleteButton.click();
+		switchToPopUpAndAccept(driver);
 	}
 	
 }

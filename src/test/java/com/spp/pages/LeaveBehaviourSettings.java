@@ -16,9 +16,9 @@ public class LeaveBehaviourSettings extends BasePage{
 	WebElement masterLink;
 	@FindBy(xpath="//a[text()='Leave Policy']")
 	WebElement leavePolicy;
-    @FindBy(xpath="//*[@id='leave-policy-master-list']/table/tbody/tr/td[contains(text(),'Default')]/parent::tr/td[4]/a")
+    @FindBy(xpath="//table/tbody/tr/td[contains(text(),'ClonePolicy')]/parent::tr/td[4]/a")
 	WebElement addLeaves;
-    @FindBy(xpath="//*[@id='leave_policy_setting_details']/div[2]/table/tbody/tr/td[contains(text(),'Leave')]/parent::tr/td[3]/a")
+    @FindBy(xpath="//div[2]/table/tbody/tr/td[contains(text(),'Casual Leave')]/parent::tr/td[3]/a")
     WebElement settingsLink;
     @FindBy(id="leave_policy_head_wise_setting_behaviour_settings_max_leave_month")
     WebElement casualLeaveallowedavaiformonth; 
@@ -40,7 +40,7 @@ public class LeaveBehaviourSettings extends BasePage{
     WebElement allowExcessLeave;
     @FindBy(id="leave_policy_head_wise_setting_behaviour_settings_excess_setting_general_setting")
     WebElement considerasLOP;
-    @FindBy(xpath="//div [@id='behaviour_policy_setting']//div[3]//input[@value='Update']")
+    @FindBy(xpath="//div[@id='behaviour_policy_setting']//input[@name='commit']")
     WebElement updateButton;
     @FindBy(xpath="//strong[text()='Setting was successfully updated.']")
     WebElement successfullMessage;
@@ -50,15 +50,14 @@ public class LeaveBehaviourSettings extends BasePage{
     WebElement addButton;
     @FindBy(id="leave")
     WebElement ClickOnLeave;
-    @FindBy(xpath="//*[@id='menu']/li[5]/div/div/ul/li[1]/a")
-    //@FindBy(xpath="//*[@id='dt_leave_details']/tbody/tr/td[contains(text(),'Tina')]/parent::tr/td/a")
+    @FindBy(xpath="//a[contains(text(),'Apply Leave')]")
     WebElement ClickOnApplyLeave;
     @FindBy(id="filter_head")
     WebElement ClickOnFilter;
-    @FindBy(xpath="//*[@id='bf_form']/div[10]/button[1]")
+    @FindBy(xpath="//form[@id='bf_form']//button[contains(text(),'LOAD')]")
     WebElement ClickOnLoad;
     //@FindBy(xpath="//*[@id='dt_leave_details']/tbody/tr/td[3]/a")
-    @FindBy(xpath="//*[@id='dt_leave_details']/tbody/tr/td[contains(text(),'Tina')]/parent::tr/td/a")
+    @FindBy(xpath="//tbody/tr/td[contains(text(),'Zain')]/parent::tr/td[3]/a")
     WebElement ClickOnAPPLYLEAVE;
     @FindBy(id="leave_detail_leave_definition_id")
     WebElement SelectLeave;
@@ -70,8 +69,17 @@ public class LeaveBehaviourSettings extends BasePage{
     WebElement Apply;
     @FindBy(xpath="//*[@id='apply_leave_response']/div/li")
     WebElement AlertMessage;
+    @FindBy(xpath="//div[3]/nav/ul/li[3]/a/span")
+    WebElement LeaveHistory;
+    @FindBy(id="from_date")
+    WebElement HistoryFromDate;
+    @FindBy(xpath="//div[@class='form-field']//input[@name='commit']")
+    WebElement SearchButton;
+    @FindBy(xpath="//table[@class='table all-white']//input[@name='commit']")
+    WebElement DeleteButton;
+    @FindBy(xpath="//table/tbody/tr[1]/td[4]/a")
+    WebElement View;
     
-
 	public LeaveBehaviourSettings(WebDriver driver) {
 		super(driver);
 		PageFactory.initElements(driver, this);
@@ -187,5 +195,23 @@ public class LeaveBehaviourSettings extends BasePage{
 	}
 	public String getalertMessage() {
 		return AlertMessage.getText();
+	}
+	public void ClickLeaveHistory() {
+		jsclick(LeaveHistory);
+	}
+	public void EnterHistoryFromDate(String value) {
+		HistoryFromDate.clear();
+		HistoryFromDate.sendKeys(value);
+	}
+	public void ClickSearchButton() {
+		SearchButton.click();
+	}
+	public void ClickDeleteButton() throws InterruptedException {
+		DeleteButton.click();
+		Thread.sleep(2000);
+		switchToPopUpAndAccept(driver);
+	}
+	public void ClickView() {
+		View.click();
 	}
 }
