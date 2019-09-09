@@ -128,7 +128,7 @@ public class CompanyStatutories extends BaseTest{
 		Thread.sleep(5000);
 		ae.clickESIRateLink();
 		Thread.sleep(2000);
-		ae.selectESIEffectiveDate("Apr/2013");
+		ae.selectESIEffectiveDate("Jan/2019");
 		Thread.sleep(2000);
 		ae.clickCreateESIRate();
 		String s=ae.getMessage();
@@ -221,7 +221,7 @@ public class CompanyStatutories extends BaseTest{
 		pt.clickCreatePT();
 		Thread.sleep(3000);
 		pt.clickPTRate();
-		pt.selectEffectiveFrom("May/2013");
+		pt.selectEffectiveFrom("Jan/2019");
 		pt.clickPTGroupRateButton();
 		Thread.sleep(3000);
 		pt.clickSettingsLink();

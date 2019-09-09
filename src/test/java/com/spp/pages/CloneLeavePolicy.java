@@ -7,12 +7,12 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.spp.common.BasePage;
 
-public class CloneLeavePolicy extends BasePage{
+public class CloneLeavePolicy extends BasePage {
 	@FindBy(id="master")
 	WebElement masterLink;
 	@FindBy(xpath="//a[text()='Leave Policy']")
 	WebElement leavePolicy;
-	@FindBy(xpath="//a[text()='Clone Leave Policy']")
+	@FindBy(xpath="//a[contains(text(),'Clone Leave Policy')]")
 	WebElement clonePolicy;
 	@FindBy(id="leave_policy_master_policy_name")
 	WebElement policyName;
@@ -22,6 +22,8 @@ public class CloneLeavePolicy extends BasePage{
 	WebElement createButton;
 	@FindBy(xpath="//strong[text()='Leave policy master successfully Cloned']")
 	WebElement successfullMessage;
+	@FindBy(xpath="//table/tbody/tr/td[contains(text(),'ClonePolicy1')]/parent::tr/td[6]/a/img")
+	WebElement Delete;
 
 	public CloneLeavePolicy(WebDriver driver) {
 		super(driver);
@@ -54,5 +56,10 @@ public class CloneLeavePolicy extends BasePage{
 	
 	public String getMessage(){
 		return successfullMessage.getText();
+	}
+	public void clickDelete() {
+		Delete.click();
+		switchToPopUpAndAccept(driver);
+	
 	}
 }

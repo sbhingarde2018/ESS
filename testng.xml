@@ -10,10 +10,11 @@
     <class name="com.spp.scripts.SalaryHeadTestcase"/>   
     <class name="com.spp.scripts.SalaryStructure"/>
     <class name="com.spp.scripts.AdvanceMaster"/>-->
-  	<class name="com.spp.scripts.LoanMaster"/> 
+  	<!--<class name="com.spp.scripts.LoanMaster"/> 
     <class name="com.spp.scripts.InsuranceMaster"/>
     <class name="com.spp.scripts.GroupInsuranceMaster"/>
-    <class name="com.spp.scripts.PerodicIncentiveMaster"/> 
+    <class name="com.spp.scripts.PerodicIncentiveMaster"/> -->
+		<class name="com.spp.scripts.LeavePolicy"/>
     
    <!--<class name="com.spp.scripts.Gratuity"/>
    <class name="com.spp.scripts.AdditionalSalary"/>
@@ -53,7 +54,7 @@
 	<class name="com.spp.scripts.LeaveAllotAvailDateSettings"/>
 	<class name="com.spp.scripts.LeaveDefinitions"/>
 	<class name="com.spp.scripts.LeaveEncashment"/>
-	<class name="com.spp.scripts.LeavePolicy"/>
+
 	<class name="com.spp.scripts.LoanDetail"/>
 	
 	<class name="com.spp.scripts.LoginAdmin"/>

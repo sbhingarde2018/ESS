@@ -13,9 +13,9 @@ public class CheckforNooftimesEarnedLeavecanbeEncashedinayear extends BasePage{
 	WebElement ClickOnMaster;
 	@FindBy(xpath="//a[text()='Leave Policy']")
 	WebElement ClickOnLeavePolicy;
-	@FindBy(xpath="//*[@id=\"leave-policy-master-list\"]/table/tbody/tr/td[contains(text(),'PolicyNo1')]/parent::tr/td[4]/a")
+	@FindBy(xpath="//table/tbody/tr/td[contains(text(),'ClonePolicy')]/parent::tr/td[4]/a")
 	WebElement ClickOnAddLeaves;
-	@FindBy(xpath="//*[@id=\"leave_policy_setting_details\"]/div/table/tbody/tr/td[contains(text(),'Earned Leave')]/parent::tr/td[3]/a")
+	@FindBy(xpath="//div[2]/table/tbody/tr/td[contains(text(),'Casual Leave')]/parent::tr/td[3]/a")
 	WebElement ClickOnSettings;
 	@FindBy(xpath="//*[@id=\"main\"]/div/div[3]/nav/ul/li[2]/a/span")
 	WebElement ClickOnLapseCarry;
@@ -39,7 +39,7 @@ public class CheckforNooftimesEarnedLeavecanbeEncashedinayear extends BasePage{
 	WebElement ClickOnFilter;
 	@FindBy(xpath="//button[text()='LOAD']")
 	WebElement ClickOnLoad;
-	@FindBy(xpath="//*[@id=\"dt_leave_encashment\"]/tbody/tr/td[contains(text(),'Ankit')]/parent::tr/td[3]/a")
+	@FindBy(xpath="//tbody/tr[1]/td[3]/a")
 	WebElement ClickonView;
 	@FindBy(xpath="//a[text()='Add New Leave Encashment']")
 	WebElement AddNewLeaveEncashment;
@@ -59,7 +59,10 @@ public class CheckforNooftimesEarnedLeavecanbeEncashedinayear extends BasePage{
 	WebElement ClickOnAlertMessage;
 	@FindBy(xpath="//strong[text()='Leave encashment successfully created.']")
 	WebElement successfulmessage2;
-	
+	@FindBy(xpath="//section/p/a[2]")
+	WebElement NavigateBack;
+	@FindBy(xpath="//table/tbody/tr/td[8]/a/img")
+	WebElement Delete;
 	
 	public CheckforNooftimesEarnedLeavecanbeEncashedinayear(WebDriver driver) {
 		super(driver);
@@ -146,4 +149,13 @@ public class CheckforNooftimesEarnedLeavecanbeEncashedinayear extends BasePage{
 	public String successfulmessage2() {
 		return successfulmessage2.getText();
 	}
+	public void ClickNavigateBack() {
+		jsclick(NavigateBack);
+	}
+	public void ClickDelete() throws InterruptedException {
+		Delete.click();
+		Thread.sleep(2000);
+		switchToPopUpAndAccept(driver);
+	}
+	
 }

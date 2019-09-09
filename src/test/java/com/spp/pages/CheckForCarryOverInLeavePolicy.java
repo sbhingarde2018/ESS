@@ -13,10 +13,9 @@ public class CheckForCarryOverInLeavePolicy extends BasePage{
 	WebElement masterLink;
 	@FindBy(xpath="//a[text()='Leave Policy']")
 	WebElement leavePolicy;
-    @FindBy(xpath="//div[@id='leave-policy-master-list']//tr[1]//td[4]//a[text()='Add Leaves']")
+    @FindBy(xpath="//table/tbody/tr/td[contains(text(),'ClonePolicy')]/parent::tr/td[4]/a")
 	WebElement addLeaves;
-   // @FindBy(xpath="//*[@id=\"leave_policy_setting_details\"]/div[2]/table/tbody/tr/td[2][contains(text(),'Earned')]/parent::tr/td[3]/a")
-    @FindBy(xpath="//*[@id='leave_policy_setting_details']/div/table/tbody/tr/td[contains(text(),'Leave')]/parent::tr/td[3]/a")
+    @FindBy(xpath="//div[2]/table/tbody/tr/td[contains(text(),'Casual Leave')]/parent::tr/td[3]/a")
     WebElement settingsLink;
     @FindBy(xpath="//*[@id='main']/div/div[3]/nav/ul/li[2]/a/span")
     WebElement LapseTab;
@@ -32,11 +31,11 @@ public class CheckForCarryOverInLeavePolicy extends BasePage{
     WebElement AppyLeaveLink;
     @FindBy(id="filter_head")
     WebElement Filter;
-    @FindBy(xpath="//*[@id='bf_form']/div[10]/button[1]")
+    @FindBy(xpath="//button[text()='LOAD']")
     WebElement Load;
-    @FindBy(xpath="//*[@id='dt_leave_details']/tbody/tr/td[contains(text(),'Tina')]/parent::tr/td/a")
+    @FindBy(xpath="//tbody/tr/td[contains(text(),'Zain')]/parent::tr/td[3]/a")
     WebElement ApplyLeave;
-	@FindBy(xpath="//*[@id='main']/div[2]/nav/ul/li[2]/a/span")
+	@FindBy(xpath="//span[contains(text(),'LEAVE SUMMARY')]")
 	WebElement LeaveSummaryTab;
 	
 	public CheckForCarryOverInLeavePolicy(WebDriver driver) {
@@ -63,8 +62,8 @@ public class CheckForCarryOverInLeavePolicy extends BasePage{
 	public void clickLapseTab(){
 		LapseTab.click();
 	}
-	public void clickCarryOver(){
-		CarryOver.click();
+	public void clickCarryOver(){ 
+		jsclick(CarryOver);
 	}
 	public void clickUpdateButton(){
 		UpdateButton.click();
@@ -89,7 +88,7 @@ public class CheckForCarryOverInLeavePolicy extends BasePage{
 		ApplyLeave.click();
 	}
 	public void clickLeaveSummaryTab(){
-		LeaveSummaryTab.click();
+		jsclick(LeaveSummaryTab);
 	}
 	
 

@@ -13,7 +13,7 @@ public class CheckForMaximumAmountInAM extends BasePage {
 	WebElement masterLink;
 	@FindBy(xpath="//div[@class='col_3']//a[contains(text(),'Advance Master')]")
 	WebElement AdvanceMaster;
-	@FindBy(xpath="//td[contains(text(),'ABCDAdvance')]/parent::tr/td[3]/a")
+	@FindBy(xpath="//td[contains(text(),'ADMaster543')]/parent::tr/td[3]/a")
 	WebElement Edit;
 	@FindBy(xpath="//*[@id='standing_instr_list']/div[2]/table/tbody/tr/td[contains(text(),'Advance_Master')]/parent::tr/td[1]")
 	WebElement SelectedAdvanceMaster;

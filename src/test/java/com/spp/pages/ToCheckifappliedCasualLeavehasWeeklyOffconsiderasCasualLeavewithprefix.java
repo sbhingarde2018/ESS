@@ -13,9 +13,9 @@ public class ToCheckifappliedCasualLeavehasWeeklyOffconsiderasCasualLeavewithpre
 	WebElement masterLink;
 	@FindBy(xpath="//a[text()='Leave Policy']")
 	WebElement leavePolicy;
-    @FindBy(xpath="//*[@id='leave-policy-master-list']/table/tbody/tr/td[contains(text(),'Default')]/parent::tr/td[4]/a")
+    @FindBy(xpath="//table/tbody/tr/td[contains(text(),'ClonePolicy')]/parent::tr/td[4]/a")
 	WebElement addLeaves;
-    @FindBy(xpath="//*[@id='leave_policy_setting_details']/div[2]/table/tbody/tr/td[contains(text(),'Leave')]/parent::tr/td[3]/a")
+    @FindBy(xpath="//div[2]/table/tbody/tr/td[contains(text(),'Casual Leave')]/parent::tr/td[3]/a")
     WebElement settingsLink;
     @FindBy(id="leave_policy_head_wise_setting_behaviour_settings_max_leave_month")
     WebElement casualLeaveallowedavaiformonth; 
@@ -48,14 +48,12 @@ public class ToCheckifappliedCasualLeavehasWeeklyOffconsiderasCasualLeavewithpre
     @FindBy(id="leave")
     WebElement ClickOnLeave;
     @FindBy(xpath="//*[@id='menu']/li[5]/div/div/ul/li[1]/a")
-    //@FindBy(xpath="//*[@id='dt_leave_details']/tbody/tr/td[contains(text(),'Tina')]/parent::tr/td/a")
     WebElement ClickOnApplyLeave;
     @FindBy(id="filter_head")
     WebElement ClickOnFilter;
-    @FindBy(xpath="//*[@id='bf_form']/div[10]/button[1]")
+    @FindBy(xpath="//*[@id=\"bf_form\"]/div/button[contains(text(),'LOAD')]")
     WebElement ClickOnLoad;
-    //@FindBy(xpath="//*[@id='dt_leave_details']/tbody/tr/td[3]/a")
-    @FindBy(xpath="//*[@id='dt_leave_details']/tbody/tr/td[contains(text(),'Tina')]/parent::tr/td/a")
+    @FindBy(xpath="//tbody/tr/td[contains(text(),'Zain')]/parent::tr/td/a")
     WebElement ClickOnAPPLYLEAVE;
     @FindBy(id="leave_detail_leave_definition_id")
     WebElement SelectLeave;
@@ -85,7 +83,7 @@ public class ToCheckifappliedCasualLeavehasWeeklyOffconsiderasCasualLeavewithpre
     WebElement AppyLeaveLink;
     @FindBy(id="filter_head")
     WebElement Filter;
-    @FindBy(xpath="//*[@id=\"bf_form\"]/div[10]/button[1]")
+    @FindBy(xpath="//*[@id=\"bf_form\"]/div/button[contains(text(),'LOAD')]")
     WebElement Load;
     @FindBy(id="leave_detail_leave_definition_id")
 	WebElement LeaveType;
@@ -93,13 +91,13 @@ public class ToCheckifappliedCasualLeavehasWeeklyOffconsiderasCasualLeavewithpre
 	WebElement ApplyButton;
 	@FindBy(xpath="//*[@id=\"apply_leave_response\"]/div/strong")
 	WebElement Message2;
-	@FindBy(xpath="//*[@id='main']/div[2]/nav/ul/li[3]/a/span")
+	@FindBy(xpath="//span[contains(text(),'LEAVE HISTORY')]")
 	WebElement LeaveHistory;
 	@FindBy(xpath="//*[@id='leave_detail_for_employee']/table/tbody/tr/td[4]/a")
 	WebElement View;
 	@FindBy(xpath="//*[@id='batch_details']/form/table[3]/tbody/tr[2]/td/input[3]")
 	WebElement DeleteButton;
-	@FindBy(id="to_date")
+	@FindBy(xpath="//*[@id=\"from_date\"]")
 	WebElement LeaveHistoryToDate;
 	@FindBy(xpath="//*[@id='leave_range_data']/div[3]/div/div/input[2]")
 	WebElement SearchButton;
@@ -182,7 +180,7 @@ public class ToCheckifappliedCasualLeavehasWeeklyOffconsiderasCasualLeavewithpre
 		return Message2.getText();
 	}
 	public void selectLeaveHistory(){
-		LeaveHistory.click();
+		jsclick(LeaveHistory);
 	}
 	public void selectView(){
 		View.click();

@@ -68,7 +68,7 @@ public class SalaryStructure extends BaseTest {
 		sh.clickPFApplicabilty();
 		sh.clickESIApplicabilty();
 		sh.selectRoundOff("Actual");
-		sh.enterEffectiveDate("Apr/2013");
+		sh.enterEffectiveDate("Jan/2019");
 		Thread.sleep(5000);
 		sh.clickCreateSalaryGroupDetailButton();
 		String s=sh.getMessage();
