@@ -214,4 +214,10 @@ public class LeaveBehaviourSettings extends BasePage{
 	public void ClickView() {
 		View.click();
 	}
+	public void DeleteCasualLeaveallowedavaiformonth(){
+		casualLeaveallowedavaiformonth.clear();
+	}
+	public void DeleteCasualLeaveallowedavailforyear(){
+		casualLeaveallowedavailforyear.clear();
+	}
 }

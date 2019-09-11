@@ -165,4 +165,7 @@ public class CheckForAllowHalfDayInLeaveModule extends BasePage {
 		Thread.sleep(2000);
 		switchToPopUpAndAccept(driver);
 	}
+	public void UnclickAllowHalfDay(){
+		allowHalfDay.click();
+	}
 }

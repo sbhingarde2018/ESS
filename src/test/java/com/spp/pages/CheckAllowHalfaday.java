@@ -13,54 +13,38 @@ public class CheckAllowHalfaday extends BasePage{
 	WebElement masterLink;
 	@FindBy(xpath="//*[@id=\"menu\"]/li[3]/div/div[3]/ul/li[2]/a")
 	WebElement leavePolicy;
-	@FindBy(xpath="//*[@id=\"leave-policy-master-list\"]/table/tbody/tr/td[contains(text(),'newLeavepolicy_90351')]/parent::tr/td[4]/a")
+	@FindBy(xpath="//table/tbody/tr/td[contains(text(),'Default')]/parent::tr/td[4]/a")
 	WebElement AddLeaves;
-	@FindBy(xpath="//*[@id=\"leave_policy_setting_details\"]/div[2]/table/tbody/tr[5]/td[3]/a")
+	@FindBy(xpath="//div[2]/table/tbody/tr/td[contains(text(),'Casual Leave')]/parent::tr/td[3]/a")
 	WebElement settingsLink;
-	@FindBy(id="leave_policy_head_wise_setting_behaviour_settings_allow_half")
+	@FindBy(xpath="//td//*[@id=\"leave_policy_head_wise_setting_behaviour_settings_allow_half\"]")
 	WebElement ClickOnAllowHalfDay;
 	@FindBy(xpath="//*[@id=\"behaviour_policy_setting\"]/div[3]/input")
 	WebElement UpdateButton;
 	@FindBy(xpath="//*[@id=\"leave_policy_head_wise_settings_response\"]/div/strong")
 	WebElement SuccessfulMessage;
-	 @FindBy(id="leave")
-	    WebElement LeaveLink;
-	    @FindBy(linkText="Apply Leave")
-	    WebElement AppyLeaveLink;
-	    @FindBy(id="filter_head")
-	    WebElement Filter;
-	    @FindBy(xpath="//*[@id=\"bf_form\"]/div[9]/button[1]")
-	    WebElement Load;
-	    @FindBy(xpath="//*[@id=\"dt_leave_details\"]/tbody/tr[1]/td[3]/a")
-	    WebElement ApplyLeave;
-		@FindBy(id="leave_detail_leave_definition_id")
-		WebElement LeaveType;
-		@FindBy(id="leave_detail_from_date")
-		WebElement FromDate;
-		@FindBy(id="leave_detail_to_date")
-		WebElement ToDate;
-		@FindBy(id="leave_detail_leave_data_2018-07-20_first_half")
-		WebElement DisableFirstHalf;
-		@FindBy(xpath="//*[@id=\"apply\"]")
-		WebElement ApplyButton;
-		@FindBy(xpath="//*[@id=\"apply_leave_response\"]/div/strong")
-		WebElement Message2;
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	@FindBy(id="leave")
+	WebElement LeaveLink;
+	@FindBy(linkText="Apply Leave")
+	WebElement AppyLeaveLink;
+	@FindBy(id="filter_head")
+	WebElement Filter;
+	@FindBy(xpath="//*[@id=\"bf_form\"]/div/button[contains(text(),'LOAD')]")
+	WebElement Load;
+	@FindBy(xpath="//tbody/tr/td[contains(text(),'Rihana')]/parent::tr/td[3]/a")
+	WebElement ApplyLeave;
+	@FindBy(id="leave_detail_leave_definition_id")
+	WebElement LeaveType;
+	@FindBy(id="leave_detail_from_date")
+	WebElement FromDate;
+	@FindBy(id="leave_detail_to_date")
+	WebElement ToDate;
+	@FindBy(xpath="//table[1]/tbody[1]/tr[1]/td[3]/input[1]")
+	WebElement DisableFirstHalf;
+	@FindBy(xpath="//*[@id=\"apply\"]")
+	WebElement ApplyButton;
+	@FindBy(xpath="//*[@id=\"apply_leave_response\"]/div/strong")
+	WebElement Message2;
 	
 	
 	public CheckAllowHalfaday(WebDriver driver) {
@@ -82,7 +66,12 @@ public class CheckAllowHalfaday extends BasePage{
 		settingsLink.click();
 	}
 	public void clickonallowhalfday() {
-		ClickOnAllowHalfDay.click();
+		if(ClickOnAllowHalfDay.isSelected()) {
+			System.out.println("Already Selected");
+		}
+		else {
+			ClickOnAllowHalfDay.click();
+		}	
 	}
 	public void clickUpdateButton(){
 		UpdateButton.click();
@@ -128,6 +117,9 @@ public class CheckAllowHalfaday extends BasePage{
 	}
 	public void disablefirsthalf() {
 		DisableFirstHalf.click();
+	}
+	public void UncheckHalfDay() {
+		ClickOnAllowHalfDay.click();
 	}
 	
 }

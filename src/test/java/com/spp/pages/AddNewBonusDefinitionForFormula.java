@@ -53,6 +53,7 @@ public class AddNewBonusDefinitionForFormula extends BasePage{
 		AddNewBonus.click();
 	}
 	public void EnterBonusHead(String value){
+		BonusHead.clear();
 		BonusHead.sendKeys(value);
 	}
 	public void selectformula(){
