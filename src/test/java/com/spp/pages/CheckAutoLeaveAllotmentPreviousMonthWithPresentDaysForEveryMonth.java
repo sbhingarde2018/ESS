@@ -186,4 +186,5 @@ public class CheckAutoLeaveAllotmentPreviousMonthWithPresentDaysForEveryMonth ex
 	}
 	public void UnselectAutoAlloy() {
 	LeaveAllotmentBox.click();
+	}
 }
