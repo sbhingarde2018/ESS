@@ -25,7 +25,6 @@ public class EncashmentSettings extends BasePage{
 	WebElement encashmentTab;
 	@FindBy(id="leave_policy_head_wise_setting_encashment_settings_encash")
 	WebElement allowEncahment;
-	//@FindBy(name="leave_policy_head_wise_setting[encashment_settings[min_encash]]")
 	@FindBy(xpath="//*[@id=\"lapse_carryover_encashment_sets\"]/table/tbody/tr[2]/td[2]/input")
 	WebElement encashedPerInstance;
 	@FindBy(name="leave_policy_head_wise_setting[encashment_settings[max_encash]]")
@@ -38,7 +37,7 @@ public class EncashmentSettings extends BasePage{
 	WebElement updateButton;
 	@FindBy(xpath="//strong[text()='Setting was successfully updated.']")
 	WebElement successfullMessage;
-	@FindBy(xpath="//input[@checked='checked' and @id='leave_policy_head_wise_setting_encashment_settings_encash']/parent::td")
+	@FindBy(xpath="//*[@id=\"leave_policy_head_wise_setting_encashment_settings_encash\"]")
 	WebElement allowearned;
 	@FindBy(id="leave")
 	WebElement LeaveLink;
@@ -115,20 +114,13 @@ public class EncashmentSettings extends BasePage{
 	//	allowEncahment.click();
 	 
 	public void clickallowEarnedLeave() throws Exception {
-		String js = "arguments[0].style.height='auto'; arguments[0].style.visibility='visible';";
-		((JavascriptExecutor) driver).executeScript(js, allowearned);
-		 
-		// Click on element
-		 
-		//allowearned.click();	
-	//allowearned.sendKeys("  ");
-	allowearned.sendKeys(Keys.SPACE);
-		System.out.println(encashedPerInstance.getText());
-		encashedPerInstance.sendKeys("100");
+		if(allowearned.isSelected()) {
+			System.out.println("Already Selected");
+		}
+		else {
+			allowearned.click();
+		}
 	}
-	
-	
-	
 	public void enterEncashedPerInstance(String value){
 		System.out.println(encashedPerInstance.getAttribute("disabled"));
 		System.out.println(driver.getPageSource());
@@ -229,5 +221,8 @@ public class EncashmentSettings extends BasePage{
 	}
 	public void clickView(){
 		View.click();
+	}
+	public void unselectEncash() {
+		AllowAccessCasual.click();
 	}
 }

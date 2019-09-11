@@ -86,7 +86,12 @@ public class CheckForUpperLimitInLeavePolicy extends BasePage {
 		LapseTab.click();
 	}
 	public void clickCarryOver(){
-		CarryOver.click();
+		if(CarryOver.isSelected()) {
+			System.out.println("Already Selected");
+		}
+		else {
+			jsclick(CarryOver);
+		}
 	}
 	public void clickUpperLimit(){
 		UpperLimit.click();
@@ -108,8 +113,6 @@ public class CheckForUpperLimitInLeavePolicy extends BasePage {
 	public void clickFilter(){
 		Filter.click();
 	}
-	
-	
 	public void clickApplyLeave(){
 		ApplyLeave.click();
 	}
@@ -153,5 +156,8 @@ public class CheckForUpperLimitInLeavePolicy extends BasePage {
 	}
 	public String getMessage1(){
 		return SuccessfulMessage.getText();
+	}
+	public void UnselectCarryOver() {
+		jsclick(CarryOver);
 	}
 }

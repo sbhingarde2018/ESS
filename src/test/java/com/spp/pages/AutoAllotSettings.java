@@ -12,11 +12,11 @@ public class AutoAllotSettings extends BasePage {
 	WebElement masterLink;
 	@FindBy(xpath="//a[text()='Leave Policy']")
 	WebElement leavePolicy;
-    @FindBy(xpath="//div[@id='leave-policy-master-list']//tr[1]//td[4]//a[text()='Add Leaves']")
+    @FindBy(xpath="//table/tbody/tr/td[contains(text(),'Default')]/parent::tr/td[4]/a")
 	WebElement addLeaves;
-    @FindBy(xpath="//*[@id=\"leave_policy_setting_details\"]/div[2]/table/tbody/tr[5]/td[3]/a")
+    @FindBy(xpath="//div[2]/table/tbody/tr/td[contains(text(),'Casual Leave')]/parent::tr/td[3]/a")
     WebElement settingsLink;
-    @FindBy(xpath="//div[@id='main']//div[3]//li[4]//span[normalize-space(text()='Auto Allot Settings')]")
+    @FindBy(xpath="//span[contains(text(),'Auto Allot Settings')]")
     WebElement autoAllot;
     @FindBy(id="auto_leave_allotment")
     WebElement leaveAllotment;
@@ -34,7 +34,29 @@ public class AutoAllotSettings extends BasePage {
     WebElement updateButton;
 	@FindBy(xpath="//strong[text()='Setting was successfully updated.']")
 	WebElement successfullMessage;
-
+	@FindBy(xpath="//a[@id='report']")
+	WebElement Report;
+	@FindBy(xpath="//a[contains(text(),'Advance Leave Report')]")
+	WebElement AdvanceLeaveReport;
+	@FindBy(id="leave_report_type")
+	WebElement LeaveReport;
+	@FindBy(id="leave_policy")
+	WebElement LeavePolicy;
+	@FindBy(id="paymonth")
+	WebElement Paymonth;
+	@FindBy(id="select_all_leaves")
+	WebElement SelectAllCheckBox;
+	@FindBy(id="leave_report_employees")
+	WebElement GetEmployee;
+	@FindBy(xpath="//*[@id=\"leave_report_table\"]/tbody/tr[1]/td[1]/input")
+	WebElement Employee1;
+	@FindBy(xpath="//*[@id=\"leave_report_table\"]/tbody/tr[2]/td[1]/input")
+	WebElement Employee2;
+	@FindBy(id="leave_report_submit")
+	WebElement GenerateReport;
+	@FindBy(xpath="//*[@id=\"bf_form\"]/div/button[contains(text(),'LOAD')]")
+    WebElement Load;
+	
 	public AutoAllotSettings(WebDriver driver) {
 		super(driver);
 		PageFactory.initElements(driver,this);
@@ -61,7 +83,12 @@ public class AutoAllotSettings extends BasePage {
 	}
 	
 	public void clickLeaveAllotment(){
-		leaveAllotment.click();
+		if(leaveAllotment.isSelected()) {
+			System.out.println("Already Selected");
+		}
+		else {
+			leaveAllotment.click();
+		}
 	}
 	
 	public void selectAllotType(String value){
@@ -90,5 +117,43 @@ public class AutoAllotSettings extends BasePage {
 	
 	public String getMessage(){
 		return successfullMessage.getText();
+	}
+	public void clickReport(){
+		Report.click();
+	}
+	public void clickAdvanceLeaveReport(){
+		AdvanceLeaveReport.click();
+	}
+	public void selectLeaveReport(String value) {
+		dropDownSelect(LeaveReport, value);
+	}
+	public void selectLeavePolicy(String value) {
+		dropDownSelect(LeavePolicy, value);
+	}
+	public void clickPaymonth(String value){
+		Paymonth.clear();
+		Paymonth.sendKeys(value);
+	}
+	public void clickSelectAllCheckBox(){
+		SelectAllCheckBox.click();
+	}
+	public void clickGetEmployee(){
+		GetEmployee.click();
+	}
+	public void clickLoad(){
+		Load.click();
+	}
+	public void clickEmployee1(){
+		Employee1.click();
+	}
+	
+	public void clickEmployee2(){
+		Employee2.click();
+	}
+	public void clickGenerateReport(){
+		GenerateReport.click();
+	}
+	public void UncheckLeaveAllotment(){
+		leaveAllotment.click();
 	}
 }

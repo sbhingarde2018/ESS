@@ -74,7 +74,12 @@ public class CheckforMinEarnedLeavecanbeEncashedperinstance extends BasePage{
 		ClickOnLapseCarry.click();
 	}
 	public void allowleavetobeencashed() {
-		AllowLeavetobeEncashed.click();
+		if(AllowLeavetobeEncashed.isSelected()) {
+			System.out.println("Already Selected");
+		}
+		else {
+			AllowLeavetobeEncashed.click();
+		}
 	}
 	public void enterminleaveencash(String value) {
 		MinimumLeaveEncash.clear();
@@ -126,5 +131,8 @@ public class CheckforMinEarnedLeavecanbeEncashedperinstance extends BasePage{
 	}
 	public String getalertmessage() {
 		return ClickOnAlertMessage.getText();
+	}
+	public void unselectEncash() {
+		AllowLeavetobeEncashed.click();
 	}
 }

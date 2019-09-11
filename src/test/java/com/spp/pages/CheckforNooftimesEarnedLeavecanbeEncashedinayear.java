@@ -85,7 +85,12 @@ public class CheckforNooftimesEarnedLeavecanbeEncashedinayear extends BasePage{
 		ClickOnLapseCarry.click();
 	}
 	public void allowleavetobeencashed() {
-		AllowLeavetobeEncashed.click();
+		if(AllowLeavetobeEncashed.isSelected()) {
+			System.out.println("Already Selected");
+		}
+		else {
+			AllowLeavetobeEncashed.click();
+		}
 	}
 	public void enterminleaveencash(String value) {
 		MinimumLeaveEncash.clear();
@@ -156,6 +161,9 @@ public class CheckforNooftimesEarnedLeavecanbeEncashedinayear extends BasePage{
 		Delete.click();
 		Thread.sleep(2000);
 		switchToPopUpAndAccept(driver);
+	}
+	public void UnselectEncash() {
+		AllowLeavetobeEncashed.click();
 	}
 	
 }

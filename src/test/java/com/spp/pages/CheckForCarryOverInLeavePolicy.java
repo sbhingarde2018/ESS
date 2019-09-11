@@ -63,7 +63,12 @@ public class CheckForCarryOverInLeavePolicy extends BasePage{
 		LapseTab.click();
 	}
 	public void clickCarryOver(){ 
-		jsclick(CarryOver);
+		if(CarryOver.isSelected()) {
+			System.out.println("Already Selected");
+		}
+		else {
+			jsclick(CarryOver);
+		}
 	}
 	public void clickUpdateButton(){
 		UpdateButton.click();
@@ -90,7 +95,7 @@ public class CheckForCarryOverInLeavePolicy extends BasePage{
 	public void clickLeaveSummaryTab(){
 		jsclick(LeaveSummaryTab);
 	}
-	
-
-
+	public void UnselectCarryOver() {
+		jsclick(CarryOver);
+	}
 }

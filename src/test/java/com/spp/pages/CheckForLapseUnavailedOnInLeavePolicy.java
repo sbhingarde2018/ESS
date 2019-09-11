@@ -86,7 +86,12 @@ public class CheckForLapseUnavailedOnInLeavePolicy extends BasePage{
 		LapseTab.click();
 	}
 	public void clickCarryOver(){
-		CarryOver.click();
+		if(CarryOver.isSelected()) {
+			System.out.println("Already Selected");
+		}
+		else {
+			jsclick(CarryOver);
+		}
 	}
 	public void clickLapseUnavailed(){
 		clickLapseUnavailed.click();
@@ -154,5 +159,7 @@ public class CheckForLapseUnavailedOnInLeavePolicy extends BasePage{
 	public void clickGenerateReport(){
 		GenerateReport.click();
 	}
-
+	public void UnselectCarryOver() {
+		jsclick(CarryOver);
+	}
 }

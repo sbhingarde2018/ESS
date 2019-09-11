@@ -165,4 +165,7 @@ public class CheckExcessCasualLeaveTakenAsLOP extends BasePage {
 		LeaveHistoryToDate.sendKeys(value);
 		LeaveHistoryToDate.sendKeys(Keys.TAB);
 	}
+	public void UnselectAccess() {
+		AllowAccessCasual.click();
+	}
 }

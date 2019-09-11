@@ -69,7 +69,6 @@ public class CheckForLapseExceedingInLeavePolicy extends BasePage{
 		super(driver);
 		PageFactory.initElements(driver,this);
 	}
-
 	public void clickMastserLink(){
 		masterLink.click();
 	}
@@ -90,7 +89,12 @@ public class CheckForLapseExceedingInLeavePolicy extends BasePage{
 		LapseTab.click();
 	}
 	public void clickCarryOver(){
-		CarryOver.click();
+		if(CarryOver.isSelected()) {
+			System.out.println("Already Selected");
+		}
+		else {
+			jsclick(CarryOver);
+		}
 	}
 	public void clickLapseUnavailed(){
 		clickLapseUnavailed.click();
@@ -120,8 +124,6 @@ public class CheckForLapseExceedingInLeavePolicy extends BasePage{
 	public void clickFilter(){
 		Filter.click();
 	}
-	
-	
 	public void clickApplyLeave(){
 		ApplyLeave.click();
 	}
@@ -163,5 +165,7 @@ public class CheckForLapseExceedingInLeavePolicy extends BasePage{
 	public void clickGenerateReport(){
 		GenerateReport.click();
 	}
-
+	public void UnselectCarryOver() {
+		jsclick(CarryOver);
+	}
 }

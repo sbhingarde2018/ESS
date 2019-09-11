@@ -129,7 +129,12 @@ public class ToCheckifappliedCasualLeavehasWeeklyOffconsiderasCasualLeavewithpre
 		WeeklyOff.click();
 	}
 	public void clickWeeklyOffLeaveCheckbox() {
-		LeaveHasWeeklyOff.click();
+		if(LeaveHasWeeklyOff.isSelected()) {
+			System.out.println("Already Selected");
+		}
+		else {
+			LeaveHasWeeklyOff.click();
+		}
 	}
 	public void WeeklyOffPrefixLeaves(String value) {
 		WeeklyOffNoofLeaveDays.clear();
@@ -171,7 +176,6 @@ public class ToCheckifappliedCasualLeavehasWeeklyOffconsiderasCasualLeavewithpre
 	public void enterToDate(String value){
 		ToDate.sendKeys(value);
 		ToDatePicker.click();
-		//ToDate.sendKeys(Keys.TAB);
 	}
 	public void clickApplyButton(){
 		ApplyButton.click();
@@ -196,5 +200,8 @@ public class ToCheckifappliedCasualLeavehasWeeklyOffconsiderasCasualLeavewithpre
 	}
 	public void clickSearchButton(){
 		SearchButton.click();
+	}
+	public void Unselectweeklyoff() {
+		LeaveHasWeeklyOff.click();
 	}
 }

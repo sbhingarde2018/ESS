@@ -86,7 +86,12 @@ public class CheckForLowerLimitInLeavePolicy extends BasePage{
 		LapseTab.click();
 	}
 	public void clickCarryOver(){
-		CarryOver.click();
+		if(CarryOver.isSelected()) {
+			System.out.println("Already Selected");
+		}
+		else {
+			jsclick(CarryOver);
+		}
 	}
 	public void clickLowerLimit(){
 		LowerLimit.click();
@@ -153,5 +158,7 @@ public class CheckForLowerLimitInLeavePolicy extends BasePage{
 	public void clickGenerateReport(){
 		GenerateReport.click();
 	}
-
+	public void UnselectCarryOver() {
+		jsclick(CarryOver);
+	}
 }

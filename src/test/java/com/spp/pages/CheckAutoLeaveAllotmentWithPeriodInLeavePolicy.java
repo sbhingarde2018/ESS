@@ -12,12 +12,11 @@ public class CheckAutoLeaveAllotmentWithPeriodInLeavePolicy extends BasePage{
 	WebElement masterLink;
 	@FindBy(xpath="//a[text()='Leave Policy']")
 	WebElement leavePolicy;
-    @FindBy(xpath="//div[@id='leave-policy-master-list']//tr[1]//td[4]//a[text()='Add Leaves']")
+    @FindBy(xpath="//table/tbody/tr/td[contains(text(),'Default')]/parent::tr/td[4]/a")
 	WebElement addLeaves;
-   // @FindBy(xpath="//*[@id=\"leave_policy_setting_details\"]/div[2]/table/tbody/tr/td[2][contains(text(),'Earned')]/parent::tr/td[3]/a")
-    @FindBy(xpath="//*[@id=\"leave_policy_setting_details\"]/div[2]/table/tbody/tr/td[2][contains(text(),'Casual')]/parent::tr/td[3]/a")
+    @FindBy(xpath="//div[2]/table/tbody/tr/td[contains(text(),'Casual Leave')]/parent::tr/td[3]/a")
     WebElement settingsLink;
-    @FindBy(xpath="//*[@id=\"main\"]/div/div[3]/nav/ul/li[4]/a/span")
+    @FindBy(xpath="//span[contains(text(),'Auto Allot Settings')]")
     WebElement AutoAllotTab;
     @FindBy(id="auto_leave_allotment")
     WebElement LeaveAllotmentBox;
@@ -29,14 +28,12 @@ public class CheckAutoLeaveAllotmentWithPeriodInLeavePolicy extends BasePage{
     WebElement RoundOff;
     @FindBy(id="leave_policy_head_wise_setting_auto_allot_settings_effective_from")
     WebElement EffectiveFrom;
-    @FindBy(xpath="//*[@id=\"auto_leave_config_div\"]/fieldset/table/tbody/tr[2]/td[2]/input")
+    @FindBy(id="leave_policy_head_wise_setting_auto_allot_settings_no_of_days")
     WebElement NoOfLeaves;
     @FindBy(id="leave_policy_head_wise_setting_auto_allot_settings_period")
     WebElement PeriodInDays;
-    
     @FindBy(xpath="//*[@id=\"auto_allot_setting\"]/table/tbody/tr[3]/td/input")
     WebElement UpdateButton;
-    
     @FindBy(xpath="//*[@id=\"leave_policy_head_wise_settings_response\"]/div/strong")
     WebElement SuccessfulMessage;
     @FindBy(id="leave")
@@ -45,15 +42,15 @@ public class CheckAutoLeaveAllotmentWithPeriodInLeavePolicy extends BasePage{
     WebElement AppyLeaveLink;
     @FindBy(id="filter_head")
     WebElement Filter;
-    @FindBy(xpath="//*[@id=\"bf_form\"]/div[9]/button[1]")
+    @FindBy(xpath="//*[@id=\"bf_form\"]/div/button[contains(text(),'LOAD')]")
     WebElement Load;
     @FindBy(xpath="//*[@id=\"dt_leave_details\"]/tbody/tr[1]/td[3]/a")
     WebElement ApplyLeave;
 	@FindBy(xpath="//*[@id=\"main\"]/div[2]/nav/ul/li[2]/a/span")
 	WebElement LeaveSummaryTab;
-	@FindBy(xpath="//*[@id=\"menu\"]/li[8]/a")
+	@FindBy(xpath="//a[@id='report']")
 	WebElement Report;
-	@FindBy(xpath="//*[@id=\"menu\"]/li[8]/div/div[1]/ul/li[7]/a")
+	@FindBy(xpath="//a[contains(text(),'Advance Leave Report')]")
 	WebElement AdvanceLeaveReport;
 	@FindBy(id="leave_report_type")
 	WebElement LeaveReport;
@@ -93,11 +90,16 @@ public class CheckAutoLeaveAllotmentWithPeriodInLeavePolicy extends BasePage{
 		settingsLink.click();
 	}
 	
-	public void clickAutoAllotTab(){
-		AutoAllotTab.click();
+	public void clickAutoAllotTab(){   
+		jsclick(AutoAllotTab);
 	}
 	public void clickLeaveAllotmentBox(){
-		LeaveAllotmentBox.click();
+		if(LeaveAllotmentBox.isSelected()) {
+			System.out.println("Already Selected");
+		}
+		else {
+			LeaveAllotmentBox.click();
+		}
 	}
 	public void SelectAllotType(String value) {
 		dropDownSelect(AllotType, value);
@@ -133,8 +135,6 @@ public class CheckAutoLeaveAllotmentWithPeriodInLeavePolicy extends BasePage{
 	public void clickFilter(){
 		Filter.click();
 	}
-	
-	
 	public void clickApplyLeave(){
 		ApplyLeave.click();
 	}
@@ -176,5 +176,7 @@ public class CheckAutoLeaveAllotmentWithPeriodInLeavePolicy extends BasePage{
 	public void clickGenerateReport(){
 		GenerateReport.click();
 	}
-
+	public void UncheckAutoAllotment() {
+		LeaveAllotmentBox.click();
+	}
 }
