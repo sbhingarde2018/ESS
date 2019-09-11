@@ -164,8 +164,8 @@ public class LeavePolicy extends BaseTest {
 		lb.ClickOnApplyLeave();
 		Thread.sleep(2000);
 		lb.SelectLeave("Casual Leave (CL)");
-		lb.EnterFromDate("21 October 2019");
-		lb.EnterToDate("25 October 2019");
+		lb.EnterFromDate("01 October 2019");
+		lb.EnterToDate("05 October 2019");
 		Thread.sleep(5000);
 		String alert = lb.getalertMessage();
 		Assert.assertEquals(alert, "Cannot apply CL more than 1.0 in a month.");
@@ -199,21 +199,21 @@ public class LeavePolicy extends BaseTest {
 		lb.ClickOnApplyLeave();
 		Thread.sleep(2000);
 		lb.SelectLeave("Casual Leave (CL)");
-		lb.EnterFromDate("20 October 2019");
-		lb.EnterToDate("20 October 2019");
+		lb.EnterFromDate("06 October 2019");
+		lb.EnterToDate("06 October 2019");
 		Thread.sleep(5000);
 		lb.clickapply();
 		Thread.sleep(8000);
 		Thread.sleep(2000);
 		lb.SelectLeave("Casual Leave (CL)");
-		lb.EnterFromDate("21 October 2019");
-		lb.EnterToDate("21 October 2019");
+		lb.EnterFromDate("07 October 2019");
+		lb.EnterToDate("07 October 2019");
 		Thread.sleep(5000);
 		lb.clickapply();
 		Thread.sleep(8000);
 		lb.SelectLeave("Casual Leave (CL)");
-		lb.EnterFromDate("22 October 2019");
-		lb.EnterToDate("22 October 2019");
+		lb.EnterFromDate("08 October 2019");
+		lb.EnterToDate("08 October 2019");
 		Thread.sleep(5000);
 		String alert = lb.getalertMessage();
 		Assert.assertEquals(alert, "Cannot apply CL more than 2.0 in a year.");
@@ -263,8 +263,8 @@ public class LeavePolicy extends BaseTest {
 		lb.exitFullscreen();
 		lb.ClickOnApplyLeave();
 		lb.selectLeaveType("Casual Leave (CL)");
-		lb.enterFromDate("26 October 2019");
-		lb.enterToDate("26 October 2019");
+		lb.enterFromDate("09 October 2019");
+		lb.enterToDate("09 October 2019");
 		Thread.sleep(2000);
 		lb.selectSecondHalf();
 		lb.clickApplyButton();
@@ -314,8 +314,8 @@ public class LeavePolicy extends BaseTest {
 		lb.exitFullscreen();
 		lb.clickApplyLeave();
 		lb.selectLeaveType("Casual Leave (CL)");
-		lb.enterFromDate("20 October 2019");
-		lb.enterToDate("22 October 2019");
+		lb.enterFromDate("10 October 2019");
+		lb.enterToDate("12 October 2019");
 		Thread.sleep(4000);
 		lb.clickApplyButton();
 		String e=lb.getMessage2();
@@ -363,8 +363,8 @@ public class LeavePolicy extends BaseTest {
 		lb.exitFullscreen();
 		lb.ClickonApplyLeave();
 		lb.selectLeaveType("Casual Leave (CL)");
-		lb.enterFromDate("20 October 2019");
-		lb.enterToDate("21 October 2019");
+		lb.enterFromDate("13 October 2019");
+		lb.enterToDate("14 October 2019");
 		Thread.sleep(4000);
 		lb.clickApplyButton();
 		String e=lb.getMessage2();
@@ -916,9 +916,9 @@ public class LeavePolicy extends BaseTest {
 		mi.ClickOnApplyLeave();
 		mi.selectLeaveType("Casual Leave (CL)");
 		Thread.sleep(3000);
-		mi.enterFromDate("16 October 2019");
+		mi.enterFromDate("15 October 2019");
 		Thread.sleep(3000);
-		mi.enterToDate("17 October 2019");
+		mi.enterToDate("16 October 2019");
 		Thread.sleep(3000);
 		mi.clickApplyButton();
 		String e = mi.getMessage2();
@@ -972,9 +972,9 @@ public class LeavePolicy extends BaseTest {
 		ab.ClickOnApplyLeave();
 		ab.selectLeaveType("Casual Leave (CL)");
 		Thread.sleep(3000);
-		ab.enterFromDate("05 October 2019");
+		ab.enterFromDate("17 October 2019");
 		Thread.sleep(3000);
-		ab.enterToDate("07 October 2019");
+		ab.enterToDate("19 October 2019");
 		Thread.sleep(2000);
 		ab.clickApplyButton();
 		String e=ab.getMessage2();
@@ -1023,9 +1023,9 @@ public class LeavePolicy extends BaseTest {
 		hs.ClickOnApplyLeave();
 		hs.selectLeaveType("Casual Leave (CL)");
 		Thread.sleep(3000);
-		hs.enterFromDate("03 October 2019");
+		hs.enterFromDate("20 October 2019");
 		Thread.sleep(3000);
-		hs.enterToDate("04 October 2019");
+		hs.enterToDate("21 October 2019");
 		Thread.sleep(2000);
 		hs.clickApplyButton();
 		String e = hs.getMessage2();
@@ -1033,9 +1033,9 @@ public class LeavePolicy extends BaseTest {
 		Thread.sleep(6000);
 		hs.selectLeaveType("Casual Leave (CL)");
 		Thread.sleep(3000);
-		hs.enterFromDate("13 October 2019");
+		hs.enterFromDate("22 October 2019");
 		Thread.sleep(3000);
-		hs.enterToDate("14 October 2019");
+		hs.enterToDate("23 October 2019");
 		Thread.sleep(2000);
 		hs.clickApplyButton();
 		hs.selectLeaveHistory();
@@ -1380,22 +1380,22 @@ public class LeavePolicy extends BaseTest {
   		mc.exitFullscreen();
   		mc.clickApplyLeave();
   		mc.selectLeaveType("Casual Leave (CL)");
-  		mc.enterFromDate("20 October 2019");
-  		mc.enterToDate("21 October 2019");
+  		mc.enterFromDate("24 October 2019");
+  		mc.enterToDate("25 October 2019");
   		Thread.sleep(2000);
   		mc.selectApplyButton();
   		String e=mc.getMessage2();
   		Assert.assertEquals(e, "Leave applied successfully.");
   		Thread.sleep(3000);
   		mc.selectLeaveType("Casual Leave (CL)");
-  		mc.enterFromDate("23 October 2019");
-  		mc.enterToDate("23 October 2019");
+  		mc.enterFromDate("26 October 2019");
+  		mc.enterToDate("26 October 2019");
   		Thread.sleep(2000);
   		String f=mc.getMinMessage();
   		Assert.assertEquals(f, "Minimum 2.0 CL should be applied to avail CL.");
   		mc.selectLeaveType("Casual Leave (CL)");
-  		mc.enterFromDate("24 October 2019");
-  		mc.enterToDate("26 October 2019");
+  		mc.enterFromDate("27 October 2019");
+  		mc.enterToDate("29 October 2019");
   		Thread.sleep(2000);
   		mc.selectApplyButton();
   		String g=mc.getMessage2();
@@ -1422,7 +1422,7 @@ public class LeavePolicy extends BaseTest {
   		Thread.sleep(7000);
   	}
      
-   /*  @Test(priority=27)
+	 /*@Test(priority=31)
  	 public void CheckforMaxCasualLeavethatcanbeavailedforinstance_SC_308() throws InterruptedException{
  		CheckforMaxCasualLeavethatcanbeavailedforinstance mc=new CheckforMaxCasualLeavethatcanbeavailedforinstance(driver);
  		mc.clickMastserLink();
@@ -1451,20 +1451,15 @@ public class LeavePolicy extends BaseTest {
  		mc.selectApplyButton();
  		String e=mc.getMessage2();
  		Assert.assertEquals(e, "Leave applied successfully.");
- 		Thread.sleep(3000);
+ 		Thread.sleep(5000);
  		mc.selectLeaveType("Casual Leave (CL)");
  		mc.enterFromDate("23 October 2019");
- 		mc.enterToDate("23 October 2019");
+ 		mc.enterToDate("25 October 2019");
+ 		Thread.sleep(2000);
+ 		mc.selectApplyButton();
  		Thread.sleep(2000);
  		String f=mc.getMinMessage();
- 		Assert.assertEquals(f, "Minimum 2.0 CL should be applied to avail CL.");
- 		mc.selectLeaveType("Casual Leave (CL)");
- 		mc.enterFromDate("24 October 2019");
- 		mc.enterToDate("26 October 2019");
- 		Thread.sleep(2000);
- 		String g=mc.getMinMessage();
- 		Assert.assertEquals(g, "CL can't be availed due to insufficient balance.");
- 		Thread.sleep(2000);
+ 		Assert.assertEquals(f, "Max days instance error: Maximum 2.0 days CL can be applied in a single instance.");
  		mc.ClickLeaveHistory();
  		Thread.sleep(2000);
  		mc.EnterHistoryFrom("01 November 2013");
@@ -1473,6 +1468,7 @@ public class LeavePolicy extends BaseTest {
  		mc.selectView();
  		Thread.sleep(3000);
  		mc.clickDeleteButton();
+ 		Thread.sleep(5000);
  		mc.clickMastserLink();
  		mc.selectLeavePolicy();
  		mc.clickAddLeaves();
@@ -1482,13 +1478,14 @@ public class LeavePolicy extends BaseTest {
  		Thread.sleep(7000);	
 	}
       
-     @Test(priority=29)
+    @Test(priority=32)
  	public void CheckAllowHalfaday_SC_309() throws InterruptedException{
  		CheckAllowHalfaday pd=new CheckAllowHalfaday(driver);
  		pd.clickMastserLink();
  		pd.selectLeavePolicy();
  		pd.clickAddLeaves();
  		pd.clickSettingsLink();
+ 		Thread.sleep(2000);
  		pd.clickonallowhalfday();
  		pd.clickUpdateButton();
  		String a=pd.getMessage1();
@@ -1498,23 +1495,38 @@ public class LeavePolicy extends BaseTest {
  		pd.clickAppyLeaveLink();
  		Thread.sleep(500);
  		pd.clickFilter();
+ 		pd.resizeWindow();
  		Thread.sleep(2000);
  		pd.clickLoad();
  		Thread.sleep(2000);
+ 		pd.exitFullscreen();
  		pd.clickApplyLeave();
  		pd.selectLeaveType("Casual Leave (CL)");
- 		pd.enterFromDate("20 July 2018");
- 		pd.enterToDate("20 July 2018");
+ 		pd.enterFromDate("20 October 2019");
+ 		pd.enterToDate("20 October 2019");
  		Thread.sleep(3000);
  		pd.disablefirsthalf();
  		Thread.sleep(2000);
  		pd.selectApplyButton();
  		String e=pd.getMessage2();
  		Assert.assertEquals(e, "Leave applied successfully.");
- 	
+ 		pd.ClickLeaveHistory();
+ 		pd.EnterHistoryFromDate("01 November 2013");
+ 		pd.clickSearchButton();
+ 		pd.clickView();
+ 		Thread.sleep(2000);
+ 		pd.clickDelete();
+ 		Thread.sleep(2000);
+ 		pd.clickMastserLink();
+ 		pd.selectLeavePolicy();
+ 		pd.clickAddLeaves();
+ 		pd.clickSettingsLink();
+ 		pd.UncheckHalfDay();
+ 		pd.clickUpdateButton();
+ 		Thread.sleep(5000);
  	}
      
-     @Test(priority=30)
+    @Test(priority=33)
  	public void CheckPriordaystoapplycasualleave_SC_310() throws InterruptedException{
  		CheckPriordaystoapplycasualleave pd=new CheckPriordaystoapplycasualleave(driver);
  		pd.clickMastserLink();
@@ -1530,130 +1542,135 @@ public class LeavePolicy extends BaseTest {
  		pd.clickAppyLeaveLink();
  		Thread.sleep(500);
  		pd.clickFilter();
+ 		pd.resizeWindow();
  		Thread.sleep(2000);
  		pd.clickLoad();
  		Thread.sleep(2000);
+ 		pd.exitFullscreen();
  		pd.clickApplyLeave();
  		pd.selectLeaveType("Casual Leave (CL)");
- 		pd.enterFromDate("10 July 2018");
- 		pd.enterToDate("13 July 2018");
+ 		pd.enterFromDate("20 October 2019");
+ 		pd.enterToDate("23 October 2019");
  		pd.selectApplyButton();
  		String e=pd.getMessage2();
  		Assert.assertEquals(e, "Leave applied successfully.");
- 	
- 	}    
-     @Test(priority=27) 
-     public void UpdateAutoAllotSettingsMonthly_SC_356() throws InterruptedException{
-   	 UpdateAutoAllotSettingsMonthly lb=new UpdateAutoAllotSettingsMonthly(driver);
- 	 lb.clickMastserLink();
- 	 lb.selectLeavePolicy();
- 	 lb.clickAddLeaves();
- 	lb.clickSettingsLink();
- 	Thread.sleep(4000);
- 	lb.clickAutoAllotTab();
- 	Thread.sleep(4000);
- 	lb.clickLeaveAllotmentBox();
- 	Thread.sleep(4000);
- 	lb.SelectAllotType("Monthly");
- 	Thread.sleep(5000);
- 	lb.SelectAllotOn("Actual Days");
- 	lb.SelectAsPerMonth("Current Month");
- 	lb.SelectForMonth("Every Month");
- 	Thread.sleep(4000);
- 	//lb.SelectEveryMonth("Every Month");
- 	lb.SelectEffectiveFrom("Jan/2013");
- 	Thread.sleep(5000);
- 	lb.enterNoOfLeaves("1");
- 	//lb.enterPeriodInDays("20");
- 	lb.clickUpdateButton();
- 	String d=lb.getMessage1();
- 	Assert.assertEquals(d, "Setting was successfully updated.");
- 	Thread.sleep(4000);
- 	lb.clickMastserLink();
- 	lb.selectLeavePolicy();
- 	lb.clickAddLeaves();
- 	lb.clickSettingsLink();
- 	Thread.sleep(4000);
- 	lb.clickAutoAllotTab();
- 	lb.clickLeaveAllotmentBox();
- 	lb.clickUpdateButton();  
-}
-     @Test(priority=28) 
+ 		Thread.sleep(2000);
+ 		pd.ClickLeaveHistory();
+ 		pd.EnterHistoryFromDate("01 November 2013");
+ 		pd.clickSearchButton();
+ 		Thread.sleep(2000);
+ 		pd.clickView();
+ 		Thread.sleep(2000);	
+ 		pd.clickDelete();
+ 		Thread.sleep(2000);
+ 		pd.clickMastserLink();
+ 		pd.selectLeavePolicy();
+ 		pd.clickAddLeaves();
+ 		pd.clickSettingsLink();
+ 		pd.Deletepriordays();
+ 		pd.clickUpdateButton();
+ 		Thread.sleep(4000);
+ 	}   
+	
+    @Test(priority=34) 
+    public void UpdateAutoAllotSettingsMonthly_SC_356() throws InterruptedException{
+   	 	UpdateAutoAllotSettingsMonthly lb=new UpdateAutoAllotSettingsMonthly(driver);
+   	 	lb.clickMastserLink();
+   	 	lb.selectLeavePolicy();
+   	 	lb.clickAddLeaves();
+   	 	lb.clickSettingsLink();
+   	 	Thread.sleep(2000);
+   	 	lb.clickAutoAllotTab();
+   	 	Thread.sleep(2000);
+   	 	lb.clickLeaveAllotmentBox();
+   	 	Thread.sleep(2000);
+ 		lb.SelectAllotType("Monthly");
+ 		Thread.sleep(2000);
+ 		lb.SelectAllotOn("Actual Days");
+ 		lb.SelectAsPerMonth("Current Month");
+ 		lb.SelectForMonth("Every Month");
+ 		lb.SelectEffectiveFrom("Jan/2019");
+ 		lb.enterNoOfLeaves("1");
+ 		lb.clickUpdateButton();
+ 		Thread.sleep(7000);
+ 		//String d=lb.getMessage1();
+ 		//Assert.assertEquals(d, "Setting was successfully updated.");
+ 		Thread.sleep(2000);
+ 		lb.UncheckLeaveAllotmentBox();
+ 		lb.clickUpdateButton();  
+ 		Thread.sleep(4000);
+    } 
+    
+    @Test(priority=35) 
 	public void CheckAutoAllotSettingsMonthly_SC_357() throws InterruptedException{
-	    	 CheckAutoAllotSettingsMonthly lb=new CheckAutoAllotSettingsMonthly(driver);
-	lb.clickReport();
-	lb.clickAdvanceLeaveReport();
-	lb.selectLeaveReport("Allotment");
-	lb.selectLeavePolicy("new");
-	lb.clickFromDate("Jan/2018");
-	lb.clickToDate("Apr/2018");
-	lb.clickSelectCasualLeave();
-	lb.clickGetEmployee();
-	Thread.sleep(4000);
-	lb.clickLoad();
-	Thread.sleep(5000);
-	lb.clickEmployee1();
-	//lb.clickEmployee2();
-	lb.clickGenerateReport();
-	Thread.sleep(7000);
-}
+	    CheckAutoAllotSettingsMonthly lb=new CheckAutoAllotSettingsMonthly(driver);
+	    lb.clickReport();
+	    lb.clickAdvanceLeaveReport();
+	    lb.selectLeaveReport("Allotment");
+	    lb.selectLeavePolicy("Default");
+	    lb.clickFromDate("Jan/2019");
+	    lb.clickToDate("Apr/2019");
+	    lb.clickSelectCasualLeave();
+	    lb.clickGetEmployee();
+	    lb.resizeWindow();
+	    Thread.sleep(4000);
+	    lb.clickLoad();
+	    Thread.sleep(5000);
+	    lb.exitFullscreen();
+	    lb.clickEmployee1();
+	    lb.clickGenerateReport();
+		Thread.sleep(7000);
+    }
 
 
-     @Test(priority=29) 
+     @Test(priority=36) 
      public void UpdateAutoAllotSettingsPresentDays_SC_358() throws InterruptedException{
-    	 UpdateAutoAllotSettingsPresentDays lb=new UpdateAutoAllotSettingsPresentDays(driver);
- 	lb.clickMastserLink();
- 	lb.selectLeavePolicy();
- 	lb.clickAddLeaves();
- 	lb.clickSettingsLink();
- 	Thread.sleep(4000);
- 	lb.clickAutoAllotTab();
- 	Thread.sleep(4000);
- 	lb.clickLeaveAllotmentBox();
- 	Thread.sleep(4000);
- 	lb.SelectAllotType("Monthly");
- 	Thread.sleep(5000);
- 	lb.SelectAllotOn("Present Days");
- 	lb.SelectAsPerMonth("Current Month");
- 	lb.SelectForMonth("Every Month");
- 	Thread.sleep(4000);
- 	lb.SelectEffectiveFrom("Feb/2018");
- 	Thread.sleep(5000);
- 	lb.enterNoOfLeaves("1");
- 	//lb.enterPeriodInDays("20");
- 	lb.clickUpdateButton();
- 	String d=lb.getMessage1();
- 	Assert.assertEquals(d, "Setting was successfully updated.");
- 	Thread.sleep(4000);
- 	lb.clickMastserLink();
- 	lb.selectLeavePolicy();
- 	lb.clickAddLeaves();
- 	lb.clickSettingsLink();
- 	Thread.sleep(4000);
- 	lb.clickAutoAllotTab();
- 	lb.clickLeaveAllotmentBox();
- 	lb.clickUpdateButton();  
-}  
-     @Test(priority=30) 
-	public void CheckAutoAllotSettingsForPresentDays_SC_359() throws InterruptedException{
-	    	 CheckAutoAllotSettingsForPresentDays lb=new CheckAutoAllotSettingsForPresentDays(driver);
-	lb.clickReport();
-	lb.clickAdvanceLeaveReport();
-	lb.selectLeaveReport("Allotment");
-	lb.selectLeavePolicy("new");
-	lb.clickFromDate("Feb/2018");
-	lb.clickToDate("Apr/2018");
-	lb.clickSelectCasualLeave();
-	lb.clickGetEmployee();
-	Thread.sleep(4000);
-	lb.clickLoad();
-	Thread.sleep(5000);
-	lb.clickEmployee1();
-	lb.clickEmployee2();
-	lb.clickGenerateReport();
-	Thread.sleep(7000);
-}
-	@Test(priority=31) 
+    	UpdateAutoAllotSettingsPresentDays lb=new UpdateAutoAllotSettingsPresentDays(driver);
+    	lb.clickMastserLink();
+    	lb.selectLeavePolicy();
+    	lb.clickAddLeaves();
+    	lb.clickSettingsLink();
+    	Thread.sleep(4000);
+    	lb.clickAutoAllotTab();
+    	Thread.sleep(4000);
+    	lb.clickLeaveAllotmentBox();
+    	Thread.sleep(4000);
+ 		lb.SelectAllotType("Monthly");
+ 		Thread.sleep(5000);
+ 		lb.SelectAllotOn("Present Days");
+ 		lb.SelectAsPerMonth("Current Month");
+ 		lb.SelectForMonth("Every Month");
+ 		Thread.sleep(4000);
+ 		lb.SelectEffectiveFrom("Feb/2018");
+ 		Thread.sleep(5000);
+ 		lb.enterNoOfLeaves("1");
+ 		lb.clickUpdateButton();
+ 		Thread.sleep(10000);
+ 		lb.clickLeaveAllotmentBox();
+ 		lb.clickUpdateButton();  
+     }  
+     
+     @Test(priority=37) 
+	 public void CheckAutoAllotSettingsForPresentDays_SC_359() throws InterruptedException{
+	    CheckAutoAllotSettingsForPresentDays lb=new CheckAutoAllotSettingsForPresentDays(driver);
+	    lb.clickReport();
+	    lb.clickAdvanceLeaveReport();
+	    lb.selectLeaveReport("Allotment");
+	    lb.selectLeavePolicy("new");
+	    lb.clickFromDate("Feb/2018");
+	    lb.clickToDate("Apr/2018");
+	    lb.clickSelectCasualLeave();
+		lb.clickGetEmployee();
+		Thread.sleep(4000);
+		lb.clickLoad();
+		Thread.sleep(5000);
+		lb.clickEmployee1();
+		lb.clickEmployee2();
+		lb.clickGenerateReport();
+		Thread.sleep(7000);
+     }*/
+     
+	/*@Test(priority=31) 
      public void UpdateAutoAllotSettingsQuarterly_SC_360() throws InterruptedException{
     	 UpdateAutoAllotSettingsQuarterly lb=new UpdateAutoAllotSettingsQuarterly(driver);
  	lb.clickMastserLink();
