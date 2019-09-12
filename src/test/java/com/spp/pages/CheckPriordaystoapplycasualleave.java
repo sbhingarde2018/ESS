@@ -14,7 +14,7 @@ public class CheckPriordaystoapplycasualleave extends BasePage{
 	WebElement masterLink;
 	@FindBy(xpath="//div[@class='col_3']//a[contains(text(),'Leave Policy')]")
 	WebElement leavePolicy;
-	@FindBy(xpath="//table/tbody/tr/td[contains(text(),'Default')]/parent::tr/td[4]/a")
+	@FindBy(xpath="//table/tbody/tr/td[contains(text(),'Policy_Leave')]/parent::tr/td[4]/a")
 	WebElement AddLeaves;
 	@FindBy(xpath="//div[2]/table/tbody/tr/td[contains(text(),'Casual Leave')]/parent::tr/td[3]/a")
 	WebElement settingsLink;
@@ -32,7 +32,7 @@ public class CheckPriordaystoapplycasualleave extends BasePage{
 	WebElement Filter;
 	@FindBy(xpath="//*[@id=\"bf_form\"]/div/button[contains(text(),'LOAD')]")
 	WebElement Load;
-	@FindBy(xpath="//tbody/tr/td[contains(text(),'Rihana')]/parent::tr/td[3]/a")
+	@FindBy(xpath="//tbody/tr/td[contains(text(),'Raj')]/parent::tr/td[3]/a")
 	WebElement ApplyLeave;
 	@FindBy(id="leave_detail_leave_definition_id")
 	WebElement LeaveType;
@@ -54,6 +54,8 @@ public class CheckPriordaystoapplycasualleave extends BasePage{
 	WebElement ClickView;
 	@FindBy(xpath="//form/table[3]/tbody/tr[2]/td/input[3]")
 	WebElement Delete;
+	@FindBy(xpath="//a[contains(text(),'2')]")
+	WebElement Navigation;
 	
 	public CheckPriordaystoapplycasualleave(WebDriver driver) {
 		super(driver);
@@ -139,5 +141,8 @@ public class CheckPriordaystoapplycasualleave extends BasePage{
 	}
 	public void Deletepriordays(){
 		EnterPriorDays.clear();
+	}
+	public void Navigation() {
+		jsclick(Navigation);
 	}
 }

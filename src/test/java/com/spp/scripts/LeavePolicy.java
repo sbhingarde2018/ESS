@@ -1444,6 +1444,8 @@ public class LeavePolicy extends BaseTest {
  		mc.clickLoad();
  		Thread.sleep(2000);
  		mc.exitFullscreen();
+ 		mc.Navigation();
+ 		Thread.sleep(2000);
  		mc.clickApplyLeave();
  		mc.selectLeaveType("Casual Leave (CL)");
  		mc.enterFromDate("20 October 2019");
@@ -1501,6 +1503,8 @@ public class LeavePolicy extends BaseTest {
  		pd.clickLoad();
  		Thread.sleep(2000);
  		pd.exitFullscreen();
+ 		pd.Navigation();
+ 		Thread.sleep(2000);
  		pd.clickApplyLeave();
  		pd.selectLeaveType("Casual Leave (CL)");
  		pd.enterFromDate("20 October 2019");
@@ -1548,6 +1552,8 @@ public class LeavePolicy extends BaseTest {
  		pd.clickLoad();
  		Thread.sleep(2000);
  		pd.exitFullscreen();
+ 		pd.Navigation();
+ 		Thread.sleep(2000);
  		pd.clickApplyLeave();
  		pd.selectLeaveType("Casual Leave (CL)");
  		pd.enterFromDate("20 October 2019");
@@ -1570,7 +1576,7 @@ public class LeavePolicy extends BaseTest {
  		pd.clickSettingsLink();
  		pd.Deletepriordays();
  		pd.clickUpdateButton();
- 		Thread.sleep(4000);
+ 		Thread.sleep(20000);
  	}   
 	
     @Test(priority=34) 

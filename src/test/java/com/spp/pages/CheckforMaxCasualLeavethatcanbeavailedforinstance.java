@@ -14,7 +14,7 @@ public class CheckforMaxCasualLeavethatcanbeavailedforinstance extends BasePage{
 	WebElement masterLink;
 	@FindBy(xpath="//a[text()='Leave Policy']")
 	WebElement leavePolicy;
-	@FindBy(xpath="//table/tbody/tr/td[contains(text(),'Default')]/parent::tr/td[4]/a")
+	@FindBy(xpath="//table/tbody/tr/td[contains(text(),'Policy_Leave')]/parent::tr/td[4]/a")
 	WebElement AddLeaves;
 	@FindBy(xpath="//div[2]/table/tbody/tr/td[contains(text(),'Casual Leave')]/parent::tr/td[3]/a")
 	WebElement settingsLink;
@@ -32,7 +32,7 @@ public class CheckforMaxCasualLeavethatcanbeavailedforinstance extends BasePage{
 	WebElement Filter;
 	@FindBy(xpath="//*[@id=\"bf_form\"]/div/button[contains(text(),'LOAD')]")
 	WebElement Load;
-	@FindBy(xpath="//tbody/tr/td[contains(text(),'Rihana')]/parent::tr/td[3]/a")
+	@FindBy(xpath="//tbody/tr/td[contains(text(),'Raj')]/parent::tr/td[3]/a")
 	WebElement ApplyLeave;
 	@FindBy(id="leave_detail_leave_definition_id")
 	WebElement LeaveType;
@@ -56,7 +56,9 @@ public class CheckforMaxCasualLeavethatcanbeavailedforinstance extends BasePage{
 	WebElement SearchButton;
 	@FindBy(xpath="//*[@id=\"apply_leave_response\"]/div/li")
 	WebElement MinMessage; 
-	 
+	@FindBy(xpath="//a[contains(text(),'2')]")
+	WebElement Navigation;
+	
 	public CheckforMaxCasualLeavethatcanbeavailedforinstance(WebDriver driver) {
 		super(driver);
 		PageFactory.initElements(driver,this);
@@ -144,5 +146,8 @@ public class CheckforMaxCasualLeavethatcanbeavailedforinstance extends BasePage{
 	}
 		public void Deletemaxnoofcasualleave() {
 			MaximumNoofCasualLeave.clear();
-		}
+	}
+		public void Navigation() {
+			jsclick(Navigation);
+	}
 }

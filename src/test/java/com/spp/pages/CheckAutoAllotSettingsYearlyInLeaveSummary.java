@@ -50,7 +50,7 @@ public class CheckAutoAllotSettingsYearlyInLeaveSummary extends BasePage{
     WebElement Load;
     @FindBy(xpath="//*[@id=\"dt_leave_details\"]/tbody/tr[1]/td[3]/a")
     WebElement ApplyLeave;
-	@FindBy(xpath="//*[@id=\"main\"]/div[2]/nav/ul/li[2]/a/span")
+	@FindBy(xpath="//span[contains(text(),'LEAVE SUMMARY')]")
 	WebElement LeaveSummaryTab;
 	@FindBy(xpath="//*[@id=\"menu\"]/li[8]/a")
 	WebElement Report;
@@ -155,7 +155,7 @@ public class CheckAutoAllotSettingsYearlyInLeaveSummary extends BasePage{
 		ApplyLeave.click();
 	}
 	public void clickLeaveSummaryTab(){
-		LeaveSummaryTab.click();
+		jsclick(LeaveSummaryTab);
 	}
 	public void clickReport(){
 		Report.click();
