@@ -8,15 +8,14 @@ import org.openqa.selenium.support.PageFactory;
 import com.spp.common.BasePage;
 
 public class CheckAutoAllotSettingsHalfYearly extends BasePage{
-	@FindBy(xpath="//*[@id=\"menu\"]/li[8]/a")
+	@FindBy(xpath="//a[@id='report']")
 	WebElement Report;
-	@FindBy(xpath="//*[@id=\"menu\"]/li[8]/div/div[1]/ul/li[7]/a")
+	@FindBy(xpath="//a[contains(text(),'Advance Leave Report')]")
 	WebElement AdvanceLeaveReport;
 	@FindBy(id="leave_report_type")
 	WebElement LeaveReport;
 	@FindBy(id="leave_policy")
 	WebElement LeavePolicy;
-	
 	@FindBy(id="from_date")
 	WebElement FromDate;
 	@FindBy(id="to_date")
@@ -25,7 +24,7 @@ public class CheckAutoAllotSettingsHalfYearly extends BasePage{
 	WebElement SelectAllCheckBox;
 	@FindBy(id="leave_report_employees")
 	WebElement GetEmployee;
-	@FindBy(xpath="//*[@id=\"bf_form\"]/div[9]/button[1]")
+	@FindBy(xpath="//*[@id=\"bf_form\"]/div/button[contains(text(),'LOAD')]")
     WebElement Load;
 	@FindBy(xpath="//*[@id=\"leave_report_table\"]/tbody/tr[1]/td[1]/input")
 	WebElement Employee1;
@@ -38,8 +37,6 @@ public class CheckAutoAllotSettingsHalfYearly extends BasePage{
 		super(driver);
 		PageFactory.initElements(driver,this);
 	}
-
-	
 	public void clickReport(){
 		Report.click();
 	}

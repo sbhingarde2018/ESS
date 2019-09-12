@@ -58,7 +58,7 @@ import com.spp.pages.UpdateLeavePolicy;
 
 public class LeavePolicy extends BaseTest {
 
-	@Test(priority=0)
+	/*@Test(priority=0)
 	public void verifyCreatedLeavePolicy_SC_35(){
 		CreateLeavePolicy lp=new CreateLeavePolicy(driver);
 		lp.clickMastserLink();
@@ -1420,9 +1420,9 @@ public class LeavePolicy extends BaseTest {
   		mc.Deletemindaystoapplycasualleave();
   		mc.clickUpdateButton();
   		Thread.sleep(7000);
-  	}
+  	}*/
      
-	 /*@Test(priority=31)
+	 @Test(priority=31)
  	 public void CheckforMaxCasualLeavethatcanbeavailedforinstance_SC_308() throws InterruptedException{
  		CheckforMaxCasualLeavethatcanbeavailedforinstance mc=new CheckforMaxCasualLeavethatcanbeavailedforinstance(driver);
  		mc.clickMastserLink();
@@ -1431,6 +1431,7 @@ public class LeavePolicy extends BaseTest {
  		mc.clickSettingsLink();
  		mc.entermaxnoofcasualleave("2");
  		mc.clickUpdateButton();
+ 		Thread.sleep(3000);
  		String a=mc.getMessage1();
  		Assert.assertEquals(a, "Setting was successfully updated.");
  		Thread.sleep(2000);
@@ -1475,7 +1476,7 @@ public class LeavePolicy extends BaseTest {
  		mc.clickSettingsLink();
  		mc.Deletemaxnoofcasualleave();
  		mc.clickUpdateButton();
- 		Thread.sleep(7000);	
+ 		Thread.sleep(10000);	
 	}
       
     @Test(priority=32)
@@ -1656,9 +1657,9 @@ public class LeavePolicy extends BaseTest {
 	    lb.clickReport();
 	    lb.clickAdvanceLeaveReport();
 	    lb.selectLeaveReport("Allotment");
-	    lb.selectLeavePolicy("new");
-	    lb.clickFromDate("Feb/2018");
-	    lb.clickToDate("Apr/2018");
+	    lb.selectLeavePolicy("Default");
+	    lb.clickFromDate("Feb/2019");
+	    lb.clickToDate("Apr/2019");
 	    lb.clickSelectCasualLeave();
 		lb.clickGetEmployee();
 		Thread.sleep(4000);
@@ -1668,171 +1669,165 @@ public class LeavePolicy extends BaseTest {
 		lb.clickEmployee2();
 		lb.clickGenerateReport();
 		Thread.sleep(7000);
-     }*/
+     }
      
-	/*@Test(priority=31) 
+	@Test(priority=38) 
      public void UpdateAutoAllotSettingsQuarterly_SC_360() throws InterruptedException{
-    	 UpdateAutoAllotSettingsQuarterly lb=new UpdateAutoAllotSettingsQuarterly(driver);
- 	lb.clickMastserLink();
- 	lb.selectLeavePolicy();
- 	lb.clickAddLeaves();
- 	lb.clickSettingsLink();
- 	Thread.sleep(4000);
- 	lb.clickAutoAllotTab();
- 	Thread.sleep(4000);
- 	lb.clickLeaveAllotmentBox();
- 	Thread.sleep(4000);
- 	lb.SelectAllotType("Quarterly");
- 	Thread.sleep(5000);
-// 	lb.SelectAllotOn("Calendar Year");
-// 	lb.SelectAsPerMonth("Current half-year");
-// 	lb.SelectForMonth("Every Month");
- 	Thread.sleep(4000);
- 	lb.SelectEffectiveFrom("Jan/2013");
- 	Thread.sleep(5000);
- 	lb.enterNoOfLeaves("2");
- 	//lb.enterPeriodInDays("20");
- 	lb.clickUpdateButton();
- 	String d=lb.getMessage1();
- 	Assert.assertEquals(d, "Setting was successfully updated.");
- 	Thread.sleep(4000);
- 	lb.clickMastserLink();
- 	lb.selectLeavePolicy();
- 	lb.clickAddLeaves();
- 	lb.clickSettingsLink();
- 	Thread.sleep(4000);
- 	lb.clickAutoAllotTab();
- 	lb.clickLeaveAllotmentBox();
- 	lb.clickUpdateButton();     
-}
+    	UpdateAutoAllotSettingsQuarterly lb=new UpdateAutoAllotSettingsQuarterly(driver);
+    	lb.clickMastserLink();
+    	lb.selectLeavePolicy();
+    	lb.clickAddLeaves();
+    	lb.clickSettingsLink();
+    	Thread.sleep(2000);
+    	lb.clickAutoAllotTab();
+    	Thread.sleep(4000);
+    	lb.clickLeaveAllotmentBox();
+    	Thread.sleep(2000);
+    	lb.SelectAllotType("Quarterly");
+    	//lb.SelectAllotOn("Calendar Year");
+    	//lb.SelectAsPerMonth("Current half-year");
+ 		//lb.SelectForMonth("Every Month");
+    	Thread.sleep(2000);
+    	lb.SelectEffectiveFrom("Jan/2019");
+    	Thread.sleep(1000);
+    	lb.enterNoOfLeaves("2");
+    	lb.clickUpdateButton();
+    	Thread.sleep(60000);
+    	//String d=lb.getMessage1();
+    	//Assert.assertEquals(d, "Setting was successfully updated.");
+ 		lb.UncheckLeaveAllotmentBox();
+ 		lb.clickUpdateButton();    
+ 		Thread.sleep(60000);
+	}
 
-    @Test(priority=32) 
+    @Test(priority=39) 
  	public void CheckAutoAllotSettingsQuarterly_SC_361() throws InterruptedException{
     	 CheckAutoAllotSettingsQuarterly lb=new CheckAutoAllotSettingsQuarterly(driver);
- 	lb.clickReport();
- 	lb.clickAdvanceLeaveReport();
- 	lb.selectLeaveReport("Allotment");
- 	lb.selectLeavePolicy("new");
- 	lb.clickFromDate("Jan/2018");
- 	lb.clickToDate("Mar/2018");
- 	lb.clickSelectAllCheckBox();
- 	lb.clickGetEmployee();
- 	Thread.sleep(4000);
- 	lb.clickLoad();
- 	Thread.sleep(5000);
- 	lb.clickEmployee1();
- 	lb.clickEmployee2();
- 	lb.clickGenerateReport();
- 	Thread.sleep(7000);
- }
-    @Test(priority=33) 
+    	 lb.clickReport();
+    	 lb.clickAdvanceLeaveReport();
+    	 lb.selectLeaveReport("Allotment");
+    	 lb.selectLeavePolicy("Default");
+    	 lb.clickFromDate("Jan/2019");
+    	 lb.clickToDate("Mar/2019");
+    	 lb.clickSelectAllCheckBox();
+    	 lb.clickGetEmployee();
+    	 lb.resizeWindow();
+    	 Thread.sleep(4000);
+    	 lb.clickLoad();
+    	 Thread.sleep(5000);
+    	 lb.exitFullscreen();
+    	 lb.clickEmployee1();
+    	 lb.clickEmployee2();
+    	 lb.clickGenerateReport();
+    	 Thread.sleep(7000);
+    }
+    
+    @Test(priority=40) 
     public void UpdateAutoAllotSettingsHalfYearly_SC_362() throws InterruptedException{
     UpdateAutoAllotSettingsHalfYearly lb=new UpdateAutoAllotSettingsHalfYearly(driver);
- 	lb.clickMastserLink();
- 	lb.selectLeavePolicy();
- 	lb.clickAddLeaves();
- 	lb.clickSettingsLink();
- 	Thread.sleep(4000);
- 	lb.clickAutoAllotTab();
- 	Thread.sleep(4000);
- 	lb.clickLeaveAllotmentBox();
- 	Thread.sleep(4000);
- 	lb.SelectAllotType("Half Yearly");
- 	Thread.sleep(5000);
-// 	lb.SelectAllotOn("Calendar Year");
-// 	lb.SelectAsPerMonth("Current half-year");
-// 	lb.SelectForMonth("Every Month");
- 	Thread.sleep(4000);
- 	lb.SelectEffectiveFrom("Jan/2013");
- 	Thread.sleep(5000);
- 	lb.enterNoOfLeaves("2");
- 	//lb.enterPeriodInDays("20");
- 	lb.clickUpdateButton();
- 	String d=lb.getMessage1();
- 	Assert.assertEquals(d, "Setting was successfully updated.");
- 	Thread.sleep(4000);
- 	lb.clickMastserLink();
- 	lb.selectLeavePolicy();
- 	lb.clickAddLeaves();
- 	lb.clickSettingsLink();
- 	Thread.sleep(4000);
- 	lb.clickAutoAllotTab();
- 	lb.clickLeaveAllotmentBox();
- 	lb.clickUpdateButton();     
-}
-   @Test(priority=34) 
+ 		 lb.clickMastserLink();
+ 		 lb.selectLeavePolicy();
+ 		 lb.clickAddLeaves();
+ 		 lb.clickSettingsLink();
+ 		 Thread.sleep(4000);
+ 		 lb.clickAutoAllotTab();
+ 		 Thread.sleep(4000);
+ 		 lb.clickLeaveAllotmentBox();
+ 		 Thread.sleep(4000);
+ 		 lb.SelectAllotType("Half Yearly");
+ 		 Thread.sleep(5000);
+ 		 //lb.SelectAllotOn("Calendar Year");
+ 		 //lb.SelectAsPerMonth("Current half-year");
+ 		 //lb.SelectForMonth("Every Month");
+ 		 Thread.sleep(2000);
+ 		 lb.SelectEffectiveFrom("Jan/2019");
+ 		 Thread.sleep(2000);
+ 		 lb.enterNoOfLeaves("2");
+ 		 //lb.enterPeriodInDays("20");
+ 		 lb.clickUpdateButton();
+ 		 //String d=lb.getMessage1();
+ 		 //Assert.assertEquals(d, "Setting was successfully updated.");
+ 		 Thread.sleep(60000);
+ 		 lb.UncheckAuto();
+ 		 lb.clickUpdateButton();     
+ 		 Thread.sleep(60000);
+    }
+    
+   @Test(priority=41) 
   	public void CheckAutoAllotSettingsHalfYearly_SC_363() throws InterruptedException{
     	 CheckAutoAllotSettingsHalfYearly lb=new CheckAutoAllotSettingsHalfYearly(driver);
-  	lb.clickReport();
-  	lb.clickAdvanceLeaveReport();
-  	lb.selectLeaveReport("Allotment");
-  	lb.selectLeavePolicy("new");
-  	lb.clickFromDate("Jan/2018");
-  	lb.clickToDate("Apr/2018");
-  	lb.clickSelectAllCheckBox();
-  	lb.clickGetEmployee();
-  	Thread.sleep(4000);
-  	lb.clickLoad();
-  	Thread.sleep(5000);
-  	lb.clickEmployee1();
-  	lb.clickEmployee2();
-  	lb.clickGenerateReport();
-  	Thread.sleep(7000);
-}
-	@Test(priority=35) 
+    	 lb.clickReport();
+    	 lb.clickAdvanceLeaveReport();
+    	 lb.selectLeaveReport("Allotment");
+    	 lb.selectLeavePolicy("Default");
+    	 lb.clickFromDate("Jan/2019");
+    	 lb.clickToDate("Apr/2019");
+    	 lb.clickSelectAllCheckBox();
+    	 lb.clickGetEmployee();
+    	 lb.resizeWindow();
+  		 Thread.sleep(4000);
+  		 lb.clickLoad();
+  		 Thread.sleep(5000);
+  		 lb.exitFullscreen();
+  		 lb.clickEmployee1();
+  		 lb.clickEmployee2();
+  		 lb.clickGenerateReport();
+  		 Thread.sleep(7000);
+   }
+   
+	@Test(priority=42) 
     public void UpdateAutoAllotSettingsYearly_SC_364() throws InterruptedException{
    	 UpdateAutoAllotSettingsYearly lb=new UpdateAutoAllotSettingsYearly(driver);
-	lb.clickMastserLink();
-	lb.selectLeavePolicy();
-	lb.clickAddLeaves();
-	lb.clickSettingsLink();
-	Thread.sleep(4000);
-	lb.clickAutoAllotTab();
-	Thread.sleep(4000);
-	lb.clickLeaveAllotmentBox();
-	Thread.sleep(4000);
-	lb.SelectAllotType("Yearly");
-	Thread.sleep(5000);
-//	lb.SelectAllotOn("Calendar Year");
-//   lb.SelectAsPerMonth("Current half-year");
-//	lb.SelectForMonth("Every Month");
-	Thread.sleep(4000);
-	lb.SelectEffectiveFrom("Jan/2013");
-	Thread.sleep(5000);
-	lb.enterNoOfLeaves("2");
-	//lb.enterPeriodInDays("20");
-	lb.clickUpdateButton();
-	String d=lb.getMessage1();
-	Assert.assertEquals(d, "Setting was successfully updated.");
-	Thread.sleep(4000);
-	lb.clickMastserLink();
-	lb.selectLeavePolicy();
-	lb.clickAddLeaves();
-	lb.clickSettingsLink();
-	Thread.sleep(4000);
-	lb.clickAutoAllotTab();
-	lb.clickLeaveAllotmentBox();
-	lb.clickUpdateButton();     
-}
-	@Test(priority=36) 
+   	 	lb.clickMastserLink();
+   	 	lb.selectLeavePolicy();
+   	 	lb.clickAddLeaves();
+   	 	lb.clickSettingsLink();
+   	 	Thread.sleep(4000);
+   	 	lb.clickAutoAllotTab();
+   	 	Thread.sleep(4000);
+   	 	lb.clickLeaveAllotmentBox();
+   	 	Thread.sleep(4000);
+   	 	lb.SelectAllotType("Yearly");
+   	 	Thread.sleep(5000);
+   	 	//	lb.SelectAllotOn("Calendar Year");
+   	 	//   lb.SelectAsPerMonth("Current half-year");
+   	 	//	lb.SelectForMonth("Every Month");
+   	 	Thread.sleep(4000);
+   	 	lb.SelectEffectiveFrom("Jan/2013");
+   	 	Thread.sleep(5000);
+   	 	lb.enterNoOfLeaves("2");
+   	 	//lb.enterPeriodInDays("20");
+   	 	lb.clickUpdateButton();
+   	 	//String d=lb.getMessage1();
+   	 	//Assert.assertEquals(d, "Setting was successfully updated.");
+   	 	Thread.sleep(60000);
+		lb.UncheckAuto();
+		lb.clickUpdateButton();
+		Thread.sleep(60000);
+	}
+	
+	@Test(priority=43) 
   	public void CheckAutoAllotSettingsYearly_SC_365() throws InterruptedException{
     	 CheckAutoAllotSettingsYearly lb=new CheckAutoAllotSettingsYearly(driver);
-  	lb.clickReport();
-  	lb.clickAdvanceLeaveReport();
-  	lb.selectLeaveReport("Allotment");
-  	lb.selectLeavePolicy("new");
-  	lb.clickFromDate("Jan/2018");
-  	lb.clickToDate("Apr/2018");
-  	lb.clickSelectCasualLeave();
-  	lb.clickGetEmployee();
-  	Thread.sleep(4000);
-  	lb.clickLoad();
-  	Thread.sleep(5000);
-  	lb.clickSelectAll();
-  	lb.clickGenerateReport();
-  	Thread.sleep(7000);
-}
-	@Test(priority=37) 
+    	 lb.clickReport();
+    	 lb.clickAdvanceLeaveReport();
+    	 lb.selectLeaveReport("Allotment");
+    	 lb.selectLeavePolicy("Default");
+    	 lb.clickFromDate("Jan/2019");
+    	 lb.clickToDate("Apr/2019");
+    	 lb.clickSelectCasualLeave();
+    	 lb.clickGetEmployee();
+    	 lb.resizeWindow();
+    	 Thread.sleep(4000);
+    	 lb.clickLoad();
+    	 Thread.sleep(5000);
+    	 lb.exitFullscreen();
+    	 lb.clickSelectAll();
+    	 lb.clickGenerateReport();
+    	 Thread.sleep(7000);
+	}
+	
+	@Test(priority=44) 
   	public void CheckAutoAllotSettingsMonthlyInLeaveSummary_SC_414() throws InterruptedException{
 		CheckAutoAllotSettingsMonthlyInLeaveSummary lb=new CheckAutoAllotSettingsMonthlyInLeaveSummary(driver);
 		lb.clickMastserLink();
@@ -1856,7 +1851,7 @@ public class LeavePolicy extends BaseTest {
 	 	lb.enterNoOfLeaves("2");
 	 	//lb.enterPeriodInDays("20");
 	 	lb.clickUpdateButton();
-	 	Thread.sleep(7000);
+	 	Thread.sleep(60000);
 		lb.clickLeaveLink();
 	 	lb.clickAppyLeaveLink();
 	 	lb.clickFilter();
@@ -1873,10 +1868,12 @@ public class LeavePolicy extends BaseTest {
 	 	lb.clickSettingsLink();
 	 	Thread.sleep(4000);
 	 	lb.clickAutoAllotTab();
-	 	lb.clickLeaveAllotmentBox();
+	 	lb.UncheckAuto();
 	 	lb.clickUpdateButton();  
-}
-	@Test(priority=38) 
+	 	Thread.sleep(60000);
+	}
+	
+	@Test(priority=45) 
   	public void CheckAutoAllotSettingsQuarterlyInLeaveSummary_SC_415() throws InterruptedException{
 		CheckAutoAllotSettingsQuarterlyInLeaveSummary lb=new CheckAutoAllotSettingsQuarterlyInLeaveSummary(driver);
 		lb.clickMastserLink();
@@ -1900,13 +1897,15 @@ public class LeavePolicy extends BaseTest {
 	 	lb.enterNoOfLeaves("2");
 	 	//lb.enterPeriodInDays("20");
 	 	lb.clickUpdateButton();
-	 	Thread.sleep(7000);
+	 	Thread.sleep(60000);
 		lb.clickLeaveLink();
 	 	lb.clickAppyLeaveLink();
 	 	lb.clickFilter();
+	 	lb.resizeWindow();
 	 	Thread.sleep(5000);
 	 	lb.clickLoad();
 	 	Thread.sleep(4000);
+	 	lb.exitFullscreen();
 	 	lb.clickApplyLeave();
 	 	Thread.sleep(4000);
 	 	lb.clickLeaveSummaryTab();
@@ -1917,10 +1916,12 @@ public class LeavePolicy extends BaseTest {
 	 	lb.clickSettingsLink();
 	 	Thread.sleep(4000);
 	 	lb.clickAutoAllotTab();
-	 	lb.clickLeaveAllotmentBox();
+	 	lb.UncheckAuto();
 	 	lb.clickUpdateButton();  
-}
-	@Test(priority=39) 
+	 	Thread.sleep(60000);
+	}
+	
+	@Test(priority=46) 
   	public void CheckAutoAllotSettingsHalfYearlyInLeaveSummary_SC_416() throws InterruptedException{
 		CheckAutoAllotSettingsHalfYearlyInLeaveSummary lb=new CheckAutoAllotSettingsHalfYearlyInLeaveSummary(driver);
 		lb.clickMastserLink();
@@ -1939,17 +1940,20 @@ public class LeavePolicy extends BaseTest {
 //	 	lb.SelectForMonth("Every Month");
 //	 	Thread.sleep(4000);
 	 	//lb.SelectEveryMonth("Every Month");
-	 	lb.SelectEffectiveFrom("Jan/2018");
+	 	lb.SelectEffectiveFrom("Jan/2019");
 	 	Thread.sleep(5000);
 	 	lb.enterNoOfLeaves("2");
 	 	//lb.enterPeriodInDays("20");
 	 	lb.clickUpdateButton();
-	 	Thread.sleep(7000);
+	 	Thread.sleep(60000);
 		lb.clickLeaveLink();
 	 	lb.clickAppyLeaveLink();
 	 	lb.clickFilter();
+	 	lb.resizeWindow();
 	 	Thread.sleep(5000);
 	 	lb.clickLoad();
+	 	Thread.sleep(4000);
+	 	lb.exitFullscreen();
 	 	Thread.sleep(4000);
 	 	lb.clickApplyLeave();
 	 	Thread.sleep(4000);
@@ -1959,42 +1963,45 @@ public class LeavePolicy extends BaseTest {
 	 	lb.selectLeavePolicy();
 	 	lb.clickAddLeaves();
 	 	lb.clickSettingsLink();
-	 	Thread.sleep(4000);
+	 	Thread.sleep(2000);
 	 	lb.clickAutoAllotTab();
-	 	lb.clickLeaveAllotmentBox();
-	 	lb.clickUpdateButton();  
+	 	lb.UncheckAuto();
+	 	lb.clickUpdateButton(); 
+		Thread.sleep(60000);
 }
-	@Test(priority=40) 
+	@Test(priority=47) 
   	public void CheckAutoAllotSettingsYearlyInLeaveSummary_SC_417() throws InterruptedException {
 		CheckAutoAllotSettingsYearlyInLeaveSummary lb=new CheckAutoAllotSettingsYearlyInLeaveSummary(driver);
 		lb.clickMastserLink();
 	 	lb.selectLeavePolicy();
 	 	lb.clickAddLeaves();
 	 	lb.clickSettingsLink();
-	 	Thread.sleep(4000);
+	 	Thread.sleep(2000);
 	 	lb.clickAutoAllotTab();
-	 	Thread.sleep(4000);
+	 	Thread.sleep(2000);
 	 	lb.clickLeaveAllotmentBox();
-	 	Thread.sleep(4000);
+	 	Thread.sleep(2000);
 	 	lb.SelectAllotType("Yearly");
-	 	Thread.sleep(5000);
+	 	Thread.sleep(2000);
 //	 	lb.SelectAllotOn("Actual Days");
 //	 	lb.SelectAsPerMonth("Current Month");
 //	 	lb.SelectForMonth("Every Month");
 //	 	Thread.sleep(4000);
 	 	//lb.SelectEveryMonth("Every Month");
-	 	lb.SelectEffectiveFrom("Jan/2018");
+	 	lb.SelectEffectiveFrom("Jan/2019");
 	 	Thread.sleep(5000);
 	 	lb.enterNoOfLeaves("2");
 	 	//lb.enterPeriodInDays("20");
 	 	lb.clickUpdateButton();
-	 	Thread.sleep(7000);
+	 	Thread.sleep(60000);
 		lb.clickLeaveLink();
 	 	lb.clickAppyLeaveLink();
 	 	lb.clickFilter();
+	 	lb.resizeWindow();
 	 	Thread.sleep(5000);
 	 	lb.clickLoad();
 	 	Thread.sleep(4000);
+	 	lb.exitFullscreen();
 	 	lb.clickApplyLeave();
 	 	Thread.sleep(4000);
 	 	lb.clickLeaveSummaryTab();
@@ -2005,11 +2012,10 @@ public class LeavePolicy extends BaseTest {
 	 	lb.clickSettingsLink();
 	 	Thread.sleep(4000);
 	 	lb.clickAutoAllotTab();
-	 	lb.clickLeaveAllotmentBox();
+	 	lb.UncheckAuto();
 	 	lb.clickUpdateButton();  
-}*/
-	
-	
+	 	Thread.sleep(60000);
+	}
 	
 	/*@Test(priority=36)
 	public void DeleteClone() throws Exception {

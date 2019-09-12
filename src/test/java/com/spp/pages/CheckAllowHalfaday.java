@@ -45,7 +45,16 @@ public class CheckAllowHalfaday extends BasePage{
 	WebElement ApplyButton;
 	@FindBy(xpath="//*[@id=\"apply_leave_response\"]/div/strong")
 	WebElement Message2;
-	
+	@FindBy(xpath="//span[contains(text(),'LEAVE HISTORY')]")
+	WebElement LeaveHistory;
+	@FindBy(xpath="//*[@id=\"from_date\"]")
+	WebElement HistoryFromDate;
+	@FindBy(xpath="//*[@id=\"leave_range_data\"]/div[3]/div/div/input[2]")
+	WebElement SearchButton;
+	@FindBy(xpath="//*[@id=\"leave_detail_for_employee\"]/table/tbody/tr/td[4]/a")
+	WebElement ClickView;
+	@FindBy(xpath="//form/table[3]/tbody/tr[2]/td/input[3]")
+	WebElement Delete;
 	
 	public CheckAllowHalfaday(WebDriver driver) {
 		super(driver);
@@ -121,5 +130,22 @@ public class CheckAllowHalfaday extends BasePage{
 	public void UncheckHalfDay() {
 		ClickOnAllowHalfDay.click();
 	}
-	
+	public void ClickLeaveHistory() {
+		jsclick(LeaveHistory);
+	}
+	public void EnterHistoryFromDate(String value){
+		HistoryFromDate.clear();
+		HistoryFromDate.sendKeys(value);
+	}
+	public void clickSearchButton() {
+		SearchButton.click();
+	}
+	public void clickView() {
+		ClickView.click();
+	}
+	public void clickDelete() throws InterruptedException {
+		Delete.click();
+		Thread.sleep(2000);
+		switchToPopUpAndAccept(driver);
+	}
 }

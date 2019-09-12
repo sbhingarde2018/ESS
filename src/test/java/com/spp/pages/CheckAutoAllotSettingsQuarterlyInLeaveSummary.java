@@ -12,10 +12,9 @@ public class CheckAutoAllotSettingsQuarterlyInLeaveSummary extends BasePage{
 	WebElement masterLink;
 	@FindBy(xpath="//a[text()='Leave Policy']")
 	WebElement leavePolicy;
-    @FindBy(xpath="//div[@id='leave-policy-master-list']//tr[1]//td[4]//a[text()='Add Leaves']")
+    @FindBy(xpath="//table/tbody/tr/td[contains(text(),'Default')]/parent::tr/td[4]/a")
 	WebElement addLeaves;
-   // @FindBy(xpath="//*[@id=\"leave_policy_setting_details\"]/div[2]/table/tbody/tr/td[2][contains(text(),'Earned')]/parent::tr/td[3]/a")
-    @FindBy(xpath="//*[@id=\"leave_policy_setting_details\"]/div[2]/table/tbody/tr/td[2][contains(text(),'Casual')]/parent::tr/td[3]/a")
+    @FindBy(xpath="//div[2]/table/tbody/tr/td[contains(text(),'Casual Leave')]/parent::tr/td[3]/a")
     WebElement settingsLink;
     @FindBy(xpath="//*[@id=\"main\"]/div/div[3]/nav/ul/li[4]/a/span")
     WebElement AutoAllotTab;
@@ -33,14 +32,12 @@ public class CheckAutoAllotSettingsQuarterlyInLeaveSummary extends BasePage{
     WebElement EveryMonth;
     @FindBy(id="leave_policy_head_wise_setting_auto_allot_settings_effective_from")
     WebElement EffectiveFrom;
-    @FindBy(xpath="//*[@id=\"auto_leave_config_div\"]/fieldset/table/tbody/tr[2]/td[2]/input")
+    @FindBy(xpath="//*[@id=\"leave_policy_head_wise_setting_auto_allot_settings_no_of_days\"]")
     WebElement NoOfLeaves;
     @FindBy(id="leave_policy_head_wise_setting_auto_allot_settings_period")
     WebElement PeriodInDays;
-    
     @FindBy(xpath="//*[@id=\"auto_allot_setting\"]/table/tbody/tr[3]/td/input")
     WebElement UpdateButton;
-    
     @FindBy(xpath="//*[@id=\"leave_policy_head_wise_settings_response\"]/div/strong")
     WebElement SuccessfulMessage;
     @FindBy(id="leave")
@@ -49,9 +46,9 @@ public class CheckAutoAllotSettingsQuarterlyInLeaveSummary extends BasePage{
     WebElement AppyLeaveLink;
     @FindBy(id="filter_head")
     WebElement Filter;
-    @FindBy(xpath="//*[@id=\"bf_form\"]/div[9]/button[1]")
+    @FindBy(xpath="//*[@id=\"bf_form\"]/div/button[contains(text(),'LOAD')]")
     WebElement Load;
-    @FindBy(xpath="//*[@id=\"dt_leave_details\"]/tbody/tr[1]/td[3]/a")
+    @FindBy(xpath="//tbody/tr/td[contains(text(),'Rihana')]/parent::tr/td[3]/a")
     WebElement ApplyLeave;
 	@FindBy(xpath="//*[@id=\"main\"]/div[2]/nav/ul/li[2]/a/span")
 	WebElement LeaveSummaryTab;
@@ -103,7 +100,12 @@ public class CheckAutoAllotSettingsQuarterlyInLeaveSummary extends BasePage{
 		AutoAllotTab.click();
 	}
 	public void clickLeaveAllotmentBox(){
-		LeaveAllotmentBox.click();
+		if(LeaveAllotmentBox.isSelected()) {
+			System.out.println("Already Selected");
+		}
+		else {
+			LeaveAllotmentBox.click();
+		}
 	}
 	public void SelectAllotType(String value) {
 		dropDownSelect(AllotType, value);
@@ -125,6 +127,7 @@ public class CheckAutoAllotSettingsQuarterlyInLeaveSummary extends BasePage{
 		dropDownSelect(EffectiveFrom, value);
 	}
 	public void enterNoOfLeaves(String value) {
+		NoOfLeaves.clear();
 		NoOfLeaves.sendKeys(value);
 	}
 	public void enterPeriodInDays(String value) {
@@ -188,5 +191,8 @@ public class CheckAutoAllotSettingsQuarterlyInLeaveSummary extends BasePage{
 	}
 	public void clickGenerateReport(){
 		GenerateReport.click();
+	}
+	public void UncheckAuto() {
+		LeaveAllotmentBox.click();
 	}
 }
