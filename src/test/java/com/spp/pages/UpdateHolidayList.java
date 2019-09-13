@@ -12,9 +12,9 @@ public class UpdateHolidayList extends BasePage{
 	WebElement masterLink;
 	@FindBy(xpath="//a[text()='Holiday Lists']")
 	WebElement holidayList;
-	@FindBy(xpath="//table[@id='holidays_list']//tr[1]//td[3]//a[text()='View']")
+	@FindBy(xpath="//tbody/tr/td[contains(text(),'Master List')]/parent::tr/td[3]/a")
 	WebElement viewList;
-	@FindBy(xpath="//table[@id='holidays_master_list']//tr[1]//td[5]//a[text()='edit']")
+	@FindBy(xpath="//tbody/tr/td[contains(text(),'Raksha Bandhan')]/parent::tr/td[5]/a[1]")
 	WebElement editLink;
 	@FindBy(name="holiday_master_list[holiday_date]")
 	WebElement date;

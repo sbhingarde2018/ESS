@@ -4,6 +4,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
 import com.spp.common.BasePage;
 
 public class CreateMasterWeeeklyHoliday extends BasePage {
@@ -11,9 +14,9 @@ public class CreateMasterWeeeklyHoliday extends BasePage {
 	WebElement masterLink;
 	@FindBy(xpath="//a[text()='Master Weekly Holiday']")
 	WebElement masterWeekly;
-	@FindBy(xpath="//table[@id='filters_list']//td[3]//a[text()='View']")
+	@FindBy(xpath="//tbody/tr/td[3]/a")
 	WebElement viewLink;
-	@FindBy(xpath="//div[@id='weekly_off_content']//div[2]//li[2]//span[normalize-space(text()='New Master Weekly Off')]")
+	@FindBy(xpath="//span[contains(text(),'New Master Weekly Off')]")
 	WebElement newMasterTab;
 	@FindBy(id="eff_from")
 	WebElement effectiveFrom;
@@ -48,7 +51,7 @@ public class CreateMasterWeeeklyHoliday extends BasePage {
 	}
 	
 	public void clickNewMasterTab(){
-		newMasterTab.click();
+		jsclick(newMasterTab);
 	}
 	
 	public void enterEffectiveFromDate(String value){

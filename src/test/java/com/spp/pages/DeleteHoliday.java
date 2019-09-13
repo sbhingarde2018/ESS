@@ -12,9 +12,9 @@ public class DeleteHoliday extends BasePage {
 	WebElement masterLink;
 	@FindBy(xpath="//a[text()='Holiday Lists']")
 	WebElement holidayList;
-	@FindBy(xpath="//table[@id='holidays_list']//tr[1]//td[3]//a[text()='View']")
+	@FindBy(xpath="//tbody/tr/td[contains(text(),'Master List')]/parent::tr/td[3]/a")
 	WebElement viewList;
-	@FindBy(xpath="//table[@id='holidays_master_list']//tr[1]//td[5]//a[2]//img[@title='Delete Holiday']")
+	@FindBy(xpath="//tbody/tr/td[contains(text(),'Gandhi Jayanti')]/parent::tr/td[5]/a[2]/img")
 	WebElement deleteButton;
 	@FindBy(xpath="//strong[text()='Master holiday successfully deleted.']")
 	WebElement successfullMessage;
@@ -38,13 +38,7 @@ public class DeleteHoliday extends BasePage {
 	
 	public void clickDeleteButton() throws InterruptedException{
 		deleteButton.click();
-		switchToPopUpAndDismiss(driver);
-		Thread.sleep(5000);
-		deleteButton.click();
-		
-		switchToPopUpAndAccept(driver);
 	}
-	
 	public String getMessage(){
 		return successfullMessage.getText();
 	}

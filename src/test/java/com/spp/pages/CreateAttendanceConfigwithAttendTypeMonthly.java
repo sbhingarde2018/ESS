@@ -26,7 +26,7 @@ public class CreateAttendanceConfigwithAttendTypeMonthly extends BasePage{
 	WebElement CreateAttendanceConfig;
 	@FindBy(xpath="//*[@id=\"flash_success\"]")
 	WebElement successfulmessage;
-	@FindBy(xpath="//tr[2]/td[6]/a[@class=\"action-delete\"]")
+	@FindBy(xpath="//table/tbody[2]/tr/td[contains(text(),'Mumbai')]/parent::tr/td[6]/a")
 	WebElement DeleteButton;
 	
 	public CreateAttendanceConfigwithAttendTypeMonthly(WebDriver driver) {

@@ -12,7 +12,7 @@ public class CreateHolidayList extends BasePage{
 	WebElement masterLink;
 	@FindBy(xpath="//a[text()='Holiday Lists']")
 	WebElement holidayList;
-	@FindBy(xpath="//table[@id='holidays_list']//tr[1]//td[3]//a[text()='View']")
+	@FindBy(xpath="//tbody/tr/td[contains(text(),'Master List')]/parent::tr/td[3]/a")
 	WebElement viewList;
 	@FindBy(xpath="//a[text()='Add New Holiday Master']")	
 	WebElement addHolidayLink;

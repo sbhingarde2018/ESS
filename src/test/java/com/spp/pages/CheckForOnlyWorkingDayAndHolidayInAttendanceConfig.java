@@ -12,7 +12,7 @@ public class CheckForOnlyWorkingDayAndHolidayInAttendanceConfig extends BasePage
 	WebElement masterLink;
 	@FindBy(xpath="//a[text()='Attendance Configuration']")
 	WebElement attendanceConfiguration;
-	@FindBy(xpath="//tr[2]/td[5]/a[@class='action-edit']")
+	@FindBy(xpath="//div/table/tbody/tr/td[contains(text(),'Dehradun')]/parent::tr/td[5]/a")
 	WebElement editIcon;
 	@FindBy(id="attendance_configuration_salary_calendar_days_only_working_days__holiday")
     WebElement salaryCalender;
@@ -30,7 +30,7 @@ public class CheckForOnlyWorkingDayAndHolidayInAttendanceConfig extends BasePage
 	WebElement SalaryStructure;
 	@FindBy(id="get_salary")
 	WebElement GetValues;
-	@FindBy(xpath="//*[@id=\"bf_form\"]/div[10]/button[1]")
+	@FindBy(xpath="//*[@id=\"bf_form\"]/div/button[contains(text(),'LOAD')]")
 	WebElement Load;
 	@FindBy(xpath="//*[@id=\"show_message\"]/div/strong")
 	WebElement SuccessfulMessage;

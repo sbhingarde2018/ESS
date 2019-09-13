@@ -12,11 +12,11 @@ public class DeleteMasterWeeklyHoliday extends BasePage {
 	WebElement masterLink;
 	@FindBy(xpath="//a[text()='Master Weekly Holiday']")
 	WebElement masterWeekly;
-	@FindBy(xpath="//table[@id='filters_list']//td[3]//a[text()='View']")
+	@FindBy(xpath="//tbody/tr/td[3]/a")
 	WebElement viewLink;
-	@FindBy(xpath="//div[@id='weekly_off_content']//div[2]//li[3]//span[normalize-space(text='Weekly Off History')]")
+	@FindBy(xpath="//span[contains(text(),'Weekly Off History')]")
 	WebElement weeklyoffHistory;
-	@FindBy(xpath="//a[@data-method='delete']")
+	@FindBy(xpath="//div[2]/table/tbody/tr[1]/td[3]/a")
 	WebElement deleteButton;
 	@FindBy(xpath="//strong[text()='Master Weekly off Successfully Deleted.']")
 	WebElement successfullMessage;
@@ -39,12 +39,11 @@ public class DeleteMasterWeeklyHoliday extends BasePage {
 	}
 	
 	public void clickWeeklyoffHistory(){
-		weeklyoffHistory.click();
+		jsclick(weeklyoffHistory);
 	}
 	
 	public void clickDeleteButton(){
 		deleteButton.click();
-		switchToPopUpAndAccept(driver);
 	}
 	
 	public String getMessage(){

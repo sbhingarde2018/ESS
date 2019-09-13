@@ -14,11 +14,11 @@ public class ExcelUploadforHolidays extends BasePage{
 	WebElement ClickOnMaster;
 	@FindBy(xpath="//*[@id=\"menu\"]/li[3]/div/div[3]/ul/li[3]/a")
 	WebElement ClickOnHolidayLists;
-	@FindBy(xpath="//*[@id='holidays_list']/tbody/tr/td[contains(text(),'Master')]/parent::tr/td[3]/a")
+	@FindBy(xpath="//tbody/tr/td[contains(text(),'Master List')]/parent::tr/td[3]/a")
 	WebElement ClickOnView;
-	@FindBy(xpath="//*[@id=\"ui-accordion-accordion-panel-0\"]/li[1]/a")
+	@FindBy(xpath="//a[contains(text(),'Generate Sample Template')]")
 	WebElement GenerateSampleTemplate;
-	@FindBy(xpath="//*[@id=\"ui-accordion-accordion-panel-0\"]/li[2]/a")
+	@FindBy(xpath="//a[contains(text(),'ExcelTemplate Upload Holidays')]")
 	WebElement ExcelUploadforHolidays;
 	@FindBy(id="excel_file")
 	WebElement ChooseFile;

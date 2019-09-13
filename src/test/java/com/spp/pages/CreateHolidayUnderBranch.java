@@ -13,7 +13,7 @@ public class CreateHolidayUnderBranch extends BasePage {
 	WebElement masterLink;
 	@FindBy(xpath="//a[text()='Holiday Lists']")
 	WebElement holidayList;
-	@FindBy(xpath="//table[@id='holidays_list']//tr[2]//td[3]//a[text()='View']")
+	@FindBy(xpath="//tbody/tr/td[contains(text(),'default')]/parent::tr/td[3]/a")
 	WebElement viewList;
 	@FindBy(linkText="Add New Holiday")	
 	WebElement addHolidayLink;
@@ -27,9 +27,9 @@ public class CreateHolidayUnderBranch extends BasePage {
 	WebElement createButton;
 	@FindBy(xpath="//*[@id=\"main\"]/div[3]/strong")
 	WebElement successfullyMessage;
-	@FindBy(xpath="//*[@id=\"holidays_branch_list\"]/tbody/tr[1]/td[5]/a[2]")
+	@FindBy(xpath="//tbody/tr/td[contains(text(),'Diwali')]/parent::tr/td[5]/a[2]/img")
 	WebElement DeleteButton;
-	
+	 
 	public CreateHolidayUnderBranch(WebDriver driver) {
 		super(driver);
 		PageFactory.initElements(driver, this);

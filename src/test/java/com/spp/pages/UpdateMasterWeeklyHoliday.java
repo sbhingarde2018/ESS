@@ -12,7 +12,7 @@ public class UpdateMasterWeeklyHoliday extends BasePage {
 	WebElement masterLink;
 	@FindBy(xpath="//a[text()='Master Weekly Holiday']")
 	WebElement masterWeekly;
-	@FindBy(xpath="//table[@id='filters_list']//td[3]//a[text()='View']")
+	@FindBy(xpath="//tbody/tr/td[3]/a")
 	WebElement viewLink;
 	@FindBy(id="master_weekly_off_first_week_first_off")
 	WebElement firstWeeklyOff;
