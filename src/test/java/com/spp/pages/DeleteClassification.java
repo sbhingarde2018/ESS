@@ -12,7 +12,7 @@ public class DeleteClassification extends BasePage {
 	WebElement masterLink;
 	@FindBy(xpath="//a[text()='Classifications']")
 	WebElement classifications;
-    @FindBy(xpath="//*[@id=\"list_classification_headings\"]/div[2]/table/tbody/tr[8]/td[contains(text(),'Classification10')]/parent::tr/td[5]/a")
+    @FindBy(xpath="//div[2]/table/tbody/tr/td[contains(text(),'ClassificationTest')]/parent::tr/td[5]/a")
     WebElement deleteButton;
     @FindBy(xpath="//strong[text()='Classification heading was successfully deleted.']")
     WebElement successfullMessage;

@@ -17,8 +17,8 @@ public class AssignFinancialInstitutionandTryToDelete extends BasePage{
 	WebElement ClickOnFilterHead;
 	@FindBy(xpath="//*[@id=\"bf_form\"]/div[10]/button[1]")
 	WebElement ClickOnLoad;
-	@FindBy(xpath="//*[@id='employees_dtable']/tbody/tr[1]/td/a[1]")
-	WebElement ClickOnView; 
+	@FindBy(xpath="//td[contains(text(),'Shanti')]/parent::tr/td[6]/a[1]")
+	WebElement ClickOnView;
 	@FindBy(xpath="//*[@id=\"classification_details\"]/a")
 	WebElement ClickClassificationDetail;
 	@FindBy(xpath="//*[@id=\"main\"]/div[3]/span/a")
@@ -27,7 +27,7 @@ public class AssignFinancialInstitutionandTryToDelete extends BasePage{
 	WebElement SelectBank;
 	@FindBy(id="sed")
 	WebElement EffectiveDate;
-	@FindBy(xpath="//*[@id='CalendarControl']/table/tbody/tr[5]/td[3]/a")
+	@FindBy(xpath="//*[@id=\"CalendarControl\"]/table/tbody/tr[5]/td[1]/a")
 	WebElement SelectDate;
 	@FindBy(xpath="//*[@id=\"CalendarControl\"]/table/tbody/tr[1]/td[1]/a")
 	WebElement ChangeYear;
@@ -45,6 +45,15 @@ public class AssignFinancialInstitutionandTryToDelete extends BasePage{
 	WebElement DeleteFinancialInstitution;
 	@FindBy(xpath="//*[@id='main']/div[4]/table/tbody/tr/td[7]/a")
 	WebElement DeleteClassDetail;
+	@FindBy(xpath="//table/tbody/tr[1]/td[7]/a")
+	WebElement DeleteClass;
+	@FindBy(id="employee_detail_salary_group_id")
+	WebElement SalaryStructure;
+	@FindBy(id="employee_detail_attendance_configuration_id")
+	WebElement AttendanceStructure;
+	@FindBy(id="employee_detail_leave_policy_master_id")
+	WebElement LeavePolicy;
+	
 	
 	public AssignFinancialInstitutionandTryToDelete(WebDriver driver) {
 		super(driver);
@@ -106,5 +115,17 @@ public class AssignFinancialInstitutionandTryToDelete extends BasePage{
 	public void deleteclassdetail() {
 		DeleteClassDetail.click();
 		switchToPopUpAndAccept(driver);
+	}
+	public void deleteclass() {
+		DeleteClass.click();
+	}
+	public void salstructure(String value) {
+		dropDownSelect(SalaryStructure, value);
+	}
+	public void attendanceStructure(String value) {
+		dropDownSelect(AttendanceStructure, value);
+	}
+	public void leavePolicy(String value) {
+		dropDownSelect(LeavePolicy, value);
 	}
 }

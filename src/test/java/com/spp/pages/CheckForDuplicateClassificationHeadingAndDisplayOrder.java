@@ -24,8 +24,9 @@ public class CheckForDuplicateClassificationHeadingAndDisplayOrder extends BaseP
 	WebElement successfullMessage2;
 	@FindBy(xpath="//*[@id=\"classification_heading_result_response\"]/div/li[2]")
 	WebElement successfullMessage3;
-	@FindBy(xpath="//*[@id=\"list_classification_headings\"]/div[2]/table/tbody/tr/td[1][contains(text(),'Heading')]/parent::tr/td[5]/a")
+	@FindBy(xpath="//div[2]/table/tbody/tr/td[contains(text(),'ClassificationDuplicate')]/parent::tr/td[5]/a")
 	WebElement DeleteButton;
+	
 	public CheckForDuplicateClassificationHeadingAndDisplayOrder(WebDriver driver) {
 		super(driver);
 		PageFactory.initElements(driver,this);

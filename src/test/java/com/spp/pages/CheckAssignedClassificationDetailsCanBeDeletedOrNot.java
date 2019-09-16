@@ -18,9 +18,9 @@ public class CheckAssignedClassificationDetailsCanBeDeletedOrNot extends BasePag
 	WebElement FilterHead;
 	@FindBy(xpath="//input[@attr='non_classified_emp']")
 	WebElement EmployeewithoutClass;
-	@FindBy(xpath="//*[@id=\"bf_form\"]/div[10]/button[1]")
+	@FindBy(xpath="//form[@id='bf_form']//button[contains(text(),'LOAD')]")
 	WebElement LoadButton;
-	@FindBy(xpath="//*[@id='employees_dtable']/tbody/tr[1]/td[6]/a[1]")
+	@FindBy(xpath="//td[contains(text(),'Reya')]/parent::tr/td[6]/a[1]")
 	WebElement ViewButton;
 	@FindBy(xpath="//*[@id=\"classification_details\"]/a")
 	WebElement ClassificationDetails;
@@ -30,19 +30,15 @@ public class CheckAssignedClassificationDetailsCanBeDeletedOrNot extends BasePag
 	WebElement SalaryStructure;
 	@FindBy(id="employee_detail_attendance_configuration_id")   
 	WebElement AttendanceStructure;
-	
 	@FindBy(id="employee_detail_branch_id")
 	WebElement Branch;
-	
 	@FindBy(id="employee_detail_financial_institution_id")
 	WebElement Bank;
-	
 	@FindBy(id="employee_detail_leave_policy_master_id")
 	WebElement LeavePolicy;
-	
 	@FindBy(id="bank_ac")
 	WebElement BankAc;
-	@FindBy(xpath="//*[@id=\"emp_det_form\"]/div[2]/div[15]/input")
+	@FindBy(xpath="//input[@name='commit']")
 	WebElement CreateClassificationButton; 
 	@FindBy(xpath="//*[@id=\"main\"]/div[2]/strong")
 	WebElement successfullMessage1;
@@ -50,13 +46,13 @@ public class CheckAssignedClassificationDetailsCanBeDeletedOrNot extends BasePag
 	WebElement masterLink;
 	@FindBy(xpath="//a[text()='Classifications']")
 	WebElement classifications;
-    @FindBy(xpath="//*[@id='list_classification_headings']/div/table/tbody/tr/td[contains(text(),'Classification')]/parent::tr/td[5]/a")
+    @FindBy(xpath="//div[2]/table/tbody/tr[6]/td[5]/a")
     WebElement deleteButton;
     @FindBy(xpath="//strong[text()='Classification heading was successfully deleted.']")
     WebElement successfullMessage2;
     @FindBy(id="sed")
     WebElement Month;
-    @FindBy(xpath="//*[@id=\"CalendarControl\"]/table/tbody/tr[1]/td[1]/a")
+    @FindBy(xpath="//table/tbody/tr[3]/td[1]/a")
 	WebElement ChangeYear;
     @FindBy(id="sed")
 	WebElement EffectiveDate;
@@ -64,6 +60,9 @@ public class CheckAssignedClassificationDetailsCanBeDeletedOrNot extends BasePag
 	WebElement SelectDate;
     @FindBy(xpath="//*[@id='classification_heading_result_response']/div/li")
 	WebElement CantDeleteMessage;
+    @FindBy(xpath="//table/tbody/tr/td[contains(text(),'')]/parent::tr/td[7]/a")
+    WebElement DeletButton1;
+    
     
 	public CheckAssignedClassificationDetailsCanBeDeletedOrNot(WebDriver driver){
 		super(driver);
@@ -149,5 +148,8 @@ public String getMessage2(){
 }
 public void selectmonth(String value) {
 	Month.sendKeys(value);
+}
+public void ClickDeleteButton1(){
+	DeletButton1.click();
 }
 }

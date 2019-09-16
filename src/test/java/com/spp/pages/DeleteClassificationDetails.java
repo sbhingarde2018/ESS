@@ -12,9 +12,9 @@ public class DeleteClassificationDetails extends BasePage{
 	WebElement masterLink;
 	@FindBy(xpath="//a[text()='Classifications']")
 	WebElement classifications;
-	@FindBy(xpath="//*[@id=\"list_classification_headings\"]/div[2]/table/tbody/tr/td[1][text()='Classification10']/parent::tr/td[3]/a")
+	@FindBy(xpath="//table/tbody/tr/td[contains(text(),'ClassificationTest')]/parent::tr/td[3]/a")
 	WebElement detailsLink;
-	@FindBy(xpath="//*[@id=\"classifications_list\"]/div[2]/table/tbody/tr/td[3]/a")
+	@FindBy(xpath="//div[2]/table/tbody/tr/td[3]/a")
 	WebElement deleteButton;
 	@FindBy(xpath="//strong[text()='Classification was successfully deleted.']")
 	WebElement successfullMessage;
@@ -38,7 +38,7 @@ public class DeleteClassificationDetails extends BasePage{
 	
 	public void clickDeleteButton(){
 		deleteButton.click();
-		switchToPopUpAndAccept(driver);
+		
 	}
 	
 	public String getMessage(){

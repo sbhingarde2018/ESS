@@ -15,7 +15,7 @@ import com.spp.pages.UpdateFinancilInstitutions;
 
 public class FinancialInstitution extends BaseTest{
 	
-	@Test(priority=0)
+	/*@Test(priority=0)
 	public void verifyCreatedFinancialInstitutions_SC_72(){
 		AddFinancialInstitutions a=new AddFinancialInstitutions(driver);
 		a.clickMastserLink();
@@ -114,17 +114,17 @@ public class FinancialInstitution extends BaseTest{
 		ld.selectFinancialInstitution();
 		ld.clickAddFinancialInst();
 		ld.selectAccoutType("Salary Account");
-		ld.enterInstName("State Bank of India");
-		ld.enterBranchCode("1");
-		ld.enterEmail("info@sbi.com");
-		ld.enterAddress("#125,19th Block,ESI 3rd Block,Rajaji Nagar,Bangalore");
-		ld.enterPinCode("560001");
-		ld.enterIFSCCode("SBIN0000539");
-		ld.enterMICRCode("400002002");
+		ld.enterInstName("State Bank of India 2");
+		ld.enterBranchCode("2");
+		ld.enterEmail("info2@sbi.com");
+		ld.enterAddress("#126,19th Block,ESI 3rd Block,Rajaji Nagar,Bangalore");
+		ld.enterPinCode("560002");
+		ld.enterIFSCCode("SBIN0000530");
+		ld.enterMICRCode("400002003");
 		ld.clickCreateButton();
 		String s=ld.getMessage();
 		Assert.assertEquals(s, "Financial Institution successfully created");	
-	}
+	}*/
 	
 	@Test(priority=9)
 	public void AssignFinancialInstitutionandTryToDelete_SC_348() throws Exception{
@@ -140,7 +140,7 @@ public class FinancialInstitution extends BaseTest{
 		td.clickclassificationdetail();
 		td.addnewclassificationdetail();
 		Thread.sleep(2000);
-		td.SelectBank("State Bank of India");
+		td.SelectBank("State Bank of India 2");
 		td.Effectivedate();
 		Thread.sleep(2000);
 		td.changeyear();
@@ -155,13 +155,19 @@ public class FinancialInstitution extends BaseTest{
 		//Thread.sleep(2000);
 		td.Selectdate();
 		Thread.sleep(2000);
+		td.salstructure("Structure");
+		Thread.sleep(2000);
+		td.attendanceStructure("Karnataka");
+		Thread.sleep(2000);
+		td.leavePolicy("Default");
+		Thread.sleep(2000);
 		td.enterbankaccno("98765");
 		Thread.sleep(2000);
 		td.createclassdetail();
 		String s=td.getMessage();
 		Assert.assertEquals(s, "Employee detail was successfully created.");
 		td.clickMastserLink();
-		td.selectFinancialInstitution();	
+		td.selectFinancialInstitution();
 		td.deletefinancialinsti();
 		Thread.sleep(2000);
 		td.clickonemployee();
@@ -175,9 +181,11 @@ public class FinancialInstitution extends BaseTest{
 		td.deleteclassdetail();
 		Thread.sleep(2000);
 		td.clickMastserLink();
-		td.selectFinancialInstitution();	
+		td.selectFinancialInstitution();
 		td.deletefinancialinsti();
 		td.exitFullscreen();
-		Thread.sleep(2000);
+		Thread.sleep(5000);
+		td.deleteclass();
+		td.switchToPopUpAndAccept(driver);
 	}
 }

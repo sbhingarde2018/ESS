@@ -12,7 +12,7 @@ public class AddClasssificationDetails extends BasePage{
 	WebElement masterLink;
 	@FindBy(xpath="//a[text()='Classifications']")
 	WebElement classifications;
-	@FindBy(xpath="//*[@id='list_classification_headings']/div/table/tbody/tr/td[text()='Classification10']/parent::tr/td[3]/a")
+	@FindBy(xpath="//table/tbody/tr/td[contains(text(),'ClassificationTest')]/parent::tr/td[3]/a")
 	WebElement detailsLink;
 	@FindBy(id="classification_classification_name")
 	WebElement classificationDetailName;

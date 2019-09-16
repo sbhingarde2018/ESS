@@ -15,7 +15,6 @@ import com.spp.pages.DeleteClassification;
 import com.spp.pages.DeleteClassificationDetails;
 import com.spp.pages.EditClassification;
 import com.spp.pages.EditClasssificationDetails;
-
 public class Classifications extends BaseTest {
 	
 	@Test(priority=0)
@@ -23,8 +22,8 @@ public class Classifications extends BaseTest {
 		CreateClassification cc=new CreateClassification(driver);
 		cc.clickMastserLink();
 		cc.selectClassifications();
-		cc.enterClassificationName("Classification10");
-		cc.enterDisplayOrder("123454");
+		cc.enterClassificationName("ClassificationTest");
+		cc.enterDisplayOrder("12345");
 		cc.clickCreateButton();
 		String s=cc.getMessage();
 		Assert.assertEquals(s, "Classification Heading created successfully.");
@@ -82,6 +81,9 @@ public class Classifications extends BaseTest {
 		dc.selectClassifications();
 		dc.clickDetailsLink();
 		dc.clickDeleteButton();
+		dc.switchToPopUpAndDismiss();
+		dc.clickDeleteButton();
+		dc.switchToPopUpAndAccept(driver);
 		String s=dc.getMessage();
 		Assert.assertEquals(s, "Classification was successfully deleted.");
 	}
@@ -101,7 +103,7 @@ public class Classifications extends BaseTest {
 		CheckForDuplicateClassificationHeadingAndDisplayOrder cc=new CheckForDuplicateClassificationHeadingAndDisplayOrder(driver);
 		cc.clickMastserLink();
 		cc.selectClassifications();
-		cc.enterClassificationName("Heading");
+		cc.enterClassificationName("ClassificationDuplicate");
 		cc.enterDisplayOrder("11");
 		cc.clickCreateButton();
 		String s=cc.getMessage1();
@@ -109,7 +111,7 @@ public class Classifications extends BaseTest {
 		Thread.sleep(5000);
 		cc.clickMastserLink();
 		cc.selectClassifications();
-		cc.enterClassificationName("Heading");
+		cc.enterClassificationName("ClassificationDuplicate");
 		cc.enterDisplayOrder("11");
 		cc.clickCreateButton();
 		String i=cc.getMessage2();
@@ -133,31 +135,41 @@ public class Classifications extends BaseTest {
 		Thread.sleep(4000);
 		ww.selectLoadButton();
 		Thread.sleep(5000);
+		ww.exitFullscreen();
 		ww.selectViewButton();
 		ww.selectClassificationDetails();
 		ww.selectAddNewClassiDetails();
-		//ww.selectSalaryStructure("gross");
 		ww.Effectivedate();
 		Thread.sleep(2000);
-		ww.changeyear();
+		//ww.changeyear();
 		ww.Selectdate();
-		ww.selectAttendanceStructure("Karnataka");
-		ww.selectBranch("default");
-		ww.selectBank("CASH");
-		ww.selectLeavePolicy("Default");
+		//ww.selectAttendanceStructure("Karnataka");
+		//ww.selectBranch("default");
+		//ww.selectBank("CASH");
+		//ww.selectLeavePolicy("Default");
 		//ww.enterBankAc("74"+Utility.getRandNum());
 		ww.clickCreateClassificationButton();
 		//ww.switchToPopUpAndAccept(driver);
 		String s=ww.getMessage1();
 		Assert.assertEquals(s, "Employee detail was successfully created.");
 		Thread.sleep(5000);
-		ww.exitFullscreen();
 		ww.clickMastserLink();
 		ww.selectClassifications();
 		ww.clickDeleteButton();
 		String abc = ww.getMessage();
-		System.out.println(abc);
 		Assert.assertEquals(abc, "Classification is being used, you're not allowed to delete.");	
+		ww.clickEmployeeLink();
+		ww.selectEmployeeDetails();
+		ww.selectFilterHead();
+		ww.resizeWindow();
+		Thread.sleep(4000);
+		ww.selectLoadButton();
+		Thread.sleep(5000);
+		ww.exitFullscreen();
+		ww.selectViewButton();
+		ww.selectClassificationDetails();
+		ww.ClickDeleteButton1();
+		ww.switchToPopUpAndAccept(driver);
 		}
 	
 	@Test(priority=8)
@@ -168,12 +180,12 @@ public class Classifications extends BaseTest {
 		ac.clickondetails();
 		//ac.generatetemplate();
 		ac.clickonexceluploadforclassification();
-		Thread.sleep(5000);
-		ac.choosefile("C:\\Users\\alfalabs\\Desktop\\ClassificationDetail.xlsx");
+		//Thread.sleep(5000);
+		ac.choosefile("C:\\Users\\alfalabs\\Downloads\\ClassificationDetail.xlsx");
 		//ac.choosefile("C:\\Users\\Administrator\\Desktop\\ClassificationDetail.xlsx");
-		Thread.sleep(5000);
+		Thread.sleep(8000);
 		ac.uploadfile();
-		Thread.sleep(5000);
+		Thread.sleep(8000);
 		ac.deleteClassification();
 		Thread.sleep(2000);
 		ac.switchToPopUpAndAccept(driver);

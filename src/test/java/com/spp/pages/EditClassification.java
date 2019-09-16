@@ -12,7 +12,7 @@ public class EditClassification extends BasePage {
 	WebElement masterLink;
 	@FindBy(xpath="//a[text()='Classifications']")
 	WebElement classifications;
-	@FindBy(xpath="//*[@id=\"list_classification_headings\"]/div[2]/table/tbody/tr/td[1][text()='Classification10']/parent::tr/td[4]/a")
+	@FindBy(xpath="//table/tbody/tr/td[contains(text(),'ClassificationTest')]/parent::tr/td[4]/a")
 	WebElement editIcon;
 	@FindBy(id="classification_heading_classification_heading_name")
 	WebElement classificationName;
