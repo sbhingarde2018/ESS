@@ -15,7 +15,7 @@ import com.spp.pages.UpdateFinancilInstitutions;
 
 public class FinancialInstitution extends BaseTest{
 	
-	/*@Test(priority=0)
+	@Test(priority=0)
 	public void verifyCreatedFinancialInstitutions_SC_72(){
 		AddFinancialInstitutions a=new AddFinancialInstitutions(driver);
 		a.clickMastserLink();
@@ -43,7 +43,7 @@ public class FinancialInstitution extends BaseTest{
 		uf.enterInstName("ICICIBank");
 		uf.enterBranchCode("2232344");
 		uf.enterEmail("relyoneffr@gmail.com");
-		uf.enterAddress("Bangalore");
+		uf.enterAddress("Chennai");
 		uf.enterPinCode("560025");
 		uf.enterIFSCCode("unio0677hjj");
 		uf.enterMICRCode("3242335464");
@@ -114,19 +114,19 @@ public class FinancialInstitution extends BaseTest{
 		ld.selectFinancialInstitution();
 		ld.clickAddFinancialInst();
 		ld.selectAccoutType("Salary Account");
-		ld.enterInstName("State Bank of India 2");
-		ld.enterBranchCode("2");
-		ld.enterEmail("info2@sbi.com");
-		ld.enterAddress("#126,19th Block,ESI 3rd Block,Rajaji Nagar,Bangalore");
-		ld.enterPinCode("560002");
-		ld.enterIFSCCode("SBIN0000530");
-		ld.enterMICRCode("400002003");
+		ld.enterInstName("State Bank of India 3");
+		ld.enterBranchCode("3");
+		ld.enterEmail("info3@sbi.com");
+		ld.enterAddress("#126,19th Block,ESI 3rd Block,Rajaji Nagar,Chennai");
+		ld.enterPinCode("560003");
+		ld.enterIFSCCode("SBIN0000533");
+		ld.enterMICRCode("400002005");
 		ld.clickCreateButton();
 		String s=ld.getMessage();
 		Assert.assertEquals(s, "Financial Institution successfully created");	
-	}*/
+	}
 	
-	@Test(priority=9)
+	/*@Test(priority=9)
 	public void AssignFinancialInstitutionandTryToDelete_SC_348() throws Exception{
 		AssignFinancialInstitutionandTryToDelete td= new AssignFinancialInstitutionandTryToDelete(driver);
 		td.clickonemployee();
@@ -187,5 +187,5 @@ public class FinancialInstitution extends BaseTest{
 		Thread.sleep(5000);
 		td.deleteclass();
 		td.switchToPopUpAndAccept(driver);
-	}
+	}*/
 }

@@ -13,9 +13,9 @@ public class CreateHolidayUnderBranch extends BasePage {
 	WebElement masterLink;
 	@FindBy(xpath="//a[text()='Holiday Lists']")
 	WebElement holidayList;
-	@FindBy(xpath="//tbody/tr/td[contains(text(),'default')]/parent::tr/td[3]/a")
+	@FindBy(xpath="//tbody/tr/td[contains(text(),'Master List')]/parent::tr/td[3]/a")
 	WebElement viewList;
-	@FindBy(linkText="Add New Holiday")	
+	@FindBy(xpath="//a[text()='Add New Holiday Master")	
 	WebElement addHolidayLink;
 	@FindBy(id="hdd")
 	WebElement date;
@@ -27,9 +27,9 @@ public class CreateHolidayUnderBranch extends BasePage {
 	WebElement createButton;
 	@FindBy(xpath="//*[@id=\"main\"]/div[3]/strong")
 	WebElement successfullyMessage;
-	@FindBy(xpath="//tbody/tr/td[contains(text(),'Diwali')]/parent::tr/td[5]/a[2]/img")
+	@FindBy(xpath="//tbody/tr/td[contains(text(),'holiday1')]/parent::tr/td[5]/a[2]/img")
 	WebElement DeleteButton;
-	 
+	
 	public CreateHolidayUnderBranch(WebDriver driver) {
 		super(driver);
 		PageFactory.initElements(driver, this);

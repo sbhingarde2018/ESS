@@ -14,7 +14,7 @@ public class UpdateHolidayList extends BasePage{
 	WebElement holidayList;
 	@FindBy(xpath="//tbody/tr/td[contains(text(),'Master List')]/parent::tr/td[3]/a")
 	WebElement viewList;
-	@FindBy(xpath="//tbody/tr/td[contains(text(),'Raksha Bandhan')]/parent::tr/td[5]/a[1]")
+	@FindBy(xpath="//tbody/tr/td[contains(text(),'MahaShivaratri')]/parent::tr/td[5]/a[1]")
 	WebElement editLink;
 	@FindBy(name="holiday_master_list[holiday_date]")
 	WebElement date;

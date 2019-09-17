@@ -14,7 +14,7 @@ public class DeleteHoliday extends BasePage {
 	WebElement holidayList;
 	@FindBy(xpath="//tbody/tr/td[contains(text(),'Master List')]/parent::tr/td[3]/a")
 	WebElement viewList;
-	@FindBy(xpath="//tbody/tr/td[contains(text(),'Gandhi Jayanti')]/parent::tr/td[5]/a[2]/img")
+	@FindBy(xpath="//tbody/tr/td[contains(text(),'Shivaratri')]/parent::tr/td[5]/a[2]/img")
 	WebElement deleteButton;
 	@FindBy(xpath="//strong[text()='Master holiday successfully deleted.']")
 	WebElement successfullMessage;
@@ -38,7 +38,13 @@ public class DeleteHoliday extends BasePage {
 	
 	public void clickDeleteButton() throws InterruptedException{
 		deleteButton.click();
+		switchToPopUpAndDismiss(driver);
+		Thread.sleep(5000);
+		deleteButton.click();
+		
+		switchToPopUpAndAccept(driver);
 	}
+	
 	public String getMessage(){
 		return successfullMessage.getText();
 	}
