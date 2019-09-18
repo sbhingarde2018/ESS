@@ -91,7 +91,18 @@ public class BasePage {
 		}
 	
 	 public boolean isVisible(WebElement element){
-		 return element.isDisplayed();
+		 
+		 boolean isvisible = false;
+		 
+		 try {
+			 isvisible = element.isDisplayed();
+		 }
+		 catch (Exception e)
+		 {
+			 isvisible = false;
+		 }
+		 
+		 return isvisible;
 	 }
 
 	 public boolean checkIfExist(WebElement element){
@@ -130,5 +141,13 @@ public class BasePage {
 	 public boolean stringComp(ArrayList<String> big,ArrayList<String> small) {
 		 return big.contains(small);
 	 }
-	 
+	 public void ReloadPage() {
+		 driver.navigate().refresh();
+	}
+	 public void Navigateback() {
+		 driver.navigate().back();    
+	}
+	 public void Navigateforward() {
+		 driver.navigate().forward();
+	}
 }

@@ -17,13 +17,13 @@ public class AssignEmployee extends BasePage {
 	WebElement FilterHead;
 	@FindBy(xpath="//input[@attr='non_classified_emp']")
 	WebElement EmployeewithoutClass;
-	@FindBy(xpath="//*[@id=\"bf_non_classified_emp_form\"]/div[2]/button[1]")
+	@FindBy(xpath="//form[@id='bf_form']//button[contains(text(),'LOAD')]")
 	WebElement LoadButton;
-	@FindBy(xpath="//*[@id='employees_dtable']/tbody/tr/td[contains(text(),'Anil')]/parent::tr/td[6]/a[1]")
+	@FindBy(xpath="//td[contains(text(),'Zack')]/parent::tr/td[6]/a[1]")
 	WebElement ClickOnView; 
-	@FindBy(xpath="//*[@id=\"classification_details\"]/a")
+	@FindBy(xpath="//a[contains(text(),'Classification Details')]")
 	WebElement ClassificationDetails;
-	@FindBy(xpath="//*[@id=\"main\"]/div[3]/span/a")
+	@FindBy(xpath="//a[contains(text(),'Add New Classification Details')]")
 	WebElement AddNewClassiDetails;
 	@FindBy(id="employee_detail_salary_group_id")
 	WebElement SalaryStructure;
@@ -45,6 +45,12 @@ public class AssignEmployee extends BasePage {
 	WebElement CreateClassificationButton; 
 	@FindBy(xpath="//*[@id=\"main\"]/div[2]/strong")
 	WebElement successfullMessage;
+	@FindBy(xpath="//input[@id='sed']")
+	WebElement EffectiveDate;
+	@FindBy(xpath="//a[@class='weekday'][contains(text(),'Dec')]")
+	WebElement EffectiveMonth;
+	@FindBy(xpath="//div[5]/table/tbody/tr/td[7]/a")
+	WebElement Deletebutton;
 	
 	public AssignEmployee(WebDriver driver){
 		super(driver);
@@ -100,5 +106,15 @@ public void clickCreateClassificationButton(){
 public String getMessage(){
 return successfullMessage.getText();
 }
+public void ClickEffectiveDate() {
+	EffectiveDate.click();
+}
+public void ClickMonth() {
+	EffectiveMonth.click();
+}
+public void ClickDeletebutton(){
+	Deletebutton.click();
+}
+
 }
 

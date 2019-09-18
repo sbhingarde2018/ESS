@@ -60,7 +60,8 @@ public class CreateEmployeeviaExcelImport extends BasePage {
 	WebElement CompletedAtTab;
 	@FindBy(xpath="//*[@id=\"listing_background_process\"]/tbody/tr[1]/td[9]")
 	WebElement UploadStatusMessage;
-	
+	@FindBy(xpath="//a[contains(text(),'Generate Sample Template')]")
+	WebElement GenTemp;
 	
 	public void clickEmployeeTab(){
 		EmployeeTab.click();
@@ -108,6 +109,9 @@ public String getSuccessmessage(){
 	return UploadStatusMessage.getText();
 	
 	}
+public void ClickGenTemp() {
+	jsclick(GenTemp);
+}
 
 
 

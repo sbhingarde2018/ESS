@@ -15,17 +15,17 @@ public class DeleteClassificationDetailsInEmployee extends BasePage{
 	WebElement ClickOnEmployDetails;
 	@FindBy(id="filter_head")
 	WebElement ClickOnFilterHead;
-	@FindBy(xpath="//*[@id=\"bf_form\"]/div[10]/button[1]")
+	@FindBy(xpath="//form[@id='bf_form']//button[contains(text(),'LOAD')]")
 	WebElement ClickOnLoad;
 	@FindBy(xpath="//*[@id=\"bf_non_classified_emp_form\"]/div[2]/button[1]")
 	WebElement Load2;
-	@FindBy(xpath="//*[@id='employees_dtable']/tbody/tr/td[contains(text(),'Geeta')]/parent::tr/td[6]/a[1]")
-	WebElement ClickOnView; 
+	@FindBy(xpath="//td[contains(text(),'Zack')]/parent::tr/td[6]/a[1]")
+	WebElement ClickOnView;
 	@FindBy(xpath="//*[@id='employees_dtable']/tbody/tr/td[contains(text(),'Geeta')]/parent::tr/td[6]/a[2]")
 	WebElement DeleteEmployee;
-	@FindBy(xpath="//*[@id=\"classification_details\"]/a")
+	@FindBy(xpath="//a[contains(text(),'Classification Details')]")
 	WebElement ClickClassificationDetail;
-	@FindBy(xpath="//*[@id=\"main\"]/div[4]/table/tbody/tr[1]/td[7]/a")
+	@FindBy(xpath="//table/tbody/tr/td[7]/a")
 	WebElement DeleteClassification;
 	@FindBy(xpath="//*[@id=\"main\"]/div[2]/strong")
 	WebElement successfulmessage;
