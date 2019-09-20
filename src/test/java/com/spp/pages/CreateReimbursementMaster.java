@@ -12,7 +12,7 @@ public class CreateReimbursementMaster extends BasePage {
 	WebElement masterLink;
 	@FindBy(xpath="//a[text()='Reimbursement Master']")
 	WebElement reimbursemnetLink;
-	@FindBy(xpath="//a[text()='Add New Reimbursement']")
+	@FindBy(xpath="//a[contains(text(),'Add New Reimbursement')]")
 	WebElement addReimbursement;
 	@FindBy(id="reimbursement_master_reimbursement_type")
 	WebElement reimbursementType;

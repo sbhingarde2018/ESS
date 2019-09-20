@@ -61,19 +61,21 @@ public class BulkClassificationChange extends BaseTest {
 		Thread.sleep(2000);
 		ec.selectsalarygroupfrom("Structure");
 		Thread.sleep(2000);
-		ec.searchemployee("Anil");
+		ec.searchemployee("Riya");
 		Thread.sleep(2000);
 		ec.clickonsearch();
 		Thread.sleep(3000);
-		ec.selectemployee();
-		Thread.sleep(2000);
 		ec.selectsalarygroupto("Gross_Structure");
+		ec.selectemployee();
+		//Thread.sleep(2000);
 		ec.clickonchange();
 		ec.switchToPopUpAndDismiss();
 		Thread.sleep(2000);
+		ec.selectemployee();
+		//Thread.sleep(2000);
 		ec.clickonchange();
 		ec.switchToPopUpAndAccept(driver);
-		Thread.sleep(1000);
+		//Thread.sleep(1000);
 		String t=ec.getMessage();
 		Assert.assertEquals(t, "Successfully Updated");
 		Thread.sleep(5000);
@@ -90,8 +92,11 @@ public class BulkClassificationChange extends BaseTest {
 		Thread.sleep(2000);
 		ec.selectsalarygroupto("Structure");
 		Thread.sleep(2000);
-		ec.selectemployee();
+		ec.searchemployee("Riya");
 		Thread.sleep(2000);
+		ec.clickonsearch();
+		ec.selectemployee();
+		//Thread.sleep(2000);
 		ec.clickonchange();
 		ec.switchToPopUpAndAccept(driver);
 	}

@@ -18,7 +18,7 @@ public class UpdateReimbursementAllotment extends BasePage {
 	WebElement Employee;
 	@FindBy(xpath="//*[@id=\"menu\"]/li[4]/div/div/ul/li[8]/a")
 	WebElement ReimbursementAllotment;
-	@FindBy(xpath="//*[@id='reimbursement_allotments']/tbody/tr[1]/td[7]/a")
+	@FindBy(xpath="//tbody/tr/td[7]/a[1]")
 	WebElement Edit;
 	@FindBy(xpath="//*[@id='amount']/div/input")
 	WebElement Amount;

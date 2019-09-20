@@ -35,7 +35,7 @@ public class CheckForNoAllotmentInRM extends BasePage {
 	WebElement successfullMassege;
 	@FindBy(xpath="//*[@id=\"main\"]/section/p/a")
 	WebElement Pagechange;
-	@FindBy(xpath="//*[@id='reimbursement_masters']/tbody/tr/td[contains(text(),'ReimMaster')]/parent::tr/td[5]/a")
+	@FindBy(xpath="//tbody/tr/td[contains(text(),'ReimMaster01')]/parent::tr/td[5]/a")
 	WebElement DeleteButton;
 	@FindBy(id="emp_detail")
 	WebElement Employee;
@@ -43,7 +43,7 @@ public class CheckForNoAllotmentInRM extends BasePage {
 	WebElement ReimbursementAllotment;
 	@FindBy(xpath="//*[@id=\"allotments_list\"]/div[1]/span/a")
 	WebElement NewReimbursement;
-	@FindBy(xpath="//*[@id=\"employees_table\"]/tbody/tr/td[contains(text(),'Anil')]/parent::tr/td[5]/input")
+	@FindBy(xpath="//table/tbody/tr[1]/td[5]/input")
 	WebElement AddEmployee;
 	@FindBy(xpath="//*[@id=\"main\"]/div/div[2]/form/div[3]/input")
 	WebElement AllotButton;

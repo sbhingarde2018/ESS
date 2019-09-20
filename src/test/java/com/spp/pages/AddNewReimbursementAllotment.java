@@ -19,7 +19,7 @@ public class AddNewReimbursementAllotment extends BasePage{
 	WebElement ReimbursementAllotment;
 	@FindBy(xpath="//*[@id=\"allotments_list\"]/div[1]/span/a")
 	WebElement NewReimbursement;
-	@FindBy(xpath="//*[@id='employees_table']/tbody/tr/td[contains(text(),'Anil')]/parent::tr/td[5]/input")
+	@FindBy(xpath="//table/tbody/tr[1]/td[5]/input")
 	WebElement AddEmployee;
 	@FindBy(xpath="//input[@value='Allot Reimbursement']")
 	WebElement AllotButton;
@@ -36,7 +36,7 @@ public class AddNewReimbursementAllotment extends BasePage{
 	WebElement CreateReimbursementButton;
 	@FindBy(xpath="//*[@id='allotment_link']/img")
 	WebElement FunctionKey;
-	@FindBy(id="sum_amount")
+	@FindBy(xpath="//fieldset/div[2]/div[4]/div/div/input")
 	WebElement SumAmount;
 	@FindBy(xpath="//strong[text()='Reimbursement Allotment was successfully created']")
 	WebElement successfullmessage;

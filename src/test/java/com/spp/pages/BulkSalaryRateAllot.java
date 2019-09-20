@@ -23,11 +23,11 @@ public class BulkSalaryRateAllot extends BasePage {
 	WebElement SalaryStructure;
 	@FindBy(id="get_bulk_salary")
 	WebElement GetEmployees;
-	@FindBy(xpath="//*[@id='bf_form']/div[10]/button[1]")
+	@FindBy(xpath="//form[@id='bf_form']//button[contains(text(),'LOAD')]")
 	WebElement Load;
 	@FindBy(xpath="//*[@id=\"show_message\"]/div/strong")
 	WebElement SuccessfulMessage;
-	@FindBy(xpath="//*[@id='salary_alotments']/tbody/tr/td[contains(text(),'Tina')]/parent::tr/td/span")
+	@FindBy(xpath="//tbody/tr[1]/td[6]/span")
 	WebElement MoreButton;
 	@FindBy(xpath="//*[@id=\"allotment_form\"]/div[2]/div[2]/div[1]/div/input")
 	WebElement Basic;

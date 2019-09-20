@@ -19,15 +19,15 @@ public class AllotSalaryToEmployee extends BasePage {
 	WebElement SalaryRateDetails;
 	@FindBy(id="filter_head")
 	WebElement AdvancedFilterIcon;
-	@FindBy(xpath="//*[@id='bf_form']/div[10]/button[1]")
+	@FindBy(xpath="//form[@id='bf_form']//button[contains(text(),'LOAD')]")
 	WebElement LoadButton;
-	@FindBy(xpath="//*[@id='notalloted']/tbody/tr/td[contains(text(),'Riya')]/parent::tr/td/a")
+	@FindBy(xpath="//tbody/tr[1]/td[4]/a")
 	WebElement AllotSalaryButton;
-	@FindBy(id="month_year")
+	@FindBy(xpath="//select[@id='month_year']")
 	WebElement EffectiveFrom;
 	@FindBy(xpath="//*[@id=\"main\"]/div[3]/form/fieldset/div[1]/div/input[1]")
 	WebElement GetRate;
-	@FindBy(id="gross_sal_formula")
+	@FindBy(xpath="//tbody[1]/tr[2]/td[4]/input[1]")
 	WebElement GrossSal;
 	@FindBy(xpath="//*[@id=\"sal_allotment\"]/table/tbody/tr[2]/td[4]/input")
 	WebElement EarningsSalAllot;

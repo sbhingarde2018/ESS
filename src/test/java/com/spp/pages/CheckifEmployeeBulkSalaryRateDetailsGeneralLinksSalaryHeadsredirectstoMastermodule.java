@@ -12,21 +12,21 @@ public class CheckifEmployeeBulkSalaryRateDetailsGeneralLinksSalaryHeadsredirect
 	WebElement ClickOnEmployee;
 	@FindBy(xpath="//*[@id=\"menu\"]/li[4]/div/div/ul/li[5]/a")
 	WebElement ClickOnBulkSalaryRateDetails;
-	@FindBy(xpath="//*[@id=\"ui-accordion-accordion-header-0\"]/h3")
+	@FindBy(xpath="//h3[contains(text(),'General Links')]")
 	WebElement ClickonGeneralLinks;
-	@FindBy(xpath="//*[@id=\"ui-accordion-accordion-panel-0\"]/li[1]/a")
+	@FindBy(xpath="//ul[@id='ui-id-2']//a[contains(text(),'Salary Heads')]")
 	WebElement ClickOnSalaryHead;
-	@FindBy(xpath="//*[@id='main']/div[3]/span/a")
+	@FindBy(xpath="//a[contains(text(),'Add New Salary Head')]")
 	WebElement AddNewSalaryHead;
-	@FindBy(id="salary_head_head_name")
+	@FindBy(xpath="//*[@id='salary_head_head_name']")
 	WebElement EnterHeadName;
-	@FindBy(id="salary_head_short_name")
+	@FindBy(xpath="//*[@id='salary_head_short_name']")
 	WebElement EnterShortName;
 	@FindBy(xpath="//*[@id=\"salary_head_form\"]/div[2]/input")
 	WebElement CreateSalaryHead;
 	@FindBy(xpath="//*[@id=\"main\"]/div[1]/strong")
 	WebElement successfullmessage;
-	@FindBy(xpath="//*[@id='earning_heads']/tbody/tr/td[contains(text(),'Gross_Salary')]/parent::tr/td[5]/a[2]")
+	@FindBy(xpath="//tbody/tr/td[contains(text(),'Gross_Salary')]/parent::tr/td[5]/a[2]")
 	WebElement ClickDelete;
 	
 	public CheckifEmployeeBulkSalaryRateDetailsGeneralLinksSalaryHeadsredirectstoMastermodule(WebDriver driver) {

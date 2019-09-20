@@ -29,7 +29,7 @@ public class BulkIncrementUpdate extends BasePage {
 	WebElement SalaryHead;
 	@FindBy(id="get_increment_values")
 	WebElement GetValues;
-	@FindBy(xpath="//*[@id='bf_form']/div[10]/button[1]")
+	@FindBy(xpath="//form[@id='bf_form']//button[contains(text(),'LOAD')]")
 	WebElement Load;
 	@FindBy(id="amount")
 	WebElement ByAmount;
