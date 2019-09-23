@@ -15,7 +15,7 @@ public class CheckifEmployeeReimbursementAllotmentGeneralLinkReimbursementClaimr
 	WebElement ReimbursementAllotment;
 	@FindBy(xpath="//*[@id=\"allotments_list\"]/div[1]/span/a")
 	WebElement NewReimbursement;
-	@FindBy(xpath="//*[@id='employees_table']/tbody/tr/td[contains(text(),'Tina')]/parent::tr/td/input")
+	@FindBy(xpath="//td[contains(text(),'JOHN')]/parent::tr/td[5]/input")
 	WebElement AddEmployee;
 	@FindBy(xpath="//input[@value='Allot Reimbursement']")
 	WebElement AllotButton;
@@ -55,19 +55,19 @@ public class CheckifEmployeeReimbursementAllotmentGeneralLinkReimbursementClaimr
 	WebElement successfullMassege;
 	@FindBy(xpath="//*[@id=\"main\"]/section/p/a")
 	WebElement Pagechange;
-	@FindBy(xpath="//*[@class='action-delete']")
+	@FindBy(xpath="//tbody/tr/td[contains(text(),'Reim Other Month')]/parent::tr/td[5]/a")
 	WebElement DeleteButton;
 	@FindBy(id="emp_detail")
 	WebElement ClickOnEmployee;
 	@FindBy(xpath="//*[@id=\"menu\"]/li[4]/div/div/ul/li[8]/a")
 	WebElement ClickOnReimbursementAllotment;
-	@FindBy(xpath="//*[@id=\"ui-accordion-accordion-header-2\"]/h3")
+	@FindBy(xpath="//h3[contains(text(),'General Link')]")
 	WebElement ClickOnGeneralLinks;
-	@FindBy(xpath="//*[@id=\"ui-accordion-accordion-panel-2\"]/li[2]/a")
+	@FindBy(xpath="//ul[@id='ui-id-6']//a[contains(text(),'Reimbursement Claim')]")
 	WebElement ClickOnReimburseClaim;
-	@FindBy(xpath="//*[@id=\"claims_list\"]/div[1]/span/a")
+	@FindBy(xpath="//a[contains(text(),'Add New Reimbursement Claim')]")
 	WebElement AddNewReimbursementClaim;
-	@FindBy(xpath="//*[@id='employees_table']/tbody/tr/td[contains(text(),'Tina')]/parent::tr/td/input")
+	@FindBy(xpath="//td[contains(text(),'JOHN')]/parent::tr/td[5]/input")
 	WebElement SelectEmployee;
 	@FindBy(xpath="//input[@value='Claim Reimbursement']")
 	WebElement ClaimReimbursement;
@@ -81,7 +81,7 @@ public class CheckifEmployeeReimbursementAllotmentGeneralLinkReimbursementClaimr
 	WebElement PaidMonth;
 	@FindBy(id="sal_date")
 	WebElement ClaimDate;
-	@FindBy(id="paid_date")
+	@FindBy(xpath="//*[@id=\"paid_date\"]")
 	WebElement PaidDate;
 	@FindBy(id="reimbursement_claim_amount")
 	WebElement Amount;
@@ -91,7 +91,7 @@ public class CheckifEmployeeReimbursementAllotmentGeneralLinkReimbursementClaimr
 	WebElement SuccessfulMessage;
 	@FindBy(xpath="//*[@id='reimbursement_claims']/tbody/tr[1]/td/a[2]")
 	WebElement DeleteClaim;
-	@FindBy(xpath="//*[@id='reimbursement_allotments']/tbody/tr[1]/td/a[2]")
+	@FindBy(xpath="//tbody/tr/td[contains(text(),'JOHN')]/parent::tr/td[7]/a[2]")
 	WebElement DeleteAllotmentButton;
 	@FindBy(id = "reimbursement_master_tds_ref_option_id")
 	WebElement TDSRef;

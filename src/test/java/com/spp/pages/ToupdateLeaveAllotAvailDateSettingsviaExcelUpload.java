@@ -26,7 +26,7 @@ public class ToupdateLeaveAllotAvailDateSettingsviaExcelUpload extends BasePage{
 	WebElement UploadLink;
 	@FindBy(id="filter")
 	WebElement GetEmployee;
-	@FindBy(xpath="//*[@id='bf_form']/div[10]/button[1]")
+	@FindBy(xpath="//form[@id='bf_form']//button[contains(text(),'LOAD')]")
 	WebElement LoadButton;
 	@FindBy(xpath="//*[@id='leave_allot_config']/tbody/tr[1]/td[4]/span")
 	WebElement MoreLink;

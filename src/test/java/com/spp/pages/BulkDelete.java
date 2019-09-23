@@ -18,12 +18,12 @@ public class BulkDelete extends BasePage {
     WebElement Employee;
 	@FindBy(xpath="//*[@id=\"menu\"]/li[4]/div/div/ul/li[8]/a")
 	WebElement ReimbursementAllotment;		
-	@FindBy(xpath="//*[@id=\"bulk_reimbursement_delete\"]/a")
+	@FindBy(xpath="//a[contains(text(),'Bulk Delete')]")
     WebElement BulkDeleteLink;
 	@FindBy(xpath="//*[@id=\"employees_table\"]/tbody/tr[1]/td[1]/input")
     WebElement EmployeeSelection;
-	@FindBy(id="bulk_delete_select_all")
-	WebElement BulkDelete;
+	@FindBy(xpath="//td[contains(text(),'JOHN')]/parent::tr/td[1]/input")
+	WebElement SelectBulkDelete;
 	@FindBy(xpath="//*[@id='bulk_delete_allotment']/div[4]/input")
     WebElement DeleteReimbursementAllotmentsButton;
 	@FindBy(xpath="//*[@id=\"reimbursement_allotment_result_response\"]/div/strong")
@@ -48,8 +48,8 @@ public class BulkDelete extends BasePage {
 	public String getMessage(){
 		return successfullMessage.getText();
 	}
-	/*public void BulkDelete() {
-		BulkDelete.click();
-	}*/
+	public void selectBulkDelete() {
+		SelectBulkDelete.click();
+	}
 
 }

@@ -45,7 +45,7 @@ public class LeaveAllotAvailDateSettings extends BaseTest {
 		Thread.sleep(2000);
 		la.addnewemployee();
 		la.enterEmployeeid("ABC123");
-		la.enterEmployeeref("1234569786");
+		la.enterEmployeeref("12345697871");
 		la.enterEmployeename("Pooja");
 		la.enterEmployeefather("Harish");
 		la.selectDateofBirth("06 June 1995");
@@ -75,7 +75,7 @@ public class LeaveAllotAvailDateSettings extends BaseTest {
 		laads.clickonleaveallotdetails();
 		laads.clickonGenerateSample();
 		Thread.sleep(3000);
-		laads.selectLeaveType("Leave (L)");
+		laads.selectLeaveType("Casual Leave (CL)");
 		Thread.sleep(3000);
 		laads.clickGenerateSampleExcelTemplate();
 		Thread.sleep(3000);
@@ -85,7 +85,7 @@ public class LeaveAllotAvailDateSettings extends BaseTest {
 		Thread.sleep(3000);
 		laads.clickExcelTemplateUpload();
 		Thread.sleep(3000);
-		laads.clickChooseFile("C:\\Users\\Administrator\\Downloads\\AllotAvailFromDateSetting20190415-6447-5giaiu.xlsx");
+		laads.clickChooseFile("C:\\Users\\AlfaLabs\\Downloads\\AllotAvailFromDateSetting20190415-6447-5giaiu.xlsx");
 		Thread.sleep(3000);
 		laads.clickUploadLink();
 		Thread.sleep(3000);
@@ -170,8 +170,8 @@ public class LeaveAllotAvailDateSettings extends BaseTest {
 		Thread.sleep(5000);
 		lad.clickAFLoadBtn();
 		Thread.sleep(5000);
-		Assert.assertEquals(lad.ifexists1(), true);
-		Thread.sleep(2000);
+		//Assert.assertEquals(lad.ifexists1(), true);
+		//Thread.sleep(2000);
 		lad.exitFullscreen();
 	}
 }

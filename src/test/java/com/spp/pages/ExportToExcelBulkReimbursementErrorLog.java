@@ -18,7 +18,7 @@ public class ExportToExcelBulkReimbursementErrorLog extends BasePage {
     WebElement Employee;
 	@FindBy(xpath="//*[@id=\"menu\"]/li[4]/div/div/ul/li[8]/a")
 	WebElement ReimbursementAllotment;
-	@FindBy(xpath="//*[@id=\"ui-accordion-accordion-panel-0\"]/li[3]/a")
+	@FindBy(xpath="//a[contains(text(),'Bulk Reimbursement Error Log')]")
     WebElement ErrorLogLink;
 	@FindBy(id="reimbursement_errors_reimb_module_type")
 	WebElement ReimbursementModuleType;

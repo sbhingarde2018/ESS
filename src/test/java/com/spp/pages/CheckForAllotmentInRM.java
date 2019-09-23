@@ -20,7 +20,7 @@ public class CheckForAllotmentInRM extends BasePage {
 	WebElement ReimbursementAllotment;
 	@FindBy(xpath="//*[@id=\"allotments_list\"]/div[1]/span/a")
 	WebElement NewReimbursement;
-	@FindBy(xpath="//*[@id='employees_table']/tbody/tr/td[contains(text(),'Anil')]/parent::tr/td[5]/input")
+	@FindBy(xpath="//*[@id=\"employee_id_210\"]")
 	WebElement AddEmployee;
 	@FindBy(xpath="//*[@id=\"main\"]/div/div[2]/form/div[3]/input")
 	WebElement AllotButton;

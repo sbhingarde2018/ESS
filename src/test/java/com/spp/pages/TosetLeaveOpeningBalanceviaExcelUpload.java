@@ -14,9 +14,9 @@ public class TosetLeaveOpeningBalanceviaExcelUpload extends BasePage{
 	WebElement ChooseFile;
 	@FindBy(xpath="//input[@value='Upload File']")
 	WebElement UploadLink;
-	@FindBy(xpath="//*[@id='bf_form']/div[10]/button[1]")
+	@FindBy(xpath="//form[@id='bf_form']//button[contains(text(),'LOAD')]")
 	WebElement LoadButton;
-	@FindBy(xpath="//*[@id=\"ui-id-2\"]/li[1]/a")
+	@FindBy(xpath="//a[contains(text(),'Generate Opening Balance Template')]")
 	WebElement ClickGenerateSample;
 	@FindBy(xpath="//*[@id=\"menu\"]/li[4]/div/div/ul/li[10]/a")
 	WebElement SetOpeningBalance;
@@ -26,7 +26,7 @@ public class TosetLeaveOpeningBalanceviaExcelUpload extends BasePage{
 	WebElement LeaveType;
 	@FindBy(xpath="//*[@id='leave_type_selection_opening']/fieldset/div[2]/input")
 	WebElement GenerateSampleTemplate;
-	@FindBy(xpath="//*[@id='ui-accordion-accordion-panel-0']/li/a[contains(text(),'ExcelTemplate Upload')]")
+	@FindBy(xpath="//a[contains(text(),'ExcelTemplate Upload')]")
 	WebElement ExcelTemplateUpload;
 	@FindBy(id="filter")
 	WebElement GetEmployee;

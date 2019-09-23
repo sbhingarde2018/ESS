@@ -36,12 +36,11 @@ public class BulkAllotment extends BasePage {
 	WebElement BlockPeriod;
 	@FindBy(xpath="//*[@id=\"multi_allot_form\"]/div[2]/div/button")
 	WebElement CreateReimbursementButton;
-	
-	@FindBy(xpath="//*[@id='bf_form']/div[10]/button[1]")
+	@FindBy(xpath="//form[@id='bf_form']//button[contains(text(),'LOAD')]")
 	WebElement LoadButton;
 	@FindBy(xpath="//*[@id=\"bulk_allotment_employees\"]/tbody/tr[1]/td[1]/input")
 	WebElement EmployeeSelection;
-	@FindBy(xpath="(//*[@id='employee_data_'])[2]")
+	@FindBy(xpath="//td[contains(text(),'JOHN')]/parent::tr/td[1]/input")
 	WebElement BulkAllotment;
 	@FindBy(xpath="//*[@id='multi_employee']/div[4]/input")
 	WebElement AllotReimbursementButton;

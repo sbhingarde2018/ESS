@@ -22,13 +22,17 @@ public class SetLeaveOpeningBalance extends BaseTest{
 		ty.resizeWindow();
 		Thread.sleep(4000);
 		ty.selectLoadButton();
+		Thread.sleep(2000);
+		ty.exitFullscreen();
 		ty.selectMoreButton();
 		Thread.sleep(2000);
-		ty.selectOpeningBalance("2000");
+		ty.selectOpeningBalance("20");
 		ty.selectUpdate();
+		//Thread.sleep(1000);
 		String d=ty.getMessage();
 		Assert.assertEquals(d, "Leave Opening Balance successfully created.");
-		ty.exitFullscreen();
+		ty.selectMoreButton();
+		Thread.sleep(2000);
 		}
 		
 	@Test(priority=1)
@@ -81,7 +85,7 @@ public class SetLeaveOpeningBalance extends BaseTest{
 		obj.selectSetOpeningBalance();
 		obj.clickonGenerateSample();
 		Thread.sleep(3000);
-		obj.selectLeaveType("Leave (L)");
+		obj.selectLeaveType("Casual Leave (CL)");
 		Thread.sleep(3000);
 		obj.clickGenerateSampleExcelTemplate();
 		Thread.sleep(3000);
@@ -91,18 +95,18 @@ public class SetLeaveOpeningBalance extends BaseTest{
 		Thread.sleep(3000);
 		obj.clickExcelTemplateUpload();
 		Thread.sleep(3000);
-		obj.clickChooseFile("C:\\Users\\Aministrator\\Downloads\\LeaveOpeningBalanceUploadExcel20190415-6447-1hjlvu8.xlsx");
+		obj.clickChooseFile("C:\\Users\\AlfaLabs\\Downloads\\LeaveOpeningBalanceUpload.xlsx");
 		Thread.sleep(3000);
 		obj.clickUploadLink();
 		Thread.sleep(3000);
-		obj.selectLeaveType1("Leave (L)");
+		obj.selectLeaveType1("Casual Leave (CL)");
 		obj.resizeWindow();
 		obj.selectGetEmployee();
 		Thread.sleep(5000);
 		obj.selectLoadButton();
 		Thread.sleep(3000);
+		obj.exitFullscreen();
 		obj.selectMoreLink();
 		Thread.sleep(3000);
-		obj.exitFullscreen();
 	}
 }

@@ -12,9 +12,9 @@ public class CheckifEmployeeReimbursementAllotmentGeneralLinkReimbursementMaster
 	WebElement ClickOnEmployee;
 	@FindBy(xpath="//*[@id=\"menu\"]/li[4]/div/div/ul/li[8]/a")
 	WebElement ClickOnReimbursementAllotment;
-	@FindBy(xpath="//*[@id=\"ui-accordion-accordion-header-2\"]/h3")
+	@FindBy(xpath="//h3[contains(text(),'General Link')]")
 	WebElement ClickOnGeneralLinks;
-	@FindBy(xpath="//*[@id=\"ui-accordion-accordion-panel-2\"]/li[1]/a")
+	@FindBy(xpath="//ul[@id='ui-id-6']//a[contains(text(),'Reimbursement Master')]")
 	WebElement ClickOnReimburseMstr;
 	@FindBy(xpath="//*[@id=\"reimb_list\"]/div[1]/span/a")
 	WebElement AddNewReimbursement;
