@@ -27,10 +27,9 @@ public class ManualLeaveAllotment extends BasePage{
 	WebElement LeaveType;
 	@FindBy(id="filter")
 	WebElement GetEmployee;
-	@FindBy(xpath="//*[@id='bf_form']/div[10]/button[1]")
+	@FindBy(xpath="//form[@id='bf_form']//button[contains(text(),'LOAD')]")
 	WebElement LoadButton;
-	
-	@FindBy(id="leave_allotment_value_1457_val")
+	@FindBy(xpath="//table[1]/tbody[1]/tr[1]/td[6]/input[1]")
 	WebElement AllotedBox;
 	@FindBy(xpath="//*[@id='main']/div[6]/div/form/div[4]/button")
 	WebElement UpdateLeaveAllotmentButton;

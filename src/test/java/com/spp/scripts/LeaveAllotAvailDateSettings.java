@@ -68,7 +68,7 @@ public class LeaveAllotAvailDateSettings extends BaseTest {
  		Assert.assertEquals(s, "Employee successfully created");
 	}
 	
-	@Test(priority=2)
+	/*@Test(priority=2)
 	public void ToupdateLeaveAllotAvailDateSettingsviaExcelUpload_SC_108() throws Exception{
 	ToupdateLeaveAllotAvailDateSettingsviaExcelUpload laads = new ToupdateLeaveAllotAvailDateSettingsviaExcelUpload(driver);
 		laads.clickonemployee();
@@ -85,7 +85,7 @@ public class LeaveAllotAvailDateSettings extends BaseTest {
 		Thread.sleep(3000);
 		laads.clickExcelTemplateUpload();
 		Thread.sleep(3000);
-		laads.clickChooseFile("C:\\Users\\AlfaLabs\\Downloads\\AllotAvailFromDateSetting20190415-6447-5giaiu.xlsx");
+		laads.clickChooseFile("C:\\Users\\AlfaLabs\\Downloads\\AllotAvailFromDateSetting.xlsx");
 		Thread.sleep(3000);
 		laads.clickUploadLink();
 		Thread.sleep(3000);
@@ -98,7 +98,7 @@ public class LeaveAllotAvailDateSettings extends BaseTest {
 		laads.selectMoreLink();
 		Thread.sleep(3000);
 		laads.exitFullscreen();
-	}
+	}*/
 	
 	@Test(priority=3)
 	public void TocheckEmployeeswithDOJ01AprilareloadedintheAllotAvailDateConfigurations_SC_1633() throws Exception{

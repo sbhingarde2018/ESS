@@ -18,17 +18,18 @@ public class ManualLeaveAllotmentscript extends BaseTest {
 		rt.selectPayMonth("Mar/2019");
 		rt.selectLeavePolicy("Default");
 		Thread.sleep(4000);
-		rt.selectLeaveType("Leave");
+		rt.selectLeaveType("Casual Leave (CL)");
 		rt.selectGetEmployee();
 		rt.resizeWindow();
-		Thread.sleep(5000);
+		Thread.sleep(3000);
 		rt.selectLoadButton();
-		Thread.sleep(4000);
+		Thread.sleep(2000);
+		rt.exitFullscreen();
 		rt.selectAllotedBox("3");
 		rt.selectUpdateLeaveAllotmentButton();
+		Thread.sleep(3000);
 		String a=rt.getMessage();
 		Assert.assertEquals(a, "Leave allotment details successfully saved.");
-		rt.exitFullscreen();
 		}
 	
 	@Test(priority=1)
