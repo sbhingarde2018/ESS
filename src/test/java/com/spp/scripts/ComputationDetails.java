@@ -15,12 +15,14 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
 		ab.ClickMainComponent();
 		Thread.sleep(2000);
 		ab.ClickBasicEdit();
-		ab.EnterEditedValues("20");
+		ab.EnterEditedValues("21");
 		ab.ClickUpdateBtn();
 		String i=ab.getMessage();
 		Assert.assertEquals(i, "Updated successfully.");
@@ -28,15 +30,18 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
-		ab.ClickMainComponent();
 	}
 	@Test(priority=1)
 	public void EditMainComponentsDAFormingpartofsalary_SC_1056() throws Exception{
 		EditMainComponentsDAFormingpartofsalary ab=new EditMainComponentsDAFormingpartofsalary(driver);
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
 		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
@@ -51,16 +56,19 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
-		ab.ClickMainComponent();
-		
-	}
+		}
+	
 	@Test(priority=2)
 	public void EditMainComponentsDANotformingpartofsalary_SC_1057() throws Exception{
 	EditMainComponentsDANotformingpartofsalary ab=new EditMainComponentsDANotformingpartofsalary(driver);
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
 		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
@@ -75,15 +83,18 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
-		ab.ClickMainComponent();
 	}
 	@Test(priority=3)
 	public void EditMainComponentsCommisionasaofturnover_SC_1058() throws Exception{
 		EditMainComponentsCommisionasaofturnover ab=new EditMainComponentsCommisionasaofturnover(driver);
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
 		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
@@ -98,15 +109,18 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
-		ab.ClickMainComponent();
 	 }
 	@Test(priority=4)
 	public void EditAllowancesHouseRentAllowance_SC_1059() throws Exception{
 		EditAllowancesHouseRentAllowance ab=new EditAllowancesHouseRentAllowance(driver);
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
 		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
@@ -121,16 +135,18 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
-		ab.ClickDetails();
+		ab.selectFinancialYear("2018/2019");
 		Thread.sleep(2000);
-		ab.ClickAllowances();
-		
+		ab.ClickDetails();
+		Thread.sleep(2000);	
 	}
 	@Test(priority=5)
 	public void EditAllowancesConveyanceTransportAllowance_SC_1060() throws Exception{
 		EditAllowancesConveyanceTransportAllowance ab=new EditAllowancesConveyanceTransportAllowance(driver);
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
 		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
@@ -145,17 +161,18 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
-		ab.ClickAllowances();
-		
-		
 	}
 	@Test(priority=6)
 	public void EditAllowancesChildrenHostelAllowance_SC_1061() throws Exception{
 		EditAllowancesChildrenHostelAllowance ab=new EditAllowancesChildrenHostelAllowance(driver);
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
 		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
@@ -170,16 +187,18 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
-		ab.ClickAllowances();
-		
 	}
 	@Test(priority=7)
 	public void EditAllowancesAllowanceforTransportEmployees_SC_1062() throws Exception{
 		EditAllowancesAllowanceforTransportEmployees ab=new EditAllowancesAllowanceforTransportEmployees(driver);
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
 		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
@@ -194,16 +213,18 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
-		ab.ClickDetails();
+		ab.selectFinancialYear("2018/2019");
 		Thread.sleep(2000);
-		ab.ClickAllowances();
-		
+		ab.ClickDetails();
+		Thread.sleep(2000);	
 	}
 	@Test(priority=8)
 	public void EditAllowancesTribalAreaScheduledAreaAgencyAreaAllowance_SC_1063() throws Exception{
 		EditAllowancesTribalAreaScheduledAreaAgencyAreaAllowance ab=new EditAllowancesTribalAreaScheduledAreaAgencyAreaAllowance(driver);
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
 		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
@@ -218,16 +239,18 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
-		ab.ClickAllowances();
-		
 	}
 	@Test(priority=9)
 	public void EditAllowancesSpecialCompensatoryHillyAreaAllowance_SC_1064() throws Exception{
 		EditAllowancesSpecialCompensatoryHillyAreaAllowance ab=new EditAllowancesSpecialCompensatoryHillyAreaAllowance(driver);
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
 		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
@@ -242,16 +265,19 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
-		ab.ClickAllowances();
-		
 	}
+	
 	@Test(priority=10)
 	public void EditAllowancesHighAltitudeAllowance_SC_1065() throws Exception{
 		EditAllowancesHighAltitudeAllowance ab=new EditAllowancesHighAltitudeAllowance(driver);
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
 		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
@@ -266,15 +292,18 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
-		ab.ClickAllowances();
 	}
 	@Test(priority=11)
 	public void EditAllowancesUncongenialClimateAllowance_SC_1066() throws Exception{
 		EditAllowancesUncongenialClimateAllowance ab=new EditAllowancesUncongenialClimateAllowance(driver);
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
 		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
@@ -289,15 +318,18 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
-		ab.ClickAllowances();
 	}
 	@Test(priority=12)
 	public void EditAllowancesSnowBoundAreaOrAvalancheAllowance_SC_1067() throws Exception{
 		EditAllowancesSnowBoundAreaOrAvalancheAllowance ab=new EditAllowancesSnowBoundAreaOrAvalancheAllowance(driver);
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
 		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
@@ -312,15 +344,18 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
-		ab.ClickAllowances();
 	}
 	@Test(priority=13)
 	public void EditAllowancesDifficultAreaOrDisturbedAreaAllowance_SC_1068() throws Exception{
 		EditAllowancesDifficultAreaOrDisturbedAreaAllowance ab=new EditAllowancesDifficultAreaOrDisturbedAreaAllowance(driver);
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
 		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
@@ -335,15 +370,18 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
-		ab.ClickAllowances();
 	}
 	@Test(priority=14)
 	public void EditAllowancesBorderAreaRemoteAreaAllowance_SC_1069() throws Exception{
 		EditAllowancesBorderAreaRemoteAreaAllowance ab=new EditAllowancesBorderAreaRemoteAreaAllowance(driver);
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
 		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
@@ -358,15 +396,18 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
-		ab.ClickAllowances();
 	}
 	@Test(priority=15)
 	public void EditAllowancesCompensatoryFieldAreaAllowance_SC_1070() throws Exception{
 		EditAllowancesCompensatoryFieldAreaAllowance ab=new EditAllowancesCompensatoryFieldAreaAllowance(driver);
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
 		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
@@ -381,15 +422,18 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
-		ab.ClickAllowances();
 	}
 	@Test(priority=16)
 	public void EditAllowancesCompensatoryModifiedFieldAreaAllowance_SC_1071() throws Exception{
 		EditAllowancesCompensatoryModifiedFieldAreaAllowance ab=new EditAllowancesCompensatoryModifiedFieldAreaAllowance(driver);
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
 		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
@@ -404,15 +448,18 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
-		ab.ClickAllowances();
 	}
 	@Test(priority=17)
 	public void EditAllowancesCounterInsurgencyAllowanceGrantedToMembersofArmedForces_SC_1072() throws Exception{
 		EditAllowancesCounterInsurgencyAllowanceGrantedToMembersofArmedForces ab=new EditAllowancesCounterInsurgencyAllowanceGrantedToMembersofArmedForces(driver);
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
 		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
@@ -427,15 +474,18 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
-		ab.ClickAllowances();
 	}
 	@Test(priority=18)
 	public void EditAllowancesUndergroundAllowance_SC_1073() throws Exception{
 		EditAllowancesUndergroundAllowance ab=new EditAllowancesUndergroundAllowance(driver);
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
 		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
@@ -450,15 +500,18 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
-		ab.ClickAllowances();
 	}
 	@Test(priority=19)
 	public void EditAllowancesSpecialCompensatoryHighlyActiveFieldAreaAllowance_SC_1074() throws Exception{
 		EditAllowancesSpecialCompensatoryHighlyActiveFieldAreaAllowance ab=new EditAllowancesSpecialCompensatoryHighlyActiveFieldAreaAllowance(driver);
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
 		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
@@ -473,15 +526,18 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
-		ab.ClickAllowances();
 	}
-	@Test(priority=20)
+	/*@Test(priority=20)
 	public void EditAllowancesHighAltitudeAllowanceforarmedforces_SC_1075() throws Exception{
 		EditAllowancesHighAltitudeAllowanceforarmedforces ab=new EditAllowancesHighAltitudeAllowanceforarmedforces(driver);
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
 		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
@@ -496,15 +552,18 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
-		ab.ClickAllowances();
 	}
 	@Test(priority=21)
 	public void EditAllowancesIslandDutyAllowance_SC_1076() throws Exception{
 		EditAllowancesIslandDutyAllowance ab=new EditAllowancesIslandDutyAllowance(driver);
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
 		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
@@ -519,15 +578,18 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
-		ab.ClickAllowances();
 	}
 	@Test(priority=22)
 	public void EditAllowancesEntertainmentAllowance_SC_1077() throws Exception{
 		EditAllowancesEntertainmentAllowance ab=new EditAllowancesEntertainmentAllowance(driver);
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
 		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
@@ -542,15 +604,18 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
-		ab.ClickAllowances();
 	}
 	@Test(priority=23)
 	public void EditAllowancesAllowanceForRenderingServicesOutsideIndia_SC_1078() throws Exception{
 		EditAllowancesAllowanceForRenderingServicesOutsideIndia ab=new EditAllowancesAllowanceForRenderingServicesOutsideIndia(driver);
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
 		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
@@ -565,15 +630,18 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
-		ab.ClickAllowances();
 	}
 	@Test(priority=24)
 	public void EditAllowancesAllowanceToHighCourtJudge_SC_1079() throws Exception{
 		EditAllowancesAllowanceToHighCourtJudge ab=new EditAllowancesAllowanceToHighCourtJudge(driver);
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
 		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
@@ -588,15 +656,18 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
-		ab.ClickAllowances();
 	}
 	@Test(priority=25)
 	public void EditAllowancesSumptuaryAllowanceHCSCJudges_SC_1080() throws Exception{
 		EditAllowancesSumptuaryAllowanceHCSCJudges ab=new EditAllowancesSumptuaryAllowanceHCSCJudges(driver);
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
 		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
@@ -611,15 +682,18 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
-		ab.ClickAllowances();
 		}
 	@Test(priority=26)
 	public void EditAllowancesAllowanceReceivedByEmployeeOfUNO_SC_1081() throws Exception{
 		EditAllowancesAllowanceReceivedByEmployeeOfUNO ab=new EditAllowancesAllowanceReceivedByEmployeeOfUNO(driver);
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
 		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
@@ -634,15 +708,18 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
-		ab.ClickAllowances();
 		}
 	@Test(priority=27)
 	public void EditAllowancesOtherAllowance_SC_1082() throws Exception{
 		EditAllowancesOtherAllowance ab=new EditAllowancesOtherAllowance(driver);
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
 		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
@@ -657,15 +734,18 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
-		ab.ClickAllowances();
 		}
 	@Test(priority=28)
 	public void EditnameOtherAllowance_SC_1083() throws Exception{
 		EditnameOtherAllowance ab=new EditnameOtherAllowance(driver);
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
 		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
@@ -684,28 +764,26 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
 		ab.ClickAllowances();
 		Thread.sleep(2000);
-		ab.ClickUDAllowanceGiven();
-		ab.EnterEditedValues("20");
-		ab.ClickUpdateBtn();
+		ab.ClickEditName();
+		ab.EnterHeadingName("User Defined");
+		ab.ClickSaveBtn();
+		Thread.sleep(2000);
 		String i=ab.getMessage();
 		Assert.assertEquals(i, "Updated successfully.");
-		Thread.sleep(2000);
-		ab.ClickTDS();
-		ab.ClickComputationDetails();
-		Thread.sleep(2000);
-		ab.ClickDetails();
-		Thread.sleep(2000);
-		ab.ClickAllowances();
 	}
 	@Test(priority=30)
 	public void SelectLimitSpecialCompensatoryHillyAreaAllowance_SC_1085() throws Exception{
 		SelectLimitSpecialCompensatoryHillyAreaAllowance ab=new SelectLimitSpecialCompensatoryHillyAreaAllowance(driver);
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
 		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
@@ -721,15 +799,18 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
-		ab.ClickAllowances();
 	}
 	@Test(priority=31)
 	public void SelectLimitHighAltitudeAllowance_SC_1087() throws Exception{
 		SelectLimitHighAltitudeAllowance ab=new SelectLimitHighAltitudeAllowance(driver);
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
 		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
@@ -745,15 +826,18 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
-		ab.ClickAllowances();
 	}
 	@Test(priority=32)
 	public void SelectLimitUncongenialClimateAllowance_SC_1088() throws Exception{
 		SelectLimitUncongenialClimateAllowance ab=new SelectLimitUncongenialClimateAllowance(driver);
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
 		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
@@ -769,15 +853,18 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
-		ab.ClickAllowances();
 	}
 	@Test(priority=33)
 	public void SelectLimitSnowBoundAreaOrAvalancheAllowance_SC_1089() throws Exception{
 		SelectLimitSnowBoundAreaOrAvalancheAllowance ab=new SelectLimitSnowBoundAreaOrAvalancheAllowance(driver);
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
 		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
@@ -793,15 +880,18 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
-		ab.ClickAllowances();
 	}
 	@Test(priority=34)
 	public void SelectLimitDifficultAreaOrDisturbedAreaAllowance_SC_1090() throws Exception{
 		SelectLimitDifficultAreaOrDisturbedAreaAllowance ab=new SelectLimitDifficultAreaOrDisturbedAreaAllowance(driver);
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
 		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
@@ -817,15 +907,18 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
-		ab.ClickAllowances();
 	}
 	@Test(priority=35)
 	public void SelectLimitBorderAreaRemoteAreaAllowance_SC_1091() throws Exception{
 		SelectLimitBorderAreaRemoteAreaAllowance ab=new SelectLimitBorderAreaRemoteAreaAllowance(driver);
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
 		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
@@ -841,15 +934,18 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
-		ab.ClickAllowances();
 	}
 	@Test(priority=36)
 	public void SelectLimitHighAltitudeAllowanceforarmedforces_SC_1092() throws Exception{
 		SelectLimitHighAltitudeAllowanceforarmedforces ab=new SelectLimitHighAltitudeAllowanceforarmedforces(driver);
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
 		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
@@ -865,15 +961,18 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
-		ab.ClickAllowances();
 	}
 	@Test(priority=37)
 	public void EditPerquisitesRentFreeAccommodation_SC_1093() throws Exception{
 		EditPerquisitesRentFreeAccommodation ab=new EditPerquisitesRentFreeAccommodation(driver);
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
 		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
@@ -888,15 +987,18 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
-		ab.ClickPerquisites();
 	}
 	@Test(priority=38)
 	public void EditPerquisitesMedical_SC_1094() throws Exception{
 		EditPerquisitesMedical ab=new EditPerquisitesMedical(driver);
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
 		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
@@ -911,15 +1013,18 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
-		ab.ClickPerquisites();
 	}
 	@Test(priority=39)
 	public void EditPerquisitesLeaveTravelConcession_SC_1095() throws Exception{
 		EditPerquisitesLeaveTravelConcession ab=new EditPerquisitesLeaveTravelConcession(driver);
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
 		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
@@ -934,15 +1039,18 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
-		ab.ClickPerquisites();
 	}
 	@Test(priority=40)
 	public void EditPerquisitesFreeEducationforhouseholdmembers_SC_1096() throws Exception{
 		EditPerquisitesFreeEducationforhouseholdmembers ab=new EditPerquisitesFreeEducationforhouseholdmembers(driver);
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
 		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
@@ -957,15 +1065,18 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
-		ab.ClickPerquisites();
 	}
 	@Test(priority=41)
 	public void EditPerquisitesFreeeducationforEmployeesChildren_SC_1097() throws Exception{
 		EditPerquisitesFreeeducationforEmployeesChildren ab=new EditPerquisitesFreeeducationforEmployeesChildren(driver);
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
 		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
@@ -980,15 +1091,18 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
-		ab.ClickPerquisites();
 	}
 	@Test(priority=42)
 	public void EditPerquisitesGas_SC_1098() throws Exception{
 		EditPerquisitesGas ab=new EditPerquisitesGas(driver);
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
 		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
@@ -1003,15 +1117,18 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
-		ab.ClickPerquisites();
 	}
 	@Test(priority=43)
 	public void EditPerquisitesElectricity_SC_1099() throws Exception{
 		EditPerquisitesElectricity ab=new EditPerquisitesElectricity(driver);
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
 		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
@@ -1026,15 +1143,18 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
-		ab.ClickPerquisites();
 	}
 	@Test(priority=44)
 	public void EditPerquisitesWater_SC_1100() throws Exception{
 		EditPerquisitesWater ab=new EditPerquisitesWater(driver);
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
 		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
@@ -1049,15 +1169,18 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
-		ab.ClickPerquisites();
 	}
 	@Test(priority=45)
 	public void EditPerquisitesGardener_SC_1101() throws Exception{
 		EditPerquisitesGardener ab=new EditPerquisitesGardener(driver);
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
 		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
@@ -1072,15 +1195,18 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
-		ab.ClickPerquisites();
 	}
 	@Test(priority=46)
 	public void EditPerquisitesSweeper_SC_1102() throws Exception{
 		EditPerquisitesSweeper ab=new EditPerquisitesSweeper(driver);
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
 		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
@@ -1095,15 +1221,18 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
-		ab.ClickPerquisites();
 	}
 	@Test(priority=47)
 	public void EditPerquisitesWatchman_SC_1103() throws Exception{
 		EditPerquisitesWatchman ab=new EditPerquisitesWatchman(driver);
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
 		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
@@ -1118,15 +1247,18 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
-		ab.ClickPerquisites();
 	}
 	@Test(priority=48)
 	public void EditPerquisitesPersonalAttendant_SC_1104() throws Exception{
 		EditPerquisitesPersonalAttendant ab=new EditPerquisitesPersonalAttendant(driver);
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
 		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
@@ -1141,15 +1273,18 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
-		ab.ClickPerquisites();
 	}
 	@Test(priority=49)
 	public void EditPerquisitesEmployerContributionToPF_SC_1105() throws Exception{
 		EditPerquisitesEmployerContributionToPF ab=new EditPerquisitesEmployerContributionToPF(driver);
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
 		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
@@ -1164,15 +1299,18 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
-		ab.ClickPerquisites();
 	}
 	@Test(priority=50)
 	public void EditPerquisitesInterestCreditPF_SC_1106() throws Exception{
 		EditPerquisitesInterestCreditPF ab=new EditPerquisitesInterestCreditPF(driver);
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
 		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
@@ -1187,15 +1325,18 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
-		ab.ClickPerquisites();
 	}
 	@Test(priority=51)
 	public void EditPerquisitesTaxPaidByEmployer_SC_1107() throws Exception{
 		EditPerquisitesTaxPaidByEmployer ab=new EditPerquisitesTaxPaidByEmployer(driver);
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
 		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
@@ -1210,15 +1351,18 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
-		ab.ClickPerquisites();
 	}
 	@Test(priority=52)
 	public void EditPerquisitesHotelAccommodation_SC_1108() throws Exception{
 		EditPerquisitesHotelAccommodation ab=new EditPerquisitesHotelAccommodation(driver);
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
 		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
@@ -1233,15 +1377,18 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
-		ab.ClickPerquisites();
 	}
 	@Test(priority=53)
 	public void EditPerquisitesInterestfreeorconcessionalloans_SC_1109() throws Exception{
 		EditPerquisitesInterestfreeorconcessionalloans ab=new EditPerquisitesInterestfreeorconcessionalloans(driver);
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
 		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
@@ -1256,15 +1403,18 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
-		ab.ClickPerquisites();
 	}
 	@Test(priority=54)
 	public void EditPerquisitesCarOtherAutomotive_SC_1110() throws Exception{
 		EditPerquisitesCarOtherAutomotive ab=new EditPerquisitesCarOtherAutomotive(driver);
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
 		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
@@ -1279,15 +1429,18 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
-		ab.ClickPerquisites();
 	}
 	@Test(priority=55)
 	public void EditPerquisitesHolidayExpenses_SC_1111() throws Exception{
 		EditPerquisitesHolidayExpenses ab=new EditPerquisitesHolidayExpenses(driver);
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
 		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
@@ -1302,15 +1455,18 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
-		ab.ClickPerquisites();
 	}
 	@Test(priority=56)
 	public void EditPerquisitesFreefoodandnonalcoholicbeverges_SC_1112() throws Exception{
 		EditPerquisitesFreefoodandnonalcoholicbeverges ab=new EditPerquisitesFreefoodandnonalcoholicbeverges(driver);
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
 		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
@@ -1325,15 +1481,18 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
-		ab.ClickPerquisites();
 	}
 	@Test(priority=57)
 	public void EditPerquisitesGiftsVouchers_SC_1113() throws Exception{
 		EditPerquisitesGiftsVouchers ab=new EditPerquisitesGiftsVouchers(driver);
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
 		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
@@ -1348,15 +1507,18 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
-		ab.ClickPerquisites();
 	}
 	@Test(priority=58)
 	public void EditPerquisitesFeespaidthroughCreditCard_SC_1114() throws Exception{
 		EditPerquisitesFeespaidthroughCreditCard ab=new EditPerquisitesFeespaidthroughCreditCard(driver);
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
 		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
@@ -1371,15 +1533,18 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
-		ab.ClickPerquisites();
 	}
 	@Test(priority=59)
 	public void EditPerquisitesClubExpenses_SC_1115() throws Exception{
 		EditPerquisitesClubExpenses ab=new EditPerquisitesClubExpenses(driver);
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
 		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
@@ -1394,15 +1559,18 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
-		ab.ClickPerquisites();
 	}
 	@Test(priority=60)
 	public void EditPerquisitesUseofmovableassetsbyemployees_SC_1116() throws Exception{
 		EditPerquisitesUseofmovableassetsbyemployees ab=new EditPerquisitesUseofmovableassetsbyemployees(driver);
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
 		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
@@ -1417,15 +1585,18 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
-		ab.ClickPerquisites();
 	}
 	@Test(priority=61)
 	public void EditPerquisitesStockOptionsnonqualifiedoptions_SC_1117() throws Exception{
 		EditPerquisitesStockOptionsnonqualifiedoptions ab=new EditPerquisitesStockOptionsnonqualifiedoptions(driver);
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
 		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
@@ -1440,15 +1611,18 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
-		ab.ClickPerquisites();
 	}
 	@Test(priority=62)
 	public void EditPerquisitesOtherPerquisites_SC_1118() throws Exception{
 		EditPerquisitesOtherPerquisites ab=new EditPerquisitesOtherPerquisites(driver);
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
 		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
@@ -1463,15 +1637,18 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
-		ab.ClickPerquisites();
 	}
 	@Test(priority=63)
 	public void EditPerquisitesSuperannuation_SC_1119() throws Exception{
 		EditPerquisitesSuperannuation ab=new EditPerquisitesSuperannuation(driver);
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
 		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
@@ -1486,15 +1663,18 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
-		ab.ClickPerquisites();
 	}
 	@Test(priority=64)
 	public void EditnameOtherPerquisites_SC_1120() throws Exception{
 		EditnameOtherPerquisites ab=new EditnameOtherPerquisites(driver);
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
 		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
@@ -1513,6 +1693,8 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
 		ab.ClickPerquisites();
@@ -1526,15 +1708,18 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
-		ab.ClickPerquisites();
 	}
 	@Test(priority=66)
 	public void EditnameUserDefined2_SC_1122() throws Exception{
 		EditnameUserDefined2 ab=new EditnameUserDefined2(driver);
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
 		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
@@ -1553,6 +1738,8 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
 		ab.ClickAllowances();
@@ -1570,6 +1757,8 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
 		ab.ClickOthersTab();
@@ -1583,15 +1772,18 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
-		ab.ClickOthersTab();
 	}
 	@Test(priority=69)
 	public void EditOthersCommissionReceived_SC_1125() throws Exception{
 		EditOthersCommissionReceived ab=new EditOthersCommissionReceived(driver);
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
 		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
@@ -1606,15 +1798,18 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
-		ab.ClickOthersTab();
 	}
 	@Test(priority=70)
 	public void EditOthersProfitInlieuofSalary_SC_1126() throws Exception{
 		EditOthersProfitInlieuofSalary ab=new EditOthersProfitInlieuofSalary(driver);
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
 		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
@@ -1629,11 +1824,12 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
-		ab.ClickOthersTab();
 	}
-	@Test(priority=71)
+	/*@Test(priority=71)
 	public void EditOthersBonus_SC_1127() throws Exception{
 		EditOthersBonus ab=new EditOthersBonus(driver);
 		ab.ClickTDS();
@@ -2885,7 +3081,7 @@ public class ComputationDetails extends BaseTest {
 		ab.EnterArrearsOfRentRec("10");
 		ab.EnterNotChargedEarlier("10");
 		ab.ClickPopulate();
-	}
+	}*/
 }
 
 

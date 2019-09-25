@@ -11,7 +11,7 @@ public class EditAllowancesSnowBoundAreaOrAvalancheAllowance extends BasePage {
 	WebElement TDS;
 	@FindBy(xpath="//*[@id=\"menu\"]/li[7]/div/div/ul/li[2]/a")
 	WebElement ComputationDetails;
-	@FindBy(xpath="//*[@id=\"computed_employee_tds\"]/tbody/tr/td [contains(text(),'Tina')]/parent::tr/td[4]/a")
+	@FindBy(xpath="//tbody/tr/td[contains(text(),'Jaya')]/parent::tr/td[4]/a")
 	WebElement Details;
 	@FindBy(xpath="//*[@id=\"main\"]/div[2]/div/nav/ul/li[4]/a/span")
 	WebElement Allowances;
@@ -23,6 +23,8 @@ public class EditAllowancesSnowBoundAreaOrAvalancheAllowance extends BasePage {
 	WebElement UpdateBtn;
 	@FindBy(xpath="//*[@id=\"show_message\"]/div/strong")
 	WebElement UpdateSuccess;
+	@FindBy(xpath="//select[@id='computed_financial_year']")
+	WebElement SelectFinancialYear;
 	
 	public EditAllowancesSnowBoundAreaOrAvalancheAllowance(WebDriver driver) {
 		super(driver);
@@ -53,4 +55,7 @@ public class EditAllowancesSnowBoundAreaOrAvalancheAllowance extends BasePage {
 	public String getMessage() {
 		return UpdateSuccess.getText();
 	}
+	public void selectFinancialYear(String value) {
+		dropDownSelect(SelectFinancialYear, value);
+		}
 }

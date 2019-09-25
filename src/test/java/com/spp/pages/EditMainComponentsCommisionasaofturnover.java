@@ -11,7 +11,7 @@ public class EditMainComponentsCommisionasaofturnover extends BasePage{
 	WebElement TDS;
 	@FindBy(xpath="//*[@id=\"menu\"]/li[7]/div/div/ul/li[2]/a")
 	WebElement ComputationDetails;
-	@FindBy(xpath="//*[@id=\"computed_employee_tds\"]/tbody/tr/td [contains(text(),'Tina')]/parent::tr/td[4]/a")
+	@FindBy(xpath="//tbody/tr/td[contains(text(),'Jaya')]/parent::tr/td[4]/a")
 	WebElement Details;
 	@FindBy(xpath="//*[@id=\"main\"]/div[2]/div/nav/ul/li[3]/a/span")
 	WebElement MainComponent;
@@ -23,6 +23,8 @@ public class EditMainComponentsCommisionasaofturnover extends BasePage{
 	WebElement UpdateBtn;
 	@FindBy(xpath="//*[@id=\"show_message\"]/div/strong")
 	WebElement UpdateSuccessMessage;
+	@FindBy(xpath="//select[@id='computed_financial_year']")
+	WebElement SelectFinancialYear;
 	
 public EditMainComponentsCommisionasaofturnover(WebDriver driver) {
 		super(driver);
@@ -52,5 +54,8 @@ public EditMainComponentsCommisionasaofturnover(WebDriver driver) {
 	}
 	public String getMessage() {
 		return UpdateSuccessMessage.getText();
+	}
+	public void selectFinancialYear(String value) {
+	dropDownSelect(SelectFinancialYear, value);
 	}
 }
