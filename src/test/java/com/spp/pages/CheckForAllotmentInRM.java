@@ -51,7 +51,7 @@ public class CheckForAllotmentInRM extends BasePage {
 	WebElement createReimbursementMaster;
 	@FindBy(xpath="//strong[text()='Reimbursement Master is successfully created.']")
 	WebElement successfullMassege;
-	@FindBy(xpath="//*[@class='action-delete']")
+	@FindBy(xpath="//tbody/tr/td[contains(text(),'ReimMaster02')]/parent::tr/td[5]/a")
 	WebElement DeleteButton;
 	@FindBy(id = "reimbursement_master_tds_ref_option_id")
 	WebElement TDSRef;
@@ -60,7 +60,8 @@ public class CheckForAllotmentInRM extends BasePage {
 	@FindBy(id="sal_date")
 	WebElement AllotmentDate;
 	@FindBy(xpath="//*[@id='allotment_link']/img")
-	WebElement FunctionKey;	
+	WebElement FunctionKey;
+
 	
 	public void selectEmployee() {
 		Employee.click();
@@ -139,6 +140,10 @@ public class CheckForAllotmentInRM extends BasePage {
 	}
 	public void ClickOnFunctionKey() {
 		FunctionKey.click();
+	}
+	public void clickDeleteMasterButton() throws Exception{
+		DeleteButton.click();
+		switchToPopUpAndAccept(driver);
 	}
 
 }

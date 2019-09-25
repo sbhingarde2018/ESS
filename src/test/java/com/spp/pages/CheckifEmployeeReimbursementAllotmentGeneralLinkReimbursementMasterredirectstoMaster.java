@@ -14,7 +14,7 @@ public class CheckifEmployeeReimbursementAllotmentGeneralLinkReimbursementMaster
 	WebElement ClickOnReimbursementAllotment;
 	@FindBy(xpath="//h3[contains(text(),'General Link')]")
 	WebElement ClickOnGeneralLinks;
-	@FindBy(xpath="//ul[@id='ui-id-6']//a[contains(text(),'Reimbursement Master')]")
+	@FindBy(xpath="//a[contains(text(),'Reimbursement Master')]")
 	WebElement ClickOnReimburseMstr;
 	@FindBy(xpath="//*[@id=\"reimb_list\"]/div[1]/span/a")
 	WebElement AddNewReimbursement;
@@ -32,7 +32,7 @@ public class CheckifEmployeeReimbursementAllotmentGeneralLinkReimbursementMaster
 	WebElement createReimbursementMaster;
 	@FindBy(xpath="//strong[text()='Reimbursement Master is successfully created.']")
 	WebElement successfullMassege;
-	@FindBy(xpath="//*[@class='action-delete']")
+	@FindBy(xpath="//tbody/tr/td[contains(text(),'MedicinalReimbursement')]/parent::tr/td[5]/a")
 	WebElement DeleteButton;
 	@FindBy(id="master")
 	WebElement masterLink;
@@ -40,6 +40,9 @@ public class CheckifEmployeeReimbursementAllotmentGeneralLinkReimbursementMaster
 	WebElement reimbursemnetLink;
 	@FindBy(id = "reimbursement_master_tds_ref_option_id")
 	WebElement TDSRef;
+	@FindBy(xpath="//ul[@id='ui-id-6']//a[contains(text(),'Reimbursement Master')]")
+	WebElement ClickOnEmpReimburseMstr;
+	
 	public CheckifEmployeeReimbursementAllotmentGeneralLinkReimbursementMasterredirectstoMaster(WebDriver driver) {
 		super(driver);
 		PageFactory.initElements(driver, this);	
@@ -61,9 +64,10 @@ public void clickMastserLink(){
 	public void clickongenrallinks() {
 		ClickOnGeneralLinks.click();
 	}
-	public void clickonreimbursemstr() {
-		ClickOnReimburseMstr.click();
+	public void clickonEmpreimbursemstr() {
+		ClickOnEmpReimburseMstr.click();
 	}
+	
 	public void addnewreimbursement() {
 		AddNewReimbursement.click();
 	}
@@ -101,5 +105,7 @@ public void clickMastserLink(){
 	public void selectTDSRef(String value){
 		dropDownSelect(TDSRef, value);
 	}
-
+	public void clickonreimbursemstr() {
+		ClickOnReimburseMstr.click();
+	}
 }

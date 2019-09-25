@@ -172,6 +172,10 @@ public class ReimbursementAllotment extends BaseTest{
 		rt.selectAllotmentDate("01 December 2018");
 		Thread.sleep(3000);
 		rt.ClickOnFunctionKey();
+		rt.clickMastserLink();
+		rt.clickReimbursementMaster();
+		rt.clickDeleteMasterButton();
+		Thread.sleep(5000);
 		}
 		
 	@Test(priority=5)
@@ -185,7 +189,7 @@ public class ReimbursementAllotment extends BaseTest{
 		ty.selectDeleteReimbursementAllotmentsButton();
 		String d=ty.getMessage();
 		Assert.assertEquals(d, "Reimbursement Allotments were successfully deleted");
-		} 
+		}
 		
 	 
 	@Test(priority=8)
@@ -209,7 +213,7 @@ public class ReimbursementAllotment extends BaseTest{
 		//rt.clickMastserLink();
 		//rt.clickReimbursementMaster();
 		//rt.clickDeleteButton();
-		} 
+		}
 	
 		
 	@Test(priority=10)
@@ -234,7 +238,7 @@ public class ReimbursementAllotment extends BaseTest{
 		ty.selectLogDate("15 February 2019");
 		ty.selectGetErrorButton();
 		Thread.sleep(4000);
-		} 
+		}
 			
 	@Test(priority=12)
 	public void CheckifEmployeeReimbursementAllotmentGeneralLinkReimMasterredirectstoMaster_SC_471() throws Exception{
@@ -243,7 +247,7 @@ public class ReimbursementAllotment extends BaseTest{
 		am.clickonreimbursement();
 		am.clickongenrallinks();
 		Thread.sleep(2000);
-		am.clickonreimbursemstr();
+		am.clickonEmpreimbursemstr();
 		Thread.sleep(1000);
 		am.addnewreimbursement();
 		Thread.sleep(1000);
@@ -260,7 +264,10 @@ public class ReimbursementAllotment extends BaseTest{
 		String s=am.getMessage();
 		Assert.assertEquals(s, "Reimbursement Master is successfully created.");
 		Thread.sleep(5000);
-		//am.clickDeleteMasterButton();
+		am.clickMastserLink();
+		am.clickonreimbursemstr();
+		am.clickDeleteMasterButton();
+		Thread.sleep(5000);
 	}
 	
 	@Test(priority=13)
