@@ -25,11 +25,11 @@
 	<class name="com.spp.scripts.SalaryRateDetails"/>
     <class name="com.spp.scripts.BulkIncrementDetails"/>
     <class name="com.spp.scripts.BulkSalaryRateDetails"/>
-    <class name="com.spp.scripts.BulkClassificationChange"/>-->
-    <class name="com.spp.scripts.ReimbursementAllotment"/> 
+    <class name="com.spp.scripts.BulkClassificationChange"/>
+    <class name="com.spp.scripts.ReimbursementAllotment"/>
      <class name="com.spp.scripts.LeaveAllotAvailDateSettings"/>
-    <class name="com.spp.scripts.SetLeaveOpeningBalance"/>
-    <class name="com.spp.scripts.ManualLeaveAllotmentscript"/>
+	<class name="com.spp.scripts.SetLeaveOpeningBalance"/>
+    <class name="com.spp.scripts.ManualLeaveAllotmentscript"/>-->
     <class name="com.spp.scripts.ComputationDetails"/>
     
    <!--<class name="com.spp.scripts.Gratuity"/>

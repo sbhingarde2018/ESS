@@ -11,18 +11,20 @@ public class EditnameOtherAllowance extends BasePage {
 	WebElement TDS;
 	@FindBy(xpath="//*[@id=\"menu\"]/li[7]/div/div/ul/li[2]/a")
 	WebElement ComputationDetails;
-	@FindBy(xpath="//*[@id=\"computed_employee_tds\"]/tbody/tr/td [contains(text(),'Tina')]/parent::tr/td[4]/a")
+	@FindBy(xpath="//tbody/tr/td[contains(text(),'Jaya')]/parent::tr/td[4]/a")
 	WebElement Details;
 	@FindBy(xpath="//*[@id=\"main\"]/div[2]/div/nav/ul/li[4]/a/span")
 	WebElement Allowances;
-	@FindBy(xpath="//*[@id=\"references\"]/table/tbody/tr[110]/td[1]/table/tbody/tr/th[2]/a")
+	@FindBy(xpath="//td[1]/table/tbody/tr/th[2]/a")
 	WebElement EditName;
-	@FindBy(id="custom_heading")
+	@FindBy(xpath="//*[@id=\"custom_heading\"]")
 	WebElement EditHeading;
 	@FindBy(xpath="//div/div/form/div/div/input")
 	WebElement SaveBtn;    
 	@FindBy(xpath="//*[@id=\"show_message\"]/div/strong")
 	WebElement UpdateSuccess;
+	@FindBy(xpath="//select[@id='computed_financial_year']")
+	WebElement SelectFinancialYear;
 	
 	public EditnameOtherAllowance(WebDriver driver) {
 		super(driver);
@@ -52,5 +54,8 @@ public class EditnameOtherAllowance extends BasePage {
 	}
 	public String getMessage() {
 		return UpdateSuccess.getText();
-}
+	}
+	public void selectFinancialYear(String value) {
+		dropDownSelect(SelectFinancialYear, value);
+	}
 }
