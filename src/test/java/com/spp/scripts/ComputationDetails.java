@@ -530,7 +530,7 @@ public class ComputationDetails extends BaseTest {
 		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
-	}*/
+	}
 	@Test(priority=20)
 	public void EditAllowancesHighAltitudeAllowanceforarmedforces_SC_1075() throws Exception{
 		EditAllowancesHighAltitudeAllowanceforarmedforces ab=new EditAllowancesHighAltitudeAllowanceforarmedforces(driver);
@@ -556,7 +556,6 @@ public class ComputationDetails extends BaseTest {
 		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
-		
 	}
 	@Test(priority=21)
 	public void EditAllowancesIslandDutyAllowance_SC_1076() throws Exception{
@@ -1044,8 +1043,8 @@ public class ComputationDetails extends BaseTest {
 		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
-	}
-	/*@Test(priority=40)
+	}*/
+	@Test(priority=40)
 	public void EditPerquisitesFreeEducationforhouseholdmembers_SC_1096() throws Exception{
 		EditPerquisitesFreeEducationforhouseholdmembers ab=new EditPerquisitesFreeEducationforhouseholdmembers(driver);
 		ab.ClickTDS();
@@ -1684,7 +1683,7 @@ public class ComputationDetails extends BaseTest {
 		ab.clickEditName();
 		ab.EnterName("Paid Perquisites");
 		ab.ClickSaveBtn();
-		Thread.sleep(2000);
+		//Thread.sleep(2000);
 		String i=ab.getMessage();
 		Assert.assertEquals(i, "Updated successfully.");
 	}
@@ -1729,7 +1728,7 @@ public class ComputationDetails extends BaseTest {
 		ab.clickEditName();
 		ab.EnterName("Paid Perquisites");
 		ab.ClickSaveBtn();
-		Thread.sleep(2000);
+		//Thread.sleep(2000);
 		String i=ab.getMessage();
 		Assert.assertEquals(i, "Updated successfully.");
 	}
@@ -1748,7 +1747,7 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickEditName();
 		ab.EnterHeadingName("Paid Allowance");
 		ab.ClickSaveBtn();
-		Thread.sleep(2000);
+		//Thread.sleep(2000);
 		String i=ab.getMessage();
 		Assert.assertEquals(i, "Updated successfully.");
 	}
@@ -1804,7 +1803,7 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickDetails();
 		Thread.sleep(2000);
 	}
-	@Test(priority=70)
+	/*@Test(priority=70)
 	public void EditOthersProfitInlieuofSalary_SC_1126() throws Exception{
 		EditOthersProfitInlieuofSalary ab=new EditOthersProfitInlieuofSalary(driver);
 		ab.ClickTDS();
