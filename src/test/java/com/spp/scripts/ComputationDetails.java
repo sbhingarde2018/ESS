@@ -9,7 +9,7 @@ import com.spp.pages.*;
 
 public class ComputationDetails extends BaseTest {
 	
-	@Test(priority=0)
+	/*@Test(priority=0)
 	public void EditMainComponentBasic_SC_1055() throws Exception{
 		EditMainComponentBasic ab=new EditMainComponentBasic(driver);
 		ab.ClickTDS();
@@ -530,8 +530,8 @@ public class ComputationDetails extends BaseTest {
 		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
-	}
-	/*@Test(priority=20)
+	}*/
+	@Test(priority=20)
 	public void EditAllowancesHighAltitudeAllowanceforarmedforces_SC_1075() throws Exception{
 		EditAllowancesHighAltitudeAllowanceforarmedforces ab=new EditAllowancesHighAltitudeAllowanceforarmedforces(driver);
 		ab.ClickTDS();
@@ -556,6 +556,7 @@ public class ComputationDetails extends BaseTest {
 		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
+		
 	}
 	@Test(priority=21)
 	public void EditAllowancesIslandDutyAllowance_SC_1076() throws Exception{
@@ -1044,7 +1045,7 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickDetails();
 		Thread.sleep(2000);
 	}
-	@Test(priority=40)
+	/*@Test(priority=40)
 	public void EditPerquisitesFreeEducationforhouseholdmembers_SC_1096() throws Exception{
 		EditPerquisitesFreeEducationforhouseholdmembers ab=new EditPerquisitesFreeEducationforhouseholdmembers(driver);
 		ab.ClickTDS();
@@ -1829,11 +1830,13 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickDetails();
 		Thread.sleep(2000);
 	}
-	/*@Test(priority=71)
+	@Test(priority=71)
 	public void EditOthersBonus_SC_1127() throws Exception{
 		EditOthersBonus ab=new EditOthersBonus(driver);
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
 		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
@@ -1848,9 +1851,10 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
-		ab.ClickOthersTab();
 	}
 	@Test(priority=72)
 	public void EditOthersAdvanceSalary_SC_1128() throws Exception{
