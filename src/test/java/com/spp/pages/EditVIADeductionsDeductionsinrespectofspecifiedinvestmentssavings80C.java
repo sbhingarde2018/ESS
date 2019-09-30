@@ -11,7 +11,7 @@ public class EditVIADeductionsDeductionsinrespectofspecifiedinvestmentssavings80
 	WebElement TDS;
 	@FindBy(xpath="//*[@id=\"menu\"]/li[7]/div/div/ul/li[2]/a")
 	WebElement ComputationDetails;
-	@FindBy(xpath="//*[@id=\"computed_employee_tds\"]/tbody/tr/td [contains(text(),'Tina')]/parent::tr/td[4]/a")
+	@FindBy(xpath="//tbody/tr/td[contains(text(),'Jaya')]/parent::tr/td[4]/a")
 	WebElement Details;
 	@FindBy(xpath="//*[@id=\"ui-id-2\"]/li[2]/a")
 	WebElement VIDeductions;
@@ -33,6 +33,8 @@ public class EditVIADeductionsDeductionsinrespectofspecifiedinvestmentssavings80
 	WebElement UpdateSuccess;
 	@FindBy(xpath="//*/tbody/tr[1]/td[8]/a")
 	WebElement Delete;
+	@FindBy(xpath="//select[@id='computed_financial_year']")
+	WebElement SelectFinancialYear;
 	
 	public EditVIADeductionsDeductionsinrespectofspecifiedinvestmentssavings80C(WebDriver driver) {
 		super(driver);
@@ -76,5 +78,8 @@ public class EditVIADeductionsDeductionsinrespectofspecifiedinvestmentssavings80
 	}
 	public void ClickDelete() {
 		Delete.click();
+	}
+	public void selectFinancialYear(String value) {
+		dropDownSelect(SelectFinancialYear, value);
 	}
 }
