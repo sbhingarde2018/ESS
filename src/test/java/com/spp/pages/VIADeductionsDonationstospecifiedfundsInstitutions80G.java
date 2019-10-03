@@ -11,7 +11,7 @@ public class VIADeductionsDonationstospecifiedfundsInstitutions80G extends BaseP
 	WebElement TDS;
 	@FindBy(xpath="//*[@id=\"menu\"]/li[7]/div/div/ul/li[2]/a")
 	WebElement ComputationDetails;
-	@FindBy(xpath="//*[@id=\"computed_employee_tds\"]/tbody/tr/td [contains(text(),'Tina')]/parent::tr/td[4]/a")
+	@FindBy(xpath="//tbody/tr/td[contains(text(),'Jaya')]/parent::tr/td[4]/a")
 	WebElement Details;
 	@FindBy(xpath="//*[@id=\"ui-id-2\"]/li[2]/a")
 	WebElement VIDeductions;
@@ -37,6 +37,8 @@ public class VIADeductionsDonationstospecifiedfundsInstitutions80G extends BaseP
 	WebElement SaveBtn;
 	@FindBy(xpath="//*[@id=\"show_message\"]/div/strong")
 	WebElement UpdateSuccess;
+	@FindBy(xpath="//select[@id='computed_financial_year']")
+	WebElement SelectFinancialYear;
 	
 	public VIADeductionsDonationstospecifiedfundsInstitutions80G(WebDriver driver) {
 		super(driver);
@@ -92,5 +94,8 @@ public class VIADeductionsDonationstospecifiedfundsInstitutions80G extends BaseP
 	public void EnterPincode(String value) {
 		Pincode.clear();
 		Pincode.sendKeys(value);
+	}
+	public void selectFinancialYear(String value) {
+		dropDownSelect(SelectFinancialYear, value);
 	}
 }
