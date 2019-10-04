@@ -2317,7 +2317,7 @@ public class ComputationDetails extends BaseTest {
 		String i=ab.getMessage();
 		Assert.assertEquals(i, "Saved Successfully.");
 	}*/
-	@Test(priority=90)
+	/*@Test(priority=90)
 	public void EditVIADeductionsContributionstoPensionfundsfromcentralgovernmentemployees80CCD1_SC_1146() throws Exception{
 		EditVIADeductionsContributionstoPensionfundsfromcentralgovernmentemployees80CCD1 ab=new EditVIADeductionsContributionstoPensionfundsfromcentralgovernmentemployees80CCD1(driver);
 		ab.ClickTDS();
@@ -2420,8 +2420,8 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickSaveBtn();
 		//String i=ab.getMessage();
 		//Assert.assertEquals(i, "Saved Successfully.");
-	}
-	/*@Test(priority=95)
+	}*/
+	@Test(priority=95)
 	public void EditVIADeductionsMedicalinsurancepremiumpaid80DSenior_SC_1151() throws Exception{
 		EditVIADeductionsMedicalinsurancepremiumpaid80DSenior ab=new EditVIADeductionsMedicalinsurancepremiumpaid80DSenior(driver);
 		ab.ClickTDS();
@@ -2436,21 +2436,23 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickDeductions();
 		Thread.sleep(2000);
 		ab.CheckboxSenior();
-		ab.EnterHealthInsurancePremium("20");
+		ab.EnterHealthInsurancePremium("50");
 		ab.EnterPreventiveHealthCheckup("10");
 		ab.Clickcompute();
-		String j=ab.getMessage();
-		Assert.assertEquals(j, "Qualifying Amount Calculated");
-		Thread.sleep(5000);
+		//String j=ab.getMessage();
+		//Assert.assertEquals(j, "Qualifying Amount Calculated");
+		Thread.sleep(2000);
+		//ab.CheckboxSenior();
 		ab.ClickSaveBtn();
+		//Thread.sleep(2000);
 		//String i=ab.getMessage();
 		//Assert.assertEquals(i, "Saved successfully.");
-		ab.CheckboxSenior();
-		ab.Clickcompute();
-		Thread.sleep(2000);
-		ab.ClickSaveBtn();
-	}*/
-	@Test(priority=96)
+		//ab.CheckboxSenior();
+		//ab.Clickcompute();
+		//Thread.sleep(2000);
+		//ab.ClickSaveBtn();
+	}
+	/*@Test(priority=96)
 	public void EditVIADeductionsMedicalinsurancepremiumpaid80DForparents_SC_1152() throws Exception{
 		EditVIADeductionsMedicalinsurancepremiumpaid80DForparents ab=new EditVIADeductionsMedicalinsurancepremiumpaid80DForparents(driver);
 		ab.ClickTDS();
@@ -2473,8 +2475,8 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickSaveBtn();
 		//String i=ab.getMessage();
 		//Assert.assertEquals(i, "Saved successfully.");
-	}
-	/*@Test(priority=97)
+	}*/
+	@Test(priority=97)
 	public void EditVIADeductionsMedicalinsurancepremiumpaid80DSeniorForparents_SC_1153() throws Exception{
 		EditVIADeductionsMedicalinsurancepremiumpaid80DSeniorForparents ab=new EditVIADeductionsMedicalinsurancepremiumpaid80DSeniorForparents(driver);
 		ab.ClickTDS();
@@ -2498,13 +2500,13 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickSaveBtn();
 		//String i=ab.getMessage();
 		//Assert.assertEquals(i, "Saved successfully.");
-		Thread.sleep(2000);
-		ab.CheckboxSenior();
-		ab.Clickcompute();
-		Thread.sleep(2000);
-		ab.ClickSaveBtn();
-	}*/
-	/*@Test(priority=98)
+		//Thread.sleep(2000);
+		//ab.CheckboxSenior();
+		//ab.Clickcompute();
+		//Thread.sleep(2000);
+		//ab.ClickSaveBtn();
+	}
+	@Test(priority=98)
 	public void EditVIADeductionsMedicalinsurancepremiumpaid80DSeniorIncaseifVeryseniorcitizen_SC_1154() throws Exception{
 		EditVIADeductionsMedicalinsurancepremiumpaid80DSeniorIncaseifVeryseniorcitizen ab=new EditVIADeductionsMedicalinsurancepremiumpaid80DSeniorIncaseifVeryseniorcitizen(driver);
 		ab.ClickTDS();
@@ -2529,13 +2531,13 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickSaveBtn();
 		//String i=ab.getMessage();
 		//Assert.assertEquals(i, "Saved successfully.");
-		Thread.sleep(2000);
-		ab.CheckboxSenior();
-		ab.Clickcompute();
-		Thread.sleep(2000);
-		ab.ClickSaveBtn();
-	}*/
-	/*@Test(priority=99)
+		//Thread.sleep(2000);
+		//ab.CheckboxSenior();
+		//ab.Clickcompute();
+		//Thread.sleep(2000);
+		//ab.ClickSaveBtn();
+	}
+	@Test(priority=99)
 	public void EditVIADeductionsMedicalinsurancepremiumpaid80DForparentsIncaseifVeryseniorcitizen_SC_1155() throws Exception{
 		EditVIADeductionsMedicalinsurancepremiumpaid80DForparentsIncaseifVeryseniorcitizen ab=new EditVIADeductionsMedicalinsurancepremiumpaid80DForparentsIncaseifVeryseniorcitizen(driver);
 		ab.ClickTDS();
@@ -2560,13 +2562,13 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickSaveBtn();
 		//String i=ab.getMessage();
 		//Assert.assertEquals(i, "Saved successfully.");
-		Thread.sleep(2000);
-		ab.CheckboxSenior();
-		ab.Clickcompute();
-		Thread.sleep(2000);
-		ab.ClickSaveBtn();
-	}*/
-	@Test(priority=100)
+		//Thread.sleep(2000);
+		//ab.CheckboxSenior();
+		//ab.Clickcompute();
+		//Thread.sleep(2000);
+		//ab.ClickSaveBtn();
+	}
+	/*@Test(priority=100)
 	public void EditVIADeductionsExpensesonmedicaltreatmentMaintenanceetconHandicappeddependents80DD_SC_1156() throws Exception{
 		EditVIADeductionsExpensesonmedicaltreatmentMaintenanceetconHandicappeddependents80DD ab=new EditVIADeductionsExpensesonmedicaltreatmentMaintenanceetconHandicappeddependents80DD(driver);
 		ab.ClickTDS();
@@ -2741,7 +2743,7 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickDeductions();
 		Thread.sleep(3000);
 		ab.ClickDelete();
-	}
+	}*/
 	/*@Test(priority=109)
 	public void EditVIADeductionsDeductioninrespectofrentpaid80GG_SC_1165() throws Exception{
 		EditVIADeductionsDeductioninrespectofrentpaid80GG ab=new EditVIADeductionsDeductioninrespectofrentpaid80GG(driver);
@@ -2759,14 +2761,16 @@ public class ComputationDetails extends BaseTest {
 		ab.EnterRentPaid("5000");
 		ab.EnterNoofMonths("2");
 		ab.ClickComputeBtn();
-		Thread.sleep(3000);
+		Thread.sleep(2000);
 		ab.ClickSaveBtn();
-	}
-	/*@Test(priority=110)
+	}*/
+	@Test(priority=110)
 	public void EditVIADeductionsContributionstopoliticalparties80GGC_SC_1166() throws Exception{
 		EditVIADeductionsContributionstopoliticalparties80GGC ab=new EditVIADeductionsContributionstopoliticalparties80GGC(driver);
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
 		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
@@ -2777,12 +2781,14 @@ public class ComputationDetails extends BaseTest {
 		ab.EnterParticulars("10");
 		ab.EnterGrossAmount("10");
 		ab.ClickSaveBtn();
-	}*/
-	/*@Test(priority=111)
+	}
+	@Test(priority=111)
 	public void DeleteVIADeductionsContributionstopoliticalparties80GGC_SC_1167() throws Exception{
 		DeleteVIADeductionsContributionstopoliticalparties80GGC ab=new DeleteVIADeductionsContributionstopoliticalparties80GGC(driver);
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
 		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
@@ -2797,6 +2803,8 @@ public class ComputationDetails extends BaseTest {
 		EditVIADeductionsRoyaltyIncomeetcofAuthorsofcertainbooks80QQB ab=new EditVIADeductionsRoyaltyIncomeetcofAuthorsofcertainbooks80QQB(driver);
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
 		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
@@ -2814,6 +2822,8 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
 		ab.ClickVIDeduction();
@@ -2826,6 +2836,8 @@ public class ComputationDetails extends BaseTest {
 		EditVIADeductionsRoyaltyonPatents80RRB ab=new EditVIADeductionsRoyaltyonPatents80RRB(driver);
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
 		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
@@ -2843,6 +2855,8 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
 		ab.ClickVIDeduction();
@@ -2856,6 +2870,8 @@ public class ComputationDetails extends BaseTest {
 		EditVIADeductionsIncomeofblindorphysicallyhandicappedindividual80U ab=new EditVIADeductionsIncomeofblindorphysicallyhandicappedindividual80U(driver);
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
 		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
@@ -2873,6 +2889,8 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
 		ab.ClickVIDeduction();
@@ -2889,6 +2907,8 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
 		ab.ClickVIDeduction();
@@ -2904,6 +2924,8 @@ public class ComputationDetails extends BaseTest {
 		SaveIncomeFromOtherSourcesInterestFromBanks ab=new SaveIncomeFromOtherSourcesInterestFromBanks(driver);
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
 		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
@@ -2922,6 +2944,8 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
 		ab.ClickIncomeFromOtherSources();
@@ -2933,12 +2957,14 @@ public class ComputationDetails extends BaseTest {
 		String i=ab.getMessage();
 		Assert.assertEquals(i, "Successfully saved");
 	}
-	@Test(priority=121)
+	/*@Test(priority=121)
 	public void SaveIncomeFromOtherSourcesInterestonKVP_SC_1177() throws Exception {
 		SaveIncomeFromOtherSourcesInterestonKVP ab=new SaveIncomeFromOtherSourcesInterestonKVP(driver);
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
 		ab.ClickIncomeFromOtherSources();
@@ -2949,8 +2975,8 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickSaveBtn();
 		String i=ab.getMessage();
 		Assert.assertEquals(i, "Successfully saved");
-	}
-	@Test(priority=122)
+	}*/
+	/*@Test(priority=122)
 	public void SaveIncomeFromOtherSourcesInterestonSecurities_SC_1178() throws Exception {
 		SaveIncomeFromOtherSourcesInterestonSecurities ab=new SaveIncomeFromOtherSourcesInterestonSecurities(driver);
 		ab.ClickTDS();

@@ -11,14 +11,16 @@ public class DeleteVIADeductionsRoyaltyonPatents80RRB extends BasePage {
 	WebElement TDS;
 	@FindBy(xpath="//*[@id=\"menu\"]/li[7]/div/div/ul/li[2]/a")
 	WebElement ComputationDetails;
-	@FindBy(xpath="//*[@id=\"computed_employee_tds\"]/tbody/tr/td [contains(text(),'Tina')]/parent::tr/td[4]/a")
+	@FindBy(xpath="//tbody/tr/td[contains(text(),'Jaya')]/parent::tr/td[4]/a")
 	WebElement Details;
-	@FindBy(xpath="//*[@id=\\\"ui-id-2\\\"]/li[2]/a")
+	@FindBy(xpath="//*[@id=\"ui-id-2\"]/li[2]/a")
 	WebElement VIDeductions;
 	@FindBy(xpath="//table/tbody/tr[18]/td[3]/a")
 	WebElement RoyaltyIncomeetcofAuthorsofcertainbooks80QQB;
 	@FindBy(xpath="//tbody/tr[1]/td[5]/a/img")
 	WebElement Delete;
+	@FindBy(xpath="//select[@id='computed_financial_year']")
+	WebElement SelectFinancialYear;
 	
 	public DeleteVIADeductionsRoyaltyonPatents80RRB(WebDriver driver) {
 		super(driver);
@@ -41,5 +43,8 @@ public class DeleteVIADeductionsRoyaltyonPatents80RRB extends BasePage {
 	}
 	public void ClickDelete() {
 		Delete.click();
+	}
+	public void selectFinancialYear(String value) {
+		dropDownSelect(SelectFinancialYear, value);
 	}
 }
