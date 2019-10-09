@@ -12,14 +12,17 @@ public class DeleteLetOutProperty extends BasePage {
 	WebElement TDS;
 	@FindBy(xpath="//*[@id=\"menu\"]/li[7]/div/div/ul/li[2]/a")
 	WebElement ComputationDetails;
-	@FindBy(xpath="//*[@id=\"computed_employee_tds\"]/tbody/tr/td [contains(text(),'Tina')]/parent::tr/td[4]/a")
+	@FindBy(xpath="//tbody/tr/td[contains(text(),'Jaya')]/parent::tr/td[4]/a")
 	WebElement Details;
 	@FindBy(xpath="//*[@id=\"ui-id-3\"]/h3")
 	WebElement HouseRentProperty;
-	@FindBy(xpath="//*[@id=\"ui-id-4\"]/li[1]/a")
+	@FindBy(xpath="//a[contains(text(),'Let Out Property')]")
 	WebElement LetOutProperty;
 	@FindBy(xpath="//tbody/tr/td[5]/a[2]")
 	WebElement Delete;
+	@FindBy(xpath="//select[@id='computed_financial_year']")
+	WebElement SelectFinancialYear;
+
 	
 	public DeleteLetOutProperty(WebDriver driver) {
 		super(driver);
@@ -42,5 +45,8 @@ public class DeleteLetOutProperty extends BasePage {
 	}
 	public void ClickDelete() {
 		Delete.click();
+	}
+	public void selectFinancialYear(String value) {
+		dropDownSelect(SelectFinancialYear, value);
 	}
 }

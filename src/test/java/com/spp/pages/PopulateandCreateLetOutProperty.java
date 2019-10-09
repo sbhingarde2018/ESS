@@ -12,11 +12,11 @@ public class PopulateandCreateLetOutProperty extends BasePage {
 	WebElement TDS;
 	@FindBy(xpath="//*[@id=\"menu\"]/li[7]/div/div/ul/li[2]/a")
 	WebElement ComputationDetails;
-	@FindBy(xpath="//*[@id=\"computed_employee_tds\"]/tbody/tr/td [contains(text(),'Tina')]/parent::tr/td[4]/a")
+	@FindBy(xpath="//tbody/tr/td[contains(text(),'Jaya')]/parent::tr/td[4]/a")
 	WebElement Details;
 	@FindBy(xpath="//*[@id=\"ui-id-3\"]/h3")
 	WebElement HouseRentProperty;
-	@FindBy(xpath="//*[@id=\"ui-id-4\"]/li[1]/a")
+	@FindBy(xpath="//a[contains(text(),'Let Out Property')]")
 	WebElement LetOutProperty;
 	@FindBy(xpath="//div[4]/span/a")
 	WebElement Add;
@@ -38,6 +38,8 @@ public class PopulateandCreateLetOutProperty extends BasePage {
 	WebElement PopulateAndCreate;
 	@FindBy(xpath="//*[@id=\"reimbursement_claim_result_response\"]/div/strong")
 	WebElement UpdateSuccess;
+	@FindBy(xpath="//select[@id='computed_financial_year']")
+	WebElement SelectFinancialYear;
 	
 	
 	public PopulateandCreateLetOutProperty(WebDriver driver) {
@@ -95,5 +97,8 @@ public class PopulateandCreateLetOutProperty extends BasePage {
 	}
 	public String getMessage() {
 		return UpdateSuccess.getText();
+	}
+	public void selectFinancialYear(String value) {
+		dropDownSelect(SelectFinancialYear, value);
 	}
 }

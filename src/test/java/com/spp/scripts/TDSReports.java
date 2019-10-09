@@ -15,10 +15,11 @@ public class TDSReports extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickReports();
 		Thread.sleep(3000);
-		ab.SelectAssessmenth("2018/2019");
+		ab.SelectAssessmenth("2019/2020");
 		ab.SelectReportType("Salary Extract");
 		ab.ClickGetEmployees();
 		ab.resizeWindow();
+		Thread.sleep(3000);
 		ab.ClickLoad();
 		Thread.sleep(4000);
 		ab.exitFullscreen();
@@ -37,9 +38,11 @@ public class TDSReports extends BaseTest {
 		ab.SelectReportType("Statement Of Total Income");
 		ab.ClickGetEmployees();
 		ab.resizeWindow();
+		Thread.sleep(3000);
 		ab.ClickLoad();
 		Thread.sleep(4000);
 		ab.exitFullscreen();
+		Thread.sleep(3000);
 		ab.ClickSelectEmpt();
 		ab.ClickGenerateReport();
 		Thread.sleep(2000);

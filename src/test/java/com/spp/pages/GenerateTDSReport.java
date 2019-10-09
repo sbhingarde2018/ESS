@@ -17,7 +17,7 @@ public class GenerateTDSReport extends BasePage {
 	WebElement ReportType;
 	@FindBy(id="get_employees")
 	WebElement GetEmployees;
-	@FindBy(xpath="//*[@id=\"bf_form\"]/div[10]/button[1]")
+	@FindBy(xpath="//form[@id='bf_form']//button[contains(text(),'LOAD')]")
 	WebElement Load;
 	@FindBy(id="employee_ids_")
 	WebElement SelectEmp;
