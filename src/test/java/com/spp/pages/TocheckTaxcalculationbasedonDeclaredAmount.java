@@ -9,22 +9,35 @@ import com.spp.common.BasePage;
 public class TocheckTaxcalculationbasedonDeclaredAmount extends BasePage {
 	@FindBy(id="tds")
 	WebElement TDS;
-	@FindBy(xpath="//*[@id=\"menu\"]/li[7]/div/div/ul/li[2]/a")
+	@FindBy(xpath="//a[contains(text(),'Computation Details')]")
 	WebElement ComputationalDetails;
-	@FindBy(xpath="//*[@id=\"computed_employee_tds\"]/tbody/tr/td[contains(text(),'Tina')]/parent::tr/td[4]/a")
+	@FindBy(xpath="//tbody/tr/td[contains(text(),'Jaya')]/parent::tr/td[4]/a")
 	WebElement Details;
 	@FindBy(xpath="//*[@id=\"ui-id-2\"]/li[2]/a")
 	WebElement VIDeductions;
 	@FindBy(xpath="//*[@id=\"six_a_ded_details\"]/table/tbody/tr[1]/td[3]")
 	WebElement Deductions80C;
-	@FindBy(id="six_a_deduction_manual_entry_sub_heads_1_tds_head_id")
+	@FindBy(xpath="//select[@id='six_a_deduction_manual_entry_sub_heads_2_tds_head_id']")
 	WebElement Particulars;
-	@FindBy(id="six_a_deduction_manual_entry_sub_heads_1_salary_gross_amount")
+	@FindBy(xpath="//input[@id='six_a_deduction_manual_entry_sub_heads_2_salary_gross_amount']")
 	WebElement GrossAmount;
-	@FindBy(id="six_a_deduction_manual_entry_sub_heads_1_proof_amount")
+	@FindBy(xpath="//input[@id='six_a_deduction_manual_entry_sub_heads_2_proof_amount']")
 	WebElement ProofAmount;
 	@FindBy(id="save_deductions")
 	WebElement SaveBtn;
+	@FindBy(xpath="//select[@id='tds_financial_year']")
+	WebElement computationSelectFinancialYear;
+	@FindBy(xpath="//*[@id='menu']/li[7]/div/div/ul/li[1]/a")
+	WebElement Computation;
+	@FindBy(id="filter_head")
+	WebElement ClickonFilter;
+	@FindBy(xpath="//form[@id='bf_form']//button[contains(text(),'LOAD')]")
+	WebElement ClickOnLoad;
+	@FindBy(xpath="//input[@name='commit']")
+	WebElement Compute;
+	@FindBy(xpath="//select[@id='computed_financial_year']")
+	WebElement cdSelectFinancialYear;
+	
 	
 	public TocheckTaxcalculationbasedonDeclaredAmount(WebDriver driver) {
 		super(driver);
@@ -32,6 +45,9 @@ public class TocheckTaxcalculationbasedonDeclaredAmount extends BasePage {
 	}
 	public void ClickTDS() {
 		TDS.click();
+	}
+	public void ClickComputation() {
+		Computation.click();
 	}
 	public void ClickComputationalDetails() {
 		ComputationalDetails.click();
@@ -58,6 +74,21 @@ public class TocheckTaxcalculationbasedonDeclaredAmount extends BasePage {
 	}
 	public void ClickSaveBtn() {
 		SaveBtn.click();
+	}
+	public void ComputationselectFinancialYear(String value) {
+		dropDownSelect(computationSelectFinancialYear, value);
+	}
+	public void clickonfilter() {
+		ClickonFilter.click();
+	}
+	public void clickonload() {
+		ClickOnLoad.click();
+	}
+	public void clickComputeButton() {
+		Compute.click();
+	}
+	public void CDselectFinancialYear(String value) {
+		dropDownSelect(cdSelectFinancialYear, value);
 	}
 }
 

@@ -21,7 +21,8 @@ public class TocheckifProofAmountcanbesetforTDSCalculation extends BasePage {
 	WebElement SuccessMessage;
 	@FindBy(id="option_setting_serializer_tds_calculation_based_on_declared_amount")
 	WebElement DeclaredAmount;
-	
+	@FindBy(xpath="//*[@id='option_setting_serializer_fin_year']")
+	WebElement Year;
 	
 	public TocheckifProofAmountcanbesetforTDSCalculation(WebDriver driver) {
 		super(driver);
@@ -47,5 +48,8 @@ public class TocheckifProofAmountcanbesetforTDSCalculation extends BasePage {
 	}
 	public void ClickDeclaredAmount() {
 		DeclaredAmount.click();
+	}
+	public void SelectYear(String value) {
+    	dropDownSelect(Year, value);
 	}
 }

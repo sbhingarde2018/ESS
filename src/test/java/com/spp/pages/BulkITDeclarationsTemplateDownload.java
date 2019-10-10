@@ -15,9 +15,9 @@ public class BulkITDeclarationsTemplateDownload extends BasePage {
 	WebElement FinancialYear;
 	@FindBy(id="filter_head")
 	WebElement FilterHead;
-	@FindBy(xpath="//*[@id=\"bf_form\"]/div[10]/button[1]")
+	@FindBy(xpath="//form[@id='bf_form']//button[contains(text(),'LOAD')]")
 	WebElement Load;
-	@FindBy(xpath="//tbody/tr/td[contains(text(),'Tina')]/parent::tr/td[1]")
+	@FindBy(xpath="//tbody/tr/td[contains(text(),'Jaya')]/parent::tr/td[1]")
 	WebElement SelectEmp;
 	@FindBy(xpath="//*[@id=\"bulk_it_download\"]/div[5]/input")
 	WebElement Download;

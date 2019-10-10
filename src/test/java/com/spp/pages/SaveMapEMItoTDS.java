@@ -11,13 +11,13 @@ public class SaveMapEMItoTDS extends BasePage {
 	WebElement TDS;
 	@FindBy(xpath="//li[7]/div/div/ul/li[4]/a")
 	WebElement MonthlyDeductions;
-	@FindBy(id="fin_month_year")
+	@FindBy(xpath="//select[@id='fin_month_year']")
 	WebElement MonthYear;
 	@FindBy(id="salary_group_id")
 	WebElement SalaryStructure;
 	@FindBy(id="get_tds_employees")
 	WebElement GetEmployees;
-	@FindBy(xpath="//*[@id=\"bf_form\"]/div[10]/button[1]")
+	@FindBy(xpath="//form[@id='bf_form']//button[contains(text(),'LOAD')]")
 	WebElement Load;
 	@FindBy(id="map_emi")
 	WebElement MapEmitoTds;
@@ -27,7 +27,8 @@ public class SaveMapEMItoTDS extends BasePage {
 	WebElement Save;
 	@FindBy(xpath="//*[@id=\"show_message\"]/div/strong")
 	WebElement SaveSuccess;
-	
+	@FindBy(xpath="//*[@id='tds_fin_year']")
+	WebElement Year;
 	
 	public SaveMapEMItoTDS(WebDriver driver) {
 		super(driver);
@@ -62,5 +63,8 @@ public class SaveMapEMItoTDS extends BasePage {
 	}
 	public String getMessage1() {
     	return SaveSuccess.getText();
+	}
+	public void SelectYear(String value) {
+    	dropDownSelect(Year, value);
 	}
 }
