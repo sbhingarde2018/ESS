@@ -76,6 +76,7 @@ public class AddNewEmployeeTDS extends BasePage{
 	WebElement EnterUANNo;
 	@FindBy(id="employee_statutory_aadhar_no")
 	WebElement EnterAadharNo;
+	
 	public AddNewEmployeeTDS(WebDriver driver){
 		super(driver);
 		PageFactory.initElements( driver, this);
@@ -123,72 +124,68 @@ public class AddNewEmployeeTDS extends BasePage{
 		dropDownSelect(SelectState, value);
 	}
 	
-	 public void selectstatdetails() {
+	public void selectstatdetails() {
 		 SelectStatDetails.click();
-	 }
-	 public void checkTDS() {
+	}
+	public void checkTDS() {
 	    	CheckTDS.click();
 	}
-	    public void selectpanoption(String value) {
+	public void selectpanoption(String value) {
 	    	dropDownSelect(SelectPanOption, value);
-	    }
-	    public void enterpanno(String value) {
+	}
+	public void enterpanno(String value) {
 	    EnterPANNo.sendKeys(value);
 	}
-	    public void entereffectivedatePAN(String value){
+	public void entereffectivedatePAN(String value){
 	    EffectiveFromDate.sendKeys(value);
 	}
-	    public void selectclassificationdetail(){
-	    	SelectClassficationDetail.click();
-	    }
-	    public void selectsalstructure(String value) {
-	    	dropDownSelect(SelectSalaryGroup, value);
-	    }
-	    public void selectbranch(String value) {
-	    	dropDownSelect(SelectBranch, value);
-	    }
-	    public void selectattendancestructure(String value) {
-	    	dropDownSelect(SelectAttendanceConfigId, value);
-	    }
-	    public void selectbank(String value) {
-	    	dropDownSelect(SelectFinanacialInstitution, value);
-	    }
-	    public void selectleavepolicy(String value) {
-	    	dropDownSelect(SelectLeavyPolicyId, value);
-	    }
-	    public void selectdesignation(String value) {
-	    	dropDownSelect(SelectDesignation, value);
-	    }
-	    public void entersaldate(String value) throws Exception{
-			EnterSalDate.clear();
-	    	EnterSalDate.sendKeys(value);
-		}
-	    public void createemployee() {
-	    	CreateEmployee.click();
-	    }
-	    public String getMessage(){
-	    	return successfullMessage.getText();
-	    }
-	    
-	    public void enterPFNo(String value) {
-	    	EnterPFNO.sendKeys(value);
-	    }
-	    public void enterEffectivePF(String value) {
-	    	EffectiveFromPF.sendKeys(value);
-	    }
-	    public void enterESINo(String value) {
-	    	
-	    	EnterESINo.sendKeys(value);
-	    }
-	    
-	     public void enterEffectiveESI(String value) {
-	    	 EffectiveFromESI.sendKeys(value);
-	 	    }
-	     public void enterUANNo(String value) {
-	 	    	EnterUANNo.sendKeys(value);
-	 	    }
-	     public void enterAADHARNo(String value) {
-	 	    	EnterAadharNo.sendKeys(value);
-	 	    }
-	    
+	public void selectclassificationdetail(){
+	    SelectClassficationDetail.click();
+	}
+	public void selectsalstructure(String value) {
+	    dropDownSelect(SelectSalaryGroup, value);
+	}
+	public void selectbranch(String value) {
+	    dropDownSelect(SelectBranch, value);
+	}
+	public void selectattendancestructure(String value) {
+	    dropDownSelect(SelectAttendanceConfigId, value);
+	}
+	public void selectbank(String value) {
+	    dropDownSelect(SelectFinanacialInstitution, value);
+	}
+    public void selectleavepolicy(String value) {
+	    dropDownSelect(SelectLeavyPolicyId, value);
+	}
+	public void selectdesignation(String value) {
+	    dropDownSelect(SelectDesignation, value);
+	}
+	public void entersaldate(String value) throws Exception{
+		EnterSalDate.clear();
+	    EnterSalDate.sendKeys(value);
+	}
+	public void createemployee() {
+	    CreateEmployee.click();
+	}
+	public String getMessage(){
+	    return successfullMessage.getText();
+	}
+	public void enterPFNo(String value) {
+	    EnterPFNO.sendKeys(value);
+	}
+	public void enterEffectivePF(String value) {
+	    EffectiveFromPF.sendKeys(value);
+	}
+	public void enterESINo(String value) {
+	    EnterESINo.sendKeys(value);
+	}
+	public void enterEffectiveESI(String value) {
+	    EffectiveFromESI.sendKeys(value);
+	}
+	public void enterUANNo(String value) {
+	 	EnterUANNo.sendKeys(value);
+	}
+	 public void enterAADHARNo(String value) {
+	 	EnterAadharNo.sendKeys(value);
+	}    
 }

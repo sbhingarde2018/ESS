@@ -17,11 +17,11 @@ public class AddNewSalaryAllotment extends BasePage{
 	WebElement ClickonListingEmployee;
 	@FindBy(id="filter_head")
 	WebElement ClickonFilter;
-	@FindBy(xpath="//*[@id=\"bf_form\"]/div[10]/button[1]")
+	@FindBy(xpath="//form[@id='bf_form']//button[contains(text(),'LOAD')]")
 	WebElement ClickOnLoad;
 	@FindBy(xpath="//*[@id=\"main\"]/div[2]/nav/ul/li[1]/a") 
 	WebElement SelectPageTwo;
-	@FindBy(xpath="//*[@id=\"notalloted\"]/tbody/tr/td[contains(text(),'Raj')]/parent::tr/td[4]/a")
+	@FindBy(xpath="//table/tbody/tr/td[contains(text(),'Rihana')]/parent::tr/td[4]/a")
 	WebElement ClickOnAllotSalary;
 	@FindBy(id="month_year")
 	WebElement SelectMonthYear;
