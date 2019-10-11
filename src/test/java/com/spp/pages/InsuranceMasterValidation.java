@@ -59,7 +59,7 @@ public class InsuranceMasterValidation extends BasePage {
 		SelectCheckBox.click();
 	}
 	
-	public void clickOnCreateLoan() throws Exception{
+	public void clickOnCreateInsurance() throws Exception{
 		Clickoncreate.click();
 	}
 	
@@ -71,7 +71,7 @@ public class InsuranceMasterValidation extends BasePage {
 	public String getInsuranceMasterErorMessage(){
 		return InsuranceMasterErorMessage.getText();
 	}
-	public String getSuccessMessageMessage(){
+	public String getSuccessMessage(){
 		return SuccMessage.getText();
 	}
 

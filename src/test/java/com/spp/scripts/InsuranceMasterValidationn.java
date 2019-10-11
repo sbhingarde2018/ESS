@@ -20,7 +20,7 @@ public class InsuranceMasterValidationn extends BaseTest{
 		Thread.sleep(2000);
 		IM.selectCheckBox();
 		Thread.sleep(2000);
-		IM.clickOnCreateLoan();
+		IM.clickOnCreateInsurance();
 		Thread.sleep(2000);
 		String S1 = IM.getInsuranceNameError();
 		Thread.sleep(2000);
@@ -37,9 +37,9 @@ public class InsuranceMasterValidationn extends BaseTest{
 		Thread.sleep(2000);
 		IM.selectCheckBox();
 		Thread.sleep(2000);
-		IM.clickOnCreateLoan();
+		IM.clickOnCreateInsurance();
 		Thread.sleep(2000);
-		String S2 = IM.getSuccessMessageMessage();
+		String S2 = IM.getSuccessMessage();
 		Thread.sleep(2000);
 		Assert.assertEquals(S2, "Insurance successfully created");
 		Thread.sleep(5000);
@@ -55,7 +55,7 @@ public class InsuranceMasterValidationn extends BaseTest{
 		Thread.sleep(2000);
 		IM.selectCheckBox();
 		Thread.sleep(2000);
-		IM.clickOnCreateLoan();
+		IM.clickOnCreateInsurance();
 		Thread.sleep(2000);
 		String S3 = IM.getInsuranceMasterErorMessage();
 		Thread.sleep(2000);
@@ -72,9 +72,9 @@ public class InsuranceMasterValidationn extends BaseTest{
 		Thread.sleep(2000);
 		IM.selectCheckBox();
 		Thread.sleep(2000);
-		IM.clickOnCreateLoan();
+		IM.clickOnCreateInsurance();
 		Thread.sleep(2000);
-		String S4 = IM.getSuccessMessageMessage();
+		String S4 = IM.getSuccessMessage();
 		Thread.sleep(2000);
 		Assert.assertEquals(S4, "Insurance successfully created");
 		Thread.sleep(5000);
