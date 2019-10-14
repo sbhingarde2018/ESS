@@ -79,8 +79,6 @@ public class InsuranceMasterValidationn extends BaseTest{
 		Assert.assertEquals(S4, "Insurance successfully created");
 		Thread.sleep(5000);
 		
-		
-
 }
 	
 	

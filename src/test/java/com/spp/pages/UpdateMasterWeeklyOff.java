@@ -92,3 +92,4 @@ public class UpdateMasterWeeklyOff extends BasePage{
 		switchToPopUpAndAccept(driver);
 	}
 }
+

@@ -31,6 +31,7 @@ public class UpdateCalculationTypeLumpsum extends BasePage{
 	@FindBy(xpath="//strong[text()='Salary structure detail succesfully updated']")
 	WebElement successfullMessage;
 	
+	
 	public UpdateCalculationTypeLumpsum(WebDriver driver){
 		super(driver);
 		PageFactory.initElements(driver, this);
@@ -80,3 +81,4 @@ public class UpdateCalculationTypeLumpsum extends BasePage{
 		return successfullMessage.getText();
 	}
 }
+
