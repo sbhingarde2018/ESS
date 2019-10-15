@@ -76,10 +76,10 @@ public class Arrears extends BaseTest {
 		cc.EnterArrearName("Salary_ArrearMS");
 		cc.EnterArrearDescription("Salary Arrears");
 		cc.ClickManualCheckBox();
-		cc.selectArrearFrom("Mar/2020");
-		cc.selectArrearTo("Mar/2020");
+		cc.selectArrearFrom("Mar/2019");
+		cc.selectArrearTo("May/2019");
 		Thread.sleep(3000);
-		cc.selectPaymonth("Mar/2020");
+		cc.selectPaymonth("May/2019");
 		cc.ClickAdvancedSettingsTab();
 		cc.ClickStatutory();
 		cc.ClickCreateButton();
@@ -88,6 +88,7 @@ public class Arrears extends BaseTest {
 		//cc.selectDeleteButton();
 		
 	}
+	
   @Test(priority=1)
 	public void ComputationDetailsToArrear_SC_133() throws InterruptedException{
 	ComputationDetailsToArrear cc=new ComputationDetailsToArrear(driver);
@@ -126,9 +127,9 @@ public class Arrears extends BaseTest {
 		cc.EnterArrearDescription("Salary Arrears");
 		cc.ClickManualCheckBox();
 		cc.ClickLumpsumCheckBox();
-		cc.selectArrearFrom("Nov/2019");
+		cc.selectArrearFrom("Sep/2019");
 		Thread.sleep(3000);
-		cc.selectPaymonth("Nov/2019");
+		cc.selectPaymonth("Sep/2019");
 		cc.ClickAdvancedSettingsTab();
 		cc.ClickStatutory();
 		//cc.ClickConsiderforCalc();
@@ -179,7 +180,7 @@ public class Arrears extends BaseTest {
 		cs.clickonarrearreport();
 		Thread.sleep(2000);
 		cs.selectreporttype("Arrear Salary Report");
-		cs.selectpaymonth("Mar/2020");
+		cs.selectpaymonth("May/2019");
 		cs.getemployees();
 		cs.resizeWindow();
 		Thread.sleep(3000);
@@ -188,7 +189,7 @@ public class Arrears extends BaseTest {
 		cs.exitFullscreen();
 		//cs.selectemployee();
 		cs.generatereport();
-	}
+	}/*
 	@Test(priority=5)
 	public void CheckifSalaryArrearsGeneralLinkPaymonthsredirectstoCreateNewPaymonthpage_SC_501() throws Exception {
 		CheckifSalaryArrearsGeneralLinkPaymonthsredirectstoCreateNewPaymonthpage lp=new CheckifSalaryArrearsGeneralLinkPaymonthsredirectstoCreateNewPaymonthpage(driver);
@@ -203,7 +204,7 @@ public class Arrears extends BaseTest {
 		//lp.ClickDelete();
 		//Thread.sleep(3000);
 		//lp.DeleteConfirm();
-	}
+	}*/
 	@Test(priority=6)
 	public void CheckArrearsRedirectToMasterModule_SC_502() throws InterruptedException{
 	CheckArrearsRedirectToMasterModule cc=new CheckArrearsRedirectToMasterModule(driver);
@@ -1449,4 +1450,5 @@ public class Arrears extends BaseTest {
 		cc.ClickDelete();
 		cc.switchToPopUpAndAccept(driver);
 	}
+	
 }

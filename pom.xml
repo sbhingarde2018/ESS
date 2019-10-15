@@ -107,7 +107,7 @@
                 <version>2.18.1</version>
                 <configuration>
                     <suiteXmlFiles>
-                        <suiteXmlFile>C:\reylongitrepo\testng.xml</suiteXmlFile>
+                        <suiteXmlFile>C:\Users\Admin\git\spp_automation_alfa\testng.xml</suiteXmlFile>
                     </suiteXmlFiles>
                 </configuration>
             </plugin>

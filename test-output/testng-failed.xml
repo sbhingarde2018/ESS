@@ -1,23 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]">
-  <test name="Default test(failed)">
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.spp.scripts.TDSArrears">
+      <class name="com.spp.scripts.GroupInsuranceMasterValidationn">
         <methods>
-          <include name="PublishSalary_SC_330"/>
+          <include name="GroupInsuranceMasterValidationn_sc_1780"/>
           <include name="preCondition"/>
-          <include name="AddNewSalaryAllotment_SC_327"/>
-          <include name="AddNewEmployee_SC_326"/>
-          <include name="ToCheckTDSArrears_SC_334"/>
+          <include name="closeFrameWork"/>
           <include name="postCondition"/>
-          <include name="ComputeArrear_SC_332"/>
-          <include name="TDSComputation_SC_333"/>
+          <include name="closeBrowser"/>
           <include name="initBrowser"/>
           <include name="initApplication"/>
           <include name="initFrameWork"/>
+          <include name="cleanApplication"/>
         </methods>
-      </class> <!-- com.spp.scripts.TDSArrears -->
+      </class> <!-- com.spp.scripts.GroupInsuranceMasterValidationn -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

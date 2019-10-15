@@ -44,7 +44,10 @@ public class ReimbursementMaster extends BaseTest {
 		Thread.sleep(2000);
 		String s=rm.getMessage();
 		Assert.assertEquals(s, "Reimbursement Master is successfully updated.");
+		
+		
 	}
+	/*
 	@Test(priority=1)
 	public void UpdateReimbursementMstrwithConsiderClaimAmtOnPresentDays_SC_444() throws Exception{
 		UpdateReimbursementMstrwithConsiderClaimAmtOnPresentDays rm=new UpdateReimbursementMstrwithConsiderClaimAmtOnPresentDays(driver);
@@ -280,4 +283,5 @@ public class ReimbursementMaster extends BaseTest {
 		String s=dr.getMessage();
 		Assert.assertEquals(s, "Reimbursement Master is successfully deleted");
 	}
+	*/
 }
