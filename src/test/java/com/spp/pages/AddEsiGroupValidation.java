@@ -48,7 +48,7 @@ public class AddEsiGroupValidation extends BasePage {
 	WebElement cutoff;
 	@FindBy(id="esi_group_rate_round_off")
 	WebElement rounoff;
-	@FindBy(xpath="//td[text()='ESI_ATest']//following::td[3]//span[1]/a")
+	@FindBy(xpath="//td[text()='ESI_Bangalore']//following::td[3]//span[1]/a")
 	WebElement editesigroup;
 	@FindBy(xpath="//div[' alert alert-danger']/li[1]")
 	WebElement dublicateesiname;
@@ -68,7 +68,7 @@ public class AddEsiGroupValidation extends BasePage {
 	WebElement employerratenotno;
 	@FindBy(xpath="//li[text()='Cut off is not a number']")
 	WebElement cutoofnotno;
-	@FindBy(xpath="//td[text()='ESI_ATest']//following::td[3]//span[2]/a[1]")
+	@FindBy(xpath="//td[text()='ESI_Bangalore']//following::td[3]//span[2]/a[1]")
 	WebElement deleteesigroup;
 	public AddEsiGroupValidation(WebDriver driver){
 		super(driver);

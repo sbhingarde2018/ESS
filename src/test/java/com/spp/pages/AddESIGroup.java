@@ -79,6 +79,7 @@ public class AddESIGroup extends BasePage {
 	}
 	
 	public void selectESIEffectiveDate(String value) throws Exception{
+		effdate.clear();
 		dropDownSelect(effdate, value);
 	}
 	
