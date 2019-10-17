@@ -10,7 +10,7 @@ import com.spp.pages.DeleteESIGroupRate;
 import com.spp.pages.EditESIAndESIRate;
 
 public class ESIGroupValidation extends BaseTest {
-
+ 
 	@Test(priority=0)
 	public void ESIgroupvalidation_SC_1779() throws Exception{
 		AddEsiGroupValidation ae=new AddEsiGroupValidation(driver);
