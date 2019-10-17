@@ -38,15 +38,11 @@ public class LeaveDefinationValidation extends BasePage {
 	WebElement ShortNameError;
 	@FindBy(xpath="//strong[contains(text(),'Leave definition successfully created.')]")
 	WebElement SuccMessage;
-	
-
 	public LeaveDefinationValidation(WebDriver driver) {
 		super(driver);
 		PageFactory.initElements(driver, this);
 	
 	}
-
-
 	public void navigateMaster() throws Exception{
 		masterlink.click();
 	}
