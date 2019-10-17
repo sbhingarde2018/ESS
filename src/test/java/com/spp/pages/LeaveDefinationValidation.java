@@ -34,7 +34,6 @@ public class LeaveDefinationValidation extends BasePage {
 
 	@FindBy(xpath="//li[contains(text(),'Leave name has already been taken')]")
 	WebElement LeaveError;
-	
 	@FindBy(xpath="//li[contains(text(),'Short name has already been taken')]")
 	WebElement ShortNameError;
 	@FindBy(xpath="//strong[contains(text(),'Leave definition successfully created.')]")

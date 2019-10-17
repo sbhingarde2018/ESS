@@ -14,7 +14,6 @@ public class LeaveDefinationValidationn extends BaseTest {
 		
 		LeaveDefinationValidation ld = new LeaveDefinationValidation(driver);
 		ld.navigateMaster();
-		
 		ld.clickOnleavedefinitions();
 		ld.enterLeaveName("");
 		ld.enterShortName("");
