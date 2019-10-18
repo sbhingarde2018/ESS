@@ -6,7 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.spp.common.BasePage;
-
+  
 public class AddEsiGroupValidation extends BasePage {
 	@FindBy(id="master")
 	WebElement masterlink;
