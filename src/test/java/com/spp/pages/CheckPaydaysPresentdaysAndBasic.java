@@ -17,13 +17,13 @@ public class CheckPaydaysPresentdaysAndBasic extends BasePage{
 	WebElement Salary;
 	@FindBy(xpath="//*[@id=\"menu\"]/li[6]/div/div[3]/ul/li[4]/a")
 	WebElement PublishedSalary;
-	@FindBy(id="month_year")
+	@FindBy(xpath="//select[@id='month_year']")
 	WebElement PayMonth;
-	@FindBy(id="sd_salary_group_id")
+	@FindBy(xpath="//select[@id='sd_salary_group_id']")
 	WebElement SalaryStructure;
 	@FindBy(id="af_filter")
 	WebElement GetEmployee;
-	@FindBy(xpath="//*[@id=\"bf_form\"]/div[9]/button[1]")
+	@FindBy(xpath="//form[@id='bf_form']//button[contains(text(),'LOAD')]")
 	WebElement Load;
 	
 	public void selectSalary() {

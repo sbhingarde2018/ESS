@@ -17,17 +17,17 @@ public class PublishSalary extends BasePage{
 	WebElement Salary;
 	@FindBy(xpath="//*[@id=\"menu\"]/li[6]/div/div[3]/ul/li[1]/a")
 	WebElement SalaryEditor;
-	@FindBy(id="month_year")
+	@FindBy(xpath="//select[@id='month_year']")
 	WebElement PayMonth;
-	@FindBy(id="salary_structure")
+	@FindBy(xpath="//select[@id='salary_structure']")
 	WebElement SalaryStructure;
 	@FindBy(id="get_salary")
 	WebElement GetValues;
 	@FindBy(xpath="//form[@id='bf_form']//button[contains(text(),'LOAD')]")
 	WebElement Load;
-	@FindBy(xpath="//*[@id=\"salary_editor_form\"]/table/tbody/tr[2]/td/div/div/div[1]/input")
+	@FindBy(xpath="//div[@class='text-center mt10']//div//input[@name='commit']")
 	WebElement Process;
-	@FindBy(xpath="//*[@id=\"salary_review\"]/tbody/tr[1]/td[7]/a")
+	@FindBy(xpath="//tr[1]//td[7]//a[1]")
 	WebElement Edit;
 	@FindBy(xpath="//*[@id=\"tabs-2\"]/div[2]/a")
 	WebElement SubmitForReview;

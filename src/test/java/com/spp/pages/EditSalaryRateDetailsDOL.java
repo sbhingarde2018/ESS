@@ -14,30 +14,30 @@ public class EditSalaryRateDetailsDOL extends BasePage{
 	}
 	@FindBy(id="emp_detail")
 	WebElement employeeLink;	
-	@FindBy(linkText="Salary Rate Details")
+	@FindBy(xpath="//*[@id=\"menu\"]/li[4]/div/div/ul/li[4]/a")
 	WebElement SalaryRateDetails;
-	@FindBy(xpath="//*[@id=\"main\"]/div[2]/nav/ul/li[2]/a/span")
+	@FindBy(xpath="//span[contains(text(),'Listing Employee (Salary allotted)')]")
 	WebElement ListingEmployee;
 	@FindBy(id="filter_head")
 	WebElement AdvancedFilterIcon;
-	@FindBy(xpath="//*[@id='bf_form']/div[9]/button[1]")
+	@FindBy(xpath="//form[@id='bf_form']//button[contains(text(),'LOAD')]")
 	WebElement LoadButton;
-	@FindBy(xpath="//*[@id=\"alloted\"]/tbody/tr[1]/td[4]/a")
+	@FindBy(xpath="//*[@id=\"alloted\"]/tbody/tr/td[4]/a")
 	WebElement EditButton;
-	@FindBy(id="month_year")
+	@FindBy(xpath="//select[@id='month_year']")
 	WebElement EffectiveFrom;
-	@FindBy(xpath="//*[@id=\"main\"]/div[3]/form/fieldset/div[1]/div/input[1]")
+	@FindBy(xpath="//div[@class='form-field']//input[@name='commit']")
 	WebElement GetRate;
-	@FindBy(id="gross_sal_formula")
+	@FindBy(xpath="//input[@id='gross_sal_formula']")
 	WebElement GrossSal;
-	@FindBy(xpath="//*[@id=\"sal_allotment\"]/table/tbody/tr[2]/td[4]/input")
+	@FindBy(xpath="//table/tbody/tr[2]/td[4]/input")
 	WebElement Basic;
 	@FindBy(xpath="//*[@id=\"sal_allotment\"]/table/tbody/tr[4]/td[4]/input")
 	WebElement Mess;
 	
 //	@FindBy(xpath="//*[@id=\"sal_allotment\"]/table/tbody/tr[7]/td/input")
 //	WebElement PopulateButton;
-	@FindBy(xpath="//*[@id=\"sal_allotment\"]/table/tbody/tr[4]/td/input[1]")
+	@FindBy(xpath="//table[@class='table']//input[@name='commit']")
 	WebElement SaveButton;
 	@FindBy(xpath="//*[@id=\"main\"]/div[1]/strong")
 	WebElement successfullMessage;
@@ -45,6 +45,13 @@ public class EditSalaryRateDetailsDOL extends BasePage{
 	WebElement SalaryAlloted;
 	@FindBy(xpath="//*[@id=\"alloted\"]/tbody/tr[1]/td[4]/a")
 	WebElement Edit;
+	@FindBy(xpath="//div[@id='alloted_filter']//input")
+	WebElement Search;
+	
+	
+	public void SearchEmp(String value) throws Exception{
+		Search.sendKeys(value);
+	}
 	public void clickEmployeeLink() {
 		   employeeLink.click();
 	}

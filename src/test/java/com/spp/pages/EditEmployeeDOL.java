@@ -20,23 +20,28 @@ public class EditEmployeeDOL extends BasePage{
 	WebElement FilterHead;
 	@FindBy(xpath="//input[@attr='non_classified_emp']")
 	WebElement EmployeewithoutClass;
-	@FindBy(xpath="//*[@id=\"bf_form\"]/div[9]/button[1]")
+	@FindBy(xpath="//form[@id='bf_form']//button[contains(text(),'LOAD')]")
 	WebElement LoadButton;
-	@FindBy(xpath="//*[@id=\"employees_dtable\"]/tbody/tr[1]/td[6]/a")
+	@FindBy(xpath="//table/tbody/tr/td[contains(text(),'ABCDDOL')]/parent::tr/td[6]/a[1]")
 	WebElement ViewButton;
-	@FindBy(xpath="//*[@id=\"edit_employee\"]/a")
+	@FindBy(xpath="//a[contains(text(),'Edit Employee')]")
 	WebElement EditEmployee;
-	@FindBy(xpath="//*[@id=\"main\"]/div[2]/nav/ul/li[6]/a/span")
+	@FindBy(xpath="//span[contains(text(),'Separation Info')]")
 	WebElement SeparationInfo;
-	@FindBy(id="dol")
+	@FindBy(xpath="//input[@id='dol']")
 	WebElement DateOfLeaving;
-	@FindBy(id="employee_leaving_reason")
+	@FindBy(xpath="//select[@id='employee_leaving_reason']")
 	WebElement ReasonForLeaving;
-	@FindBy(xpath="//*[@id=\"tabs-7\"]/div/form/div[4]/input")   
+	@FindBy(xpath="//div[@id='tabs-7']//input[@name='commit']")   
 	WebElement UpdateButton;
 	@FindBy(xpath="//*[@id=\"show_message\"]/div/strong")
 	WebElement successfullMessage;
+	@FindBy(xpath="//div[@id='employees_dtable_filter']//input")
+	WebElement Search;
 	
+	public void SearchEmp(String value) throws Exception{
+		Search.sendKeys(value);
+	}
 	public EditEmployeeDOL(WebDriver driver){
 		super(driver);
 		PageFactory.initElements(driver, this);
