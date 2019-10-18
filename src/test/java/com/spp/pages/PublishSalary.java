@@ -23,7 +23,7 @@ public class PublishSalary extends BasePage{
 	WebElement SalaryStructure;
 	@FindBy(id="get_salary")
 	WebElement GetValues;
-	@FindBy(xpath="//*[@id=\"bf_form\"]/div[10]/button[1]")
+	@FindBy(xpath="//form[@id='bf_form']//button[contains(text(),'LOAD')]")
 	WebElement Load;
 	@FindBy(xpath="//*[@id=\"salary_editor_form\"]/table/tbody/tr[2]/td/div/div/div[1]/input")
 	WebElement Process;

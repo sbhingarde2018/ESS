@@ -11,7 +11,7 @@ public class EditVIADeductionsContributionstopoliticalparties80GGC extends BaseP
 	WebElement TDS;
 	@FindBy(xpath="//*[@id=\"menu\"]/li[7]/div/div/ul/li[2]/a")
 	WebElement ComputationDetails;
-	@FindBy(xpath="//*[@id=\"computed_employee_tds\"]/tbody/tr/td [contains(text(),'Tina')]/parent::tr/td[4]/a")
+	@FindBy(xpath="//tbody/tr/td[contains(text(),'Jaya')]/parent::tr/td[4]/a")
 	WebElement Details;
 	@FindBy(xpath="//*[@id=\"ui-id-2\"]/li[2]/a")
 	WebElement VIDeductions;
@@ -23,6 +23,8 @@ public class EditVIADeductionsContributionstopoliticalparties80GGC extends BaseP
 	WebElement GrossAmount;
 	@FindBy(id="save_deductions")
 	WebElement SaveBtn;
+	@FindBy(xpath="//select[@id='computed_financial_year']")
+	WebElement SelectFinancialYear;
 	
 	public EditVIADeductionsContributionstopoliticalparties80GGC(WebDriver driver) {
 		super(driver);
@@ -53,5 +55,8 @@ public class EditVIADeductionsContributionstopoliticalparties80GGC extends BaseP
 	}
 	public void ClickSaveBtn() {
 		SaveBtn.click();
+	}
+	public void selectFinancialYear(String value) {
+		dropDownSelect(SelectFinancialYear, value);
 	}
 }

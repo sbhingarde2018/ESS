@@ -31,6 +31,7 @@ public class EditSalaryGroupBasedOnPayDays extends BasePage {
 	@FindBy(xpath="//strong[text()='Salary structure detail succesfully updated']")
 	WebElement successfullMessage;
 	
+	
 	public EditSalaryGroupBasedOnPayDays(WebDriver driver){
 		super(driver);
 		PageFactory.initElements(driver, this);
@@ -80,3 +81,4 @@ public class EditSalaryGroupBasedOnPayDays extends BasePage {
 		return successfullMessage.getText();
 	}
 }
+

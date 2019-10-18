@@ -12,7 +12,7 @@ public class DonationsforscientificresearchRuraldevelopmentetc80GGA extends Base
 	WebElement TDS;
 	@FindBy(xpath="//*[@id=\"menu\"]/li[7]/div/div/ul/li[2]/a")
 	WebElement ComputationDetails;
-	@FindBy(xpath="//*[@id=\"computed_employee_tds\"]/tbody/tr/td [contains(text(),'Tina')]/parent::tr/td[4]/a")
+	@FindBy(xpath="//tbody/tr/td[contains(text(),'Jaya')]/parent::tr/td[4]/a")
 	WebElement Details;
 	@FindBy(xpath="//*[@id=\"ui-id-2\"]/li[2]/a")
 	WebElement VIDeductions;
@@ -24,6 +24,8 @@ public class DonationsforscientificresearchRuraldevelopmentetc80GGA extends Base
 	WebElement GrossAmount;
 	@FindBy(id="save_deductions")
 	WebElement SaveBtn;
+	@FindBy(xpath="//select[@id='computed_financial_year']")
+	WebElement SelectFinancialYear;
 	
 	
 	public DonationsforscientificresearchRuraldevelopmentetc80GGA(WebDriver driver) {
@@ -55,5 +57,8 @@ public class DonationsforscientificresearchRuraldevelopmentetc80GGA extends Base
 	}
 	public void ClickSaveBtn() {
 		SaveBtn.click();
+	}
+	public void selectFinancialYear(String value) {
+		dropDownSelect(SelectFinancialYear, value);
 	}
 }

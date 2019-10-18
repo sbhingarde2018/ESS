@@ -15,9 +15,9 @@ public class CheckifEmployeeLeaveAllotAvailDateSettingsGeneralLinkredirectstoEmp
 	WebElement ClickOnLeaveAllotDate;
 	@FindBy(xpath="//*[@id=\"ui-id-3\"]/h3")
 	WebElement ClickOnGeneralLinks;
-	@FindBy(xpath="//*[@id=\"ui-id-4\"]/li/a")
+	@FindBy(xpath="//ul[@id='ui-id-4']//a[contains(text(),'Employee Master')]")
 	WebElement ClickOnEmployeeMaster;
-	@FindBy(xpath="//*[@id=\"ui-id-2\"]/ul/li[1]/a")
+	@FindBy(xpath="//a[contains(text(),'Add New Employee')]")
 	WebElement AddNewEmployee;
 	@FindBy(id="employee_emp_id")
 	WebElement employeeid;
@@ -57,6 +57,18 @@ public class CheckifEmployeeLeaveAllotAvailDateSettingsGeneralLinkredirectstoEmp
 	WebElement CreateEmployee;
 	@FindBy(xpath="//*[@id=\"main\"]/div[2]/strong")
 	WebElement successfullmessage;
+	@FindBy(xpath="//td[contains(text(),'Pooja')]/parent::tr/td[6]/a[2]")
+	WebElement DeleteEmployee;
+	@FindBy(id="emp_detail")
+    WebElement Employee;
+	@FindBy(xpath="//*[@id=\"menu\"]/li[4]/div/div/ul/li[9]/a")
+	WebElement LeaveAllotAvail;
+	@FindBy(id="leave_definition_id")
+	WebElement LeaveType;
+	@FindBy(id="filter_head")
+	WebElement FilterEmployee;
+	@FindBy(xpath="//*[@id='bf_form']/div[10]/button[1]")
+	WebElement LoadButton;
 	
 	public CheckifEmployeeLeaveAllotAvailDateSettingsGeneralLinkredirectstoEmployeeMaster(WebDriver driver) {
 		super(driver);
@@ -134,5 +146,24 @@ public class CheckifEmployeeLeaveAllotAvailDateSettingsGeneralLinkredirectstoEmp
     }
     public String getMessage(){
 		return successfullmessage.getText();
-	}	
+	}
+    public void ClickDeleteEmployee() {
+    	DeleteEmployee.click();
+    }
+    public void selectEmployee() {
+		Employee.click();
+	}
+	public void selectLeaveAllotAvail() {
+		LeaveAllotAvail.click();
+	}
+	public void selectLeaveType(String value){
+		dropDownSelect(LeaveType, value);
+	}
+	public void ClickFilterEmployee() {
+		FilterEmployee.click();
+	}
+  
+   public void selectLoadButton() {
+	   LoadButton.click();
+   }
 }

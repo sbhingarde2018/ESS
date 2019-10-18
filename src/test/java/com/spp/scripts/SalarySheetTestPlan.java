@@ -40,8 +40,9 @@ public class SalarySheetTestPlan extends BaseTest{
 	@Test(priority=0)
  	public void UpdateCalculationTypeNotApplicable_SC_157() throws Exception{
 		UpdateCalculationTypeNotApplicable sh=new UpdateCalculationTypeNotApplicable(driver);
- 		Thread.sleep(5000);
+ 		Thread.sleep(2000);
  		sh.navigateMaster();
+ 		Thread.sleep(2000);
  		sh.clickSalaryStructureLink();
  		sh.clickSettingsLink();
   		sh.clickEditLink();
@@ -53,8 +54,9 @@ public class SalarySheetTestPlan extends BaseTest{
 	@Test(priority=1)
  	public void UpdateCalculationTypeLumpsum_SC_161() throws Exception{
 		UpdateCalculationTypeLumpsum sh=new UpdateCalculationTypeLumpsum(driver);
- 		Thread.sleep(5000);
+ 		Thread.sleep(2000);
  		sh.navigateMaster();
+ 		Thread.sleep(2000);
  		sh.clickSalaryStructureLink();
  		sh.clickSettingsLink();
   		sh.clickEditLink();
@@ -64,20 +66,6 @@ public class SalarySheetTestPlan extends BaseTest{
   		Assert.assertEquals(s, "Salary structure detail succesfully updated");
 	}
 	@Test(priority=2)
- 	public void EditSalaryGroupBasedOnPayDays_SC_247() throws Exception{
-		EditSalaryGroupBasedOnPayDays sh=new EditSalaryGroupBasedOnPayDays(driver);
- 		Thread.sleep(5000);
- 		sh.navigateMaster();
- 		sh.clickSalaryStructureLink();
- 		sh.clickSettingsLink();
-  		sh.clickEditLink();
-  		sh.selectCalculationType("Lumpsum");
-  		sh.selectBasedOn("Pay Days");
-  		sh.clickUpdateSalaryGroupDetail();
-  		String s=sh.getMessage();
-  		Assert.assertEquals(s, "Salary structure detail succesfully updated");
-}
-	@Test(priority=3)
  	public void UpdateMasterWeeklyOff_SC_163() throws Exception{
 		UpdateMasterWeeklyOff sh=new UpdateMasterWeeklyOff(driver);
  		Thread.sleep(5000);
@@ -97,7 +85,7 @@ public class SalarySheetTestPlan extends BaseTest{
  		Thread.sleep(2000);
  		sh.clickDeleteButton();
 }
-	@Test(priority=4)
+	@Test(priority=3)
 	public void EditSalaryHeadEnableCalculativeField_SC_164() throws Exception{
 	EditSalaryHeadEnableCalculativeField sh=new EditSalaryHeadEnableCalculativeField(driver);
 		Thread.sleep(5000);
@@ -105,14 +93,15 @@ public class SalarySheetTestPlan extends BaseTest{
 		sh.clickSalaryHeadsLink();
 		sh.clickEditSalaryHeadsLink();
 		sh.enterSalaryHeadName("Edu Allowance");
-		sh.enterSalaryHeadShortName("Edu");
+		sh.enterSalaryHeadShortName("Edu4");
 		Thread.sleep(2000);
 		sh.clickCalcultaiveFieldRadioButton();
 		sh.clickUpdateButton();
 		String e=sh.getMessage();
 		Assert.assertEquals(e, "Salary head succesfully updated");
+		Thread.sleep(2000);
 }
-	@Test(priority=5)
+	@Test(priority=4)
  	public void EditSalaryGroupRoundOffActual_SC_227() throws Exception{
 		EditSalaryGroupRoundOffActual sh=new EditSalaryGroupRoundOffActual(driver);
  		Thread.sleep(5000);
@@ -121,13 +110,13 @@ public class SalarySheetTestPlan extends BaseTest{
  		sh.clickSettingsLink();
   		sh.clickEditLink();
   		sh.selectCalculationType("Lumpsum");
-  		sh.selectBasedOn("Pay Days");
+  		//sh.selectBasedOn("Pay Days");
   		sh.selectRoundOff("Actual");
   		sh.clickUpdateSalaryGroupDetail();
   		String s=sh.getMessage();
   		Assert.assertEquals(s, "Salary structure detail succesfully updated");
 }
-	@Test(priority=6)
+	@Test(priority=5)
  	public void EditSalaryGroupRoundOffNearestRupee_SC_235() throws Exception{
 		EditSalaryGroupRoundOffNearestRupee sh=new EditSalaryGroupRoundOffNearestRupee(driver);
  		Thread.sleep(5000);
@@ -141,7 +130,7 @@ public class SalarySheetTestPlan extends BaseTest{
   		String s=sh.getMessage();
   		Assert.assertEquals(s, "Salary structure detail succesfully updated");
 }
-	@Test(priority=7)
+	@Test(priority=6)
  	public void EditSalaryGroupRoundOffHigherRupee_SC_240() throws Exception{
 		EditSalaryGroupRoundOffHigherRupee sh=new EditSalaryGroupRoundOffHigherRupee(driver);
  		Thread.sleep(5000);
@@ -155,7 +144,21 @@ public class SalarySheetTestPlan extends BaseTest{
   		String s=sh.getMessage();
   	Assert.assertEquals(s, "Salary structure detail succesfully updated");
 }
-	 @Test(priority=8)
+	@Test(priority=7)
+ 	public void EditSalaryGroupBasedOnPayDays_SC_247() throws Exception{
+		EditSalaryGroupBasedOnPayDays sh=new EditSalaryGroupBasedOnPayDays(driver);
+ 		Thread.sleep(5000);
+ 		sh.navigateMaster();
+ 		sh.clickSalaryStructureLink();
+ 		sh.clickSettingsLink();
+  		sh.clickEditLink();
+  		sh.selectCalculationType("Lumpsum");
+  		sh.selectBasedOn("Pay Days");
+  		sh.clickUpdateSalaryGroupDetail();
+  		String s=sh.getMessage();
+  		Assert.assertEquals(s, "Salary structure detail succesfully updated");
+}
+	 /*@Test(priority=8)
 	 	public void ProcessSalaryCalculationTypeNotApplicable_SC_159() throws Exception{
 		 ProcessSalaryCalculationTypeNotApplicable rt = new ProcessSalaryCalculationTypeNotApplicable(driver);
 	 	 rt.selectSalary();
@@ -1080,6 +1083,6 @@ public class SalarySheetTestPlan extends BaseTest{
 					Assert.assertEquals(r, "Employees Successfully Loaded.");
 					Thread.sleep(4000);
 					rt.selectGenerateReport();
-			}
+			}*/
 				 
 }				

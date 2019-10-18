@@ -23,9 +23,10 @@ public class TDSOptionsSettings extends BaseTest {
 		TocheckifProofAmountcanbesetforTDSCalculation ab=new TocheckifProofAmountcanbesetforTDSCalculation(driver);
 		ab.ClickTDS();
 		ab.ClickOPtionsSettings();
-		ab.ClickProofAmount();
 		Thread.sleep(2000);
-		ab.SelectMonthYear("May/2020");
+		ab.SelectYear("2019/2020");
+		ab.ClickProofAmount();
+		ab.SelectMonthYear("Feb/2020");
 		ab.ClickSaveBtn();
 		//String i=ab.getMessage();
 		//Assert.assertEquals(i, "Tds Computation Settings Saved Successfully");
@@ -39,6 +40,8 @@ public class TDSOptionsSettings extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationalDetails();
 		Thread.sleep(2000);
+		ab.CDselectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
 		ab.ClickVIDeductions();
@@ -51,20 +54,47 @@ public class TDSOptionsSettings extends BaseTest {
 		ab.ClickSaveBtn();
 		Thread.sleep(2000);
 		ab.ClickTDS();
-		
-		
+		ab.ClickComputation();
+		ab.ComputationselectFinancialYear("2018/2019");
+		Thread.sleep(2000);
+		ab.resizeWindow();
+		ab.clickonfilter();
+		Thread.sleep(2000);
+		ab.clickonload();
+		Thread.sleep(5000);
+		ab.exitFullscreen();
+		Thread.sleep(3000);
+		ab.clickComputeButton();
+		Thread.sleep(3000);
+		ab.ClickTDS();
+		Thread.sleep(2000);
+		ab.ClickComputationalDetails();
+		Thread.sleep(2000);
+		ab.CDselectFinancialYear("2018/2019");
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickVIDeductions();
+		Thread.sleep(2000);
+		ab.ClickDeductions80C();
+		Thread.sleep(2000);
 	}
+	
 	@Test(priority=3)
 	public void TocheckTaxcalculationbasedonProofAmount_SC_1040() throws Exception {
 		TocheckTaxcalculationbasedonProofAmount ab=new TocheckTaxcalculationbasedonProofAmount(driver);
 		ab.ClickTDS();
 		ab.ClickOPtionsSettings();
+		ab.SelectYear("2018/2019");
 		ab.ClickProofAmount();
 		Thread.sleep(2000);
-		ab.SelectMonthYear("Apr/2018");
+		ab.SelectMonthYear("Mar/2019");
+		Thread.sleep(2000);
 		ab.ClickSaveBtn1();
 		ab.ClickTDS();
 		ab.ClickComputationalDetails();
+		Thread.sleep(2000);
+		ab.CDselectFinancialYear("2018/2019");
 		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
@@ -76,6 +106,32 @@ public class TDSOptionsSettings extends BaseTest {
 		ab.EnterGrossAmount("10000");
 		ab.EnterProofAmount("5000");
 		ab.ClickSaveBtn();
+		Thread.sleep(4000);
+		ab.ClickTDS();
+		ab.ClickComputation();
+		ab.ComputationselectFinancialYear("2018/2019");
+		Thread.sleep(2000);
+		ab.resizeWindow();
+		ab.clickonfilter();
+		Thread.sleep(2000);
+		ab.clickonload();
+		Thread.sleep(5000);
+		ab.exitFullscreen();
+		Thread.sleep(3000);
+		ab.clickComputeButton();
+		Thread.sleep(4000);
+		ab.ClickTDS();
+		Thread.sleep(4000);
+		ab.ClickComputationalDetails();
+		Thread.sleep(2000);
+		ab.CDselectFinancialYear("2018/2019");
+		Thread.sleep(2000);
+		ab.ClickDetails();
+		Thread.sleep(2000);
+		ab.ClickVIDeductions();
+		Thread.sleep(2000);
+		ab.ClickDeductions80C();
+		Thread.sleep(2000);
 	}
 	@Test(priority=4)
 	public void ToseeifthesettingrevertsbacktoDeclaredAmountwithstartofnewfinancialyear_SC_1042() throws Exception {

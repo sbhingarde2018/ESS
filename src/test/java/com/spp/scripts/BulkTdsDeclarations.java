@@ -35,7 +35,7 @@ public class BulkTdsDeclarations extends BaseTest {
 		ab.ClickUpload();
 		Thread.sleep(3000);
 		ab.SelectFinancialYear("2018/2019");
-		ab.clickChooseFile("C:\\Users\\alfalabs\\Downloads\\BulkItDeclaration.xlsx");
+		ab.clickChooseFile("C:\\Users\\AlfaLabs\\Downloads\\BulkItDeclarationTemplate.xlsx");
 		Thread.sleep(4000);
 		ab.clickUploadBtn();
 		String i=ab.getMessage();

@@ -11,7 +11,7 @@ public class EditVIADeductionsExpenditureforMedicaltreatment80DDB extends BasePa
 	WebElement TDS;
 	@FindBy(xpath="//*[@id=\"menu\"]/li[7]/div/div/ul/li[2]/a")
 	WebElement ComputationDetails;
-	@FindBy(xpath="//*[@id=\"computed_employee_tds\"]/tbody/tr/td [contains(text(),'Tina')]/parent::tr/td[4]/a")
+	@FindBy(xpath="//tbody/tr/td[contains(text(),'Jaya')]/parent::tr/td[4]/a")
 	WebElement Details;
 	@FindBy(xpath="//*[@id=\"ui-id-2\"]/li[2]/a")
 	WebElement VIDeductions;
@@ -25,6 +25,8 @@ public class EditVIADeductionsExpenditureforMedicaltreatment80DDB extends BasePa
 	WebElement SaveBtn;
 	@FindBy(xpath="//*[@id=\"show_message\"]/div/strong")
 	WebElement UpdateSuccess;
+	@FindBy(xpath="//select[@id='computed_financial_year']")
+	WebElement SelectFinancialYear;
 	
 	
 	public EditVIADeductionsExpenditureforMedicaltreatment80DDB(WebDriver driver) {
@@ -58,5 +60,8 @@ public class EditVIADeductionsExpenditureforMedicaltreatment80DDB extends BasePa
 	}
 	public String getMessage() {
 		return UpdateSuccess.getText();
+	}
+	public void selectFinancialYear(String value) {
+		dropDownSelect(SelectFinancialYear, value);
 	}
 }

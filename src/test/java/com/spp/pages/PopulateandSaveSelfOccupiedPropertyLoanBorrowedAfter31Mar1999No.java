@@ -11,11 +11,11 @@ public class PopulateandSaveSelfOccupiedPropertyLoanBorrowedAfter31Mar1999No ext
 WebElement TDS;
 @FindBy(xpath="//*[@id=\"menu\"]/li[7]/div/div/ul/li[2]/a")
 WebElement ComputationDetails;
-@FindBy(xpath="//*[@id=\"computed_employee_tds\"]/tbody/tr/td [contains(text(),'Tina')]/parent::tr/td[4]/a")
+@FindBy(xpath="//tbody/tr/td[contains(text(),'Jaya')]/parent::tr/td[4]/a")
 WebElement Details;
 @FindBy(xpath="//*[@id=\"ui-id-3\"]/h3")
 WebElement HouseRentProperty;
-@FindBy(xpath="//*[@id=\"ui-id-4\"]/li[2]/a")
+@FindBy(xpath="//a[contains(text(),'Self Occupied Property')]")
 WebElement SelfOccupiedProperty;
 @FindBy(id="house_property_self_occupied_property_gross_anual_value")
 WebElement GrossAnnualValue;
@@ -25,11 +25,12 @@ WebElement ShareinPercentage;
 WebElement InterestPaidOnBorrowedCapital;
 @FindBy(id="house_property_self_occupied_property_pre_construction_interest")
 WebElement PreConstructionInterest;
-@FindBy(xpath="//*[@id=\"self_occupied_propert\"]/div[2]/input")
+@FindBy(xpath="//input[@class='btn2 btn-bglightblue']")
 WebElement PopulateAndSave;
 @FindBy(xpath="//*[@id=\"self-occupied-form\"]/section/div[2]/strong")
 WebElement UpdateSuccess;
-
+@FindBy(xpath="//select[@id='computed_financial_year']")
+WebElement SelectFinancialYear;
 
 public PopulateandSaveSelfOccupiedPropertyLoanBorrowedAfter31Mar1999No(WebDriver driver) {
 	super(driver);
@@ -71,7 +72,10 @@ public void ClickPopulateAndSave() {
 }
 public String getMessage() {
 	return UpdateSuccess.getText();
-} 
+}
+public void selectFinancialYear(String value) {
+dropDownSelect(SelectFinancialYear, value);
+}
 }
 
 

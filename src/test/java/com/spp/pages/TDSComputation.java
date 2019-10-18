@@ -17,7 +17,7 @@ public class TDSComputation extends BasePage{
 	WebElement SelectFinancialYear;
 	@FindBy(id="filter_head")
 	WebElement ClickOnFilter;
-	@FindBy(xpath="//*[@id=\"bf_form\"]/div[10]/button[1]")
+	@FindBy(xpath="//form[@id='bf_form']//button[contains(text(),'LOAD')]")
 	WebElement ClickOnLoad;
 	@FindBy(xpath="//*[@id=\"employee_tax_compute\"]/div[5]/input")
 	WebElement Compute;

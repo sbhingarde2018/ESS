@@ -9,7 +9,7 @@ import com.spp.pages.*;
 
 public class ComputationDetails extends BaseTest {
 	
-	@Test(priority=0)
+	/*@Test(priority=0)
 	public void EditMainComponentBasic_SC_1055() throws Exception{
 		EditMainComponentBasic ab=new EditMainComponentBasic(driver);
 		ab.ClickTDS();
@@ -531,7 +531,7 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickDetails();
 		Thread.sleep(2000);
 	}
-	/*@Test(priority=20)
+	@Test(priority=20)
 	public void EditAllowancesHighAltitudeAllowanceforarmedforces_SC_1075() throws Exception{
 		EditAllowancesHighAltitudeAllowanceforarmedforces ab=new EditAllowancesHighAltitudeAllowanceforarmedforces(driver);
 		ab.ClickTDS();
@@ -1683,7 +1683,7 @@ public class ComputationDetails extends BaseTest {
 		ab.clickEditName();
 		ab.EnterName("Paid Perquisites");
 		ab.ClickSaveBtn();
-		Thread.sleep(2000);
+		//Thread.sleep(2000);
 		String i=ab.getMessage();
 		Assert.assertEquals(i, "Updated successfully.");
 	}
@@ -1728,7 +1728,7 @@ public class ComputationDetails extends BaseTest {
 		ab.clickEditName();
 		ab.EnterName("Paid Perquisites");
 		ab.ClickSaveBtn();
-		Thread.sleep(2000);
+		//Thread.sleep(2000);
 		String i=ab.getMessage();
 		Assert.assertEquals(i, "Updated successfully.");
 	}
@@ -1747,7 +1747,7 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickEditName();
 		ab.EnterHeadingName("Paid Allowance");
 		ab.ClickSaveBtn();
-		Thread.sleep(2000);
+		//Thread.sleep(2000);
 		String i=ab.getMessage();
 		Assert.assertEquals(i, "Updated successfully.");
 	}
@@ -1829,11 +1829,13 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickDetails();
 		Thread.sleep(2000);
 	}
-	/*@Test(priority=71)
+	@Test(priority=71)
 	public void EditOthersBonus_SC_1127() throws Exception{
 		EditOthersBonus ab=new EditOthersBonus(driver);
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
 		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
@@ -1848,15 +1850,18 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
-		ab.ClickOthersTab();
 	}
 	@Test(priority=72)
 	public void EditOthersAdvanceSalary_SC_1128() throws Exception{
 		EditOthersAdvanceSalary ab=new EditOthersAdvanceSalary(driver);
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
 		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
@@ -1871,15 +1876,18 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
-		ab.ClickOthersTab();
 	}
 	@Test(priority=73)
 	public void EditOthersSalaryReceivedFromUNO_SC_1129() throws Exception{
 		EditOthersSalaryReceivedFromUNO ab=new EditOthersSalaryReceivedFromUNO(driver);
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
 		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
@@ -1894,15 +1902,18 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
-		ab.ClickOthersTab();
 	}
 	@Test(priority=74)
 	public void EditOthersSalaryPaidtoForeignDeplomatExemptFromSalary_SC_1130() throws Exception{
 		EditOthersSalaryPaidtoForeignDeplomatExemptFromSalary ab=new EditOthersSalaryPaidtoForeignDeplomatExemptFromSalary(driver);
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
 		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
@@ -1917,15 +1928,18 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
-		ab.ClickOthersTab();
 	}
 	@Test(priority=75)
 	public void EditOthersAmountReceivedFromUnrecognizedProvidentFund_SC_1131() throws Exception{
 		EditOthersAmountReceivedFromUnrecognizedProvidentFund ab=new EditOthersAmountReceivedFromUnrecognizedProvidentFund(driver);
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
 		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
@@ -1940,15 +1954,18 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
-		ab.ClickOthersTab();
 	}
 	@Test(priority=76)
 	public void EditOthersArrearsSalary_SC_1132() throws Exception{
 		EditOthersArrearsSalary ab=new EditOthersArrearsSalary(driver);
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
 		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
@@ -1963,15 +1980,18 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
-		ab.ClickOthersTab();
 	}
 	@Test(priority=77)
 	public void EditOthersAmountReceivedOnKeymenInsuranceIncludingBonus_SC_1133() throws Exception{
 		EditOthersAmountReceivedOnKeymenInsuranceIncludingBonus ab=new EditOthersAmountReceivedOnKeymenInsuranceIncludingBonus(driver);
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
 		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
@@ -1986,15 +2006,18 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
-		ab.ClickOthersTab();
 	}
 	@Test(priority=78)
 	public void EditOthersLeaveEncashmentInService_SC_1134() throws Exception{
 		EditOthersLeaveEncashmentInService ab=new EditOthersLeaveEncashmentInService(driver);
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
 		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
@@ -2009,15 +2032,18 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
-		ab.ClickOthersTab();
 	}
 	@Test(priority=79)
 	public void EditOthersLeaveEncashmentOnRetirement_SC_1135() throws Exception{
 		EditOthersLeaveEncashmentOnRetirement ab=new EditOthersLeaveEncashmentOnRetirement(driver);
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
 		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
@@ -2032,15 +2058,18 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
-		ab.ClickOthersTab();
 	}
 	@Test(priority=80)
 	public void EditOthersGratuity_SC_1136() throws Exception{
 		EditOthersGratuity ab=new EditOthersGratuity(driver);
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
 		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
@@ -2055,15 +2084,18 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
-		ab.ClickOthersTab();
 	}
 	@Test(priority=81)
 	public void EditOthersCommutationOfPension_SC_1137() throws Exception{
 		EditOthersCommutationOfPension ab=new EditOthersCommutationOfPension(driver);
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
 		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
@@ -2078,15 +2110,18 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
-		ab.ClickOthersTab();
 	}
 	@Test(priority=82)
 	public void EditOthersRetrenchmentCompensation_SC_1138() throws Exception{
 		EditOthersRetrenchmentCompensation ab=new EditOthersRetrenchmentCompensation(driver);
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
 		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
@@ -2101,15 +2136,18 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
-		ab.ClickOthersTab();
 	}
 	@Test(priority=83)
 	public void EditOthersAmountReceivedOnVoluntaryRetirement_SC_1139() throws Exception{
 		EditOthersAmountReceivedOnVoluntaryRetirement ab=new EditOthersAmountReceivedOnVoluntaryRetirement(driver);
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
 		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
@@ -2124,15 +2162,18 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
-		ab.ClickOthersTab();
 	}
 	@Test(priority=84)
 	public void EditOthersOthers_SC_1140() throws Exception{
 		EditOthersOthers ab=new EditOthersOthers(driver);
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
 		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
@@ -2147,15 +2188,18 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
-		ab.ClickOthersTab();
 	}
 	@Test(priority=85)
 	public void EditOthersUserDefined2_SC_1141() throws Exception{
 		EditOthersUserDefined2 ab=new EditOthersUserDefined2(driver);
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
 		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
@@ -2170,9 +2214,10 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
-		ab.ClickOthersTab();
 	}
 	@Test(priority=86)
 	public void EditnameOthers_SC_1142() throws Exception{
@@ -2180,6 +2225,8 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
 		ab.ClickOthersTab();
@@ -2193,9 +2240,10 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
-		ab.ClickOthersTab();
 	}
 	@Test(priority=87)
 	public void EditnameOTHERSUserDefined_SC_1143() throws Exception{
@@ -2203,6 +2251,8 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
 		ab.ClickOthersTab();
@@ -2216,15 +2266,18 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
-		ab.ClickOthersTab();
 	}
 	@Test(priority=88)
 	public void EditVIADeductionsDeductionsinrespectofspecifiedinvestmentssavings80C_SC_1144() throws Exception{
 		EditVIADeductionsDeductionsinrespectofspecifiedinvestmentssavings80C ab=new EditVIADeductionsDeductionsinrespectofspecifiedinvestmentssavings80C(driver);
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
 		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
@@ -2250,6 +2303,8 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
 		ab.ClickVIDeduction();
@@ -2267,6 +2322,8 @@ public class ComputationDetails extends BaseTest {
 		EditVIADeductionsContributionstoPensionfundsfromcentralgovernmentemployees80CCD1 ab=new EditVIADeductionsContributionstoPensionfundsfromcentralgovernmentemployees80CCD1(driver);
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
 		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
@@ -2286,6 +2343,8 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
 		ab.ClickVIDeduction();
@@ -2303,6 +2362,8 @@ public class ComputationDetails extends BaseTest {
 		EditVIADeductionsContributionstopensionfundsfromtheassessee80CCD1B ab=new EditVIADeductionsContributionstopensionfundsfromtheassessee80CCD1B(driver);
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
 		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
@@ -2322,6 +2383,8 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
 		ab.ClickVIDeduction();
@@ -2340,6 +2403,8 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
 		ab.ClickVIDeduction();
@@ -2355,13 +2420,15 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickSaveBtn();
 		//String i=ab.getMessage();
 		//Assert.assertEquals(i, "Saved Successfully.");
-	}
+	}*/
 	@Test(priority=95)
 	public void EditVIADeductionsMedicalinsurancepremiumpaid80DSenior_SC_1151() throws Exception{
 		EditVIADeductionsMedicalinsurancepremiumpaid80DSenior ab=new EditVIADeductionsMedicalinsurancepremiumpaid80DSenior(driver);
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
 		ab.ClickVIDeduction();
@@ -2369,26 +2436,30 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickDeductions();
 		Thread.sleep(2000);
 		ab.CheckboxSenior();
-		ab.EnterHealthInsurancePremium("20");
+		ab.EnterHealthInsurancePremium("50");
 		ab.EnterPreventiveHealthCheckup("10");
 		ab.Clickcompute();
-		String j=ab.getMessage();
-		Assert.assertEquals(j, "Qualifying Amount Calculated");
-		Thread.sleep(5000);
+		//String j=ab.getMessage();
+		//Assert.assertEquals(j, "Qualifying Amount Calculated");
+		Thread.sleep(2000);
+		//ab.CheckboxSenior();
 		ab.ClickSaveBtn();
+		//Thread.sleep(2000);
 		//String i=ab.getMessage();
 		//Assert.assertEquals(i, "Saved successfully.");
-		ab.CheckboxSenior();
-		ab.Clickcompute();
-		Thread.sleep(2000);
-		ab.ClickSaveBtn();
+		//ab.CheckboxSenior();
+		//ab.Clickcompute();
+		//Thread.sleep(2000);
+		//ab.ClickSaveBtn();
 	}
-	@Test(priority=96)
+	/*@Test(priority=96)
 	public void EditVIADeductionsMedicalinsurancepremiumpaid80DForparents_SC_1152() throws Exception{
 		EditVIADeductionsMedicalinsurancepremiumpaid80DForparents ab=new EditVIADeductionsMedicalinsurancepremiumpaid80DForparents(driver);
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
 		ab.ClickVIDeduction();
@@ -2404,13 +2475,15 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickSaveBtn();
 		//String i=ab.getMessage();
 		//Assert.assertEquals(i, "Saved successfully.");
-	}
+	}*/
 	@Test(priority=97)
 	public void EditVIADeductionsMedicalinsurancepremiumpaid80DSeniorForparents_SC_1153() throws Exception{
 		EditVIADeductionsMedicalinsurancepremiumpaid80DSeniorForparents ab=new EditVIADeductionsMedicalinsurancepremiumpaid80DSeniorForparents(driver);
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
 		ab.ClickVIDeduction();
@@ -2427,11 +2500,11 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickSaveBtn();
 		//String i=ab.getMessage();
 		//Assert.assertEquals(i, "Saved successfully.");
-		Thread.sleep(2000);
-		ab.CheckboxSenior();
-		ab.Clickcompute();
-		Thread.sleep(2000);
-		ab.ClickSaveBtn();
+		//Thread.sleep(2000);
+		//ab.CheckboxSenior();
+		//ab.Clickcompute();
+		//Thread.sleep(2000);
+		//ab.ClickSaveBtn();
 	}
 	@Test(priority=98)
 	public void EditVIADeductionsMedicalinsurancepremiumpaid80DSeniorIncaseifVeryseniorcitizen_SC_1154() throws Exception{
@@ -2439,6 +2512,8 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
 		ab.ClickVIDeduction();
@@ -2456,11 +2531,11 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickSaveBtn();
 		//String i=ab.getMessage();
 		//Assert.assertEquals(i, "Saved successfully.");
-		Thread.sleep(2000);
-		ab.CheckboxSenior();
-		ab.Clickcompute();
-		Thread.sleep(2000);
-		ab.ClickSaveBtn();
+		//Thread.sleep(2000);
+		//ab.CheckboxSenior();
+		//ab.Clickcompute();
+		//Thread.sleep(2000);
+		//ab.ClickSaveBtn();
 	}
 	@Test(priority=99)
 	public void EditVIADeductionsMedicalinsurancepremiumpaid80DForparentsIncaseifVeryseniorcitizen_SC_1155() throws Exception{
@@ -2468,6 +2543,8 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
 		ab.ClickVIDeduction();
@@ -2485,17 +2562,19 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickSaveBtn();
 		//String i=ab.getMessage();
 		//Assert.assertEquals(i, "Saved successfully.");
-		Thread.sleep(2000);
-		ab.CheckboxSenior();
-		ab.Clickcompute();
-		Thread.sleep(2000);
-		ab.ClickSaveBtn();
+		//Thread.sleep(2000);
+		//ab.CheckboxSenior();
+		//ab.Clickcompute();
+		//Thread.sleep(2000);
+		//ab.ClickSaveBtn();
 	}
-	@Test(priority=100)
+	/*@Test(priority=100)
 	public void EditVIADeductionsExpensesonmedicaltreatmentMaintenanceetconHandicappeddependents80DD_SC_1156() throws Exception{
 		EditVIADeductionsExpensesonmedicaltreatmentMaintenanceetconHandicappeddependents80DD ab=new EditVIADeductionsExpensesonmedicaltreatmentMaintenanceetconHandicappeddependents80DD(driver);
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
 		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
@@ -2513,6 +2592,8 @@ public class ComputationDetails extends BaseTest {
 		EditVIADeductionsExpensesonmedicaltreatmentMaintenanceetcSeveredisability ab=new EditVIADeductionsExpensesonmedicaltreatmentMaintenanceetcSeveredisability(driver);
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
 		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
@@ -2534,6 +2615,8 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
 		ab.ClickVIDeduction();
@@ -2551,6 +2634,8 @@ public class ComputationDetails extends BaseTest {
 		EditVIADeductionsInterestpaidonhighereducationloan80E ab=new EditVIADeductionsInterestpaidonhighereducationloan80E(driver);
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
 		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
@@ -2570,6 +2655,8 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
 		ab.ClickVIDeduction();
@@ -2587,6 +2674,8 @@ public class ComputationDetails extends BaseTest {
 		VIADeductionsDonationstospecifiedfundsInstitutions80G ab=new VIADeductionsDonationstospecifiedfundsInstitutions80G(driver);
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
 		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
@@ -2611,6 +2700,8 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
 		ab.ClickVIDeduction();
@@ -2624,6 +2715,8 @@ public class ComputationDetails extends BaseTest {
 		DonationsforscientificresearchRuraldevelopmentetc80GGA ab=new DonationsforscientificresearchRuraldevelopmentetc80GGA(driver);
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
 		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
@@ -2641,6 +2734,8 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
 		ab.ClickVIDeduction();
@@ -2655,6 +2750,8 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
 		ab.ClickVIDeduction();
@@ -2664,14 +2761,16 @@ public class ComputationDetails extends BaseTest {
 		ab.EnterRentPaid("5000");
 		ab.EnterNoofMonths("2");
 		ab.ClickComputeBtn();
-		Thread.sleep(3000);
+		Thread.sleep(2000);
 		ab.ClickSaveBtn();
-	}
+	}*/
 	@Test(priority=110)
 	public void EditVIADeductionsContributionstopoliticalparties80GGC_SC_1166() throws Exception{
 		EditVIADeductionsContributionstopoliticalparties80GGC ab=new EditVIADeductionsContributionstopoliticalparties80GGC(driver);
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
 		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
@@ -2689,6 +2788,8 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
 		ab.ClickVIDeduction();
@@ -2702,6 +2803,8 @@ public class ComputationDetails extends BaseTest {
 		EditVIADeductionsRoyaltyIncomeetcofAuthorsofcertainbooks80QQB ab=new EditVIADeductionsRoyaltyIncomeetcofAuthorsofcertainbooks80QQB(driver);
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
 		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
@@ -2719,6 +2822,8 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
 		ab.ClickVIDeduction();
@@ -2731,6 +2836,8 @@ public class ComputationDetails extends BaseTest {
 		EditVIADeductionsRoyaltyonPatents80RRB ab=new EditVIADeductionsRoyaltyonPatents80RRB(driver);
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
 		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
@@ -2748,6 +2855,8 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
 		ab.ClickVIDeduction();
@@ -2761,6 +2870,8 @@ public class ComputationDetails extends BaseTest {
 		EditVIADeductionsIncomeofblindorphysicallyhandicappedindividual80U ab=new EditVIADeductionsIncomeofblindorphysicallyhandicappedindividual80U(driver);
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
 		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
@@ -2778,6 +2889,8 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
 		ab.ClickVIDeduction();
@@ -2794,6 +2907,8 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
 		ab.ClickVIDeduction();
@@ -2809,6 +2924,8 @@ public class ComputationDetails extends BaseTest {
 		SaveIncomeFromOtherSourcesInterestFromBanks ab=new SaveIncomeFromOtherSourcesInterestFromBanks(driver);
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
 		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
@@ -2827,6 +2944,8 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
 		ab.ClickIncomeFromOtherSources();
@@ -2843,6 +2962,8 @@ public class ComputationDetails extends BaseTest {
 		SaveIncomeFromOtherSourcesInterestonKVP ab=new SaveIncomeFromOtherSourcesInterestonKVP(driver);
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
 		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
@@ -2861,6 +2982,8 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
 		ab.ClickIncomeFromOtherSources();
@@ -2877,6 +3000,8 @@ public class ComputationDetails extends BaseTest {
 		SaveIncomeFromOtherSourcesInterestOthers ab=new SaveIncomeFromOtherSourcesInterestOthers(driver);
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
+		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
 		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
@@ -2895,10 +3020,12 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
-		ab.ClickHouseRentProperty();
-		Thread.sleep(2000);
+		//ab.ClickHouseRentProperty();
+		//Thread.sleep(2000);
 		ab.ClickLetOutProperty();
 		ab.ClickAdd();
 		Thread.sleep(2000);
@@ -2920,10 +3047,12 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
-		ab.ClickHouseRentProperty();
-		Thread.sleep(2000);
+		//ab.ClickHouseRentProperty();
+		//Thread.sleep(2000);
 		ab.ClickLetOutProperty();
 		Thread.sleep(2000);
 		ab.ClickEdit();
@@ -2939,10 +3068,12 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
-		ab.ClickHouseRentProperty();
-		Thread.sleep(2000);
+		//ab.ClickHouseRentProperty();
+		//Thread.sleep(2000);
 		ab.ClickLetOutProperty();
 		ab.ClickDelete();
 		ab.switchToPopUpAndDismiss(driver);
@@ -2956,10 +3087,12 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
-		ab.ClickHouseRentProperty();
-		Thread.sleep(2000);
+		//ab.ClickHouseRentProperty();
+		//Thread.sleep(2000);
 		ab.ClickSelfOccupiedProperty();
 		ab.EnterGrossAnnualValue("20");
 		ab.EnterShareinPercentage("30");
@@ -2967,8 +3100,8 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickLoanBorrowedYes();
 		ab.EnterPreConstructionInterest("15");
 		ab.ClickPopulateAndSave();
-		String i=ab.getMessage();
-		Assert.assertEquals(i, "Self occupied property created successfully");
+		//String i=ab.getMessage();
+		//Assert.assertEquals(i, "Self occupied property created successfully");
 	}
 	@Test(priority=128)
 	public void PopulateandUpdateSelfOccupiedProperty_SC_1186() throws Exception {
@@ -2976,10 +3109,12 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
-		ab.ClickHouseRentProperty();
-		Thread.sleep(2000);
+		//ab.ClickHouseRentProperty();
+		//Thread.sleep(2000);
 		ab.ClickSelfOccupiedProperty();
 		ab.EnterGrossAnnualValue("12");
 		ab.EnterShareinPercentage("35");
@@ -2993,10 +3128,12 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
-		ab.ClickHouseRentProperty();
-		Thread.sleep(2000);
+		//ab.ClickHouseRentProperty();
+		//Thread.sleep(2000);
 		ab.ClickSelfOccupiedProperty();
 		Thread.sleep(2000);
 		ab.ClickDelete();
@@ -3012,10 +3149,12 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
-		ab.ClickHouseRentProperty();
-		Thread.sleep(2000);
+		//ab.ClickHouseRentProperty();
+		//Thread.sleep(2000);
 		ab.ClickSelfOccupiedProperty();
 		ab.EnterGrossAnnualValue("20");
 		ab.EnterShareinPercentage("30");
@@ -3030,10 +3169,12 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
-		ab.ClickHouseRentProperty();
-		Thread.sleep(2000);
+		//ab.ClickHouseRentProperty();
+		//Thread.sleep(2000);
 		ab.ClickSelfOccupiedProperty();
 		ab.EnterGrossAnnualValue("20");
 		ab.EnterShareinPercentage("30");
@@ -3047,10 +3188,12 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
-		ab.ClickHouseRentProperty();
-		Thread.sleep(2000);
+		//ab.ClickHouseRentProperty();
+		//Thread.sleep(2000);
 		ab.ClickSelfOccupiedProperty();
 		ab.EnterGrossAnnualValue("20");
 		ab.EnterShareinPercentage("30");
@@ -3066,10 +3209,12 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickTDS();
 		ab.ClickComputationDetails();
 		Thread.sleep(2000);
+		ab.selectFinancialYear("2018/2019");
+		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
-		ab.ClickHouseRentProperty();
-		Thread.sleep(2000);
+		//ab.ClickHouseRentProperty();
+		//Thread.sleep(2000);
 		ab.ClickLetOutProperty();
 		ab.ClickAdd();
 		Thread.sleep(2000);
@@ -3081,7 +3226,7 @@ public class ComputationDetails extends BaseTest {
 		ab.EnterArrearsOfRentRec("10");
 		ab.EnterNotChargedEarlier("10");
 		ab.ClickPopulate();
-	}*/
+	}
 }
 
 

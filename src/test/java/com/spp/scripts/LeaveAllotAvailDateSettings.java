@@ -44,7 +44,7 @@ public class LeaveAllotAvailDateSettings extends BaseTest {
 		la.clickonemployeemaster();
 		Thread.sleep(2000);
 		la.addnewemployee();
-		la.enterEmployeeid("ABC123");
+		//la.enterEmployeeid("ABC123");
 		la.enterEmployeeref("12345697871");
 		la.enterEmployeename("Pooja");
 		la.enterEmployeefather("Harish");
@@ -66,6 +66,22 @@ public class LeaveAllotAvailDateSettings extends BaseTest {
 		la.createemployee();
 		String s=la.getMessage();
  		Assert.assertEquals(s, "Employee successfully created");
+ 		la.clickonemployee();
+		la.clickonleaveallotdetails();
+		la.clickongenerallinks();
+		Thread.sleep(2000);
+		la.clickonemployeemaster();
+		Thread.sleep(2000);
+		la.ClickFilterEmployee();
+ 		la.resizeWindow();
+ 		Thread.sleep(5000);
+ 		la.selectLoadButton();
+ 		Thread.sleep(5000);
+ 		la.exitFullscreen();
+ 		la.ClickDeleteEmployee();
+ 		Thread.sleep(2000);	
+ 		la.switchToPopUpAndAccept(driver);
+ 		Thread.sleep(5000);
 	}
 	
 	/*@Test(priority=2)

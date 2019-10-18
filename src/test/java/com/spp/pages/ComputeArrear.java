@@ -14,9 +14,9 @@ public class ComputeArrear extends BasePage{
 	WebElement Arrears;
 	@FindBy(xpath="//*[@id=\"main\"]/div[2]/table/tbody/tr[1]/td[4]/a")
 	WebElement Computation;
-	@FindBy(id="add_employees")
+	@FindBy(xpath="//a[@id='manual_arrears']")
 	WebElement AddEmployee;
-	@FindBy(xpath="//*[@id=\"bf_form\"]/div[10]/button[1]")
+	@FindBy(xpath="//form[@id='bf_form']//button[contains(text(),'LOAD')]")
 	WebElement Load;
 	@FindBy(xpath="//*[@id=\"show_message\"]/div/strong")
 	WebElement successfullMessage;

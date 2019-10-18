@@ -9,29 +9,48 @@ import com.spp.common.BasePage;
 public class TocheckTaxcalculationbasedonProofAmount extends BasePage {
 	@FindBy(id="tds")
 	WebElement TDS;
-	@FindBy(xpath="//*[@id=\"menu\"]/li[7]/div/div/ul/li[2]/a")
+	@FindBy(xpath="//a[contains(text(),'Computation Details')]")
 	WebElement ComputationalDetails;
-	@FindBy(xpath="//*[@id=\"computed_employee_tds\"]/tbody/tr/td[contains(text(),'Tina')]/parent::tr/td[4]/a")
+	@FindBy(xpath="//tbody/tr/td[contains(text(),'Jaya')]/parent::tr/td[4]/a")
 	WebElement Details;
 	@FindBy(xpath="//*[@id=\"ui-id-2\"]/li[2]/a")
 	WebElement VIDeductions;
 	@FindBy(xpath="//*[@id=\"six_a_ded_details\"]/table/tbody/tr[1]/td[3]")
 	WebElement Deductions80C;
-	@FindBy(id="six_a_deduction_manual_entry_sub_heads_1_tds_head_id")
+	@FindBy(xpath="//select[@id='six_a_deduction_manual_entry_sub_heads_2_tds_head_id']")
 	WebElement Particulars;
-	@FindBy(id="six_a_deduction_manual_entry_sub_heads_1_salary_gross_amount")
+	@FindBy(xpath="//input[@id='six_a_deduction_manual_entry_sub_heads_2_salary_gross_amount']")
 	WebElement GrossAmount;
-	@FindBy(id="six_a_deduction_manual_entry_sub_heads_1_proof_amount")
+	@FindBy(xpath="//input[@id='six_a_deduction_manual_entry_sub_heads_2_proof_amount']")
 	WebElement ProofAmount;
-	@FindBy(id="save_deductions")
+	@FindBy(xpath="//input[@name='commit']")
 	WebElement SaveBtn;
+	@FindBy(xpath="//a[contains(@class,'tab_border')][contains(text(),'Option Settings')]")
 	WebElement OPtionsSettings;
 	@FindBy(id="option_setting_serializer_tds_calculation_based_on_proof_amount")
 	WebElement ProofAmount1;
-	@FindBy(id="option_setting_serializer_fin_month_year")
+	@FindBy(xpath="//select[@id='option_setting_serializer_fin_month_year']")
 	WebElement MonthYear;
 	@FindBy(xpath="//*[@id=\"new_option_setting_serializer\"]/fieldset/div/div[4]/input")
 	WebElement SaveBtn1;
+	@FindBy(xpath="//select[@id='option_setting_serializer_fin_year']")
+	WebElement Year;
+	@FindBy(xpath="//select[@id='computed_financial_year']")
+	WebElement SelectFinancialYear;
+	@FindBy(xpath="//*[@id='menu']/li[7]/div/div/ul/li[1]/a")
+	WebElement Computation;
+	@FindBy(id="filter_head")
+	WebElement ClickonFilter;
+	@FindBy(xpath="//form[@id='bf_form']//button[contains(text(),'LOAD')]")
+	WebElement ClickOnLoad;
+	@FindBy(xpath="//input[@name='commit']")
+	WebElement Compute;
+	@FindBy(xpath="//select[@id='computed_financial_year']")
+	WebElement cdSelectFinancialYear;
+	@FindBy(xpath="//select[@id='tds_financial_year']")
+	WebElement computationSelectFinancialYear;
+	@FindBy(id="option_setting_serializer_tds_calculation_based_on_proof_amount")
+	WebElement SelectProofAmount;
 	
 	public TocheckTaxcalculationbasedonProofAmount(WebDriver driver) {
 		super(driver);
@@ -70,12 +89,36 @@ public class TocheckTaxcalculationbasedonProofAmount extends BasePage {
 		OPtionsSettings.click();
 	}
 	public void ClickProofAmount() {
-		ProofAmount.click();
+		SelectProofAmount.click();
 	}
 	public void SelectMonthYear(String value) {
     	dropDownSelect(MonthYear, value);
 	}
 	public void ClickSaveBtn() {
 		SaveBtn.click();
+	}
+	public void SelectYear(String value) {
+    	dropDownSelect(Year, value);
+	}
+	public void selectFinancialYear(String value) {
+		dropDownSelect(SelectFinancialYear, value);
+	}
+	public void ClickComputation() {
+		Computation.click();
+	}
+	public void clickonfilter() {
+		ClickonFilter.click();
+	}
+	public void clickonload() {
+		ClickOnLoad.click();
+	}
+	public void clickComputeButton() {
+		Compute.click();
+	}
+	public void CDselectFinancialYear(String value) {
+		dropDownSelect(cdSelectFinancialYear, value);
+	}
+	public void ComputationselectFinancialYear(String value) {
+		dropDownSelect(computationSelectFinancialYear, value);
 	}
 }
