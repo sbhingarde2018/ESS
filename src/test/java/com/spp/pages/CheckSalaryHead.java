@@ -23,7 +23,7 @@ public class CheckSalaryHead extends BasePage{
 	WebElement SalaryStructure;
 	@FindBy(id="af_filter")
 	WebElement GetEmployee;
-	@FindBy(xpath="//*[@id=\"bf_form\"]/div[9]/button[1]")
+	@FindBy(xpath="//form[@id='bf_form']//button[contains(text(),'LOAD')]")
 	WebElement Load;
 	
 	public void selectSalary() {

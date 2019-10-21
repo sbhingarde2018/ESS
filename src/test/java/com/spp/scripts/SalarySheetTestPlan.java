@@ -103,7 +103,20 @@ public class SalarySheetTestPlan extends BaseTest{
 }
 	
 	
-	
+	@Test(priority=6)
+ 	public void EditSalaryGroupRoundOffHigherRupee_SC_240() throws Exception{
+		EditSalaryGroupRoundOffHigherRupee sh=new EditSalaryGroupRoundOffHigherRupee(driver);
+ 		Thread.sleep(5000);
+ 		sh.navigateMaster();
+ 		sh.clickSalaryStructureLink();
+ 		sh.clickSettingsLink();
+  		sh.clickEditLink();
+  		sh.selectCalculationType("Lumpsum");
+  		sh.selectRoundOff("Higher Rupee");
+  		sh.clickUpdateSalaryGroupDetail();
+  		String s=sh.getMessage();
+  	Assert.assertEquals(s, "Salary structure detail succesfully updated");
+}
 	@Test(priority=7)
  	public void EditSalaryGroupBasedOnPayDays_SC_247() throws Exception{
 		EditSalaryGroupBasedOnPayDays sh=new EditSalaryGroupBasedOnPayDays(driver);
@@ -118,7 +131,7 @@ public class SalarySheetTestPlan extends BaseTest{
   		String s=sh.getMessage();
   		Assert.assertEquals(s, "Salary structure detail succesfully updated");
 }*/
-  /* @Test(priority=8)
+   /*@Test(priority=8)
 	 public void ProcessSalaryCalculationTypeNotApplicable_SC_159() throws Exception{
 		 ProcessSalaryCalculationTypeNotApplicable rt = new ProcessSalaryCalculationTypeNotApplicable(driver);
 	 	 rt.selectSalary();
@@ -760,7 +773,7 @@ public class SalarySheetTestPlan extends BaseTest{
 			Thread.sleep(4000);
 			rt.selectGenerateReport();
 }*/
-	@Test(priority=35)
+	/*@Test(priority=35)
 	  public void EditEmployeeDOL_SC_219() throws Exception{
 		  	EditEmployeeDOL ww=new EditEmployeeDOL(driver);
 		  	ww.clickEmployeeLink();
@@ -852,7 +865,7 @@ public class SalarySheetTestPlan extends BaseTest{
 			 rt.selectLoad();
 			 rt.exitFullscreen();
 		 	 Thread.sleep(3000);
-}
+}*/
 		 /*@Test(priority=41)
 		 public void GenerateSalarySheetToCheckPresentDaysAndPayDays_SC_223() throws Exception{
 		   GenerateSalarySheetToCheckPresentDaysAndPayDays rt = new GenerateSalarySheetToCheckPresentDaysAndPayDays(driver);
@@ -870,7 +883,7 @@ public class SalarySheetTestPlan extends BaseTest{
 			Thread.sleep(4000);
 			rt.selectGenerateReport();
 	}*/
-		/* @Test(priority=42)
+		 @Test(priority=42)
 		 	public void PublishSalary_SC_224() throws Exception{
 			 PublishSalary rt = new PublishSalary(driver);
 		 	 rt.selectSalary();
@@ -893,7 +906,7 @@ public class SalarySheetTestPlan extends BaseTest{
 		 	 rt.selectpublish();
 		 	 String r=rt.getMessage();
 		 	 Assert.assertEquals(r, "Salary is published successfully");
-	}*/
+	}
 		 /*@Test(priority=43)
 		 public void GenerateSalarySheetReport_SC_226() throws Exception{
 		   GenerateSalarySheetToCheckPresentDaysAndPayDays rt = new GenerateSalarySheetToCheckPresentDaysAndPayDays(driver);
@@ -911,7 +924,7 @@ public class SalarySheetTestPlan extends BaseTest{
 			Thread.sleep(4000);
 			rt.selectGenerateReport();
 	}*/
-	/*	@Test(priority=4)
+		@Test(priority=4)
 		 	public void EditSalaryGroupRoundOffActual_SC_227() throws Exception{
 				EditSalaryGroupRoundOffActual sh=new EditSalaryGroupRoundOffActual(driver);
 		 		Thread.sleep(5000);
@@ -989,7 +1002,7 @@ public class SalarySheetTestPlan extends BaseTest{
 		 	 rt.selectLoad();
 		 	 rt.exitFullscreen();
 	 		 Thread.sleep(3000);
-	}*/
+	}
 		 /*@Test(priority=47)
 		 public void GenerateSalarySheetReport_SC_233() throws Exception{
 		   GenerateSalarySheetToCheckPresentDaysAndPayDays rt = new GenerateSalarySheetToCheckPresentDaysAndPayDays(driver);
@@ -1007,7 +1020,7 @@ public class SalarySheetTestPlan extends BaseTest{
 			Thread.sleep(4000);
 			rt.selectGenerateReport();
 	}*/
-	/*	@Test(priority=5)
+		@Test(priority=5)
 		 	public void EditSalaryGroupRoundOffNearestRupee_SC_235() throws Exception{
 				EditSalaryGroupRoundOffNearestRupee sh=new EditSalaryGroupRoundOffNearestRupee(driver);
 		 		Thread.sleep(5000);
@@ -1070,8 +1083,8 @@ public class SalarySheetTestPlan extends BaseTest{
 		 	 rt.selectpublish();
 		 	 String r=rt.getMessage();
 		 	 Assert.assertEquals(r, "Salary is published successfully");
-	}*/
-		/* @Test(priority=50)
+	}
+		 /*@Test(priority=50)
 		 	public void CheckSalaryHead_SC_238() throws Exception{
 			 CheckPaydaysPresentdaysAndBasic rt = new CheckPaydaysPresentdaysAndBasic(driver);
 		 	 rt.selectSalary();
@@ -1080,13 +1093,9 @@ public class SalarySheetTestPlan extends BaseTest{
 		 	 rt.selectSalaryStructure("Gross Salary Structure");
 		 	 rt.selectGetEmployee();
 		 	 Thread.sleep(3000);
-		 	 rt.resizeWindow();
-		 	 Thread.sleep(3000);
 		 	 rt.selectLoad();
-		 	 rt.exitFullscreen();
-	 		 Thread.sleep(3000);
-	}*/
-		 /*@Test(enabled=false)
+	}
+		 @Test(enabled=false)
 		 public void GenerateSalarySheetReport_SC_239() throws Exception{
 		   GenerateSalarySheetToCheckPresentDaysAndPayDays rt = new GenerateSalarySheetToCheckPresentDaysAndPayDays(driver);
 			rt.selectReports();
@@ -1102,20 +1111,6 @@ public class SalarySheetTestPlan extends BaseTest{
 			Assert.assertEquals(r, "Employees Successfully Loaded.");
 			Thread.sleep(4000);
 			rt.selectGenerateReport();
-	}*/
-		/* @Test(priority=6)
-		 	public void EditSalaryGroupRoundOffHigherRupee_SC_240() throws Exception{
-				EditSalaryGroupRoundOffHigherRupee sh=new EditSalaryGroupRoundOffHigherRupee(driver);
-		 		Thread.sleep(5000);
-		 		sh.navigateMaster();
-		 		sh.clickSalaryStructureLink();
-		 		sh.clickSettingsLink();
-		  		sh.clickEditLink();
-		  		sh.selectCalculationType("Lumpsum");
-		  		sh.selectRoundOff("Higher Rupee");
-		  		sh.clickUpdateSalaryGroupDetail();
-		  		String s=sh.getMessage();
-		  	Assert.assertEquals(s, "Salary structure detail succesfully updated");
 	}
 		 @Test(priority=52)
 		  public void EditSalaryRateDetailsDOL_SC_241() throws Exception {
