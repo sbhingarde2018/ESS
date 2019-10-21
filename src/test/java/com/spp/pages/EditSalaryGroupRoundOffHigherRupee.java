@@ -12,9 +12,9 @@ public class EditSalaryGroupRoundOffHigherRupee extends BasePage{
 	WebElement masterlink;
 	@FindBy(xpath="//a[text()='Salary Structure']")
 	WebElement salarystructurelink;
-	@FindBy(xpath="//*[@id=\"main\"]/div[3]/table/tbody/tr[2]/td[3]/a")
+	@FindBy(xpath="//table/tbody/tr/td[contains(text(),'Structure_3')]/parent::tr/td[3]/a")
 	WebElement settingslink;
-	@FindBy(xpath="//*[@id=\"main\"]/div[3]/table/tbody/tr/td[7]/a")
+	@FindBy(xpath="//a[@class='action-edit']")
 	WebElement editlink;
 	@FindBy(id="salary_group_detail_calc_type")
 	WebElement calculationtype;
