@@ -23,23 +23,33 @@ public class ProcessSalaryCalculationTypeNotApplicable extends BasePage{
 	WebElement SalaryStructure;
 	@FindBy(id="get_salary")
 	WebElement GetValues;
-	@FindBy(xpath="//*[@id=\"bf_form\"]/div[9]/button[1]")
+	@FindBy(xpath="//form[@id='bf_form']//button[contains(text(),'LOAD')]")
 	WebElement Load;
 	@FindBy(xpath="//*[@id=\"salary_editor_form\"]/table/tbody/tr[2]/td/div/div/div[1]/input")
 	WebElement Process;
 	@FindBy(xpath="//*[@id=\"salary_review\"]/tbody/tr[1]/td[7]/a")
 	WebElement Edit;
-	@FindBy(xpath="//*[@id=\"main\"]/div[3]/a")
+	@FindBy(xpath="//*[@id=\"tabs-2\"]/div[2]/a")
 	WebElement SubmitForReview;
 	@FindBy(xpath="//*[@id=\"menu\"]/li[6]/div/div[3]/ul/li[3]/a")
 	WebElement Review;
-	@FindBy(xpath="//*[@id=\"salary_review\"]/tbody/tr[1]/td[8]/a")
+	@FindBy(xpath="//table/tbody/tr/td[contains(text(),'Apr')]/parent::tr/td[8]/a")
 	WebElement view;
-	@FindBy(xpath="//*[@id=\"main\"]/div[3]/a[1]")
+	@FindBy(xpath="//*[@id=\"tabs-2\"]/div[2]/a[1]")
 	WebElement publish;
 	@FindBy(xpath="//*[@id=\"main\"]/div/div[1]/strong")
 	WebElement successfulMessage;
+	@FindBy(xpath="//input[@id='select_sal_emp']")
+	WebElement SelectAll;
+	@FindBy(xpath="//tbody/tr/td[contains(text(),'Riya')]/parent::tr/td[1]/input")
+	WebElement SelectEmp;
 	
+	public void ClickselectEmp() {
+		SelectEmp.click();
+	}
+	public void ClickselectAll() {
+		SelectAll.click();
+	}
 	public void selectSalary() {
 		Salary.click();
 	}
