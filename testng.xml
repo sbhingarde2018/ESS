@@ -40,10 +40,25 @@
     <class name="com.spp.scripts.PFgroupvalidationtestcase"/>
     <class name="com.spp.scripts.Paymonths"/>
     <class name="com.spp.scripts.AdditionalSalary"/>
-    <class name="com.spp.scripts.TDSArrears"/>
     <class name="com.spp.scripts.Gratuity"/>
-    <class name="com.spp.scripts.InsuranceMasterValidationn"/>-->
-    <class name="com.spp.scripts.SalarySheetTestPlan"/>
+    <class name="com.spp.scripts.InsuranceMasterValidationn"/>
+    <class name="com.spp.scripts.TDSArrears"/>
+    <class name="com.spp.scripts.GroupInsuranceMasterValidationn"/>
+    <class name="com.spp.scripts.SalaryStructureValidationTest"/>
+    <class name="com.spp.scripts.ESIGroupValidation"/>-->
+    <!--<class name="com.spp.scripts.AdvanceMasterValidationn"/>
+    <class name="com.spp.scripts.AddNewHeadToStructureTest"/>
+    <class name="com.spp.scripts.GroupInsuranceMasterValidationn"/>
+    <class name="com.spp.scripts.AddNewHeadToStructureTest"/>
+    <class name="com.spp.scripts.ExGratiaValidationTest"/>
+    <class name="com.spp.scripts.LeaveDefinationValidationn"/>
+    <class name="com.spp.scripts.SalarySheetTestPlan"/>-->
+    <class name="com.spp.scripts.EmployeeMasterReport"/>
+    
+     
+    
+    
+  
     
    <!--<class name="com.spp.scripts.Gratuity"/>
  	<class name="com.spp.scripts.AdvanceDetails"/>
