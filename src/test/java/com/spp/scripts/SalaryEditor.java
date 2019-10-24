@@ -2,13 +2,18 @@ package com.spp.scripts;
 
 import org.testng.annotations.Test;
 import com.spp.common.BaseTest;
+import com.spp.pages.CheckAdditionalSalaryReport;
 import com.spp.pages.CheckBulkPayslipReport;
+import com.spp.pages.CheckCreateNewPaymonth;
+import com.spp.pages.CheckIncrementReport;
 //import com.spp.pages.AllotSalaryNotOnGross;
 //import com.spp.pages.AllotSalaryToEmployee;
 //import com.spp.pages.AssignEmployee;
 import com.spp.pages.CheckPaydaysPresentdaysAndBasic;
+import com.spp.pages.CheckSalaryEditorRedirectstoListingSalaryHeadspagetoAddNewSalaryHead;
 import com.spp.pages.CheckSalaryHead;
 import com.spp.pages.CheckSalarySheetReport;
+import com.spp.pages.CheckSalarySummary_FinancialYearReport;
 import com.spp.pages.EditEmployee;
 import com.spp.pages.EditEmployee30Nov;
 import com.spp.pages.EditEmployee6Nov;
@@ -42,7 +47,7 @@ import junit.framework.Assert;
 
 public class SalaryEditor extends BaseTest{
 	
-	@Test(priority=0)
+	/*@Test(priority=0)
 	public void HoldSalary_SC_152() throws Exception{
 		HoldSalary ab = new HoldSalary(driver);
 		ab.ClickSalary();
@@ -174,5 +179,156 @@ public class SalaryEditor extends BaseTest{
 		ab.ClickSelectAllEmp();
 		ab.ClickSelectEmp();
 		ab.ClickGenerateFile();
+	}*/
+	
+	@Test(priority=5)
+	public void CheckIncrementReport_SC_1001() throws Exception {
+		CheckIncrementReport ab = new CheckIncrementReport(driver);
+		ab.ClickSalary();
+		ab.ClickSalaryEditor();
+		ab.ClickReports();
+		Thread.sleep(2000);
+		ab.CickIncrementReport();
+		Thread.sleep(2000);
+		ab.SelectFromYear("Jan/2017");
+		ab.SelectToYear("Jan/2027");
+		ab.ClickGetEmp();
+		ab.resizeWindow();
+	 	Thread.sleep(3000);
+	 	ab.ClickLoad();
+	 	ab.exitFullscreen();
+		Thread.sleep(3000);
+		ab.ClickSelectEmp();
+		ab.ClickGenerateReport();
+		Thread.sleep(3000);
 	}
+	
+	@Test(priority=6)
+	public void CheckAdditionalSalaryReport_SC_1002() throws Exception {
+		CheckAdditionalSalaryReport ab = new CheckAdditionalSalaryReport(driver);
+		ab.ClickSalary();
+		ab.ClickSalaryEditor();
+		ab.ClickReports();
+		Thread.sleep(2000);
+		ab.ClickAdditionalSalary();
+		Thread.sleep(2000);
+		ab.SelectPayMonth("Feb/2018");
+		ab.ClickGetEmp();
+		ab.resizeWindow();
+	 	Thread.sleep(3000);
+	 	ab.ClickLoad();
+	 	ab.exitFullscreen();
+		Thread.sleep(3000);
+		//ab.ClickSelectEmp();
+		ab.ClickGenerateReport();
+		Thread.sleep(3000);
+	}
+
+	@Test(priority=7)
+	public void CheckSalarySummary_FinancialYearReport_SC_1003() throws Exception {
+		CheckSalarySummary_FinancialYearReport ab = new CheckSalarySummary_FinancialYearReport(driver);
+		ab.ClickSalary();
+		ab.ClickSalaryEditor();
+		ab.ClickReports();
+		Thread.sleep(2000);
+		ab.ClickSalarySummary();
+		Thread.sleep(2000);
+		ab.SelectSalDurationType("Financial Year");
+		ab.SelectFinancialYear("2017/2018");
+		ab.ClickGetEmp();
+		ab.resizeWindow();
+	 	Thread.sleep(3000);
+	 	ab.ClickLoad();
+	 	ab.exitFullscreen();
+		Thread.sleep(3000);
+		ab.ClickSelectEmp();
+		ab.ClickGenerateFile();
+		Thread.sleep(3000);
+	}
+	
+	@Test(priority=8)
+	public void CheckSalarySummary_CalendarYear_SC_1004() throws Exception {
+		CheckSalarySummary_FinancialYearReport ab = new CheckSalarySummary_FinancialYearReport(driver);
+		ab.ClickSalary();
+		ab.ClickSalaryEditor();
+		ab.ClickReports();
+		Thread.sleep(2000);
+		ab.ClickSalarySummary();
+		Thread.sleep(2000);
+		ab.SelectSalDurationType("Calendar Year");
+		ab.SelectCalendarYear("2018");
+		ab.ClickGetEmp();
+		ab.resizeWindow();
+	 	Thread.sleep(3000);
+	 	ab.ClickLoad();
+	 	ab.exitFullscreen();
+		Thread.sleep(3000);
+		ab.ClickSelectEmp();
+		ab.ClickGenerateFile();
+		Thread.sleep(3000);
+	}
+	@Test(priority=9)
+	public void CheckSalarySummary_BetweenMonths_SC_1005() throws Exception {
+		CheckSalarySummary_FinancialYearReport ab = new CheckSalarySummary_FinancialYearReport(driver);
+		ab.ClickSalary();
+		ab.ClickSalaryEditor();
+		ab.ClickReports();
+		Thread.sleep(2000);
+		ab.ClickSalarySummary();
+		Thread.sleep(2000);
+		ab.SelectSalDurationType("Between Months");
+		ab.SelectFromYear("Jan/2017");
+		ab.SelectToYear("Jan/2019");
+		ab.ClickGetEmp();
+		ab.resizeWindow();
+	 	Thread.sleep(3000);
+	 	ab.ClickLoad();
+	 	ab.exitFullscreen();
+		Thread.sleep(3000);
+		ab.ClickSelectEmp();
+		ab.ClickGenerateFile();
+		Thread.sleep(3000);
+	}
+	@Test(priority=10)
+	public void CheckCreateNewPaymonth_SC_1006() throws Exception {
+		CheckCreateNewPaymonth ab = new CheckCreateNewPaymonth(driver);
+		ab.ClickSalary();
+		ab.ClickSalaryEditor();
+		ab.ClickGeneralLink();
+		ab.ClickPaymonth();
+		Thread.sleep(3000);
+		ab.ClickCreatePaymonth();
+		Thread.sleep(2000);
+		ab.switchToPopUpAndAccept(driver);
+		Thread.sleep(2000);
+		String s2 = ab.getSuccessMessage();
+		Assert.assertEquals(s2, "Paymonth created successfully");
+	}
+	/*@Test(priority=11)
+	public void CheckSalaryEditorRedirectstoListingSalaryHeadspagetoAddNewSalaryHead_SC_1007() throws Exception {
+		CheckSalaryEditorRedirectstoListingSalaryHeadspagetoAddNewSalaryHead ab = new CheckSalaryEditorRedirectstoListingSalaryHeadspagetoAddNewSalaryHead(driver);
+		ab.ClickSalary();
+		ab.ClickSalaryEditor();
+		ab.ClickGeneralLink();
+		Thread.sleep(2000);
+		ab.ClickSalaryHeads();
+		ab.ClickAddNewSalaryHead();
+		ab.enterSalaryHeadName("Sal Head 1");
+		ab.enterSalaryHeadShortName("SH1");
+		ab.ClickCreateSalHead();
+		String s2 = ab.getMessage();
+		Assert.assertEquals(s2, "Salary head successfully created");
+		Thread.sleep(2000);
+		ab.ClickDeleteSalaryHead();
+		ab.switchToPopUpAndAccept(driver);
+		Thread.sleep(2000);
+	}
+	@Test(priority=11)
+	public void CheckSalaryEditorRedirectstoListingStructurepagetoCreateNewSalaryStructure_SC_1007() throws Exception {
+		CheckSalaryEditorRedirectstoListingStructurepagetoCreateNewSalaryStructure ab = new CheckSalaryEditorRedirectstoListingStructurepagetoCreateNewSalaryStructure(driver);
+		ab.ClickSalary();
+		ab.ClickSalaryEditor();
+		ab.ClickGeneralLink();
+		
+	}*/
 }
