@@ -10,7 +10,7 @@ import com.spp.pages.CheckIncrementReport;
 //import com.spp.pages.AllotSalaryToEmployee;
 //import com.spp.pages.AssignEmployee;
 import com.spp.pages.CheckPaydaysPresentdaysAndBasic;
-import com.spp.pages.CheckSalaryEditorRedirectstoListingSalaryHeadspagetoAddNewSalaryHead;
+//import com.spp.pages.CheckSalaryEditorRedirectstoListingSalaryHeadspagetoAddNewSalaryHead;
 import com.spp.pages.CheckSalaryHead;
 import com.spp.pages.CheckSalarySheetReport;
 import com.spp.pages.CheckSalarySummary_FinancialYearReport;
