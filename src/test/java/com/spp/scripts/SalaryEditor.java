@@ -10,7 +10,8 @@ import com.spp.pages.CheckIncrementReport;
 //import com.spp.pages.AllotSalaryToEmployee;
 //import com.spp.pages.AssignEmployee;
 import com.spp.pages.CheckPaydaysPresentdaysAndBasic;
-//import com.spp.pages.CheckSalaryEditorRedirectstoListingSalaryHeadspagetoAddNewSalaryHead;
+import com.spp.pages.CheckSalaryEditorRedirectstoListingSalaryHeadspagetoAddNewSalaryHead;
+import com.spp.pages.CheckSalaryEditorRedirectstoListingStructurepagetoCreateNewSalaryStructure;
 import com.spp.pages.CheckSalaryHead;
 import com.spp.pages.CheckSalarySheetReport;
 import com.spp.pages.CheckSalarySummary_FinancialYearReport;
@@ -304,7 +305,7 @@ public class SalaryEditor extends BaseTest{
 		String s2 = ab.getSuccessMessage();
 		Assert.assertEquals(s2, "Paymonth created successfully");
 	}
-	/*@Test(priority=11)
+	@Test(priority=11)
 	public void CheckSalaryEditorRedirectstoListingSalaryHeadspagetoAddNewSalaryHead_SC_1007() throws Exception {
 		CheckSalaryEditorRedirectstoListingSalaryHeadspagetoAddNewSalaryHead ab = new CheckSalaryEditorRedirectstoListingSalaryHeadspagetoAddNewSalaryHead(driver);
 		ab.ClickSalary();
@@ -323,12 +324,23 @@ public class SalaryEditor extends BaseTest{
 		ab.switchToPopUpAndAccept(driver);
 		Thread.sleep(2000);
 	}
-	@Test(priority=11)
-	public void CheckSalaryEditorRedirectstoListingStructurepagetoCreateNewSalaryStructure_SC_1007() throws Exception {
+	@Test(priority=12)
+	public void CheckSalaryEditorRedirectstoListingStructurepagetoCreateNewSalaryStructure_SC_1008() throws Exception {
 		CheckSalaryEditorRedirectstoListingStructurepagetoCreateNewSalaryStructure ab = new CheckSalaryEditorRedirectstoListingStructurepagetoCreateNewSalaryStructure(driver);
 		ab.ClickSalary();
 		ab.ClickSalaryEditor();
+		Thread.sleep(2000);
 		ab.ClickGeneralLink();
-		
-	}*/
+		Thread.sleep(2000);
+		ab.ClickSalaryStructure();
+		Thread.sleep(2000);
+		ab.ClickAddNewSalaryStructure();
+		ab.enterNameSalaryStructure("Avdchj");
+		ab.ClickBaseOnGross();
+		ab.ClickCreateSalarystructure();
+		String s2 = ab.getMessage();
+		Assert.assertEquals(s2, "Salary group successfully created");
+		Thread.sleep(2000);
+	}
+	
 }
