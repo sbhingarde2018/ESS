@@ -182,7 +182,7 @@ public class SalaryEditor extends BaseTest{
 		ab.ClickGenerateFile();
 	}*/
 	
-	@Test(priority=5)
+	/*@Test(priority=5)
 	public void CheckIncrementReport_SC_1001() throws Exception {
 		CheckIncrementReport ab = new CheckIncrementReport(driver);
 		ab.ClickSalary();
@@ -335,12 +335,103 @@ public class SalaryEditor extends BaseTest{
 		ab.ClickSalaryStructure();
 		Thread.sleep(2000);
 		ab.ClickAddNewSalaryStructure();
-		ab.enterNameSalaryStructure("Avdchj");
+		ab.enterNameSalaryStructure("Avdc");
 		ab.ClickBaseOnGross();
 		ab.ClickCreateSalarystructure();
 		String s2 = ab.getMessage();
 		Assert.assertEquals(s2, "Salary group successfully created");
 		Thread.sleep(2000);
+	}*/
+	
+	@Test(priority=12)
+	public void ProcessSalary_SC_1009() throws Exception {
+		PublishSalary ab = new PublishSalary(driver);
+		ab.selectSalary();
+	 	ab.selectSalaryEditor();
+	 	ab.selectPayMonth("Mar/2018");
+	 	ab.selectSalaryStructure("Gross Salary Structure");
+	 	ab.selectGetValues();
+	 	Thread.sleep(3000);
+	 	ab.resizeWindow();
+	 	Thread.sleep(3000);
+	 	ab.selectLoad();
+	 	ab.exitFullscreen();
+	 	Thread.sleep(3000);
+	 	ab.selectProcess();
+	 	Thread.sleep(3000);
 	}
 	
+	@Test(priority=13)
+	public void ProcessSalarywithFillCalculatedPT_SC_1010() throws Exception {
+		PublishSalary ab = new PublishSalary(driver);
+		ab.selectSalary();
+	 	ab.selectSalaryEditor();
+	 	ab.selectPayMonth("Mar/2018");
+	 	ab.selectSalaryStructure("Gross Salary Structure");
+	 	ab.selectGetValues();
+	 	Thread.sleep(3000);
+	 	ab.resizeWindow();
+	 	Thread.sleep(3000);
+	 	ab.selectLoad();
+	 	ab.exitFullscreen();
+	 	Thread.sleep(3000);
+	 	ab.selectFillPT();
+	 	ab.selectProcess();
+	 	Thread.sleep(3000);
+	 	
+	}
+	@Test(priority=14)
+	public void SaveValuesEarnings_SalaryEditorMore_SC_1011() throws Exception {
+		PublishSalary ab = new PublishSalary(driver);
+		ab.selectSalary();
+	 	ab.selectSalaryEditor();
+	 	ab.selectPayMonth("Mar/2018");
+	 	ab.selectSalaryStructure("Gross Salary Structure");
+	 	ab.selectGetValues();
+	 	Thread.sleep(3000);
+	 	ab.resizeWindow();
+	 	Thread.sleep(3000);
+	 	ab.selectLoad();
+	 	ab.exitFullscreen();
+	 	Thread.sleep(3000);
+	 	ab.selectMore();
+	 	ab.EnterBasicUnit("1");
+	 	ab.ClickSave();
+	 	Thread.sleep(3000);
+	 	ab.selectProcess();
+	 	Thread.sleep(3000);
+	}
+	@Test(priority=15)
+	public void SubmitforSalaryReview_SC_1013() throws Exception {
+		PublishSalary ab = new PublishSalary(driver);
+		ab.selectSalary();
+		ab.ClickSalaryProcessList();
+		ab.selectEdit();
+	 	ab.selectSubmitForReview();
+	 	Thread.sleep(3000);
+	 	//String r=ab.getStatus();
+	 	//Assert.assertEquals(r, "Submitted For Review");
+	}
+	
+	@Test(priority=16)
+	public void PublishSalary_SC_1014() throws Exception {
+		PublishSalary ab = new PublishSalary(driver);
+		ab.selectSalary();
+		ab.selectReview();
+		ab.selectview();
+		ab.selectpublish();
+		String r=ab.getMessage();
+		Assert.assertEquals(r, "Salary is published successfully");
+	}
+	@Test(priority=17)
+	public void RejectSalaryReview_SC_1015() throws Exception {
+		PublishSalary ab = new PublishSalary(driver);
+		ab.selectSalary();
+		ab.selectReview();
+		ab.selectview();
+		ab.ClickReject();
+		//String r=ab.getMessage();
+		//Assert.assertEquals(r, "Salary is rejected successfully");
+		
+	}
 }

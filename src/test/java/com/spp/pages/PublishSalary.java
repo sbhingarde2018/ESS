@@ -27,19 +27,42 @@ public class PublishSalary extends BasePage{
 	WebElement Load;
 	@FindBy(xpath="//div[@class='text-center mt10']//div//input[@name='commit']")
 	WebElement Process;
-	@FindBy(xpath="//tr[1]//td[7]//a[1]")
+	@FindBy(xpath="/html/body/div[2]/div[5]/div/div/div[2]/div/div[2]/div/table/tbody/tr/td[7]/a")
 	WebElement Edit;
 	@FindBy(xpath="//*[@id=\"tabs-2\"]/div[2]/a")
 	WebElement SubmitForReview;
 	@FindBy(xpath="//*[@id=\"menu\"]/li[6]/div/div[3]/ul/li[3]/a")
 	WebElement Review;
-	@FindBy(xpath="//*[@id=\"salary_review\"]/tbody/tr[1]/td[8]/a")
+	@FindBy(xpath="/html/body/div[2]/div[5]/div/div/div[2]/div/div[2]/div/table/tbody/tr/td[8]/a")
 	WebElement view;
 	@FindBy(xpath="//*[@id=\"tabs-2\"]/div[2]/a[1]")
 	WebElement publish;
 	@FindBy(xpath="//*[@id=\"main\"]/div/div[1]/strong")
 	WebElement successfulMessage;
+	@FindBy(xpath="//input[@id='fill_pt']")
+	WebElement FillPT;
+	@FindBy(xpath="//tr[1]/td[4]/a")
+	WebElement More;
+	@FindBy(xpath="//fieldset/table/tbody/tr[2]/td[1]/div/div/div/input[1]")
+	WebElement BasicUnit;
+	@FindBy(xpath="//div[@class='block lightblue p0']//input[@name='commit']")
+	WebElement Save;
+	@FindBy(xpath="//a[contains(text(),'Salary Process List')]")
+	WebElement SalaryProcessList;
+	@FindBy(xpath="//*[@id=\"salary_review\"]/tbody/tr[1]/td[7]")
+	WebElement Status;
+	@FindBy(xpath="//div[@id='tabs-2']//a[@class='btn2 btn-bglightblue'][contains(text(),'Reject')]")
+	WebElement Reject;
 	
+	public void ClickReject() {
+		Reject.click();
+	}
+	public void ClickSalaryProcessList() {
+		SalaryProcessList.click();
+	}
+	public void ClickSave() {
+		Save.click();
+	}
 	public void selectSalary() {
 		Salary.click();
 	}
@@ -79,5 +102,16 @@ public class PublishSalary extends BasePage{
 	public String getMessage() {
 		return successfulMessage.getText();
 	}
-
+	public void selectFillPT() {
+		FillPT.click();
+	}
+	public void selectMore() {
+		More.click();
+	}
+	public void EnterBasicUnit(String value) throws Exception{
+		BasicUnit.sendKeys(value);
+	}
+	public String getStatus(){
+		return Status.getText();
+	}
 }
