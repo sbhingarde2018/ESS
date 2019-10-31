@@ -38,6 +38,7 @@ import com.spp.pages.HoldSalary;
 import com.spp.pages.ProcessSalaryCalculationTypeNotApplicable;
 import com.spp.pages.PublishSalary;
 import com.spp.pages.PublishSalary182;
+import com.spp.pages.PublishedSalariesToSalaryEditor;
 import com.spp.pages.ReleaseSalary;
 import com.spp.pages.UpdateCalculationTypeLumpsum;
 import com.spp.pages.UpdateCalculationTypeNotApplicable;
@@ -180,9 +181,9 @@ public class SalaryEditor extends BaseTest{
 		ab.ClickSelectAllEmp();
 		ab.ClickSelectEmp();
 		ab.ClickGenerateFile();
-	}*/
+	}
 	
-	/*@Test(priority=5)
+	@Test(priority=5)
 	public void CheckIncrementReport_SC_1001() throws Exception {
 		CheckIncrementReport ab = new CheckIncrementReport(driver);
 		ab.ClickSalary();
@@ -343,7 +344,7 @@ public class SalaryEditor extends BaseTest{
 		Thread.sleep(2000);
 	}*/
 	
-	@Test(priority=12)
+	/*@Test(priority=12)
 	public void ProcessSalary_SC_1009() throws Exception {
 		PublishSalary ab = new PublishSalary(driver);
 		ab.selectSalary();
@@ -433,5 +434,151 @@ public class SalaryEditor extends BaseTest{
 		//String r=ab.getMessage();
 		//Assert.assertEquals(r, "Salary is rejected successfully");
 		
+	}*/
+	@Test(priority=18)
+	public void CheckEmployeesSalaryDetails_SC_1016() throws Exception {
+		CheckPaydaysPresentdaysAndBasic ab = new CheckPaydaysPresentdaysAndBasic(driver);
+		ab.selectSalary();
+		ab.selectPublishedSalary();
+		ab.selectPayMonth("Mar/2018");
+		ab.selectSalaryStructure("Gross Salary Structure");
+		ab.selectGetEmployee();
+		Thread.sleep(3000);
+		ab.resizeWindow();
+		Thread.sleep(3000);
+		ab.selectLoad();
+		ab.exitFullscreen();
+		Thread.sleep(6000);
+	}
+	@Test(priority=19)
+	public void Salary_PublishedSalaries_Links_SalaryEditorRedirectsto_SalaryEditor_SC_1017() throws Exception {
+		PublishedSalariesToSalaryEditor ab = new PublishedSalariesToSalaryEditor(driver);
+		ab.selectSalary();
+		ab.selectPublishedSalary();
+		//ab.selectLinks();
+		Thread.sleep(3000);
+		ab.selectSalariEditorLink();
+		Thread.sleep(3000);
+		ab.selectPayMonth("Mar/2018");
+	 	ab.selectSalaryStructure("Gross Salary Structure");
+	 	ab.selectGetValues();
+	 	Thread.sleep(3000);
+	 	ab.resizeWindow();
+	 	Thread.sleep(3000);
+	 	ab.selectLoad();
+	 	ab.exitFullscreen();
+	 	Thread.sleep(3000);
+	 	ab.selectProcess();
+	 	Thread.sleep(6000);
+	}
+	@Test(priority=20)
+	public void CheckSalary_PublishedSalaries_Reports_BulkPayslip_redirectstoReportsmodule_SC_1018() throws Exception {
+		CheckBulkPayslipReport ab = new CheckBulkPayslipReport(driver);
+		ab.ClickSalary();;
+		ab.selectPublishedSalary();
+		ab.ClickReports();
+		Thread.sleep(2000);
+		ab.ClickBulkPayslipReport();
+		Thread.sleep(2000);
+		ab.selectPayMonth("Jan/2018");
+		ab.selectSalStructure("Gross Salary Structure");
+		ab.selectPayslipType("Payslip");
+		ab.ClickGetEmp();
+		ab.resizeWindow();
+	 	Thread.sleep(3000);
+	 	ab.ClickLoad();
+	 	ab.exitFullscreen();
+		Thread.sleep(3000);
+		ab.ClickSelectAllEmp();
+		ab.ClickSelectEmp();
+		ab.ClickGenerateFile();
+		Thread.sleep(6000);
+	}
+	
+	/*@Test(priority=21)
+	public void CheckSalary_PublishedSalaris_Reports_SalarySheetRedirectstoReportsmodule_SC_1019() throws Exception {
+		CheckSalarySheetReport ab = new CheckSalarySheetReport(driver);
+		ab.ClickSalary();
+		ab.selectPublishedSalary();
+		ab.ClickReports();
+		Thread.sleep(2000);
+		ab.ClickSalarySheetReport();
+		Thread.sleep(2000);
+		ab.SelectSalarySheet("Salary Sheet");
+		ab.selectPayMonth("Jan/2018");
+		ab.ClickGetEmp();
+		ab.resizeWindow();
+	 	Thread.sleep(3000);
+	 	ab.ClickLoad();
+	 	ab.exitFullscreen();
+		Thread.sleep(3000);
+		ab.ClickSelectAllEmp();
+		ab.ClickSelectEmp();
+		ab.ClickGenerateFile();
+		Thread.sleep(6000);
+	}*/
+	@Test(priority=22)
+	public void CheckSalary_PublishedSalaris_Reports_IncrementRedirectstoReportsmodule_SC_1020() throws Exception {
+		CheckIncrementReport ab = new CheckIncrementReport(driver);
+		ab.ClickSalary();
+		ab.selectPublishedSalary();
+		ab.ClickReports();
+		Thread.sleep(2000);
+		ab.CickIncrement();
+		Thread.sleep(2000);
+		ab.SelectFromYear("Jan/2017");
+		ab.SelectToYear("Jan/2027");
+		ab.ClickGetEmp();
+		ab.resizeWindow();
+	 	Thread.sleep(3000);
+	 	ab.ClickLoad();
+	 	ab.exitFullscreen();
+		Thread.sleep(3000);
+		ab.ClickSelectEmp();
+		ab.ClickGenerateReport();
+		Thread.sleep(6000);
+	}
+	@Test(priority=23)
+	public void CheckSalary_PublishedSalaris_Reports_SalarySummaryFinancialYear_RedirectstoReports_SC_1021() throws Exception {
+		CheckSalarySummary_FinancialYearReport ab = new CheckSalarySummary_FinancialYearReport(driver);
+		ab.ClickSalary();
+		ab.selectPublishedSalary();
+		ab.ClickReports();
+		Thread.sleep(2000);
+		ab.ClickSalarySummaryReport();
+		Thread.sleep(2000);
+		ab.SelectSalDurationType("Financial Year");
+		ab.SelectFinancialYear("2017/2018");
+		ab.ClickGetEmp();
+		ab.resizeWindow();
+	 	Thread.sleep(3000);
+	 	ab.ClickLoad();
+	 	ab.exitFullscreen();
+		Thread.sleep(3000);
+		ab.ClickSelectEmp();
+		ab.ClickGenerateFile();
+		Thread.sleep(6000);
+	}
+	
+	@Test(priority=24)
+	public void CheckSalary_PublishedSalaris_Reports_SalarySummaryCalendarYear_RedirectstoReports_SC_1022() throws Exception {
+		CheckSalarySummary_FinancialYearReport ab = new CheckSalarySummary_FinancialYearReport(driver);
+		ab.ClickSalary();
+		ab.selectPublishedSalary();
+		ab.ClickReports();
+		Thread.sleep(2000);
+		ab.ClickSalarySummaryReport();
+		Thread.sleep(2000);
+		ab.SelectSalDurationType("Calendar Year");
+		ab.SelectCalendarYear("2018");
+		ab.ClickGetEmp();
+		ab.resizeWindow();
+	 	Thread.sleep(3000);
+	 	ab.ClickLoad();
+	 	ab.exitFullscreen();
+		Thread.sleep(3000);
+		ab.ClickSelectEmp();
+		ab.ClickGenerateFile();
+		Thread.sleep(6000);
 	}
 }

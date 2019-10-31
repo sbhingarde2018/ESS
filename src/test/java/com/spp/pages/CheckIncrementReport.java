@@ -22,6 +22,8 @@ public class CheckIncrementReport extends BasePage{
 	WebElement Reports;
 	@FindBy(xpath="//ul[@id='ui-id-6']//a[contains(text(),'Increment Report')]")
 	WebElement IncrementReport;
+	@FindBy(xpath="//ul[@id='ui-id-4']//a[contains(text(),'Increment Report')]")
+	WebElement Increment;
 	@FindBy(xpath="//select[@id='from_month_year']")
 	WebElement FromYear;
 	@FindBy(xpath="//select[@id='to_month_year']")
@@ -34,6 +36,8 @@ public class CheckIncrementReport extends BasePage{
 	WebElement SelectEmp;
 	@FindBy(xpath="//input[@id='generate_report']")
 	WebElement GenerateReport;
+	@FindBy(xpath="//*[@id=\"menu\"]/li[6]/div/div[3]/ul/li[4]/a")
+	WebElement PublishedSalary;
 	
 	public void ClickSalary() {
 		Salary.click();
@@ -46,6 +50,9 @@ public class CheckIncrementReport extends BasePage{
 	}
 	public void CickIncrementReport() {
 		IncrementReport.click();
+	}
+	public void CickIncrement() {
+		Increment.click();
 	}
 	public void SelectFromYear(String value){
 		dropDownSelect(FromYear, value);
@@ -64,5 +71,8 @@ public class CheckIncrementReport extends BasePage{
 	}
 	public void ClickGenerateReport() {
 		GenerateReport.click();
+	}
+	public void selectPublishedSalary() {
+		PublishedSalary.click();
 	}
 }

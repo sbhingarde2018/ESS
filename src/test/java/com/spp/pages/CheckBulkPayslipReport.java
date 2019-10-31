@@ -22,6 +22,8 @@ public class CheckBulkPayslipReport extends BasePage{
 	WebElement Reports;
 	@FindBy(xpath="//ul[@id='ui-id-6']//a[contains(text(),'Bulk Payslip')]")
 	WebElement BulkPayslip;
+	@FindBy(xpath="//ul[@id='ui-id-4']//a[contains(text(),'Bulk Payslip')]")
+	WebElement BulkPayslipReport;
 	@FindBy(xpath="//select[@id='month_year']")
 	WebElement PayMonth;
 	@FindBy(xpath="//select[@id='bp_salary_group_id']")
@@ -38,6 +40,8 @@ public class CheckBulkPayslipReport extends BasePage{
 	WebElement SelectEmp;
 	@FindBy(xpath="//input[@id='bulk_payslip_submit']")
 	WebElement GenerateFile;
+	@FindBy(xpath="//*[@id=\"menu\"]/li[6]/div/div[3]/ul/li[4]/a")
+	WebElement PublishedSalary;
 	
 	public void ClickSalary() {
 		Salary.click();
@@ -50,6 +54,9 @@ public class CheckBulkPayslipReport extends BasePage{
 	}
 	public void ClickBulkPayslip() {
 		BulkPayslip.click();
+	}
+	public void ClickBulkPayslipReport() {
+		BulkPayslipReport.click();
 	}
 	public void ClickGetEmp() {
 		GetEmp.click();
@@ -74,5 +81,8 @@ public class CheckBulkPayslipReport extends BasePage{
 	}
 	public void ClickGenerateFile() {
 		GenerateFile.click();
+	}
+	public void selectPublishedSalary() {
+		PublishedSalary.click();
 	}
 }
