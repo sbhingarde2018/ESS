@@ -21,6 +21,8 @@ public class CheckSalaryEditorRedirectstoListingSalaryHeadspagetoAddNewSalaryHea
 	WebElement GeneralLink;
 	@FindBy(xpath="//ul[@id='ui-id-8']//a[contains(text(),'Salary Heads')]")
 	WebElement SalaryHeads;
+	@FindBy(xpath="//ul[@id='ui-id-6']//a[contains(text(),'Salary Heads')]")
+	WebElement PublishSalaryHeads;
 	@FindBy(xpath="//a[contains(text(),'Add New Salary Head')]")
 	WebElement AddNewSalaryHead;
 	@FindBy(xpath="//input[@id='salary_head_head_name']")
@@ -33,6 +35,8 @@ public class CheckSalaryEditorRedirectstoListingSalaryHeadspagetoAddNewSalaryHea
 	WebElement successfullMessage;
 	@FindBy(xpath="//*[@id=\"earning_heads\"]/tbody/tr/td[contains(text(),'Sal Head 1')]/parent::tr/td[5]/a[2]")
 	WebElement DeleteSalaryHead;
+	@FindBy(xpath="//*[@id=\"menu\"]/li[6]/div/div[3]/ul/li[4]/a")
+	WebElement PublishedSalary;
 	
 	
 	public void ClickSalary() {
@@ -46,6 +50,9 @@ public class CheckSalaryEditorRedirectstoListingSalaryHeadspagetoAddNewSalaryHea
 	}
 	public void ClickSalaryHeads() {
 		SalaryHeads.click();
+	}
+	public void ClickPublishSalaryHeads() {
+		PublishSalaryHeads.click();
 	}
 	public void ClickAddNewSalaryHead() {
 		AddNewSalaryHead.click();
@@ -67,5 +74,8 @@ public class CheckSalaryEditorRedirectstoListingSalaryHeadspagetoAddNewSalaryHea
 	}
 	public void ClickDeleteSalaryHead() {
 		DeleteSalaryHead.click();
+	}
+	public void selectPublishedSalary() {
+		PublishedSalary.click();
 	}
 }

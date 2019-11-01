@@ -22,10 +22,14 @@ public class CheckCreateNewPaymonth extends BasePage{
 	WebElement GeneralLink;
 	@FindBy(xpath="//ul[@id='ui-id-8']//a[contains(text(),'Paymonths')]")
 	WebElement Paymonths;
+	@FindBy(xpath="//ul[@id='ui-id-6']//a[contains(text(),'Paymonths')]")
+	WebElement PublishPaymonths;
 	@FindBy(xpath="//div[@class='text-center bottom-space']//input[@name='commit'] ")
 	WebElement CreatePaymonth;
 	@FindBy(xpath="//strong[contains(text(),'Paymonth created successfully')]")
 	WebElement SuccMessage;
+	@FindBy(xpath="//*[@id=\"menu\"]/li[6]/div/div[3]/ul/li[4]/a")
+	WebElement PublishedSalary;
 	
 	public void ClickSalary() {
 		Salary.click();
@@ -39,10 +43,16 @@ public class CheckCreateNewPaymonth extends BasePage{
 	public void ClickPaymonth() {
 		Paymonths.click();
 	}
+	public void ClickPublishPaymonths() {
+		PublishPaymonths.click();
+	}
 	public void ClickCreatePaymonth() {
 		CreatePaymonth.click();
 	}
 	public String getSuccessMessage(){
 		return SuccMessage.getText();
+	}
+	public void selectPublishedSalary() {
+		PublishedSalary.click();
 	}
 }

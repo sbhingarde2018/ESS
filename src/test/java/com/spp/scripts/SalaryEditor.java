@@ -40,6 +40,7 @@ import com.spp.pages.PublishSalary;
 import com.spp.pages.PublishSalary182;
 import com.spp.pages.PublishedSalariesToSalaryEditor;
 import com.spp.pages.ReleaseSalary;
+import com.spp.pages.SalaryNotificationStatusDetails;
 import com.spp.pages.UpdateCalculationTypeLumpsum;
 import com.spp.pages.UpdateCalculationTypeNotApplicable;
 import com.spp.pages.UpdateMasterWeeklyOff;
@@ -435,7 +436,7 @@ public class SalaryEditor extends BaseTest{
 		//Assert.assertEquals(r, "Salary is rejected successfully");
 		
 	}*/
-	@Test(priority=18)
+	/*@Test(priority=18)
 	public void CheckEmployeesSalaryDetails_SC_1016() throws Exception {
 		CheckPaydaysPresentdaysAndBasic ab = new CheckPaydaysPresentdaysAndBasic(driver);
 		ab.selectSalary();
@@ -493,7 +494,7 @@ public class SalaryEditor extends BaseTest{
 		ab.ClickSelectEmp();
 		ab.ClickGenerateFile();
 		Thread.sleep(6000);
-	}
+	}*/
 	
 	/*@Test(priority=21)
 	public void CheckSalary_PublishedSalaris_Reports_SalarySheetRedirectstoReportsmodule_SC_1019() throws Exception {
@@ -517,7 +518,7 @@ public class SalaryEditor extends BaseTest{
 		ab.ClickGenerateFile();
 		Thread.sleep(6000);
 	}*/
-	@Test(priority=22)
+	/*@Test(priority=22)
 	public void CheckSalary_PublishedSalaris_Reports_IncrementRedirectstoReportsmodule_SC_1020() throws Exception {
 		CheckIncrementReport ab = new CheckIncrementReport(driver);
 		ab.ClickSalary();
@@ -580,5 +581,138 @@ public class SalaryEditor extends BaseTest{
 		ab.ClickSelectEmp();
 		ab.ClickGenerateFile();
 		Thread.sleep(6000);
+	}*/
+	@Test(priority=25)
+	public void CheckSalary_PublishedSalaris_Reports_SalarySummaryBetweenMonths_RedirectstoReports_SC_1023() throws Exception {
+		CheckSalarySummary_FinancialYearReport ab = new CheckSalarySummary_FinancialYearReport(driver);
+		ab.ClickSalary();
+		ab.selectPublishedSalary();
+		ab.ClickReports();
+		Thread.sleep(2000);
+		ab.ClickSalarySummaryReport();
+		Thread.sleep(2000);
+		ab.SelectSalDurationType("Between Months");
+		ab.SelectFromYear("Jan/2017");
+		ab.SelectToYear("Jan/2019");
+		ab.ClickGetEmp();
+		ab.resizeWindow();
+	 	Thread.sleep(3000);
+	 	ab.ClickLoad();
+	 	ab.exitFullscreen();
+		Thread.sleep(3000);
+		ab.ClickSelectEmp();
+		ab.ClickGenerateFile();
+		Thread.sleep(3000);
+	}
+	@Test(priority=26)
+	public void CheckSalary_PublishedSalaries_GeneralLink_PaymonthsredirectstoCreate_NewPaymonthpage_SC_1026() throws Exception {
+		CheckCreateNewPaymonth ab = new CheckCreateNewPaymonth(driver);
+		ab.ClickSalary();
+		ab.selectPublishedSalary();
+		ab.ClickGeneralLink();
+		ab.ClickPublishPaymonths();
+		Thread.sleep(3000);
+		ab.ClickCreatePaymonth();
+		Thread.sleep(2000);
+		ab.switchToPopUpAndAccept(driver);
+		Thread.sleep(2000);
+		String s2 = ab.getSuccessMessage();
+		Assert.assertEquals(s2, "Paymonth created successfully");
+	}
+	@Test(priority=27)
+	public void CheckSalary_PublishedSalaries_GeneralLink_SalaryHeadsredirectsto_ListingSalaryHeads_SC_1027() throws Exception {
+		CheckSalaryEditorRedirectstoListingSalaryHeadspagetoAddNewSalaryHead ab = new CheckSalaryEditorRedirectstoListingSalaryHeadspagetoAddNewSalaryHead(driver);
+		ab.ClickSalary();
+		ab.selectPublishedSalary();
+		ab.ClickGeneralLink();
+		Thread.sleep(2000);
+		ab.ClickPublishSalaryHeads();
+		Thread.sleep(2000);
+		ab.ClickAddNewSalaryHead();
+		ab.enterSalaryHeadName("Sal Head 1");
+		ab.enterSalaryHeadShortName("SH1");
+		ab.ClickCreateSalHead();
+		String s2 = ab.getMessage();
+		Assert.assertEquals(s2, "Salary head successfully created");
+		Thread.sleep(2000);
+		ab.ClickDeleteSalaryHead();
+		ab.switchToPopUpAndAccept(driver);
+		Thread.sleep(2000);
+	}
+	@Test(priority=28)
+	public void CheckSalary_PublishedSalaries_GeneralLink_SalaryStructureredirectsto_ListingStructure_SC_1028() throws Exception {
+		CheckSalaryEditorRedirectstoListingStructurepagetoCreateNewSalaryStructure ab = new CheckSalaryEditorRedirectstoListingStructurepagetoCreateNewSalaryStructure(driver);
+		ab.ClickSalary();
+		ab.selectPublishedSalary();
+		Thread.sleep(2000);
+		ab.ClickGeneralLink();
+		Thread.sleep(2000);
+		ab.ClickPublishSalaryStructure();
+		Thread.sleep(2000);
+		ab.ClickAddNewSalaryStructure();
+		ab.enterNameSalaryStructure("Abddd");
+		ab.ClickBaseOnGross();
+		ab.ClickCreateSalarystructure();
+		String s2 = ab.getMessage();
+		Assert.assertEquals(s2, "Salary group successfully created");
+		Thread.sleep(2000);
+	}
+	@Test(priority=29)
+	public void CheckEmployeesSalaryNotificationStatusDetails_SC_1029() throws Exception {
+		SalaryNotificationStatusDetails ab = new SalaryNotificationStatusDetails(driver);
+		ab.ClickSalary();
+		ab.ClickPublishedSalaryNotifications();
+		Thread.sleep(2000);
+		ab.SelectPayMonth("Feb/2020");
+		ab.Selectnotificationstatus("Pending");
+		ab.SelectPayslip("Payslip");
+		ab.ClickGetEmp();
+		ab.resizeWindow();
+	 	Thread.sleep(3000);
+	 	ab.ClickLoad();
+	 	ab.exitFullscreen();
+		Thread.sleep(3000);
+		//String s2 = ab.getSuccessMessage();
+		//Assert.assertEquals(s2, "Employees Successfully Loaded.");
+	}
+	/*@Test(priority=30)
+	public void SendMail_Employees_SalaryNotificationStatusDetails_SC_1030() throws Exception {
+		SalaryNotificationStatusDetails ab = new SalaryNotificationStatusDetails(driver);
+		ab.ClickSalary();
+		ab.ClickPublishedSalaryNotifications();
+		Thread.sleep(2000);
+		ab.SelectPayMonth("Feb/2020");
+		ab.Selectnotificationstatus("Pending");
+		ab.SelectPayslip("Payslip");
+		ab.ClickGetEmp();
+		ab.resizeWindow();
+	 	Thread.sleep(3000);
+	 	ab.ClickLoad();
+	 	ab.exitFullscreen();
+		Thread.sleep(3000);
+		//String s2 = ab.getSuccessMessage();
+		//Assert.assertEquals(s2, "Employees Successfully Loaded.");
+		ab.ClickSelectAll();
+		ab.ClickSelectEmp();
+		ab.ClickSendEMail();
+		Thread.sleep(6000);
+	}*/
+	@Test(priority=31)
+	public void CheckEmployeesSalaryNotificationStatusDetailsDetailedPayslip_SC_1031() throws Exception {
+		SalaryNotificationStatusDetails ab = new SalaryNotificationStatusDetails(driver);
+		ab.ClickSalary();
+		ab.ClickPublishedSalaryNotifications();
+		Thread.sleep(2000);
+		ab.SelectPayMonth("Feb/2020");
+		ab.Selectnotificationstatus("Pending");
+		ab.SelectPayslip("Detailed Payslip");
+		ab.ClickGetEmp();
+		ab.resizeWindow();
+	 	Thread.sleep(3000);
+	 	ab.ClickLoad();
+	 	ab.exitFullscreen();
+		Thread.sleep(3000);
+		//String s2 = ab.getSuccessMessage();
+		//Assert.assertEquals(s2, "Employees Successfully Loaded.");
 	}
 }

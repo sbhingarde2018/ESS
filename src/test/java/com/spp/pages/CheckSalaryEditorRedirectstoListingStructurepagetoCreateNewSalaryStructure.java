@@ -21,6 +21,8 @@ public class CheckSalaryEditorRedirectstoListingStructurepagetoCreateNewSalarySt
 	WebElement GeneralLink;
 	@FindBy(xpath="//ul[@id='ui-id-8']//a[contains(text(),'Salary Structure')]")
 	WebElement SalaryStructure;
+	@FindBy(xpath="//ul[@id='ui-id-6']//a[contains(text(),'Salary Structure')]")
+	WebElement PublishSalaryStructure;
 	@FindBy(xpath="//a[contains(text(),'Add New Salary Structure')]")
 	WebElement AddNewSalaryStructure;
 	@FindBy(xpath="//input[@id='salary_group_salary_group_name']")
@@ -31,6 +33,8 @@ public class CheckSalaryEditorRedirectstoListingStructurepagetoCreateNewSalarySt
 	WebElement CreateSalarystructure;
 	@FindBy(xpath="//strong[contains(text(),'Salary group successfully created')]")
 	WebElement Message;
+	@FindBy(xpath="//*[@id=\"menu\"]/li[6]/div/div[3]/ul/li[4]/a")
+	WebElement PublishedSalary;
 	
 	public void ClickSalary() {
 		Salary.click();
@@ -43,6 +47,9 @@ public class CheckSalaryEditorRedirectstoListingStructurepagetoCreateNewSalarySt
 	}
 	public void ClickSalaryStructure() {
 		SalaryStructure.click();
+	}
+	public void ClickPublishSalaryStructure() {
+		PublishSalaryStructure.click();
 	}
 	public void ClickAddNewSalaryStructure() {
 		AddNewSalaryStructure.click();
@@ -60,5 +67,7 @@ public class CheckSalaryEditorRedirectstoListingStructurepagetoCreateNewSalarySt
 	public String getMessage(){
 		return Message.getText();
 	}
-	
+	public void selectPublishedSalary() {
+		PublishedSalary.click();
+	}
 }
