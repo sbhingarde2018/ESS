@@ -582,7 +582,7 @@ public class SalaryEditor extends BaseTest{
 		ab.ClickGenerateFile();
 		Thread.sleep(6000);
 	}*/
-	@Test(priority=25)
+	/*@Test(priority=25)
 	public void CheckSalary_PublishedSalaris_Reports_SalarySummaryBetweenMonths_RedirectstoReports_SC_1023() throws Exception {
 		CheckSalarySummary_FinancialYearReport ab = new CheckSalarySummary_FinancialYearReport(driver);
 		ab.ClickSalary();
@@ -650,7 +650,7 @@ public class SalaryEditor extends BaseTest{
 		ab.ClickPublishSalaryStructure();
 		Thread.sleep(2000);
 		ab.ClickAddNewSalaryStructure();
-		ab.enterNameSalaryStructure("Abddd");
+		ab.enterNameSalaryStructure("Abcccb");
 		ab.ClickBaseOnGross();
 		ab.ClickCreateSalarystructure();
 		String s2 = ab.getMessage();
@@ -674,8 +674,8 @@ public class SalaryEditor extends BaseTest{
 		Thread.sleep(3000);
 		//String s2 = ab.getSuccessMessage();
 		//Assert.assertEquals(s2, "Employees Successfully Loaded.");
-	}
-	/*@Test(priority=30)
+	}*/
+	@Test(priority=30)
 	public void SendMail_Employees_SalaryNotificationStatusDetails_SC_1030() throws Exception {
 		SalaryNotificationStatusDetails ab = new SalaryNotificationStatusDetails(driver);
 		ab.ClickSalary();
@@ -689,15 +689,15 @@ public class SalaryEditor extends BaseTest{
 	 	Thread.sleep(3000);
 	 	ab.ClickLoad();
 	 	ab.exitFullscreen();
-		Thread.sleep(3000);
-		//String s2 = ab.getSuccessMessage();
-		//Assert.assertEquals(s2, "Employees Successfully Loaded.");
+		//Thread.sleep(3000);
+		String s2 = ab.getSuccessMessage();
+		Assert.assertEquals(s2, "Employees Successfully Loaded.");
 		ab.ClickSelectAll();
 		ab.ClickSelectEmp();
 		ab.ClickSendEMail();
-		Thread.sleep(6000);
-	}*/
-	@Test(priority=31)
+		Thread.sleep(3000);
+	}
+	/*@Test(priority=31)
 	public void CheckEmployeesSalaryNotificationStatusDetailsDetailedPayslip_SC_1031() throws Exception {
 		SalaryNotificationStatusDetails ab = new SalaryNotificationStatusDetails(driver);
 		ab.ClickSalary();
@@ -714,5 +714,147 @@ public class SalaryEditor extends BaseTest{
 		Thread.sleep(3000);
 		//String s2 = ab.getSuccessMessage();
 		//Assert.assertEquals(s2, "Employees Successfully Loaded.");
+	}*/
+	@Test(priority=32)
+	public void SendMail_Employees_SalaryNotificationStatusDetails_DetailedPayslip_SC_1032() throws Exception {
+		SalaryNotificationStatusDetails ab = new SalaryNotificationStatusDetails(driver);
+		ab.ClickSalary();
+		ab.ClickPublishedSalaryNotifications();
+		Thread.sleep(2000);
+		ab.SelectPayMonth("Feb/2020");
+		ab.Selectnotificationstatus("Pending");
+		ab.SelectPayslip("Detailed Payslip");
+		ab.ClickGetEmp();
+		ab.resizeWindow();
+	 	Thread.sleep(3000);
+	 	ab.ClickLoad();
+	 	ab.exitFullscreen();
+		//Thread.sleep(3000);
+		String s2 = ab.getSuccessMessage();
+		Assert.assertEquals(s2, "Employees Successfully Loaded.");
+		ab.ClickSelectAll();
+		ab.ClickSelectEmp();
+		ab.ClickSendEMail();
+		Thread.sleep(3000);
+	}
+	@Test(priority=33)
+	public void CheckEmployeesSalaryNotificationStatusDetailsTDSPayslip_SC_1033() throws Exception {
+		SalaryNotificationStatusDetails ab = new SalaryNotificationStatusDetails(driver);
+		ab.ClickSalary();
+		ab.ClickPublishedSalaryNotifications();
+		Thread.sleep(2000);
+		ab.SelectPayMonth("Feb/2020");
+		ab.Selectnotificationstatus("Pending");
+		ab.SelectPayslip("TDS Payslip");
+		ab.ClickGetEmp();
+		ab.resizeWindow();
+	 	Thread.sleep(3000);
+	 	ab.ClickLoad();
+	 	ab.exitFullscreen();
+		//Thread.sleep(3000);
+		String s2 = ab.getSuccessMessage();
+		Assert.assertEquals(s2, "Employees Successfully Loaded.");
+	}
+	@Test(priority=34)
+	public void SendMail_Employees_SalaryNotificationStatusDetails_TDSPayslip_SC_1034() throws Exception {
+		SalaryNotificationStatusDetails ab = new SalaryNotificationStatusDetails(driver);
+		ab.ClickSalary();
+		ab.ClickPublishedSalaryNotifications();
+		Thread.sleep(2000);
+		ab.SelectPayMonth("Feb/2020");
+		ab.Selectnotificationstatus("Pending");
+		ab.SelectPayslip("TDS Payslip");
+		ab.ClickGetEmp();
+		ab.resizeWindow();
+	 	Thread.sleep(3000);
+	 	ab.ClickLoad();
+	 	ab.exitFullscreen();
+		//Thread.sleep(3000);
+		String s2 = ab.getSuccessMessage();
+		Assert.assertEquals(s2, "Employees Successfully Loaded.");
+		ab.ClickSelectAll();
+		ab.ClickSelectEmp();
+		ab.ClickSendEMail();
+		Thread.sleep(3000);
+	}
+	@Test(priority=35)
+	public void CheckEmployeesSalaryNotificationStatusDetails_NotificationStatus_Failure_SC_1035() throws Exception {
+		SalaryNotificationStatusDetails ab = new SalaryNotificationStatusDetails(driver);
+		ab.ClickSalary();
+		ab.ClickPublishedSalaryNotifications();
+		Thread.sleep(2000);
+		ab.SelectPayMonth("Feb/2020");
+		ab.Selectnotificationstatus("Failure");
+		ab.SelectPayslip("Payslip");
+		ab.ClickGetEmp();
+		ab.resizeWindow();
+	 	Thread.sleep(3000);
+	 	ab.ClickLoad();
+	 	ab.exitFullscreen();
+		//Thread.sleep(3000);
+		String s2 = ab.getSuccessMessage();
+		Assert.assertEquals(s2, "Employees Successfully Loaded.");
+	}
+	@Test(priority=36)
+	public void SendMailEmployeesSalaryNotificationStatusDetails_NotificationStatus_Failure_SC_1036() throws Exception {
+		SalaryNotificationStatusDetails ab = new SalaryNotificationStatusDetails(driver);
+		ab.ClickSalary();
+		ab.ClickPublishedSalaryNotifications();
+		Thread.sleep(2000);
+		ab.SelectPayMonth("Feb/2020");
+		ab.Selectnotificationstatus("Failure");
+		ab.SelectPayslip("Payslip");
+		ab.ClickGetEmp();
+		ab.resizeWindow();
+	 	Thread.sleep(3000);
+	 	ab.ClickLoad();
+	 	ab.exitFullscreen();
+		//Thread.sleep(3000);
+		String s2 = ab.getSuccessMessage();
+		Assert.assertEquals(s2, "Employees Successfully Loaded.");
+		ab.ClickSelectAll();
+		ab.ClickSelectEmp();
+		ab.ClickSendEMail();
+		Thread.sleep(3000);
+	}
+	@Test(priority=38)
+	public void CheckEmployeesSalaryNotificationStatusDetails_DetailedPayslip_NotificationStatus_Failure_SC_1038() throws Exception {
+		SalaryNotificationStatusDetails ab = new SalaryNotificationStatusDetails(driver);
+		ab.ClickSalary();
+		ab.ClickPublishedSalaryNotifications();
+		Thread.sleep(2000);
+		ab.SelectPayMonth("Feb/2020");
+		ab.Selectnotificationstatus("Failure");
+		ab.SelectPayslip("Detailed Payslip");
+		ab.ClickGetEmp();
+		ab.resizeWindow();
+	 	Thread.sleep(3000);
+	 	ab.ClickLoad();
+	 	ab.exitFullscreen();
+		//Thread.sleep(3000);
+		String s2 = ab.getSuccessMessage();
+		Assert.assertEquals(s2, "Employees Successfully Loaded.");
+	}
+	@Test(priority=39)
+	public void SendMailEmployeesSalaryNotificationStatusDetails_DetailedPayslip_NotificationStatus_Failure_SC_1039() throws Exception {
+		SalaryNotificationStatusDetails ab = new SalaryNotificationStatusDetails(driver);
+		ab.ClickSalary();
+		ab.ClickPublishedSalaryNotifications();
+		Thread.sleep(2000);
+		ab.SelectPayMonth("Feb/2020");
+		ab.Selectnotificationstatus("Failure");
+		ab.SelectPayslip("Detailed Payslip");
+		ab.ClickGetEmp();
+		ab.resizeWindow();
+	 	Thread.sleep(3000);
+	 	ab.ClickLoad();
+	 	ab.exitFullscreen();
+		//Thread.sleep(3000);
+		String s2 = ab.getSuccessMessage();
+		Assert.assertEquals(s2, "Employees Successfully Loaded.");
+		ab.ClickSelectAll();
+		ab.ClickSelectEmp();
+		ab.ClickSendEMail();
+		Thread.sleep(3000);
 	}
 }
