@@ -22,7 +22,9 @@ public class CheckSalarySheetReport extends BasePage{
 	WebElement Reports;
 	@FindBy(xpath="//ul[@id='ui-id-6']//a[contains(text(),'Salary Sheet')]")
 	WebElement SalarySheet;
-	@FindBy(xpath=" //select[@id='sal_report_type']")
+	@FindBy(xpath="//ul[@id='ui-id-4']//a[contains(text(),'Salary Sheet')]")
+	WebElement SalarySheetReport;
+	@FindBy(xpath="//select[@id='sal_report_type']")
 	WebElement selectSalarySheet;
 	@FindBy(xpath="//button[@id='salary_sheet_filter']")
 	WebElement GetEmp;
@@ -38,13 +40,23 @@ public class CheckSalarySheetReport extends BasePage{
 	WebElement SelectEmp;
 	@FindBy(xpath="//input[@id='salary_sheet_submit']")
 	WebElement GenerateFile;
+	@FindBy(xpath="//*[@id=\"menu\"]/li[6]/div/div[3]/ul/li[4]/a")
+	WebElement PublishedSalary;
+	@FindBy(xpath=" //a[contains(text(),'Published Salary Notifications')]")
+	WebElement PublishedSalaryNotifications;
 	
 	
 	public void ClickSalary() {
 		Salary.click();
 	}
+	public void ClickSalarySheetReport() {
+		SalarySheetReport.click();
+	}
 	public void ClickSalaryEditor() {
 		SalaryEditor.click();
+	}
+	public void selectPublishedSalary() {
+		PublishedSalary.click();
 	}
 	public void ClickReports() {
 		Reports.click();
@@ -72,5 +84,8 @@ public class CheckSalarySheetReport extends BasePage{
 	}
 	public void ClickGenerateFile() {
 		GenerateFile.click();
+	}
+	public void ClickPublishedSalaryNotifications() {
+		PublishedSalaryNotifications.click();
 	}
 }

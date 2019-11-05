@@ -38,6 +38,9 @@ public class CheckIncrementReport extends BasePage{
 	WebElement GenerateReport;
 	@FindBy(xpath="//*[@id=\"menu\"]/li[6]/div/div[3]/ul/li[4]/a")
 	WebElement PublishedSalary;
+	@FindBy(xpath=" //a[contains(text(),'Published Salary Notifications')]")
+	WebElement PublishedSalaryNotifications;
+	
 	
 	public void ClickSalary() {
 		Salary.click();
@@ -74,5 +77,8 @@ public class CheckIncrementReport extends BasePage{
 	}
 	public void selectPublishedSalary() {
 		PublishedSalary.click();
+	}
+	public void ClickPublishedSalaryNotifications() {
+		PublishedSalaryNotifications.click();
 	}
 }

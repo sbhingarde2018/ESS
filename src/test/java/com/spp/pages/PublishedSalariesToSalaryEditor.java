@@ -31,12 +31,18 @@ public class PublishedSalariesToSalaryEditor extends BasePage{
 		WebElement Load;
 		@FindBy(xpath="//div[@class='text-center mt10']//div//input[@name='commit']")
 		WebElement Process;
+		@FindBy(xpath=" //a[contains(text(),'Published Salary Notifications')]")
+		WebElement PublishedSalaryNotifications;
+		
 		
 		public void selectSalary() {
 			Salary.click();
 		}
 		public void selectPublishedSalary() {
 			PublishedSalary.click();
+		}
+		public void ClickPublishedSalaryNotifications() {
+			PublishedSalaryNotifications.click();
 		}
 		public void selectLinks() {
 			Links.click();
@@ -59,4 +65,5 @@ public class PublishedSalariesToSalaryEditor extends BasePage{
 		public void selectProcess() {
 			Process.click();
 		}
+		
 	}
