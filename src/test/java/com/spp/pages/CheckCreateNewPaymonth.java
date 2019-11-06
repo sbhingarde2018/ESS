@@ -30,6 +30,8 @@ public class CheckCreateNewPaymonth extends BasePage{
 	WebElement SuccMessage;
 	@FindBy(xpath="//*[@id=\"menu\"]/li[6]/div/div[3]/ul/li[4]/a")
 	WebElement PublishedSalary;
+	@FindBy(xpath=" //a[contains(text(),'Published Salary Notifications')]")
+	WebElement PublishedSalaryNotifications;
 	
 	public void ClickSalary() {
 		Salary.click();
@@ -54,5 +56,8 @@ public class CheckCreateNewPaymonth extends BasePage{
 	}
 	public void selectPublishedSalary() {
 		PublishedSalary.click();
+	}
+	public void ClickPublishedSalaryNotifications() {
+		PublishedSalaryNotifications.click();
 	}
 }

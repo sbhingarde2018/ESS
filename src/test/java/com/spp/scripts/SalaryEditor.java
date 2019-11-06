@@ -857,7 +857,7 @@ public class SalaryEditor extends BaseTest{
 		ab.ClickSendEMail();
 		Thread.sleep(3000);
 	}*/
-	@Test(priority=40)
+	/*@Test(priority=40)
 	public void CheckEmployeesSalaryNotificationStatusDetails_TDSPayslip_NotificationStatus_Failure_SC_1041() throws Exception {
 		SalaryNotificationStatusDetails ab = new SalaryNotificationStatusDetails(driver);
 		ab.ClickSalary();
@@ -940,7 +940,7 @@ public class SalaryEditor extends BaseTest{
 		ab.ClickSelectEmp();
 		ab.ClickGenerateFile();
 		Thread.sleep(6000);
-	}
+	}*/
 	/*@Test(priority=44)
 	public void CheckSalary_PublishedSalaryNotifications_Reports_SalarySheet_redirectstoReportsmodule_SC_1046() throws Exception{
 		CheckSalarySheetReport ab = new CheckSalarySheetReport(driver);
@@ -963,7 +963,7 @@ public class SalaryEditor extends BaseTest{
 		ab.ClickGenerateFile();
 		Thread.sleep(6000);
 	}*/
-	@Test(priority=45)
+	/*@Test(priority=45)
 	public void CheckSalary_PublishedSalaryNotifications_Reports_IncrementReport_redirectstoReport_SC_1047() throws Exception{
 		CheckIncrementReport ab = new CheckIncrementReport(driver);
 		ab.ClickSalary();
@@ -1005,5 +1005,103 @@ public class SalaryEditor extends BaseTest{
 		ab.ClickSelectEmp();
 		ab.ClickGenerateFile();
 		Thread.sleep(6000);
+	}*/
+	@Test(priority=47)
+	public void CheckSalary_PublishedSalaryNotifications_Reports_SalarySummaryCalendarYear_RedirectstoReports_SC_1049() throws Exception {
+		CheckSalarySummary_FinancialYearReport ab = new CheckSalarySummary_FinancialYearReport(driver);
+		ab.ClickSalary();
+		ab.ClickPublishedSalaryNotifications();
+		ab.ClickReports();
+		Thread.sleep(2000);
+		ab.ClickSalarySummaryReport();
+		Thread.sleep(2000);
+		ab.SelectSalDurationType("Calendar Year");
+		ab.SelectCalendarYear("2018");
+		ab.ClickGetEmp();
+		ab.resizeWindow();
+	 	Thread.sleep(3000);
+	 	ab.ClickLoad();
+	 	ab.exitFullscreen();
+		Thread.sleep(3000);
+		ab.ClickSelectEmp();
+		ab.ClickGenerateFile();
+		Thread.sleep(6000);
 	}
+	@Test(priority=48)
+	public void CheckSalary_PublishedSalaryNotifications_Reports_SalarySummaryBetweenMonths_RedirectstoReports_SC_1050() throws Exception {
+		CheckSalarySummary_FinancialYearReport ab = new CheckSalarySummary_FinancialYearReport(driver);
+		ab.ClickSalary();
+		ab.ClickPublishedSalaryNotifications();
+		ab.ClickReports();
+		Thread.sleep(2000);
+		ab.ClickSalarySummaryReport();
+		Thread.sleep(2000);
+		ab.SelectSalDurationType("Between Months");
+		ab.SelectFromYear("Jan/2017");
+		ab.SelectToYear("Jan/2019");
+		ab.ClickGetEmp();
+		ab.resizeWindow();
+	 	Thread.sleep(3000);
+	 	ab.ClickLoad();
+	 	ab.exitFullscreen();
+		Thread.sleep(3000);
+		ab.ClickSelectEmp();
+		ab.ClickGenerateFile();
+		Thread.sleep(3000);
+	}
+	@Test(priority=49)
+	public void CheckSalary_PublishedSalaryNotifications_GeneralLink_PaymonthsredirectstoCreate_NewPaymonthpage_SC_1051() throws Exception {
+		CheckCreateNewPaymonth ab = new CheckCreateNewPaymonth(driver);
+		ab.ClickSalary();
+		ab.ClickPublishedSalaryNotifications();
+		ab.ClickGeneralLink();
+		Thread.sleep(2000);
+		ab.ClickPublishPaymonths();
+		Thread.sleep(3000);
+		ab.ClickCreatePaymonth();
+		Thread.sleep(2000);
+		ab.switchToPopUpAndAccept(driver);
+		Thread.sleep(2000);
+		String s2 = ab.getSuccessMessage();
+		Assert.assertEquals(s2, "Paymonth created successfully");
+	}
+	@Test(priority=50)
+	public void CheckSalary_PublishedSalaryNotifications_GeneralLink_SalaryHeadsredirectsto_ListingSalaryHeads_SC_1052() throws Exception {
+		CheckSalaryEditorRedirectstoListingSalaryHeadspagetoAddNewSalaryHead ab = new CheckSalaryEditorRedirectstoListingSalaryHeadspagetoAddNewSalaryHead(driver);
+		ab.ClickSalary();
+		ab.ClickPublishedSalaryNotifications();
+		ab.ClickGeneralLink();
+		Thread.sleep(2000);
+		ab.ClickPublishSalaryHeads();
+		Thread.sleep(2000);
+		ab.ClickAddNewSalaryHead();
+		ab.enterSalaryHeadName("Sal Head 1");
+		ab.enterSalaryHeadShortName("SH1");
+		ab.ClickCreateSalHead();
+		String s2 = ab.getMessage();
+		Assert.assertEquals(s2, "Salary head successfully created");
+		Thread.sleep(2000);
+		ab.ClickDeleteSalaryHead();
+		ab.switchToPopUpAndAccept(driver);
+		Thread.sleep(2000);
+	}
+	@Test(priority=51)
+	public void CheckSalary_PublishedSalaryNotifications_GeneralLink_SalaryStructureredirectsto_ListingStructure_SC_1053() throws Exception {
+		CheckSalaryEditorRedirectstoListingStructurepagetoCreateNewSalaryStructure ab = new CheckSalaryEditorRedirectstoListingStructurepagetoCreateNewSalaryStructure(driver);
+		ab.ClickSalary();
+		ab.ClickPublishedSalaryNotifications();
+		Thread.sleep(2000);
+		ab.ClickGeneralLink();
+		Thread.sleep(2000);
+		ab.ClickPublishSalaryStructure();
+		Thread.sleep(2000);
+		ab.ClickAddNewSalaryStructure();
+		ab.enterNameSalaryStructure("Abb");
+		ab.ClickBaseOnGross();
+		ab.ClickCreateSalarystructure();
+		String s2 = ab.getMessage();
+		Assert.assertEquals(s2, "Salary group successfully created");
+		Thread.sleep(2000);
+	}
+	
 }
