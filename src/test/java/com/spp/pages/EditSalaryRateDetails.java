@@ -18,24 +18,29 @@ public class EditSalaryRateDetails extends BasePage{
 	WebElement SalaryRateDetails;
 	@FindBy(id="filter_head")
 	WebElement AdvancedFilterIcon;
-	@FindBy(xpath="//*[@id='bf_form']/div[9]/button[1]")
+	@FindBy(xpath="//form[@id='bf_form']//button[contains(text(),'LOAD')]")
 	WebElement LoadButton;
-	@FindBy(xpath="//*[@id=\"notalloted\"]/tbody/tr[2]/td[4]/a")
+	@FindBy(xpath="//tbody/tr/td[contains(text(),'ABCD')]/parent::tr/td[4]/a")
 	WebElement AllotSalaryButton;
-	@FindBy(id="month_year")
+	@FindBy(xpath="//*[@id=\"notalloted\"]/tbody/tr/td[4]/a")
+	WebElement AllotSalaryNewEmp;
+	@FindBy(xpath="//select[@id='month_year']")
 	WebElement EffectiveFrom;
-	@FindBy(xpath="//*[@id=\"main\"]/div[3]/form/fieldset/div[1]/div/input[1]")
+	@FindBy(xpath="//div[@class='form-field']//input[@name='commit']")
 	WebElement GetRate;
-	@FindBy(id="gross_sal_formula")
+	@FindBy(xpath="//input[@id='gross_sal_formula']")
 	WebElement GrossSal;
-	@FindBy(xpath="//*[@id=\"sal_allotment\"]/table/tbody/tr[2]/td[4]/input")
+	@FindBy(xpath="//table/tbody/tr[2]/td[4]/input")
 	WebElement Basic;
 	@FindBy(xpath="//*[@id=\"sal_allotment\"]/table/tbody/tr[4]/td[4]/input")
 	WebElement Mess;
-	
+	@FindBy(xpath="//div[@id='notalloted_filter']//input")
+	WebElement Search;
+	@FindBy(xpath="//div[@id='alloted_filter']//input")
+	WebElement SearchAllotedFilter;
 //	@FindBy(xpath="//*[@id=\"sal_allotment\"]/table/tbody/tr[7]/td/input")
 //	WebElement PopulateButton;
-	@FindBy(xpath="//*[@id=\"sal_allotment\"]/table/tbody/tr[4]/td/input[1]")
+	@FindBy(xpath="//table[@class='table']//input[@name='commit']")
 	WebElement SaveButton;
 	@FindBy(xpath="//*[@id=\"main\"]/div[1]/strong")
 	WebElement successfullMessage;
@@ -43,6 +48,12 @@ public class EditSalaryRateDetails extends BasePage{
 	WebElement SalaryAlloted;
 	@FindBy(xpath="//*[@id=\"alloted\"]/tbody/tr[1]/td[4]/a")
 	WebElement Edit;
+	@FindBy(xpath="//li[@class='companies-tab-head']//a")
+	WebElement ListingEmpSalaryAlloted;
+	
+	public void clickListingEmpSalaryAlloted() {
+		ListingEmpSalaryAlloted.click();
+	}
 	public void clickEmployeeLink() {
 		   employeeLink.click();
 	}
@@ -58,6 +69,9 @@ public class EditSalaryRateDetails extends BasePage{
 	public void selectAllotSalaryButton() {
 		AllotSalaryButton.click();
 	}
+	public void ClickAllotSalaryNewEmployee() {
+		AllotSalaryNewEmp.click();
+	}
 	public void selectEffectiveFrom(String value){
 		dropDownSelect(EffectiveFrom, value);
 	}
@@ -67,7 +81,7 @@ public class EditSalaryRateDetails extends BasePage{
 	}
 
 	 public void enterGrossSal(String value) {
-		 GrossSal.clear();
+		 //GrossSal.clear();
 		 GrossSal.sendKeys(value);
 	}
 
@@ -92,6 +106,12 @@ public class EditSalaryRateDetails extends BasePage{
 	}
 	public void ClickEdit() {
 		Edit.click();
+	}
+	public void EnterSearch(String value) throws Exception {
+		Search.sendKeys(value);
+	}
+	public void EnterSearchAllotedFilter(String value) throws Exception {
+		SearchAllotedFilter.sendKeys(value);
 	}
 	}
 

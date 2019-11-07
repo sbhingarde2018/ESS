@@ -3,6 +3,8 @@ package com.spp.scripts;
 //import org.openqa.selenium.JavascriptExecutor;
 import org.testng.annotations.Test;
 import com.spp.common.BaseTest;
+import com.spp.pages.AddNewEmployeeTDS;
+import com.spp.pages.AddNewSalaryAllotment;
 //import com.spp.pages.AllotSalaryNotOnGross;
 //import com.spp.pages.AllotSalaryToEmployee;
 //import com.spp.pages.AssignEmployee;
@@ -29,6 +31,7 @@ import com.spp.pages.GenerateSalarySheetToCheckPresentDaysAndPayDays;
 import com.spp.pages.ProcessSalaryCalculationTypeNotApplicable;
 import com.spp.pages.PublishSalary;
 import com.spp.pages.PublishSalary182;
+import com.spp.pages.PublishSalary_166;
 import com.spp.pages.UpdateCalculationTypeLumpsum;
 import com.spp.pages.UpdateCalculationTypeNotApplicable;
 import com.spp.pages.UpdateMasterWeeklyOff;
@@ -36,6 +39,7 @@ import com.spp.pages.UpdateMasterWeeklyOff;
 import junit.framework.Assert;
 
 public class SalarySheetTestPlan extends BaseTest{
+	
 	
 	/*@Test(priority=0)
  	public void UpdateCalculationTypeNotApplicable_SC_157() throws Exception{
@@ -50,8 +54,33 @@ public class SalarySheetTestPlan extends BaseTest{
   		sh.clickUpdateSalaryGroupDetail();
   		String s=sh.getMessage();
   		Assert.assertEquals(s, "Salary structure detail succesfully updated");
-	}
+	}*/
 	@Test(priority=1)
+	public void AddNewSalaryAllotmentCalculationType_NotApplicable_SC_158() throws Exception{
+		EditSalaryRateDetails rr= new EditSalaryRateDetails(driver);
+		rr.clickEmployeeLink();
+		rr.selectSalaryRateDetails();
+		rr.selectAdvancedFilterIcon();
+		Thread.sleep(3000);
+		rr.resizeWindow();
+		Thread.sleep(3000);
+		rr.selectLoadButton();
+		Thread.sleep(3000);
+		rr.exitFullscreen();
+	 	Thread.sleep(3000);
+	 	rr.EnterSearch("CalcTyp NotApplicable e");
+		rr.ClickAllotSalaryNewEmployee();
+		rr.selectEffectiveFrom("Nov/2017");
+		rr.selectGetRate();
+		rr.enterGrossSal("40000");
+		rr.enterBasic("20000");
+		//rr.enterMess("2000");
+		//rr.selectPopulateButton();
+		rr.SelectSaveButton();
+	 	String s=rr.getMessage();
+	 	Assert.assertEquals(s, "Salary Allotted successfully");
+	}
+	/*@Test(priority=2)
  	public void UpdateCalculationTypeLumpsum_SC_161() throws Exception{
 		UpdateCalculationTypeLumpsum sh=new UpdateCalculationTypeLumpsum(driver);
  		Thread.sleep(2000);
@@ -64,8 +93,33 @@ public class SalarySheetTestPlan extends BaseTest{
   		sh.clickUpdateSalaryGroupDetail();
   		String s=sh.getMessage();
   		Assert.assertEquals(s, "Salary structure detail succesfully updated");
+	}*/
+	@Test(priority=3)
+	public void AddNewSalaryAllotmentCalculationTypeLumpsum_SC_162() throws Exception{
+		EditSalaryRateDetails rr= new EditSalaryRateDetails(driver);
+		rr.clickEmployeeLink();
+		rr.selectSalaryRateDetails();
+		rr.selectAdvancedFilterIcon();
+		Thread.sleep(3000);
+		rr.resizeWindow();
+		Thread.sleep(3000);
+		rr.selectLoadButton();
+		Thread.sleep(3000);
+		rr.exitFullscreen();
+	 	Thread.sleep(3000);
+	 	rr.EnterSearch("CalcTyp Lumpsum e");
+		rr.ClickAllotSalaryNewEmployee();
+		rr.selectEffectiveFrom("Nov/2017");
+		rr.selectGetRate();
+		rr.enterGrossSal("40000");
+		rr.enterBasic("20000");
+		//rr.enterMess("2000");
+		//rr.selectPopulateButton();
+		rr.SelectSaveButton();
+	 	String s=rr.getMessage();
+	 	Assert.assertEquals(s, "Salary Allotted successfully");
 	}
-	@Test(priority=2)
+	/*@Test(priority=4)
  	public void UpdateMasterWeeklyOff_SC_163() throws Exception{
 		UpdateMasterWeeklyOff sh=new UpdateMasterWeeklyOff(driver);
  		Thread.sleep(5000);
@@ -85,7 +139,7 @@ public class SalarySheetTestPlan extends BaseTest{
  		Thread.sleep(2000);
  		sh.clickDeleteButton();
 }
-	@Test(priority=3)
+	@Test(priority=5)
 	public void EditSalaryHeadEnableCalculativeField_SC_164() throws Exception{
 	EditSalaryHeadEnableCalculativeField sh=new EditSalaryHeadEnableCalculativeField(driver);
 		Thread.sleep(5000);
@@ -101,7 +155,76 @@ public class SalarySheetTestPlan extends BaseTest{
 		Assert.assertEquals(e, "Salary head succesfully updated");
 		Thread.sleep(2000);
 }*/
-  /* @Test(priority=4)
+	@Test(priority=6)
+	public void EditSalaryRateDetailsEducationAllowanceasCalculativeField_SC_165() throws Exception {
+		EditSalaryRateDetails rr= new EditSalaryRateDetails(driver);
+		rr.clickEmployeeLink();
+		rr.selectSalaryRateDetails();
+		rr.clickListingEmpSalaryAlloted();
+		rr.selectAdvancedFilterIcon();
+		Thread.sleep(3000);
+		rr.resizeWindow();
+		Thread.sleep(3000);
+		rr.selectLoadButton();
+		Thread.sleep(3000);
+		rr.exitFullscreen();
+	 	Thread.sleep(3000);
+	 	rr.EnterSearchAllotedFilter("Donald");
+		rr.ClickEdit();
+		rr.selectEffectiveFrom("Nov/2017");
+		rr.selectGetRate();
+		rr.enterGrossSal("40000");
+		rr.enterBasic("20000");
+		//rr.enterMess("2000");
+		//rr.selectPopulateButton();
+		rr.SelectSaveButton();
+	 	String s=rr.getMessage();
+	 	Assert.assertEquals(s, "Salary Allotted successfully");
+	}
+	@Test(priority=7)
+	public void PublishSalary_CalculativefieldEnabledforEducationAllowance_SC_166() throws Exception{
+		PublishSalary_166 ab = new PublishSalary_166(driver);
+		ab.ClickSalary();
+		ab.ClickSalaryEditor();
+		ab.selectPayMonth("Nov/2017");
+		ab.selectSalaryStructure("Gross Salary Structure");
+		ab.ClickGetValues();
+		ab.ClickFilter();
+		ab.resizeWindow();
+	 	Thread.sleep(3000);
+	 	ab.ClickLoad();
+	 	ab.exitFullscreen();
+		Thread.sleep(3000);
+		ab.SearchEmp("Shanti");
+		ab.ClickPublishMore();
+		Thread.sleep(3000);
+		ab.EnterUnit("2");
+		ab.ClickSaveValues();
+		Thread.sleep(3000);
+		ab.ClickProcess();
+		Thread.sleep(3000);
+		ab.ClickEdit();
+		ab.ClickSubmitForReview();
+		Thread.sleep(3000);
+		ab.ClickSalary();
+		ab.selectReview();
+		ab.selectview();
+		ab.selectpublish();
+		Thread.sleep(3000);
+		ab.selectSalary();
+	 	ab.selectPublishedSalary();
+	 	ab.selectPayMonth("Nov/2017");
+	 	ab.selectPublishSalaryStructure("Gross Salary Structure");
+	 	ab.selectGetEmployee();
+	 	Thread.sleep(3000);
+	 	ab.resizeWindow();
+	 	Thread.sleep(3000);
+	 	ab.selectLoad();
+	 	ab.exitFullscreen();
+	 	Thread.sleep(3000);
+	}
+	
+  /* @Test(priority=8)
 	 public void ProcessSalaryCalculationTypeNotApplicable_SC_159() throws Exception{
 		 ProcessSalaryCalculationTypeNotApplicable rt = new ProcessSalaryCalculationTypeNotApplicable(driver);
 	 	 rt.selectSalary();
@@ -128,7 +251,7 @@ public class SalarySheetTestPlan extends BaseTest{
 	 	 Assert.assertEquals(r, "Salary is published successfully");
 	 	
 }*/
-   /*@Test(priority=5)
+   /*@Test(priority=9)
 	 public void GenerateSalarySheetReportCalculationTypeNotApplicable_SC_160() throws Exception{
 	GenerateSalarySheetReportCalculationTypeNotApplicable rt = new GenerateSalarySheetReportCalculationTypeNotApplicable(driver);
 	 	 rt.selectReports();
@@ -148,7 +271,7 @@ public class SalarySheetTestPlan extends BaseTest{
 	 	 Thread.sleep(4000);
 	 	 rt.selectGenerateReport();
 }
-	 @Test(priority=6)
+	 @Test(priority=10)
 	 public void GenerateSalarySheet_SC_167() throws Exception{
 		 GenerateSalarySheet rt = new GenerateSalarySheet(driver);
 	 	 rt.selectReports();
@@ -168,7 +291,7 @@ public class SalarySheetTestPlan extends BaseTest{
 	 	 Thread.sleep(4000);
 	 	 rt.selectGenerateReport();
 }*/
-	/*@Test(priority=7)
+	/*@Test(priority=11)
 	  public void verifyEditEmployee_SC_168() throws Exception{
 			EditEmployee ww=new EditEmployee(driver);
 			ww.clickEmployeeLink();
@@ -196,8 +319,8 @@ public class SalarySheetTestPlan extends BaseTest{
 			Thread.sleep(3000);
 			String r=ww.getMessage();
 	 		Assert.assertEquals(r, "Employee detail successfully updated.");
-}
-	 @Test(priority=8)
+}*/
+	 /*@Test(priority=12)
 	 public void EditSalaryRateDetails_SC_173() throws Exception {
 			EditSalaryRateDetails rr= new EditSalaryRateDetails(driver);
 			rr.clickEmployeeLink();
@@ -220,8 +343,8 @@ public class SalarySheetTestPlan extends BaseTest{
 			rr.SelectSaveButton();
 		 	String s=rr.getMessage();
 		 	Assert.assertEquals(s, "Salary Allotted successfully");
-}
-	@Test(priority=9)
+}*/
+	/*@Test(priority=13)
  	public void PublishSalary182_SC_182() throws Exception{
 			PublishSalary182 rt = new PublishSalary182(driver);
 			rt.selectSalary();
@@ -246,8 +369,8 @@ public class SalarySheetTestPlan extends BaseTest{
 			rt.selectpublish();
 			String r=rt.getMessage();
 			Assert.assertEquals(r, "Salary is published successfully");	
-}
-	 @Test(priority=10)
+}*/
+	/* @Test(priority=14)
 	 public void CheckPaydaysPresentdaysAndBasic_SC_185() throws Exception{
 		 	CheckPaydaysPresentdaysAndBasic rt = new CheckPaydaysPresentdaysAndBasic(driver);
 		 	rt.selectSalary();
@@ -262,7 +385,7 @@ public class SalarySheetTestPlan extends BaseTest{
 		 	rt.exitFullscreen();
 		 	Thread.sleep(3000);
 }*/
-	/* @Test(priority=11)
+	/* @Test(priority=15)
 		public void GenerateSalarySheetToCheckPayDays_SC_186() throws Exception{
 		 GenerateSalarySheetToCheckPayDays rt = new GenerateSalarySheetToCheckPayDays(driver);
 	 		rt.selectReports();
@@ -286,7 +409,7 @@ public class SalarySheetTestPlan extends BaseTest{
 	 		//driver.close();
 }*/
 
-	/*@Test(priority=12)
+	/*@Test(priority=16)
 	  public void GenerateSalarySheetToCheckPresentDays_SC_186() throws Exception{
 	    	GenerateSalarySheetToCheckPresentDays rt = new GenerateSalarySheetToCheckPresentDays(driver);
 			rt.selectReports();
@@ -303,7 +426,7 @@ public class SalarySheetTestPlan extends BaseTest{
 			Thread.sleep(4000);
 			rt.selectGenerateReport();
 }*/
-	 /*@Test(priority=13)
+	 /*@Test(priority=17)
 	 public void EditEmployee6Nov_SC_188() throws Exception{
 		 EditEmployee6Nov ww=new EditEmployee6Nov(driver);
 			ww.clickEmployeeLink();
@@ -331,7 +454,7 @@ public class SalarySheetTestPlan extends BaseTest{
 			String r=ww.getMessage();
 	 		Assert.assertEquals(r, "Employee detail successfully updated.");
 }
-	 @Test(priority=14)
+	 @Test(priority=18)
 	 public void EditSalaryRateDetails_SC_189() throws Exception {
 			EditSalaryRateDetails rr= new EditSalaryRateDetails(driver);
 			rr.clickEmployeeLink();
@@ -356,7 +479,7 @@ public class SalarySheetTestPlan extends BaseTest{
 }
 	 
 	
-	 @Test(priority=15)
+	 @Test(priority=19)
 	 public void PublishSalary190_SC_190() throws Exception{
 		 	PublishSalary rt = new PublishSalary(driver);
 		 	rt.selectSalary();
@@ -380,7 +503,7 @@ public class SalarySheetTestPlan extends BaseTest{
 	 	 	String r=rt.getMessage();
 	 	 	Assert.assertEquals(r, "Salary is published successfully");
 }
-	 @Test(priority=16)
+	 @Test(priority=20)
 	 public void CheckPaydaysPresentdaysAndBasic191_SC_191() throws Exception{
 		  	CheckPaydaysPresentdaysAndBasic rt = new CheckPaydaysPresentdaysAndBasic(driver);
 	 		rt.selectSalary();
@@ -395,7 +518,7 @@ public class SalarySheetTestPlan extends BaseTest{
 	 		rt.exitFullscreen();
 	 		Thread.sleep(3000);
 }*/
-	 /*@Test(priority=17)
+	 /*@Test(priority=21)
 	 public void GenerateSalarySheetToCheckPresentDaysAndPayDays_SC_193() throws Exception{
 	   GenerateSalarySheetToCheckPresentDaysAndPayDays rt = new GenerateSalarySheetToCheckPresentDaysAndPayDays(driver);
 		rt.selectReports();
@@ -412,7 +535,7 @@ public class SalarySheetTestPlan extends BaseTest{
 		Thread.sleep(4000);
 		rt.selectGenerateReport();
 }*/
-	/*@Test(priority=18)
+	/*@Test(priority=22)
 	 public void EditEmployee30Nov_SC_194() throws Exception{
 		 	EditEmployee30Nov ww=new EditEmployee30Nov(driver);
 			ww.clickEmployeeLink();
@@ -441,7 +564,7 @@ public class SalarySheetTestPlan extends BaseTest{
 			String r=ww.getMessage();
 			Assert.assertEquals(r, "Employee detail successfully updated.");
 }
-	@Test(priority=19)
+	@Test(priority=23)
 	public void EditSalaryRateDetails196_SC_196() throws Exception {
 			EditSalaryRateDetails196 rr= new EditSalaryRateDetails196(driver);
 			rr.clickEmployeeLink();
@@ -464,7 +587,7 @@ public class SalarySheetTestPlan extends BaseTest{
 		 	String s=rr.getMessage();
 		 	Assert.assertEquals(s, "Salary Allotted successfully");
 }
-	 @Test(priority=20)
+	 @Test(priority=24)
 	 public void PublishSalary198_SC_198() throws Exception{
 		 	PublishSalary rt = new PublishSalary(driver);
 		 	rt.selectSalary();
@@ -488,7 +611,7 @@ public class SalarySheetTestPlan extends BaseTest{
 		 	String r=rt.getMessage();
 		 	Assert.assertEquals(r, "Salary is published successfully");
 }
-	 @Test(priority=21)
+	 @Test(priority=25)
 	 public void CheckPaydaysPresentdaysAndBasic200_SC_200() throws Exception{
 		 	CheckPaydaysPresentdaysAndBasic rt = new CheckPaydaysPresentdaysAndBasic(driver);
 		 	rt.selectSalary();
@@ -503,7 +626,7 @@ public class SalarySheetTestPlan extends BaseTest{
 		 	rt.exitFullscreen();
 	 		Thread.sleep(3000);
 }*/
-	 /*@Test(priority=22)
+	 /*@Test(priority=26)
 	 public void GenerateSalarySheetToCheckPresentDaysAndPayDays201_SC_201() throws Exception{
 	   GenerateSalarySheetToCheckPresentDaysAndPayDays rt = new GenerateSalarySheetToCheckPresentDaysAndPayDays(driver);
 		rt.selectReports();
@@ -520,7 +643,7 @@ public class SalarySheetTestPlan extends BaseTest{
 		Thread.sleep(4000);
 		rt.selectGenerateReport();
 }*/
-	/*@Test(priority=23)
+	/*@Test(priority=27)
 	 public void EditEmployeeDOL_SC_205() throws Exception{
 		 	EditEmployeeDOL ww=new EditEmployeeDOL(driver);
 			ww.clickEmployeeLink();
@@ -549,7 +672,7 @@ public class SalarySheetTestPlan extends BaseTest{
 			String r=ww.getMessage();
 	 		Assert.assertEquals(r, "Employee detail successfully updated.");
 } 
-	 @Test(priority=24)
+	 @Test(priority=28)
 	 public void EditSalaryRateDetailsDOL_SC_207() throws Exception {
 			EditSalaryRateDetailsDOL rr= new EditSalaryRateDetailsDOL(driver);
 			rr.clickEmployeeLink();
@@ -576,7 +699,7 @@ public class SalarySheetTestPlan extends BaseTest{
 		 	Assert.assertEquals(s, "Salary Allotted successfully");
 } 
 	
-	 @Test(priority=25)
+	 @Test(priority=29)
 	 public void PublishSalary_SC_210() throws Exception{
 		 	PublishSalary rt = new PublishSalary(driver);
 		 	rt.selectSalary();
@@ -600,7 +723,7 @@ public class SalarySheetTestPlan extends BaseTest{
 	 		String r=rt.getMessage();
 	 		Assert.assertEquals(r, "Salary is published successfully");
 }
-	 @Test(priority=26)
+	 @Test(priority=30)
 	 public void CheckPaydaysPresentdaysAndBasic_SC_212() throws Exception{
 		 	CheckPaydaysPresentdaysAndBasic rt = new CheckPaydaysPresentdaysAndBasic(driver);
 		 	rt.selectSalary();
@@ -615,7 +738,7 @@ public class SalarySheetTestPlan extends BaseTest{
 		 	rt.exitFullscreen();
 	 		Thread.sleep(3000);
 }*/
-	 /*@Test(priority=27)
+	 /*@Test(priority=31)
 	 public void GenerateSalarySheetToCheckPresentDaysAndPayDays_SC_213() throws Exception{
 	   GenerateSalarySheetToCheckPresentDaysAndPayDays rt = new GenerateSalarySheetToCheckPresentDaysAndPayDays(driver);
 		rt.selectReports();
@@ -632,7 +755,7 @@ public class SalarySheetTestPlan extends BaseTest{
 		Thread.sleep(4000);
 		rt.selectGenerateReport();
 }*/
-	 /*@Test(priority=28)
+	 /*@Test(priority=32)
 	 public void EditEmployeeDOL_SC_214() throws Exception{
 		 	EditEmployeeDOL ww=new EditEmployeeDOL(driver);
 			ww.clickEmployeeLink();
@@ -661,7 +784,7 @@ public class SalarySheetTestPlan extends BaseTest{
 			Assert.assertEquals(r, "Employee detail successfully updated.");
 }
 	
-	 @Test(priority=29)
+	 @Test(priority=33)
 	 public void EditSalaryRateDetailsDOL_SC_215() throws Exception {
 		 	EditSalaryRateDetailsDOL rr= new EditSalaryRateDetailsDOL(driver);
 		 	rr.clickEmployeeLink();
@@ -687,7 +810,7 @@ public class SalarySheetTestPlan extends BaseTest{
 		 	String s=rr.getMessage();
 		 	Assert.assertEquals(s, "Salary Allotted successfully");
 }
-	 @Test(priority=30)
+	 @Test(priority=34)
 	 public void PublishSalary_SC_216() throws Exception{
 		 	PublishSalary rt = new PublishSalary(driver);
 		 	rt.selectSalary();
@@ -711,7 +834,7 @@ public class SalarySheetTestPlan extends BaseTest{
 		 	String r=rt.getMessage();
 		 	Assert.assertEquals(r, "Salary is published successfully");
 }
-	  @Test(priority=31)
+	  @Test(priority=35)
 	  public void CheckPaydaysPresentdaysAndBasic_SC_217() throws Exception{
 		  	CheckPaydaysPresentdaysAndBasic rt = new CheckPaydaysPresentdaysAndBasic(driver);
 		 	rt.selectSalary();
@@ -726,7 +849,7 @@ public class SalarySheetTestPlan extends BaseTest{
 		 	rt.exitFullscreen();
 	 		Thread.sleep(3000);
 }*/
-	  /*@Test(priority=32)
+	  /*@Test(priority=36)
 		 public void GenerateSalarySheetToCheckPresentDaysAndPayDays_SC_218() throws Exception{
 		   GenerateSalarySheetToCheckPresentDaysAndPayDays rt = new GenerateSalarySheetToCheckPresentDaysAndPayDays(driver);
 			rt.selectReports();
@@ -743,7 +866,7 @@ public class SalarySheetTestPlan extends BaseTest{
 			Thread.sleep(4000);
 			rt.selectGenerateReport();
 }*/
-	/*@Test(priority=33)
+	/*@Test(priority=37)
 	  public void EditEmployeeDOL_SC_219() throws Exception{
 		  	EditEmployeeDOL ww=new EditEmployeeDOL(driver);
 		  	ww.clickEmployeeLink();
@@ -771,7 +894,7 @@ public class SalarySheetTestPlan extends BaseTest{
 		  	String r=ww.getMessage();
 		  	Assert.assertEquals(r, "Employee detail successfully updated.");
 } 
-	  @Test(priority=34)
+	  @Test(priority=38)
 	  public void EditSalaryRateDetailsDOL_SC_220() throws Exception {
 			EditSalaryRateDetailsDOL rr= new EditSalaryRateDetailsDOL(driver);
 			rr.clickEmployeeLink();
@@ -797,7 +920,7 @@ public class SalarySheetTestPlan extends BaseTest{
 	 		String s=rr.getMessage();
 	 		Assert.assertEquals(s, "Salary Allotted successfully");
 }
-	 @Test(priority=35)
+	 @Test(priority=39)
 	 public void PublishSalary_SC_221() throws Exception{
 		 	PublishSalary rt = new PublishSalary(driver);
 		 	rt.selectSalary();
@@ -821,7 +944,7 @@ public class SalarySheetTestPlan extends BaseTest{
 		 	String r=rt.getMessage();
 		 	Assert.assertEquals(r, "Salary is published successfully");
 }
-	 @Test(priority=36)
+	 @Test(priority=40)
 	 public void CheckPaydaysPresentdaysAndBasic_SC_222() throws Exception{
 			CheckPaydaysPresentdaysAndBasic rt = new CheckPaydaysPresentdaysAndBasic(driver);
 			 rt.selectSalary();
@@ -836,7 +959,7 @@ public class SalarySheetTestPlan extends BaseTest{
 			 rt.exitFullscreen();
 		 	 Thread.sleep(3000);
 }*/
-		 /*@Test(priority=37)
+		 /*@Test(priority=41)
 		 public void GenerateSalarySheetToCheckPresentDaysAndPayDays_SC_223() throws Exception{
 		   GenerateSalarySheetToCheckPresentDaysAndPayDays rt = new GenerateSalarySheetToCheckPresentDaysAndPayDays(driver);
 			rt.selectReports();
@@ -853,7 +976,7 @@ public class SalarySheetTestPlan extends BaseTest{
 			Thread.sleep(4000);
 			rt.selectGenerateReport();
 	}*/
-		/* @Test(priority=38)
+		/* @Test(priority=42)
 		 	public void PublishSalary_SC_224() throws Exception{
 			 PublishSalary rt = new PublishSalary(driver);
 		 	 rt.selectSalary();
@@ -877,7 +1000,7 @@ public class SalarySheetTestPlan extends BaseTest{
 		 	 String r=rt.getMessage();
 		 	 Assert.assertEquals(r, "Salary is published successfully");
 	}*/
-		 /*@Test(priority=39)
+		 /*@Test(priority=43)
 		 public void GenerateSalarySheetReport_SC_226() throws Exception{
 		   GenerateSalarySheetToCheckPresentDaysAndPayDays rt = new GenerateSalarySheetToCheckPresentDaysAndPayDays(driver);
 			rt.selectReports();
@@ -894,7 +1017,7 @@ public class SalarySheetTestPlan extends BaseTest{
 			Thread.sleep(4000);
 			rt.selectGenerateReport();
 	}*/
-	/*	@Test(priority=40)
+	/*	@Test(priority=44)
 		 	public void EditSalaryGroupRoundOffActual_SC_227() throws Exception{
 				EditSalaryGroupRoundOffActual sh=new EditSalaryGroupRoundOffActual(driver);
 		 		Thread.sleep(5000);
@@ -909,7 +1032,7 @@ public class SalarySheetTestPlan extends BaseTest{
 		  		String s=sh.getMessage();
 		  		Assert.assertEquals(s, "Salary structure detail succesfully updated");
 	}
-		 @Test(priority=41)
+		 @Test(priority=45)
 		  public void EditSalaryRateDetailsDOL_SC_228() throws Exception {
 			EditSalaryRateDetailsDOL rr= new EditSalaryRateDetailsDOL(driver);
 			rr.clickEmployeeLink();
@@ -935,7 +1058,7 @@ public class SalarySheetTestPlan extends BaseTest{
 	 		String s=rr.getMessage();
 	 		Assert.assertEquals(s, "Salary Allotted successfully");
 }
-		 @Test(priority=42)
+		 @Test(priority=46)
 		 	public void PublishSalary_SC_229() throws Exception{
 			 PublishSalary rt = new PublishSalary(driver);
 			 rt.selectSalary();
@@ -959,7 +1082,7 @@ public class SalarySheetTestPlan extends BaseTest{
 		 	 String r=rt.getMessage();
 		 	 Assert.assertEquals(r, "Salary is published successfully");
 	}
-		 @Test(priority=43)
+		 @Test(priority=47)
 		 	public void CheckSalaryHead_SC_232() throws Exception{
 			 CheckSalaryHead rt = new CheckSalaryHead(driver);
 		 	 rt.selectSalary();
@@ -973,7 +1096,7 @@ public class SalarySheetTestPlan extends BaseTest{
 		 	 rt.exitFullscreen();
 	 		 Thread.sleep(3000);
 	}*/
-		 /*@Test(priority=44)
+		 /*@Test(priority=48)
 		 public void GenerateSalarySheetReport_SC_233() throws Exception{
 		   GenerateSalarySheetToCheckPresentDaysAndPayDays rt = new GenerateSalarySheetToCheckPresentDaysAndPayDays(driver);
 			rt.selectReports();
@@ -990,7 +1113,7 @@ public class SalarySheetTestPlan extends BaseTest{
 			Thread.sleep(4000);
 			rt.selectGenerateReport();
 	}*/
-	/*	@Test(priority=45)
+	/*	@Test(priority=49)
 		 	public void EditSalaryGroupRoundOffNearestRupee_SC_235() throws Exception{
 				EditSalaryGroupRoundOffNearestRupee sh=new EditSalaryGroupRoundOffNearestRupee(driver);
 		 		Thread.sleep(5000);
@@ -1004,7 +1127,7 @@ public class SalarySheetTestPlan extends BaseTest{
 		  		String s=sh.getMessage();
 		  		Assert.assertEquals(s, "Salary structure detail succesfully updated");
 	}
-		 @Test(priority=46)
+		 @Test(priority=50)
 		  public void EditSalaryRateDetailsDOL_SC_236() throws Exception {
 			EditSalaryRateDetailsDOL rr= new EditSalaryRateDetailsDOL(driver);
 			rr.clickEmployeeLink();
@@ -1030,7 +1153,7 @@ public class SalarySheetTestPlan extends BaseTest{
 	 		String s=rr.getMessage();
 	 		Assert.assertEquals(s, "Salary Allotted successfully");
 }
-		 @Test(priority=47)
+		 @Test(priority=51)
 		 	public void PublishSalary_SC_237() throws Exception{
 			 PublishSalary rt = new PublishSalary(driver);
 			 rt.selectSalary();
@@ -1053,8 +1176,8 @@ public class SalarySheetTestPlan extends BaseTest{
 		 	 rt.selectpublish();
 		 	 String r=rt.getMessage();
 		 	 Assert.assertEquals(r, "Salary is published successfully");
-	}*/
-		@Test(priority=48)
+	}
+		@Test(priority=52)
 		 	public void CheckSalaryHead_SC_238() throws Exception{
 			 CheckPaydaysPresentdaysAndBasic rt = new CheckPaydaysPresentdaysAndBasic(driver);
 		 	 rt.selectSalary();
@@ -1068,7 +1191,7 @@ public class SalarySheetTestPlan extends BaseTest{
 		 	 rt.selectLoad();
 		 	 rt.exitFullscreen();
 	 		 Thread.sleep(3000);
-	}
+	}*/
 		 /*@Test(enabled=false)
 		 public void GenerateSalarySheetReport_SC_239() throws Exception{
 		   GenerateSalarySheetToCheckPresentDaysAndPayDays rt = new GenerateSalarySheetToCheckPresentDaysAndPayDays(driver);
@@ -1086,7 +1209,7 @@ public class SalarySheetTestPlan extends BaseTest{
 			Thread.sleep(4000);
 			rt.selectGenerateReport();
 	}*/
-		@Test(priority=49)
+	/*	@Test(priority=53)
 		 	public void EditSalaryGroupRoundOffHigherRupee_SC_240() throws Exception{
 				EditSalaryGroupRoundOffHigherRupee sh=new EditSalaryGroupRoundOffHigherRupee(driver);
 		 		Thread.sleep(5000);
@@ -1100,7 +1223,7 @@ public class SalarySheetTestPlan extends BaseTest{
 		  		String s=sh.getMessage();
 		  	Assert.assertEquals(s, "Salary structure detail succesfully updated");
 	}
-		 @Test(priority=50)
+		 @Test(priority=54)
 		  public void EditSalaryRateDetailsDOL_SC_241() throws Exception {
 			EditSalaryRateDetailsDOL rr= new EditSalaryRateDetailsDOL(driver);
 				rr.clickEmployeeLink();
@@ -1127,7 +1250,7 @@ public class SalarySheetTestPlan extends BaseTest{
 		 		Assert.assertEquals(s, "Salary Allotted successfully");
 		 		
 		}
-		 @Test(priority=51)
+		 @Test(priority=55)
 				 	public void PublishSalary_SC_242() throws Exception{
 					 PublishSalary rt = new PublishSalary(driver);
 					 rt.selectSalary();
@@ -1151,7 +1274,7 @@ public class SalarySheetTestPlan extends BaseTest{
 				 	 String r=rt.getMessage();
 				 	 Assert.assertEquals(r, "Salary is published successfully");
 			}
-				 @Test(priority=52)
+				 @Test(priority=56)
 				 	public void CheckSalaryHead_SC_243() throws Exception{
 					 CheckPaydaysPresentdaysAndBasic rt = new CheckPaydaysPresentdaysAndBasic(driver);
 				 	 rt.selectSalary();
@@ -1165,8 +1288,8 @@ public class SalarySheetTestPlan extends BaseTest{
 				 	 rt.selectLoad();
 				 	 rt.exitFullscreen();
 			 		 Thread.sleep(3000);
-			}
-				/* @Test(priority=53)
+			}*/
+				/* @Test(priority=57)
 				 public void GenerateSalarySheetReport_SC_244() throws Exception{
 				   GenerateSalarySheetToCheckPresentDaysAndPayDays rt = new GenerateSalarySheetToCheckPresentDaysAndPayDays(driver);
 					rt.selectReports();
@@ -1183,7 +1306,7 @@ public class SalarySheetTestPlan extends BaseTest{
 					Thread.sleep(4000);
 					rt.selectGenerateReport();
 			}*/
-				 /*@Test(priority=54)
+				 /*@Test(priority=58)
 				 	public void EditSalaryGroupBasedOnPayDays_SC_247() throws Exception{
 						EditSalaryGroupBasedOnPayDays sh=new EditSalaryGroupBasedOnPayDays(driver);
 				 		Thread.sleep(5000);
@@ -1197,7 +1320,7 @@ public class SalarySheetTestPlan extends BaseTest{
 				  		String s=sh.getMessage();
 				  		Assert.assertEquals(s, "Salary structure detail succesfully updated");
 				}*/
-				 @Test(priority=55)
+			/* @Test(priority=59)
 				  public void EditSalaryRateDetailsDOL_SC_248() throws Exception {
 					EditSalaryRateDetailsDOL rr= new EditSalaryRateDetailsDOL(driver);
 					rr.clickEmployeeLink();
@@ -1224,7 +1347,7 @@ public class SalarySheetTestPlan extends BaseTest{
 				 	Assert.assertEquals(s, "Salary Allotted successfully");
 	} 
 				 
-				 @Test(priority=56)
+				 @Test(priority=60)
 				 	public void PublishSalary_SC_249() throws Exception{
 					 PublishSalary rt = new PublishSalary(driver);
 					 rt.selectSalary();
@@ -1248,7 +1371,7 @@ public class SalarySheetTestPlan extends BaseTest{
 				 	 String r=rt.getMessage();
 				 	 Assert.assertEquals(r, "Salary is published successfully");
 			}
-				 @Test(priority=57)
+				 @Test(priority=61)
 				 	public void CheckSalaryHead_SC_250() throws Exception{
 					 CheckSalaryHead rt = new CheckSalaryHead(driver);
 				 	 rt.selectSalary();
@@ -1262,9 +1385,9 @@ public class SalarySheetTestPlan extends BaseTest{
 				 	 rt.selectLoad();
 				 	 rt.exitFullscreen();
 			 		 Thread.sleep(3000);
-			}
+			}*/
 				 	
-				/* @Test(priority=58)
+				/* @Test(priority=62)
 				 public void GenerateSalarySheetReport_SC_258() throws Exception{
 				   GenerateSalarySheetToCheckPresentDaysAndPayDays rt = new GenerateSalarySheetToCheckPresentDaysAndPayDays(driver);
 					rt.selectReports();

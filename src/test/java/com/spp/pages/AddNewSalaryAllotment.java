@@ -15,6 +15,8 @@ public class AddNewSalaryAllotment extends BasePage{
 	WebElement ClickOnSalaryRateDetails;
 	@FindBy(xpath="//*[@id=\"main\"]/div[2]/nav/ul/li[2]/a/span")
 	WebElement ClickonListingEmployee;
+	@FindBy(xpath="//*[@id=\"notalloted\"]/tbody/tr/td[4]/a")
+	WebElement AllotSalary;
 	@FindBy(id="filter_head")
 	WebElement ClickonFilter;
 	@FindBy(xpath="//form[@id='bf_form']//button[contains(text(),'LOAD')]")
@@ -45,6 +47,9 @@ public class AddNewSalaryAllotment extends BasePage{
 	}
 	public void clickonlistingemployee() {
 		ClickonListingEmployee.click();
+	}
+	public void clicAllotSalary() {
+		AllotSalary.click();
 	}
 	public void clickonfilter() {
 		ClickonFilter.click();
