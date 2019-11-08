@@ -6,7 +6,15 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import com.spp.common.BasePage;
 
-public class AddNewGratuitywithSalaryConsideredTheoreticalChequeDDNoChequeDDdate extends BasePage {
+import com.spp.common.BasePage;
+
+public class GratuitywithSalaryConsideredEarnedPaymentmodeDDSelectedSalaryHeads extends BasePage {
+	
+	public GratuitywithSalaryConsideredEarnedPaymentmodeDDSelectedSalaryHeads(WebDriver driver) {
+		
+			super(driver);
+			PageFactory.initElements(driver, this);
+	}
 	@FindBy(id="salary")
 	WebElement ClickOnSalary;
 	@FindBy(xpath="//a[text()='Gratuity']")
@@ -37,10 +45,21 @@ public class AddNewGratuitywithSalaryConsideredTheoreticalChequeDDNoChequeDDdate
 	WebElement SuccessMessage;
 	@FindBy(xpath="//div/table/tbody/tr/td[5]/a/img")
 	WebElement Delete;
+	@FindBy(xpath="//button[@id='heads_considered']")
+	WebElement HeadsC;
+	@FindBy(xpath="//input[@id='selected_heads_selected_heads']")
+	WebElement SelectedSalaryHead;
+	@FindBy(xpath="//button[contains(text(),'Set')]")
+	WebElement Set;
 	
-	public AddNewGratuitywithSalaryConsideredTheoreticalChequeDDNoChequeDDdate(WebDriver driver) {
-		super(driver);
-		PageFactory.initElements(driver, this);
+	public void clickSet() {
+		Set.click();
+	}
+	public void clickSelectedSalaryHead() {
+		SelectedSalaryHead.click();
+	}
+	public void clickHeadsC() {
+		HeadsC.click();
 	}
 	public void clickonsalary() {
 		ClickOnSalary.click();
@@ -58,7 +77,7 @@ public class AddNewGratuitywithSalaryConsideredTheoreticalChequeDDNoChequeDDdate
 		dropDownSelect(SelectMOP, value);
 	}
 	public void EnterChequeNo(String value) {
-		ChequeNo.clear();
+		//ChequeNo.clear();
 		ChequeNo.sendKeys(value);
 	}
 	public void selectSalaryConsideredTheoretical() {
