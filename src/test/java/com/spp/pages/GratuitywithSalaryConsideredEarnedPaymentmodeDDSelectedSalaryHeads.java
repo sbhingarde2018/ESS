@@ -49,14 +49,22 @@ public class GratuitywithSalaryConsideredEarnedPaymentmodeDDSelectedSalaryHeads 
 	WebElement HeadsC;
 	@FindBy(xpath="//input[@id='selected_heads_selected_heads']")
 	WebElement SelectedSalaryHead;
+	@FindBy(xpath="//input[@id='selected_heads_gross']")
+	WebElement GrossSalary;
 	@FindBy(xpath="//button[contains(text(),'Set')]")
 	WebElement Set;
+	@FindBy(xpath="//input[@id='gratuity_gratuity_amount']")
+	WebElement GratuityAmount;
+	
 	
 	public void clickSet() {
 		Set.click();
 	}
 	public void clickSelectedSalaryHead() {
 		SelectedSalaryHead.click();
+	}
+	public void clickGrossSalary() {
+		GrossSalary.click();
 	}
 	public void clickHeadsC() {
 		HeadsC.click();
@@ -106,4 +114,9 @@ public class GratuitywithSalaryConsideredEarnedPaymentmodeDDSelectedSalaryHeads 
 		Delete.click();
 		switchToPopUpAndAccept(driver);
 	}
+	public void enterGratuityAmount(String value) throws Exception{
+		GratuityAmount.clear();
+		GratuityAmount.sendKeys(value);
+	}
+	
 }

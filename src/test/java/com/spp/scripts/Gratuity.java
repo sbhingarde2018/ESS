@@ -21,6 +21,8 @@ import com.spp.pages.AddNewGratuitywithSalaryConsideredTheoreticalPaymentmodeICI
 import com.spp.pages.AddNewGratuitywithSalaryConsideredTheoreticalPaymentmodeIncludeinFFS;
 import com.spp.pages.CheckGratuityinthegeneratedReport;
 import com.spp.pages.DeleteGratuity;
+import com.spp.pages.GratuityGeneralLinksEmployeeMasterredirectstoEmployeemodule;
+import com.spp.pages.GratuityReportredirectstoReportsmodule;
 import com.spp.pages.GratuitywithSalaryConsideredEarnedPaymentmodeDDSelectedSalaryHeads;
 import com.spp.pages.UpdateGratuity;
 
@@ -579,7 +581,7 @@ public class Gratuity extends BaseTest {
 		Thread.sleep(2000);
 		ag.clickDelete();
 		}*/
-	@Test(priority=25)
+	/*@Test(priority=25)
 	public void AddNewGratuitywithSalaryConsideredTheoreticalPaymentmodeDDChequeDDNoSelectedSalaryHeads_SC_932() throws Exception {
 		GratuitywithSalaryConsideredEarnedPaymentmodeDDSelectedSalaryHeads ag = new GratuitywithSalaryConsideredEarnedPaymentmodeDDSelectedSalaryHeads(driver);
 		ag.clickonsalary();
@@ -767,5 +769,319 @@ public class Gratuity extends BaseTest {
 		Assert.assertEquals(i, "Gratuity successfully created");
 		Thread.sleep(2000);
 		ag.clickDelete();
+		}*/
+	@Test(priority=32)
+	public void AddNewGratuitywithSalaryConsideredEarnedDDChequeDDdateSelectedSalaryHeads_SC_939() throws Exception {
+		GratuitywithSalaryConsideredEarnedPaymentmodeDDSelectedSalaryHeads ag = new GratuitywithSalaryConsideredEarnedPaymentmodeDDSelectedSalaryHeads(driver);
+		ag.clickonsalary();
+		ag.clickongratutiy();
+		ag.addnewgratuity();
+		ag.selectEmployee("Ashish(REF09)");
+		Thread.sleep(3000);
+		ag.selectSalaryConsideredEarned();
+		Thread.sleep(3000);
+		ag.selectmodeofPayment("DD");
+		ag.clickHeadsC();
+		ag.clickSelectedSalaryHead();
+		ag.clickSet();
+		ag.EnterChequeNo("89767");
+		ag.enterdateofpayment("01 August 2019");
+		ag.EnterChequeDate("10 August 2019");
+		ag.clickCompute();
+		Thread.sleep(2000);
+		ag.clickCreateGratuity();
+		Thread.sleep(2000);
+		ag.switchToPopUpAndAccept(driver);
+		String i=ag.getMessage();
+		Assert.assertEquals(i, "Gratuity successfully created");
+		Thread.sleep(2000);
+		ag.clickDelete();
 		}
+	@Test(priority=33)
+	public void AddNewGratuitywithSalaryConsideredEarnedPaymentmodeStateBankSelectedSalaryHeads_SC_940() throws Exception {
+		GratuitywithSalaryConsideredEarnedPaymentmodeDDSelectedSalaryHeads ag = new GratuitywithSalaryConsideredEarnedPaymentmodeDDSelectedSalaryHeads(driver);
+		ag.clickonsalary();
+		ag.clickongratutiy();
+		ag.addnewgratuity();
+		ag.selectEmployee("Ashish(REF09)");
+		Thread.sleep(3000);
+		ag.selectSalaryConsideredEarned();
+		Thread.sleep(3000);
+		ag.selectmodeofPayment("State Bank of India");
+		ag.clickHeadsC();
+		ag.clickSelectedSalaryHead();
+		ag.clickSet();
+		ag.EnterChequeNo("89767");
+		ag.enterdateofpayment("01 August 2019");
+		ag.EnterChequeDate("10 August 2019");
+		ag.clickCompute();
+		Thread.sleep(2000);
+		ag.clickCreateGratuity();
+		Thread.sleep(2000);
+		ag.switchToPopUpAndAccept(driver);
+		String i=ag.getMessage();
+		Assert.assertEquals(i, "Gratuity successfully created");
+		Thread.sleep(2000);
+		//ag.clickDelete();
+		}
+	@Test(priority=34)
+	public void CheckifSalary_Gratuity_Reports_GratuityReportredirectstoReportsmodule_SC_941() throws Exception {
+		GratuityReportredirectstoReportsmodule ag = new GratuityReportredirectstoReportsmodule(driver);
+		ag.clickonsalary();
+		ag.clickongratutiy();
+		ag.ClickGratuityReportLink();
+		Thread.sleep(2000);
+		ag.selectReports("Summary Report");
+		Thread.sleep(2000);
+		ag.ClickFilter();
+		ag.resizeWindow();
+		Thread.sleep(4000);
+		ag.ClickLoad();
+		Thread.sleep(3000);
+		ag.exitFullscreen();
+		ag.ClickSelectEmp();
+		ag.ClickGenerateReport();
+		Thread.sleep(3000);
+		ag.clickonsalary();
+		ag.clickongratutiy();
+		ag.clickDelete();
+	}
+	@Test(priority=35)
+	public void checkifSalary_Gratuity_General_Links_EmployeeMasterredirectstoEmployeemoduletoAddNewEmployee_SC_942() throws Exception{
+		GratuityGeneralLinksEmployeeMasterredirectstoEmployeemodule ag = new GratuityGeneralLinksEmployeeMasterredirectstoEmployeemodule(driver);
+		ag.clickonsalary();
+		ag.clickongratutiy();
+		ag.clickGeneralLink();
+		ag.clickEmpMaster();
+		Thread.sleep(2000);
+		ag.clickAddNewEmployee();
+		Thread.sleep(3000);
+		ag.enterEmployeeId("TATA00421");
+		ag.enterEmployeeRefNo("TATA001421");
+		ag.enterEmployeeName("GEmp");
+		ag.enterFathername("Neil");
+		ag.enterdob("14 June 1982");
+		ag.selectGender("Female");
+		ag.selectMaritalStatus("Single");
+		ag.enterdoj("01 November 2017");
+		//at.entersaldate("01 February 2013");
+		Thread.sleep(1000);
+		//at.selectPresentadd();
+		ag.selectstate("Karnataka");
+		Thread.sleep(1000);
+		ag.selectstatdetails();
+		ag.checkTDS();
+		ag.selectpanoption("ADD PAN");
+		ag.enterpanno("PRAPT0021O");
+		ag.entereffectivedatePAN("01 January 2013");
+		Thread.sleep(1000);
+		ag.selectclassificationdetail();
+		ag.selectsalstructure("grossstructure");
+		ag.selectbranch("default");
+		ag.selectattendancestructure("Karnataka");
+		ag.selectbank("CASH");
+		ag.selectleavepolicy("Default");
+		Thread.sleep(2000);
+		ag.selectdesignation("Tester");
+		Thread.sleep(2000);
+		ag.createemployee();
+		String s=ag.getMessage();
+		Assert.assertEquals(s, "Employee successfully created");
+	}
+	@Test(priority=36)
+	public void UpdateGratuitywithSalaryConsideredEarnedPaymentmodeDDGrossSalary_SC_943() throws Exception {
+		GratuitywithSalaryConsideredEarnedPaymentmodeDDSelectedSalaryHeads ag = new GratuitywithSalaryConsideredEarnedPaymentmodeDDSelectedSalaryHeads(driver);
+		ag.clickonsalary();
+		ag.clickongratutiy();
+		ag.addnewgratuity();
+		ag.selectEmployee("Ashish(REF09)");
+		Thread.sleep(3000);
+		ag.selectSalaryConsideredEarned();
+		Thread.sleep(3000);
+		ag.selectmodeofPayment("DD");
+		ag.clickHeadsC();
+		ag.clickGrossSalary();
+		//ag.clickSet();
+		//ag.EnterChequeNo("89767");
+		ag.enterdateofpayment("01 August 2019");
+		//ag.EnterChequeDate("10 August 2019");
+		ag.clickCompute();
+		Thread.sleep(2000);
+		ag.enterGratuityAmount("5000");
+		ag.clickCreateGratuity();
+		Thread.sleep(2000);
+		ag.switchToPopUpAndAccept(driver);
+		String i=ag.getMessage();
+		Assert.assertEquals(i, "Gratuity successfully created");
+		Thread.sleep(2000);
+		ag.clickDelete();
+		}
+	@Test(priority=37)
+	public void UpdateGratuitywithSalaryConsideredEarnedPaymentmodeIncludeinFSSGrossSalary_SC_944() throws Exception {
+		GratuitywithSalaryConsideredEarnedPaymentmodeDDSelectedSalaryHeads ag = new GratuitywithSalaryConsideredEarnedPaymentmodeDDSelectedSalaryHeads(driver);
+		ag.clickonsalary();
+		ag.clickongratutiy();
+		ag.addnewgratuity();
+		ag.selectEmployee("Ashish(REF09)");
+		Thread.sleep(3000);
+		ag.selectSalaryConsideredEarned();
+		Thread.sleep(3000);
+		ag.selectmodeofPayment("Include in FFS");
+		ag.clickHeadsC();
+		ag.clickGrossSalary();
+		//ag.clickSet();
+		//ag.EnterChequeNo("89767");
+		ag.enterdateofpayment("01 August 2019");
+		//ag.EnterChequeDate("10 August 2019");
+		ag.clickCompute();
+		Thread.sleep(2000);
+		ag.enterGratuityAmount("5000");
+		ag.clickCreateGratuity();
+		Thread.sleep(2000);
+		ag.switchToPopUpAndAccept(driver);
+		String i=ag.getMessage();
+		Assert.assertEquals(i, "Gratuity successfully created");
+		Thread.sleep(2000);
+		ag.clickDelete();
+		}
+	@Test(priority=38)
+	public void UpdateGratuitywithSalaryConsideredEarnedPaymentmodeStateBankofIndiaGrossSalary_SC_945() throws Exception {
+		GratuitywithSalaryConsideredEarnedPaymentmodeDDSelectedSalaryHeads ag = new GratuitywithSalaryConsideredEarnedPaymentmodeDDSelectedSalaryHeads(driver);
+		ag.clickonsalary();
+		ag.clickongratutiy();
+		ag.addnewgratuity();
+		ag.selectEmployee("Ashish(REF09)");
+		Thread.sleep(3000);
+		ag.selectSalaryConsideredEarned();
+		Thread.sleep(3000);
+		ag.selectmodeofPayment("State Bank of India");
+		ag.clickHeadsC();
+		ag.clickGrossSalary();
+		//ag.clickSet();
+		//ag.EnterChequeNo("89767");
+		ag.enterdateofpayment("01 August 2019");
+		//ag.EnterChequeDate("10 August 2019");
+		ag.clickCompute();
+		Thread.sleep(2000);
+		ag.enterGratuityAmount("5000");
+		ag.clickCreateGratuity();
+		Thread.sleep(2000);
+		ag.switchToPopUpAndAccept(driver);
+		String i=ag.getMessage();
+		Assert.assertEquals(i, "Gratuity successfully created");
+		Thread.sleep(2000);
+		ag.clickDelete();
+		}
+	/*@Test(priority=39)
+	public void UpdateGratuitywithSalaryConsideredTheoreticalPaymentmodeCashGrossSalary_SC_946() throws Exception {
+		GratuitywithSalaryConsideredEarnedPaymentmodeDDSelectedSalaryHeads ag = new GratuitywithSalaryConsideredEarnedPaymentmodeDDSelectedSalaryHeads(driver);
+		ag.clickonsalary();
+		ag.clickongratutiy();
+		ag.addnewgratuity();
+		ag.selectEmployee("Ashish(REF09)");
+		Thread.sleep(3000);
+		ag.selectSalaryConsideredTheoretical();
+		Thread.sleep(3000);
+		ag.selectmodeofPayment("CASH");
+		ag.clickHeadsC();
+		ag.clickGrossSalary();
+		//ag.clickSet();
+		//ag.EnterChequeNo("89767");
+		ag.enterdateofpayment("01 August 2019");
+		//ag.EnterChequeDate("10 August 2019");
+		ag.clickCompute();
+		Thread.sleep(2000);
+		ag.enterGratuityAmount("5000");
+		ag.clickCreateGratuity();
+		Thread.sleep(2000);
+		ag.switchToPopUpAndAccept(driver);
+		String i=ag.getMessage();
+		Assert.assertEquals(i, "Gratuity successfully created");
+		Thread.sleep(2000);
+		ag.clickDelete();
+		}
+	@Test(priority=39)
+	public void UpdateGratuitywithSalaryConsideredTheoreticalPaymentmodeDDGrossSalary_SC_947() throws Exception {
+		GratuitywithSalaryConsideredEarnedPaymentmodeDDSelectedSalaryHeads ag = new GratuitywithSalaryConsideredEarnedPaymentmodeDDSelectedSalaryHeads(driver);
+		ag.clickonsalary();
+		ag.clickongratutiy();
+		ag.addnewgratuity();
+		ag.selectEmployee("Ashish(REF09)");
+		Thread.sleep(3000);
+		ag.selectSalaryConsideredTheoretical();
+		Thread.sleep(3000);
+		ag.selectmodeofPayment("DD");
+		ag.clickHeadsC();
+		ag.clickGrossSalary();
+		//ag.clickSet();
+		//ag.EnterChequeNo("89767");
+		ag.enterdateofpayment("01 August 2019");
+		//ag.EnterChequeDate("10 August 2019");
+		ag.clickCompute();
+		Thread.sleep(2000);
+		ag.enterGratuityAmount("5000");
+		ag.clickCreateGratuity();
+		Thread.sleep(2000);
+		ag.switchToPopUpAndAccept(driver);
+		String i=ag.getMessage();
+		Assert.assertEquals(i, "Gratuity successfully created");
+		Thread.sleep(2000);
+		ag.clickDelete();
+		}
+	@Test(priority=40)
+	public void UpdateGratuitywithSalaryConsideredTheoreticalPaymentmodeIncludeinFFSGrossSalary_SC_948() throws Exception {
+		GratuitywithSalaryConsideredEarnedPaymentmodeDDSelectedSalaryHeads ag = new GratuitywithSalaryConsideredEarnedPaymentmodeDDSelectedSalaryHeads(driver);
+		ag.clickonsalary();
+		ag.clickongratutiy();
+		ag.addnewgratuity();
+		ag.selectEmployee("Ashish(REF09)");
+		Thread.sleep(3000);
+		ag.selectSalaryConsideredTheoretical();
+		Thread.sleep(3000);
+		ag.selectmodeofPayment("Include in FFS)");
+		ag.clickHeadsC();
+		ag.clickGrossSalary();
+		//ag.clickSet();
+		//ag.EnterChequeNo("89767");
+		ag.enterdateofpayment("01 August 2019");
+		//ag.EnterChequeDate("10 August 2019");
+		ag.clickCompute();
+		Thread.sleep(2000);
+		ag.enterGratuityAmount("5000");
+		ag.clickCreateGratuity();
+		Thread.sleep(2000);
+		ag.switchToPopUpAndAccept(driver);
+		String i=ag.getMessage();
+		Assert.assertEquals(i, "Gratuity successfully created");
+		Thread.sleep(2000);
+		ag.clickDelete();
+		}
+	@Test(priority=41)
+	public void UpdateGratuitywithSalaryConsideredTheoreticalPaymentmodeDDChequeDDNoGrossSalary_SC_949() throws Exception {
+		GratuitywithSalaryConsideredEarnedPaymentmodeDDSelectedSalaryHeads ag = new GratuitywithSalaryConsideredEarnedPaymentmodeDDSelectedSalaryHeads(driver);
+		ag.clickonsalary();
+		ag.clickongratutiy();
+		ag.addnewgratuity();
+		ag.selectEmployee("Ashish(REF09)");
+		Thread.sleep(3000);
+		ag.selectSalaryConsideredTheoretical();
+		Thread.sleep(3000);
+		ag.selectmodeofPayment("DD)");
+		ag.clickHeadsC();
+		ag.clickGrossSalary();
+		//ag.clickSet();
+		ag.EnterChequeNo("89767");
+		ag.enterdateofpayment("01 August 2019");
+		//ag.EnterChequeDate("10 August 2019");
+		ag.clickCompute();
+		Thread.sleep(2000);
+		ag.enterGratuityAmount("5000");
+		ag.clickCreateGratuity();
+		Thread.sleep(2000);
+		ag.switchToPopUpAndAccept(driver);
+		String i=ag.getMessage();
+		Assert.assertEquals(i, "Gratuity successfully created");
+		Thread.sleep(2000);
+		ag.clickDelete();
+		}*/
 }
