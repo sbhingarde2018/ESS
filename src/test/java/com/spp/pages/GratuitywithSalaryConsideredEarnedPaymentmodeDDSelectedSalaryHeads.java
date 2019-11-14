@@ -55,8 +55,17 @@ public class GratuitywithSalaryConsideredEarnedPaymentmodeDDSelectedSalaryHeads 
 	WebElement Set;
 	@FindBy(xpath="//input[@id='gratuity_gratuity_amount']")
 	WebElement GratuityAmount;
+	@FindBy(xpath="//*[@id=\"employees_gratuity_details\"]/div/table/tbody/tr/td[4]/a")
+	WebElement EditEmp;
+	@FindBy(xpath="//input[@id='edit_gratuity']")
+	WebElement UpdateEmp;
 	
-	
+	public void clickUpdateEmp() {
+		UpdateEmp.click();
+	}
+	public void clickEditEmp() {
+		EditEmp.click();
+	}
 	public void clickSet() {
 		Set.click();
 	}
@@ -85,7 +94,7 @@ public class GratuitywithSalaryConsideredEarnedPaymentmodeDDSelectedSalaryHeads 
 		dropDownSelect(SelectMOP, value);
 	}
 	public void EnterChequeNo(String value) {
-		//ChequeNo.clear();
+		ChequeNo.clear();
 		ChequeNo.sendKeys(value);
 	}
 	public void selectSalaryConsideredTheoretical() {
@@ -95,6 +104,7 @@ public class GratuitywithSalaryConsideredEarnedPaymentmodeDDSelectedSalaryHeads 
 		Earned.click();
 	}
 	public void enterdateofpayment(String value) {
+		DateofPayment.clear();
 		DateofPayment.sendKeys(value);
 	}
 	public void EnterChequeDate(String value) {
