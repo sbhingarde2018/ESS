@@ -22,11 +22,11 @@ public class EditAssignedPFGroupInBranch extends BasePage {
 	WebElement banchlink;
 	@FindBy(xpath="//*[@id=\"branches\"]/div/table/tbody/tr[2]/td[5]/a")
 	WebElement Editlink;
-	@FindBy(xpath="//*[@id=\"main\"]/div[6]/nav/ul/li[2]/a")
+	@FindBy(xpath="//span[contains(text(),'PF Detail')]")
 	WebElement PFDetailTab;
 	@FindBy(xpath="//*[@id=\"pf_group_list\"]/div[2]/table/tbody/tr/td[4]/a")
 	WebElement EditPFGroup;
-	@FindBy(id="pf_effective_date")
+	@FindBy(xpath="//input[@id='pf_effective_date']")
 	WebElement EditEffectiveDate;
 	@FindBy(xpath="//*[@id=\"pfgroup_save\"]/div[2]/div[4]/input")
 	WebElement UpdatePFDetail;

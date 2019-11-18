@@ -26,7 +26,7 @@ public class AddESIGroup extends BasePage {
 	WebElement createesibutton;
 	@FindBy(xpath="//span[contains(text(),'ESI Rate')]")
 	WebElement esiratelink;
-	@FindBy(id="esi_group_rate_paymonth_id")
+	@FindBy(xpath="//select[@id='esi_group_rate_paymonth_id']")
 	WebElement effdate;
 	@FindBy(xpath="//*[@id=\"new_esi_group_rate\"]/div[2]/div[9]/input")
 	WebElement createesirate;
@@ -79,7 +79,7 @@ public class AddESIGroup extends BasePage {
 	}
 	
 	public void selectESIEffectiveDate(String value) throws Exception{
-		effdate.clear();
+		//effdate.clear();
 		dropDownSelect(effdate, value);
 	}
 	

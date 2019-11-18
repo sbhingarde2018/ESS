@@ -15,7 +15,7 @@ public class DeletePTGroupRate extends BasePage{
 	WebElement companystatutorylink;
 	@FindBy(xpath="//a[text()='PT Group']")
 	WebElement PTGroup;
-	@FindBy(xpath="//tbody/tr/td[contains(text(),'PT-ATest')]/parent::tr/td[4]/span[1]/a")
+	@FindBy(xpath="//tbody/tr/td[contains(text(),'PT_ATest_3')]/parent::tr/td[4]/span[1]/a")
 	WebElement EditLink;
 	@FindBy(xpath="//*[@id='main']/div[3]/nav/ul/li[2]/a/span")
 	WebElement PTRate;

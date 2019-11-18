@@ -19,7 +19,7 @@ public class DeleteESIGroup extends BasePage {
 	WebElement esiratelink;
 	@FindBy(xpath="//a[text()='Delete']")
 	WebElement deleteESIrate;
-    @FindBy(xpath="//tbody/tr/td[contains(text(),'ESI-ATest')]/parent::tr/td[4]/span[2]/a")
+    @FindBy(xpath="//tbody/tr/td[contains(text(),'ESI_ATest_2')]/parent::tr/td[4]/span[2]/a")
     WebElement deleteESIGroup;
     @FindBy(xpath="//*[@id=\"esi-grp-result\"]/div/strong")
     WebElement successfullMessage;

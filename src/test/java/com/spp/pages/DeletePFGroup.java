@@ -19,7 +19,7 @@ public class DeletePFGroup extends BasePage {
 	WebElement deletepfrateicon;
 	@FindBy(xpath="//a[text()='PF Group']")
 	WebElement PfGrouplink;
-	@FindBy(xpath="//tbody/tr[2]/td[contains(text(),'PF-ATest')]/parent::tr/td[4]/span[2]/a")
+	@FindBy(xpath="//*[@id=\"company_statutory_table\"]/tbody/tr/td[contains(text(),'PF_ATest_2')]/parent::tr/td[4]/span[2]/a/img")
 	WebElement deletepfgroupbutton;
 	@FindBy(xpath="//strong[text()='PF group successfully deleted']")
 	WebElement successfullMessage;

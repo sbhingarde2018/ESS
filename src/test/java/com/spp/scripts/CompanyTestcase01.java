@@ -82,7 +82,7 @@ public class CompanyTestcase01 extends BaseTest{
 		Thread.sleep(3000);
 		bp.clickPFDetail();
 		Thread.sleep(3000);
-		bp.selectPFGroup("Default");
+		bp.selectPFGroup("PF_ATest");
 		Thread.sleep(2000);
 		bp.selectmonthoptionPF();
 		Thread.sleep(2000);
@@ -92,7 +92,7 @@ public class CompanyTestcase01 extends BaseTest{
 		Assert.assertEquals(s1, "PF detail successfully created.");
 		Thread.sleep(3000);
 		bp.clickESIDetail();
-		bp.selectESIGroup("Default");
+		bp.selectESIGroup("ESI_ATest");
 		Thread.sleep(2000);
 		bp.selectmonthoptionESI();
 		Thread.sleep(2000);
@@ -103,7 +103,7 @@ public class CompanyTestcase01 extends BaseTest{
 		Thread.sleep(5000);
 		bp.clickPTDetail();
 		Thread.sleep(2000);
-		bp.selectPTGroup("Default");
+		bp.selectPTGroup("PT_ATest");
 		Thread.sleep(2000);
 		bp.selectmonthoptionPT();
 		Thread.sleep(2000);
@@ -130,7 +130,6 @@ public class CompanyTestcase01 extends BaseTest{
 		String s=up.getMessage();
 		Assert.assertEquals(s,"Company Document Was Successfully Uploaded");	
 	}
-	
 	@Test(priority=3)
 	public void veifyUpdatedBranch_SC_177C() throws Exception{
 		EditBranch ed=new EditBranch(driver);
@@ -139,7 +138,7 @@ public class CompanyTestcase01 extends BaseTest{
 		ed.clickBranchLink();
 		ed.clickEditBranchLink();
 		ed.enterBranchName("Chennai");
-		ed.enterReponsiblePersonName("Raju");
+		ed.enterReponsiblePersonName("Manu");
 		ed.enterBranchAddress("#25,CMBT,Chennai");
 		ed.clickUpdateBranchButton();
 		String s=ed.getMessage();
@@ -155,7 +154,7 @@ public class CompanyTestcase01 extends BaseTest{
 		db.clickEditlink();
 		db.clickPFDetailTab();
 		db.clickEditPFGroup();
-		db.editeffectivedate("01 January 2019"); 
+		db.editeffectivedate("Jan/2019"); 
 		Thread.sleep(2000);
 		db.updatepfdetail();
 		String s=db.getMessage();
@@ -192,7 +191,7 @@ public class CompanyTestcase01 extends BaseTest{
 		db.updatepTdetail();
 		String s=db.getMessage();
 		Assert.assertEquals(s, "PT detail successfully updated.");
-	} 
+	}
 	
 	@Test(priority=12)
 	public void verifyDeletedBranch_SC_181C() throws Exception{
@@ -233,7 +232,6 @@ public class CompanyTestcase01 extends BaseTest{
 		String f=db.getMessage();
 		Assert.assertEquals(f, "Company Document Was Successfully Deleted");
 	}
-	
 	@Test(priority=9)
 	public void verifyDeleteAssignedPFGroupInBranch_SC_424() throws Exception{
 		DeleteAssignedPFGroupinBranch db=new DeleteAssignedPFGroupinBranch(driver);
@@ -291,6 +289,6 @@ public class CompanyTestcase01 extends BaseTest{
 		db.clickondelete();
 		db.switchToPopUpAndAccept(driver);
 		String s=db.getMessage();
-		Assert.assertEquals(s,"PT details successfully deleted.");	
+		Assert.assertEquals(s,"PT details successfully deleted.");
 	}
 }
