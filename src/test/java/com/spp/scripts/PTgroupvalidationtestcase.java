@@ -7,7 +7,7 @@ import com.spp.common.BaseTest;
 import com.spp.pages.PTGroupValidation;
 
 public class PTgroupvalidationtestcase extends BaseTest {
-/*
+
 	@Test(priority=0)//not running default pt group slab not present
 	public void PTGroupValidationSC_1795() throws Exception{
 		PTGroupValidation pt=new PTGroupValidation(driver);
@@ -49,7 +49,7 @@ public class PTgroupvalidationtestcase extends BaseTest {
 		pt.clickCreatePT();
 		String s4=pt.getPTGroupDublicateMessage();
 		Assert.assertEquals(s4, "Name has already been taken");
-	}*/
+	}
 	@Test(priority=1)//not running default pt group slab not present
 	public void PTGrouprateValidationSC_1805() throws Exception{
 		PTGroupValidation pt=new PTGroupValidation(driver);

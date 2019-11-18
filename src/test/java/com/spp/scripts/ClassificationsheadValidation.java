@@ -9,7 +9,7 @@ import com.spp.pages.ClassificationHeadPage;
 public class ClassificationsheadValidation extends BaseTest {
 	
 	@Test(priority=0)
-	public void verifyCreatedClassification_SC_62() throws Exception{
+	public void verifyCreatedClassification_SC_1858() throws Exception{
 		ClassificationHeadPage cc=new ClassificationHeadPage(driver);
 		cc.clickMastserLink();
 		cc.selectClassifications();
