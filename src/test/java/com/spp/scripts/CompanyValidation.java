@@ -13,7 +13,7 @@ import junit.framework.Assert;
 public class CompanyValidation extends BaseTest{
 	
 	@Test(priority=0)
-	public void verifyEditCompany_SC_46C() throws Exception{  
+	public void verifyEditCompany_SC_1750() throws Exception{  
 		EditCompanydetailsValidation ed=new EditCompanydetailsValidation(driver);
 		Thread.sleep(5000);
 		ed.navigateMaster();
