@@ -70,7 +70,7 @@ public class SalaryHeadTestcase extends BaseTest {
  		sh.clickSalaryHeads();
  		sh.clickGenerateSampleTemplate();
  		sh.clickExcelTemplateUploadLink();
- 		sh.clickChooseFile("C:\\Users\\alfalabs\\Downloads\\SalaryHead.xlsx");  
+ 		sh.clickChooseFile("C:\\Users\\Alfalabs\\Downloads\\SalaryHead.xlsx");  
  		Thread.sleep(2000);
  		Thread.sleep(3000);
  		sh.clickUploadLink();
@@ -84,8 +84,9 @@ public class SalaryHeadTestcase extends BaseTest {
    		sh.switchToPopUpAndAccept(driver);
    		Thread.sleep(2000);
  		sh.clickDeductionTab();
- 		sh.deductionSalaryHeadDelete();          //to rerun this testcase delete previous data from salary head>earnings,deduction//	or change data in excel file. 
- 		sh.switchToPopUpAndAccept(driver);
+ 		Thread.sleep(2000);
+ 		//sh.deductionSalaryHeadDelete();//to rerun this testcase delete previous data from salary head>earnings,deduction//	or change data in excel file. 
+ 		//sh.switchToPopUpAndAccept(driver);
 	}
 	
 	@Test(priority=4)
@@ -160,5 +161,5 @@ public class SalaryHeadTestcase extends BaseTest {
    		Assert.assertEquals(c, "Yes");
    		sh.deductionSalaryHeadDelete();
    		sh.switchToPopUpAndAccept(driver);
-    }	
+    }
 }

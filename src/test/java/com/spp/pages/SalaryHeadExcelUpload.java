@@ -27,7 +27,7 @@ public class SalaryHeadExcelUpload extends BasePage{
 	WebElement SalaryHeadsLink;
 	@FindBy(xpath="//span[contains(text(),'Deduction')]")
 	WebElement DeductionTab;
-	@FindBy(xpath="//tbody/tr/td[contains(text(),'BasicHeadEarn')]/parent::tr/td[5]/a[2]")
+	@FindBy(xpath="//tbody/tr/td[contains(text(),'ABC')]/parent::tr/td[5]/a[2]")
 	WebElement DeleteUploadedEarningHead;
 	@FindBy(xpath="//tbody/tr/td[contains(text(),'BasicHeadDeduct')]/parent::tr/td[5]/a[2]")
 	WebElement DeleteUploadedDeductionHead;

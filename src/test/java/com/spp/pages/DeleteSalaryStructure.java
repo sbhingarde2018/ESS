@@ -11,8 +11,8 @@ public class DeleteSalaryStructure extends BasePage {
 	WebElement masterlink;
 	@FindBy(xpath="//a[text()='Salary Structure']")
 	WebElement salarystructurelink;
-	@FindBy(xpath="//*[@id=\"main\"]/div[4]/a[2]")
-	WebElement NextPage;
+	//@FindBy(xpath="//*[@id=\"main\"]/div[4]/a[2]")
+	//WebElement NextPage;
 	@FindBy(xpath="//*[@id='main']/div/table/tbody/tr/td[contains(text(),'SALARYSTRUCTURE')]/parent::tr/td[5]/a")
 	WebElement deleteicon;
 	@FindBy(xpath="//*[@id='main']/div/table/tbody/tr/td[contains(text(),'Clone')]/parent::tr/td[5]/a")
@@ -34,6 +34,12 @@ public class DeleteSalaryStructure extends BasePage {
 	WebElement structure;
 	@FindBy(xpath="//*[@id='main']/div[2]/strong")
 	WebElement SalaryGroupDeleted;
+	@FindBy(xpath="//a[@class='next_page']")
+	WebElement NextPage;
+	
+	public void navigateNextPage() throws Exception{
+		NextPage.click();
+	}
 	public DeleteSalaryStructure(WebDriver driver){
 		super(driver);
 		PageFactory.initElements(driver, this);

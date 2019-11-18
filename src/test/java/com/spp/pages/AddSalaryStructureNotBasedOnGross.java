@@ -23,8 +23,14 @@ public class AddSalaryStructureNotBasedOnGross extends BasePage{
 	WebElement successfullMessage;
 	@FindBy(xpath="//*[@id='main']/div/table/tbody//tr/td[contains(text(),'New Structure')]/parent::tr/td[5]/a")
 	WebElement DeleteButton;
+	@FindBy(xpath="//a[@class='next_page']")
+	WebElement NextPage;
 	
-
+	
+	public void navigateNextPage() throws Exception{
+		NextPage.click();
+	}
+	
 	public AddSalaryStructureNotBasedOnGross(WebDriver driver){
 		super(driver);
 		PageFactory.initElements(driver, this);

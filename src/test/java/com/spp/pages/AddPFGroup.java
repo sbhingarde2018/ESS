@@ -34,6 +34,20 @@ public class AddPFGroup extends BasePage{
 	WebElement pfratebutton;
 	@FindBy(xpath="//strong[text()='PF group rate successfully created.']")
 	WebElement successfullMessage;
+	@FindBy(xpath="//h3[contains(text(),'Listing PF Group')]")
+	WebElement VerifyListingPF;
+	@FindBy(xpath="//h3[contains(text(),'Add New PF Group')]")
+	WebElement VerifyAddNewPF;
+	@FindBy(xpath="//div[@id='pf_group_id-error']")
+	WebElement PFGroupError;
+	@FindBy(xpath="//div[@id='pf_group_pf_number-error']")
+	WebElement PFNumberError;
+	@FindBy(xpath="//div[@id='pf_group_address-error']")
+	WebElement PFAddressError;
+	@FindBy(xpath="//li[contains(text(),'Pf group has already been taken')]")
+	WebElement PFError1;
+	@FindBy(xpath="//li[contains(text(),'Pf number has already been taken')]")
+	WebElement PFError2;
 	
 	public AddPFGroup(WebDriver driver){
 		super(driver);
@@ -88,5 +102,26 @@ public class AddPFGroup extends BasePage{
 	}
 	public String getMessage(){
 		return successfullMessage.getText();
+	}
+	public String getVerifyListingPF(){
+		return VerifyListingPF.getText();
+	}
+	public String getVerifyAddNewPF(){
+		return VerifyAddNewPF.getText();
+	}
+	public String getPFGroupError(){
+		return PFGroupError.getText();
+	}
+	public String getPFNumberError(){
+		return PFNumberError.getText();
+	}
+	public String getPFAddressError(){
+		return PFAddressError.getText();
+	}
+	public String getPFError1(){
+		return PFError1.getText();
+	}
+	public String getPFError2(){
+		return PFError2.getText();
 	}
 }

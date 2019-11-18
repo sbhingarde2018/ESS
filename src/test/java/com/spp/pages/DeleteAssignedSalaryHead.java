@@ -31,6 +31,12 @@ public class DeleteAssignedSalaryHead extends BasePage {
 	WebElement EditAddGroup;
 	@FindBy(xpath="//*[@value=\"Update Salary Group Detail\"]")
 	WebElement UpdateGroup;
+	@FindBy(xpath="//a[@class='next_page']")
+	WebElement NextPage;
+	
+	public void navigateNextPage() throws Exception{
+		NextPage.click();
+	}
 	public DeleteAssignedSalaryHead(WebDriver driver){
 		super(driver);
 		PageFactory.initElements(driver, this);

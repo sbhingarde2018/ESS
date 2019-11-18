@@ -35,6 +35,8 @@ public class AssignSalaryHead extends BasePage{
 	WebElement createslarygroup;
 	@FindBy(xpath="//strong[text()='Salary structure detail successfully created']")
 	WebElement successfullMessage;
+	@FindBy(xpath="//a[@class='next_page']")
+	WebElement NextPage;
 
 	public AssignSalaryHead(WebDriver driver){
 		super(driver);
@@ -95,5 +97,8 @@ public class AssignSalaryHead extends BasePage{
 	
 	public String getMessage(){
 		return successfullMessage.getText();
+	}
+	public void navigateNextPage() throws Exception{
+		NextPage.click();
 	}
 }

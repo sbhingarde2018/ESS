@@ -21,7 +21,12 @@ public class EditSalaryStructure extends BasePage {
 	WebElement updatesalarystucturebutton;
 	@FindBy(xpath="//strong[text()='Salary group succesfully updated']")
 	WebElement successfullMessage;
+	@FindBy(xpath="//a[@class='next_page']")
+	WebElement NextPage;
 	
+	public void navigateNextPage() throws Exception{
+		NextPage.click();
+	}
 	public EditSalaryStructure(WebDriver driver){
 		super(driver);
 		PageFactory.initElements(driver, this);

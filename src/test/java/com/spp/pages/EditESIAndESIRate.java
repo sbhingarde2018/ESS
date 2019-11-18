@@ -16,7 +16,7 @@ public class EditESIAndESIRate extends BasePage{
 	WebElement esilink;
 	@FindBy(xpath="//span[contains(text(),'ESI Rate')]")
 	WebElement esiRate;
-	@FindBy(xpath="//tbody/tr/td[contains(text(),'ESI_ATest')]/parent::tr/td[4]/span[1]/a")
+	@FindBy(xpath="//tbody/tr/td[contains(text(),'ESI_ATest_2')]/parent::tr/td[4]/span[1]/a")
 	WebElement editESIicon;
 	@FindBy(xpath="//div[2]/table/tbody/tr/td[6]/a")
 	WebElement EditRate;

@@ -13,7 +13,7 @@ public class AddCloneSalaryStructure extends BasePage {
 	WebElement salarystructurelink;
 	@FindBy(xpath="//a[text()='Clone Salary Structure']")
 	WebElement clonestructure;
-	@FindBy(id="salary_group_salary_group_name")
+	@FindBy(xpath="//input[@id='salary_group_salary_group_name']")
 	WebElement groupname;
 	@FindBy(xpath="//select[@id='old_salary_structure']")
 	WebElement cloneofDropdown;

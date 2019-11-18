@@ -30,7 +30,13 @@ public class EditAssignedSalaryHead extends BasePage{
 	WebElement updatesalarygroupdetail;
 	@FindBy(xpath="//strong[text()='Salary structure detail succesfully updated']")
 	WebElement successfullMessage;
+	@FindBy(xpath="//a[@class='next_page']")
+	WebElement NextPage;
 	
+	
+	public void navigateNextPage() throws Exception{
+		NextPage.click();
+	}
 	public EditAssignedSalaryHead(WebDriver driver){
 		super(driver);
 		PageFactory.initElements(driver, this);

@@ -39,6 +39,7 @@ public class SalaryStructure extends BaseTest {
   		ss.clickCreateButton();
   		String s=ss.getMessage();
   		Assert.assertEquals(s, "Salary group successfully created");
+  		ss.navigateNextPage();
   		ss.clickDeleteButton();
 	}
 	@Test(priority=2)
@@ -47,6 +48,7 @@ public class SalaryStructure extends BaseTest {
 		Thread.sleep(5000);
 		es.navigateMaster();
 		es.clickSalaryStructureLink();
+		es.navigateNextPage();
 		es.clickEditSalaryStructureLink();
 		es.enterSalaryStructureName("SALARYSTRUCTURE");
 		es.clickBasedOnGross();
@@ -60,6 +62,7 @@ public class SalaryStructure extends BaseTest {
 		Thread.sleep(5000);
 		sh.navigateMaster();
 		sh.clickSalaryStructureLink();
+		sh.navigateNextPage();
 		sh.clickSettingsLink();
 		sh.clickAssignedHeadLink();
 		sh.selectSalaryHead("Basic");
@@ -95,6 +98,7 @@ public class SalaryStructure extends BaseTest {
   		EditAssignedSalaryHead ea=new EditAssignedSalaryHead(driver);
   		ea.navigateMaster();
   		ea.clickSalaryStructureLink();
+  		ea.navigateNextPage();
   		ea.clickSettingsLink();
   		ea.clickEditLink();
   		ea.selectCalculationType("Not Applicable");
@@ -111,6 +115,7 @@ public class SalaryStructure extends BaseTest {
 	 	DeleteAssignedSalaryHead da=new DeleteAssignedSalaryHead(driver);
 	 	da.navigateMaster();
 	 	da.clickSalaryStructureLink();
+	 	da.navigateNextPage();
 	 	da.clickSettingsLink();
 		//da.edittoaddgroup();
 	 	//da.updatesalarygroup();
@@ -137,16 +142,22 @@ public class SalaryStructure extends BaseTest {
   		Thread.sleep(5000);
   		ss.navigateMaster();
   		ss.clickSalaryStructureLink();
+  		ss.navigateNextPage();
   		ss.clickSettingsLink();
  		Thread.sleep(2000);
+ 		ss.clickEditIconLink();
+	 	ss.selectCalculationType("Not Applicable");
+	 	ss.clickUpdateSalaryGroupDetail();
+	 	Thread.sleep(2000);
  		ss.clickDeleteSalaryHead();
- 		Thread.sleep(2000);
   		String s=ss.getMessage();
   		Assert.assertEquals(s, "Salary structure detail successfully destroyed");
   		ss.navigateMaster();
   		ss.clickSalaryStructureLink();
+  		ss.navigateNextPage();
   		ss.clickDeleteSalaryStructure();
   		Thread.sleep(2000);
+  		ss.navigateNextPage();
   		ss.clickDeleteSalaryStructure1();
   		String d=ss.salarygroupdelete();
   		Assert.assertEquals(d, "Salary group succesfully deleted");
