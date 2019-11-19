@@ -14,7 +14,7 @@ public class CheckForInterestRateInAdvanceMaster extends BasePage {
 	WebElement masterLink;
 	@FindBy(xpath="//*[@id=\"menu\"]/li[3]/div/div[2]/ul/li[3]/a")
 	WebElement Advancemaster;
-	@FindBy(xpath="//td[contains(text(),'ADMaster543')]/parent::tr/td[3]/a")
+	@FindBy(xpath="//td[contains(text(),'ABCDAdvance')]/parent::tr/td[3]/a")
 	WebElement Edit;
 	@FindBy(xpath="//a[text()='Add New Advance Master']")
 	WebElement addAdvanceMaster;

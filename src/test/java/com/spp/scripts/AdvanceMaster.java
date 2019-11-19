@@ -95,7 +95,7 @@ public class AdvanceMaster extends BaseTest {
 		ld.ClickMaxAmount("5000");
 		ld.emirecovery("17");
 		ld.uncheckclubbedinsal();
-		ld.checkreducingbal();
+		//ld.checkreducingbal();
 		ld.clickCreateButton();
 		String d=ld.getMessage();
 		Assert.assertEquals(d, "Advance successfully created");
@@ -189,9 +189,9 @@ public class AdvanceMaster extends BaseTest {
 		ld.clickAdvanceDate("01 April 2013");
 		ld.clickRecoveryDate("May/2013");
 		ld.clickCreateAdvance();
-		Thread.sleep(3000);
-		//String e= ld.getAlertMessage1();
-		//Assert.assertEquals(e, "Amount can not be greater than 10000");
+		//Thread.sleep(3000);
+		String e= ld.getAlertMessage1();
+		Assert.assertEquals(e, "Amount can not be greater than 10000");
 	    ld.switchToPopUpAndAccept(driver);
 	    //ld.selectPreviouslistpage();
 		//Thread.sleep(5000);
@@ -233,7 +233,7 @@ public class AdvanceMaster extends BaseTest {
 		Assert.assertEquals(t, "Advance successfully created");
 		ld.deleteadvancedetails();
 		ld.switchToPopUpAndAccept(driver);
-	}  
+	}
 	
 	@Test(priority=10)
 	public void CheckMaximumAllowedInAM_SC_256() throws Exception {
@@ -262,8 +262,8 @@ public class AdvanceMaster extends BaseTest {
 		ld.clicklumpsum();
 		ld.clickInstallments("1");
 		Thread.sleep(1000);
-		ld.clickAdvanceDate("01 September 2019");
-		ld.clickRecoveryDate("Oct/2019");
+		ld.clickAdvanceDate("01 November 2019");
+		ld.clickRecoveryDate("Dec/2019");
 		ld.clickCreateAdvance();
 		Thread.sleep(1000);
 		String t=ld.getMessage();
@@ -277,8 +277,8 @@ public class AdvanceMaster extends BaseTest {
 		ld.clicklumpsum();
 		ld.clickInstallments("1");
 		Thread.sleep(1000);
-		ld.clickAdvanceDate("01 September 2019");
-		ld.clickRecoveryDate("Oct/2019");
+		ld.clickAdvanceDate("01 November 2019");
+		ld.clickRecoveryDate("Dec/2019");
 		ld.clickCreateAdvance();
 		Thread.sleep(2000);
 		ld.switchToPopUpAndAccept(driver);
@@ -287,7 +287,7 @@ public class AdvanceMaster extends BaseTest {
 		ld.deleteadvancedetails();
 		Thread.sleep(2000);
 		ld.switchToPopUpAndAccept(driver);
-	
+		Thread.sleep(2000);
 	}	
 	
 	@Test(priority=11)
@@ -299,7 +299,7 @@ public class AdvanceMaster extends BaseTest {
 		rb.enterAdvanceName("Advance_Master22");
 		rb.enterInterestRate("5");
 		rb.uncheckclubbedinsal();
-		rb.checkreducingbal();
+		//rb.checkreducingbal();
 		rb.clickCreateAdvanceButton();
 		String d= rb.getMessage();
 		Assert.assertEquals(d, "Advance successfully created");
@@ -336,7 +336,7 @@ public class AdvanceMaster extends BaseTest {
 		wrc.enterAdvanceName("Advance_Master24");
 		wrc.enterInterestRate("2");
 		wrc.enterMaximumAmount("10000");
-		wrc.clickReducingBalance();	
+		//wrc.clickReducingBalance();	
 		wrc.clickCreateAdvanceButton();
 		String d=wrc.getMessage();
 		Assert.assertEquals(d, "Advance successfully created");

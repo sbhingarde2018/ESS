@@ -9,7 +9,9 @@
   	<class name="com.spp.scripts.CompanyStatutories"/>-->
   	<class name="com.spp.scripts.SalaryStructure"/>
   	<class name="com.spp.scripts.SalaryHeadTestcase"/>
-  	<!--<class name="com.spp.scripts.StandingInstructionTestCase"/> 
+  	<class name="com.spp.scripts.AdvanceMaster"/>
+  	 <!--<class name="com.spp.scripts.LoanMaster"/>
+  	<class name="com.spp.scripts.StandingInstructionTestCase"/> 
   	<class name="com.spp.scripts.ReimbursementMaster"/>	
   	<class name="com.spp.scripts.Leave"/>-->
    	<!--<class name="com.spp.scripts.States"/>
@@ -22,8 +24,8 @@
     <class name="com.spp.scripts.CompanyStatutories"/> 
     
     <class name="com.spp.scripts.SalaryStructure"/>
-    <class name="com.spp.scripts.AdvanceMaster"/>
-  	<class name="com.spp.scripts.LoanMaster"/> 
+   
+  	
     <class name="com.spp.scripts.InsuranceMaster"/>
     <class name="com.spp.scripts.GroupInsuranceMaster"/>
     <class name="com.spp.scripts.PerodicIncentiveMaster"/>

@@ -13,7 +13,7 @@ public class CheckMaximumAllowedInAM extends BasePage {
 	WebElement masterLink;
 	@FindBy(xpath="//*[@id=\"menu\"]/li[3]/div/div[2]/ul/li[3]/a")
 	WebElement AdvanceMaster;
-	@FindBy(xpath="//td[contains(text(),'ADMaster543')]/parent::tr/td[3]/a")
+	@FindBy(xpath="//td[contains(text(),'ABCDAdvance12')]/parent::tr/td[3]/a")
 	WebElement Edit;
 	@FindBy(xpath="//*[@id='standing_instr_list']/div[2]/table/tbody/tr/td[contains(text(),'Advance_Master')]/parent::tr/td[1]")
 	WebElement SelectedAdvanceMaster;
@@ -31,7 +31,7 @@ public class CheckMaximumAllowedInAM extends BasePage {
 	WebElement AddEmployee;
 	@FindBy(xpath="//form[@id='bf_form']//button[contains(text(),'LOAD')]")
 	WebElement Load;
-	@FindBy(xpath="//tbody/tr[2]/td[contains(text(),'Raj')]/parent::tr/td[6]/a")
+	@FindBy(xpath="//tbody/tr[1]/td[6]/a")
 	WebElement ViewLink;
 	@FindBy(xpath="//*[@id='standing_detail_list']/div[1]/span/a")
 	WebElement AddNewAdvanceLink;
@@ -51,7 +51,7 @@ public class CheckMaximumAllowedInAM extends BasePage {
 	WebElement CreateAdvance;
 	@FindBy(xpath="//*[@id='main']/div[2]/strong")
 	WebElement SuccessfulMessage;
-	@FindBy(xpath="//a[contains(text(),'Raj(ref1003)')]")
+	@FindBy(xpath="//a[contains(text(),'Donald(1234)')]")
 	WebElement Previouslistpage;
 	@FindBy(xpath="//*[@id='standing_detail_list']/div[2]/table/tbody/tr[1]/td[8]/a")
 	WebElement deleteadvancedetails;
