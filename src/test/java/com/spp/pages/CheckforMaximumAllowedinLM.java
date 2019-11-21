@@ -15,7 +15,7 @@ public class CheckforMaximumAllowedinLM extends BasePage{
 	WebElement SelectLoanMaster;
 	@FindBy(xpath="//td[contains(text(),'Default')]/parent::tr/td[3]/a")
 	WebElement ClickonEdit;
-	@FindBy(id="standing_instruction_master_max_allowed")
+	@FindBy(xpath="//input[@id='standing_instruction_master_max_allowed'] ")
 	WebElement EnterMaxAllowed;
 	@FindBy(xpath="//*[@id=\"standing_instruction_master_form\"]/div[8]/input")
 	WebElement UpdateLoanMaster;
@@ -37,7 +37,7 @@ public class CheckforMaximumAllowedinLM extends BasePage{
 	WebElement EnterLoanName;
 	@FindBy(id="sal_date")
 	WebElement EnterLoanDate;
-	@FindBy(id="standing_instruction_detail_financial_institution_id")
+	@FindBy(xpath="//select[@id='standing_instruction_detail_financial_institution_id']")
 	WebElement EnterInstitutionName;
 	@FindBy(id="standing_instruction_detail_loan_account_no")
 	WebElement EnterLoanAccNo;
@@ -57,6 +57,9 @@ public class CheckforMaximumAllowedinLM extends BasePage{
 	WebElement DeleteFinancialInstitution;
 	@FindBy(xpath="//a[text()='Financial Institution (Bank)']")
 	WebElement financialInstitution;
+	@FindBy(xpath="//input[@id='standing_instruction_master_interest_rate']")
+	WebElement EnterInterestRate;
+	
 	public CheckforMaximumAllowedinLM(WebDriver driver) {
 		super(driver);
 		PageFactory.initElements(driver, this);
@@ -144,6 +147,10 @@ public class CheckforMaximumAllowedinLM extends BasePage{
 		}
 		public void selectFinancialInst() throws Exception{
 			financialInstitution.click();
+		}
+		public void enterinterestrate(String value) throws Exception{
+			EnterInterestRate.clear();
+			EnterInterestRate.sendKeys(value);
 		}
 }
 

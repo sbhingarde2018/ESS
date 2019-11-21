@@ -16,7 +16,7 @@ public class CheckLMcanbecreatedwithoutReducingBal extends BasePage{
 	WebElement AddNewLoanMaster;
 	@FindBy(id="standing_instruction_master_si_name")
 	WebElement EnterLoanName;
-	@FindBy(id="standing_instruction_master_interest_rate")
+	@FindBy(xpath="//input[@id='standing_instruction_master_interest_rate']")
 	WebElement EnterInterestRate;
 	@FindBy(id="standing_instruction_master_clubbed_in_salary_head")
 	WebElement UncheckClubbedInSalary;

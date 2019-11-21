@@ -16,19 +16,19 @@ public class CheckLMcanbecreatedwithClubbSalandRedBal extends BasePage{
 	WebElement AddNewLoanMaster;
 	@FindBy(id="standing_instruction_master_si_name")
 	WebElement EnterLoanName;
-	@FindBy(id="standing_instruction_master_interest_rate")
+	@FindBy(xpath="//input[@id='standing_instruction_master_interest_rate']")
 	WebElement EnterInterestRate;
-	@FindBy(id="standing_instruction_master_clubbed_in_salary_head")
+	@FindBy(xpath="//input[@id='standing_instruction_master_clubbed_in_salary_head']")
 	WebElement UncheckClubbedInSalary;
 	@FindBy(id="standing_instruction_master_reducing_balance")
 	WebElement CheckReducingBal;
-	@FindBy(id="standing_instruction_master_max_amount")
+	@FindBy(xpath="//input[@id='standing_instruction_master_max_amount']")
 	WebElement EnterMaxAmount;
-	@FindBy(id="standing_instruction_master_max_allowed")
+	@FindBy(xpath="//input[@id='standing_instruction_master_max_allowed']")
 	WebElement EnterMaxAllowed;
-	@FindBy(id="standing_instruction_master_emi_recovery")
+	@FindBy(xpath="//input[@id='standing_instruction_master_emi_recovery']")
 	WebElement EnterEMIRecovery;
-	@FindBy(xpath="//*[@id=\"standing_instruction_master_form\"]/div[8]/input")
+	@FindBy(xpath="//input[@name='commit']")
 	WebElement CreateLoanMaster;
 	@FindBy(xpath="//*[@id=\"main\"]/div[2]/strong") 
 	WebElement successfullMessage;

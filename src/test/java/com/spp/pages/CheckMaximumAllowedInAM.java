@@ -13,7 +13,7 @@ public class CheckMaximumAllowedInAM extends BasePage {
 	WebElement masterLink;
 	@FindBy(xpath="//*[@id=\"menu\"]/li[3]/div/div[2]/ul/li[3]/a")
 	WebElement AdvanceMaster;
-	@FindBy(xpath="//td[contains(text(),'ABCDAdvance12')]/parent::tr/td[3]/a")
+	@FindBy(xpath="//td[contains(text(),'ABCDAdvance')]/parent::tr/td[3]/a")
 	WebElement Edit;
 	@FindBy(xpath="//*[@id='standing_instr_list']/div[2]/table/tbody/tr/td[contains(text(),'Advance_Master')]/parent::tr/td[1]")
 	WebElement SelectedAdvanceMaster;

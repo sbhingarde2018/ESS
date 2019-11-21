@@ -37,32 +37,32 @@ public class LoanMaster extends BaseTest{
 		lm.clickDeleteButton();
 		lm.switchToPopUpAndAccept(driver);
 	}
-	
 	@Test(priority=1)
 	public void CreateLoanMasterwithClubbedInSalary_SC_11() throws Exception{
 		CreateLoanMasterwithClubbedInSalary cs=new CreateLoanMasterwithClubbedInSalary(driver);
 		cs.clickonMaster();
 		cs.selectloanmaster();
+		Thread.sleep(2000);
 		cs.addnewloanmaster();
+		Thread.sleep(2000);
 		cs.enterloanName("LoanMasterCS");
 		Thread.sleep(2000);
 		cs.createloanmaster();
 		String d=cs.getMessage();
 		Assert.assertEquals(d, "Loan successfully created");
 	}
-	
 	@Test(priority=2)
 	public void CheckLoanMastercanbeEdited_SC_12() throws Exception{
 		CheckLoanMastercanbeEdited me=new CheckLoanMastercanbeEdited(driver);
 		me.clickonMaster();
 		me.selectloanmaster();
+		Thread.sleep(2000);
 		me.clickonedit();
 		me.editloanmastername("LoanMaster1");
 		me.updateloanmaster();
 		String d=me.getMessage();
 		Assert.assertEquals(d, "Loan successfully updated");
 	}
-	
 	@Test(priority=3)
 	public void CheckLoanMastercanbeDeleted_SC_14() throws Exception{
 		CheckLoanMastercanbeDeleted md=new CheckLoanMastercanbeDeleted(driver);
@@ -79,85 +79,12 @@ public class LoanMaster extends BaseTest{
 		String d=md.getMessage();
 		Assert.assertEquals(d, "Loan successfully deleted");
 	}
-	
 	@Test(priority=4)
-	public void CheckLMcanbecreatedwithReducingBal_SC_435() throws Exception {
-		CheckLMcanbecreatedwithReducingBal lm=new CheckLMcanbecreatedwithReducingBal(driver);
-		lm.clickonMaster();
-		lm.selectloanmaster();
-		lm.addnewloanmaster();
-		lm.enterloanName("LoanMasterRB");
-		lm.enterinterestrate("3");
-		Thread.sleep(2000);
-		lm.uncheckclubbedInsalary();
-		lm.checkreducingbal();
-		lm.createloanmaster();
-		String d=lm.getMessage();
-		Assert.assertEquals(d, "Loan successfully created");	
-		Thread.sleep(1000);
-		lm.clickDeleteButton();
-		lm.switchToPopUpAndAccept(driver);
-	}
-	
-	@Test(priority=5)
-	public void CheckLMcanbecreatedwithoutReducingBal_SC_436() throws Exception {
-		CheckLMcanbecreatedwithoutReducingBal rd=new CheckLMcanbecreatedwithoutReducingBal(driver);
-		rd.clickonMaster();
-		rd.selectloanmaster();
-		rd.addnewloanmaster();
-		rd.enterloanName("LoanMasterWRB");
-		rd.enterinterestrate("3");
-		rd.createloanmaster();
-		String d=rd.getMessage();
-		Assert.assertEquals(d, "Loan successfully created");	
-		Thread.sleep(1000);
-		rd.clickDeleteButton();
-		rd.switchToPopUpAndAccept(driver);
-	}
-	
-	@Test(priority=6)
-	public void CheckLMcanbecreatedwithClubbSalandRedBal_SC_437() throws Exception {
-		CheckLMcanbecreatedwithClubbSalandRedBal wcr=new CheckLMcanbecreatedwithClubbSalandRedBal(driver);
-		wcr.clickonMaster();
-		wcr.selectloanmaster();
-		wcr.addnewloanmaster();
-		wcr.enterloanName("LoanMasterCSRB");
-		Thread.sleep(1000);
-		wcr.enterinterestrate("3");
-		wcr.checkreducingbal();
-		wcr.createloanmaster();
-		Thread.sleep(2000);
-		String d=wcr.getMessage();
-		Assert.assertEquals(d, "Loan successfully created");	
-		Thread.sleep(1000);
-		wcr.clickDeleteButton();
-		wcr.switchToPopUpAndAccept(driver);
-	}
-	
-	@Test(priority=7)
-	public void CheckLMcanbecreatedwithoutClubbSalandRedBal_SC_438() throws Exception {
-		CheckLMcanbecreatedwithoutClubbSalandRedBal ocr=new CheckLMcanbecreatedwithoutClubbSalandRedBal(driver);
-		ocr.clickonMaster();
-		ocr.selectloanmaster();
-		ocr.addnewloanmaster();
-		ocr.enterloanName("LoanMasterWCSRB");
-		Thread.sleep(2000);
-		ocr.enterinterestrate("3");
-		ocr.uncheckclubbedInsalary();
-		ocr.createloanmaster();
-		Thread.sleep(2000);
-		String d=ocr.getMessage();
-		Assert.assertEquals(d, "Loan successfully created");	
-		Thread.sleep(1000);
-		ocr.clickDeleteButton();
-		ocr.switchToPopUpAndAccept(driver);
-	}
-	
-	@Test(priority=8)
 	public void CheckforMaximumAmount_SC_259() throws Exception{
 		CheckforMaximumAmountInLM ma=new CheckforMaximumAmountInLM(driver);
 		ma.clickonMaster();
 		ma.selectloanmaster();
+		Thread.sleep(2000);
 		ma.clickonedit();
 		ma.entermaxamount("10000");
 		Thread.sleep(2000);
@@ -181,12 +108,12 @@ public class LoanMaster extends BaseTest{
 		Thread.sleep(3000);
 		ma.switchToPopUpAndAccept(driver);
 	}
-	
-	@Test(priority=9)
+	@Test(priority=5)
 	public void CheckforMaxInstallmentinLM_SC_260() throws Exception{
 		CheckforMaxInstallmentinLM mi=new CheckforMaxInstallmentinLM(driver);
 		mi.clickonMaster();
 		mi.selectloanmaster();
+		Thread.sleep(2000);
 		mi.clickonedit();
 		mi.enteremirecovery("17");
 		Thread.sleep(2000);
@@ -208,8 +135,7 @@ public class LoanMaster extends BaseTest{
 		mi.selectloanname("Default");
 		Thread.sleep(4000);
 	}
-	
-	@Test(priority=11)
+	@Test(priority=6)
 	public void CheckforInterestRateinLM_SC_257() throws Exception{
 		CheckforInterestRateinLM ir=new CheckforInterestRateinLM(driver);
 		ir.clickonMaster();
@@ -237,15 +163,14 @@ public class LoanMaster extends BaseTest{
 		ir.enterloanamount("3000");
 		Thread.sleep(5000);
 		}
-	
-	@Test(priority=10)
+	@Test(priority=7)
 	public void CheckforMaximumAllowedinLM_SC_261() throws Exception{
 		CheckforMaximumAllowedinLM ma=new CheckforMaximumAllowedinLM(driver);
 		ma.clickonMaster();
 		ma.selectloanmaster();
 		ma.clickonedit();
 		Thread.sleep(2000);
-		ma.entermaxallowed("1");  
+		ma.entermaxallowed("1");
 		Thread.sleep(2000);
 		ma.updateloanmaster();
 		String d=ma.getMessage();
@@ -266,7 +191,7 @@ public class LoanMaster extends BaseTest{
 		Thread.sleep(3000);
 		ma.enterloandate("01 September 2019");
 		Thread.sleep(3000);
-		ma.enterinstitutionname("HDFC Bank-FORT MUMBAI");
+		ma.enterinstitutionname("AxisBank-abcbranch");
 		Thread.sleep(2000);
 		ma.enterloanaccno("122345");
 		ma.enterloanamount("2000");
@@ -280,7 +205,7 @@ public class LoanMaster extends BaseTest{
 		ma.enterloanname("Default");
 		ma.enterloandate("01 September 2019");
 		Thread.sleep(3000);
-		ma.enterinstitutionname("HDFC Bank-FORT MUMBAI");
+		ma.enterinstitutionname("AxisBank-abcbranch");
 		Thread.sleep(2000);
 		ma.enterloanaccno("122345890");
 		ma.enterloanamount("10000");
@@ -303,4 +228,77 @@ public class LoanMaster extends BaseTest{
 		ma.clickdelete();
 		ma.switchToPopUpAndAccept(driver);	
 	}
+	@Test(priority=8)
+	public void CheckLMcanbecreatedwithReducingBal_SC_435() throws Exception {
+		CheckLMcanbecreatedwithReducingBal lm=new CheckLMcanbecreatedwithReducingBal(driver);
+		lm.clickonMaster();
+		lm.selectloanmaster();
+		Thread.sleep(2000);
+		lm.addnewloanmaster();
+		lm.enterloanName("LoanMasterRB");
+		lm.enterinterestrate("3");
+		Thread.sleep(2000);
+		lm.uncheckclubbedInsalary();
+		//lm.checkreducingbal();
+		lm.createloanmaster();
+		String d=lm.getMessage();
+		Assert.assertEquals(d, "Loan successfully created");	
+		Thread.sleep(1000);
+		lm.clickDeleteButton();
+		lm.switchToPopUpAndAccept(driver);
+	}
+	@Test(priority=9)
+	public void CheckLMcanbecreatedwithoutReducingBal_SC_436() throws Exception {
+		CheckLMcanbecreatedwithoutReducingBal rd=new CheckLMcanbecreatedwithoutReducingBal(driver);
+		rd.clickonMaster();
+		rd.selectloanmaster();
+		rd.addnewloanmaster();
+		rd.enterloanName("LoanMasterWRB");
+		rd.enterinterestrate("3");
+		rd.createloanmaster();
+		String d=rd.getMessage();
+		Assert.assertEquals(d, "Loan successfully created");
+		Thread.sleep(1000);
+		rd.clickDeleteButton();
+		rd.switchToPopUpAndAccept(driver);
+	}
+	@Test(priority=10)
+	public void CheckLMcanbecreatedwithClubbSalandRedBal_SC_437() throws Exception {
+		CheckLMcanbecreatedwithClubbSalandRedBal wcr=new CheckLMcanbecreatedwithClubbSalandRedBal(driver);
+		wcr.clickonMaster();
+		wcr.selectloanmaster();
+		Thread.sleep(2000);
+		wcr.addnewloanmaster();
+		wcr.enterloanName("LoanMasterCSRB");
+		Thread.sleep(1000);
+		wcr.enterinterestrate("3");
+		//wcr.checkreducingbal();
+		wcr.createloanmaster();
+		Thread.sleep(2000);
+		String d=wcr.getMessage();
+		Assert.assertEquals(d, "Loan successfully created");	
+		Thread.sleep(3000);
+		wcr.clickDeleteButton();
+		wcr.switchToPopUpAndAccept(driver);
+		Thread.sleep(2000);
+	}
+	@Test(priority=11)
+	public void CheckLMcanbecreatedwithoutClubbSalandRedBal_SC_438() throws Exception {
+		CheckLMcanbecreatedwithoutClubbSalandRedBal ocr=new CheckLMcanbecreatedwithoutClubbSalandRedBal(driver);
+		ocr.clickonMaster();
+		ocr.selectloanmaster();
+		ocr.addnewloanmaster();
+		ocr.enterloanName("LoanMasterWCSRB");
+		Thread.sleep(2000);
+		ocr.enterinterestrate("3");
+		ocr.uncheckclubbedInsalary();
+		ocr.createloanmaster();
+		Thread.sleep(2000);
+		String d=ocr.getMessage();
+		Assert.assertEquals(d, "Loan successfully created");	
+		Thread.sleep(1000);
+		ocr.clickDeleteButton();
+		ocr.switchToPopUpAndAccept(driver);
+	}
+
 }

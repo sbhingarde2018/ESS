@@ -38,7 +38,7 @@ public class CheckforMaximumAmountInLM extends BasePage{
 	WebElement AddNewLoanMaster;
 	@FindBy(xpath="//td[contains(text(),'Default')]/parent::tr/td[3]/a")
 	WebElement ClickonEdit;
-	@FindBy(id="standing_instruction_master_max_amount")
+	@FindBy(xpath="//input[@id='standing_instruction_master_max_amount']")
 	WebElement EnterMaxAmount;
 	@FindBy(xpath="//*[@id=\"standing_instruction_master_form\"]/div[8]/input")
 	WebElement UpdateLoanMaster;

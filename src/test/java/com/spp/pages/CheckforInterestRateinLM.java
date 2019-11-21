@@ -15,7 +15,7 @@ public class CheckforInterestRateinLM extends BasePage{
 	WebElement SelectLoanMaster;
 	@FindBy(xpath="//td[contains(text(),'Default')]/parent::tr/td[3]/a")
 	WebElement ClickonEdit;
-	@FindBy(id="standing_instruction_master_interest_rate")
+	@FindBy(xpath="//input[@id='standing_instruction_master_interest_rate']")
 	WebElement EnterInterestRate;
 	@FindBy(xpath="//*[@id=\"standing_instruction_master_form\"]/div[8]/input")
 	WebElement UpdateLoanMaster;

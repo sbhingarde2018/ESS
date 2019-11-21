@@ -23,7 +23,7 @@ public class CheckforMaxInstallmentinLM extends BasePage{
 	WebElement ClickonEdit;
 	@FindBy(xpath="//*[@class='btn2 btn-bglightblue']")
 	WebElement CreateLoanmaster;
-	@FindBy(id="standing_instruction_master_emi_recovery")
+	@FindBy(xpath="//input[@id='standing_instruction_master_emi_recovery']")
 	WebElement EnterEMIRecovery;
 	@FindBy(xpath="//*[@id=\"standing_instruction_master_form\"]/div[8]/input")
 	WebElement UpdateLoanMaster;
