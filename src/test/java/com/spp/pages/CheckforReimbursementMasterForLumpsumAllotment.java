@@ -36,7 +36,7 @@ public class CheckforReimbursementMasterForLumpsumAllotment extends BasePage {
 	WebElement AllotButton;
 
 	//@FindBy(xpath="//*[@id=\"new_reimbursement_allotment\"]/div[2]/fieldset/div[1]/div[1]/div")
-	@FindBy(id="reimbursement_master_id")
+	@FindBy(xpath="//select[@id='reimbursement_master_id']")
 	WebElement Name;
 //	@FindBy(id="allotment_link")
 //	WebElement AmountSideButton;

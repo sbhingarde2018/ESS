@@ -31,7 +31,7 @@ public class CreateReimbursementMasterForTypeAllotment extends BasePage {
 	WebElement createReimbursementMaster;
 	@FindBy(xpath="//strong[text()='Reimbursement Master is successfully created.']")
 	WebElement successfullMassege;
-	@FindBy(xpath="//*[@class='action-delete']")
+	@FindBy(xpath="//tbody/tr/td[contains(text(),'Stationary')]/parent::tr/td[5]/a")
 	WebElement DeleteButton;
 	@FindBy(id = "reimbursement_master_tds_ref_option_id")
 	WebElement TDSRef;
