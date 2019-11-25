@@ -15,15 +15,15 @@ public class CreateHolidayUnderBranch extends BasePage {
 	WebElement holidayList;
 	@FindBy(xpath="//tbody/tr/td[contains(text(),'Master List')]/parent::tr/td[3]/a")
 	WebElement viewList;
-	@FindBy(xpath="//a[text()='Add New Holiday Master")	
+	@FindBy(xpath="//a[text()='Add New Holiday Master']")
 	WebElement addHolidayLink;
 	@FindBy(id="hdd")
 	WebElement date;
-	@FindBy(id="holiday_description")
+	@FindBy(id="holiday_master_list_description")
 	WebElement description;
 	@FindBy(id="holiday_national_holiday")
 	WebElement nationalHoliday;
-	@FindBy(xpath="//*[@id=\"new_holiday\"]/fieldset/div[4]/div/input")
+	@FindBy(xpath="//input[@value='Create Holiday']")
 	WebElement createButton;
 	@FindBy(xpath="//*[@id=\"main\"]/div[3]/strong")
 	WebElement successfullyMessage;

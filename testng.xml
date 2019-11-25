@@ -11,13 +11,17 @@
   	<class name="com.spp.scripts.SalaryHeadTestcase"/>
   	<class name="com.spp.scripts.AdvanceMaster"/>
   	<class name="com.spp.scripts.LoanMaster"/>
-  	<class name="com.spp.scripts.FinancialInstitutionBankValidation"/>-->
+  	<class name="com.spp.scripts.FinancialInstitutionBankValidation"/>
   	<class name="com.spp.scripts.InsuranceMaster"/>
   	<class name="com.spp.scripts.GroupInsuranceMaster"/>
   	<class name="com.spp.scripts.PerodicIncentiveMaster"/>
-  	 <class name="com.spp.scripts.ReimbursementMaster"/>
+  	 <class name="com.spp.scripts.ReimbursementMaster"/>-->
+  	 <class name="com.spp.scripts.LeaveDefinitions"/>
+  	 <class name="com.spp.scripts.HolidayList"/>
+  	 <class name="com.spp.scripts.MasterWeeklyHoliday"/>
   	 
-  <!--	<class name="com.spp.scripts.StandingInstructionTestCase"/> 
+  	 <!-- <class name="com.spp.scripts.AttendanceConfigurations"/>
+ 	<class name="com.spp.scripts.StandingInstructionTestCase"/> 
   	
   	<class name="com.spp.scripts.Leave"/>-->
    	<!--<class name="com.spp.scripts.States"/>
@@ -35,7 +39,7 @@
     
     
     
-	<class name="com.spp.scripts.MasterWeeklyHoliday"/>
+	
 	
 	
 	
@@ -99,7 +103,7 @@
  	
  	<class name="com.spp.scripts.ApplyLeave"/>
     <class name="com.spp.scripts.Arrears"/>
-    <class name="com.spp.scripts.AttendanceConfigurations"/>
+    
 	<class name="com.spp.scripts.AttendanceIntegration"/>
  	<class name="com.spp.scripts.Bonus"/>
  	
@@ -122,13 +126,13 @@
     
     <class name="com.spp.scripts.GroupInsuranceDetail"/>
    
-    <class name="com.spp.scripts.HolidayList"/>
+    
     
 	<class name="com.spp.scripts.InsuranceDetail"/>
    
 	
 	
-	<class name="com.spp.scripts.LeaveDefinitions"/>
+	
 	<class name="com.spp.scripts.LeaveEncashment"/>
 
 	<class name="com.spp.scripts.LoanDetail"/>

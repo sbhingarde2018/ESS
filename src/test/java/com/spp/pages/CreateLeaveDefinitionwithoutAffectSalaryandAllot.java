@@ -22,7 +22,7 @@ public class CreateLeaveDefinitionwithoutAffectSalaryandAllot extends BasePage{
 	WebElement CreateLeave;
 	@FindBy(xpath="//strong[text()='Leave definition successfully created.']")
 	WebElement message;
-	@FindBy(xpath="//div[2]/table/tbody/tr/td[contains(text(),'Casual Leave25')]/parent::tr/td[7]/a")
+	@FindBy(xpath="//div[2]/table/tbody/tr/td[contains(text(),'Casual Leave2')]/parent::tr/td[7]/a")
 	WebElement ClickDelete;
 	@FindBy(id="leave_definition_allot")
 	WebElement UncheckAllot;

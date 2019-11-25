@@ -73,8 +73,8 @@ public class LeaveDefinitions extends BaseTest {
 		CreateLeaveDefinitionwithoutAffectSalaryandAllot ld=new CreateLeaveDefinitionwithoutAffectSalaryandAllot(driver);
 		ld.clickonmaster();
 		ld.clickleavedefinitions();
-		ld.enterleavename("Casual Leave");
-		ld.entershortname("CL");
+		ld.enterleavename("Casual Leave2");
+		ld.entershortname("CL2");
 		ld.uncheckallot();
 		ld.createleave();
 		String s=ld.getTextMessage();
