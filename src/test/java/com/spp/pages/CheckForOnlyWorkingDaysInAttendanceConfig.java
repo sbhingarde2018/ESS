@@ -12,7 +12,7 @@ public class CheckForOnlyWorkingDaysInAttendanceConfig extends BasePage{
 	WebElement masterLink;
 	@FindBy(xpath="//a[text()='Attendance Configuration']")
 	WebElement attendanceConfiguration;
-	@FindBy(xpath="//div/table/tbody/tr/td[contains(text(),'Dehradun')]/parent::tr/td[5]/a")
+	@FindBy(xpath="//tr[2]/td[5]/a[@class='action-edit']")
 	WebElement editIcon;
 	@FindBy(id="attendance_configuration_salary_calendar_days_only_working_days")
     WebElement salaryCalender;
@@ -30,7 +30,7 @@ public class CheckForOnlyWorkingDaysInAttendanceConfig extends BasePage{
 	WebElement SalaryStructure;
 	@FindBy(id="get_salary")
 	WebElement GetValues;
-	@FindBy(xpath="//*[@id=\"bf_form\"]/div/button[contains(text(),'LOAD')]")
+	@FindBy(xpath="//form[@id='bf_form']//button[contains(text(),'LOAD')]")
 	WebElement Load;
 	@FindBy(xpath="//*[@id=\"show_message\"]/div/strong")
 	WebElement SuccessfulMessage;
@@ -40,12 +40,17 @@ public class CheckForOnlyWorkingDaysInAttendanceConfig extends BasePage{
 	WebElement Employee;
 	@FindBy(xpath="//*[@id=\"salary_editor_form\"]/table/tbody/tr[2]/td/div/div/div[1]/input")
 	WebElement ProcessSalaryButton;
-	@FindBy(xpath="//*[@id=\"salary_review\"]/tbody/tr[1]/td[7]/a")
+	@FindBy(xpath="//*[@id=\"salary_review\"]/tbody/tr/td[2][contains(text(),\"Mar/2018\")]/parent::tr/td[3][normalize-space()=\"Structure\"]/parent::tr/td[7]/a")
 	WebElement Edit;
 	@FindBy(xpath="//*[@id=\"salary_detail\"]/tbody/tr/td[3]")
 	WebElement GetPayDays;
 	@FindBy(xpath="//*[@id='main']/div[2]/nav/ul/li[2]/a/span")
 	WebElement DetailView;
+	@FindBy(xpath="//label[contains(text(),'Search:')]//input")
+	WebElement Search;
+	@FindBy(xpath=" //select[@name='salary_review_length']")
+	WebElement ShowTableLength;
+	
 	public CheckForOnlyWorkingDaysInAttendanceConfig(WebDriver driver) {
 		super(driver);
 		PageFactory.initElements(driver, this);
@@ -119,6 +124,12 @@ public class CheckForOnlyWorkingDaysInAttendanceConfig extends BasePage{
 	}
 	public String getPayDays() {
 		return GetPayDays.getText();
+	}
+	public void EnterSearch (String value) {
+		Search.sendKeys(value);
+	}
+	public void SelectShowTableLength(String value) {
+		dropDownSelect(ShowTableLength, value);
 	}
 
 }

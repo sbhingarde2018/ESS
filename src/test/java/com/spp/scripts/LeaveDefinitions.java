@@ -13,7 +13,7 @@ import com.spp.pages.UpdateLeaveDefinition;
 public class LeaveDefinitions extends BaseTest {
 
 	@Test(priority=0)
-	public void verifyAddLeaveDefinitions_SC_33(){
+	public void verifyAddLeaveDefinitions_SC_33() throws Exception{
 		CreateNewLeaveDefinitionofTypeNonLeave ld=new CreateNewLeaveDefinitionofTypeNonLeave(driver);
 		ld.clickonmaster();
 		ld.clickleavedefinitions();
@@ -23,9 +23,12 @@ public class LeaveDefinitions extends BaseTest {
 		ld.createleave();
 		String s=ld.getTextMessage();
 		Assert.assertEquals(s, "Leave definition successfully created.");
+		Thread.sleep(3000);
 		ld.clickonmaster();
 		ld.clickleavedefinitions();
+		Thread.sleep(3000);
 		ld.clickdelete();
+		Thread.sleep(3000);
 	}
 	
 	@Test(priority=1)
@@ -39,6 +42,7 @@ public class LeaveDefinitions extends BaseTest {
 		ld.createleave();
 		String s=ld.getTextMessage();
 		Assert.assertEquals(s, "Leave definition successfully created.");
+		Thread.sleep(3000);
 	}
 
 	@Test(priority=2)
@@ -64,6 +68,7 @@ public class LeaveDefinitions extends BaseTest {
 		Thread.sleep(5000);
 		ld.clickMastserLink();
 		ld.selectLeaveDefinitions();
+		Thread.sleep(3000);
 		ld.clickDeleteLeaveDefinitions();
 		String s=ld.getmessage();
 		Assert.assertEquals(s, "Leave definition successfully deleted.");
@@ -79,8 +84,11 @@ public class LeaveDefinitions extends BaseTest {
 		ld.createleave();
 		String s=ld.getTextMessage();
 		Assert.assertEquals(s, "Leave definition successfully created.");
+		Thread.sleep(3000);
 		ld.clickonmaster();
 		ld.clickleavedefinitions();
+		Thread.sleep(3000);
 		ld.clickdelete();
+		Thread.sleep(3000);
 	}
 }

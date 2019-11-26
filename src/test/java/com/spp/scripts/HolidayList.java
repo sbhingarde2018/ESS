@@ -16,9 +16,9 @@ import com.spp.pages.UpdateHolidayList;
 
 public class HolidayList extends BaseTest {
 	
-	private static final String SheetName = null;
-	private static String excelFile  = "C:\\Users\\Administrator\\Downloads\\HolidayMaster.xlsx";
-	private static ExcelUtil newEx = null;
+	//private static final String SheetName = null;
+	//private static String excelFile  = "C:\\Users\\Administrator\\Downloads\\HolidayMaster.xlsx";
+	//private static ExcelUtil newEx = null;
 
 	@Test(priority=0)
 	public void verifyCreatedHoliday_SC_40() throws Exception {
