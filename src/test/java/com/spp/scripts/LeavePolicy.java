@@ -1870,7 +1870,7 @@ public class LeavePolicy extends BaseTest {
 	 	lb.clickAutoAllotTab();
 	 	lb.clickLeaveAllotmentBox();
 	 	lb.clickUpdateButton();  
-}*/
+}
 	
 	
 	

@@ -12,7 +12,7 @@ public class DeleteAttendanceConfig extends BasePage {
 	WebElement masterLink;
 	@FindBy(xpath="//a[text()='Attendance Configuration']")
 	WebElement attendanceConfiguration;
-	@FindBy(xpath="//div[4]/table/tbody[2]/tr/td[contains(text(),'Hyderabad')]/parent::tr/td[6]/a")
+	@FindBy(xpath="//*[@id='main']/div/table/tbody/tr/td[contains(text(),'Hyderabad')]/parent::tr/td[6]/a")
 	WebElement deleteButton;
 	@FindBy(xpath="//div[text()='Attendance Configuration Successfully deleted']")
 	WebElement successfullMessage;
@@ -32,6 +32,7 @@ public class DeleteAttendanceConfig extends BasePage {
 	
 	public void clickDeleteButton(){
 		deleteButton.click();
+		switchToPopUpAndAccept(driver);
 	}
 	
 	public String getMessage(){

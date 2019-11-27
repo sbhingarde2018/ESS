@@ -140,6 +140,7 @@ public class AttendanceConfigurations extends BaseTest{
 		Thread.sleep(4000);
 		ua.clickLoad();
 		Thread.sleep(4000);
+		ua.exitFullscreen();
 		ua.clickSelectAllBox();
 		ua.clickEmployee();
 		ua.clickProcessSalaryButton();
@@ -155,7 +156,7 @@ public class AttendanceConfigurations extends BaseTest{
 		System.out.println("pay days in selected month "+p);
 		Thread.sleep(5000);
 	}
-	/*@Test(priority=5)
+	@Test(priority=5)
 	public void CheckForFixed30DaysInAttendanceConfig_SC_322() throws InterruptedException{
 		CheckForFixed30DaysInAttendanceConfig ua=new CheckForFixed30DaysInAttendanceConfig(driver);
 		ua.clickMastserLink();
@@ -175,21 +176,23 @@ public class AttendanceConfigurations extends BaseTest{
 		Thread.sleep(4000);
 		ua.clickLoad();
 		Thread.sleep(4000);
+		ua.exitFullscreen();
 		ua.clickSelectAllBox();
 		Thread.sleep(4000);
 		ua.clickEmployee();
 		Thread.sleep(4000);
 		ua.clickProcessSalaryButton();
-		Thread.sleep(4000);
+		Thread.sleep(5000);
+		ua.SelectShowTableLength("100");
+		ua.EnterSearch("Mar/2018");
 		ua.clickEdit();
-		Thread.sleep(4000);
+		Thread.sleep(5000);
 		ua.clickDetailView();
-		Thread.sleep(4000);
+		Thread.sleep(5000);
 		String p=ua.getPayDays();
-		Thread.sleep(4000);
+		Thread.sleep(5000);
 		System.out.println("pay days in selected month "+p);
-		Thread.sleep(4000);
-		ua.exitFullscreen();
+		Thread.sleep(5000);
 	}
 	@Test(priority=6)
 	public void CheckAttendanceConfigforOnlyWorkingDaysandWeeklyHoliday_SC_449() throws Exception{
@@ -217,15 +220,16 @@ public class AttendanceConfigurations extends BaseTest{
 		ua.clickonmaster();
 		ua.clickonattendanceconfig();
 		ua.addnewattendanceconfig();
-		ua.enterattendancename("Delhi");
+		ua.enterattendancename("Delhii");
 		Thread.sleep(2000);
-		ua.entershortname("DE");
+		ua.entershortname("DEE");
 		ua.selectsalcalender();
 		ua.selectattendancetype();
 		ua.createattendanceconfig();
 		String d=ua.getMessage();
 		Assert.assertEquals(d, "Attendance Configuration was Successfully created");
-		Thread.sleep(2000);
-		ua.clickDelete();		
-	}*/
+		Thread.sleep(3000);
+		ua.clickDelete();
+		Thread.sleep(3000);
+	}
 }

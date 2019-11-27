@@ -17,7 +17,7 @@ import com.spp.pages.EditClassification;
 import com.spp.pages.EditClasssificationDetails;
 public class Classifications extends BaseTest {
 	
-	/*@Test(priority=0)
+	@Test(priority=0)
 	public void verifyCreatedClassification_SC_62(){
 		CreateClassification cc=new CreateClassification(driver);
 		cc.clickMastserLink();
@@ -170,7 +170,7 @@ public class Classifications extends BaseTest {
 		ww.selectClassificationDetails();
 		ww.ClickDeleteButton1();
 		ww.switchToPopUpAndAccept(driver);
-		}*/
+		}
 	
 	@Test(priority=8)
 	public void AddClassificationviaExcelUpload_SC_66() throws Exception {
@@ -181,8 +181,8 @@ public class Classifications extends BaseTest {
 		//ac.generatetemplate();
 		ac.clickonexceluploadforclassification();
 		//Thread.sleep(5000);
-		ac.choosefile("C:\\Users\\AlfaLabs\\Downloads\\ClassificationDetail.xlsx");
-		//ac.choosefile("C:\\Users\\Administrator\\Desktop\\ClassificationDetail.xlsx");
+		//ac.choosefile("C:\\Users\\AlfaLabs\\Downloads\\ClassificationDetail.xlsx");
+		ac.choosefile("C:\\Users\\alfaLabs\\Downloads\\ClassificationDetail.xlsx");
 		Thread.sleep(8000);
 		ac.uploadfile();
 		Thread.sleep(8000);
