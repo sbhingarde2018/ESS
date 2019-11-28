@@ -20,6 +20,16 @@ public class AddLeaves extends BasePage{
     WebElement addButton;
     @FindBy(xpath="//strong[text()='Leave policy setting was successfully created.']")
     WebElement successsfullMessage;
+    @FindBy(xpath="//a[text()='Add New Leave Policy']")
+    WebElement addLeavePolicy;
+	@FindBy(id="leave_policy_master_policy_name")
+	WebElement policyName;
+	@FindBy(id="leave_policy_master_attendance_type_id")
+	WebElement leaveDropDown;
+    @FindBy(id="leave_policy_master_remarks")
+    WebElement remarks;
+    @FindBy(xpath="//input[@value='Create Leave Policy Master']")
+    WebElement createLeavePolicy;
     
 	public AddLeaves(WebDriver driver) {
 		super(driver);
@@ -48,4 +58,21 @@ public class AddLeaves extends BasePage{
 	public String getMessage(){
 		return successsfullMessage.getText();
 	}
+	public void clickAddLeavePolicy(){
+		addLeavePolicy.click();
+	}
+	
+	public void enterPolicyName(String value){
+		policyName.sendKeys(value);
+	}
+	
+	
+	public void enterRemarks(String value){
+		remarks.sendKeys(value);
+	}
+	
+	public void clickCreateLeavePolicy(){
+		createLeavePolicy.click();
+	}
+	
 }

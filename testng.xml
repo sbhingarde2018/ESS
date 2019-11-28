@@ -15,14 +15,18 @@
   	<class name="com.spp.scripts.GroupInsuranceMaster"/>
   	<class name="com.spp.scripts.PerodicIncentiveMaster"/>
   	<class name="com.spp.scripts.ReimbursementMaster"/>
-  	<class name="com.spp.scripts.LeaveDefinitions"/>
-  	<class name="com.spp.scripts.LeavePolicy"/>-->
+  	<class name="com.spp.scripts.LeaveDefinitions"/>-->
+  	
   	<!--<class name="com.spp.scripts.HolidayList"/>
   	<class name="com.spp.scripts.MasterWeeklyHoliday"/>
-  	<class name="com.spp.scripts.States"/>-->
+  	<class name="com.spp.scripts.States"/>
   	<class name="com.spp.scripts.AttendanceConfigurations"/>
-  	<class name="com.spp.scripts.Classifications"/>
   	
+  	<class name="com.spp.scripts.Classifications"/>
+  	<class name="com.spp.scripts.EmployeeDetails"/>-->
+  		<class name="com.spp.scripts.LeavePolicy"/>
+  		<!--<class name="com.spp.scripts.ReimbursementClaim"/>-->
+  		
   	<!--<class name="com.spp.scripts.FinancialInstitutionBankValidation"/>-->
   	 
  	<!--<class name="com.spp.scripts.StandingInstructionTestCase"/> 
@@ -49,7 +53,7 @@
 	
 	<class name="com.spp.scripts.FinancialInstitution"/>
 	
-	<class name="com.spp.scripts.EmployeeDetails"/>
+	
 	<class name="com.spp.scripts.RestrictPFContribution"/>
 	<class name="com.spp.scripts.SalaryRateDetails"/>
     <class name="com.spp.scripts.BulkIncrementDetails"/>
@@ -151,7 +155,7 @@
 	<class name="com.spp.scripts.PeriodicIncentiveDetail"/>
 	
     
-    <class name="com.spp.scripts.ReimbursementClaim"/>
+    
     
     <class name="com.spp.scripts.ReportingAuthority"/>
     <class name="com.spp.scripts.Reports"/>

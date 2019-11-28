@@ -39,8 +39,8 @@ public class EmployeeDetails extends BaseTest{
 		at.clickAddNewEmployee();
 		Thread.sleep(1000);
 		//at.enterEmployeeId("ID101");
-		at.enterEmployeeRefNo("Ref-T101");
-		at.enterEmployeeName("Zack");
+		at.enterEmployeeRefNo("Ref-T1012");
+		at.enterEmployeeName("LeaveA");
 		at.enterFathername("Anand");
 		at.enterdob("14 June 1980");
 		at.selectGender("Male");
@@ -72,7 +72,7 @@ public class EmployeeDetails extends BaseTest{
 		Assert.assertEquals(s, "Employee successfully created");
 	}
 	
-	@Test(priority=1)
+/*	@Test(priority=1)
 	public void verifyAssignEmployee_SC_78() throws Exception{
 		AssignEmployee ww=new AssignEmployee(driver);
 		ww.clickEmployeeLink();
@@ -232,7 +232,7 @@ public class EmployeeDetails extends BaseTest{
 		dw.switchToPopUpAndAccept(driver);
 		String message = dw.getMessage();
 		Assert.assertEquals(message, "Employee detail was successfully updated.");
-	}
+	}*/
 	
 	/*@Test(priority=7)
 	public void CreateEmployeeESIContributionApplicability_SC_452() throws Exception {

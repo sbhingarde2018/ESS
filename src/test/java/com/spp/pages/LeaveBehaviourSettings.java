@@ -57,7 +57,7 @@ public class LeaveBehaviourSettings extends BasePage{
     @FindBy(xpath="//form[@id='bf_form']//button[contains(text(),'LOAD')]")
     WebElement ClickOnLoad;
     //@FindBy(xpath="//*[@id='dt_leave_details']/tbody/tr/td[3]/a")
-    @FindBy(xpath="//tbody/tr/td[contains(text(),'Zain')]/parent::tr/td[3]/a")
+    @FindBy(xpath="//tbody/tr/td[contains(text(),'LeaveB')]/parent::tr/td[3]/a")
     WebElement ClickOnAPPLYLEAVE;
     @FindBy(id="leave_detail_leave_definition_id")
     WebElement SelectLeave;
@@ -213,11 +213,5 @@ public class LeaveBehaviourSettings extends BasePage{
 	}
 	public void ClickView() {
 		View.click();
-	}
-	public void DeleteCasualLeaveallowedavaiformonth(){
-		casualLeaveallowedavaiformonth.clear();
-	}
-	public void DeleteCasualLeaveallowedavailforyear(){
-		casualLeaveallowedavailforyear.clear();
 	}
 }

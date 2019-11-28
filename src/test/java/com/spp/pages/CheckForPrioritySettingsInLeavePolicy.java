@@ -18,7 +18,7 @@ public class CheckForPrioritySettingsInLeavePolicy extends BasePage{
 	WebElement addLeaves;
     @FindBy(xpath="//div[2]/table/tbody/tr/td[contains(text(),'Casual Leave')]/parent::tr/td[3]/a")
     WebElement settingsLink;
-    @FindBy(xpath="//*[@id=\"leave_policy_head_wise_setting_behaviour_settings_excess_setting_priority_setting\"]")
+    @FindBy(id="leave_policy_head_wise_setting_behaviour_settings_excess_setting_priority_setting")
     WebElement EarnedLeave;
     @FindBy(xpath="//*[@id=\"behaviour_policy_setting\"]/div[3]/input")
     WebElement UpdateButton;
@@ -48,9 +48,9 @@ public class CheckForPrioritySettingsInLeavePolicy extends BasePage{
 	WebElement LeaveHistory;
 	@FindBy(xpath="//*[@id=\"batch_details\"]/form/table[3]/tbody/tr[2]/td/input[3]")
 	WebElement DeleteButton;
-	@FindBy(xpath="//label/*[@id=\"leave_policy_head_wise_setting_behaviour_settings_avail_excess_leave\"]")
+	@FindBy(id="leave_policy_head_wise_setting_behaviour_settings_avail_excess_leave")
 	WebElement AllowAccessCasual;
-	@FindBy(xpath="//*[@id=\"leave_policy_head_wise_setting_behaviour_settings_excess_setting_priority_setting\"]")
+	@FindBy(id="leave_policy_head_wise_setting_behaviour_settings_excess_setting_priority_setting")
 	WebElement PrioritySettings;
 	@FindBy(xpath="//td[contains(text(),'Compensatory Off')]")
 	WebElement CompensatoryOff;
@@ -58,7 +58,7 @@ public class CheckForPrioritySettingsInLeavePolicy extends BasePage{
 	WebElement AddNewLeaveEnc;
 	@FindBy(xpath="//*[@id=\"leave_encashment_leave_definition_id\"]")
 	WebElement SelectLeave;
-	@FindBy(xpath="//tbody/tr/td[contains(text(),'Zain')]/parent::tr/td[3]/a")
+	@FindBy(xpath="//tbody/tr/td[contains(text(),'LeaveB')]/parent::tr/td[3]/a")
 	WebElement ApplyLeave;
 	@FindBy(id="from_date")
 	WebElement LeaveHistoryToDate;
@@ -172,8 +172,5 @@ public class CheckForPrioritySettingsInLeavePolicy extends BasePage{
 	}
 	public void clickSearchButton(){
 		SearchButton.click();
-	}
-	public void UnClickAllowAccessCasual() {
-		AllowAccessCasual.click();
 	}
 }

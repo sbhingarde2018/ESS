@@ -12,9 +12,9 @@ public class DeleteLeave extends BasePage {
 	WebElement masterLink;
 	@FindBy(xpath="//a[text()='Leave Policy']")
 	WebElement leavePolicy;
-	 @FindBy(xpath="//table/tbody/tr/td[contains(text(),'LeavePolicyTest')]/parent::tr/td[4]/a")
+	 @FindBy(xpath="//*[@id=\"leave-policy-master-list\"]/table/tbody/tr/td[contains(text(),'LeavePolicyTest')]/parent::tr/td[4]/a")
 	WebElement addLeaves;
-    @FindBy(xpath="//div[2]/table/tbody/tr[5]/td[contains(text(),'Casual Leave')]/parent::tr/td[4]/a/img")
+    @FindBy(xpath="//img[@title='Delete']")
     WebElement deleteButton;
     @FindBy(xpath="//strong[text()='Leave deleted successfully.']")
     WebElement successfullMessage;

@@ -33,7 +33,7 @@ public class CheckForAllowHalfDayInLeaveModule extends BasePage {
     WebElement Filter;
     @FindBy(xpath="//*[@id=\"bf_form\"]/div/button[contains(text(),'LOAD')]")
     WebElement Load;
-    @FindBy(xpath="//tbody/tr/td[contains(text(),'Zain')]/parent::tr/td[3]/a")
+    @FindBy(xpath="//tbody/tr/td[contains(text(),'LeaveB')]/parent::tr/td[3]/a")
     WebElement ClickOnAPPLYLEAVE;
 	@FindBy(id="leave_detail_leave_definition_id")
 	WebElement LeaveType;
@@ -164,8 +164,5 @@ public class CheckForAllowHalfDayInLeaveModule extends BasePage {
 		DeleteButton.click();
 		Thread.sleep(2000);
 		switchToPopUpAndAccept(driver);
-	}
-	public void UnclickAllowHalfDay(){
-		allowHalfDay.click();
 	}
 }
