@@ -17,7 +17,7 @@ public class DeleteReimbursementClaim extends BasePage{
 	WebElement Salary;
 	@FindBy(xpath="//*[@id=\"menu\"]/li[6]/div/div[1]/ul/li[4]/a")
 	WebElement ReimbursementClaim;
-	@FindBy(xpath="//*[@id=\"reimbursement_claims\"]/tbody/tr[1]/td[7]/a[2]")
+	@FindBy(xpath="//tbody/tr/td[contains(text(),'Donald')]/parent::tr/td[7]/a[2]")
 	WebElement DeleteButton;
 	@FindBy(xpath="//*[@id=\"reimbursement_claim_result_response\"]/div/strong")
 	WebElement SuccessfulMessage;

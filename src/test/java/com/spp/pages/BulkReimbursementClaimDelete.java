@@ -19,7 +19,7 @@ public class BulkReimbursementClaimDelete extends BasePage{
 	WebElement ReimbursementClaim;
 	@FindBy(xpath="//*[@id=\"bulk_reimbursement_delete\"]/a")
 	WebElement BulkReimbursementClaimDelete;
-	@FindBy(xpath="//*[@id=\"bulk_claim_delete\"]/tbody/tr/td[1]/input")
+	@FindBy(xpath="//tbody/tr/td[contains(text(),'Donald')]/parent::tr/td[1]/input")
 	WebElement SelectBox;
 	@FindBy(xpath="//*[@id=\"bulk_delete_claims\"]/div[4]/input")
 	WebElement DeleteButton;

@@ -62,7 +62,7 @@ public class CreateReimbursementClaimPaymentModeCheque extends BasePage{
 	WebElement ReimbursementClaim;
 	@FindBy(xpath="//*[@id=\"claims_list\"]/div[1]/span/a")
 	WebElement NewReimbursementClaim;
-	@FindBy(xpath="//*[@id=\"employees_table\"]/tbody/tr/td[contains(text(),'Ashish')]/parent::tr/td[5]/input")
+	@FindBy(xpath="//*[@id=\"employees_table\"]/tbody/tr/td[contains(text(),'Donald')]/parent::tr/td[5]/input")
 	WebElement AddEmployee;
 	@FindBy(xpath="//*[@id=\"main\"]/div/div[2]/form/div[3]/input")
 	WebElement ClaimButton;
@@ -86,14 +86,14 @@ public class CreateReimbursementClaimPaymentModeCheque extends BasePage{
 	WebElement CreateReimbursementButton;
 	@FindBy(xpath="//*[@id=\"reimbursement_claim_result_response\"]/div/strong")
 	WebElement SuccessfulMessage;
-	@FindBy(xpath="//*[@id='reimbursement_claims']/tbody/tr[1]/td[7]/a[2]")
+	@FindBy(xpath="//tbody/tr[1]/td[contains(text(),'Donald')]/parent::tr/td[7]/a[2]")
 	//@FindBy(xpath="//*[@id=\"reimbursement_allotments\"]/tbody/tr/td[2][contains(text(),'Reim. LTA')]/parent::tr/td[8]/a")
 	WebElement DeleteButton;
 	
 	@FindBy(id="reimbursement_claim_financial_institution_id")
 	WebElement SelectBank;
 	
-	@FindBy(id="reimbursement_claim_ac_cq_dd_no")
+	@FindBy(xpath="//input[@id='ac_cq_dd_no']")
 	WebElement EnterChequeNo;
 	@FindBy(xpath="//a[text()='Financial Institution (Bank)']")
 	WebElement financialInstitution;
@@ -123,7 +123,8 @@ public class CreateReimbursementClaimPaymentModeCheque extends BasePage{
 	WebElement ClickOnReimbursementAllotment;
 	@FindBy(xpath="//*[@id=\"reimbursement_allotments\"]/tbody/tr[1]/td[8]/a")
 	WebElement DeleteAllotmentButton;
-	
+	@FindBy(xpath="//*[@id=\"main\"]/section/p/a")
+	WebElement BacktoReimbClaim;
 	
 	
 	@FindBy(xpath="//*[@class='action-delete']")
@@ -135,7 +136,9 @@ public class CreateReimbursementClaimPaymentModeCheque extends BasePage{
 	
 	
 	
-
+	public void clickBacktoReimbClaim(){
+		BacktoReimbClaim.click();
+	}
 	public CreateReimbursementClaimPaymentModeCheque(WebDriver driver) {
 		super(driver);
 		PageFactory.initElements(driver, this);

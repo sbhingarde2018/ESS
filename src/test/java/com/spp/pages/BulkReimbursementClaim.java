@@ -24,21 +24,23 @@ public class BulkReimbursementClaim extends BasePage{
 	WebElement ClaimDate;
 	@FindBy(id="reimbursement_claim_paymonth_id")
 	WebElement PaidMonth;
-	@FindBy(xpath="//*[@id=\"main\"]/div[4]/form/div[2]/div/input")
+	@FindBy(xpath="//button[@id='get_employee']")
 	WebElement GetEmployee;
-	@FindBy(xpath="//*[@id=\"bulk_claim\"]/tbody/tr[1]/td[1]/input")
+	@FindBy(xpath="//tbody/tr[1]/td[contains(text(),'Donald')]/parent::tr/td[1]/input")
 	WebElement CheckBox;
 	@FindBy(xpath="//*[@id=\"bulk_claim\"]/tbody/tr[1]/td[6]/input")
 	WebElement Amount;
 	@FindBy(xpath="//*[@id=\"bulk_claim\"]/tbody/tr[1]/td[8]/select")
 	WebElement Paymonth;
-	@FindBy(xpath="//*[@id=\"bulk_claim_reimburs\"]/div[4]/input")
+	@FindBy(xpath="//input[@id='submit_bulk_claims']")
 	WebElement ClaimReimbursementButton;
 	@FindBy(xpath="//*[@id=\"reimbursement_claim_result_response\"]/div/strong")
 	WebElement SuccessfulMessage;
 	@FindBy(xpath="//*[@id=\"reimbursement_claims\"]/tbody/tr[1]/td[8]/a")
 	//@FindBy(xpath="//*[@id=\"reimbursement_allotments\"]/tbody/tr/td[2][contains(text(),'Reim. LTA')]/parent::tr/td[8]/a")
 	WebElement DeleteButton;
+	@FindBy(xpath="//form[@id='bf_form']//button[contains(text(),'LOAD')]")
+	WebElement Load;
 	
 	public BulkReimbursementClaim(WebDriver driver) {
 		super(driver);
@@ -55,6 +57,9 @@ public class BulkReimbursementClaim extends BasePage{
 	}
 	public void selectGetEmployee() {
 		GetEmployee.click();
+	}
+	public void ClickLoad(){
+		Load.click();
 	}
 	public void selectName(String value){
 		dropDownSelect(Name, value);
