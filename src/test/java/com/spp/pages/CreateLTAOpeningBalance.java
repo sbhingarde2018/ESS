@@ -13,7 +13,7 @@ public class CreateLTAOpeningBalance extends BasePage{
 		// TODO Auto-generated constructor stub
 		PageFactory.initElements(driver, this);
 	}
-	@FindBy(xpath="//*[@id=\"lta_to_be_adjusted\"]/tbody/tr/td[3]")
+	@FindBy(xpath="//tbody/tr/td[contains(text(),'Donald')]/parent::tr/td[3]")
 	WebElement BalanceAmount;
 	@FindBy(id="salary")
 	WebElement Salary;
@@ -35,7 +35,7 @@ public class CreateLTAOpeningBalance extends BasePage{
 	WebElement BlockPeriodAdjustment;
 	@FindBy(xpath="//*[@id=\"lta_opening_balance\"]/div/div/input")
 	WebElement GetEmployees;
-	@FindBy(xpath="//*[@id=\"employees_table\"]/tbody/tr/td[contains(text(),'Ashish')]/parent::tr/td[3]/input")
+	@FindBy(xpath="//*[@id=\"employees_table\"]/tbody/tr/td[contains(text(),'Donald')]/parent::tr/td[3]/input")
 	WebElement OpeningBalance;
 	@FindBy(xpath="//input[@value='Save Details']")
 	WebElement SaveDetails;
@@ -45,11 +45,11 @@ public class CreateLTAOpeningBalance extends BasePage{
 	WebElement Successfulmessage1;
 	@FindBy(xpath="//*[@id=\"lta_opening_balances\"]/tbody/tr/td[7]/a")
 	WebElement DeleteButton;
-	@FindBy(id="lta_adjustment_90_carry_fwd_amount")
+	@FindBy(xpath="//table/tbody/tr/td[contains(text(),'Donald')]/parent::tr/td[4]/input")
 	WebElement EnterCarryAmount;
-	@FindBy(id="lta_adjustment_90_pay_amount")
+	@FindBy(xpath="//table/tbody/tr/td[contains(text(),'Donald')]/parent::tr/td[5]/input")
 	WebElement EnterPayment;
-	@FindBy(id="lta_adjustment_90_lapsed_amount")
+	@FindBy(xpath="//table/tbody/tr/td[contains(text(),'Donald')]/parent::tr/td[6]/input")
 	WebElement EnterLapsedAmount;
 	//@FindBy(xpath="//*[@id=\"lta_adjusted\"]/tbody/tr/td[11]/a")
 	@FindBy(linkText="Delete")

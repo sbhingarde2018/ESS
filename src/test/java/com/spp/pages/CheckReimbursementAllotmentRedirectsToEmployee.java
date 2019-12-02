@@ -17,13 +17,13 @@ public class CheckReimbursementAllotmentRedirectsToEmployee extends BasePage{
 	WebElement Salary;
 	@FindBy(xpath="//*[@id=\"menu\"]/li[6]/div/div[1]/ul/li[4]/a")
 	WebElement ReimbursementClaim;
-	@FindBy(xpath="//*[@id=\"ui-accordion-accordion-header-2\"]/h3")
+	@FindBy(xpath="//h3[contains(text(),'General Link')]")
 	WebElement GeneralLink;
-	@FindBy(xpath="//*[@id=\"ui-accordion-accordion-panel-2\"]/li[2]/a")
+	@FindBy(xpath="//ul[@id='ui-id-6']//a[contains(text(),'Reimbursement Allotment')]")
 	WebElement ReimAllotment;
 	@FindBy(xpath="//*[@id=\"allotments_list\"]/div[1]/span/a")
 	WebElement NewReimbursement;
-	@FindBy(xpath="//*[@id=\"employees_table\"]/tbody/tr/td[contains(text(),'Ashish')]/parent::tr/td[5]/input")
+	@FindBy(xpath="//*[@id=\"employees_table\"]/tbody/tr/td[contains(text(),'LeaveA')]/parent::tr/td[5]/input")
 	WebElement AddEmployee;
 	@FindBy(xpath="//*[@id=\"main\"]/div/div[2]/form/div[3]/input")
 	WebElement AllotButton;
@@ -51,7 +51,7 @@ public class CheckReimbursementAllotmentRedirectsToEmployee extends BasePage{
 	WebElement DeleteAllotmentButton;
 	@FindBy(id="reimbursement_master_id")
 	WebElement AllotmentName;
-	@FindBy(id="reimbursement_allotment_financial_year")
+	@FindBy(xpath="//select[@id='reimbursement_allotment_financial_year']")
 	WebElement FinancialYearAllotment;
 	@FindBy(id="sal_date")
 	WebElement AllotmentDate;
@@ -61,7 +61,7 @@ public class CheckReimbursementAllotmentRedirectsToEmployee extends BasePage{
 	WebElement CreateReimbursementAllotmentButton;
 	@FindBy(xpath="//*[@id=\"allotment_link\"]/img")
 	WebElement FunctionKey;
-	@FindBy(id="sum_amount")
+	@FindBy(xpath="//input[@id='sum_amount']")
 	WebElement SumAmount;
 	@FindBy(id="reimbursement_allotment_block_period")
 	WebElement BlockPeriod;

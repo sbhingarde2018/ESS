@@ -17,9 +17,9 @@ public class CheckReimbursementClaimRedirectsToMasterModule extends BasePage{
 		WebElement Salary;
 		@FindBy(xpath="//*[@id=\"menu\"]/li[6]/div/div[1]/ul/li[4]/a")
 		WebElement ReimbursementClaim;
-		@FindBy(xpath="//*[@id=\"ui-accordion-accordion-header-2\"]/h3")
+		@FindBy(xpath="//h3[contains(text(),'General Link')]")
 		WebElement GeneralLink;
-		@FindBy(xpath="//*[@id=\"ui-accordion-accordion-panel-2\"]/li[1]/a")
+		@FindBy(xpath="//ul[@id='ui-id-6']//a[contains(text(),'Reimbursement Master')]")
 		WebElement ReimbursementMaster;
 		@FindBy(xpath="//a[text()='Add New Reimbursement']")
 		WebElement addReimbursement;
@@ -39,12 +39,15 @@ public class CheckReimbursementClaimRedirectsToMasterModule extends BasePage{
 		WebElement successfullMassege;
 		@FindBy(xpath="//*[@id=\"main\"]/section/p/a")
 		WebElement Pagechange;
-		@FindBy(xpath="//*[@id=\"reimbursement_masters\"]/tbody/tr/td[5]/a")
+		@FindBy(xpath="//tbody/tr/td[contains(text(),'Rmaster')]/parent::tr/td[5]/a")
 		WebElement DeleteMasterButton;
 		@FindBy(id="master")
 		WebElement masterLink;
 		@FindBy(xpath="//a[text()='Reimbursement Master']")
 		WebElement reimbursemnetLink;
+		@FindBy(xpath="//select[@id='reimbursement_master_tds_ref_option_id']")
+		WebElement TDSRef;
+		
 		public void clickMastserLink(){
 			masterLink.click();
 		}
@@ -75,7 +78,9 @@ public class CheckReimbursementClaimRedirectsToMasterModule extends BasePage{
 		public void selectModeOfPayment(String value){
 			dropDownSelect(modeOfPayment, value);
 		}
-		
+		public void selectTDSRef(String value){
+			dropDownSelect(TDSRef, value);
+		}
 		public void enterReimbursementName(String value){
 			reimbursementName.sendKeys(value);
 		}

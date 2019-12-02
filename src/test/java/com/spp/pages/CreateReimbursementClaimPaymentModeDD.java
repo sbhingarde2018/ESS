@@ -28,7 +28,7 @@ public class CreateReimbursementClaimPaymentModeDD extends BasePage{
 	//@FindBy(xpath="//*[@id=\"new_reimbursement_allotment\"]/div[2]/fieldset/div[1]/div[1]/div")
 	@FindBy(id="reimbursement_claim_reimbursement_master_id")
 	WebElement Name;
-	@FindBy(id="reimbursement_claim_financial_year")
+	@FindBy(xpath="//select[@id='reimbursement_claim_financial_year']")
 	WebElement FinancialYear;
 	@FindBy(id="reimbursement_claim_mode_of_payment")
 	WebElement PaymentMode;
