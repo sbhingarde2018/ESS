@@ -13,7 +13,7 @@ public class CheckForAllowHalfDayInLeaveModule extends BasePage {
 	WebElement masterLink;
 	@FindBy(xpath="//*[@id=\"menu\"]/li[3]/div/div[3]/ul/li[2]/a")
 	WebElement leavePolicy;
-	@FindBy(xpath="//table/tbody/tr/td[contains(text(),'ClonePolicy')]/parent::tr/td[4]/a")
+	@FindBy(xpath="//table/tbody/tr/td[contains(text(),'Default')]/parent::tr/td[4]/a")
 	WebElement addLeaves;
 	@FindBy(xpath="//div[2]/table/tbody/tr/td[contains(text(),'Casual Leave')]/parent::tr/td[3]/a")
 	WebElement settingsLink;
@@ -33,7 +33,7 @@ public class CheckForAllowHalfDayInLeaveModule extends BasePage {
     WebElement Filter;
     @FindBy(xpath="//*[@id=\"bf_form\"]/div/button[contains(text(),'LOAD')]")
     WebElement Load;
-    @FindBy(xpath="//tbody/tr/td[contains(text(),'LeaveB')]/parent::tr/td[3]/a")
+    @FindBy(xpath="//tbody/tr/td[contains(text(),'LeaveA')]/parent::tr/td[3]/a")
     WebElement ClickOnAPPLYLEAVE;
 	@FindBy(id="leave_detail_leave_definition_id")
 	WebElement LeaveType;

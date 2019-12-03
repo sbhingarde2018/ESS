@@ -14,11 +14,11 @@ public class CheckForPrioritySettingsInLeavePolicy extends BasePage{
 	WebElement masterLink;
 	@FindBy(xpath="//a[text()='Leave Policy']")
 	WebElement leavePolicy;
-    @FindBy(xpath="//table/tbody/tr/td[contains(text(),'ClonePolicy')]/parent::tr/td[4]/a")
+    @FindBy(xpath="//table/tbody/tr/td[contains(text(),'Default')]/parent::tr/td[4]/a")
 	WebElement addLeaves;
     @FindBy(xpath="//div[2]/table/tbody/tr/td[contains(text(),'Casual Leave')]/parent::tr/td[3]/a")
     WebElement settingsLink;
-    @FindBy(id="leave_policy_head_wise_setting_behaviour_settings_excess_setting_priority_setting")
+    @FindBy(xpath="//table/tbody/tr[13]/td/label/input")
     WebElement EarnedLeave;
     @FindBy(xpath="//*[@id=\"behaviour_policy_setting\"]/div[3]/input")
     WebElement UpdateButton;
@@ -40,7 +40,7 @@ public class CheckForPrioritySettingsInLeavePolicy extends BasePage{
 	WebElement FromDate;
 	@FindBy(id="leave_detail_to_date")
 	WebElement ToDate;
-	@FindBy(id="apply")
+	@FindBy(xpath="//input[@id='apply']")
 	WebElement ApplyButton;
 	@FindBy(xpath="//*[@id=\"apply_leave_response\"]/div/strong")
 	WebElement Message2;
@@ -52,13 +52,13 @@ public class CheckForPrioritySettingsInLeavePolicy extends BasePage{
 	WebElement AllowAccessCasual;
 	@FindBy(id="leave_policy_head_wise_setting_behaviour_settings_excess_setting_priority_setting")
 	WebElement PrioritySettings;
-	@FindBy(xpath="//td[contains(text(),'Compensatory Off')]")
+	@FindBy(xpath="//td[contains(text(),'Earned Leave')]")
 	WebElement CompensatoryOff;
 	@FindBy(xpath="//a[@class='tooltip-left']")
 	WebElement AddNewLeaveEnc;
 	@FindBy(xpath="//*[@id=\"leave_encashment_leave_definition_id\"]")
 	WebElement SelectLeave;
-	@FindBy(xpath="//tbody/tr/td[contains(text(),'LeaveB')]/parent::tr/td[3]/a")
+	@FindBy(xpath="//tbody/tr/td[contains(text(),'TATA711695')]/parent::tr/td[3]/a")
 	WebElement ApplyLeave;
 	@FindBy(id="from_date")
 	WebElement LeaveHistoryToDate;

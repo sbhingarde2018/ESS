@@ -16,7 +16,7 @@ public class LeaveBehaviourSettings extends BasePage{
 	WebElement masterLink;
 	@FindBy(xpath="//a[text()='Leave Policy']")
 	WebElement leavePolicy;
-    @FindBy(xpath="//table/tbody/tr/td[contains(text(),'ClonePolicy')]/parent::tr/td[4]/a")
+    @FindBy(xpath="//table/tbody/tr/td[contains(text(),'Default')]/parent::tr/td[4]/a")
 	WebElement addLeaves;
     @FindBy(xpath="//div[2]/table/tbody/tr/td[contains(text(),'Casual Leave')]/parent::tr/td[3]/a")
     WebElement settingsLink;
@@ -57,7 +57,7 @@ public class LeaveBehaviourSettings extends BasePage{
     @FindBy(xpath="//form[@id='bf_form']//button[contains(text(),'LOAD')]")
     WebElement ClickOnLoad;
     //@FindBy(xpath="//*[@id='dt_leave_details']/tbody/tr/td[3]/a")
-    @FindBy(xpath="//tbody/tr/td[contains(text(),'LeaveB')]/parent::tr/td[3]/a")
+    @FindBy(xpath="//tbody/tr/td[contains(text(),'LeaveA')]/parent::tr/td[3]/a")
     WebElement ClickOnAPPLYLEAVE;
     @FindBy(id="leave_detail_leave_definition_id")
     WebElement SelectLeave;
@@ -208,7 +208,7 @@ public class LeaveBehaviourSettings extends BasePage{
 	}
 	public void ClickDeleteButton() throws InterruptedException {
 		DeleteButton.click();
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 		switchToPopUpAndAccept(driver);
 	}
 	public void ClickView() {

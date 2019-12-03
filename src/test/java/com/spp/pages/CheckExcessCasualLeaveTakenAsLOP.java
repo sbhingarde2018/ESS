@@ -14,7 +14,7 @@ public class CheckExcessCasualLeaveTakenAsLOP extends BasePage {
 	WebElement masterLink;
 	@FindBy(xpath="//*[@id=\"menu\"]/li[3]/div/div[3]/ul/li[2]/a")
 	WebElement leavePolicy;
-    @FindBy(xpath="//table/tbody/tr/td[contains(text(),'ClonePolicy')]/parent::tr/td[4]/a")
+    @FindBy(xpath="//table/tbody/tr/td[contains(text(),'Default')]/parent::tr/td[4]/a")
 	WebElement addLeaves;
     @FindBy(xpath="//div[2]/table/tbody/tr/td[contains(text(),'Casual Leave')]/parent::tr/td[3]/a")
     WebElement settingsLink;
@@ -32,7 +32,7 @@ public class CheckExcessCasualLeaveTakenAsLOP extends BasePage {
     WebElement Filter;
     @FindBy(xpath="//*[@id=\"bf_form\"]/div/button[contains(text(),'LOAD')]")
     WebElement Load;
-    @FindBy(xpath="//tbody/tr/td[contains(text(),'LeaveB')]/parent::tr/td[3]/a")
+    @FindBy(xpath="//tbody/tr/td[contains(text(),'TATA711695')]/parent::tr/td[3]/a")
     WebElement ApplyLeave;
 	@FindBy(id="leave_detail_leave_definition_id")
 	WebElement LeaveType;
@@ -50,9 +50,9 @@ public class CheckExcessCasualLeaveTakenAsLOP extends BasePage {
 	WebElement View;
 	@FindBy(xpath="//form/table[3]/tbody/tr[2]/td/input[3]")
 	WebElement DeleteButton;
-	@FindBy(id="leave_policy_head_wise_setting_behaviour_settings_avail_excess_leave")
+	@FindBy(xpath="//tbody/tr[11]/td/fieldset/h4/span/label/input")
 	WebElement AllowAccessCasual;
-	@FindBy(id="leave_policy_head_wise_setting_behaviour_settings_excess_setting_general_setting")
+	@FindBy(xpath="//table/tbody/tr[12]/td/label/input")
 	WebElement ConsiderAccessCasual;
 	@FindBy(xpath="//*[@id='leave_range_data']/div[3]/div/div/input[2]")
 	WebElement SearchButton;

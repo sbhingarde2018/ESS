@@ -58,7 +58,7 @@ import com.spp.pages.UpdateLeavePolicy;
 
 public class LeavePolicy extends BaseTest {
 
-	@Test(priority=0)
+	/*@Test(priority=0)
 	public void verifyCreatedLeavePolicy_SC_35(){
 		CreateLeavePolicy lp=new CreateLeavePolicy(driver);
 		lp.clickMastserLink();
@@ -149,9 +149,9 @@ public class LeavePolicy extends BaseTest {
 		Thread.sleep(5000);
 		lp.clickLeaveDefinitionLink();
 		System.out.println("Leave Definition Page is Displayed");
-	}
+	}*/
 	
-	/*@Test(priority=7)
+	@Test(priority=7)
 	public void verifyUpdatedLeaveBeahaviour_SC_272() throws InterruptedException{
 		LeaveBehaviourSettings lb=new LeaveBehaviourSettings(driver);
 		lb.clickMastserLink();
@@ -174,17 +174,18 @@ public class LeavePolicy extends BaseTest {
 		lb.SelectLeave("Casual Leave (CL)");
 		lb.EnterFromDate("21 December 2019");
 		lb.EnterToDate("25 December 2019");
-		Thread.sleep(5000);
+		Thread.sleep(3000);
 		String alert = lb.getalertMessage();
 		Assert.assertEquals(alert, "Cannot apply CL more than 1.0 in a month.");
-		lb.ClickLeaveHistory();
+		//lb.ClickLeaveHistory();
 		Thread.sleep(2000);
-		lb.EnterHistoryFromDate("01 November 2014");
-		lb.ClickSearchButton();
-		Thread.sleep(3000);
-		lb.ClickView();
-		Thread.sleep(2000);
-		lb.ClickDeleteButton();	
+		//lb.EnterHistoryFromDate("01 August 2014");
+		//lb.ClickSearchButton();
+		//Thread.sleep(3000);
+		//lb.ClickView();
+		//Thread.sleep(4000);
+		//lb.ClickDeleteButton();	
+		//Thread.sleep(3000);
 	}
 
 	@Test(priority=8)                  
@@ -215,16 +216,16 @@ public class LeavePolicy extends BaseTest {
 		lb.clickapply();
 		Thread.sleep(8000);
 		lb.SelectLeave("Casual Leave (CL)");
-		lb.EnterFromDate("09 January 2020");
+		lb.EnterFromDate("12 February 2020");
 		Thread.sleep(2000);
-		lb.EnterToDate("09 January 2020");
+		lb.EnterToDate("12 February 2020");
 		Thread.sleep(2000);
 		lb.clickapply();
 		Thread.sleep(8000);
 		lb.SelectLeave("Casual Leave (CL)");
-		lb.EnterFromDate("10 January 2020");
+		lb.EnterFromDate("10 March 2020");
 		Thread.sleep(2000);
-		lb.EnterToDate("10 January 2020");
+		lb.EnterToDate("10 March 2020");
 		Thread.sleep(2000);
 		//lb.clickapply();
 		Thread.sleep(3000);
@@ -233,7 +234,7 @@ public class LeavePolicy extends BaseTest {
 		Thread.sleep(2000);
 		lb.ClickLeaveHistory();
 		Thread.sleep(2000);
-		lb.EnterHistoryFromDate("01 November 2014");
+		lb.EnterHistoryFromDate("01 August 2014");
 		lb.ClickSearchButton();
 		Thread.sleep(3000);
 		lb.ClickView();
@@ -244,9 +245,8 @@ public class LeavePolicy extends BaseTest {
 		Thread.sleep(3000);
 		lb.ClickDeleteButton();	
 		
-	}*/
-	
-	/*@Test(priority=9)
+	}
+	@Test(priority=9)
 	public void CheckForAllowHalfDayInLeaveModule_SC_275() throws InterruptedException{
 		CheckForAllowHalfDayInLeaveModule lb=new CheckForAllowHalfDayInLeaveModule(driver);
 		lb.clickMastserLink();
@@ -254,8 +254,8 @@ public class LeavePolicy extends BaseTest {
 		lb.clickAddLeaves();
 		lb.clickSettingsLink();
 		Thread.sleep(2000);
-		lb.enterCasualLeaveallowedavaiformonth("3");
-		lb.enterCasualLeaveallowedavailforyear("3");
+		lb.enterCasualLeaveallowedavaiformonth("2");
+		lb.enterCasualLeaveallowedavailforyear("2");
 		lb.clickAllowHalfDay();
 		lb.clickUpdateButton();
 		//String d=lb.getMessage1();
@@ -271,15 +271,15 @@ public class LeavePolicy extends BaseTest {
 		lb.exitFullscreen();
 		lb.ClickOnApplyLeave();
 		lb.selectLeaveType("Casual Leave (CL)");
-		lb.enterFromDate("26 October 2019");
-		lb.enterToDate("26 October 2019");
+		lb.enterFromDate("10 March 2020");
+		lb.enterToDate("10 March 2020");
 		Thread.sleep(2000);
 		lb.selectSecondHalf();
 		lb.clickApplyButton();
 		String e=lb.getMessage2();
 		Assert.assertEquals(e, "Leave applied successfully.");
 		lb.clickLeaveHistory();
-		lb.enterHistoryToDate("01 November 2014");
+		lb.enterHistoryToDate("01 August 2014");
 		lb.clickSearchButton();
 		lb.selectView();
 		Thread.sleep(3000);
@@ -302,9 +302,9 @@ public class LeavePolicy extends BaseTest {
 		lb.clickAddLeaves();
 		lb.clickSettingsLink();
 		Thread.sleep(4000);
-		lb.clickAvailForMonth("8");
-		lb.clickAvailForYear();
-		//lb.clickAllowAccessCasual();
+		lb.clickAvailForMonth("2");
+		//lb.clickAvailForYear();
+		lb.clickAllowAccessCasual();
 		lb.clickConsiderAccessCasual();
 		lb.clickUpdateButton();
 		//String d=lb.getMessage1();
@@ -320,8 +320,8 @@ public class LeavePolicy extends BaseTest {
 		lb.exitFullscreen();
 		lb.clickApplyLeave();
 		lb.selectLeaveType("Casual Leave (CL)");
-		lb.enterFromDate("20 October 2019");
-		lb.enterToDate("25 October 2019");
+		lb.enterFromDate("10 March 2020");
+		lb.enterToDate("11 March 2020");
 		Thread.sleep(4000);
 		lb.clickApplyButton();
 		String e=lb.getMessage2();
@@ -329,7 +329,7 @@ public class LeavePolicy extends BaseTest {
 		Assert.assertEquals(e, "Leave applied successfully.");
 		lb.selectLeaveHistory();
 		Thread.sleep(3000);
-		lb.enterHistoryToDate("01 November 2014");
+		lb.enterHistoryToDate("01 August 2014");
 		lb.clickSearchButton();
 		Thread.sleep(3000);
 		lb.selectView();
@@ -347,6 +347,7 @@ public class LeavePolicy extends BaseTest {
 		lb.clickSettingsLink();
 		Thread.sleep(4000);
 	    lb.clickEarnedLeave();
+	    lb.clickEarnedLeave();
 	    lb.clickCompensatoryOff();
 		lb.clickUpdateButton();
 		String d=lb.getMessage1();
@@ -361,8 +362,8 @@ public class LeavePolicy extends BaseTest {
 		lb.exitFullscreen();
 		lb.ClickonApplyLeave();
 		lb.selectLeaveType("Casual Leave (CL)");
-		lb.enterFromDate("20 October 2019");
-		lb.enterToDate("21 October 2019");
+		lb.enterFromDate("10 March 2020");
+		lb.enterToDate("11 March 2020");
 		Thread.sleep(4000);
 		lb.clickApplyButton();
 		String e=lb.getMessage2();
@@ -371,14 +372,14 @@ public class LeavePolicy extends BaseTest {
 		Thread.sleep(6000);
 		lb.selectLeaveHistory();
 		Thread.sleep(3000);
-		lb.enterHistoryToDate("01 November 2014");
+		lb.enterHistoryToDate("01 August 2014");
 		lb.clickSearchButton();
 		Thread.sleep(3000);
 		lb.clickView();
 		Thread.sleep(5000);
 		lb.clickDeleteButton();
 	} 
-	
+/*	
 	@Test(priority=12)
 	public void verifyUpdatedEncashementLeaves_SC_279() throws Exception {
 		EncashmentSettings lc=new EncashmentSettings(driver);
