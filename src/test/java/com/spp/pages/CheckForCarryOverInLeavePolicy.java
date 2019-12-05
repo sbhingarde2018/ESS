@@ -13,7 +13,7 @@ public class CheckForCarryOverInLeavePolicy extends BasePage{
 	WebElement masterLink;
 	@FindBy(xpath="//a[text()='Leave Policy']")
 	WebElement leavePolicy;
-    @FindBy(xpath="//table/tbody/tr/td[contains(text(),'ClonePolicy')]/parent::tr/td[4]/a")
+    @FindBy(xpath="//table/tbody/tr/td[contains(text(),'Default')]/parent::tr/td[4]/a")
 	WebElement addLeaves;
     @FindBy(xpath="//div[2]/table/tbody/tr/td[contains(text(),'Casual Leave')]/parent::tr/td[3]/a")
     WebElement settingsLink;
@@ -63,12 +63,7 @@ public class CheckForCarryOverInLeavePolicy extends BasePage{
 		LapseTab.click();
 	}
 	public void clickCarryOver(){ 
-		if(CarryOver.isSelected()) {
-			System.out.println("Already Selected");
-		}
-		else {
-			jsclick(CarryOver);
-		}
+		jsclick(CarryOver);
 	}
 	public void clickUpdateButton(){
 		UpdateButton.click();
@@ -95,7 +90,7 @@ public class CheckForCarryOverInLeavePolicy extends BasePage{
 	public void clickLeaveSummaryTab(){
 		jsclick(LeaveSummaryTab);
 	}
-	public void UnselectCarryOver() {
-		jsclick(CarryOver);
-	}
+	
+
+
 }

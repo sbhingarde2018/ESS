@@ -13,7 +13,7 @@ public class CheckforMinEarnedLeavecanbeEncashedperinstance extends BasePage{
 	WebElement ClickOnMaster;
 	@FindBy(xpath="//a[text()='Leave Policy']")
 	WebElement ClickOnLeavePolicy;
-	@FindBy(xpath="//table/tbody/tr/td[contains(text(),'ClonePolicy')]/parent::tr/td[4]/a")
+	@FindBy(xpath="//table/tbody/tr/td[contains(text(),'Default')]/parent::tr/td[4]/a")
 	WebElement ClickOnAddLeaves;
 	@FindBy(xpath="//div[2]/table/tbody/tr/td[contains(text(),'Casual Leave')]/parent::tr/td[3]/a")
 	WebElement ClickOnSettings;
@@ -45,9 +45,9 @@ public class CheckforMinEarnedLeavecanbeEncashedperinstance extends BasePage{
 	WebElement SelectLeave;
 	@FindBy(id="leave_encashment_no_of_encashed_leave")
 	WebElement EnterNoofLeaves;
-	@FindBy(id="leave_encashment_unit_rate")
+	@FindBy(xpath="//input[@id='leave_encashment_unit_rate']")
 	WebElement EnterUnitRate;
-	@FindBy(id="leave_encashment_in_salary")
+	@FindBy(xpath="//input[@id='leave_encashment_in_salary']")
 	WebElement CheckShowInSalary;
 	@FindBy(xpath="//*[@id=\"new_leave_encashment\"]/table/tbody/tr[13]/td/input")
 	WebElement ClickOnSave;
@@ -74,12 +74,7 @@ public class CheckforMinEarnedLeavecanbeEncashedperinstance extends BasePage{
 		ClickOnLapseCarry.click();
 	}
 	public void allowleavetobeencashed() {
-		if(AllowLeavetobeEncashed.isSelected()) {
-			System.out.println("Already Selected");
-		}
-		else {
-			AllowLeavetobeEncashed.click();
-		}
+		AllowLeavetobeEncashed.click();
 	}
 	public void enterminleaveencash(String value) {
 		MinimumLeaveEncash.clear();
@@ -131,8 +126,5 @@ public class CheckforMinEarnedLeavecanbeEncashedperinstance extends BasePage{
 	}
 	public String getalertmessage() {
 		return ClickOnAlertMessage.getText();
-	}
-	public void unselectEncash() {
-		AllowLeavetobeEncashed.click();
 	}
 }

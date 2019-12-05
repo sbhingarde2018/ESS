@@ -64,6 +64,8 @@ public class CheckForPrioritySettingsInLeavePolicy extends BasePage{
 	WebElement LeaveHistoryToDate;
 	@FindBy(xpath="//*[@id='leave_range_data']/div[3]/div/div/input[2]")
 	WebElement SearchButton;
+	@FindBy(xpath="//form/fieldset/div/div[1]/label/input")
+	WebElement LOP;
 	
 	public CheckForPrioritySettingsInLeavePolicy(WebDriver driver) {
 		super(driver);
@@ -72,6 +74,9 @@ public class CheckForPrioritySettingsInLeavePolicy extends BasePage{
 
 	public void clickMastserLink(){
 		masterLink.click();
+	}
+	public void clickLOP(){
+		LOP.click();
 	}
 
 	public void selectLeavePolicy(){
