@@ -13,9 +13,9 @@ public class HolidayWeeklyoffSettings extends BasePage{
 	WebElement masterLink;
 	@FindBy(xpath="//a[text()='Leave Policy']")
 	WebElement leavePolicy;
-    @FindBy(xpath="//table/tbody/tr/td[contains(text(),'ClonePolicy')]/parent::tr/td[4]/a")
+    @FindBy(xpath="//*[@id='leave-policy-master-list']/table/tbody/tr/td[contains(text(),'Default')]/parent::tr/td[4]/a")
 	WebElement addLeaves;
-    @FindBy(xpath="//div[2]/table/tbody/tr/td[contains(text(),'Casual Leave')]/parent::tr/td[3]/a")
+    @FindBy(xpath="//*[@id='leave_policy_setting_details']/div[2]/table/tbody/tr/td[contains(text(),'Casual Leave')]/parent::tr/td[3]/a")
     WebElement settingsLink;
     @FindBy(id="leave_policy_head_wise_setting_behaviour_settings_max_leave_month")
     WebElement casualLeaveallowedavaiformonth; 
@@ -48,12 +48,14 @@ public class HolidayWeeklyoffSettings extends BasePage{
     @FindBy(id="leave")
     WebElement ClickOnLeave;
     @FindBy(xpath="//*[@id='menu']/li[5]/div/div/ul/li[1]/a")
+    //@FindBy(xpath="//*[@id='dt_leave_details']/tbody/tr/td[contains(text(),'Tina')]/parent::tr/td/a")
     WebElement ClickOnApplyLeave;
     @FindBy(id="filter_head")
     WebElement ClickOnFilter;
-    @FindBy(xpath="//*[@id=\"bf_form\"]/div/button[contains(text(),'LOAD')]")
+    @FindBy(xpath="//*[@id='bf_form']/div[10]/button[1]")
     WebElement ClickOnLoad;
-    @FindBy(xpath="//tbody/tr/td[contains(text(),'Zain')]/parent::tr/td/a")
+    //@FindBy(xpath="//*[@id='dt_leave_details']/tbody/tr/td[3]/a")
+    @FindBy(xpath="//*[@id='dt_leave_details']/tbody/tr/td[contains(text(),'LeaveA')]/parent::tr/td/a")
     WebElement ClickOnAPPLYLEAVE;
     @FindBy(id="leave_detail_leave_definition_id")
     WebElement SelectLeave;
@@ -83,19 +85,17 @@ public class HolidayWeeklyoffSettings extends BasePage{
     WebElement AppyLeaveLink;
     @FindBy(id="filter_head")
     WebElement Filter;
-    @FindBy(xpath="//*[@id=\"bf_form\"]/div[10]/button[1]")
+    @FindBy(xpath="//form[@id='bf_form']//button[contains(text(),'LOAD')]")
     WebElement Load;
     @FindBy(id="leave_detail_leave_definition_id")
 	WebElement LeaveType;
-    @FindBy(xpath="//input[@id='apply']")
+    @FindBy(id="apply")
 	WebElement ApplyButton;
 	@FindBy(xpath="//*[@id='apply_leave_response']/div/strong")
 	WebElement Message2;
-	@FindBy(xpath="//span[contains(text(),'LEAVE HISTORY')]")
-	WebElement LeaveHistory;
-	@FindBy(xpath="//tr[1]//td[4]//a[1]")
+	@FindBy(xpath="//*[@id='leave_detail_for_employee']/table/tbody/tr/td[4]/a")
 	WebElement View;
-	@FindBy(xpath="//form/table[3]/tbody/tr[2]/td/input[3]")
+	@FindBy(xpath="//*[@id='batch_details']/form/table[3]/tbody/tr[2]/td/input[3]")
 	WebElement DeleteButton;
 	@FindBy(id="to_date")
 	WebElement LeaveHistoryToDate;
@@ -115,13 +115,20 @@ public class HolidayWeeklyoffSettings extends BasePage{
     WebElement WeeklyOffNoofLeaveDays;
     @FindBy(id="leave_policy_head_wise_setting_weekly_off_settings_prefix")
     WebElement WeeklyOffPrefix;
-	@FindBy(xpath="//input[@id='from_date']")
-	WebElement HistoryFromDate;
-	@FindBy(xpath="//td//input[@id='leave_policy_head_wise_setting_holiday_settings_consider_leave']")
-	WebElement HolidaySettings;
-	@FindBy(xpath="//td/input[@id='leave_policy_head_wise_setting_weekly_off_settings_consider_leave']")
-	WebElement WeeklySettings;
+    @FindBy(xpath="//span[contains(text(),'LEAVE HISTORY')]")
+	WebElement LeaveHistory;
+    @FindBy(xpath="//*[@id=\"from_date\"]")
+	WebElement LeaveHistoryFromDate;
     
+    public void selectLeaveHistory(){
+		jsclick(LeaveHistory);
+	}
+    public void clickHolidayLeaveCheckbox() {
+		LeaveHasHoliday.click();
+	}
+    public void clickWeeklyOffLeaveCheckbox() {
+		LeaveHasWeeklyOff.click();
+	}
 	public HolidayWeeklyoffSettings(WebDriver driver) {
 		super(driver);
 		PageFactory.initElements(driver, this);
@@ -180,23 +187,21 @@ public class HolidayWeeklyoffSettings extends BasePage{
 	}
 	public void enterFromDate(String value){
 		FromDate.sendKeys(value);
-
+		//FromDatePicker.click();
 	}
 	public void enterToDate(String value){
 		ToDate.sendKeys(value);
+		//ToDatePicker.click();
 		ToDate.sendKeys(Keys.TAB);
 	}
 	public void clickApplyButton(){
-		jsclick(ApplyButton);
+		ApplyButton.click();
 	}
 	public String getMessage2(){
 		return Message2.getText();
 	}
 	public String getMessage(){
 		return Message2.getText();
-	}
-	public void selectLeaveHistory(){
-		jsclick(LeaveHistory);
 	}
 	public void selectView(){
 		View.click();
@@ -205,10 +210,10 @@ public class HolidayWeeklyoffSettings extends BasePage{
 		DeleteButton.click();
 		switchToPopUpAndAccept(driver);
 	}
-	public void enterHistoryToDate(String value){
-		LeaveHistoryToDate.clear();
-		LeaveHistoryToDate.sendKeys(value);
-		LeaveHistoryToDate.sendKeys(Keys.TAB);
+	public void enterLeaveHistoryFromDate(String value){
+		LeaveHistoryFromDate.clear();
+		LeaveHistoryFromDate.sendKeys(value);
+		LeaveHistoryFromDate.sendKeys(Keys.TAB);
 	}
 	public void clickSearchButton(){
 		SearchButton.click();
@@ -222,23 +227,12 @@ public class HolidayWeeklyoffSettings extends BasePage{
 		ToDatePicker1.click();
 		//ToDate.sendKeys(Keys.TAB);
 	}
-	public void EnterHistoryFromDate(String value){
-		HistoryFromDate.clear();
-		HistoryFromDate.sendKeys(value);
-		HistoryFromDate.sendKeys(Keys.TAB);
+	public void WeeklyOffPrefixLeaves(String value) {
+		WeeklyOffNoofLeaveDays.clear();
+		WeeklyOffNoofLeaveDays.sendKeys(value);
+		WeeklyOffNoofLeaveDays.sendKeys(Keys.TAB);
 	}
-	public void clickHolidaySettings(){
-		if(HolidaySettings.isSelected()) {
-			System.out.println("Already Selected");
-		}
-		else {
-			HolidaySettings.click();
-		}
-	}
-	public void clickWeeklySettings(){
-		WeeklySettings.click();
-	}
-	public void UnselectSetttings() {
-		HolidaySettings.click();
+	public void clickWeeklyOffPrefixCheckbox() {
+		WeeklyOffPrefix.click();
 	}
 }

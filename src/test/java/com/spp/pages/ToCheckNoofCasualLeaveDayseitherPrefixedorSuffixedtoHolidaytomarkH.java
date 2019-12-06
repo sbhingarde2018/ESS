@@ -14,7 +14,7 @@ public class ToCheckNoofCasualLeaveDayseitherPrefixedorSuffixedtoHolidaytomarkH 
 	WebElement masterLink;
 	@FindBy(xpath="//a[text()='Leave Policy']")
 	WebElement leavePolicy;
-    @FindBy(xpath="//table/tbody/tr/td[contains(text(),'ClonePolicy')]/parent::tr/td[4]/a")
+    @FindBy(xpath="//table/tbody/tr/td[contains(text(),'Default')]/parent::tr/td[4]/a")
 	WebElement addLeaves;
     @FindBy(xpath="//div[2]/table/tbody/tr/td[contains(text(),'Casual Leave')]/parent::tr/td[3]/a")
     WebElement settingsLink;
@@ -54,7 +54,7 @@ public class ToCheckNoofCasualLeaveDayseitherPrefixedorSuffixedtoHolidaytomarkH 
     WebElement ClickOnFilter;
     @FindBy(xpath="//button[text()='LOAD']")
     WebElement ClickOnLoad;
-    @FindBy(xpath="//tbody/tr/td[contains(text(),'Zain')]/parent::tr/td[3]/a")
+    @FindBy(xpath="//tbody/tr/td[contains(text(),'LeaveA')]/parent::tr/td[3]/a")
     WebElement ClickOnAPPLYLEAVE;
     @FindBy(id="leave_detail_leave_definition_id")
     WebElement SelectLeave;
@@ -126,15 +126,10 @@ public class ToCheckNoofCasualLeaveDayseitherPrefixedorSuffixedtoHolidaytomarkH 
 		settingsLink.click();
 	}
 	public void clickWeeklyOff(){
-		jsclick(WeeklyOff);	
+		jsclick(WeeklyOff);
 	}
 	public void clickHolidayLeaveCheckbox() {
-		if(LeaveHasHoliday.isSelected()) {
-			System.out.println("Already Selected");
-		}
-		else {
-			LeaveHasHoliday.click();
-		}	
+		LeaveHasHoliday.click();
 	}
 	public void HolidayPrefixLeaves(String value) {
 		HolidayNoofLeaveDays.clear();
@@ -171,11 +166,11 @@ public class ToCheckNoofCasualLeaveDayseitherPrefixedorSuffixedtoHolidaytomarkH 
 	}
 	public void enterFromDate(String value){
 		FromDate.sendKeys(value);
-		FromDatePicker.click();
+		//FromDatePicker.click();
 	}
 	public void enterToDate(String value){
 		ToDate.sendKeys(value);
-		ToDatePicker.click();
+		//ToDatePicker.click();
 		ToDate.sendKeys(Keys.TAB);
 	}
 	public void clickApplyButton(){
@@ -201,8 +196,5 @@ public class ToCheckNoofCasualLeaveDayseitherPrefixedorSuffixedtoHolidaytomarkH 
 	}
 	public void clickSearchButton(){
 		SearchButton.click();
-	}
-	public void UnselectHoliday() {
-		LeaveHasHoliday.click();
 	}
 }

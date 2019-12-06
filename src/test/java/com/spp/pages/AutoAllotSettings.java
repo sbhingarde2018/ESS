@@ -7,36 +7,59 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.spp.common.BasePage;
 
-public class AutoAllotSettings extends BasePage {
+public class AutoAllotSettings extends BasePage{
+		public AutoAllotSettings(WebDriver driver) 
+		{
+		super(driver);
+		PageFactory.initElements(driver,this);
+		// TODO Auto-generated constructor stub
+		}
 	@FindBy(id="master")
 	WebElement masterLink;
 	@FindBy(xpath="//a[text()='Leave Policy']")
 	WebElement leavePolicy;
-    @FindBy(xpath="//table/tbody/tr/td[contains(text(),'Default')]/parent::tr/td[4]/a")
+    @FindBy(xpath="//*[@id='leave-policy-master-list']/table/tbody/tr/td[contains(text(),'ClonePolicy')]/parent::tr/td[4]/a")
 	WebElement addLeaves;
-    @FindBy(xpath="//div[2]/table/tbody/tr/td[contains(text(),'Casual Leave')]/parent::tr/td[3]/a")
+   // @FindBy(xpath="//*[@id=\"leave_policy_setting_details\"]/div[2]/table/tbody/tr/td[2][contains(text(),'Earned')]/parent::tr/td[3]/a")
+    @FindBy(xpath="//*[@id=\"leave_policy_setting_details\"]/div[2]/table/tbody/tr/td[2][contains(text(),'Casual')]/parent::tr/td[3]/a")
     WebElement settingsLink;
-    @FindBy(xpath="//span[contains(text(),'Auto Allot Settings')]")
-    WebElement autoAllot;
+    @FindBy(xpath="//*[@id=\"main\"]/div/div[3]/nav/ul/li[4]/a/span")
+    WebElement AutoAllotTab;
     @FindBy(id="auto_leave_allotment")
-    WebElement leaveAllotment;
-    @FindBy(id="leave_policy_head_wise_setting_auto_allot_settings_allot_type")
-    WebElement allotType;
-    @FindBy(xpath="(//select[@id='leave_policy_head_wise_setting_auto_allot_settings_allot_on'])[1]")
-    WebElement allotOn;
+    WebElement LeaveAllotmentBox;
+    @FindBy(xpath="//*[@id=\"auto_leave_allotment_div\"]/table/tbody/tr[2]/td[1]/select")
+    WebElement AllotType;
+    @FindBy(id="leave_policy_head_wise_setting_auto_allot_settings_allot_on")
+    WebElement AllotOn;
     @FindBy(id="leave_policy_head_wise_setting_auto_allot_settings_round_off")
-    WebElement roundOff;
+    WebElement RoundOff;
     @FindBy(id="leave_policy_head_wise_setting_auto_allot_settings_effective_from")
-    WebElement effectiveFrom;
-    @FindBy(id="leave_policy_head_wise_setting_auto_allot_settings_no_of_days")
-    WebElement numberOfDays;
-    @FindBy(xpath="//form[@id='auto_allot_setting']//tr[3]//input[@value='Update']")
-    WebElement updateButton;
-	@FindBy(xpath="//strong[text()='Setting was successfully updated.']")
-	WebElement successfullMessage;
-	@FindBy(xpath="//a[@id='report']")
+    WebElement EffectiveFrom;
+    @FindBy(xpath="//input[@id='leave_policy_head_wise_setting_auto_allot_settings_no_of_days']")
+    WebElement NoOfLeaves;
+    @FindBy(id="leave_policy_head_wise_setting_auto_allot_settings_period")
+    WebElement PeriodInDays;
+    
+    @FindBy(xpath="//form[@id='auto_allot_setting']//input[@name='commit']")
+    WebElement UpdateButton;
+    
+    @FindBy(xpath="//*[@id=\"leave_policy_head_wise_settings_response\"]/div/strong")
+    WebElement SuccessfulMessage;
+    @FindBy(id="leave")
+    WebElement LeaveLink;
+    @FindBy(linkText="Apply Leave")
+    WebElement AppyLeaveLink;
+    @FindBy(id="filter_head")
+    WebElement Filter;
+    @FindBy(xpath="//form[@id='bf_form']//button[contains(text(),'LOAD')]")
+    WebElement Load;
+    @FindBy(xpath="//*[@id=\"dt_leave_details\"]/tbody/tr[1]/td[3]/a")
+    WebElement ApplyLeave;
+	@FindBy(xpath="//*[@id=\"main\"]/div[2]/nav/ul/li[2]/a/span")
+	WebElement LeaveSummaryTab;
+	@FindBy(xpath="//*[@id=\"menu\"]/li[8]/a")
 	WebElement Report;
-	@FindBy(xpath="//a[contains(text(),'Advance Leave Report')]")
+	@FindBy(xpath="//*[@id=\"menu\"]/li[8]/div/div[1]/ul/li[7]/a")
 	WebElement AdvanceLeaveReport;
 	@FindBy(id="leave_report_type")
 	WebElement LeaveReport;
@@ -54,13 +77,8 @@ public class AutoAllotSettings extends BasePage {
 	WebElement Employee2;
 	@FindBy(id="leave_report_submit")
 	WebElement GenerateReport;
-	@FindBy(xpath="//*[@id=\"bf_form\"]/div/button[contains(text(),'LOAD')]")
-    WebElement Load;
-	
-	public AutoAllotSettings(WebDriver driver) {
-		super(driver);
-		PageFactory.initElements(driver,this);
-	}
+	@FindBy(xpath="//select[@id='leave_policy_head_wise_setting_auto_allot_settings_effective_from']")
+	WebElement EffectiveFromA;
 
 	public void clickMastserLink(){
 		masterLink.click();
@@ -78,45 +96,56 @@ public class AutoAllotSettings extends BasePage {
 		settingsLink.click();
 	}
 	
-	public void clickAutoAllot(){
-		autoAllot.click();
+	public void clickAutoAllotTab(){
+		AutoAllotTab.click();
 	}
-	
-	public void clickLeaveAllotment(){
-		if(leaveAllotment.isSelected()) {
-			System.out.println("Already Selected");
-		}
-		else {
-			leaveAllotment.click();
-		}
+	public void clickLeaveAllotmentBox(){
+		LeaveAllotmentBox.click();
 	}
-	
-	public void selectAllotType(String value){
-		dropDownSelect(allotType, value);
+	public void SelectAllotType(String value) {
+		dropDownSelect(AllotType, value);
 	}
-	
-	public void selectAllotOn(String value){
-		dropDownSelect(allotOn, value);
+	public void SelectEffectiveFromA(String value) {
+		dropDownSelect(EffectiveFromA, value);
 	}
-	
-	public void selectRoundOff(String value){
-		dropDownSelect(roundOff, value);
+	public void SelectAllotOn(String value) {
+		dropDownSelect(AllotOn, value);
 	}
-	
-	public void selectEffectiveFrom(String value){
-		dropDownSelect(effectiveFrom, value);
+	public void SelectRoundOff(String value) {
+		dropDownSelect(RoundOff, value);
 	}
-	
-	public void enterNumberOfDays(String value){
-		numberOfDays.sendKeys(value);
+	public void SelectEffectiveFrom(String value) {
+		dropDownSelect(EffectiveFrom, value);
+	}
+	public void enterNoOfLeaves(String value) {
+		NoOfLeaves.sendKeys(value);
+	}
+	public void enterPeriodInDays(String value) {
+		PeriodInDays.sendKeys(value);
 	}
 	
 	public void clickUpdateButton(){
-		updateButton.click();
+		UpdateButton.click();
+	}
+	public String getMessage1(){
+		return SuccessfulMessage.getText();
+	}
+	public void clickLeaveLink(){
+		LeaveLink.click();
+	}
+	public void clickAppyLeaveLink(){
+		AppyLeaveLink.click();
+	}
+	public void clickFilter(){
+		Filter.click();
 	}
 	
-	public String getMessage(){
-		return successfullMessage.getText();
+	
+	public void clickApplyLeave(){
+		ApplyLeave.click();
+	}
+	public void clickLeaveSummaryTab(){
+		LeaveSummaryTab.click();
 	}
 	public void clickReport(){
 		Report.click();
@@ -153,7 +182,5 @@ public class AutoAllotSettings extends BasePage {
 	public void clickGenerateReport(){
 		GenerateReport.click();
 	}
-	public void UncheckLeaveAllotment(){
-		leaveAllotment.click();
-	}
+
 }

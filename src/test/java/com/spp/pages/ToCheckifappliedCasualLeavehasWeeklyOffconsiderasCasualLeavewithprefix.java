@@ -13,7 +13,7 @@ public class ToCheckifappliedCasualLeavehasWeeklyOffconsiderasCasualLeavewithpre
 	WebElement masterLink;
 	@FindBy(xpath="//a[text()='Leave Policy']")
 	WebElement leavePolicy;
-    @FindBy(xpath="//table/tbody/tr/td[contains(text(),'ClonePolicy')]/parent::tr/td[4]/a")
+    @FindBy(xpath="//table/tbody/tr/td[contains(text(),'Default')]/parent::tr/td[4]/a")
 	WebElement addLeaves;
     @FindBy(xpath="//div[2]/table/tbody/tr/td[contains(text(),'Casual Leave')]/parent::tr/td[3]/a")
     WebElement settingsLink;
@@ -53,7 +53,7 @@ public class ToCheckifappliedCasualLeavehasWeeklyOffconsiderasCasualLeavewithpre
     WebElement ClickOnFilter;
     @FindBy(xpath="//*[@id=\"bf_form\"]/div/button[contains(text(),'LOAD')]")
     WebElement ClickOnLoad;
-    @FindBy(xpath="//tbody/tr/td[contains(text(),'Zain')]/parent::tr/td/a")
+    @FindBy(xpath="//tbody/tr/td[contains(text(),'LeaveA')]/parent::tr/td/a")
     WebElement ClickOnAPPLYLEAVE;
     @FindBy(id="leave_detail_leave_definition_id")
     WebElement SelectLeave;
@@ -98,7 +98,7 @@ public class ToCheckifappliedCasualLeavehasWeeklyOffconsiderasCasualLeavewithpre
 	@FindBy(xpath="//*[@id='batch_details']/form/table[3]/tbody/tr[2]/td/input[3]")
 	WebElement DeleteButton;
 	@FindBy(xpath="//*[@id=\"from_date\"]")
-	WebElement LeaveHistoryToDate;
+	WebElement LeaveHistoryFromDate;
 	@FindBy(xpath="//*[@id='leave_range_data']/div[3]/div/div/input[2]")
 	WebElement SearchButton;
 	@FindBy(xpath="//*[@id='ui-datepicker-div']/table/tbody/tr[1]/td[6]/a")
@@ -129,12 +129,7 @@ public class ToCheckifappliedCasualLeavehasWeeklyOffconsiderasCasualLeavewithpre
 		WeeklyOff.click();
 	}
 	public void clickWeeklyOffLeaveCheckbox() {
-		if(LeaveHasWeeklyOff.isSelected()) {
-			System.out.println("Already Selected");
-		}
-		else {
-			LeaveHasWeeklyOff.click();
-		}
+		LeaveHasWeeklyOff.click();
 	}
 	public void WeeklyOffPrefixLeaves(String value) {
 		WeeklyOffNoofLeaveDays.clear();
@@ -171,11 +166,12 @@ public class ToCheckifappliedCasualLeavehasWeeklyOffconsiderasCasualLeavewithpre
 	}
 	public void enterFromDate(String value){
 		FromDate.sendKeys(value);
-		FromDatePicker.click();
+		//FromDatePicker.click();
 	}
 	public void enterToDate(String value){
 		ToDate.sendKeys(value);
-		ToDatePicker.click();
+		//ToDatePicker.click();
+		ToDate.sendKeys(Keys.TAB);
 	}
 	public void clickApplyButton(){
 		ApplyButton.click();
@@ -193,15 +189,12 @@ public class ToCheckifappliedCasualLeavehasWeeklyOffconsiderasCasualLeavewithpre
 		DeleteButton.click();
 		switchToPopUpAndAccept(driver);
 	}
-	public void enterHistoryToDate(String value){
-		LeaveHistoryToDate.clear();
-		LeaveHistoryToDate.sendKeys(value);
-		LeaveHistoryToDate.sendKeys(Keys.TAB);
+	public void enterLeaveHistoryFromDate(String value){
+		LeaveHistoryFromDate.clear();
+		LeaveHistoryFromDate.sendKeys(value);
+		LeaveHistoryFromDate.sendKeys(Keys.TAB);
 	}
 	public void clickSearchButton(){
 		SearchButton.click();
-	}
-	public void Unselectweeklyoff() {
-		LeaveHasWeeklyOff.click();
 	}
 }
