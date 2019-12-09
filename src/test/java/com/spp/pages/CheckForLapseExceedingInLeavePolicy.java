@@ -40,7 +40,7 @@ public class CheckForLapseExceedingInLeavePolicy extends BasePage{
     WebElement Filter;
     @FindBy(xpath="//button[text()='LOAD']")
     WebElement Load;
-    @FindBy(xpath="//tbody/tr/td[contains(text(),'Zain')]/parent::tr/td[3]/a")
+    @FindBy(xpath="//tbody/tr/td[contains(text(),'LeaveB')]/parent::tr/td[3]/a")
     WebElement ApplyLeave;
 	@FindBy(xpath="//span[contains(text(),'LEAVE SUMMARY')]")
 	WebElement LeaveSummaryTab;
@@ -69,6 +69,7 @@ public class CheckForLapseExceedingInLeavePolicy extends BasePage{
 		super(driver);
 		PageFactory.initElements(driver,this);
 	}
+
 	public void clickMastserLink(){
 		masterLink.click();
 	}
@@ -89,12 +90,7 @@ public class CheckForLapseExceedingInLeavePolicy extends BasePage{
 		LapseTab.click();
 	}
 	public void clickCarryOver(){
-		if(CarryOver.isSelected()) {
-			System.out.println("Already Selected");
-		}
-		else {
-			jsclick(CarryOver);
-		}
+		CarryOver.click();
 	}
 	public void clickLapseUnavailed(){
 		clickLapseUnavailed.click();
@@ -124,6 +120,8 @@ public class CheckForLapseExceedingInLeavePolicy extends BasePage{
 	public void clickFilter(){
 		Filter.click();
 	}
+	
+	
 	public void clickApplyLeave(){
 		ApplyLeave.click();
 	}
@@ -165,7 +163,5 @@ public class CheckForLapseExceedingInLeavePolicy extends BasePage{
 	public void clickGenerateReport(){
 		GenerateReport.click();
 	}
-	public void UnselectCarryOver() {
-		jsclick(CarryOver);
-	}
+
 }

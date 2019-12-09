@@ -576,7 +576,7 @@ public class LeavePolicy extends BaseTest {
 		el.ClickDelete();
 	}
 	*/
-/*	@Test(priority=16) 
+	@Test(priority=16) 
     public void CheckForCarryOverInLeavePolicys_SC_283() throws InterruptedException{
     CheckForCarryOverInLeavePolicy lb=new CheckForCarryOverInLeavePolicy(driver);
     	lb.clickMastserLink();
@@ -584,10 +584,12 @@ public class LeavePolicy extends BaseTest {
     	lb.clickAddLeaves();
     	Thread.sleep(3000);
     	lb.clickSettingsLink();
-    	Thread.sleep(4000);
+    	Thread.sleep(2000);
     	lb.clickLapseTab();
+    	Thread.sleep(3000);
     	lb.clickCarryOver();
     	lb.clickUpdateButton();
+    	Thread.sleep(2000);
     	String d=lb.getMessage1();
     	Assert.assertEquals(d, "Setting was successfully updated.");
     	lb.clickLeaveLink();
@@ -596,11 +598,15 @@ public class LeavePolicy extends BaseTest {
     	lb.clickFilter();
     	Thread.sleep(3000);
     	lb.clickLoad();
+    	Thread.sleep(4000);
+    	lb.exitFullscreen();
     	Thread.sleep(3000);
     	lb.clickApplyLeave();
     	Thread.sleep(2000);
     	lb.clickLeaveSummaryTab();
     	Thread.sleep(2000);
+    	String a=lb.getCLBalance();
+    	Assert.assertEquals(a, "3.00");
     	lb.clickMastserLink();
     	lb.selectLeavePolicy();
     	lb.clickAddLeaves();
@@ -609,6 +615,7 @@ public class LeavePolicy extends BaseTest {
     	lb.clickLapseTab();
     	lb.clickCarryOver();
     	lb.clickUpdateButton();
+    	Thread.sleep(2000);
     	String t=lb.getMessage1();
     	Assert.assertEquals(t, "Setting was successfully updated.");
     	Thread.sleep(6000);
@@ -618,14 +625,17 @@ public class LeavePolicy extends BaseTest {
     	lb.resizeWindow();
     	Thread.sleep(4000);
     	lb.clickLoad();
-    	Thread.sleep(4000);
+    	Thread.sleep(3000);
     	lb.exitFullscreen();
+    	Thread.sleep(3000);
     	lb.clickApplyLeave();
     	Thread.sleep(4000);
     	lb.clickLeaveSummaryTab();
     	Thread.sleep(4000);
-    }*/
-/*	
+    	String b=lb.getCLBalance();
+    	Assert.assertEquals(b, "0.00");
+    }
+	
 	@Test(priority=17) 
     public void CheckForLowerLimitInLeavePolicy_SC_284() throws InterruptedException{
    	CheckForLowerLimitInLeavePolicy lb=new CheckForLowerLimitInLeavePolicy(driver);
@@ -637,67 +647,74 @@ public class LeavePolicy extends BaseTest {
    		lb.clickCarryOver();
    		Thread.sleep(4000);
    		lb.clickLowerLimit();
-   		lb.enterLowerBoxvalue("5"); 	
+   		lb.enterLowerBoxvalue("1"); 	
    		lb.clickUpdateButton();
    		String d=lb.getMessage1();
    		Assert.assertEquals(d, "Setting was successfully updated.");
    		Thread.sleep(6000);
-   		lb.resizeWindow();
    		lb.clickLeaveLink();
    		lb.clickAppyLeaveLink();
+   		lb.resizeWindow();
+   		Thread.sleep(2000);
    		lb.clickFilter();
-   		Thread.sleep(5000);
+   		Thread.sleep(3000);
    		lb.clickLoad();
+   		Thread.sleep(3000);
+   		lb.exitFullscreen();
    		Thread.sleep(4000);
    		lb.clickApplyLeave();
    		Thread.sleep(4000);
    		lb.clickLeaveSummaryTab();
    		Thread.sleep(5000);
+ 
    		lb.clickReport();
    		lb.clickAdvanceLeaveReport();
    		lb.selectLeaveReport("Summary");
-   		lb.selectLeavePolicy("Default");
-   		lb.clickPaymonth("Sep/2019");
+   		lb.selectLeavePolicy("ClonePolicy");
+   		lb.clickPaymonth("Dec/2020");
    		lb.clickSelectAllCheckBox();
    		lb.clickGetEmployee();
-   		Thread.sleep(4000);
+   		lb.resizeWindow();
+   		Thread.sleep(2000);
    		lb.clickLoad();
-   		Thread.sleep(5000);
+   		Thread.sleep(3000);
+   		lb.exitFullscreen();
+   		Thread.sleep(3000);
    		lb.clickEmployee1();
    		lb.clickEmployee2();
    		lb.clickGenerateReport();
-   		Thread.sleep(5000);
+   		Thread.sleep(3000);
    		lb.clickMastserLink();
    		lb.selectLeavePolicy();
 		lb.clickAddLeaves();
 		lb.clickSettingsLink();
-		Thread.sleep(4000);
+		Thread.sleep(3000);
 		lb.clickLapseTab();
 		lb.clickCarryOver();
-		Thread.sleep(4000);
+		Thread.sleep(2000);
 		lb.clickUpdateButton();
-		Thread.sleep(8000);	
-	}*/
+		Thread.sleep(4000);	
+	}
 	
-	/*@Test(priority=18) 
+	@Test(priority=18) 
     public void CheckForUpperLimitInLeavePolicy_SC_285() throws InterruptedException{
    	CheckForUpperLimitInLeavePolicy lb=new CheckForUpperLimitInLeavePolicy(driver);
    		lb.clickMastserLink();
    		lb.selectLeavePolicy();
    		lb.clickAddLeaves();
    		lb.clickSettingsLink();
-   		Thread.sleep(4000);
+   		Thread.sleep(2000);
    		lb.clickLapseTab();
-   		Thread.sleep(4000);
+   		Thread.sleep(2000);
    		lb.clickCarryOver();
-   		Thread.sleep(4000);
+   		Thread.sleep(2000);
    		lb.clickUpperLimit();
-   		Thread.sleep(3000);
-   		lb.enterUpperBoxvalue("10"); 	
+   		Thread.sleep(1000);
+   		lb.enterUpperBoxvalue("1"); 	
    		lb.clickUpdateButton();
    		String d=lb.getMessage1();
    		Assert.assertEquals(d, "Setting was successfully updated.");
-   		Thread.sleep(6000);
+   		Thread.sleep(2000);
    		lb.clickLeaveLink();
    		lb.clickAppyLeaveLink();
    		lb.resizeWindow();
@@ -707,6 +724,7 @@ public class LeavePolicy extends BaseTest {
    		lb.clickLoad();
    		Thread.sleep(3000);
    		lb.exitFullscreen();
+   		Thread.sleep(4000);
    		lb.clickApplyLeave();
    		Thread.sleep(4000);
    		lb.clickLeaveSummaryTab();
@@ -715,7 +733,7 @@ public class LeavePolicy extends BaseTest {
    		lb.clickAdvanceLeaveReport();
    		lb.selectLeaveReport("Summary");
    		lb.selectLeavePolicy("ClonePolicy");
-   		lb.clickPaymonth("Sep/2019");
+   		lb.clickPaymonth("Dec/2020");
    		lb.clickSelectAllCheckBox();
    		lb.clickGetEmployee();
    		lb.resizeWindow();
@@ -723,21 +741,22 @@ public class LeavePolicy extends BaseTest {
    		lb.clickLoad();
    		Thread.sleep(3000);
    		lb.exitFullscreen();
+   		Thread.sleep(3000);
    		lb.clickEmployee1();
    		lb.clickEmployee2();
    		lb.clickGenerateReport();
-   		Thread.sleep(5000);
+   		Thread.sleep(2000);
    		lb.clickMastserLink();
    		lb.selectLeavePolicy();
    		lb.clickAddLeaves();
    		lb.clickSettingsLink();
-   		Thread.sleep(4000);
+   		Thread.sleep(2000);
    		lb.clickLapseTab();
    		lb.clickCarryOver();
-   		Thread.sleep(4000);
+   		Thread.sleep(2000);
    		lb.clickUpdateButton();
-   		lb.exitFullscreen();
-   		Thread.sleep(8000);
+   		
+   		Thread.sleep(3000);
 	}
 	 
      @Test(priority=19) 
@@ -747,10 +766,10 @@ public class LeavePolicy extends BaseTest {
  		lb.selectLeavePolicy();
  		lb.clickAddLeaves();
  		lb.clickSettingsLink();
- 		Thread.sleep(4000);
+ 		Thread.sleep(2000);
  		lb.clickLapseTab();
  		lb.clickCarryOver();
- 		Thread.sleep(4000);
+ 		Thread.sleep(2000);
  		lb.clickLapseUnavailed();
  		Thread.sleep(3000);
  		lb.enterDropdown("Yearly");
@@ -762,42 +781,44 @@ public class LeavePolicy extends BaseTest {
  		lb.clickAppyLeaveLink();
  		lb.clickFilter();
  		lb.resizeWindow();
- 		Thread.sleep(5000);
+ 		Thread.sleep(3000);
  		lb.clickLoad();
- 		Thread.sleep(4000);
+ 		Thread.sleep(3000);
  		lb.exitFullscreen();
+ 		Thread.sleep(3000);
  		lb.clickApplyLeave();
  		Thread.sleep(4000);
  		lb.clickLeaveSummaryTab();
- 		Thread.sleep(5000);
+ 		Thread.sleep(3000);
  		lb.clickReport();
  		lb.clickAdvanceLeaveReport();
  		lb.selectLeaveReport("Summary");
  		lb.selectLeavePolicy("ClonePolicy");
- 		lb.clickPaymonth("Sep/2019");
+ 		lb.clickPaymonth("Dec/2020");
  		lb.clickSelectAllCheckBox();
  		lb.clickGetEmployee();
  		lb.resizeWindow();
- 		Thread.sleep(4000);
+ 		Thread.sleep(2000);
  		lb.clickLoad();
- 		Thread.sleep(4000);
+ 		Thread.sleep(2000);
  		lb.exitFullscreen();
+ 		Thread.sleep(3000);
  		lb.clickEmployee1();
  		lb.clickEmployee2();
  		lb.clickGenerateReport();
- 		Thread.sleep(5000);
+ 		Thread.sleep(3000);
  		lb.clickMastserLink();
  		lb.selectLeavePolicy();
  		lb.clickAddLeaves();
  		lb.clickSettingsLink();
- 		Thread.sleep(4000);
+ 		Thread.sleep(2000);
  		lb.clickLapseTab();
  		lb.clickCarryOver();
- 		Thread.sleep(4000);
+ 		Thread.sleep(2000);
  		lb.clickUpdateButton();
- 		Thread.sleep(7000);
+ 		Thread.sleep(3000);
      }
-     
+    
      @Test(priority=20) 
      public void CheckForLapseExceedingInLeavePolicy_SC_288() throws InterruptedException{
      CheckForLapseExceedingInLeavePolicy lb=new CheckForLapseExceedingInLeavePolicy(driver);
@@ -806,49 +827,50 @@ public class LeavePolicy extends BaseTest {
     	 lb.selectLeavePolicy();
     	 lb.clickAddLeaves();
     	 lb.clickSettingsLink();
-    	 Thread.sleep(12000);
+    	 Thread.sleep(2000);
     	 lb.clickLapseTab();
     	 lb.clickCarryOver();
-    	 Thread.sleep(4000);
+    	 Thread.sleep(2000);
     	 lb.clickLapseUnavailed();
     	 Thread.sleep(3000);
     	 lb.enterDropdown("Month");
     	 Thread.sleep(3000);
-    	 lb.enterDropdown1("Sep");
+    	 lb.enterDropdown1("Dec");
     	 lb.clickLapseExceeding("8");
     	 lb.clickUpdateButton();
     	 String d=lb.getMessage1();
     	 Assert.assertEquals(d, "Setting was successfully updated.");
-    	 Thread.sleep(6000);
+    	 Thread.sleep(3000);
     	 lb.clickReport();
     	 lb.clickAdvanceLeaveReport();
     	 lb.selectLeaveReport("Summary");
     	 lb.selectLeavePolicy("ClonePolicy");
-    	 lb.clickPaymonth("Sep/2019");
+    	 lb.clickPaymonth("Dec/2020");
     	 lb.clickSelectAllCheckBox();
     	 lb.clickGetEmployee();
     	 lb.resizeWindow();
-    	 Thread.sleep(4000);
+    	 Thread.sleep(2000);
     	 lb.clickLoad();
-    	 Thread.sleep(5000);
+    	 Thread.sleep(2000);
     	 lb.exitFullscreen();
+    	 Thread.sleep(3000);
     	 lb.clickEmployee1();
     	 lb.clickEmployee2();
     	 lb.clickGenerateReport();
-    	 Thread.sleep(5000);
+    	 Thread.sleep(3000);
     	 lb.clickMastserLink();
     	 lb.selectLeavePolicy();
     	 lb.clickAddLeaves();
     	 lb.clickSettingsLink();
-    	 Thread.sleep(4000);
+    	 Thread.sleep(2000);
     	 lb.clickLapseTab();
     	 lb.clickCarryOver();
-    	 Thread.sleep(4000);
+    	 Thread.sleep(2000);
     	 lb.clickUpdateButton();
-    	 Thread.sleep(7000);
+    	 Thread.sleep(3000);
      }
-*/
-	@Test(priority=21)
+
+/*	@Test(priority=21)
 	public void ToCheckNoofCasualLeaveDaysthatareeithertobePrefixedorSuffixedtoaHolidaytomarkH_SC_292() throws InterruptedException{
 		ToCheckNoofCasualLeaveDayseitherPrefixedorSuffixedtoHolidaytomarkH mi = new ToCheckNoofCasualLeaveDayseitherPrefixedorSuffixedtoHolidaytomarkH(driver);
 		mi.clickMastserLink();
@@ -1045,7 +1067,7 @@ public class LeavePolicy extends BaseTest {
     	 lb.SelectAllotType("Period");
     	 lb.SelectAllotOn("Pay Days");
     	 lb.SelectRoundOff("None");
-    	 lb.SelectEffectiveFrom("Jan/2020");
+    	 lb.SelectEffectiveFrom("Jan/2021");
     	 lb.enterNoOfLeaves("2");
  		 lb.enterPeriodInDays("20");
  		 lb.clickUpdateButton();
@@ -1128,69 +1150,71 @@ public class LeavePolicy extends BaseTest {
 		 lb.clickLeaveAllotmentBox();
 		 lb.clickUpdateButton(); 
 		 Thread.sleep(6000);
-	}
-	
-	/*@Test(priority=23) 
+	}*/
+/*	
+	@Test(priority=26) 
      public void CheckAutoLeaveAllotmentWithMonthlyForEvenMonth_SC_301() throws InterruptedException{
-    	 CheckAutoLeaveAllotmentWithMonthlyForEvenMonth lb=new CheckAutoLeaveAllotmentWithMonthlyForEvenMonth(driver);
+    CheckAutoLeaveAllotmentWithMonthlyForEvenMonth lb=new CheckAutoLeaveAllotmentWithMonthlyForEvenMonth(driver);
  	lb.clickMastserLink();
  	lb.selectLeavePolicy();
  	lb.clickAddLeaves();
  	lb.clickSettingsLink();
- 	Thread.sleep(4000);
+ 	Thread.sleep(2000);
  	lb.clickAutoAllotTab();
- 	Thread.sleep(4000);
+ 	Thread.sleep(2000);
  	lb.clickLeaveAllotmentBox();
- 	Thread.sleep(4000);
+ 	Thread.sleep(2000);
  	lb.SelectAllotType("Period");
- 	Thread.sleep(4000);
+ 	Thread.sleep(2000);
  	lb.SelectAllotOn("Pay Days");
  	//lb.SelectRoundOff("None");
- 	lb.SelectEffectiveFrom("Apr/2016");
+ 	lb.SelectEffectiveFrom("Apr/2020");
  	Thread.sleep(5000);
  	lb.enterNoOfLeaves("2");
  	//lb.enterPeriodInDays("20");
  	lb.clickUpdateButton();
  	String d=lb.getMessage1();
  	Assert.assertEquals(d, "Setting was successfully updated.");
- 	Thread.sleep(6000);
+ 	Thread.sleep(2000);
  	lb.clickReport();
  	lb.clickAdvanceLeaveReport();
  	lb.selectLeaveReport("Summary");
  	lb.selectLeavePolicy("new");
- 	lb.clickPaymonth("Apr/2018");
+ 	lb.clickPaymonth("Apr/2020");
  	lb.clickSelectAllCheckBox();
  	lb.clickGetEmployee();
- 	Thread.sleep(4000);
+ 	Thread.sleep(2000);
  	lb.clickLoad();
- 	Thread.sleep(5000);
+ 	Thread.sleep(2000);
  	lb.clickEmployee1();
  	lb.clickEmployee2();
  	lb.clickGenerateReport();
- 	Thread.sleep(7000);
+ 	Thread.sleep(3000);
+ 	
  	lb.selectLeaveReport("Summary");
  	lb.selectLeavePolicy("new");
- 	lb.clickPaymonth("May/2018");
+ 	lb.clickPaymonth("May/2020");
  	//Thread.sleep(4000);
  	//lb.clickSelectAllCheckBox();
  	lb.clickGetEmployee();
- 	Thread.sleep(4000);
+ 	Thread.sleep(2000);
  	lb.clickLoad();
- 	Thread.sleep(5000);
+ 	Thread.sleep(2000);
  	lb.clickEmployee1();
  	lb.clickEmployee2();
  	lb.clickGenerateReport();
- 	Thread.sleep(5000);
+ 	Thread.sleep(2000);
  	lb.clickMastserLink();
  	lb.selectLeavePolicy();
  	lb.clickAddLeaves();
  	lb.clickSettingsLink();
- 	Thread.sleep(4000);
+ 	Thread.sleep(2000);
  	lb.clickAutoAllotTab();
  	lb.clickLeaveAllotmentBox();
  	lb.clickUpdateButton(); 
-}
-     @Test(priority=24) 
+ 	Thread.sleep(3000);
+}*/
+  /*   @Test(priority=27) 
      public void CheckAutoLeaveAllotmentWithMonthlyForOddMonth_SC_300() throws InterruptedException{
     	 CheckAutoLeaveAllotmentWithMonthlyForOddMonth lb=new CheckAutoLeaveAllotmentWithMonthlyForOddMonth(driver);
  	lb.clickMastserLink();
@@ -1237,7 +1261,7 @@ public class LeavePolicy extends BaseTest {
  	lb.clickUpdateButton(); 
 }
 
-     @Test(priority=25) 
+     @Test(priority=28) 
      public void CheckAutoLeaveAllotmentPreviousMonthWithPaydaysForEveryMonth_SC_305() throws InterruptedException{
     	 CheckAutoLeaveAllotmentPreviousMonthWithPaydaysForEveryMonth lb=new CheckAutoLeaveAllotmentPreviousMonthWithPaydaysForEveryMonth(driver);
  	lb.clickMastserLink();
@@ -1284,7 +1308,7 @@ public class LeavePolicy extends BaseTest {
  	lb.clickLeaveAllotmentBox();
  	lb.clickUpdateButton();    
 } 
-     @Test(priority=26) 
+     @Test(priority=29) 
      public void CheckAutoLeaveAllotmentPreviousMonthWithPresentDaysForEveryMonth_SC_306() throws InterruptedException{
     	 CheckAutoLeaveAllotmentPreviousMonthWithPresentDaysForEveryMonth lb=new CheckAutoLeaveAllotmentPreviousMonthWithPresentDaysForEveryMonth(driver);
  	lb.clickMastserLink();
@@ -1331,7 +1355,7 @@ public class LeavePolicy extends BaseTest {
  	lb.clickLeaveAllotmentBox();
  	lb.clickUpdateButton();    
 }
-     @Test(priority=42)
+     @Test(priority=30)
  	public void CheckforMaxCasualLeavethatcanbeavailedforinstance_SC_307() throws InterruptedException{
  		CheckforMaxCasualLeavethatcanbeavailedforinstance mc=new CheckforMaxCasualLeavethatcanbeavailedforinstance(driver);
  		mc.clickMastserLink();
@@ -1365,7 +1389,7 @@ public class LeavePolicy extends BaseTest {
  		Thread.sleep(2000);
  		mc.selectApplyButton();
  	}
-     @Test(priority=43) //not running
+     @Test(priority=31) //not running
  	public void CheckforMinimumNodaysshouldbeappliedtoavailtheCasualLeave_SC_308() throws InterruptedException{
  		CheckforMinimumNodaysshouldbeappliedtoavailtheCasualLeave mc=new CheckforMinimumNodaysshouldbeappliedtoavailtheCasualLeave(driver);
  		mc.clickMastserLink();
@@ -1411,7 +1435,7 @@ public class LeavePolicy extends BaseTest {
  		Assert.assertEquals(c, "Leave applied successfully.");
  	}
      
-     @Test(priority=41)
+     @Test(priority=32)
  	public void CheckAllowHalfaday_SC_309() throws InterruptedException{
  		CheckAllowHalfaday pd=new CheckAllowHalfaday(driver);
  		pd.clickMastserLink();
@@ -1443,7 +1467,7 @@ public class LeavePolicy extends BaseTest {
  	
  	}
      
-     @Test(priority=41)
+     @Test(priority=33)
  	public void CheckPriordaystoapplycasualleave_SC_310() throws InterruptedException{
  		CheckPriordaystoapplycasualleave pd=new CheckPriordaystoapplycasualleave(driver);
  		pd.clickMastserLink();
@@ -1475,7 +1499,7 @@ public class LeavePolicy extends BaseTest {
  	
  	
      
-     @Test(priority=27) 
+     @Test(priority=34) 
      public void UpdateAutoAllotSettingsMonthly_SC_356() throws InterruptedException{
     	 UpdateAutoAllotSettingsMonthly lb=new UpdateAutoAllotSettingsMonthly(driver);
  	lb.clickMastserLink();
@@ -1511,7 +1535,7 @@ public class LeavePolicy extends BaseTest {
  	lb.clickLeaveAllotmentBox();
  	lb.clickUpdateButton();  
 }
-     @Test(priority=28) 
+     @Test(priority=35) 
 	public void CheckAutoAllotSettingsMonthly_SC_357() throws InterruptedException{
 	    	 CheckAutoAllotSettingsMonthly lb=new CheckAutoAllotSettingsMonthly(driver);
 	lb.clickReport();

@@ -12,11 +12,12 @@ public class CheckAutoLeaveAllotmentWithMonthlyForEvenMonth extends BasePage{
 	WebElement masterLink;
 	@FindBy(xpath="//a[text()='Leave Policy']")
 	WebElement leavePolicy;
-    @FindBy(xpath="//table/tbody/tr/td[contains(text(),'Default')]/parent::tr/td[4]/a")
+    @FindBy(xpath="//table/tbody/tr/td[contains(text(),'ClonePolicy')]/parent::tr/td[4]/a")
 	WebElement addLeaves;
-    @FindBy(xpath="//div[2]/table/tbody/tr/td[contains(text(),'Casual Leave')]/parent::tr/td[3]/a")
+   // @FindBy(xpath="//*[@id=\"leave_policy_setting_details\"]/div[2]/table/tbody/tr/td[2][contains(text(),'Earned')]/parent::tr/td[3]/a")
+    @FindBy(xpath="//*[@id=\"leave_policy_setting_details\"]/div[2]/table/tbody/tr/td[2][contains(text(),'Casual')]/parent::tr/td[3]/a")
     WebElement settingsLink;
-    @FindBy(xpath="//span[contains(text(),'Auto Allot Settings')]")
+    @FindBy(xpath="//*[@id=\"main\"]/div/div[3]/nav/ul/li[4]/a/span")
     WebElement AutoAllotTab;
     @FindBy(id="auto_leave_allotment")
     WebElement LeaveAllotmentBox;
@@ -32,8 +33,10 @@ public class CheckAutoLeaveAllotmentWithMonthlyForEvenMonth extends BasePage{
     WebElement NoOfLeaves;
     @FindBy(id="leave_policy_head_wise_setting_auto_allot_settings_period")
     WebElement PeriodInDays;
+    
     @FindBy(xpath="//*[@id=\"auto_allot_setting\"]/table/tbody/tr[3]/td/input")
     WebElement UpdateButton;
+    
     @FindBy(xpath="//*[@id=\"leave_policy_head_wise_settings_response\"]/div/strong")
     WebElement SuccessfulMessage;
     @FindBy(id="leave")
@@ -42,7 +45,7 @@ public class CheckAutoLeaveAllotmentWithMonthlyForEvenMonth extends BasePage{
     WebElement AppyLeaveLink;
     @FindBy(id="filter_head")
     WebElement Filter;
-    @FindBy(xpath="//*[@id=\"bf_form\"]/div/button[contains(text(),'LOAD')]")
+    @FindBy(xpath="//*[@id=\"bf_form\"]/div[9]/button[1]")
     WebElement Load;
     @FindBy(xpath="//*[@id=\"dt_leave_details\"]/tbody/tr[1]/td[3]/a")
     WebElement ApplyLeave;
@@ -68,35 +71,33 @@ public class CheckAutoLeaveAllotmentWithMonthlyForEvenMonth extends BasePage{
 	WebElement Employee2;
 	@FindBy(id="leave_report_submit")
 	WebElement GenerateReport;
-	@FindBy(id="leave_policy_head_wise_setting_auto_allot_settings_for")
-	WebElement For;
 	
 	public CheckAutoLeaveAllotmentWithMonthlyForEvenMonth(WebDriver driver) {
 		super(driver);
 		PageFactory.initElements(driver,this);
 	}
+
 	public void clickMastserLink(){
 		masterLink.click();
 	}
+
 	public void selectLeavePolicy(){
 		leavePolicy.click();
 	}
+	
 	public void clickAddLeaves(){
 		addLeaves.click();
 	}
+	
 	public void clickSettingsLink(){
 		settingsLink.click();
 	}
+	
 	public void clickAutoAllotTab(){
 		AutoAllotTab.click();
 	}
 	public void clickLeaveAllotmentBox(){
-		if(LeaveAllotmentBox.isSelected()) {
-			System.out.println("Already Selected");
-		}
-		else {
-			LeaveAllotmentBox.click();
-		}	
+		LeaveAllotmentBox.click();
 	}
 	public void SelectAllotType(String value) {
 		dropDownSelect(AllotType, value);
@@ -116,6 +117,7 @@ public class CheckAutoLeaveAllotmentWithMonthlyForEvenMonth extends BasePage{
 	public void enterPeriodInDays(String value) {
 		PeriodInDays.sendKeys(value);
 	}
+	
 	public void clickUpdateButton(){
 		UpdateButton.click();
 	}
@@ -131,6 +133,8 @@ public class CheckAutoLeaveAllotmentWithMonthlyForEvenMonth extends BasePage{
 	public void clickFilter(){
 		Filter.click();
 	}
+	
+	
 	public void clickApplyLeave(){
 		ApplyLeave.click();
 	}
@@ -165,16 +169,12 @@ public class CheckAutoLeaveAllotmentWithMonthlyForEvenMonth extends BasePage{
 	public void clickEmployee1(){
 		Employee1.click();
 	}
+	
 	public void clickEmployee2(){
 		Employee2.click();
 	}
 	public void clickGenerateReport(){
 		GenerateReport.click();
 	}
-	public void SelectFor(String value) {
-		dropDownSelect(For, value);
-	}
-	public void UnselectAutoLeave() {
-		LeaveAllotmentBox.click();
-	}
+
 }

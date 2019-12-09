@@ -13,7 +13,7 @@ public class CheckForCarryOverInLeavePolicy extends BasePage{
 	WebElement masterLink;
 	@FindBy(xpath="//a[text()='Leave Policy']")
 	WebElement leavePolicy;
-    @FindBy(xpath="//table/tbody/tr/td[contains(text(),'Default')]/parent::tr/td[4]/a")
+    @FindBy(xpath="//table/tbody/tr/td[contains(text(),'ClonePolicy')]/parent::tr/td[4]/a")
 	WebElement addLeaves;
     @FindBy(xpath="//div[2]/table/tbody/tr/td[contains(text(),'Casual Leave')]/parent::tr/td[3]/a")
     WebElement settingsLink;
@@ -33,11 +33,16 @@ public class CheckForCarryOverInLeavePolicy extends BasePage{
     WebElement Filter;
     @FindBy(xpath="//button[text()='LOAD']")
     WebElement Load;
-    @FindBy(xpath="//tbody/tr/td[contains(text(),'Zain')]/parent::tr/td[3]/a")
+    @FindBy(xpath="//tbody/tr/td[contains(text(),'LeaveB')]/parent::tr/td[3]/a")
     WebElement ApplyLeave;
 	@FindBy(xpath="//span[contains(text(),'LEAVE SUMMARY')]")
 	WebElement LeaveSummaryTab;
+	@FindBy(xpath="//tbody//tr/td[contains(text(),'CL')]/parent::tr/td[9]")
+	WebElement CLBalance;
 	
+	public String getCLBalance(){
+		return CLBalance.getText();
+	}
 	public CheckForCarryOverInLeavePolicy(WebDriver driver) {
 		super(driver);
 		PageFactory.initElements(driver,this);

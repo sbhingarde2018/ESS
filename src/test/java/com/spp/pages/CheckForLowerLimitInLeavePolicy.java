@@ -36,7 +36,7 @@ public class CheckForLowerLimitInLeavePolicy extends BasePage{
     WebElement Filter;
     @FindBy(xpath="//button[text()='LOAD']")
     WebElement Load;
-    @FindBy(xpath="//tbody/tr/td[contains(text(),'Zain')]/parent::tr/td[3]/a")
+    @FindBy(xpath="//tbody/tr/td[contains(text(),'LeaveB')]/parent::tr/td[3]/a")
     WebElement ApplyLeave;
 	@FindBy(xpath="//span[contains(text(),'LEAVE SUMMARY')]")
 	WebElement LeaveSummaryTab;
@@ -86,12 +86,7 @@ public class CheckForLowerLimitInLeavePolicy extends BasePage{
 		LapseTab.click();
 	}
 	public void clickCarryOver(){
-		if(CarryOver.isSelected()) {
-			System.out.println("Already Selected");
-		}
-		else {
-			jsclick(CarryOver);
-		}
+		CarryOver.click();
 	}
 	public void clickLowerLimit(){
 		LowerLimit.click();
@@ -158,7 +153,5 @@ public class CheckForLowerLimitInLeavePolicy extends BasePage{
 	public void clickGenerateReport(){
 		GenerateReport.click();
 	}
-	public void UnselectCarryOver() {
-		jsclick(CarryOver);
-	}
+
 }
