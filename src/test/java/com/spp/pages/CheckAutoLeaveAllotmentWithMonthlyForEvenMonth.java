@@ -29,7 +29,7 @@ public class CheckAutoLeaveAllotmentWithMonthlyForEvenMonth extends BasePage{
     WebElement RoundOff;
     @FindBy(id="leave_policy_head_wise_setting_auto_allot_settings_effective_from")
     WebElement EffectiveFrom;
-    @FindBy(xpath="//*[@id=\"auto_leave_config_div\"]/fieldset/table/tbody/tr[2]/td[2]/input")
+    @FindBy(xpath="//input[@id='leave_policy_head_wise_setting_auto_allot_settings_no_of_days']")
     WebElement NoOfLeaves;
     @FindBy(id="leave_policy_head_wise_setting_auto_allot_settings_period")
     WebElement PeriodInDays;
@@ -45,7 +45,7 @@ public class CheckAutoLeaveAllotmentWithMonthlyForEvenMonth extends BasePage{
     WebElement AppyLeaveLink;
     @FindBy(id="filter_head")
     WebElement Filter;
-    @FindBy(xpath="//*[@id=\"bf_form\"]/div[9]/button[1]")
+    @FindBy(xpath="//form[@id='bf_form']//button[contains(text(),'LOAD')]")
     WebElement Load;
     @FindBy(xpath="//*[@id=\"dt_leave_details\"]/tbody/tr[1]/td[3]/a")
     WebElement ApplyLeave;
@@ -57,9 +57,9 @@ public class CheckAutoLeaveAllotmentWithMonthlyForEvenMonth extends BasePage{
 	WebElement AdvanceLeaveReport;
 	@FindBy(id="leave_report_type")
 	WebElement LeaveReport;
-	@FindBy(id="leave_policy")
+	@FindBy(xpath="//select[@id='leave_policy']")
 	WebElement LeavePolicy;
-	@FindBy(id="paymonth")
+	@FindBy(xpath="//input[@id='paymonth']")
 	WebElement Paymonth;
 	@FindBy(id="select_all_leaves")
 	WebElement SelectAllCheckBox;
@@ -71,6 +71,8 @@ public class CheckAutoLeaveAllotmentWithMonthlyForEvenMonth extends BasePage{
 	WebElement Employee2;
 	@FindBy(id="leave_report_submit")
 	WebElement GenerateReport;
+	@FindBy(xpath="//select[@id='leave_policy_head_wise_setting_auto_allot_settings_for']")
+	WebElement ForMonth;
 	
 	public CheckAutoLeaveAllotmentWithMonthlyForEvenMonth(WebDriver driver) {
 		super(driver);
@@ -104,6 +106,9 @@ public class CheckAutoLeaveAllotmentWithMonthlyForEvenMonth extends BasePage{
 	}
 	public void SelectAllotOn(String value) {
 		dropDownSelect(AllotOn, value);
+	}
+	public void SelectForMonth(String value) {
+		dropDownSelect(ForMonth, value);
 	}
 	public void SelectRoundOff(String value) {
 		dropDownSelect(RoundOff, value);

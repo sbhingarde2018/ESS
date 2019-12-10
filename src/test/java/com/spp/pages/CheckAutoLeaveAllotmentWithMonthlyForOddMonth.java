@@ -14,26 +14,29 @@ public class CheckAutoLeaveAllotmentWithMonthlyForOddMonth extends BasePage {
 	WebElement leavePolicy;
     @FindBy(xpath="//table/tbody/tr/td[contains(text(),'ClonePolicy')]/parent::tr/td[4]/a")
 	WebElement addLeaves;
-    @FindBy(xpath="//div[2]/table/tbody/tr/td[contains(text(),'Casual Leave')]/parent::tr/td[3]/a")
+   // @FindBy(xpath="//*[@id=\"leave_policy_setting_details\"]/div[2]/table/tbody/tr/td[2][contains(text(),'Earned')]/parent::tr/td[3]/a")
+    @FindBy(xpath="//*[@id=\"leave_policy_setting_details\"]/div[2]/table/tbody/tr/td[2][contains(text(),'Casual')]/parent::tr/td[3]/a")
     WebElement settingsLink;
     @FindBy(xpath="//*[@id=\"main\"]/div/div[3]/nav/ul/li[4]/a/span")
     WebElement AutoAllotTab;
     @FindBy(id="auto_leave_allotment")
     WebElement LeaveAllotmentBox;
-    @FindBy(xpath="//*[@id=\"auto_leave_allotment_div\"]/table/tbody/tr[2]/td[1]/select")
+    @FindBy(id="leave_policy_head_wise_setting_auto_allot_settings_allot_type")
     WebElement AllotType;
-    @FindBy(xpath="//*[@id=\"auto_leave_allotment_div\"]/table/tbody/tr[2]/td[2]/div[1]/select")
+    @FindBy(id="leave_policy_head_wise_setting_auto_allot_settings_allot_on")
     WebElement AllotOn;
     @FindBy(id="leave_policy_head_wise_setting_auto_allot_settings_round_off")
     WebElement RoundOff;
     @FindBy(id="leave_policy_head_wise_setting_auto_allot_settings_effective_from")
     WebElement EffectiveFrom;
-    @FindBy(xpath="//*[@id=\"auto_leave_config_div\"]/fieldset/table/tbody/tr[2]/td[2]/input")
+    @FindBy(xpath="//input[@id='leave_policy_head_wise_setting_auto_allot_settings_no_of_days']")
     WebElement NoOfLeaves;
     @FindBy(id="leave_policy_head_wise_setting_auto_allot_settings_period")
     WebElement PeriodInDays;
+    
     @FindBy(xpath="//*[@id=\"auto_allot_setting\"]/table/tbody/tr[3]/td/input")
     WebElement UpdateButton;
+    
     @FindBy(xpath="//*[@id=\"leave_policy_head_wise_settings_response\"]/div/strong")
     WebElement SuccessfulMessage;
     @FindBy(id="leave")
@@ -42,7 +45,7 @@ public class CheckAutoLeaveAllotmentWithMonthlyForOddMonth extends BasePage {
     WebElement AppyLeaveLink;
     @FindBy(id="filter_head")
     WebElement Filter;
-    @FindBy(xpath="//*[@id=\"bf_form\"]/div/button[contains(text(),'LOAD')]")
+    @FindBy(xpath="//form[@id='bf_form']//button[contains(text(),'LOAD')]")
     WebElement Load;
     @FindBy(xpath="//*[@id=\"dt_leave_details\"]/tbody/tr[1]/td[3]/a")
     WebElement ApplyLeave;
@@ -54,9 +57,9 @@ public class CheckAutoLeaveAllotmentWithMonthlyForOddMonth extends BasePage {
 	WebElement AdvanceLeaveReport;
 	@FindBy(id="leave_report_type")
 	WebElement LeaveReport;
-	@FindBy(id="leave_policy")
+	@FindBy(xpath="//select[@id='leave_policy']")
 	WebElement LeavePolicy;
-	@FindBy(id="paymonth")
+	@FindBy(xpath="//input[@id='paymonth']")
 	WebElement Paymonth;
 	@FindBy(id="select_all_leaves")
 	WebElement SelectAllCheckBox;
@@ -68,8 +71,8 @@ public class CheckAutoLeaveAllotmentWithMonthlyForOddMonth extends BasePage {
 	WebElement Employee2;
 	@FindBy(id="leave_report_submit")
 	WebElement GenerateReport;
-	@FindBy(id="leave_policy_head_wise_setting_auto_allot_settings_for")
-	WebElement For;
+	@FindBy(xpath="//select[@id='leave_policy_head_wise_setting_auto_allot_settings_for']")
+	WebElement ForMonth;
 	
 	public CheckAutoLeaveAllotmentWithMonthlyForOddMonth(WebDriver driver) {
 		super(driver);
@@ -96,18 +99,16 @@ public class CheckAutoLeaveAllotmentWithMonthlyForOddMonth extends BasePage {
 		AutoAllotTab.click();
 	}
 	public void clickLeaveAllotmentBox(){
-		if(LeaveAllotmentBox.isSelected()) {
-			System.out.println("Already Selected");
-		}
-		else {
-			LeaveAllotmentBox.click();
-		}	
+		LeaveAllotmentBox.click();
 	}
 	public void SelectAllotType(String value) {
 		dropDownSelect(AllotType, value);
 	}
 	public void SelectAllotOn(String value) {
 		dropDownSelect(AllotOn, value);
+	}
+	public void SelectForMonth(String value) {
+		dropDownSelect(ForMonth, value);
 	}
 	public void SelectRoundOff(String value) {
 		dropDownSelect(RoundOff, value);
@@ -121,6 +122,7 @@ public class CheckAutoLeaveAllotmentWithMonthlyForOddMonth extends BasePage {
 	public void enterPeriodInDays(String value) {
 		PeriodInDays.sendKeys(value);
 	}
+	
 	public void clickUpdateButton(){
 		UpdateButton.click();
 	}
@@ -136,6 +138,8 @@ public class CheckAutoLeaveAllotmentWithMonthlyForOddMonth extends BasePage {
 	public void clickFilter(){
 		Filter.click();
 	}
+	
+	
 	public void clickApplyLeave(){
 		ApplyLeave.click();
 	}
@@ -177,10 +181,6 @@ public class CheckAutoLeaveAllotmentWithMonthlyForOddMonth extends BasePage {
 	public void clickGenerateReport(){
 		GenerateReport.click();
 	}
-	public void SelectFor(String value) {
-		dropDownSelect(For, value);
-	}
-	public void UnselectAutoLeave() {
-		LeaveAllotmentBox.click();
-	}
+
+
 }
