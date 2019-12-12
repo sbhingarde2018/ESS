@@ -12,8 +12,9 @@ public class UpdateAutoAllotSettingsHalfYearly extends BasePage{
 	WebElement masterLink;
 	@FindBy(xpath="//a[text()='Leave Policy']")
 	WebElement leavePolicy;
-	@FindBy(xpath="//table/tbody/tr/td[contains(text(),'Default')]/parent::tr/td[4]/a")
+	@FindBy(xpath="//table/tbody/tr/td[contains(text(),'ClonePolicy')]/parent::tr/td[4]/a")
 	WebElement addLeaves;
+   // @FindBy(xpath="//*[@id=\"leave_policy_setting_details\"]/div[2]/table/tbody/tr/td[2][contains(text(),'Earned')]/parent::tr/td[3]/a")
 	@FindBy(xpath="//div[2]/table/tbody/tr/td[contains(text(),'Casual Leave')]/parent::tr/td[3]/a")
     WebElement settingsLink;
     @FindBy(xpath="//*[@id=\"main\"]/div/div[3]/nav/ul/li[4]/a/span")
@@ -32,12 +33,14 @@ public class UpdateAutoAllotSettingsHalfYearly extends BasePage{
     WebElement EveryMonth;
     @FindBy(id="leave_policy_head_wise_setting_auto_allot_settings_effective_from")
     WebElement EffectiveFrom;
-    @FindBy(xpath="//*[@id=\"leave_policy_head_wise_setting_auto_allot_settings_no_of_days\"]")
+    @FindBy(xpath="//input[@id='leave_policy_head_wise_setting_auto_allot_settings_no_of_days']")
     WebElement NoOfLeaves;
     @FindBy(id="leave_policy_head_wise_setting_auto_allot_settings_period")
     WebElement PeriodInDays;
+    
     @FindBy(xpath="//*[@id=\"auto_allot_setting\"]/table/tbody/tr[3]/td/input")
     WebElement UpdateButton;
+    
     @FindBy(xpath="//*[@id=\"leave_policy_head_wise_settings_response\"]/div/strong")
     WebElement SuccessfulMessage;
     @FindBy(id="leave")
@@ -79,12 +82,7 @@ public class UpdateAutoAllotSettingsHalfYearly extends BasePage{
 		AutoAllotTab.click();
 	}
 	public void clickLeaveAllotmentBox(){
-		if(LeaveAllotmentBox.isSelected()) {
-			System.out.println("Already Selected");
-		}
-		else {
-			LeaveAllotmentBox.click();
-		}
+		LeaveAllotmentBox.click();
 	}
 	public void SelectAllotType(String value) {
 		dropDownSelect(AllotType, value);
@@ -106,7 +104,6 @@ public class UpdateAutoAllotSettingsHalfYearly extends BasePage{
 		dropDownSelect(EffectiveFrom, value);
 	}
 	public void enterNoOfLeaves(String value) {
-		NoOfLeaves.clear();
 		NoOfLeaves.sendKeys(value);
 	}
 	public void enterPeriodInDays(String value) {
@@ -135,9 +132,6 @@ public class UpdateAutoAllotSettingsHalfYearly extends BasePage{
 	}
 	public void clickLeaveSummaryTab(){
 		LeaveSummaryTab.click();
-	}
-	public void UncheckAuto() {
-		LeaveAllotmentBox.click();
 	}
 	
 }
