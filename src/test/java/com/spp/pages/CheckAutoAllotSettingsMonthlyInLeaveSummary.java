@@ -13,9 +13,10 @@ public class CheckAutoAllotSettingsMonthlyInLeaveSummary extends BasePage{
 	WebElement masterLink;
 	@FindBy(xpath="//a[text()='Leave Policy']")
 	WebElement leavePolicy;
-    @FindBy(xpath="//table/tbody/tr/td[contains(text(),'Default')]/parent::tr/td[4]/a")
+    @FindBy(xpath="//div[@id='leave-policy-master-list']//tr[1]//td[4]//a[text()='Add Leaves']")
 	WebElement addLeaves;
-    @FindBy(xpath="//div[2]/table/tbody/tr/td[contains(text(),'Casual Leave')]/parent::tr/td[3]/a")
+   // @FindBy(xpath="//*[@id=\"leave_policy_setting_details\"]/div[2]/table/tbody/tr/td[2][contains(text(),'Earned')]/parent::tr/td[3]/a")
+    @FindBy(xpath="//*[@id=\"leave_policy_setting_details\"]/div[2]/table/tbody/tr/td[2][contains(text(),'Casual')]/parent::tr/td[3]/a")
     WebElement settingsLink;
     @FindBy(xpath="//*[@id=\"main\"]/div/div[3]/nav/ul/li[4]/a/span")
     WebElement AutoAllotTab;
@@ -33,31 +34,30 @@ public class CheckAutoAllotSettingsMonthlyInLeaveSummary extends BasePage{
     WebElement EveryMonth;
     @FindBy(id="leave_policy_head_wise_setting_auto_allot_settings_effective_from")
     WebElement EffectiveFrom;
-    @FindBy(xpath="//*[@id=\"leave_policy_head_wise_setting_auto_allot_settings_no_of_days\"]")
+    @FindBy(xpath="//*[@id=\"auto_leave_config_div\"]/fieldset/table/tbody/tr[2]/td[2]/input")
     WebElement NoOfLeaves;
     @FindBy(id="leave_policy_head_wise_setting_auto_allot_settings_period")
     WebElement PeriodInDays;
+    
     @FindBy(xpath="//*[@id=\"auto_allot_setting\"]/table/tbody/tr[3]/td/input")
     WebElement UpdateButton;
     @FindBy(id="leave")
-	WebElement LeaveLink;
-	@FindBy(linkText="Apply Leave")
-	WebElement AppyLeaveLink;
-	@FindBy(id="filter_head")
-	WebElement Filter;
-	@FindBy(xpath="//*[@id=\"bf_form\"]/div/button[contains(text(),'LOAD')]")
-	WebElement Load;
-	@FindBy(xpath="//*[@id=\"dt_leave_details\"]/tbody/tr[2]/td[3]/a")
-	WebElement ApplyLeave;
-	@FindBy(xpath="//span[contains(text(),'LEAVE SUMMARY')]")
-	WebElement LeaveSummaryTab;
+	    WebElement LeaveLink;
+	    @FindBy(linkText="Apply Leave")
+	    WebElement AppyLeaveLink;
+	    @FindBy(id="filter_head")
+	    WebElement Filter;
+	    @FindBy(xpath="//form[@id='bf_form']//button[contains(text(),'LOAD')]")
+	    WebElement Load;
+	    @FindBy(xpath="//tbody/tr/td[contains(text(),'LeaveB')]/parent::tr/td[3]/a")
+	    WebElement ApplyLeave;
+		@FindBy(xpath="//div[@class='wrapper clearfix pt0']//li[2]//a[1]")
+		WebElement LeaveSummaryTab;
 		
 		public CheckAutoAllotSettingsMonthlyInLeaveSummary(WebDriver driver) {
 			super(driver);
 			PageFactory.initElements(driver,this);
-			
-		}
-		public void clickMastserLink(){
+		}public void clickMastserLink(){
 			masterLink.click();
 		}
 
@@ -77,12 +77,7 @@ public class CheckAutoAllotSettingsMonthlyInLeaveSummary extends BasePage{
 			AutoAllotTab.click();
 		}
 		public void clickLeaveAllotmentBox(){
-			if(LeaveAllotmentBox.isSelected()) {
-				System.out.println("Already Selected");
-			}
-			else {
-				LeaveAllotmentBox.click();
-			}		
+			LeaveAllotmentBox.click();
 		}
 		public void SelectAllotType(String value) {
 			dropDownSelect(AllotType, value);
@@ -104,7 +99,6 @@ public class CheckAutoAllotSettingsMonthlyInLeaveSummary extends BasePage{
 			dropDownSelect(EffectiveFrom, value);
 		}
 		public void enterNoOfLeaves(String value) {
-			NoOfLeaves.clear();
 			NoOfLeaves.sendKeys(value);
 		}
 		public void enterPeriodInDays(String value) {
@@ -112,30 +106,30 @@ public class CheckAutoAllotSettingsMonthlyInLeaveSummary extends BasePage{
 		}
 				   
 		public void clickLeaveLink(){
-			LeaveLink.click();
-		}
-		public void clickAppyLeaveLink(){
-			AppyLeaveLink.click();
-		}
-		public void clickFilter(){
-			Filter.click();
-		}
-		public void clickLoad(){
-			Load.click();
-		}
+				LeaveLink.click();
+			}
+			public void clickAppyLeaveLink(){
+				AppyLeaveLink.click();
+			}
+			public void clickFilter(){
+				Filter.click();
+			}
+			public void clickLoad(){
+				Load.click();
+			}
 			
-		public void clickApplyLeave(){
-			ApplyLeave.click();
+			public void clickApplyLeave(){
+				ApplyLeave.click();
+			}
+			public void clickLeaveSummaryTab(){
+				LeaveSummaryTab.click();
+			}
+		
+			public void clickUpdateButton(){
+				UpdateButton.click();
+			}
+			   
+			
 		}
-		public void clickLeaveSummaryTab(){
-			jsclick(LeaveSummaryTab);
-		}
-		public void clickUpdateButton(){
-			UpdateButton.click();
-		} 
-		public void UncheckAuto() {
-			LeaveAllotmentBox.click();
-		}
-	}
 
 
