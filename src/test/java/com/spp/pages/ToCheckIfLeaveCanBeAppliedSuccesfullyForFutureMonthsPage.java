@@ -17,12 +17,12 @@ public class ToCheckIfLeaveCanBeAppliedSuccesfullyForFutureMonthsPage extends Ba
 	WebElement masterLink;
 	@FindBy(xpath="//*[@id=\"menu\"]/li[3]/div/div[3]/ul/li[2]/a")
 	WebElement leavePolicy;
-	@FindBy(xpath="//table/tbody/tr/td[contains(text(),'ClonePolicy')]/parent::tr/td[4]/a")
+	@FindBy(xpath="//table/tbody/tr/td[contains(text(),'Default')]/parent::tr/td[4]/a")
 	WebElement AddLeaves;
 	@FindBy(xpath="//div[2]/table/tbody/tr/td[contains(text(),'Casual Leave')]/parent::tr/td[3]/a")
 	WebElement settingsLink;
-	@FindBy(id="leave_policy_head_wise_setting_behaviour_settings_min_days_applied")
-	WebElement MinimumDaystoapplyCasualLeave;
+	@FindBy(xpath="//input[@id='leave_policy_head_wise_setting_behaviour_settings_max_leave_year']")
+	WebElement MaxLeavePerYear;
 	@FindBy(xpath="//*[@id=\"behaviour_policy_setting\"]/div[3]/input")
 	WebElement UpdateButton;
 	@FindBy(xpath="//*[@id=\"leave_policy_head_wise_settings_response\"]/div/strong")
@@ -35,7 +35,7 @@ public class ToCheckIfLeaveCanBeAppliedSuccesfullyForFutureMonthsPage extends Ba
 	    WebElement Filter;
 	    @FindBy(xpath="//form[@id='bf_form']//button[contains(text(),'LOAD')]")
 	    WebElement Load;
-	    @FindBy(xpath="//tbody/tr/td[contains(text(),'LeaveB')]/parent::tr/td[3]/a")
+	    @FindBy(xpath="//tbody/tr/td[contains(text(),'LeaveA')]/parent::tr/td[3]/a")
 	    WebElement ApplyLeave;
 		@FindBy(id="leave_detail_leave_definition_id")
 		WebElement LeaveType;
@@ -74,9 +74,9 @@ public class ToCheckIfLeaveCanBeAppliedSuccesfullyForFutureMonthsPage extends Ba
 		public void clickSettingsLink(){
 			settingsLink.click();
 		}
-		public void entermindaystoapplycasualleave(String value) {
-			MinimumDaystoapplyCasualLeave.clear();
-			MinimumDaystoapplyCasualLeave.sendKeys(value);
+		public void enterMaxLeavePerYear(String value) {
+			MaxLeavePerYear.clear();
+			MaxLeavePerYear.sendKeys(value);
 		}
 		public void clickUpdateButton(){
 			UpdateButton.click();

@@ -119,6 +119,12 @@ public class HolidayWeeklyoffSettings extends BasePage{
 	WebElement LeaveHistory;
     @FindBy(xpath="//*[@id=\"from_date\"]")
 	WebElement LeaveHistoryFromDate;
+    @FindBy(xpath="//input[@id='leave_policy_head_wise_setting_holiday_settings_lev_ho_lev']")
+    WebElement HolidayCL;
+    @FindBy(xpath="//input[@id='leave_policy_head_wise_setting_weekly_off_settings_lev_wof_lev']")
+    WebElement WeeklyOffCL;
+    @FindBy(xpath="//*[@id='behaviour_policy_setting']/div[3]/input")
+    WebElement UpdateButtonA;
     
     public void selectLeaveHistory(){
 		jsclick(LeaveHistory);
@@ -234,5 +240,27 @@ public class HolidayWeeklyoffSettings extends BasePage{
 	}
 	public void clickWeeklyOffPrefixCheckbox() {
 		WeeklyOffPrefix.click();
+	}
+	public void HolidayPrefixLeaves(String value) {
+		HolidayNoofLeaveDays.clear();
+		HolidayNoofLeaveDays.sendKeys(value);
+		HolidayNoofLeaveDays.sendKeys(Keys.TAB);
+	}
+	public void clickHolidayCL() {
+		HolidayCL.click();
+	}
+	public void clickWeeklyOffCL() {
+		WeeklyOffCL.click();
+	}
+	public void enterCasualLeaveallowedavailforyear(String value){
+		casualLeaveallowedavailforyear.clear();
+		casualLeaveallowedavailforyear.sendKeys(value);
+	}
+	public void enterCasualLeaveallowedavaiformonth(String value){
+		casualLeaveallowedavaiformonth.clear();
+		casualLeaveallowedavaiformonth.sendKeys(value);
+	}
+	public void clickUpdateButtonA(){
+		UpdateButtonA.click();
 	}
 }

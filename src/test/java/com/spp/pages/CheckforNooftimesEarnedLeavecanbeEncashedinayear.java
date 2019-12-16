@@ -39,7 +39,7 @@ public class CheckforNooftimesEarnedLeavecanbeEncashedinayear extends BasePage{
 	WebElement ClickOnFilter;
 	@FindBy(xpath="//button[text()='LOAD']")
 	WebElement ClickOnLoad;
-	@FindBy(xpath="//tbody/tr[1]/td[3]/a")
+	@FindBy(xpath="//tbody/tr/td[contains(text(),'LeaveA')]/parent::tr/td[3]/a")
 	WebElement ClickonView;
 	@FindBy(xpath="//a[text()='Add New Leave Encashment']")
 	WebElement AddNewLeaveEncashment;

@@ -19,7 +19,7 @@ public class CheckforMinEarnedLeavecanbeEncashedperinstance extends BasePage{
 	WebElement ClickOnSettings;
 	@FindBy(xpath="//*[@id=\"main\"]/div/div[3]/nav/ul/li[2]/a/span")
 	WebElement ClickOnLapseCarry;
-	@FindBy(id="leave_policy_head_wise_setting_encashment_settings_encash")
+	@FindBy(xpath="//input[@id='leave_policy_head_wise_setting_encashment_settings_encash']")
 	WebElement AllowLeavetobeEncashed;
 	@FindBy(id="leave_policy_head_wise_setting_encashment_settings_min_encash")
 	WebElement MinimumLeaveEncash;
@@ -35,7 +35,7 @@ public class CheckforMinEarnedLeavecanbeEncashedperinstance extends BasePage{
 	WebElement ClickOnFilter;
 	@FindBy(xpath="//*[@id=\"bf_form\"]/div/button[contains(text(),'LOAD')]")
 	WebElement ClickOnLoad;
-	@FindBy(xpath="//tbody/tr[1]/td[3]/a")
+	@FindBy(xpath="//tbody/tr/td[contains(text(),'LeaveA')]/parent::tr/td[3]/a")
 	WebElement ClickonView;
 	@FindBy(xpath="//a[text()='Add New Leave Encashment']")
 	WebElement AddNewLeaveEncashment;

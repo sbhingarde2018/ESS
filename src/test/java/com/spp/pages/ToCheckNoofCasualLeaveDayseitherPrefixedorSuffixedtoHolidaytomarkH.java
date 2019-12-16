@@ -106,7 +106,8 @@ public class ToCheckNoofCasualLeaveDayseitherPrefixedorSuffixedtoHolidaytomarkH 
 	WebElement FromDatePicker;
 	@FindBy(xpath="//*[@id='ui-datepicker-div']/table/tbody/tr[3]/td[6]/a")
 	WebElement ToDatePicker;
-	
+	@FindBy(xpath="//*[@id='behaviour_policy_setting']/div[3]/input")
+	WebElement UpdateButtonA;
 
 	public ToCheckNoofCasualLeaveDayseitherPrefixedorSuffixedtoHolidaytomarkH(WebDriver driver) {
 		super(driver);
@@ -196,5 +197,24 @@ public class ToCheckNoofCasualLeaveDayseitherPrefixedorSuffixedtoHolidaytomarkH 
 	}
 	public void clickSearchButton(){
 		SearchButton.click();
+	}
+	public void enterCasualLeaveallowedavailforyear(String value){
+		casualLeaveallowedavailforyear.clear();
+		casualLeaveallowedavailforyear.sendKeys(value);
+	}
+	public void enterCasualLeaveallowedavaiformonth(String value){
+		casualLeaveallowedavaiformonth.clear();
+		casualLeaveallowedavaiformonth.sendKeys(value);
+	}
+	public void clickUpdateButtonA(){
+		UpdateButtonA.click();
+	}
+	public void clickAllowHalfDay(){
+		if(allowHalfDay.isSelected()) {
+			System.out.println("Already Selected");
+		}
+		else {
+		allowHalfDay.click();
+		}
 	}
 }
