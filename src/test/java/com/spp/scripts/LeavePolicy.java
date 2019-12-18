@@ -600,7 +600,7 @@ public class LeavePolicy extends BaseTest {
     	lb.clickLapseTab();
     	Thread.sleep(3000);
     	lb.clickCarryOver();
-    	lb.clickCarryOver();
+    	//lb.clickCarryOver();
     	lb.clickUpdateButton();
     	Thread.sleep(9000);
     	String d=lb.getMessage1();
@@ -1645,8 +1645,8 @@ public class LeavePolicy extends BaseTest {
  		Thread.sleep(3000);
  		pd.clickApplyLeave();
  		pd.selectLeaveType("Casual Leave (CL)");
- 		pd.enterFromDate("19 December 2019"); //change date as per todays date.
- 		pd.enterToDate("19 December 2019");
+ 		pd.enterFromDate("20 December 2019"); //change date as per todays date.
+ 		pd.enterToDate("20 December 2019");
  		pd.selectApplyButton();
  		String e=pd.getMessage2();
  		Assert.assertEquals(e, "Leave applied successfully.");

@@ -128,16 +128,26 @@ public class ToCheckifappliedCasualLeavehasWeeklyOffconsiderasCasualLeavewithpre
 	public void clickWeeklyOff(){
 		WeeklyOff.click();
 	}
-	public void clickWeeklyOffLeaveCheckbox() {
-		LeaveHasWeeklyOff.click();
+	public void clickWeeklyOffLeaveCheckbox(){
+		if(LeaveHasWeeklyOff.isSelected()) {
+			System.out.println("Already Selected");
+		}
+		else {
+			LeaveHasWeeklyOff.click();
+		}
 	}
 	public void WeeklyOffPrefixLeaves(String value) {
 		WeeklyOffNoofLeaveDays.clear();
 		WeeklyOffNoofLeaveDays.sendKeys(value);
 		WeeklyOffNoofLeaveDays.sendKeys(Keys.TAB);
 	}
-	public void clickWeeklyOffPrefixCheckbox() {
-		WeeklyOffPrefix.click();
+	public void clickWeeklyOffPrefixCheckbox(){
+		if(WeeklyOffPrefix.isSelected()) {
+			System.out.println("Already Selected");
+		}
+		else {
+			WeeklyOffPrefix.click();
+		}
 	}
 	public void clickUpdateButton() {
 		UpdateButton.click();

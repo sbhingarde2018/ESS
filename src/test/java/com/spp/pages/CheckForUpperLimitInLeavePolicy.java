@@ -86,7 +86,12 @@ public class CheckForUpperLimitInLeavePolicy extends BasePage {
 		LapseTab.click();
 	}
 	public void clickCarryOver(){
-		CarryOver.click();
+		if(CarryOver.isSelected()) {
+			System.out.println("Already Selected");
+		}
+		else {
+			CarryOver.click();
+		}
 	}
 	public void clickUpperLimit(){
 		UpperLimit.click();

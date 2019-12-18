@@ -67,8 +67,13 @@ public class CheckForCarryOverInLeavePolicy extends BasePage{
 	public void clickLapseTab(){
 		LapseTab.click();
 	}
-	public void clickCarryOver(){ 
-		jsclick(CarryOver);
+	public void clickCarryOver(){
+		if(CarryOver.isSelected()) {
+			System.out.println("Already Selected");
+		}
+		else {
+			jsclick(CarryOver);
+		}
 	}
 	public void clickUpdateButton(){
 		UpdateButton.click();

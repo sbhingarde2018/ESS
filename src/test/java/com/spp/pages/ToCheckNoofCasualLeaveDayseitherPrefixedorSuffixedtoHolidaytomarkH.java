@@ -129,16 +129,26 @@ public class ToCheckNoofCasualLeaveDayseitherPrefixedorSuffixedtoHolidaytomarkH 
 	public void clickWeeklyOff(){
 		jsclick(WeeklyOff);
 	}
-	public void clickHolidayLeaveCheckbox() {
-		LeaveHasHoliday.click();
+	public void clickHolidayLeaveCheckbox(){
+		if(LeaveHasHoliday.isSelected()) {
+			System.out.println("Already Selected");
+		}
+		else {
+			LeaveHasHoliday.click();
+		}
 	}
 	public void HolidayPrefixLeaves(String value) {
 		HolidayNoofLeaveDays.clear();
 		HolidayNoofLeaveDays.sendKeys(value);
 		HolidayNoofLeaveDays.sendKeys(Keys.TAB);
 	}
-	public void clickHolidayPrefixCheckbox() {
-		HolidayPrefix.click();
+	public void clickHolidayPrefixCheckbox(){
+		if(HolidayPrefix.isSelected()) {
+			System.out.println("Already Selected");
+		}
+		else {
+			HolidayPrefix.click();
+		}
 	}
 	public void clickUpdateButton() {
 		UpdateButton.click();

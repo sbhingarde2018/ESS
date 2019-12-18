@@ -86,10 +86,20 @@ public class CheckForLapseUnavailedOnInLeavePolicy extends BasePage{
 		LapseTab.click();
 	}
 	public void clickCarryOver(){
-		CarryOver.click();
+		if(CarryOver.isSelected()) {
+			System.out.println("Already Selected");
+		}
+		else {
+			CarryOver.click();
+		}
 	}
 	public void clickLapseUnavailed(){
-		clickLapseUnavailed.click();
+		if(clickLapseUnavailed.isSelected()) {
+			System.out.println("Already Selected");
+		}
+		else {
+			clickLapseUnavailed.click();
+		}
 	}
 	public void enterDropdown(String value) {
 		dropDownSelect(Dropdown, value);

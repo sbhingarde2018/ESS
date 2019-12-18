@@ -48,7 +48,7 @@ public class CheckForPrioritySettingsInLeavePolicy extends BasePage{
 	WebElement LeaveHistory;
 	@FindBy(xpath="//*[@id=\"batch_details\"]/form/table[3]/tbody/tr[2]/td/input[3]")
 	WebElement DeleteButton;
-	@FindBy(id="leave_policy_head_wise_setting_behaviour_settings_avail_excess_leave")
+	@FindBy(xpath="//table/tbody/tr[11]/td/fieldset/h4/span/label/input")
 	WebElement AllowAccessCasual;
 	@FindBy(id="leave_policy_head_wise_setting_behaviour_settings_excess_setting_priority_setting")
 	WebElement PrioritySettings;
@@ -92,9 +92,13 @@ public class CheckForPrioritySettingsInLeavePolicy extends BasePage{
 	}
 	
 	public void clickEarnedLeave(){
-		EarnedLeave.click();
+		if(EarnedLeave.isSelected()) {
+			System.out.println("Already Selected");
+		}
+		else {
+			EarnedLeave.click();
+		}
 	}
-	
 	public void clickUpdateButton(){
 		UpdateButton.click();
 	}
