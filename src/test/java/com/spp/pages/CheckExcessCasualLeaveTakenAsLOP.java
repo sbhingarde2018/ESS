@@ -32,7 +32,7 @@ public class CheckExcessCasualLeaveTakenAsLOP extends BasePage {
     WebElement Filter;
     @FindBy(xpath="//*[@id=\"bf_form\"]/div/button[contains(text(),'LOAD')]")
     WebElement Load;
-    @FindBy(xpath="//tbody/tr/td[contains(text(),'TATA711695')]/parent::tr/td[3]/a")
+    @FindBy(xpath="//tbody/tr/td[contains(text(),'LeaveA')]/parent::tr/td[3]/a")
     WebElement ApplyLeave;
 	@FindBy(id="leave_detail_leave_definition_id")
 	WebElement LeaveType;

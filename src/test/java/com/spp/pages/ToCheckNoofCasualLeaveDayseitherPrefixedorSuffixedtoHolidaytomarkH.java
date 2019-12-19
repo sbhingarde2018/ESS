@@ -143,12 +143,7 @@ public class ToCheckNoofCasualLeaveDayseitherPrefixedorSuffixedtoHolidaytomarkH 
 		HolidayNoofLeaveDays.sendKeys(Keys.TAB);
 	}
 	public void clickHolidayPrefixCheckbox(){
-		if(HolidayPrefix.isSelected()) {
-			System.out.println("Already Selected");
-		}
-		else {
 			HolidayPrefix.click();
-		}
 	}
 	public void clickUpdateButton() {
 		UpdateButton.click();

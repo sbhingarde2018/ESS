@@ -76,8 +76,16 @@ public class CheckAllowHalfaday extends BasePage{
 	public void clickSettingsLink(){
 		settingsLink.click();
 	}
-	public void clickonallowhalfday() {
-		ClickOnAllowHalfDay.click();
+	public void clickonallowhalfday(){
+		if(ClickOnAllowHalfDay.isSelected()) {
+			System.out.println("Already Selected");
+		}
+		else {
+			ClickOnAllowHalfDay.click();
+		}
+	}
+	public void clickonallowhalfday_2(){
+			ClickOnAllowHalfDay.click();
 	}
 	public void clickUpdateButton(){
 		UpdateButton.click();

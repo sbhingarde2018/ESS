@@ -142,12 +142,8 @@ public class ToCheckifappliedCasualLeavehasWeeklyOffconsiderasCasualLeavewithpre
 		WeeklyOffNoofLeaveDays.sendKeys(Keys.TAB);
 	}
 	public void clickWeeklyOffPrefixCheckbox(){
-		if(WeeklyOffPrefix.isSelected()) {
-			System.out.println("Already Selected");
-		}
-		else {
+		
 			WeeklyOffPrefix.click();
-		}
 	}
 	public void clickUpdateButton() {
 		UpdateButton.click();

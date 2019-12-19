@@ -129,11 +129,28 @@ public class HolidayWeeklyoffSettings extends BasePage{
     public void selectLeaveHistory(){
 		jsclick(LeaveHistory);
 	}
-    public void clickHolidayLeaveCheckbox() {
-		LeaveHasHoliday.click();
+    public void clickHolidayLeaveCheckbox(){
+		if(LeaveHasHoliday.isSelected()) {
+			System.out.println("Already Selected");
+		}
+		else {
+			LeaveHasHoliday.click();
+		}
+	}
+    public void clickHolidayLeaveCheckbox_2(){
+		
+			LeaveHasHoliday.click();
 	}
     public void clickWeeklyOffLeaveCheckbox() {
-		LeaveHasWeeklyOff.click();
+		if(LeaveHasWeeklyOff.isSelected()) {
+			System.out.println("Already Selected");
+		}
+		else {
+			LeaveHasWeeklyOff.click();
+		}
+	}
+    public void clickWeeklyOffLeaveCheckbox_2() {
+			LeaveHasWeeklyOff.click();
 	}
 	public HolidayWeeklyoffSettings(WebDriver driver) {
 		super(driver);

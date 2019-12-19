@@ -58,7 +58,7 @@ public class CheckForPrioritySettingsInLeavePolicy extends BasePage{
 	WebElement AddNewLeaveEnc;
 	@FindBy(xpath="//*[@id=\"leave_encashment_leave_definition_id\"]")
 	WebElement SelectLeave;
-	@FindBy(xpath="//tbody/tr/td[contains(text(),'TATA711695')]/parent::tr/td[3]/a")
+	@FindBy(xpath="//tbody/tr/td[contains(text(),'LeaveA')]/parent::tr/td[3]/a")
 	WebElement ApplyLeave;
 	@FindBy(id="from_date")
 	WebElement LeaveHistoryToDate;
