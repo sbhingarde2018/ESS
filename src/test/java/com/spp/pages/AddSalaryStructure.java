@@ -13,7 +13,7 @@ public class AddSalaryStructure extends BasePage{
 	WebElement salarystructurelink;
 	@FindBy(xpath="//a[text()='Add New Salary Structure']")
 	WebElement createsalarystructurelink;
-	@FindBy(id="salary_group_salary_group_name")
+	@FindBy(xpath="//input[@id='sal_group_name']")
 	WebElement structurename;
 	@FindBy(id="salary_group_based_on_gross")
 	WebElement basedongross;

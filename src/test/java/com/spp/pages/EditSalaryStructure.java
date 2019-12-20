@@ -13,7 +13,7 @@ public class EditSalaryStructure extends BasePage {
 	WebElement salarystructurelink;
 	@FindBy(xpath="//*[@id='main']/div/table/tbody/tr/td[contains(text(),'SALARYSTRUCTURE')]/parent::tr/td[4]/a")
 	WebElement editsalarystructure;
-	@FindBy(id="salary_group_salary_group_name")
+	@FindBy(xpath="//input[@id='sal_group_name']")
 	WebElement structurename;
 	@FindBy(id="salary_group_based_on_gross")
 	WebElement basedongross;

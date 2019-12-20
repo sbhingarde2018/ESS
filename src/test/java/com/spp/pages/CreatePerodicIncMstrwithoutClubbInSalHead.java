@@ -20,7 +20,7 @@ public class CreatePerodicIncMstrwithoutClubbInSalHead extends BasePage{
 	WebElement Name;
 	@FindBy(id="standing_instruction_master_clubbed_in_salary_head")
 	WebElement UncheckClubInSal;
-	@FindBy(xpath="//*[@id=\"standing_instruction_master_form\"]/div[7]/input")
+	@FindBy(xpath="//input[@name='commit']")
 	WebElement CreateButton;
 	@FindBy(xpath="//strong[text()='Periodic Incentive successfully created ']")
 	WebElement SuccessfulMessage;

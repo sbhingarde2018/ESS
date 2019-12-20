@@ -57,7 +57,7 @@ public class SalaryRateDetails extends BaseTest {
 		
 		}
 	
-	/*@Test(priority=1)
+	@Test(priority=1)
 	public void verifyAllotSalaryNotOnGross_SC_99() throws Exception {
 		AllotSalaryNotOnGross rr= new AllotSalaryNotOnGross(driver);
 		rr.clickEmployeeLink();
@@ -94,7 +94,7 @@ public class SalaryRateDetails extends BaseTest {
 		rr.exitFullscreen();
 	}
 	
-	@Test(priority=2)
+/*	@Test(priority=2)
 	public void verifyAllotSalaryViaExcel_SC_100() throws Exception {
 		AllotSalaryViaExcel aa= new AllotSalaryViaExcel(driver);
 		aa.clickEmployeeLink();
@@ -134,7 +134,7 @@ public class SalaryRateDetails extends BaseTest {
 		Thread.sleep(3000);
 		aa.SelectSaveButton();
 		aa.exitFullscreen();
-	}
+	}*/
 	
 	@Test(priority=3)
 	public void EditClassificationDetailsChangeSalaryStructureofanemployee_SC_410() throws Exception{
@@ -278,5 +278,5 @@ public class SalaryRateDetails extends BaseTest {
 		Thread.sleep(2000);
 		ge.switchToPopUpAndAccept(driver);
 		Thread.sleep(2000);
-	}*/
+	}
 }
