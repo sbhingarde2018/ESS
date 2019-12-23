@@ -11,7 +11,7 @@ public class DeleteReimbursement extends BasePage{
 	WebElement masterLink;
 	@FindBy(xpath="//a[text()='Reimbursement Master']")
 	WebElement reimbursemnetLink;
-	@FindBy(xpath="(//a[text()='Delete'])[1]")
+	@FindBy(xpath="//tbody/tr/td[contains(text(),'Meals')]/parent::tr/td[5]/a")
 	WebElement deleteReimbursement;
 	@FindBy(xpath="//strong[text()='Reimbursement Master is successfully deleted']")
 	WebElement successfullyMessage;

@@ -1,5 +1,6 @@
 package com.spp.pages;
 
+import org.openqa.selenium.Keys;
 //import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -21,11 +22,11 @@ public class CreateHolidayUnderBranch extends BasePage {
 	WebElement date;
 	@FindBy(id="holiday_master_list_description")
 	WebElement description;
-	@FindBy(id="holiday_national_holiday")
+	@FindBy(xpath="//*[@id=\"holiday_master_list_national_holiday\"]")
 	WebElement nationalHoliday;
 	@FindBy(xpath="//input[@value='Create Holiday']")
 	WebElement createButton;
-	@FindBy(xpath="//*[@id=\"main\"]/div[3]/strong")
+	@FindBy(xpath="//strong[text()='Holiday Master List successfully created']")
 	WebElement successfullyMessage;
 	@FindBy(xpath="//tbody/tr/td[contains(text(),'holiday1')]/parent::tr/td[5]/a[2]/img")
 	WebElement DeleteButton;
@@ -53,13 +54,14 @@ public class CreateHolidayUnderBranch extends BasePage {
 	public String enterDate(String value){
 		date.clear();
 		date.sendKeys(value);
-		//date.sendKeys(Keys.TAB);
+		date.sendKeys(Keys.TAB);
 		return value;
 	}
 	
 	public void enterDescription(String value){
 		description.clear();
 		description.sendKeys(value);
+		
 	}
 	public void clickNationalHoliday(){
 		nationalHoliday.click();

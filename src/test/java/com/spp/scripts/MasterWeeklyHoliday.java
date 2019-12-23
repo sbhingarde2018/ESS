@@ -21,11 +21,11 @@ public class MasterWeeklyHoliday extends BaseTest{
 		ms.selectFirstWeeklyOff("Monday");
 		ms.selectHalfOrFullDay("Second Half");
 		ms.selectsScondWeeklyOff("Friday");
-		ms.selectSHalforFullDay("Full");
+		ms.selectSHalforFullDay("Second Half");
 		ms.clickCreateButton();
-		Thread.sleep(80000);
-		//String s=ms.getMessage();
-		//Assert.assertEquals(s, "Master Weekly off Successfully created.");
+		//Thread.sleep(3000);
+		String s=ms.getMessage();
+		Assert.assertEquals(s, "Master Weekly off Successfully created.");
 	}
 	
 	@Test(priority=1)
@@ -35,13 +35,13 @@ public class MasterWeeklyHoliday extends BaseTest{
 		wh.selectMasterWeekly();
 		wh.clickViewLink();
 		wh.selectFirstWeeklyOff("Tuesday");
-		wh.selectHalfOrFullDay("Full");
+		wh.selectHalfOrFullDay("Second Half");
 		wh.selectsScondWeeklyOff("Sunday");
 		wh.selectSHalforFullDay("First Half");
 		wh.clickUpdateButton();
-		Thread.sleep(80000);
-		//String s=wh.getMessage();
-		//Assert.assertEquals(s, "Master Weekly off Successfully Updated.");
+		//Thread.sleep(3000);
+		String s=wh.getMessage();
+		Assert.assertEquals(s, "Master Weekly off Successfully Updated.");
 	}
 
 	@Test(priority=2)
@@ -52,8 +52,8 @@ public class MasterWeeklyHoliday extends BaseTest{
 		wh.clickViewLink();
 		wh.clickWeeklyoffHistory();
 		wh.clickDeleteButton();
-		Thread.sleep(80000);
-	 	//String s=wh.getMessage();
-	 	//Assert.assertEquals(s, "Master Weekly off Successfully Deleted.");
+		//Thread.sleep(3000);
+	 	String s=wh.getMessage();
+	 	Assert.assertEquals(s, "Master Weekly off Successfully Deleted.");
 	}
 }	

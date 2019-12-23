@@ -30,9 +30,9 @@ public class HolidayList extends BaseTest {
 		hl.enterDate("25 February 2019");
 		hl.enterDescription("MahaShivaratri");
 		hl.clickCreateButton();
-		Thread.sleep(80000);
-		//String s=hl.getMessage();
-		//Assert.assertEquals(s, "Holiday Master List successfully created");
+		String s=hl.getMessage();
+		Assert.assertEquals(s, "Holiday Master List successfully created");
+		Thread.sleep(2000);
 		}
 	
 	@Test(priority=1)
@@ -45,11 +45,15 @@ public class HolidayList extends BaseTest {
 			Thread.sleep(2000);
 			hl.enterDate("25 December 2019");
 			hl.enterDescription("holiday1");
+			Thread.sleep(2000);
+			hl.clickNationalHoliday();
+			Thread.sleep(2000);
 			hl.clickCreateButton();
-			Thread.sleep(80000);
-			//String s=hl.getMessage();
-			//Assert.assertEquals(s, "Holiday Was successfully created");
+			String s=hl.getMessage();
+			Assert.assertEquals(s, "Holiday Master List successfully created");
+			Thread.sleep(4000);
 			hl.clickDeleteButton();
+			Thread.sleep(2000);
 		}
 	
   @Test(priority=2)
@@ -62,9 +66,9 @@ public class HolidayList extends BaseTest {
 	   		uh.enterDate("25 February 2019");
 	   		uh.enterDescription("Shivaratri");
 	   		uh.clickUpdateHoliday();
-	   		Thread.sleep(80000);
-	   		//String s=uh.getMessage();
-	   		//Assert.assertEquals(s, "Holiday Master List successfully updated");
+	   		String s=uh.getMessage();
+	   		Assert.assertEquals(s, "Holiday Master List successfully updated");
+	   		Thread.sleep(2000);
 		}
 
    @Test(priority=3)
@@ -74,9 +78,10 @@ public class HolidayList extends BaseTest {
 	   		dh.selectHolidayList();
 	   		dh.clickView();
 	   		dh.clickDeleteButton();
-	   		Thread.sleep(80000);
-	   		//String s=dh.getMessage();
-	   		//Assert.assertEquals(s, "Master holiday successfully deleted.");
+	   		Thread.sleep(3000);
+	   		String s=dh.getMessage();
+	   		Assert.assertEquals(s, "Master holiday successfully deleted.");
+	   		Thread.sleep(2000);
 	   }
    
    @Test(priority=4)
@@ -86,9 +91,9 @@ public class HolidayList extends BaseTest {
 	   		hl.selectHolidayList();
 	   		hl.clickView();
 	   		hl.clickFirstDisable();
-	   		Thread.sleep(80000);
-	   		//String s=hl.getMessage();
-	   		//Assert.assertEquals(s, "Holiday Was successfully updated.");
+	   		String s=hl.getMessage();
+	   		Assert.assertEquals(s, "Holiday Was successfully updated.");
+	   		Thread.sleep(2000);
 	   }
  
    
@@ -112,8 +117,8 @@ public class HolidayList extends BaseTest {
 	   		Thread.sleep(2000);
 	   		uh.choosefile("C:\\Users\\AlfaLabs\\Downloads\\HolidayMaster.xlsx");
 	   		uh.uploadfile();
-	   		Thread.sleep(30000);
+	   		Thread.sleep(3000);
 	   		uh.deleteHoliday();
-	   		Thread.sleep(80000);
+	   		Thread.sleep(2000);
 	   }
 }
