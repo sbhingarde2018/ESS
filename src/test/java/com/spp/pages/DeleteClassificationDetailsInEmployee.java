@@ -20,23 +20,28 @@ public class DeleteClassificationDetailsInEmployee extends BasePage{
 	@FindBy(xpath="//*[@id=\"bf_non_classified_emp_form\"]/div[2]/button[1]")
 	WebElement Load2;
 	@FindBy(xpath="//td[contains(text(),'Zack')]/parent::tr/td[6]/a[1]")
-	WebElement ClickOnView;
-	@FindBy(xpath="//*[@id='employees_dtable']/tbody/tr/td[contains(text(),'Geeta')]/parent::tr/td[6]/a[2]")
 	WebElement DeleteEmployee;
-	@FindBy(xpath="//a[contains(text(),'Classification Details')]")
-	WebElement ClickClassificationDetail;
-	@FindBy(xpath="//table/tbody/tr/td[7]/a")
-	WebElement DeleteClassification;
-	@FindBy(xpath="//*[@id=\"main\"]/div[2]/strong")
-	WebElement successfulmessage;
-	@FindBy(xpath="//input[@attr='non_classified_emp']")
-	WebElement EmployeewithoutClass;
-	
-	
+	@FindBy(xpath="//td[contains(text(),'Nisha')]/parent::tr/td[6]/a[2]")
+	WebElement DeleteEmployee1;
+	@FindBy(xpath="//table/tbody/tr/td[contains(text(),'')]/parent::tr/td[7]/a")
+	WebElement DeletButton1;
+	@FindBy(xpath="//div[@id='employees_dtable_filter']//input")
+	WebElement Search;
+	@FindBy(xpath="//strong[text()='Employee detail was successfully deleted.']")
+	WebElement successfullMessage2;
+	@FindBy(xpath="//td[contains(text(),'EMPA')]/parent::tr/td[6]/a[1]")
+	WebElement ViewButton;
+	@FindBy(xpath="//*[@id=\"classification_details\"]/a")
+	WebElement ClassificationDetails;
+	    
 	public DeleteClassificationDetailsInEmployee(WebDriver driver) {
 		super(driver);
 		PageFactory.initElements(driver,this);
 	}
+	
+	public String getMessage(){
+		return successfullMessage2.getText();
+		}
 	public void clickonemployee() {
 		ClickOnEmployee.click();
 	}
@@ -46,9 +51,6 @@ public class DeleteClassificationDetailsInEmployee extends BasePage{
 	public void clickonfilter() {
 		ClickOnFilterHead.click();
 	}
-	public void clickEmployeewithoutClass(){
-		EmployeewithoutClass.click();
-	}
 	public void clickonload() {
 		ClickOnLoad.click();
 	}
@@ -56,20 +58,23 @@ public class DeleteClassificationDetailsInEmployee extends BasePage{
 		Load2.click();
 	}
 	
-	public void clickonview() {
-		ClickOnView.click();
-	}
-	public void clickclassificationdetail() {
-		ClickClassificationDetail.click();
-	}
-	public void deletecclassification() {
-		DeleteClassification.click();
-	}
-		public String getMessage(){
-		return successfulmessage.getText();
-	}
-	public void deleteemployee() {
+	public void DeleteEmployee() {
 		DeleteEmployee.click();
 	}
-		
+	public void DeleteEmployee1() {
+		DeleteEmployee1.click();
+	}	
+	public void ClickDeleteButton1(){
+		DeletButton1.click();
+	}
+	public void SearchEmp(String value) {
+		Search.sendKeys(value);
+	}
+	public void selectClassificationDetails(){
+		ClassificationDetails.click();
+	}
+	public void selectViewButton(){
+		ViewButton.click();
+	}
+	
 }

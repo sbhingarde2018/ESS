@@ -57,26 +57,25 @@ public class FinancialInstitutionBank extends BaseTest{
 		Thread.sleep(5000);
 		ld.clickGetList();
 		Thread.sleep(2000);
-	}	
+	}
 	@Test(priority=4)
 	public void CreateFinancialInstitutionwithIFSCCode_SC_450() throws Exception{
 		CreateFinancialInstitutionwithIFSCCode ld=new CreateFinancialInstitutionwithIFSCCode(driver);
-		
 		ld.clickMastserLink();
 		ld.selectFinancialInstitution();
 		ld.clickAddFinancialInst();
 		ld.selectAccoutType("Salary Account");
-		ld.enterInstName("State Bank of India");
+		ld.enterInstName("State Bank of India a");
 		ld.enterBranchCode("1");
 		ld.enterEmail("info@sbi.com");
 		ld.enterAddress("#125,19th Block,ESI 3rd Block,Rajaji Nagar,Bangalore");
 		ld.enterPinCode("560001");
-		ld.enterIFSCCode("SBIN0000539");
-		ld.enterMICRCode("400002002");
+		ld.enterIFSCCode("SBIN0000538");
+		ld.enterMICRCode("400002000");
 		ld.clickCreateButton();
 		String s=ld.getMessage();
 		Assert.assertEquals(s, "Financial Institution successfully created");
-		
+		Thread.sleep(3000);
 	}
 	@Test(priority=5)
 	public void AssignFinancialInstitutionandTryToDelete_SC_348() throws Exception{
@@ -84,14 +83,17 @@ public class FinancialInstitutionBank extends BaseTest{
 		td.clickonemployee();
 		td.clickonemployeedetails();
 		td.clickonfilter();
+		td.resizeWindow();
 		Thread.sleep(2000);
 		td.clickonload();
+		Thread.sleep(3000);
+		td.exitFullscreen();
 		Thread.sleep(3000);
 		td.clickonview();
 		td.clickclassificationdetail();
 		td.addnewclassificationdetail();
 		Thread.sleep(2000);
-		td.SelectBank("State Bank of India");
+		td.SelectBank("State Bank of India a");
 		td.Effectivedate();
 		td.Selectdate();
 		Thread.sleep(2000);
@@ -99,6 +101,8 @@ public class FinancialInstitutionBank extends BaseTest{
 		td.createclassdetail();
 		String s=td.getMessage();
 		Assert.assertEquals(s, "Employee detail was successfully created.");
+		Thread.sleep(4000);
+		td.deleteclassdetail();
 		Thread.sleep(2000);
 		td.clickMastserLink();
 		td.selectFinancialInstitution();

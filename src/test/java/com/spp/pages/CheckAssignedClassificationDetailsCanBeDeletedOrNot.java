@@ -20,7 +20,7 @@ public class CheckAssignedClassificationDetailsCanBeDeletedOrNot extends BasePag
 	WebElement EmployeewithoutClass;
 	@FindBy(xpath="//form[@id='bf_form']//button[contains(text(),'LOAD')]")
 	WebElement LoadButton;
-	@FindBy(xpath="//td[contains(text(),'Reya')]/parent::tr/td[6]/a[1]")
+	@FindBy(xpath="//td[contains(text(),'Reha')]/parent::tr/td[6]/a[1]")
 	WebElement ViewButton;
 	@FindBy(xpath="//*[@id=\"classification_details\"]/a")
 	WebElement ClassificationDetails;
@@ -62,6 +62,8 @@ public class CheckAssignedClassificationDetailsCanBeDeletedOrNot extends BasePag
 	WebElement CantDeleteMessage;
     @FindBy(xpath="//table/tbody/tr/td[contains(text(),'')]/parent::tr/td[7]/a")
     WebElement DeletButton1;
+    @FindBy(xpath="//div[@id='employees_dtable_filter']//input")
+    WebElement Search;
     
     
 	public CheckAssignedClassificationDetailsCanBeDeletedOrNot(WebDriver driver){
@@ -151,5 +153,8 @@ public void selectmonth(String value) {
 }
 public void ClickDeleteButton1(){
 	DeletButton1.click();
+}
+public void SearchEmp(String value) {
+	Search.sendKeys(value);
 }
 }

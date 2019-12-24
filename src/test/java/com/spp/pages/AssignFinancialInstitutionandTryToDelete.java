@@ -41,12 +41,10 @@ public class AssignFinancialInstitutionandTryToDelete extends BasePage{
 	WebElement masterLink;
 	@FindBy(xpath="//a[text()='Financial Institution (Bank)']")
 	WebElement financialInstitution;
-	@FindBy(xpath="//*[@id=\"financial_institutions\"]/tbody/tr/td[contains(text(),'State Bank')]/parent::tr/td[9]/a")
+	@FindBy(xpath="//tr[9]//td[contains(text(),'State Bank')]/parent::tr/td[8]//a[2]")
 	WebElement DeleteFinancialInstitution;
-	@FindBy(xpath="//*[@id='main']/div[4]/table/tbody/tr/td[7]/a")
-	WebElement DeleteClassDetail;
 	@FindBy(xpath="//table/tbody/tr[1]/td[7]/a")
-	WebElement DeleteClass;
+	WebElement DeleteClassDetail;
 	@FindBy(id="employee_detail_salary_group_id")
 	WebElement SalaryStructure;
 	@FindBy(id="employee_detail_attendance_configuration_id")
@@ -109,16 +107,14 @@ public class AssignFinancialInstitutionandTryToDelete extends BasePage{
 		financialInstitution.click();
 	}
 	public void deletefinancialinsti() {
+		
 		DeleteFinancialInstitution.click();
 		switchToPopUpAndAccept(driver);
 	}
 	public void deleteclassdetail() {
 		DeleteClassDetail.click();
 		switchToPopUpAndAccept(driver);
-	}
-	public void deleteclass() {
-		DeleteClass.click();
-	}
+	}	
 	public void salstructure(String value) {
 		dropDownSelect(SalaryStructure, value);
 	}

@@ -17,7 +17,7 @@ import com.spp.pages.EditClassification;
 import com.spp.pages.EditClasssificationDetails;
 public class Classifications extends BaseTest {
 	
-	@Test(priority=0)
+@Test(priority=0)
 	public void verifyCreatedClassification_SC_62(){
 		CreateClassification cc=new CreateClassification(driver);
 		cc.clickMastserLink();
@@ -136,6 +136,7 @@ public class Classifications extends BaseTest {
 		ww.selectLoadButton();
 		Thread.sleep(5000);
 		ww.exitFullscreen();
+		ww.SearchEmp("Reha");
 		ww.selectViewButton();
 		ww.selectClassificationDetails();
 		ww.selectAddNewClassiDetails();
@@ -166,6 +167,7 @@ public class Classifications extends BaseTest {
 		ww.selectLoadButton();
 		Thread.sleep(5000);
 		ww.exitFullscreen();
+		ww.SearchEmp("Reha");
 		ww.selectViewButton();
 		ww.selectClassificationDetails();
 		ww.ClickDeleteButton1();
