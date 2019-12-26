@@ -10,25 +10,26 @@ import com.spp.common.BasePage;
 public class CreateEmployeeESIContributionApplicability extends BasePage{
 	@FindBy(id="emp_detail")
 	WebElement ClickOnEmployee;
-	@FindBy(xpath="//*[@id=\"menu\"]/li[4]/div/div/ul/li[1]/a")
+	@FindBy(xpath="//a[contains(text(),'Employee Details')]")
 	WebElement ClickOnEmployDetails;
 	@FindBy(id="filter_head")
 	WebElement ClickOnFilterHead;
-	@FindBy(xpath="//*[@id=\"bf_form\"]/div[10]/button[1]")
+	@FindBy(xpath="//form[@id='bf_form']//button[contains(text(),'LOAD')]")
 	WebElement ClickOnLoad;
-	@FindBy(xpath="//*[@id=\"employees_dtable\"]/tbody/tr/td[contains(text(),'Anil')]/parent::tr/td[6]/a[1]")
+	@FindBy(xpath="//td[contains(text(),'Nisha')]/parent::tr/td[6]/a[1]")
 	WebElement ClickonView;
-	@FindBy(xpath="//*[@id=\"employee_esi_contribution_restrict\"]/a")
+	@FindBy(xpath="//a[contains(text(),'ESI Contribution Applicability')]")
 	WebElement ClickonESIContri;
-	@FindBy(id="fr_date")
+	@FindBy(xpath="//input[@id='fr_date']")
 	WebElement EffectiveDate;
-	@FindBy(xpath="//*[@id=\"employee_esi_contribution_restrict_form\"]/div[5]/input")
+	@FindBy(xpath="//a[@class='current']")
+	WebElement ClickMonth;
+	@FindBy(xpath="//input[@name='commit']")
 	WebElement CreateESI;
 	@FindBy(xpath="//*[@id=\"esi_applicability_result_response\"]/div/strong")
 	WebElement successfulmessage;
-	
-	
-	
+	@FindBy(xpath="//table/tbody/tr/td[5]/a")
+	WebElement Delete;
 	
 	public CreateEmployeeESIContributionApplicability(WebDriver driver) {
 		super(driver);
@@ -52,15 +53,21 @@ public class CreateEmployeeESIContributionApplicability extends BasePage{
 	public void clickonESICon() {
 		ClickonESIContri.click();
 	}
-	public void selecteffdate(String value) {
-		EffectiveDate.sendKeys(value);
+	public void selecteffdate() {
+		EffectiveDate.click();
 	}
+	public void SelectkMonth() {
+		ClickMonth.click();
+	}
+	
 	public void createesi() {
 		CreateESI.click();
 	}
 	public String getMessage(){
 		return successfulmessage.getText();
 	}
-	
-	
+	public void ClickDelete() throws InterruptedException {
+		Delete.click();
+		switchToPopUpAndAccept(driver);
+	}
 }

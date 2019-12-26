@@ -10,17 +10,17 @@ import com.spp.common.BasePage;
 public class CreateWeeklyOffDetailsofanEmployee extends BasePage{
 	@FindBy(id="emp_detail")
 	WebElement ClickOnEmployee;
-	@FindBy(xpath="//*[@id=\"menu\"]/li[4]/div/div/ul/li[1]/a")
+	@FindBy(xpath="//a[contains(text(),'Employee Details')]")
 	WebElement ClickOnEmployDetails;
 	@FindBy(id="filter_head")
 	WebElement ClickOnFilterHead;
-	@FindBy(xpath="//*[@id=\"bf_form\"]/div[10]/button[1]")
+	@FindBy(xpath="//*[@id=\"bf_form\"]/div/button[contains(text(),'LOAD')]")
 	WebElement ClickOnLoad;
-	@FindBy(xpath="//*[@id=\"employees_dtable\"]/tbody/tr/td[contains(text(),'Anil')]/parent::tr/td[6]/a[1]")
+	@FindBy(xpath="//td[contains(text(),'Nisha')]/parent::tr/td[6]/a[1]")
 	WebElement ClickonView;
-	@FindBy(xpath="//*[@id=\"ui-accordion-accordion-header-2\"]/h3")
+	@FindBy(xpath="//h3[contains(text(),'General')]")
 	WebElement ClickOnGeneral;
-	@FindBy(xpath="//*[@id=\"weekly_off\"]/a")
+	@FindBy(xpath="//a[contains(text(),'Weekly Off Details')]")
 	WebElement ClickonWeeklyOff;
 	@FindBy(xpath="//*[@id=\"weekly_off_list\"]/div[1]/span/a")
 	WebElement AddNewWeeklyOff;
@@ -40,7 +40,8 @@ public class CreateWeeklyOffDetailsofanEmployee extends BasePage{
 	WebElement CreateWeeklyOff;
 	@FindBy(xpath="//*[@id=\"main\"]/div[2]/strong")
 	WebElement successfulmessage;
-	
+	@FindBy(xpath="//table/tbody/tr/td[5]/a")
+	WebElement Delete;
 	
 	public CreateWeeklyOffDetailsofanEmployee(WebDriver driver) {
 		super(driver);
@@ -93,5 +94,9 @@ public class CreateWeeklyOffDetailsofanEmployee extends BasePage{
 	}
 	public String getMessage(){
 		return successfulmessage.getText();
+	}
+	public void ClickDelete() throws InterruptedException {
+		Delete.click();
+		switchToPopUpAndAccept(driver);
 	}
 }

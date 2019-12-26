@@ -31,7 +31,7 @@ import com.spp.pages.UpdateWeeklyOff;
 
 public class EmployeeDetails extends BaseTest{
 	
-/*	@Test(priority=0)
+	@Test(priority=0)
 	public void verifyAddNewEmployee_SC_77() throws Exception{
 		AddNewEmployeeTDS at=new AddNewEmployeeTDS(driver);
 		at.navigateEmployee();
@@ -147,7 +147,7 @@ public class EmployeeDetails extends BaseTest{
 		gxl.exitFullscreen();
 		gxl.DownloadTemplate();
 		Thread.sleep(3000);
-	}*/
+	}
 		
 			
 	@Test(priority=4)
@@ -170,7 +170,7 @@ public class EmployeeDetails extends BaseTest{
 		Assert.assertEquals(message, "Employee detail was successfully deleted.");
 		Thread.sleep(2000);
 	}
-	/*		
+			
 	@Test(priority=5)
 	public void AddEmployeewithClassificationDetail_SC_440() throws Exception{
 		AddNewEmployeeTDS at=new AddNewEmployeeTDS(driver);
@@ -212,7 +212,7 @@ public class EmployeeDetails extends BaseTest{
 		Assert.assertEquals(s, "Employee successfully created");
 	}
 
-	@Test(priority=6)
+		@Test(priority=6)
 	public void EditClassificationDetailsChangeSalaryStructureofanemployee_SC_441() throws Exception{
 		EditClassificationDetailsChangeSalaryStructureofanemployee dw= new EditClassificationDetailsChangeSalaryStructureofanemployee(driver);
 		dw.clickonemployee();
@@ -223,6 +223,7 @@ public class EmployeeDetails extends BaseTest{
 		dw.clickonload();
 		Thread.sleep(2000);
 		dw.exitFullscreen();
+		dw.SearchEmp("Nisha");
 		dw.clickonview();
 		Thread.sleep(2000);
 		dw.clickonclassificationdetails();
@@ -235,9 +236,9 @@ public class EmployeeDetails extends BaseTest{
 		dw.switchToPopUpAndAccept(driver);
 		String message = dw.getMessage();
 		Assert.assertEquals(message, "Employee detail was successfully updated.");
-	}*/
+	}
 
-/*	@Test(priority=7)
+	@Test(priority=7)
 	public void CreateEmployeeESIContributionApplicability_SC_452() throws Exception {
 		CreateEmployeeESIContributionApplicability ca=new CreateEmployeeESIContributionApplicability(driver);
 		ca.clickonemployee();
@@ -252,7 +253,8 @@ public class EmployeeDetails extends BaseTest{
 		ca.clickonview();
 		Thread.sleep(2000);
 		ca.clickonESICon();
-		ca.selecteffdate("Aug/2019");
+		ca.selecteffdate();
+		ca.SelectkMonth();
 		ca.createesi();
 		String message = ca.getMessage();
 		Assert.assertEquals(message, "ESI Applicability Detail Successfully Created.");
@@ -278,19 +280,19 @@ public class EmployeeDetails extends BaseTest{
 		ca.clickonweeklyoff();
 		Thread.sleep(2000);
 		ca.addnewweeklyoff();
-		ca.selecteffectivefromdate("01 September 2019");
-		ca.selecteffectivetilldate("01 September 2020");
+		ca.selecteffectivefromdate("01 January 2020");
+		ca.selecteffectivetilldate("01 January 2020");
 		ca.firstweeklyoff("Monday");
 		ca.enterfirstorsecondhalf1("Full");
 		ca.secondweeklyoff("Friday");
 		ca.enterfirstorsecondhalf2("Full");
 		ca.createweeklyoff();
-		Thread.sleep(30000);
+		Thread.sleep(4000);
 		//String message = ca.getMessage();
 		//Assert.assertEquals(message, "Attendance Weekly Off successfully created");
 	}
 	
-	@Test(priority=9)
+		@Test(priority=9)
 	public void UpdateWeeklyOff_SC_454() throws Exception{
 		UpdateWeeklyOff uf= new UpdateWeeklyOff(driver);
 		uf.clickonemployee();
@@ -482,9 +484,9 @@ public class EmployeeDetails extends BaseTest{
 		cr.clickonstatreport();
 		Thread.sleep(2000);
 		cr.selectreporttype("ESI");
-		cr.selectgroup("Default");
+		//cr.selectgroup("Default");
 		cr.selectorderby("Employee Name");
-		cr.selectpaymonth("Sep/2019");
+		//cr.selectpaymonth("Sep/2019");
 		Thread.sleep(2000);
 		cr.generatestatreport();
 	}
@@ -499,23 +501,27 @@ public class EmployeeDetails extends BaseTest{
 		cr.clickonemployeesummary();
 		cr.clickonviewsummary();
 		cr.downloadpdf();
+		Thread.sleep(2000);
 		//cr.downloadexcel();
-	}*/
+	}
 
-	/*@Test(priority=19)
+	@Test(priority=19)
 	public void CheckDeleteEmployeeExtra() throws Exception {
 	DeleteClassificationDetailsInEmployee ce = new DeleteClassificationDetailsInEmployee(driver);
 		ce.clickonemployee();
 		ce.clickonemployeedetails();
 		ce.clickonfilter();
-		Thread.sleep(2000);
+		ce.resizeWindow();
+		Thread.sleep(3000);
 		ce.clickonload();
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 		ce.DeleteEmployee();
 		ce.switchToPopUpAndAccept(driver);
 		ce.DeleteEmployee1();
 		ce.switchToPopUpAndAccept(driver);
+		ce.exitFullscreen();
+		Thread.sleep(3000);
 		//String message = ce.getMessage();
 		//Assert.assertEquals(message, "Employee detail was successfully deleted.");
-	}*/
+	}
 }

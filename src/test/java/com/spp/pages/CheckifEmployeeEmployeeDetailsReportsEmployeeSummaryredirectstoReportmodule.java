@@ -10,15 +10,15 @@ import com.spp.common.BasePage;
 public class CheckifEmployeeEmployeeDetailsReportsEmployeeSummaryredirectstoReportmodule extends BasePage{
 	@FindBy(id="emp_detail")
 	WebElement ClickOnEmployee;
-	@FindBy(xpath="//*[@id=\"menu\"]/li[4]/div/div/ul/li[1]/a")
+	@FindBy(xpath="//a[contains(text(),'Employee Details')]")
 	WebElement ClickOnEmployeeDetails;
-	@FindBy(xpath="//*[@id=\"ui-accordion-accordion-header-2\"]/h3")
+	@FindBy(xpath="//h3[contains(text(),'Reports')]")
 	WebElement ClickOnReports;
-	@FindBy(xpath="//*[@id=\"ui-accordion-accordion-panel-2\"]/ul/li[3]/a")
+	@FindBy(xpath="//ul[@class='subnav-menu']//a[contains(text(),'Employee Summary')]")
 	WebElement ClickOnEmployeeSummary;
-	@FindBy(xpath="//*[@id='employees_table']/tbody/tr/td[contains(text(),'Ashish')]/parent::tr/td[5]/a")
+	@FindBy(xpath="//tr[1]//td[5]//a[1]")
 	WebElement ClickOnViewSummary;
-	@FindBy(xpath="//*[@id=\"main\"]/div[12]/a[1]")
+	@FindBy(xpath="//a[contains(text(),'Download PDF')]")
 	WebElement DownloadPDF;
 	@FindBy(xpath="//*[@id=\"main\"]/div[12]/a[2]")
 	WebElement DownloadExcel;

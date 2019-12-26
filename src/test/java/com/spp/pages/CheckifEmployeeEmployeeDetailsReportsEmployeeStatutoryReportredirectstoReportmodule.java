@@ -10,21 +10,21 @@ import com.spp.common.BasePage;
 public class CheckifEmployeeEmployeeDetailsReportsEmployeeStatutoryReportredirectstoReportmodule extends BasePage{
 	@FindBy(id="emp_detail")
 	WebElement ClickOnEmployee;
-	@FindBy(xpath="//*[@id=\"menu\"]/li[4]/div/div/ul/li[1]/a")
+	@FindBy(xpath="//a[contains(text(),'Employee Details')]")
 	WebElement ClickOnEmployeeDetails;
-	@FindBy(xpath="//*[@id=\"ui-accordion-accordion-header-2\"]/h3")
+	@FindBy(xpath="//h3[contains(text(),'Reports')]")
 	WebElement ClickOnReports;
-	@FindBy(xpath="//*[@id=\"ui-accordion-accordion-panel-2\"]/ul/li[2]/a")
+	@FindBy(xpath="//ul[@class='subnav-menu']//a[contains(text(),'Employee Statutory Report')]")
 	WebElement ClickOnEmployeeStatRept;
-	@FindBy(id="st_report")
+	@FindBy(xpath="//select[@id='st_report']")
 	WebElement SelectReportType;
-	@FindBy(id="pf_report_pf_group")
+	@FindBy(xpath="//select[@id='pf_report_pf_group']")
 	WebElement SelectGroup;
-	@FindBy(id="order_by")
+	@FindBy(xpath="//select[@id='order_by']")
 	WebElement SelectOrderBy;
-	@FindBy(id="month_year")
+	@FindBy(xpath="//select[@id='month_year']")
 	WebElement SelectPaymonth;
-	@FindBy(xpath="//*[@id=\"statutory_report\"]/div[2]/div[13]/input")
+	@FindBy(xpath="//input[@name='commit']")
 	WebElement ClickOnGenerateStatReport;
 	
 	public CheckifEmployeeEmployeeDetailsReportsEmployeeStatutoryReportredirectstoReportmodule(WebDriver driver) {

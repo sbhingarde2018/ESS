@@ -2,6 +2,7 @@ package com.spp.pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.remote.server.handler.SendKeys;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
@@ -29,7 +30,8 @@ public class EditClassificationDetailsChangeSalaryStructureofanemployee extends 
 	WebElement UpdateClassificationDetail;
 	@FindBy(xpath="//*[@id=\"main\"]/div[2]/strong")
 	WebElement successfulmessage;
-	
+	@FindBy(xpath="//div[@id='employees_dtable_filter']//input")
+	WebElement Search;
 	
 	public EditClassificationDetailsChangeSalaryStructureofanemployee(WebDriver driver) {
 		super(driver);
@@ -63,5 +65,9 @@ public class EditClassificationDetailsChangeSalaryStructureofanemployee extends 
 	}
 	public String getMessage(){
 		return successfulmessage.getText();
+	}
+	public String SearchEmp(String value) {
+		Search.sendKeys(value);
+		return value;
 	}
 }
