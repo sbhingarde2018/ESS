@@ -22,7 +22,7 @@ import com.spp.pages.CreateReimbursementAllotment;
 import com.spp.pages.ExportToExcelBulkReimbursementErrorLog;
 public class ReimbursementAllotment extends BaseTest{
 	
-	/*@Test(priority=0)
+	@Test(priority=0)
 	public void CreateReimMaster_SC_387() throws Exception{
 		CreateReimbursementMaster rm = new CreateReimbursementMaster(driver);
 		Thread.sleep(6000);
@@ -52,9 +52,9 @@ public class ReimbursementAllotment extends BaseTest{
 		rt.selectName("Reim. LTA (LTA)");
 		rt.selectBlockPeriod("2018/2021");
 		Thread.sleep(2000);
-		rt.selectAllotmentDate("01 December 2018");
+		rt.selectAllotmentDate("01 June 2019");
 		rt.selectFinancialYear("2018/2019");
-		//rt.ClickOnFunctionKey();
+		rt.ClickOnFunctionKey();
 		Thread.sleep(5000);
 		rt.EnterSumAmount("3000");
 		Thread.sleep(2000);
@@ -112,7 +112,7 @@ public class ReimbursementAllotment extends BaseTest{
 		rt.clickReimbursementMaster();
 		Thread.sleep(5000);
 		rt.clickDeleteButton();
-		}*/
+		}
 	
 	
 	@Test(priority=4)
@@ -279,8 +279,8 @@ public class ReimbursementAllotment extends BaseTest{
 		cm.selectAddEmployee();
 		cm.selectAllotButton();
 		Thread.sleep(2000);
-		cm.selectAllotmentName("Reim Other Month (Other Reimbursement)");
-		//Thread.sleep(2000);
+		cm.selectAllotmentName("Reim. Medi (Medical Reimbursement)");
+		Thread.sleep(2000);
 		cm.selectAllotmentDate("01 September 2019");
 		cm.selectFinancialAllotmentYear("2019/2020");
 		cm.ClickOnFunctionKey();

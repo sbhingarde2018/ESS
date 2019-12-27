@@ -24,7 +24,7 @@ public class AllotSalaryNotOnGross extends BasePage {
 	WebElement AdvancedFilterIcon;
 	@FindBy(xpath="//*[@id='bf_form']/div[10]/button[1]")
 	WebElement LoadButton;
-	@FindBy(xpath="//*[@id='notalloted']/tbody/tr/td[contains(text(),'Riya')]/parent::tr/td/a")
+	@FindBy(xpath="//tbody/tr[1]/td[4]/a")
 	WebElement AllotSalaryButton;
 	@FindBy(id="month_year")
 	WebElement EffectiveFrom;

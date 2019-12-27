@@ -29,7 +29,7 @@ public class SalaryRateDetails extends BaseTest {
 		rr.exitFullscreen();
 		rr.selectAllotSalaryButton();
 		Thread.sleep(3000);
-		rr.selectEffectiveFrom("Mar/2019");
+		rr.selectEffectiveFrom("Jan/2020");
 		rr.selectGetRate();
 		Thread.sleep(3000);
 		rr.enterGrossSal("40000");
@@ -56,7 +56,7 @@ public class SalaryRateDetails extends BaseTest {
 		//rr.SelectSaveButton();
 		
 		}
-	
+
 	@Test(priority=1)
 	public void verifyAllotSalaryNotOnGross_SC_99() throws Exception {
 		AllotSalaryNotOnGross rr= new AllotSalaryNotOnGross(driver);
@@ -67,9 +67,11 @@ public class SalaryRateDetails extends BaseTest {
 		Thread.sleep(3000);
 		rr.selectLoadButton();
 		Thread.sleep(2000);
+		rr.exitFullscreen();
+		Thread.sleep(2000);
 		rr.selectAllotSalaryButton();
 		Thread.sleep(3000);
-		rr.selectEffectiveFrom("Mar/2019");
+		rr.selectEffectiveFrom("Jan/2020");
 		rr.selectGetRate();
 		Thread.sleep(3000);
 		rr.enterGrossSal("40000");
@@ -83,7 +85,7 @@ public class SalaryRateDetails extends BaseTest {
 		rr.ClickSalaryAlloted();
 		rr.ClickEdit();
 		Thread.sleep(3000);
-		rr.selectEffectiveFrom("Mar/2019");
+		rr.selectEffectiveFrom("Jan/2020");
 		rr.selectGetRate();
 		Thread.sleep(3000);
 		rr.enterGrossSal("0.00");
@@ -164,7 +166,7 @@ public class SalaryRateDetails extends BaseTest {
 		dw.exitFullscreen();
 		Thread.sleep(2000);
 	}
-	
+/*	
 	@Test(priority=4)
 	public void AllotSalarytoanemployeeAfterchangingSalaryStructure_SC_411() throws Exception{
 		AllotSalarytoanemployeeAfterchangingSalaryStructure dw= new AllotSalarytoanemployeeAfterchangingSalaryStructure(driver);
@@ -195,7 +197,7 @@ public class SalaryRateDetails extends BaseTest {
 		hs.clickonsalarystructure();
 		hs.clickonsettings();
 		hs.assignnewhead();
-		hs.selectsalhead("basic1");
+		hs.selectsalhead("basic");
 		hs.selectcalculationtype("Every Month");
 		hs.selectbasedon("Present Days");
 		hs.checkpf();
@@ -278,5 +280,5 @@ public class SalaryRateDetails extends BaseTest {
 		Thread.sleep(2000);
 		ge.switchToPopUpAndAccept(driver);
 		Thread.sleep(2000);
-	}
+	}*/
 }
