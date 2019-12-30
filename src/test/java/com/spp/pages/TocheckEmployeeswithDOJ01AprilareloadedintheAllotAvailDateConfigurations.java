@@ -13,7 +13,7 @@ public class TocheckEmployeeswithDOJ01AprilareloadedintheAllotAvailDateConfigura
 	WebElement Employee;
 	@FindBy(xpath="//*[@id=\"menu\"]/li[4]/div/div/ul/li[1]/a")
 	WebElement EmployeeDetails;
-	@FindBy(xpath="//*[@id=\"ui-accordion-accordion-panel-0\"]/ul/li[1]/a")
+	@FindBy(xpath="//a[contains(text(),'Add New Employee')]")
 	WebElement AddNewEmployee;
 	@FindBy(id="employee_emp_id")
 	WebElement EnterEmployeeId;
@@ -79,9 +79,9 @@ public class TocheckEmployeeswithDOJ01AprilareloadedintheAllotAvailDateConfigura
 	WebElement EnterAadharNo;
 	@FindBy(xpath="//*[@id=\"menu\"]/li[4]/div/div/ul/li[9]/a")
 	WebElement ClickOnLeaveAllotDate;
-	@FindBy(id="leave_definition_id")
+	@FindBy(xpath="//select[@id='leave_definition_id']")
 	WebElement LeaveTypeDropdown;
-	@FindBy(id="filter")
+	@FindBy(xpath="//button[@id='filter']")
 	WebElement GetEmployeesBtn;
 	@FindBy(id="bf_af_button")
 	WebElement AdvanceFilter;
@@ -99,8 +99,12 @@ public class TocheckEmployeeswithDOJ01AprilareloadedintheAllotAvailDateConfigura
 	WebElement AFLoadBtn;
 	@FindBy(xpath="//*[@id='leave_allot_config']/tbody/tr/td[3]")
 	WebElement EmployeeList;
-	@FindBy(xpath="//*[@id='leave_allot_config']/tbody/tr/td[contains(text(),'Rahul')]")
+	@FindBy(xpath="//tbody/tr[1]/td[4]/span")
 	WebElement EmployeeList1;
+	@FindBy(xpath="//td[contains(text(),'Pooja')]/parent::tr/td[6]/a[2]")
+	WebElement DeleteEmployee;
+	@FindBy(xpath="//td[contains(text(),'Nandita')]/parent::tr/td[6]/a[2]")
+	WebElement DeleteEmployee1;
 	
 	public TocheckEmployeeswithDOJ01AprilareloadedintheAllotAvailDateConfigurations(WebDriver driver) {
 		super(driver);
@@ -205,16 +209,15 @@ public class TocheckEmployeeswithDOJ01AprilareloadedintheAllotAvailDateConfigura
 	    	
 	    	EnterESINo.sendKeys(value);
 	    }
-	    
 	     public void enterEffectiveESI(String value) {
 	    	 EffectiveFromESI.sendKeys(value);
-	 	    }
+	     }
 	     public void enterUANNo(String value) {
 	 	    	EnterUANNo.sendKeys(value);
-	 	    }
+	 	   }
 	     public void enterAADHARNo(String value) {
 	 	    	EnterAadharNo.sendKeys(value);
-	 	    }
+	 	   }
 	
 	public void clickonleaveallotdetails() {
 		ClickOnLeaveAllotDate.click();
@@ -263,5 +266,10 @@ public class TocheckEmployeeswithDOJ01AprilareloadedintheAllotAvailDateConfigura
 	public boolean ifexists1() {
 		return checkIfExist(EmployeeList1);
 	}
-
+	 public void ClickDeleteEmployee() {
+	    	DeleteEmployee.click();
+	}
+	 public void ClickDeleteEmployee1() {
+	    	DeleteEmployee1.click();
+	}
 }

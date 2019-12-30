@@ -51,7 +51,7 @@ public class LeaveAllotAvailDateSettings extends BaseTest {
 		la.selectDateofBirth("06 June 1995");
 		la.selectGender("Female");
 		la.selectMaritalStatus("Single");
-		la.selectDateofJoining("06 June 2018");
+		la.selectDateofJoining("01 April 2018");
 		Thread.sleep(500);
 		la.clickPresentAddress();
 		la.selectState("Maharashtra");
@@ -62,7 +62,7 @@ public class LeaveAllotAvailDateSettings extends BaseTest {
 		Thread.sleep(2000);
 		la.selectattendancestructure("Karnataka");
 		la.selectbank("CASH");
-		la.selectleavepolicy("ClonePolicy");
+		la.selectleavepolicy("Default");
 		la.createemployee();
 		String s=la.getMessage();
  		Assert.assertEquals(s, "Employee successfully created");
@@ -70,21 +70,21 @@ public class LeaveAllotAvailDateSettings extends BaseTest {
 		la.clickonleaveallotdetails();
 		la.clickongenerallinks();
 		Thread.sleep(2000);
-		la.clickonemployeemaster();
-		Thread.sleep(2000);
-		la.ClickFilterEmployee();
- 		la.resizeWindow();
- 		Thread.sleep(5000);
- 		la.selectLoadButton();
- 		Thread.sleep(5000);
- 		la.exitFullscreen();
- 		la.ClickDeleteEmployee();
- 		Thread.sleep(2000);	
- 		la.switchToPopUpAndAccept(driver);
- 		Thread.sleep(5000);
+	//	la.clickonemployeemaster();
+	//	Thread.sleep(2000);
+	//	la.ClickFilterEmployee();
+ 	//	la.resizeWindow();
+ 	//	Thread.sleep(5000);
+ 	//	la.selectLoadButton();
+ 	//	Thread.sleep(5000);
+ 	//	la.exitFullscreen();
+ 	//	la.ClickDeleteEmployee();
+ 	//	Thread.sleep(2000);	
+ 	//	la.switchToPopUpAndAccept(driver);
+ 	//	Thread.sleep(5000);
 	}
 	
-	/*@Test(priority=2)
+	@Test(priority=2)
 	public void ToupdateLeaveAllotAvailDateSettingsviaExcelUpload_SC_108() throws Exception{
 	ToupdateLeaveAllotAvailDateSettingsviaExcelUpload laads = new ToupdateLeaveAllotAvailDateSettingsviaExcelUpload(driver);
 		laads.clickonemployee();
@@ -105,43 +105,45 @@ public class LeaveAllotAvailDateSettings extends BaseTest {
 		Thread.sleep(3000);
 		laads.clickUploadLink();
 		Thread.sleep(3000);
-		laads.selectLeaveType("Leave (L)");
-		laads.resizeWindow();
-		laads.selectGetEmployee();
-		Thread.sleep(5000);
-		laads.selectLoadButton();
-		Thread.sleep(3000);
-		laads.selectMoreLink();
-		Thread.sleep(3000);
-		laads.exitFullscreen();
-	}*/
+		//laads.selectLeaveType("Earned Leave (EL)");
+		//Thread.sleep(2000);
+		//laads.resizeWindow();
+		//Thread.sleep(2000);
+		//laads.selectGetEmployee();
+		//Thread.sleep(3000);
+		//laads.selectLoadButton();
+		//Thread.sleep(3000);
+		//laads.selectMoreLink();
+		//Thread.sleep(3000);
+		//laads.exitFullscreen();
+	}
 	
-	@Test(priority=3)
+/*	@Test(priority=3)
 	public void TocheckEmployeeswithDOJ01AprilareloadedintheAllotAvailDateConfigurations_SC_1633() throws Exception{
 	TocheckEmployeeswithDOJ01AprilareloadedintheAllotAvailDateConfigurations lad = new TocheckEmployeeswithDOJ01AprilareloadedintheAllotAvailDateConfigurations(driver);
-		/*lad.navigateEmployee();
+		lad.navigateEmployee();
 		lad.clickEmployeeDetails();
 		lad.clickAddNewEmployee();
 		Thread.sleep(1000);
 		lad.enterEmployeeId("ID001");
-		lad.enterEmployeeRefNo("Ref-"+Utility.getRandNum(10, 100));
+		lad.enterEmployeeRefNo("Ref-"+Utility.getRandNum(20, 200));
 		lad.enterEmployeeName("Nandita");
 		lad.enterFathername("Anand");
 		lad.enterdob("14 June 1980");
 		lad.selectGender("Female");
 		lad.selectMaritalStatus("Single");
-		lad.enterdoj("01 November 2018");
-		lad.entersaldate("01 November 2018");
+		lad.enterdoj("02 April 2018");
+		lad.entersaldate("02 April 2018");
 		Thread.sleep(1000);
 		lad.selectPresentadd();
 		lad.selectstate("Maharashtra");
 		Thread.sleep(1000);
-		lad.selectstatdetails();
-		lad.checkTDS();
-		lad.selectpanoption("ADD PAN");
-		lad.enterpanno("PRAPM"+Utility.getRandNum(4441, 4966)+"P");
-		lad.entereffectivedatePAN("01 November 2018");
-		Thread.sleep(1000);
+	//	lad.selectstatdetails();
+	//	lad.checkTDS();
+	//	lad.selectpanoption("ADD PAN");
+	//	lad.enterpanno("PRAPM"+Utility.getRandNum(4451, 4986)+"P");
+	//	lad.entereffectivedatePAN("01 November 2018");
+		Thread.sleep(2000);
 		lad.selectclassificationdetail();
 		lad.selectsalstructure("Structure");
 		lad.selectbranch("default");
@@ -153,7 +155,7 @@ public class LeaveAllotAvailDateSettings extends BaseTest {
 		Thread.sleep(2000);
 		lad.createemployee();
 		String s=lad.getMessage();
-		Assert.assertEquals(s, "Employee successfully created");*/
+		Assert.assertEquals(s, "Employee successfully created");
 		lad.navigateEmployee();
 		lad.clickonleaveallotdetails();
 		Thread.sleep(2000);
@@ -173,11 +175,17 @@ public class LeaveAllotAvailDateSettings extends BaseTest {
 		Thread.sleep(5000);
 		lad.clickAFLoadBtn();
 		Thread.sleep(5000);
-		Assert.assertEquals(lad.ifexists(), false);
+		//lad.exitFullscreen();
+		//Assert.assertEquals(lad.ifexists(), true);
+		//lad.clickGetEmployeesBtn();
+		//Thread.sleep(5000);
+		Thread.sleep(2000);
+		lad.LeaveTypeDropdownSelect("Casual Leave (CL)");
 		lad.clickGetEmployeesBtn();
-		Thread.sleep(5000);
+		//lad.resizeWindow();
 		lad.clickAdvanceFilter();
 		Thread.sleep(2000);
+		lad.checkDOJCheckbox();
 		lad.writeDOJFrom("01 Apr, 2018");
 		Thread.sleep(2000);
 		lad.writeDOJTo("02 Apr, 2018");
@@ -189,5 +197,22 @@ public class LeaveAllotAvailDateSettings extends BaseTest {
 		//Assert.assertEquals(lad.ifexists1(), true);
 		//Thread.sleep(2000);
 		lad.exitFullscreen();
-	}
+		lad.navigateEmployee();
+		lad.clickEmployeeDetails();
+		Thread.sleep(2000);
+		lad.clickGetEmployeesBtn();
+	 	lad.resizeWindow();
+	 	Thread.sleep(5000);
+	 	lad.clickAFLoadBtn();
+	 	Thread.sleep(5000);
+	 	lad.exitFullscreen();
+	 	lad.ClickDeleteEmployee();
+	 	Thread.sleep(2000);	
+	 	lad.switchToPopUpAndAccept(driver);
+	 	Thread.sleep(5000);
+	 	lad.ClickDeleteEmployee1();
+	 	Thread.sleep(2000);
+	 	lad.switchToPopUpAndAccept(driver);
+	 	Thread.sleep(5000);
+	}*/
 }

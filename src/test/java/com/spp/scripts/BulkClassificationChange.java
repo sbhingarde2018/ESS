@@ -16,7 +16,7 @@ public class BulkClassificationChange extends BaseTest {
 		af.navigateMaster();
 		af.clickSalaryStructureLink();
 		af.AddNewSalaryStructure();
-		af.entergroupname("Gross_Structure");
+		af.entergroupname("Gross_Structure2");
 		af.ClickBasedOnGross();
 		af.createsalarystructure();
 		Thread.sleep(5000);
@@ -30,13 +30,13 @@ public class BulkClassificationChange extends BaseTest {
 		Thread.sleep(2000);
 		af.selectEmployeeCheckBox();
 		Thread.sleep(2000);
-		af.selectSalaryTo("Gross_Structure");
+		af.selectSalaryTo("Gross_Structure2");
 		af.clickChangeButton();
 		Thread.sleep(2000);
 		String t=af.getMessage();
 		Assert.assertEquals(t, "Successfully Updated");
 		Thread.sleep(4000);
-		af.selectSalaryFrom1("Gross_Structure");
+		af.selectSalaryFrom1("Gross_Structure2");
 		Thread.sleep(2000);
 		af.selectEmployeeCheckBox();
 		Thread.sleep(2000);
@@ -44,9 +44,10 @@ public class BulkClassificationChange extends BaseTest {
 		af.clickChangeButton();
 		//af.switchToPopUpAndAccept(driver);
 		Thread.sleep(5000);
-		//af.navigateMaster();
-		//af.clickSalaryStructureLink();
-		//af.selectDeleteButton();
+		af.navigateMaster();
+		af.clickSalaryStructureLink();
+		af.navigateNext();
+		af.selectDeleteButton();
 	}
 	
 	@Test(priority=1)
@@ -61,7 +62,7 @@ public class BulkClassificationChange extends BaseTest {
 		Thread.sleep(2000);
 		ec.selectsalarygroupfrom("Structure");
 		Thread.sleep(2000);
-		ec.searchemployee("Riya");
+		ec.searchemployee("LeaveA");
 		Thread.sleep(2000);
 		ec.clickonsearch();
 		Thread.sleep(3000);
@@ -92,7 +93,7 @@ public class BulkClassificationChange extends BaseTest {
 		Thread.sleep(2000);
 		ec.selectsalarygroupto("Structure");
 		Thread.sleep(2000);
-		ec.searchemployee("Riya");
+		ec.searchemployee("LeaveA");
 		Thread.sleep(2000);
 		ec.clickonsearch();
 		ec.selectemployee();

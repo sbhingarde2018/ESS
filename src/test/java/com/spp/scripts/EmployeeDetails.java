@@ -169,8 +169,7 @@ public class EmployeeDetails extends BaseTest{
 		String message = ce.getMessage();
 		Assert.assertEquals(message, "Employee detail was successfully deleted.");
 		Thread.sleep(2000);
-	}
-			
+	}	
 	@Test(priority=5)
 	public void AddEmployeewithClassificationDetail_SC_440() throws Exception{
 		AddNewEmployeeTDS at=new AddNewEmployeeTDS(driver);
@@ -312,7 +311,7 @@ public class EmployeeDetails extends BaseTest{
 		uf.clickonedit();
 		uf.updatedate("01 August 2019");
 		uf.updateweeklyoff();
-		Thread.sleep(30000);
+		Thread.sleep(3000);
 		//String message = uf.getMessage();
 		//Assert.assertEquals(message, "Attendance Weekly Off successfully updated");
 	}
@@ -340,7 +339,7 @@ public class EmployeeDetails extends BaseTest{
 		Thread.sleep(2000);
 		dw.clickondelete();
 		dw.switchToPopUpAndAccept(driver);
-		Thread.sleep(30000);
+		Thread.sleep(3000);
 		//String message = dw.getMessage();
 		//Assert.assertEquals(message, "Attendance Weekly Off was successfully deleted.");
 	}
@@ -501,7 +500,7 @@ public class EmployeeDetails extends BaseTest{
 		cr.clickonemployeesummary();
 		cr.clickonviewsummary();
 		cr.downloadpdf();
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 		//cr.downloadexcel();
 	}
 
@@ -520,7 +519,7 @@ public class EmployeeDetails extends BaseTest{
 		ce.DeleteEmployee1();
 		ce.switchToPopUpAndAccept(driver);
 		ce.exitFullscreen();
-		Thread.sleep(3000);
+		Thread.sleep(2000);
 		//String message = ce.getMessage();
 		//Assert.assertEquals(message, "Employee detail was successfully deleted.");
 	}

@@ -14,11 +14,11 @@ public class ToupdateLeaveAllotAvailDateSettingsviaExcelUpload extends BasePage{
 	WebElement ClickOnLeaveAllotDate;
 	@FindBy(xpath="//*[@id=\"ui-id-2\"]/li[1]/a")
 	WebElement ClickGenerateSample;
-	@FindBy(id="leave_definition_id")
+	@FindBy(xpath="//select[@id='leave_definition_id']")
 	WebElement SelectLeaveType;
 	@FindBy(xpath="//*[@id='leave_type_selection_form']/div[2]/fieldset/div[2]/input")
 	WebElement GenerateSampleTemplate;
-	@FindBy(xpath="//*[@id='ui-accordion-accordion-panel-0']/li/a[contains(text(),'ExcelTemplate Upload')]")
+	@FindBy(xpath="//a[contains(text(),'ExcelTemplate Upload')]")
 	WebElement ExcelTemplateUpload;
 	@FindBy(id="excel_file")
 	WebElement ChooseFile;

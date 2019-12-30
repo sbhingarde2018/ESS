@@ -20,7 +20,7 @@ public class BulkClassificationChange1 extends BasePage {
 	WebElement salarystructurelink;
 	@FindBy(xpath="//a[text()=\"Add New Salary Structure\"]")
 	WebElement AddNewSalaryStructure;
-	@FindBy(id="salary_group_salary_group_name")
+	@FindBy(xpath="//input[@id='sal_group_name']")
 	WebElement EnterGroupName;
 	@FindBy(id="emp_detail")
     WebElement Employee;
@@ -48,8 +48,15 @@ public class BulkClassificationChange1 extends BasePage {
 	WebElement BasedOnGross;
 	@FindBy(xpath="//input[@value='Create Salary Structure']")
 	WebElement CreateSalaryStructure;
-	@FindBy(xpath="//*[@id=\"main\"]/div[3]/table/tbody/tr/td[contains(text(),'Gross_Structure')]/parent::tr/td[5]/a")
+	@FindBy(xpath="//*[@id=\"main\"]/div[3]/table/tbody/tr/td[contains(text(),'Gross_Structure2')]/parent::tr/td[5]/a")
 	WebElement ClickDelete;
+	@FindBy(xpath="//a[@class='next_page']")
+	WebElement navigate;
+	
+	
+	public void navigateNext() throws Exception{
+		navigate.click();
+	}
 	public void navigateMaster() throws Exception{
 		masterlink.click();
 	}
