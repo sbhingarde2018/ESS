@@ -78,7 +78,7 @@ public class SetLeaveOpeningBalance extends BaseTest{
 		la.exitFullscreen();
 		}
 	
-	/*@Test(priority=2)
+	@Test(priority=2)
 	public void TosetLeaveOpeningBalanceviaExcelUpload_SC_105() throws Exception{
 	TosetLeaveOpeningBalanceviaExcelUpload obj = new TosetLeaveOpeningBalanceviaExcelUpload(driver);
 		obj.clickonemployee();
@@ -95,10 +95,10 @@ public class SetLeaveOpeningBalance extends BaseTest{
 		Thread.sleep(3000);
 		obj.clickExcelTemplateUpload();
 		Thread.sleep(3000);
-		obj.clickChooseFile("C:\\Users\\AlfaLabs\\Downloads\\LeaveOpeningBalanceUploadExcel.xlsx");
+		obj.clickChooseFile("C:\\Users\\alfaLabs\\Downloads\\LeaveOpeningBalanceUploadExcel.xlsx");
 		Thread.sleep(3000);
 		obj.clickUploadLink();
-		Thread.sleep(3000);
+		Thread.sleep(30000);
 		obj.selectLeaveType1("Casual Leave (CL)");
 		obj.resizeWindow();
 		obj.selectGetEmployee();
@@ -108,5 +108,5 @@ public class SetLeaveOpeningBalance extends BaseTest{
 		obj.exitFullscreen();
 		obj.selectMoreLink();
 		Thread.sleep(3000);
-	}*/
+	}
 }

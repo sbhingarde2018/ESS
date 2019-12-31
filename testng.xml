@@ -29,13 +29,15 @@
  <!-- 	<class name="com.spp.scripts.EmployeeDetails"/>
   	<class name="com.spp.scripts.RestrictPFContribution"/>
   	<class name="com.spp.scripts.BulkIncrementDetails"/>
-    <class name="com.spp.scripts.BulkSalaryRateDetails"/>-->
+    <class name="com.spp.scripts.BulkSalaryRateDetails"/>
     <class name="com.spp.scripts.LeaveAllotAvailDateSettings"/>
     <class name="com.spp.scripts.BulkClassificationChange"/>
-	<!--<class name="com.spp.scripts.SetLeaveOpeningBalance"/>
-    <class name="com.spp.scripts.ManualLeaveAllotmentscript"/>
-   	<class name="com.spp.scripts.SalaryRateDetails"/> -->
-  	
+    <class name="com.spp.scripts.ReimbursementAllotment"/>
+    <class name="com.spp.scripts.SalaryRateDetails"/> 
+    <class name="com.spp.scripts.ReportingAuthority"/>-->
+	<class name="com.spp.scripts.SetLeaveOpeningBalance"/>
+ 	<class name="com.spp.scripts.ManualLeaveAllotmentscript"/>
+	
   <!--<class name="com.spp.scripts.ReimbursementClaim"/>
   	<class name="com.spp.scripts.Paymonths"/>
   	<class name="com.spp.scripts.FormulaEditorValidation"/> 	
@@ -58,7 +60,7 @@
 	<class name="com.spp.scripts.SalaryRateDetails"/>
     
     
-    <class name="com.spp.scripts.ReimbursementAllotment"/>
+    
     
 	
     <class name="com.spp.scripts.ComputationDetails"/>
@@ -149,7 +151,7 @@
     
     
     
-    <class name="com.spp.scripts.ReportingAuthority"/>
+    
     <class name="com.spp.scripts.Reports"/>
     <class name="com.spp.scripts.ReportWriter"/>
     

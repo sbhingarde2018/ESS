@@ -44,7 +44,7 @@ public class ManualLeaveAllotmentscript extends BaseTest {
 		la.enterEmployeeid("ABC12345");
 		la.enterEmployeeref("1234569786099");
 		la.enterEmployeename("Prachi");
-		la.enterEmployeefather("Harish");
+		la.enterEmployeefather("Harisha");
 		la.selectDateofBirth("06 June 1995");
 		la.selectGender("Female");
 		la.selectMaritalStatus("Single");

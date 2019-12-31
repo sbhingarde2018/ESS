@@ -30,8 +30,8 @@ public class ReimbursementAllotment extends BaseTest{
 		rm.clickReimbursementMaster();
 		rm.clickAddReimbursementMaster();
 		Thread.sleep(2000);
-		//rm.enterReimbursementName("ReimMaster");
-		rm.selectReimbursementType("LTA");
+		rm.enterReimbursementName("ReimMaster123");
+		rm.selectReimbursementType("Other Reimbursement");
 		rm.selectModeOfPayment("Bank Advise");
 		rm.selectAllotmentType();
 		rm.selectTDSRef("Basic");
