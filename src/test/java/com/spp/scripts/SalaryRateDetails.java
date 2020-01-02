@@ -22,6 +22,7 @@ public class SalaryRateDetails extends BaseTest {
 		rr.clickEmployeeLink();
 		rr.selectSalaryRateDetails();
 		rr.resizeWindow();
+		Thread.sleep(2000);
 		rr.selectAdvancedFilterIcon();
 		Thread.sleep(3000);
 		rr.selectLoadButton();
@@ -39,7 +40,7 @@ public class SalaryRateDetails extends BaseTest {
 		//rr.enterMess("2000");
 		//rr.selectPopulateButton();
 		rr.SelectSaveButton();
-		Thread.sleep(1000);
+		//Thread.sleep(1000);
  		String s=rr.getMessage();
  		Assert.assertEquals(s, "Salary Allotted successfully");
 		Thread.sleep(3000);
@@ -57,7 +58,7 @@ public class SalaryRateDetails extends BaseTest {
 		
 		}
 
-	@Test(priority=1)
+	@Test(priority=1)  //chang emp for alloted salary ---CalcTyp NotApplicable f
 	public void verifyAllotSalaryNotOnGross_SC_99() throws Exception {
 		AllotSalaryNotOnGross rr= new AllotSalaryNotOnGross(driver);
 		rr.clickEmployeeLink();
@@ -69,9 +70,10 @@ public class SalaryRateDetails extends BaseTest {
 		Thread.sleep(2000);
 		rr.exitFullscreen();
 		Thread.sleep(2000);
-		rr.selectAllotSalaryButton();
+	/*	rr.selectAllotSalaryButton();
 		Thread.sleep(3000);
-		rr.selectEffectiveFrom("Jan/2020");
+		rr.selectEffectiveFrom("Nov/2019");
+		Thread.sleep(3000);
 		rr.selectGetRate();
 		Thread.sleep(3000);
 		rr.enterGrossSal("40000");
@@ -81,11 +83,11 @@ public class SalaryRateDetails extends BaseTest {
 		rr.SelectSaveButton();
  		String s=rr.getMessage();
  		Assert.assertEquals(s, "Salary Allotted successfully");
- 		Thread.sleep(3000);
+ 		Thread.sleep(3000);*/
 		rr.ClickSalaryAlloted();
 		rr.ClickEdit();
 		Thread.sleep(3000);
-		rr.selectEffectiveFrom("Jan/2020");
+		rr.selectEffectiveFrom("Nov/2019");
 		rr.selectGetRate();
 		Thread.sleep(3000);
 		rr.enterGrossSal("0.00");
@@ -93,9 +95,9 @@ public class SalaryRateDetails extends BaseTest {
 		rr.SalAllotEarnings("0.00");
 		Thread.sleep(3000);
 		rr.SelectSaveButton();
+		Thread.sleep(3000);
 		rr.exitFullscreen();
 	}
-	
 /*	@Test(priority=2)
 	public void verifyAllotSalaryViaExcel_SC_100() throws Exception {
 		AllotSalaryViaExcel aa= new AllotSalaryViaExcel(driver);
@@ -148,25 +150,25 @@ public class SalaryRateDetails extends BaseTest {
 		Thread.sleep(2000);
 		dw.clickonload();
 		Thread.sleep(2000);
+		dw.SearchEmp("ABCD");
 		dw.clickonview();
 		Thread.sleep(2000);
 		dw.clickonclassificationdetails();
 		Thread.sleep(1000);
 		dw.clickonedit();
-		dw.selectsalarystructure("Gross_Structure");
+		dw.selectsalarystructure("Gross Salary Structure");
 		dw.updateclassificationdetails();
 		Thread.sleep(2000);
-		dw.switchToPopUpAndDismiss();
-		Thread.sleep(2000);
-		dw.updateclassificationdetails();
-		Thread.sleep(2000);
-		dw.switchToPopUpAndAccept(driver);
+		//dw.switchToPopUpAndDismiss();
+		//Thread.sleep(2000);
+		//dw.updateclassificationdetails();
+		//Thread.sleep(2000);
+		//dw.switchToPopUpAndAccept(driver);
 		String message = dw.getMessage();
 		Assert.assertEquals(message, "Employee detail was successfully updated.");
 		dw.exitFullscreen();
 		Thread.sleep(2000);
 	}
-/*	
 	@Test(priority=4)
 	public void AllotSalarytoanemployeeAfterchangingSalaryStructure_SC_411() throws Exception{
 		AllotSalarytoanemployeeAfterchangingSalaryStructure dw= new AllotSalarytoanemployeeAfterchangingSalaryStructure(driver);
@@ -180,16 +182,17 @@ public class SalaryRateDetails extends BaseTest {
 		Thread.sleep(2000);
 		dw.clickonedit();
 		Thread.sleep(2000);
-		dw.selectefffrom("Dec/2018");
+		dw.selectefffrom("Dec/2020");
 		dw.clickongetrate();
 		Thread.sleep(2000);
 		dw.entergrosssalary("25000");
+		Thread.sleep(2000);
 		dw.clickonsave();
-		String message = dw.getMessage();
-		Assert.assertEquals(message, "Salary Allotted successfully");
+		Thread.sleep(2000);
+		//String message = dw.getMessage();
+		//Assert.assertEquals(message, "Salary Allotted successfully");
 		dw.exitFullscreen();
 	}
-	
 	@Test(priority=5)
 	public void AssignNewHeadtoStructure_SC_412() throws Exception{
 		AssignNewHeadtoStructure hs= new AssignNewHeadtoStructure(driver);
@@ -197,13 +200,15 @@ public class SalaryRateDetails extends BaseTest {
 		hs.clickonsalarystructure();
 		hs.clickonsettings();
 		hs.assignnewhead();
-		hs.selectsalhead("basic");
+		Thread.sleep(3000);
+		hs.selectsalhead("ABCD");
 		hs.selectcalculationtype("Every Month");
 		hs.selectbasedon("Present Days");
-		hs.checkpf();
-		hs.checkesi();
-		hs.selectefffrommonth("Feb/2019");
+		//hs.checkpf();
+		//hs.checkesi();
+		hs.selectefffrommonth("Apr/2019"); // change month
 		hs.selectroundoff("Higher Rupee");
+		Thread.sleep(3000);
 		hs.createsalarygrpdetail();
 		String message = hs.getMessage();
 		Assert.assertEquals(message, "Salary structure detail successfully created");
@@ -224,7 +229,7 @@ public class SalaryRateDetails extends BaseTest {
 		Thread.sleep(2000);
 		ss.clickonedit();
 		Thread.sleep(1000);
-		System.out.println("Salary Head is Displayed");
+		//System.out.println("Salary Head is Displayed");
 		Thread.sleep(2000);
 		ss.exitFullscreen();
 		Thread.sleep(2000);
@@ -272,13 +277,15 @@ public class SalaryRateDetails extends BaseTest {
 		ge.checkbasedongross();
 		Thread.sleep(2000);
 		ge.createsalstructure();
-		Thread.sleep(2000);
+		//Thread.sleep(2000);
 		String message = ge.getMessage();
 		Assert.assertEquals(message, "Salary group successfully created");
+		Thread.sleep(2000);
+		ge.clicknavigateback();
 		Thread.sleep(2000);
 		ge.clickDeleteSalaryStructure();
 		Thread.sleep(2000);
 		ge.switchToPopUpAndAccept(driver);
 		Thread.sleep(2000);
-	}*/
+	}
 }

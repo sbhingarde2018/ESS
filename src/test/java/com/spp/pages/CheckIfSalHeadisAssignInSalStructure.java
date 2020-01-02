@@ -16,9 +16,9 @@ public class CheckIfSalHeadisAssignInSalStructure extends BasePage{
 	WebElement SelectSalaryAllotedTab;	
 	@FindBy(id="filter_head")
 	WebElement ClickonFilter;
-	@FindBy(xpath="//*[@id='bf_form']/div[10]/button[1]")
+	@FindBy(xpath="//form[@id='bf_form']//button[contains(text(),'LOAD')]")
 	WebElement ClickOnLoad;
-	@FindBy(xpath="//*[@id=\"alloted\"]/tbody/tr/td[contains(text(),'JOHN')]/parent::tr/td[4]/a")
+	@FindBy(xpath="//*[@id=\"alloted\"]/tbody/tr/td[contains(text(),'ABCD')]/parent::tr/td[4]/a")
 	WebElement ClickOnEdit;
 	
 	

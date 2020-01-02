@@ -17,7 +17,7 @@ public class AssignNewHeadtoStructure extends BasePage{
 	WebElement ClickOnsettings;
 	@FindBy(xpath="//*[@id=\"main\"]/div[2]/span/a")
 	WebElement AssignNewHead;
-	@FindBy(id="salary_group_detail_salary_head_id")
+	@FindBy(xpath="//select[@id='salary_group_detail_salary_head_id']")
 	WebElement SelectSalaryHead;
 	@FindBy(id="salary_group_detail_calc_type")
 	WebElement SelectCalculationType;

@@ -18,7 +18,7 @@ public class CreateSalaryGroupusingEmployee extends BasePage{
 	WebElement ClickOnSalaryStructure;
 	@FindBy(xpath="//*[@id=\"main\"]/div[2]/span/a")
 	WebElement CreateNewSalStructure;
-	@FindBy(id="salary_group_salary_group_name")
+	@FindBy(xpath="//input[@id='sal_group_name']")
 	WebElement EnterSalStructureName;
 	@FindBy(id="salary_group_based_on_gross")
 	WebElement CheckBasedOnGross;
@@ -28,11 +28,17 @@ public class CreateSalaryGroupusingEmployee extends BasePage{
 	WebElement successfullmessage;
 	@FindBy(xpath="//*[@id='main']/div/table/tbody/tr/td[contains(text(),'HRA STRUCTURE')]/parent::tr/td[5]/a")
 	WebElement deleteicon;
+	@FindBy(xpath="//a[@class='next_page']")
+	WebElement navigateback;
+	
 	
 	public CreateSalaryGroupusingEmployee(WebDriver driver) {
 		super(driver);
 		PageFactory.initElements(driver,this);	
 		}
+	public void clicknavigateback() {
+		navigateback.click();
+	}
 	public void clickonemployee() {
 		ClickOnEmployee.click();
 	}

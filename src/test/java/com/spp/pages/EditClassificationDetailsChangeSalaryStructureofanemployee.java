@@ -18,7 +18,7 @@ public class EditClassificationDetailsChangeSalaryStructureofanemployee extends 
 	WebElement ClickonFilter;
 	@FindBy(xpath="//form[@id='bf_form']//button[contains(text(),'LOAD')]")
 	WebElement ClickOnLoad;
-	@FindBy(xpath="//td[contains(text(),'Nisha')]/parent::tr/td[6]/a[1]")
+	@FindBy(xpath="//td[contains(text(),'ABCD')]/parent::tr/td[6]/a[1]")
 	WebElement ClickonView;
 	@FindBy(xpath="//a[contains(text(),'Classification Details')]")
 	WebElement ClickonClassificationDetails;

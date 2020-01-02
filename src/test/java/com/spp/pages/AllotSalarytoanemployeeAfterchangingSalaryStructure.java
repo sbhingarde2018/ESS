@@ -18,7 +18,7 @@ public class AllotSalarytoanemployeeAfterchangingSalaryStructure extends BasePag
 	WebElement ClickonFilter;
 	@FindBy(xpath="//*[@id='bf_form']/div[10]/button[1]")
 	WebElement ClickOnLoad;
-	@FindBy(xpath="//*[@id='alloted']/tbody/tr/td[contains(text(),'JOHN')]/parent::tr/td[4]/a")
+	@FindBy(xpath="//*[@id='alloted']/tbody/tr/td[contains(text(),'ABCD')]/parent::tr/td[4]/a")
 	WebElement ClickOnEdit;
 	@FindBy(id="month_year")
 	WebElement SelectEffFrom;
@@ -26,7 +26,7 @@ public class AllotSalarytoanemployeeAfterchangingSalaryStructure extends BasePag
 	WebElement ClickOnGetRate;
 	@FindBy(id="gross_sal_formula")
 	WebElement EnterGrossSalary;
-	@FindBy(xpath="//*[@id=\"sal_allotment\"]/table/tbody/tr[4]/td/input[1]")
+	@FindBy(xpath="//table[@class='table']//input[@name='commit']")
 	WebElement ClickOnSave;
 	@FindBy(xpath="//*[@id=\"main\"]/div[1]/strong")
 	WebElement successfullmessage;
