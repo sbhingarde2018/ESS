@@ -1,5 +1,6 @@
 package com.spp.scripts;
 
+import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 import com.spp.common.BaseTest;
@@ -13,7 +14,6 @@ import com.spp.pages.SearchtheLeavesApplied;
 import com.spp.pages.ToviewappliedLeaveDetailinLeaveSummarytab;
 
 import junit.framework.Assert;
-
 public class ApplyLeave extends BaseTest{
 
 	@Test(priority=0)
@@ -27,23 +27,30 @@ public class ApplyLeave extends BaseTest{
 		Thread.sleep(2000);
 		dl.clickonload();
 		Thread.sleep(2000);
+		dl.exitFullscreen();
 		dl.applyleave();
 		Thread.sleep(2000);
-		dl.selectleavetype("Compensatory Work (CW)");
+		dl.selectleavetype("Casual Leave (CL)");
 		Thread.sleep(2000);
-		dl.selectfromdate("14 August 2019");
+		dl.selectfromdate("24 February 2020");
 		Thread.sleep(2000);
-		dl.selecttodate("14 August 2019");
+		dl.selecttodate("24 February 2020");
 		Thread.sleep(2000);
 		dl.clickonapply();
-		//System.out.println("click on apply");
+		Thread.sleep(2000);
 		String s=dl.getMessage();
 		Assert.assertEquals(s, "Leave applied successfully.");
 		Thread.sleep(2000);
-		dl.checkleavehistory();
-		Thread.sleep(2000);
 		dl.checkleavesummary();
-		dl.exitFullscreen();
+		Thread.sleep(2000);
+		dl.clickleavehistory();
+		Thread.sleep(2000);
+		dl.EnterFromHistoryDate("01 November 2013");
+		dl.ClickSearch();
+		Thread.sleep(3000);
+		dl.ClickView();
+		Thread.sleep(3000);
+		dl.ClickDelete();
 	}
 	
 	@Test(priority=1)
@@ -54,23 +61,25 @@ public class ApplyLeave extends BaseTest{
 		dl.resizeWindow();
 		Thread.sleep(1000);
 		dl.clickonfilterhead();
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 		dl.clickonload();
-		Thread.sleep(2000);
+		Thread.sleep(3000);
+		dl.exitFullscreen();
 		dl.applyleave();
 		Thread.sleep(2000);
 		dl.selectleavetype("Casual Leave (CL)");
-		dl.selectfromdate("14 August 2019");
+		dl.selectfromdate("10 February 2020");
 		Thread.sleep(2000);
-		dl.selecttodate("14 August 2019");
-		Thread.sleep(5000);
+		dl.selecttodate("10 February 2020");
+		Thread.sleep(3000);
 		dl.clickonapply();
 		String s=dl.getMessage();
 		Assert.assertEquals(s, "Leave applied successfully.");
 		Thread.sleep(2000);
+		dl.checkleavesummary();
+		Thread.sleep(2000);
 		dl.checkleavehistory();
 		Thread.sleep(2000);
-		dl.checkleavesummary();
 	}
 	
 	@Test(priority=2)
@@ -85,16 +94,15 @@ public class ApplyLeave extends BaseTest{
 		Thread.sleep(2000);
 		dl.clickonload();
 		Thread.sleep(2000);
+		dl.exitFullscreen();
 		dl.applyleave();
 		Thread.sleep(1000);
 		dl.checkleavehistory();
 		Thread.sleep(1000);
-		dl.selectfromdate("01 August 2019");
-		dl.selectodate("14 August 2019");
+		dl.selectfromdate("15 October 2013");
+		dl.selectodate("15 October 2020");
 		dl.clickonsearch();
-		Thread.sleep(5000);
-		dl.exitFullscreen();
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 	}
 	
 	@Test(priority=3)
@@ -103,24 +111,20 @@ public class ApplyLeave extends BaseTest{
 		st.clickonleave();
 		st.clickonapplyleave();
 		Thread.sleep(2000);
-		st.resizeWindow();
-		Thread.sleep(2000);
 		st.clickonfilterhead();
+		st.resizeWindow();
 		Thread.sleep(2000);
 		st.clickonload();
 		Thread.sleep(2000);
+		st.exitFullscreen();
 		st.applyleave();
 		Thread.sleep(1000);
 		st.checkleavehistory();
 		Thread.sleep(1000);
-		st.selectfromdate("01 August 2018");
-		st.selectodate("14 August 2019");
+		st.selectfromdate("01 August 2013");
+		st.selectodate("14 August 2020");
 		Thread.sleep(2000);
 		st.clickonsearch();
-		Thread.sleep(2000);
-		st.clickonview();
-		Thread.sleep(2000);
-		st.exitFullscreen();
 		Thread.sleep(2000);
 	}
 	
@@ -129,17 +133,18 @@ public class ApplyLeave extends BaseTest{
 		DeleteAppliedLeave dl=new DeleteAppliedLeave(driver);
 		dl.clickonleave();
 		dl.clickonapplyleave();
-		dl.resizeWindow();
 		Thread.sleep(1000);
 		dl.clickonfilterhead();
+		dl.resizeWindow();
 		Thread.sleep(2000);
 		dl.clickonload();
 		Thread.sleep(2000);
+		dl.exitFullscreen();
 		dl.applyleave();
 		dl.checkleavehistory();
 		Thread.sleep(2000);
-		dl.enterHistoryFromDate("01 August 2019");
-		dl.enterHistoryToDate("14 August 2019");
+		dl.enterHistoryFromDate("01 August 2013");
+		//dl.enterHistoryToDate("14 August 2019");
 		Thread.sleep(2000);
 		dl.clickSearchButton();
 		Thread.sleep(2000);
@@ -154,7 +159,6 @@ public class ApplyLeave extends BaseTest{
 		dl.switchToPopUpAndAccept(driver);
 		String s=dl.getMessage();
 		Assert.assertEquals(s, "Leave detail successfully deleted.");
-		dl.exitFullscreen();
 		//dl.checkleavehistory();
 	}
 	
@@ -169,8 +173,8 @@ public class ApplyLeave extends BaseTest{
 		Thread.sleep(2000);
 		dl.addnewemployee();
 		dl.enterEmployeeid("ABC1237");
-		dl.enterEmployeeref("RefTest1-"+Utility.getRandNum(100, 200));
-		dl.enterEmployeename("Shanti");
+		dl.enterEmployeeref("Ref-T"+Utility.getRandNum(4201, 4306));
+		dl.enterEmployeename("Lary");
 		dl.enterEmployeefather("Harish");
 		dl.selectDateofBirth("06 June 1995");
 		dl.selectGender("Female");
@@ -188,5 +192,14 @@ public class ApplyLeave extends BaseTest{
 		dl.createemployee();
 		String s=dl.getMessage();
 	 	Assert.assertEquals(s, "Employee successfully created");
+	 	dl.ClickEmpMod();
+	 	dl.ClickEmpdetails();
+	 	dl.ClickFilter();
+	 	dl.resizeWindow();
+	 	Thread.sleep(3000);
+	 	dl.ClickLoad();
+	 	Thread.sleep(3000);
+	 	dl.selectSearch("Lary");
+	 	dl.ClickDelete();
 	}
 }

@@ -1,5 +1,6 @@
 package com.spp.pages;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -10,13 +11,13 @@ import com.spp.common.BasePage;
 public class ApplyUserDefinedtLeave extends BasePage{
 	@FindBy(id="leave")
 	WebElement ClickOnLeave;
-	@FindBy(xpath="//*[@id=\"menu\"]/li[5]/div/div/ul/li[1]/a")
+	@FindBy(xpath="//div[@class='col_3']//a[contains(text(),'Apply Leave')]")
 	WebElement ClickOnApplyLeave;
 	@FindBy(id="filter_head")
 	WebElement ClickOnFilterHead;
-	@FindBy(xpath="//*[@id=\"bf_form\"]/div[10]/button[1]")
+	@FindBy(xpath="//*[@id=\"bf_form\"]/div/button[contains(text(),'LOAD')]")
 	WebElement ClickOnLoad;
-	@FindBy(xpath="//*[@id=\"dt_leave_details\"]/tbody/tr/td[contains(text(),'Geeta')]/parent::tr/td[3]/a")
+	@FindBy(xpath="//tbody/tr/td[contains(text(),'Alex')]/parent::tr/td[3]/a")
 	WebElement ApplyLeave;
 	@FindBy(id="leave_detail_leave_definition_id")
 	WebElement SelectLeaveType;
@@ -28,10 +29,18 @@ public class ApplyUserDefinedtLeave extends BasePage{
 	WebElement ClickOnApply;
 	@FindBy(xpath="//*[@id=\"apply_leave_response\"]/div/strong")
 	WebElement successfullmessage;
-	@FindBy(xpath="//*[@id=\"main\"]/div[2]/nav/ul/li[2]/a/span")
+	@FindBy(xpath="//span[contains(text(),'LEAVE SUMMARY')]")
 	WebElement CheckLeaveSummary;
-	@FindBy(xpath="//*[@id=\"main\"]/div[2]/nav/ul/li[3]/a")
+	@FindBy(xpath="//span[contains(text(),'LEAVE HISTORY')]")
 	WebElement CheckLeaveHistory;
+	@FindBy(xpath="//*[@id=\"from_date\"]")
+	WebElement FromHistoryDate;
+	@FindBy(xpath="//div[3]/div/div/input[2]")
+	WebElement SearchBtn;
+	@FindBy(xpath="//div[2]//div/table/tbody/tr/td[4]/a")
+	WebElement View;
+	@FindBy(xpath="//form/table[3]/tbody/tr[2]/td/input[3]")
+	WebElement Delete;
 
 
 	public ApplyUserDefinedtLeave(WebDriver driver) {
@@ -57,22 +66,39 @@ public class ApplyUserDefinedtLeave extends BasePage{
 		dropDownSelect(SelectLeaveType, value);
 	}
 	public void selectfromdate(String value) {
+		//SelectFromDate.clear();
 		SelectFromDate.sendKeys(value);
 	}
 	public void selecttodate(String value) {
+		//SelectToDate.sendKeys(Keys.TAB);
 		SelectToDate.sendKeys(value);
+		SelectToDate.sendKeys(Keys.TAB);
 	}
 	public void clickonapply() {
-		ClickOnApply.click();
+		jsclick(ClickOnApply);
 	}
 	public String getMessage(){
 		return successfullmessage.getText();
 	}
 	public void checkleavesummary() {
-		CheckLeaveSummary.click();
+		jsclick(CheckLeaveSummary);
 	}
 	public void checkleavehistory() {
-		CheckLeaveHistory.click();
+		jsclick(CheckLeaveHistory);
 	}
-
+	public void EnterFromHistoryDate(String value) {
+		FromHistoryDate.sendKeys(value);
+		FromHistoryDate.sendKeys(Keys.TAB);
+	}
+	public void ClickSearch() {
+		SearchBtn.click();
+	}
+	public void ClickView() {
+		View.click();
+	}
+	public void ClickDelete() throws Exception {
+		Delete.click();
+		Thread.sleep(2000);
+		switchToPopUpAndAccept(driver);
+	}
 }

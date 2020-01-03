@@ -10,15 +10,15 @@ import com.spp.common.BasePage;
 public class ToviewappliedLeaveDetailinLeaveSummarytab extends BasePage{
 	@FindBy(id="leave")
 	WebElement ClickOnLeave;
-	@FindBy(xpath="//*[@id=\"menu\"]/li[5]/div/div/ul/li[1]/a")
+	@FindBy(xpath="//div[@class='col_3']//a[contains(text(),'Apply Leave')]")
 	WebElement ClickOnApplyLeave;
 	@FindBy(id="filter_head")
 	WebElement ClickOnFilterHead;
-	@FindBy(xpath="//*[@id=\"bf_form\"]/div[10]/button[1]")
+	@FindBy(xpath="//*[@id=\"bf_form\"]/div/button[contains(text(),'LOAD')]")
 	WebElement ClickOnLoad;
-	@FindBy(xpath="//*[@id=\"dt_leave_details\"]/tbody/tr/td[contains(text(),'Geeta')]/parent::tr/td[3]/a")
+	@FindBy(xpath="//tbody/tr/td[contains(text(),'Alex')]/parent::tr/td[3]/a")
 	WebElement ApplyLeave;
-	@FindBy(xpath="//*[@id=\"main\"]/div[2]/nav/ul/li[3]/a")
+	@FindBy(xpath="//span[contains(text(),'LEAVE HISTORY')]")
 	WebElement CheckLeaveHistory;
 	@FindBy(xpath="//*[@id=\"from_date\"]")
 	WebElement SelectFromdate;
@@ -49,7 +49,7 @@ public class ToviewappliedLeaveDetailinLeaveSummarytab extends BasePage{
 		ApplyLeave.click();
 	}
 	public void checkleavehistory() {
-		CheckLeaveHistory.click();
+		jsclick(CheckLeaveHistory);
 	}
 	public void selectfromdate(String value) {
 		SelectFromdate.clear();

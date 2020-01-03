@@ -38,7 +38,7 @@ public class CheckifLeaveApplyLeaveGeneralLinkEmployeeMasterredirectstoEmployeeM
 	WebElement PresentAddress;
 	@FindBy(id="employee_present_state_id")
 	WebElement State;
-	@FindBy(xpath="//*[@id=\"create_employee_form\"]/div[2]/div/nav/ul/li[7]/a/span")
+	@FindBy(xpath="//div[@class='wrapper clearfix pt0']//li[7]//a[1]")
 	WebElement SelectClassficationDetail;
 	@FindBy(id="employee_detail_salary_group_id")
 	WebElement SelectSalaryGroup;
@@ -56,6 +56,18 @@ public class CheckifLeaveApplyLeaveGeneralLinkEmployeeMasterredirectstoEmployeeM
 	WebElement CreateEmployee;
 	@FindBy(xpath="//*[@id=\"main\"]/div[2]/strong")
 	WebElement successfullmessage;
+	@FindBy(xpath="//*[@id=\"emp_detail\"]")
+	WebElement EmpMod;
+	@FindBy(xpath="//a[contains(text(),'Employee Details')]")
+	WebElement Empdetails;
+	@FindBy(id="filter_head")
+	WebElement Filter;
+	@FindBy(xpath="//*[@id=\"bf_form\"]/div/button[contains(text(),'LOAD')]")
+	WebElement Load;
+	@FindBy(xpath="//td[contains(text(),'Lary')]/parent::tr/td[6]/a[2]")
+	WebElement Delete;
+	@FindBy(xpath="//div[@id='employees_dtable_filter']//input")
+	WebElement Search;
 	
 	public CheckifLeaveApplyLeaveGeneralLinkEmployeeMasterredirectstoEmployeeMaster(WebDriver driver) {
 		super(driver);
@@ -92,6 +104,9 @@ public class CheckifLeaveApplyLeaveGeneralLinkEmployeeMasterredirectstoEmployeeM
     public void selectDateofBirth(String value) throws Exception {
 	    	DateofBirth.sendKeys(value);
 	}
+    public void selectSearch(String value) throws Exception {
+    	Search.sendKeys(value);
+    }
 	public void selectGender(String value){
 			dropDownSelect(Gender, value);
 	}
@@ -133,5 +148,22 @@ public class CheckifLeaveApplyLeaveGeneralLinkEmployeeMasterredirectstoEmployeeM
     }
     public String getMessage(){
 		return successfullmessage.getText();
-	}	
+	}
+    public void ClickEmpMod() {
+    	EmpMod.click();
+    }
+    public void ClickEmpdetails() {
+    	Empdetails.click();
+    }
+    public void ClickFilter() {
+    	Filter.click();
+    }
+    public void ClickLoad() {
+    	Load.click();
+    }
+    public void ClickDelete() throws Exception {
+    	Delete.click();
+    	Thread.sleep(2000);
+    	switchToPopUpAndAccept(driver);
+    }
 }
