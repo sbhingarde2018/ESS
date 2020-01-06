@@ -15,9 +15,9 @@ public class LeaveencashmentUnitratebasedonRate extends BasePage{
 	WebElement ClickOnLeaveEncashment;
 	@FindBy(id="filter_head")
 	WebElement ClickOnFilter;
-	@FindBy(xpath="//*[@id='bf_form']/div[10]/button[1]")
+	@FindBy(xpath="//*[@id=\"bf_form\"]/div/button[contains(text(),'LOAD')]")
 	WebElement ClickOnLoad;
-	@FindBy(xpath="//*[@id='dt_leave_encashment']/tbody/tr/td[contains(text(),'Raj')]/parent::tr/td[3]/a")
+	@FindBy(xpath="//*[@id='dt_leave_encashment']/tbody/tr/td[contains(text(),'Alex')]/parent::tr/td[3]/a")
 	WebElement ClickOnView;
 	@FindBy(xpath="//a[text()='Add New Leave Encashment']")
 	WebElement AddNewLeaveEncashment;
@@ -27,19 +27,19 @@ public class LeaveencashmentUnitratebasedonRate extends BasePage{
 	WebElement SelectLeave;
 	@FindBy(id="leave_encashment_no_of_encashed_leave")
 	WebElement EnterNoofLeaves;
-	@FindBy(id="leave_encashment_unit_rate")
+	@FindBy(xpath="//input[@id='leave_encashment_unit_rate']")
 	WebElement EnterUnitRate;
 	@FindBy(id="leave_encashment_in_salary")
 	WebElement CheckShowInSalary;
 	@FindBy(xpath="//*[@id='new_leave_encashment']/table/tbody/tr[13]/td/input")
 	WebElement ClickOnSave;
-	@FindBy(id="unit_rate_calculation_based_on_formula_or_rate")
+	@FindBy(xpath="//input[@id='leave_encashment_unit_rate_calculation_based_on_formula_or_rate']")
 	WebElement CheckUnitRate;
 	@FindBy(id="unit_rate_formula")
 	WebElement CheckFormula;
 	@FindBy(id="formula_id")
 	WebElement SelectFormula;
-	@FindBy(id="unit_rate_rate")
+	@FindBy(xpath="//input[@id='leave_encashment_rate_rate']")
 	WebElement SelectRate;
 	@FindBy(xpath="//*[@id='salary_heads_unit_rate']/table/tbody/tr/td[contains(text(),'Basic')]/parent::tr/td/input[1]")
 	WebElement CheckHead;
@@ -57,13 +57,13 @@ public class LeaveencashmentUnitratebasedonRate extends BasePage{
 	WebElement GetValues;
 	@FindBy(id="select_sal_emp")
 	WebElement SelectAllSalaryEmp;
-	@FindBy(xpath = "//*[@id='salaries']/tbody/tr/td[contains(text(),'Raj')]/parent::tr/td/input")
+	@FindBy(xpath = "//*[@id='salaries']/tbody/tr/td[contains(text(),'Alex')]/parent::tr/td/input")
 	WebElement SelectSingleEmp;
 	@FindBy(xpath = "//*[@id='salary_editor_form']/table/tbody/tr[2]/td/div/div/div[1]/input")
 	WebElement ProcessSalaryBtn;
 	@FindBy(xpath = "//*[@id='menu']/li[6]/div/div[3]/ul/li[2]/a")
 	WebElement SalaryProcessList;
-	@FindBy(xpath = "//*[@id='salary_review']/tbody/tr/td[contains(text(),'Feb/2019')]/parent::tr/td/a")
+	@FindBy(xpath = "//*[@id='salary_review']/tbody/tr/td[contains(text(),'Jan/2020')]/parent::tr/td/a")
 	WebElement SalaryProcessListEdit;
 	@FindBy(xpath="//a[text()='View']")
 	WebElement SalaryReviewViewBtn;
@@ -71,10 +71,12 @@ public class LeaveencashmentUnitratebasedonRate extends BasePage{
 	WebElement SalaryReviewDetailView;
 	@FindBy(xpath="//*[@id='employee_leaves_encashed']/table/tbody/tr/td[contains(text(),'Casual Leave')]/parent::tr/td/a/img")
 	WebElement EncashmentDeleteBtn;
-	@FindBy(id="leave_encashment_mode_of_payment")
+	@FindBy(xpath="//select[@id='leave_encashment_mode_of_payment']")
 	WebElement SelectModeofPayment;
-	@FindBy(id="leave_encashment_financial_inst_id")
+	@FindBy(xpath="//select[@id='leave_encashment_financial_inst_id']")
 	WebElement SelectBank;
+	@FindBy(xpath="//div[@id='salaries_filter']//input")
+	WebElement Search;
 	
 	public LeaveencashmentUnitratebasedonRate(WebDriver driver) {
 		super(driver);
@@ -178,5 +180,8 @@ public class LeaveencashmentUnitratebasedonRate extends BasePage{
 	
 	public void selectbank(String value) {
 		dropDownSelect(SelectBank, value);
+	}
+	public void EnterSearch(String value) {
+		Search.sendKeys(value);
 	}
 }

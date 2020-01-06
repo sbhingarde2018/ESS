@@ -14,9 +14,9 @@ public class LeaveencashmentUnitratebasedonFormula extends BasePage{
 	WebElement ClickOnLeaveEncashment;
 	@FindBy(id="filter_head")
 	WebElement ClickOnFilter;
-	@FindBy(xpath="//*[@id='bf_form']/div[10]/button[1]")
+	@FindBy(xpath="//*[@id=\"bf_form\"]/div/button[contains(text(),'LOAD')]")
 	WebElement ClickOnLoad;
-	@FindBy(xpath="//*[@id='dt_leave_encashment']/tbody/tr/td[contains(text(),'Raj')]/parent::tr/td[3]/a")
+	@FindBy(xpath="//tbody/tr/td[contains(text(),'Alex')]/parent::tr/td[3]/a")
 	WebElement ClickOnView;
 	@FindBy(xpath="//a[text()='Add New Leave Encashment']")
 	WebElement AddNewLeaveEncashment;
@@ -32,11 +32,11 @@ public class LeaveencashmentUnitratebasedonFormula extends BasePage{
 	WebElement CheckShowInSalary;
 	@FindBy(xpath="//*[@id='new_leave_encashment']/table/tbody/tr[13]/td/input")
 	WebElement ClickOnSave;
-	@FindBy(id="unit_rate_calculation_based_on_formula_or_rate")
+	@FindBy(xpath="//*[@id=\"leave_encashment_unit_rate_calculation_based_on_formula_or_rate\"]")
 	WebElement CheckUnitRate;
-	@FindBy(id="unit_rate_formula")
+	@FindBy(xpath="//*[@id=\"leave_encashment_formula_formula\"]")
 	WebElement CheckFormula;
-	@FindBy(id="formula_id")
+	@FindBy(xpath="//*[@id=\"leave_encashment_formula_id\"]")
 	WebElement SelectFormula;
 	@FindBy(xpath="//strong[text()='Leave encashment successfully created.']")
 	WebElement SuccessfulMessage;
@@ -66,6 +66,8 @@ public class LeaveencashmentUnitratebasedonFormula extends BasePage{
 	WebElement SalaryReviewDetailView;
 	@FindBy(xpath="//*[@id='employee_leaves_encashed']/table/tbody/tr/td[contains(text(),'Casual Leave')]/parent::tr/td/a/img")
 	WebElement EncashmentDeleteBtn;
+	@FindBy(xpath="//select[@name='dt_leave_encashment_length']")
+	WebElement Records; 
 	
 	public LeaveencashmentUnitratebasedonFormula(WebDriver driver) {
 		super(driver);
@@ -156,5 +158,8 @@ public class LeaveencashmentUnitratebasedonFormula extends BasePage{
 	}
 	public void deleteEncashment() {
 		EncashmentDeleteBtn.click();
+	}
+	public void selectRecords(String value) {
+		dropDownSelect(Records, value);
 	}
 }

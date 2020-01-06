@@ -16,7 +16,7 @@ public class LeaveencashmentModeofPaymentCash extends BasePage{
 	WebElement ClickOnFilter;
 	@FindBy(xpath="//*[@id='bf_form']/div[10]/button[1]")
 	WebElement ClickOnLoad;
-	@FindBy(xpath="//*[@id='dt_leave_encashment']/tbody/tr/td[contains(text(),'Raj')]/parent::tr/td[3]/a")
+	@FindBy(xpath="//*[@id='dt_leave_encashment']/tbody/tr/td[contains(text(),'Alex')]/parent::tr/td[3]/a")
 	WebElement ClickOnView;
 	@FindBy(xpath="//a[text()='Add New Leave Encashment']")
 	WebElement AddNewLeaveEncashment;
@@ -26,7 +26,7 @@ public class LeaveencashmentModeofPaymentCash extends BasePage{
 	WebElement SelectLeave;
 	@FindBy(id="leave_encashment_no_of_encashed_leave")
 	WebElement EnterNoofLeaves;
-	@FindBy(id="leave_encashment_unit_rate")
+	@FindBy(xpath="//input[@id='leave_encashment_unit_rate']")
 	WebElement EnterUnitRate;
 	@FindBy(id="leave_encashment_in_salary")
 	WebElement CheckShowInSalary;
@@ -38,7 +38,7 @@ public class LeaveencashmentModeofPaymentCash extends BasePage{
 	WebElement CheckFormula;
 	@FindBy(id="formula_id")
 	WebElement SelectFormula;
-	@FindBy(id="leave_encashment_mode_of_payment")
+	@FindBy(xpath="//select[@id='leave_encashment_mode_of_payment']")
 	WebElement SelectModeofPayment;
 	@FindBy(id="leave_encashment_financial_inst_id")
 	WebElement SelectBank;

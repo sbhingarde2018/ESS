@@ -15,9 +15,9 @@ public class LeaveEncashmentLumpsumUnitRate extends BasePage{
 	WebElement ClickOnLeaveEncashment;
 	@FindBy(id="filter_head")
 	WebElement ClickOnFilter;
-	@FindBy(xpath="//*[@id='bf_form']/div[10]/button[1]")
+	@FindBy(xpath="//*[@id=\"bf_form\"]/div/button[contains(text(),'LOAD')]")
 	WebElement ClickOnLoad;
-	@FindBy(xpath="//*[@id='dt_leave_encashment']/tbody/tr/td[contains(text(),'Raj')]/parent::tr/td[3]/a")
+	@FindBy(xpath="//tbody/tr/td[contains(text(),'Alex')]/parent::tr/td[3]/a")
 	WebElement ClickOnView;
 	@FindBy(xpath="//a[text()='Add New Leave Encashment']")
 	WebElement AddNewLeaveEncashment;
@@ -47,7 +47,7 @@ public class LeaveEncashmentLumpsumUnitRate extends BasePage{
 	WebElement GetValues;
 	@FindBy(id="select_sal_emp")
 	WebElement SelectAllSalaryEmp;
-	@FindBy(xpath = "//*[@id='salaries']/tbody/tr/td[contains(text(),'Raj')]/parent::tr/td/input")
+	@FindBy(xpath = "//*[@id='salaries']/tbody/tr/td[contains(text(),'Zain')]/parent::tr/td/input")
 	WebElement SelectSingleEmp;
 	@FindBy(xpath = "//*[@id='salary_editor_form']/table/tbody/tr[2]/td/div/div/div[1]/input")
 	WebElement ProcessSalaryBtn;
@@ -61,7 +61,9 @@ public class LeaveEncashmentLumpsumUnitRate extends BasePage{
 	WebElement SalaryReviewDetailView;
 	@FindBy(xpath="//*[@id='employee_leaves_encashed']/table/tbody/tr/td[contains(text(),'Casual Leave')]/parent::tr/td/a/img")
 	WebElement EncashmentDeleteBtn;
-
+	@FindBy(xpath="//select[@name='dt_leave_encashment_length']")
+	WebElement Records; 
+	
 	public LeaveEncashmentLumpsumUnitRate(WebDriver driver) {
 		super(driver);
 		PageFactory.initElements(driver, this);
@@ -142,5 +144,8 @@ public class LeaveEncashmentLumpsumUnitRate extends BasePage{
 	}
 	public void deleteEncashment() {
 		EncashmentDeleteBtn.click();
+	}
+	public void selectRecords(String value) {
+		dropDownSelect(Records, value);
 	}
 }
