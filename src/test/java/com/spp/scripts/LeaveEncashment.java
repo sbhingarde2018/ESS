@@ -23,7 +23,7 @@ import com.spp.pages.UpdateLeaveEncashmentBasedonPercentagetoRemovevalueandInser
 
 public class LeaveEncashment extends BaseTest{
 	
-	@Test(priority=0)
+/*	@Test(priority=0)
 	public void LeaveEncashmentLumpsumUnitRate_SC_113() throws Exception{
 		LeaveEncashmentLumpsumUnitRate lu=new LeaveEncashmentLumpsumUnitRate(driver);
 		lu.clickonleave();
@@ -332,9 +332,9 @@ public class LeaveEncashment extends BaseTest{
 		Thread.sleep(4000);
 		lu.exitFullscreen();
 		Thread.sleep(4000);
-	}
+	}*/
 	
-/*	@Test(priority=5)
+	@Test(priority=5)
 	public void AddNewLeaveEncashmentModeofPaymentCheque_SC_418() throws Exception{
 		AddNewLeaveEncashmentModeofPaymentCheque lu=new AddNewLeaveEncashmentModeofPaymentCheque(driver);
 		lu.clickonleave();
@@ -598,8 +598,7 @@ public class LeaveEncashment extends BaseTest{
 		lu.ClickDetailView();
 		Thread.sleep(2000);
 		}
-	
-		@Test(priority=12)
+	@Test(priority=12) //bug
 	public void UpdateLeaveEncashmentBasedonAmounttoRemovevalueandInsertvalue_SC_483() throws Exception{
 		UpdateLeaveEncashmentBasedonAmounttoRemovevalueandInsertvalue lu=new UpdateLeaveEncashmentBasedonAmounttoRemovevalueandInsertvalue(driver);
 		lu.clickonleave();
@@ -617,7 +616,7 @@ public class LeaveEncashment extends BaseTest{
 		lu.clickonremove();
 		lu.checkbasedonamount();
 		Thread.sleep(2000);
-		lu.selectsalaryhead("Earning");
+		lu.selectsalaryhead("Basic");
 		lu.enteramount("100");
 		lu.clickoninsert();
 		Thread.sleep(1000);
@@ -658,6 +657,11 @@ public class LeaveEncashment extends BaseTest{
 		lu.clickonload();
 		Thread.sleep(2000);
 		lu.clickonview();
+		Thread.sleep(2000);
+		lu.deleteEncashment(); //remove once upper sc_483 testcases get pass
+		Thread.sleep(1000);
+		lu.switchToPopUpAndAccept(driver);
+		Thread.sleep(3000);
 		lu.addnewleaveencashment();
 		Thread.sleep(2000);
 		lu.selectmonth("Jan/2020");
@@ -666,13 +670,12 @@ public class LeaveEncashment extends BaseTest{
 		Thread.sleep(2000);
 		//lu.enternoofleaves("1");
 		//Thread.sleep(1000);
-		lu.enterunitrate("120");
+		lu.enterunitrate("100");
 		Thread.sleep(1000);
 		lu.checkshowinsalary();
 		Thread.sleep(1000);
 		lu.checkcontribution();
 		lu.checkbasedonpercent();
-		Thread.sleep(1000);
 		lu.selectsalaryhead("Basic");
 		lu.enteramount("100");
 		Thread.sleep(1000);
@@ -713,7 +716,7 @@ public class LeaveEncashment extends BaseTest{
 		Thread.sleep(2000);
 		lu.checkbasedonpercent();
 		Thread.sleep(2000);
-		lu.selectsalaryhead("Earning");
+		lu.selectsalaryhead("Basic");
 		lu.enteramount("100");
 		Thread.sleep(2000);
 		lu.clickoninsert();
@@ -743,5 +746,5 @@ public class LeaveEncashment extends BaseTest{
 		lu.switchToPopUpAndAccept(driver);
 		Thread.sleep(1000);
 		lu.exitFullscreen();
-	}*/
+	}
 }

@@ -14,9 +14,9 @@ public class AddNewLeaveEncashmentwithContributionApplicableBasedonPercentage ex
 	WebElement ClickOnLeaveEncashment;
 	@FindBy(id="filter_head")
 	WebElement ClickOnFilter;
-	@FindBy(xpath="//*[@id='bf_form']/div[10]/button[1]")
+	@FindBy(xpath="//*[@id=\"bf_form\"]/div/button[contains(text(),'LOAD')]")
 	WebElement ClickOnLoad;
-	@FindBy(xpath="//*[@id='dt_leave_encashment']/tbody/tr/td[contains(text(),'Raj')]/parent::tr/td[3]/a")
+	@FindBy(xpath="//*[@id='dt_leave_encashment']/tbody/tr/td[contains(text(),'Alex')]/parent::tr/td[3]/a")
 	WebElement ClickOnView;
 	@FindBy(xpath="//a[text()='Add New Leave Encashment']")
 	WebElement AddNewLeaveEncashment;
@@ -26,7 +26,7 @@ public class AddNewLeaveEncashmentwithContributionApplicableBasedonPercentage ex
 	WebElement SelectLeave;
 	@FindBy(id="leave_encashment_no_of_encashed_leave")
 	WebElement EnterNoofLeaves;
-	@FindBy(id="leave_encashment_unit_rate")
+	@FindBy(xpath="//input[@id='leave_encashment_unit_rate']")
 	WebElement EnterUnitRate;
 	@FindBy(id="leave_encashment_in_salary")
 	WebElement CheckShowInSalary;
@@ -50,9 +50,10 @@ public class AddNewLeaveEncashmentwithContributionApplicableBasedonPercentage ex
 	WebElement SalaryProcessList;
 	@FindBy(xpath="//*[@id='main']/div[2]/nav/ul/li[2]/a/span")
 	WebElement SalaryReviewDetailView;
-	@FindBy(xpath = "//*[@id='salary_review']/tbody/tr/td[contains(text(),'Feb/2019')]/parent::tr/td/a")
+	@FindBy(xpath = "//*[@id='salary_review']/tbody/tr/td[contains(text(),'Jan/2020')]/parent::tr/td/a")
 	WebElement SalaryProcessListEdit;
-	
+	@FindBy(xpath="//*[@id='employee_leaves_encashed']/table/tbody/tr/td[contains(text(),'Casual Leave')]/parent::tr/td/a/img")
+	WebElement EncashmentDeleteBtn;
 	
 	public AddNewLeaveEncashmentwithContributionApplicableBasedonPercentage(WebDriver driver) {
 		super(driver);
@@ -125,5 +126,8 @@ public class AddNewLeaveEncashmentwithContributionApplicableBasedonPercentage ex
 	}
 	public void clickSalaryReviewDetailView() {
 		SalaryReviewDetailView.click();
+	}
+	public void deleteEncashment() {
+		EncashmentDeleteBtn.click();
 	}
 }

@@ -14,11 +14,11 @@ public class UpdateLeaveEncashmentBasedonPercentagetoRemovevalueandInsertvalue e
 	WebElement ClickOnLeaveEncashment;
 	@FindBy(id="filter_head")
 	WebElement ClickOnFilter;
-	@FindBy(xpath="//*[@id='bf_form']/div[10]/button[1]")
+	@FindBy(xpath="//*[@id=\"bf_form\"]/div/button[contains(text(),'LOAD')]")
 	WebElement ClickOnLoad;
-	@FindBy(xpath="//*[@id='dt_leave_encashment']/tbody/tr/td[contains(text(),'Raj')]/parent::tr/td[3]/a")
+	@FindBy(xpath="//*[@id='dt_leave_encashment']/tbody/tr/td[contains(text(),'Alex')]/parent::tr/td[3]/a")
 	WebElement ClickOnView;
-	@FindBy(xpath="//*[@id='employee_leaves_encashed']/table/tbody/tr/td[contains(text(),'Feb/2019')]/parent::tr/td[7]/a")
+	@FindBy(xpath="//*[@id='employee_leaves_encashed']/table/tbody/tr/td[contains(text(),'Jan/2020')]/parent::tr/td[7]/a")
 	WebElement ClickOnEdit;
 	@FindBy(xpath="//button[text()='Remove']")
 	WebElement ClickOnRemove;
@@ -40,7 +40,7 @@ public class UpdateLeaveEncashmentBasedonPercentagetoRemovevalueandInsertvalue e
 	WebElement SalaryProcessList;
 	@FindBy(xpath="//*[@id='main']/div[2]/nav/ul/li[2]/a/span")
 	WebElement SalaryReviewDetailView;
-	@FindBy(xpath = "//*[@id='salary_review']/tbody/tr/td[contains(text(),'Feb/2019')]/parent::tr/td/a")
+	@FindBy(xpath = "//*[@id='salary_review']/tbody/tr/td[contains(text(),'Jan/2020')]/parent::tr/td/a")
 	WebElement SalaryProcessListEdit;
 	@FindBy(xpath="//*[@id='employee_leaves_encashed']/table/tbody/tr/td[contains(text(),'Casual Leave')]/parent::tr/td/a/img")
 	WebElement EncashmentDeleteBtn;

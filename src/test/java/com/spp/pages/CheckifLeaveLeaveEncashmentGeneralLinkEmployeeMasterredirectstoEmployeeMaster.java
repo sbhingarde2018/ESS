@@ -14,9 +14,9 @@ public class CheckifLeaveLeaveEncashmentGeneralLinkEmployeeMasterredirectstoEmpl
 	WebElement ClickOnLeaveEncashment;
 	@FindBy(xpath="//*[@id=\"ui-accordion-accordion-header-1\"]/h3")
 	WebElement ClickOnGeneralLinks;
-	@FindBy(xpath="//*[@id=\"ui-accordion-accordion-panel-0\"]/li/a")
+	@FindBy(xpath="//ul[@id='ui-id-2']//a[contains(text(),'Employee Master')]")
 	WebElement ClickOnEmployeeMaster;
-	@FindBy(xpath="//*[@id=\"ui-accordion-accordion-panel-0\"]/ul/li[1]/a")
+	@FindBy(xpath="//a[contains(text(),'Add New Employee')]")
 	WebElement AddNewEmployee;
 	@FindBy(id="employee_emp_id")
 	WebElement employeeid;
@@ -58,7 +58,7 @@ public class CheckifLeaveLeaveEncashmentGeneralLinkEmployeeMasterredirectstoEmpl
 	WebElement successfullmessage;
 	@FindBy(id="filter_head")
 	WebElement FilterEmployee;
-	@FindBy(xpath="//*[@id='bf_form']/div[10]/button[1]")
+	@FindBy(xpath="//*[@id=\"bf_form\"]/div/button[contains(text(),'LOAD')]")
 	WebElement ClickOnLoad;
 	@FindBy(xpath="//*[@id='employees_dtable']/tbody/tr/td[contains(text(),'Shyam')]/parent::tr/td/a[2]")
 	WebElement DeleteEmployees;

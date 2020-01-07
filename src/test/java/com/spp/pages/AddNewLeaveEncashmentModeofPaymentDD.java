@@ -14,9 +14,9 @@ public class AddNewLeaveEncashmentModeofPaymentDD extends BasePage{
 	WebElement ClickOnLeaveEncashment;
 	@FindBy(id="filter_head")
 	WebElement ClickOnFilter;
-	@FindBy(xpath="//*[@id=\"bf_form\"]/div[10]/button[1]") 
+	@FindBy(xpath="//*[@id=\"bf_form\"]/div/button[contains(text(),'LOAD')]") 
 	WebElement ClickOnLoad;
-	@FindBy(xpath="//*[@id=\"dt_leave_encashment\"]/tbody/tr/td[contains(text(),'Raj')]/parent::tr/td[3]/a")
+	@FindBy(xpath="//*[@id=\"dt_leave_encashment\"]/tbody/tr/td[contains(text(),'Alex')]/parent::tr/td[3]/a")
 	WebElement ClickOnView;
 	@FindBy(xpath="//*[@id=\"main\"]/div[3]/span/a")     
 	WebElement AddNewLeaveEncashment;
@@ -26,7 +26,7 @@ public class AddNewLeaveEncashmentModeofPaymentDD extends BasePage{
 	WebElement SelectLeave;
 	@FindBy(id="leave_encashment_no_of_encashed_leave")
 	WebElement EnterNoofLeaves;
-	@FindBy(id="leave_encashment_unit_rate")
+	@FindBy(xpath="//input[@id='leave_encashment_unit_rate']")
 	WebElement EnterUnitRate;
 	@FindBy(id="leave_encashment_in_salary")
 	WebElement CheckShowInSalary;
@@ -44,16 +44,18 @@ public class AddNewLeaveEncashmentModeofPaymentDD extends BasePage{
 	WebElement SelectBank;
 	@FindBy(xpath="//strong[text()='Leave encashment successfully created.']")
 	WebElement SuccessfulMessage;
-	@FindBy(xpath="//*[@id=\"employee_leaves_encashed\"]/table/tbody/tr/td[contains(text(),'Jan/2019')]/parent::tr/td[8]/a/img")
+	@FindBy(xpath="//*[@id=\"employee_leaves_encashed\"]/table/tbody/tr/td[contains(text(),'Jan/2020')]/parent::tr/td[8]/a/img")
 	WebElement Delete;
 	@FindBy(id="salary")
 	WebElement Salary;
 	@FindBy(xpath="//*[@id=\"menu\"]/li[6]/div/div[3]/ul/li[2]/a")
 	WebElement SalaryProcessList;
-	@FindBy(xpath="//*[@id=\"salary_review\"]/tbody/tr/td[contains(text(),'Jan/2019')]/parent::tr/td[7]/a")
+	@FindBy(xpath="//*[@id=\"salary_review\"]/tbody/tr/td[contains(text(),'Jan/2020')]/parent::tr/td[7]/a")
 	WebElement EditSalaryList;
 	@FindBy(xpath="//*[@id=\"main\"]/div[2]/nav/ul/li[2]/a/span")
 	WebElement DetailView;
+	@FindBy(xpath="//input[@id='leave_encashment_cheque_dd_ac_no']")
+	WebElement DD;
 	
 	public AddNewLeaveEncashmentModeofPaymentDD(WebDriver driver) {
 		super(driver);
@@ -130,5 +132,8 @@ public class AddNewLeaveEncashmentModeofPaymentDD extends BasePage{
 	}
 	public void ClickDetailView() {
 		DetailView.click();
+	}
+	public void EnterDD(String value) {
+		DD.sendKeys(value);
 	}
 }
