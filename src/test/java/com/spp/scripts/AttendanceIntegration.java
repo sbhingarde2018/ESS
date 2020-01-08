@@ -83,7 +83,7 @@ public class AttendanceIntegration extends BaseTest{
  		Thread.sleep(2000);
 		anmm.clickonAttendanceIntegration();
 		Thread.sleep(2000);
-	}
+	}	
 	
 	@Test(priority = 3)
 	public void DeleteAttendanceIntegrationConfiguration_SC_492() throws Exception{

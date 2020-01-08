@@ -8,15 +8,15 @@ import org.openqa.selenium.support.PageFactory;
 import com.spp.common.BasePage;
 
 public class CheckifLeaveMonthlyAttendanceGeneralLinkEmployeeMasterredirectstoEmployeeMaster extends BasePage{
-	@FindBy(id="leave")
+	@FindBy(xpath="//a[@id='leave']")
 	WebElement ClickOnLeave;
-	@FindBy(xpath="//*[@id='menu']/li[5]/div/div/ul/li[4]/a")
+	@FindBy(xpath="//a[contains(@class,'tab_border')][contains(text(),'Monthly Attendance')]")
 	WebElement ClickOnMonthlyAttendance;
 	@FindBy(xpath="//*[@id=\"ui-accordion-accordion-header-1\"]/h3")
 	WebElement ClickOnGeneralLinks;
-	@FindBy(xpath="//*[@id=\"ui-accordion-accordion-panel-0\"]/li/a")
+	@FindBy(xpath="//ul[@id='ui-id-2']//a[contains(text(),'Employee Master')]")
 	WebElement ClickOnEmployeeMaster;
-	@FindBy(xpath="//*[@id=\"ui-accordion-accordion-panel-0\"]/ul/li[1]/a")
+	@FindBy(xpath="//a[contains(text(),'Add New Employee')]")
 	WebElement AddNewEmployee;
 	@FindBy(id="employee_emp_id")
 	WebElement employeeid;
@@ -52,16 +52,19 @@ public class CheckifLeaveMonthlyAttendanceGeneralLinkEmployeeMasterredirectstoEm
 	WebElement SelectFinanacialInstitution;
 	@FindBy(id="employee_detail_classification_1")
 	WebElement SelectDesignation;
-	@FindBy(xpath="//*[@id=\"create_employee_form\"]/div[2]/div/div/div[8]/input")
+	@FindBy(xpath="//input[@name='commit']")
 	WebElement CreateEmployee;
 	@FindBy(xpath="//*[@id=\"main\"]/div[2]/strong")
 	WebElement successfullmessage;
 	@FindBy(id="filter_head")
 	WebElement FilterEmployee;
-	@FindBy(xpath="//*[@id='bf_form']/div[10]/button[1]")
+	@FindBy(xpath="//*[@id=\"bf_form\"]/div/button[contains(text(),'LOAD')]")
 	WebElement ClickOnLoad;
-	@FindBy(xpath="//*[@id='employees_dtable']/tbody/tr/td[contains(text(),'Reena')]/parent::tr/td/a[2]")
+	@FindBy(xpath="//tbody/tr/td[contains(text(),'Reena')]/parent::tr/td/a[2]")
 	WebElement DeleteEmployees;
+	@FindBy(xpath="//div[@id='employees_dtable_filter']//input")
+	WebElement Search;
+	
 	
 	public CheckifLeaveMonthlyAttendanceGeneralLinkEmployeeMasterredirectstoEmployeeMaster(WebDriver driver) {
 		super(driver);
@@ -82,6 +85,9 @@ public class CheckifLeaveMonthlyAttendanceGeneralLinkEmployeeMasterredirectstoEm
 	public void addnewemployee() {
 		AddNewEmployee.click();
 	}
+	public void enterSearch(String value) throws Exception{
+    	Search.sendKeys(value);
+}
 	public void enterEmployeeid(String value) throws Exception{
 	    	employeeid.sendKeys(value);
 	}

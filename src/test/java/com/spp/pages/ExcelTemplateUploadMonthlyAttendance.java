@@ -9,13 +9,13 @@ import com.spp.common.BasePage;
 
 public class ExcelTemplateUploadMonthlyAttendance extends BasePage{
 	
-	@FindBy(id="leave")
+	@FindBy(xpath="//a[@id='leave']")
 	WebElement ClickOnLeave;
-	@FindBy(xpath="//*[@id='menu']/li[5]/div/div/ul/li[4]/a")
+	@FindBy(xpath="//a[contains(@class,'tab_border')][contains(text(),'Monthly Attendance')]")
 	WebElement ClickOnMonthlyAttendance;
-	@FindBy(xpath="//*[@id='ui-accordion-accordion-header-1']/h3")
+	@FindBy(xpath="//div[@id='ui-id-3']//h3[contains(text(),'Monthly Attendance')]")
 	WebElement SelectMonthlyAttendance;
-	@FindBy(xpath="//*[@id='ui-accordion-accordion-panel-1']/li/a[contains(text(),'Upload Monthly Attendance ExcelTemplate')]")
+	@FindBy(xpath="//a[contains(text(),'Upload Monthly Attendance ExcelTemplate')]")
 	WebElement UploadMonthlyAttendance;
 	@FindBy(id="excel_file")
 	WebElement ExcelUpload;
@@ -29,7 +29,7 @@ public class ExcelTemplateUploadMonthlyAttendance extends BasePage{
 	WebElement SelectLeavePolicy;
 	@FindBy(id="filter")
 	WebElement ClickOnGetEmployees;
-	@FindBy(xpath="//*[@id='bf_form']/div[10]/button[1]")
+	@FindBy(xpath="//*[@id=\"bf_form\"]/div/button[contains(text(),'LOAD')]")
 	WebElement ClickOnLoad;
 	@FindBy(xpath="//*[@id='monthly_employee_list']/tbody/tr/td[5]/a")
 	WebElement ClickOnMakeLeaveEntry;

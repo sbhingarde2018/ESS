@@ -9,7 +9,7 @@ import com.spp.common.BasePage;
 
 public class UpdatedefaultFormatAttendanceIntegrationConfiguration extends BasePage{
 	
-	@FindBy(id="leave")
+	@FindBy(xpath="//a[@id='leave']")
 	WebElement Leave;
 	@FindBy(xpath="//*[@id=\"menu\"]/li[5]/div/div/ul/li[5]/a")
 	WebElement AttendanceIntegration;

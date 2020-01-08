@@ -17,9 +17,9 @@ public class MonthlyAttendance extends BaseTest{
 		EnterLeaveDetailsforanEmployeewithMonthlyAttendance de = new EnterLeaveDetailsforanEmployeewithMonthlyAttendance(driver);
 		de.clickonleave();
 		de.clickonmonthlyattendance();
-		de.selectpaymonth("Feb/2019");
+		de.selectpaymonth("Jan/2020");
 		Thread.sleep(2000);
-		de.selectleavepolicy("Policy_Leave");
+		de.selectleavepolicy("ClonePolicy");
 		Thread.sleep(2000);
 		de.clickongetemployees();
 		Thread.sleep(2000);
@@ -36,20 +36,20 @@ public class MonthlyAttendance extends BaseTest{
  		Thread.sleep(3000);
  		de.clickonleave();
 		de.clickonmonthlyattendance();
-		de.selectpaymonth("Feb/2019");
+		de.selectpaymonth("Jan/2020");
 		Thread.sleep(2000);
-		de.selectleavepolicy("Policy_Leave");
+		de.selectleavepolicy("ClonePolicy");
 		de.clickongetemployees();
 		Thread.sleep(2000);
 		de.clickonload();
 		Thread.sleep(2000);
+		de.exitFullscreen();
 		de.clickonmakeleaveentry();
 		Thread.sleep(2000);
 		de.entercompwork("0");
 		de.clickonupdatevalues();
 		String r = de.getMessage();
  		Assert.assertEquals(r, "Monthly attendance saved successfully");
- 		de.exitFullscreen();
  		Thread.sleep(3000);
 	}
 	
@@ -62,8 +62,8 @@ public class MonthlyAttendance extends BaseTest{
 		Thread.sleep(2000);
 		de.generatemonthlyattendance();
 		Thread.sleep(2000);
-		de.selectpaymonth("Jan/2019");
-		de.selectleavepolicy("Policy_Leave");
+		de.selectpaymonth("Jan/2020");
+		de.selectleavepolicy("ClonePolicy");
 		de.generatetemplate();
 	}
 	
@@ -82,29 +82,6 @@ public class MonthlyAttendance extends BaseTest{
 		upl.clickUploadFile();
 		String s = upl.getMessage();
  		Assert.assertEquals(s, "Monthly Attendance has been successfully uploaded.");
- 		upl.clickonleave();
-		upl.clickonmonthlyattendance();
-		Thread.sleep(2000);
-		upl.selectpaymonth("Jan/2019");
-		Thread.sleep(2000);
-		upl.selectleavepolicy("Policy_Leave");
-		Thread.sleep(2000);
-		upl.clickongetemployees();
-		Thread.sleep(2000);
-		upl.resizeWindow();
-		Thread.sleep(2000);
-		upl.clickonload();
-		Thread.sleep(2000);
-		upl.clickonmakeleaveentry();
-		Thread.sleep(2000);
-		upl.entercompwork("0");
-		upl.clickonupdatevalues();
-		Thread.sleep(3000);
-		String r = upl.getMessage();
- 		Assert.assertEquals(r, "Monthly attendance saved successfully");
- 		Thread.sleep(3000);
- 		upl.exitFullscreen();
- 		Thread.sleep(3000);
 	}
 	
 	@Test(priority=3)
@@ -117,7 +94,7 @@ public class MonthlyAttendance extends BaseTest{
 		Thread.sleep(2000);
 		la.addnewemployee();
 		la.enterEmployeeid("ABC12983NVM");
-		la.enterEmployeeref("Ref-"+Utility.getRandNum(100, 200));
+		la.enterEmployeeref("Ref-Qw187");
 		la.enterEmployeename("Reena");
 		la.enterEmployeefather("Suresh");
 		la.selectDateofBirth("06 June 1995");
@@ -142,6 +119,7 @@ public class MonthlyAttendance extends BaseTest{
  		Thread.sleep(2000);
  		la.clickonload();
 		Thread.sleep(2000);
+		la.enterSearch("Reena");
  		la.clickdelete();
  		la.switchToPopUpAndAccept(driver);
  		la.exitFullscreen();

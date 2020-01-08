@@ -37,14 +37,13 @@
    <class name="com.spp.scripts.SetLeaveOpeningBalance"/>
    <class name="com.spp.scripts.ManualLeaveAllotmentscript"/> 
      <class name="com.spp.scripts.ReportingAuthority"/>-->
-  
-  
- 	 <class name="com.spp.scripts.LeaveEncashment"/>
+ 
+ 	<class name="com.spp.scripts.MonthlyAttendance"/>
+ 	<class name="com.spp.scripts.AttendanceIntegration"/>
+ 	<class name="com.spp.scripts.MonthlyLeaveSummary"/>
+  	
 	<!--<class name="com.spp.scripts.ApplyLeave"/>
-	<class name="com.spp.scripts.MonthlyLeaveSummary"/>
-	<class name="com.spp.scripts.MonthlyAttendance"/>
-	<class name="com.spp.scripts.AttendanceIntegration"/>-->
-	
+	<class name="com.spp.scripts.LeaveEncashment"/>-->
 	
 	 <!-- <class name="com.spp.scripts.ComputationDetails"/>
 	<class name="com.spp.scripts.ReimbursementClaim"/>

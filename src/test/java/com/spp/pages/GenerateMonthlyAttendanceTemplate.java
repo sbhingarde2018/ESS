@@ -8,13 +8,13 @@ import org.openqa.selenium.support.PageFactory;
 import com.spp.common.BasePage;
 
 public class GenerateMonthlyAttendanceTemplate extends BasePage{
-	@FindBy(id="leave")
+	@FindBy(xpath="//a[@id='leave']")
 	WebElement ClickOnLeave;
-	@FindBy(xpath="//*[@id=\"menu\"]/li[5]/div/div/ul/li[4]/a")
+	@FindBy(xpath="//a[contains(@class,'tab_border')][contains(text(),'Monthly Attendance')]")
 	WebElement ClickOnMonthlyAttendance;
-	@FindBy(xpath="//*[@id='ui-accordion-accordion-header-1']/h3")
+	@FindBy(xpath="//div[@id='ui-id-3']//h3[contains(text(),'Monthly Attendance')]")
 	WebElement SelectMonthlyAttendance;
-	@FindBy(xpath="//*[@id='ui-accordion-accordion-panel-1']/li/a[contains(text(),'Generate Monthly Attendance ExcelTemplate')]")
+	@FindBy(xpath="//a[contains(text(),'Generate Monthly Attendance ExcelTemplate')]")
 	WebElement GenerateMonthlyAttendance;
 	@FindBy(id="paymonth_id")
 	WebElement SelectPayMonth;

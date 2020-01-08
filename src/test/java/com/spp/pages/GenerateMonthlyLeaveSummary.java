@@ -21,19 +21,19 @@ import com.spp.common.BasePage;
 import com.spp.generics.ExcelUtil;
 
 public class GenerateMonthlyLeaveSummary extends BasePage {
-@FindBy(id="leave")
-WebElement ClickOnLeave;
-@FindBy(xpath="//*[@id=\"menu\"]/li[5]/div/div/ul/li[4]/a")
+@FindBy(xpath="//a[@id='report']")
+WebElement Report;
+@FindBy(xpath="//a[contains(text(),'Monthly Leave Summary')]")
 WebElement ClickOnMonthlyLeaveSummary;
 @FindBy(id="leave_summary_month_year")
 WebElement SelectPaymonth;
 @FindBy(id="leave_policy")
 WebElement SelectLeavePolicy;
-@FindBy(id="leave_type")
+@FindBy(xpath="//select[@id='leave_type']")
 WebElement SelectLeaveType;
 @FindBy(id="filter")
 WebElement ClickOnGetEmployees;
-@FindBy(xpath="//*[@id=\"bf_form\"]/div[10]/button[1]")
+@FindBy(xpath="//form[@id='bf_form']//button[contains(text(),'LOAD')]")
 WebElement ClickOnLoad;
 @FindBy(id="select_all_employees")
 WebElement SelectallEmployees;
@@ -46,8 +46,8 @@ WebElement SelectOrderBy;
 		super(driver);
 		PageFactory.initElements(driver, this);	
 	}
-	public void clickonleave() {
-		ClickOnLeave.click();
+	public void clickonReport() {
+		Report.click();
 	}
 	public void clickonmonthlyleavesummary() {
 		ClickOnMonthlyLeaveSummary.click();

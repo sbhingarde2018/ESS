@@ -8,9 +8,9 @@ import org.openqa.selenium.support.PageFactory;
 import com.spp.common.BasePage;
 
 public class EnterLeaveDetailsforanEmployeewithMonthlyAttendance extends BasePage{
-	@FindBy(id="leave")
+	@FindBy(xpath="//a[@id='leave']")
 	WebElement ClickOnLeave;
-	@FindBy(xpath="//*[@id=\"menu\"]/li[5]/div/div/ul/li[4]/a")
+	@FindBy(xpath="//a[contains(@class,'tab_border')][contains(text(),'Monthly Attendance')]")
 	WebElement ClickOnMonthlyAttendance;
 	@FindBy(id="paymonth_id")
 	WebElement SelectPaymonth;
@@ -18,7 +18,7 @@ public class EnterLeaveDetailsforanEmployeewithMonthlyAttendance extends BasePag
 	WebElement SelectLeavePolicy;
 	@FindBy(id="filter")
 	WebElement ClickOnGetEmployees;
-	@FindBy(xpath="//*[@id='bf_form']/div[10]/button[1]")
+	@FindBy(xpath="//*[@id=\"bf_form\"]/div/button[contains(text(),'LOAD')]")
 	WebElement ClickOnLoad;
 	@FindBy(xpath="//*[@id='monthly_employee_list']/tbody/tr/td[5]/a")
 	WebElement ClickOnMakeLeaveEntry;
@@ -26,7 +26,7 @@ public class EnterLeaveDetailsforanEmployeewithMonthlyAttendance extends BasePag
 	WebElement successfullmessage;
 	@FindBy(xpath="//*[@id='main']/div/form/table/tbody/tr/td[contains(text(),'Compensatory Work')]/parent::tr/td/input")
 	WebElement EnterCompensatoryWork;
-	@FindBy(xpath="//*[@id='main']/div[5]/form/table/tbody/tr[7]/td/button")
+	@FindBy(xpath="//button[@name='button']")
 	WebElement UpdateValues;
 	
 	public EnterLeaveDetailsforanEmployeewithMonthlyAttendance(WebDriver driver) {

@@ -9,15 +9,15 @@ import com.spp.common.BasePage;
 
 public class CheckifLeaveMonthlyLeaveSummaryGeneralLinkEmployeeMasterredirectstoEmployeeMaster extends BasePage{
 	
-	@FindBy(id="leave")
-	WebElement ClickOnLeave;
-	@FindBy(xpath="//*[@id=\"menu\"]/li[5]/div/div/ul/li[4]/a")
+	@FindBy(xpath="//a[@id='report']")
+	WebElement Report;
+	@FindBy(xpath="//a[contains(text(),'Monthly Leave Summary')]")
 	WebElement ClickOnMonthlyLeaveSummary;
 	@FindBy(xpath="//*[@id=\"ui-accordion-accordion-header-1\"]/h3")
 	WebElement ClickOnGeneralLinks;
-	@FindBy(xpath="//*[@id=\"ui-accordion-accordion-panel-0\"]/li/a")
+	@FindBy(xpath="//ul[@id='ui-id-2']//a[contains(text(),'Employee Master')]")
 	WebElement ClickOnEmployeeMaster;
-	@FindBy(xpath="//*[@id=\"ui-accordion-accordion-panel-0\"]/ul/li[1]/a")
+	@FindBy(xpath="//a[contains(text(),'Add New Employee')]")
 	WebElement AddNewEmployee;
 	@FindBy(id="employee_emp_id")
 	WebElement employeeid;
@@ -57,13 +57,25 @@ public class CheckifLeaveMonthlyLeaveSummaryGeneralLinkEmployeeMasterredirectsto
 	WebElement CreateEmployee;
 	@FindBy(xpath="//*[@id=\"main\"]/div[2]/strong")
 	WebElement successfullmessage;
+	@FindBy(xpath="//a[@id='emp_detail']")
+	WebElement EmpMod;
+	@FindBy(xpath="//a[contains(text(),'Employee Details')]")
+	WebElement Empdetails;
+	@FindBy(id="filter_head")
+	WebElement Filter;
+	@FindBy(xpath="//*[@id=\"bf_form\"]/div/button[contains(text(),'LOAD')]")
+	WebElement Load;
+	@FindBy(xpath="//td[contains(text(),'Arihant')]/parent::tr/td[6]/a[2]")
+	WebElement Delete;
+	@FindBy(xpath="//div[@id='employees_dtable_filter']//input")
+	WebElement Search;
 	
 	public CheckifLeaveMonthlyLeaveSummaryGeneralLinkEmployeeMasterredirectstoEmployeeMaster(WebDriver driver) {
 		super(driver);
 		PageFactory.initElements(driver, this);	
 	}
-	public void clickonleave() {
-		ClickOnLeave.click();
+	public void clickonReport() {
+		Report.click();
 	}
 	public void clickonmonthlyleavesummary() {
 		ClickOnMonthlyLeaveSummary.click();
@@ -80,7 +92,9 @@ public class CheckifLeaveMonthlyLeaveSummaryGeneralLinkEmployeeMasterredirectsto
 	public void enterEmployeeid(String value) throws Exception{
 	    	employeeid.sendKeys(value);
 	}
-	    
+	public void enterSearch(String value) throws Exception{
+		Search.sendKeys(value);
+	}  
 	public void enterEmployeeref(String value) throws Exception{
 	    	employeeref.sendKeys(value);
 	} 
@@ -135,5 +149,21 @@ public class CheckifLeaveMonthlyLeaveSummaryGeneralLinkEmployeeMasterredirectsto
     public String getMessage(){
 		return successfullmessage.getText();
 	}
-	
+    public void ClickEmpMod() {
+    	EmpMod.click();
+    }
+    public void ClickEmpdetails() {
+    	Empdetails.click();
+    }
+    public void ClickFilter() {
+    	Filter.click();
+    }
+    public void ClickLoad() {
+    	Load.click();
+    }
+    public void ClickDelete() throws Exception {
+    	Delete.click();
+    	Thread.sleep(2000);
+    	switchToPopUpAndAccept(driver);
+    }
 }
