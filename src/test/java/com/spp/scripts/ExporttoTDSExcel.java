@@ -20,7 +20,7 @@ public class ExporttoTDSExcel extends BaseTest {
 		ab.SelectQuarter("Quarter 1");
 		ab.Selectfinancialyear("2018/2019");
 		ab.ClickGenerateExcelSheet();
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 	}
 	@Test(priority=1)
 	public void GenerateTDSExcelSheetQuarter2_SC_1195() throws Exception {

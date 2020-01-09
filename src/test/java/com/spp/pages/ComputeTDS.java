@@ -15,11 +15,11 @@ public class ComputeTDS extends BasePage {
 	WebElement FinancialYear;
 	@FindBy(id="filter_head")
 	WebElement Filter;
-	@FindBy(xpath="//*[@id=\"bf_form\"]/div[10]/button[1]")
+	@FindBy(xpath="//form[@id='bf_form']//button[contains(text(),'LOAD')]")
 	WebElement Load;
 	@FindBy(xpath="//*[@id=\"employee_tax_compute\"]/div[5]/input")
 	WebElement ComputeBtn;
-	@FindBy(xpath="//*[@id=\"main\"]/div[2]/strong")
+	@FindBy(xpath="//div[@class='alert alert-info']")
 	WebElement SuccessMessage;
 	
 	public ComputeTDS(WebDriver driver) {

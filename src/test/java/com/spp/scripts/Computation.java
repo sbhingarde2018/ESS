@@ -19,12 +19,13 @@ public class Computation extends BaseTest {
 		ab.ClickFilter();
 		Thread.sleep(3000);
 		ab.ClickLoad();
-		Thread.sleep(5000);
+		Thread.sleep(3000);
 		ab.exitFullscreen();
+		Thread.sleep(3000);
 		ab.ClickComputeBtn();
-		Thread.sleep(5000);
 		String i=ab.getMessage();
-		Assert.assertEquals(i, "Tds Computed Succesfully");
+		Assert.assertEquals(i, "Request for tds computation is processing. You can check the status in Process Background Jobs.");
+		Thread.sleep(10000);
 	}
 	
 	@Test(priority=1)
@@ -38,11 +39,12 @@ public class Computation extends BaseTest {
 		ab.ClickFilter();
 		Thread.sleep(3000);
 		ab.ClickLoad();
-		Thread.sleep(5000);
+		Thread.sleep(3000);
 		ab.exitFullscreen();
+		Thread.sleep(3000);
 		ab.ClickComputeBtn();
-		Thread.sleep(5000);
 		String j=ab.getMessage();
-		Assert.assertEquals(j, "Tds Computed Succesfully");
+		Assert.assertEquals(j, "Request for tds computation is processing. You can check the status in Process Background Jobs.");
+		Thread.sleep(10000);
 	}
 }

@@ -26,7 +26,7 @@ public class TDSReports extends BaseTest {
 		Thread.sleep(2000);
 		ab.ClickSelectEmp();
 		ab.ClickGenerateReport();
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 	}
 	@Test(priority=1)
 	public void GenerateTDSReportReporttypeStatementofTotalIncome_SC_1193() throws Exception {
@@ -45,7 +45,7 @@ public class TDSReports extends BaseTest {
 		Thread.sleep(3000);
 		ab.ClickSelectEmpt();
 		ab.ClickGenerateReport();
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 	}
 
 }
