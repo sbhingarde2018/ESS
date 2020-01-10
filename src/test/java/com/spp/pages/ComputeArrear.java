@@ -20,7 +20,7 @@ public class ComputeArrear extends BasePage{
 	WebElement Load;
 	@FindBy(xpath="//*[@id=\"show_message\"]/div/strong")
 	WebElement successfullMessage;
-	@FindBy(id="save_employee_arrear")
+	@FindBy(xpath="//input[@id='save_employee_arrear']")
 	WebElement Save;
 	@FindBy(xpath="//*[@id=\"manual_headwise_arrears\"]/tbody/tr[1]/td[7]/a")
 	WebElement MoreLink;

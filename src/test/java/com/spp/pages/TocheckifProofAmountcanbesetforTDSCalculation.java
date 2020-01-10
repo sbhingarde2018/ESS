@@ -15,7 +15,7 @@ public class TocheckifProofAmountcanbesetforTDSCalculation extends BasePage {
 	WebElement ProofAmount;
 	@FindBy(id="option_setting_serializer_fin_month_year")
 	WebElement MonthYear;
-	@FindBy(xpath="//*[@id=\"new_option_setting_serializer\"]/fieldset/div/div[4]/input")
+	@FindBy(xpath="//input[@name='commit']")
 	WebElement SaveBtn;
 	@FindBy(xpath="//*[@id=\"main\"]/div[2]/strong")
 	WebElement SuccessMessage;

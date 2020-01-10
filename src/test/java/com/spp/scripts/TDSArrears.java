@@ -26,27 +26,27 @@ public class TDSArrears extends BaseTest {
 		at.clickEmployeeDetails();
 		at.clickAddNewEmployee();
 		Thread.sleep(3000);
-		at.enterEmployeeId("TATA53872");
-		at.enterEmployeeRefNo("TATA721672");
-		at.enterEmployeeName("Rihana");
+		at.enterEmployeeId("TATA33421");
+		at.enterEmployeeRefNo("TATA311421");
+		at.enterEmployeeName("Sonali");
 		at.enterFathername("Neil");
-		at.enterdob("14 June 1980");
+		at.enterdob("14 June 1982");
 		at.selectGender("Female");
 		at.selectMaritalStatus("Single");
-		at.enterdoj("01 March 2019");
+		at.enterdoj("01 November 2017");
 		//at.entersaldate("01 February 2013");
 		Thread.sleep(1000);
 		//at.selectPresentadd();
-		at.selectstate("Maharashtra");
+		at.selectstate("Karnataka");
 		Thread.sleep(1000);
 		at.selectstatdetails();
 		at.checkTDS();
 		at.selectpanoption("ADD PAN");
-		at.enterpanno("PRAPT6332O");
+		at.enterpanno("PRAPT3421O");
 		at.entereffectivedatePAN("01 January 2013");
 		Thread.sleep(1000);
 		at.selectclassificationdetail();
-		at.selectsalstructure("Structure");
+		at.selectsalstructure("grossstructure");
 		at.selectbranch("default");
 		at.selectattendancestructure("Karnataka");
 		at.selectbank("CASH");
@@ -57,6 +57,19 @@ public class TDSArrears extends BaseTest {
 		at.createemployee();
 		String s=at.getMessage();
 		Assert.assertEquals(s, "Employee successfully created");
+		Thread.sleep(3000);
+		at.navigateEmployee();
+		at.clickEmployeeDetails();
+		at.resizeWindow();
+		at.clickonfilter();
+		Thread.sleep(2000);
+		at.clickonload();
+		Thread.sleep(5000);
+		at.exitFullscreen();
+		Thread.sleep(3000);
+		at.enterSearch("Sonali");
+		at.clickDelete();
+		Thread.sleep(3000);
 	}
 	@Test(priority=1)
 	public void AddNewSalaryAllotment_SC_327() throws Exception{
@@ -71,13 +84,15 @@ public class TDSArrears extends BaseTest {
 		Thread.sleep(5000);
 		ad.exitFullscreen();
 		Thread.sleep(3000);
-		ad.selectpagetwo();
+		ad.enterSearch("Rihana");
+	//	ad.selectpagetwo();
 		ad.clickonallotsalary();
 		Thread.sleep(1000);
 		ad.selectmonthyear("May/2019");
 		Thread.sleep(3000);
 		ad.entergrosssal("20000");
 		ad.clickonsave();
+		
 		//String y=ad.getMessage();
 		//Assert.assertEquals(y, "Salary Allotted successfully");
 	}
@@ -88,7 +103,7 @@ public class TDSArrears extends BaseTest {
 		ab.selectSalaryEditor();
 		Thread.sleep(3000);
 		ab.selectPayMonth("May/2019");
-		ab.selectSalaryStructure("Structure");
+		ab.selectSalaryStructure("Gross Salary Structure");
 		ab.selectGetValues();
 		ab.resizeWindow();
 		Thread.sleep(3000);
@@ -115,12 +130,12 @@ public class TDSArrears extends BaseTest {
 		cc.clickSalaryLink();
 		cc.selectArrears();
 		cc.selectCreateArrear();
-		cc.EnterArrearName("new_"+Utility.getRandNum(2000, 3000));
-		cc.selectArrearFrom("Mar/2017");
-		cc.selectArrearTo("May/2017");
+		cc.EnterArrearName("new_"+Utility.getRandNum(3000, 4000));
+		cc.selectArrearFrom("Mar/2019");
+		cc.selectArrearTo("May/2019");
 		Thread.sleep(3000);
-		cc.selectArrearRefMonth("May/2017");
-		cc.selectPaymonth("May/2017");
+		cc.selectArrearRefMonth("May/2019");
+		cc.selectPaymonth("May/2019");
 		cc.ClickCreateButton();
 		String t=cc.getMessage();
 		Assert.assertEquals(t, "Arrear was successfully created.");
@@ -147,7 +162,7 @@ public class TDSArrears extends BaseTest {
 		TDSComputation tc=new TDSComputation(driver);
 		tc.clickontds();
 		tc.clickoncomputation();
-		tc.selectfinancialyear("2018/2019");
+		tc.selectfinancialyear("2019/2020");
 		tc.clickonfilter();
 		tc.resizeWindow();
 		Thread.sleep(3000);
@@ -156,13 +171,19 @@ public class TDSArrears extends BaseTest {
 		tc.exitFullscreen();
 		tc.ClickOnCompute();
 	}
-	/*@Test(priority=7)
+	@Test(priority=7)
 	public void ToCheckTDSArrears_SC_334() throws Exception{
 		ToCheckTDSArrears ab=new ToCheckTDSArrears(driver);
 		ab.clickonTDS();
 		ab.clickonComputationalDetails();
 		Thread.sleep(3000);
-		ab.clickonTDS();
+		ab.selectFinancialYear("2018/2019");
 		Thread.sleep(2000);
-		}*/
+		ab.enterSearch("Rihana");
+		Thread.sleep(2000);
+		ab.clickonDetails();
+		ab.clickonOther();
+		ab.clickArrearSalary();
+		Thread.sleep(2000);
+		}
 	}

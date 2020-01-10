@@ -33,7 +33,8 @@ public class AddNewSalaryAllotment extends BasePage{
 	WebElement ClickOnSave;
 	@FindBy(xpath="//*[@id=\"main\"]/div[1]/strong")
 	WebElement SuccessfullMessage;
-	
+	@FindBy(xpath="//div[@id='alloted_filter']//input")
+	WebElement Search;
 	public AddNewSalaryAllotment(WebDriver driver) {
 		super(driver);
 		PageFactory.initElements(driver,this);
@@ -76,5 +77,7 @@ public class AddNewSalaryAllotment extends BasePage{
 	public String getMessage() {
 		return SuccessfullMessage.getText();
 	}
-	
+	public void enterSearch(String value) {
+		Search.sendKeys(value);
+	}
 }

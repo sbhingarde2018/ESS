@@ -76,12 +76,30 @@ public class AddNewEmployeeTDS extends BasePage{
 	WebElement EnterUANNo;
 	@FindBy(id="employee_statutory_aadhar_no")
 	WebElement EnterAadharNo;
+	@FindBy(id="filter_head")
+	WebElement ClickonFilter;
+	@FindBy(xpath="//form[@id='bf_form']//button[contains(text(),'LOAD')]")
+	WebElement ClickOnLoad;
+	@FindBy(xpath="//div[@id='employees_dtable_filter']//input")
+	WebElement Search;
+	@FindBy(xpath="//table/tbody/tr/td[contains(text(),'Sonali')]/parent::tr/td[6]/a[2]")
+	WebElement Delete;
 	
 	public AddNewEmployeeTDS(WebDriver driver){
 		super(driver);
 		PageFactory.initElements( driver, this);
 	}
 
+	public void clickDelete() {
+		Delete.click();
+		switchToPopUpAndAccept(driver);
+	}
+	public void clickonload() {
+		ClickOnLoad.click();
+	}
+	public void clickonfilter() {
+		ClickonFilter.click();
+	}
 	public void navigateEmployee() throws Exception{
 		Employee.click();
 	}
@@ -111,6 +129,9 @@ public class AddNewEmployeeTDS extends BasePage{
 }
 	public void enterdob(String value) throws Exception{
 		EnterDOB.sendKeys(value);
+	}
+	public void enterSearch(String value) throws Exception{
+		Search.sendKeys(value);
 	}
 	
 	public void enterdoj(String value) throws Exception{
