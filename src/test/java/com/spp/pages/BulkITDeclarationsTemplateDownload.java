@@ -7,7 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 import com.spp.common.BasePage;
 
 public class BulkITDeclarationsTemplateDownload extends BasePage {
-	@FindBy(id="tds")
+	@FindBy(xpath="//a[@id='tds']")
 	WebElement TDS;
 	@FindBy(xpath="//*[@id=\"menu\"]/li[7]/div/div/ul/li[8]/a")
 	WebElement BulkTDSDeclarations;

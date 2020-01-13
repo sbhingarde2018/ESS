@@ -9,7 +9,7 @@ import com.spp.pages.*;
 
 public class ComputationDetails extends BaseTest {
 	
-	/*@Test(priority=0)
+	@Test(priority=0)
 	public void EditMainComponentBasic_SC_1055() throws Exception{
 		EditMainComponentBasic ab=new EditMainComponentBasic(driver);
 		ab.ClickTDS();
@@ -271,7 +271,7 @@ public class ComputationDetails extends BaseTest {
 		Thread.sleep(2000);
 	}
 	
-	@Test(priority=10)
+/*	@Test(priority=10)
 	public void EditAllowancesHighAltitudeAllowance_SC_1065() throws Exception{
 		EditAllowancesHighAltitudeAllowance ab=new EditAllowancesHighAltitudeAllowance(driver);
 		ab.ClickTDS();
@@ -2420,7 +2420,7 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickSaveBtn();
 		//String i=ab.getMessage();
 		//Assert.assertEquals(i, "Saved Successfully.");
-	}*/
+	}
 	@Test(priority=95)
 	public void EditVIADeductionsMedicalinsurancepremiumpaid80DSenior_SC_1151() throws Exception{
 		EditVIADeductionsMedicalinsurancepremiumpaid80DSenior ab=new EditVIADeductionsMedicalinsurancepremiumpaid80DSenior(driver);
@@ -2452,7 +2452,7 @@ public class ComputationDetails extends BaseTest {
 		//Thread.sleep(2000);
 		//ab.ClickSaveBtn();
 	}
-	/*@Test(priority=96)
+	@Test(priority=96)
 	public void EditVIADeductionsMedicalinsurancepremiumpaid80DForparents_SC_1152() throws Exception{
 		EditVIADeductionsMedicalinsurancepremiumpaid80DForparents ab=new EditVIADeductionsMedicalinsurancepremiumpaid80DForparents(driver);
 		ab.ClickTDS();
@@ -2475,7 +2475,7 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickSaveBtn();
 		//String i=ab.getMessage();
 		//Assert.assertEquals(i, "Saved successfully.");
-	}*/
+	}
 	@Test(priority=97)
 	public void EditVIADeductionsMedicalinsurancepremiumpaid80DSeniorForparents_SC_1153() throws Exception{
 		EditVIADeductionsMedicalinsurancepremiumpaid80DSeniorForparents ab=new EditVIADeductionsMedicalinsurancepremiumpaid80DSeniorForparents(driver);
@@ -2568,7 +2568,7 @@ public class ComputationDetails extends BaseTest {
 		//Thread.sleep(2000);
 		//ab.ClickSaveBtn();
 	}
-	/*@Test(priority=100)
+	@Test(priority=100)
 	public void EditVIADeductionsExpensesonmedicaltreatmentMaintenanceetconHandicappeddependents80DD_SC_1156() throws Exception{
 		EditVIADeductionsExpensesonmedicaltreatmentMaintenanceetconHandicappeddependents80DD ab=new EditVIADeductionsExpensesonmedicaltreatmentMaintenanceetconHandicappeddependents80DD(driver);
 		ab.ClickTDS();
@@ -2763,7 +2763,7 @@ public class ComputationDetails extends BaseTest {
 		ab.ClickComputeBtn();
 		Thread.sleep(2000);
 		ab.ClickSaveBtn();
-	}*/
+	}
 	@Test(priority=110)
 	public void EditVIADeductionsContributionstopoliticalparties80GGC_SC_1166() throws Exception{
 		EditVIADeductionsContributionstopoliticalparties80GGC ab=new EditVIADeductionsContributionstopoliticalparties80GGC(driver);
@@ -3226,7 +3226,7 @@ public class ComputationDetails extends BaseTest {
 		ab.EnterArrearsOfRentRec("10");
 		ab.EnterNotChargedEarlier("10");
 		ab.ClickPopulate();
-	}
+	}*/
 }
 
 

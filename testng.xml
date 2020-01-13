@@ -45,15 +45,17 @@
 	<class name="com.spp.scripts.ApplyLeave"/>
 	<class name="com.spp.scripts.LeaveEncashment"/>-->
 	
-	<class name="com.spp.scripts.TDSOptionsSettings"/>
+	<class name="com.spp.scripts.BulkTdsDeclarations"/>
+	<class name="com.spp.scripts.ComputationDetails"/>
+<!--<class name="com.spp.scripts.TDSOptionsSettings"/>
 	<class name="com.spp.scripts.TDSArrears"/>
 	<class name="com.spp.scripts.DeductorDetails"/>
-	<!--<class name="com.spp.scripts.Computation"/>
+	<class name="com.spp.scripts.Computation"/>
 	<class name="com.spp.scripts.MonthlyDeductions"/>
 	<class name="com.spp.scripts.TDSReports"/>
 	<class name="com.spp.scripts.ExporttoTDSExcel"/>
 
-	<class name="com.spp.scripts.ComputationDetails"/>
+	
 	<class name="com.spp.scripts.ReimbursementClaim"/>
   	<class name="com.spp.scripts.Paymonths"/>
   	<class name="com.spp.scripts.FormulaEditorValidation"/>
@@ -84,7 +86,7 @@
  
     
     
-    <class name="com.spp.scripts.BulkTdsDeclarations"/>
+    
    
     <class name="com.spp.scripts.PFgroupvalidationtestcase"/>
     
