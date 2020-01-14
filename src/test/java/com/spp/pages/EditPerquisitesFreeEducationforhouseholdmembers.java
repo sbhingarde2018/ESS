@@ -15,7 +15,7 @@ public class EditPerquisitesFreeEducationforhouseholdmembers extends BasePage {
 	WebElement Details;
 	@FindBy(xpath="//*[@id=\"main\"]/div[2]/div/nav/ul/li[5]/a/span")
 	WebElement Perquisites;
-	@FindBy(xpath="//*[@id=\"references\"]/table/tbody/tr[18]/td[3]/a")
+	@FindBy(xpath="//*[@id=\"references\"]/table/tbody/tr[18]/td[2]/a")
 	WebElement FreeEducation;
 	@FindBy(id="tds_month_details__salary_details_sal_detail_1_tds_amount")
 	WebElement EditedValues;

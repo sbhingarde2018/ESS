@@ -11,15 +11,15 @@ public class UploadForm16 extends BasePage {
 	WebElement TDS;
 	@FindBy(xpath="//*[@id=\"menu\"]/li[7]/div/div/ul/li[9]/a")
 	WebElement Form16;
-	@FindBy(xpath="//*[@id=\"ui-id-2\"]/li[2]/a")
+	@FindBy(xpath="//a[contains(text(),'Upload')]")
 	WebElement Upload;
-	@FindBy(id="financial_year")
+	@FindBy(xpath="//select[@id='financial_year']")
 	WebElement AssessmentYear;
-	@FindBy(id="form16_file")
+	@FindBy(xpath="//input[@id='form16_file']")
 	WebElement ChooseFile;
-	@FindBy(xpath="//*[@id=\"employee_upload\"]/div[3]/div/div/fieldset/div/div[3]/input")
+	@FindBy(xpath="//input[@id='classbutton']")
 	WebElement UploadBtn;
-	@FindBy(xpath="//*[@id=\"show_message\"]/div/strong")
+	@FindBy(xpath="//*[@id=\"show_message\"]/div")
 	WebElement SuccessMessage;
 	
 	public UploadForm16(WebDriver driver) {

@@ -17,21 +17,21 @@ public class EditVIADeductionsDeductionsinrespectofspecifiedinvestmentssavings80
 	WebElement VIDeductions;
 	@FindBy(xpath="//*[@id=\"six_a_ded_details\"]/table/tbody/tr[1]/td[3]/a")
 	WebElement Deductionsinrespectofspecifiedinvestmentssavings80C;
-	@FindBy(id="six_a_deduction_manual_entry_sub_heads_1_date")
+	@FindBy(xpath="//input[@id='six_a_deduction_manual_entry_sub_heads_2_date']")
 	WebElement Date;
-	@FindBy(id="six_a_deduction_manual_entry_sub_heads_1_tds_head_id")
+	@FindBy(xpath="//select[@id='six_a_deduction_manual_entry_sub_heads_2_tds_head_id']")
 	WebElement Particulars;
-	@FindBy(id="six_a_deduction_manual_entry_sub_heads_1_salary_gross_amount")
+	@FindBy(xpath="//input[@id='six_a_deduction_manual_entry_sub_heads_2_salary_gross_amount']")
 	WebElement GrossAmount;
-	@FindBy(id="six_a_deduction_manual_entry_sub_heads_1_proof_amount")
+	@FindBy(xpath="//input[@id='six_a_deduction_manual_entry_sub_heads_2_proof_amount']")
 	WebElement ProofAmount;
-	@FindBy(id="six_a_deduction_manual_entry_sub_heads_1_remarks")
+	@FindBy(xpath="//input[@id='six_a_deduction_manual_entry_sub_heads_2_remarks']")
 	WebElement Remarks;
-	@FindBy(id="save_deductions")
+	@FindBy(xpath="//input[@id='save_deductions']")
 	WebElement SaveBtn;
 	@FindBy(xpath="//*[@id=\"show_message\"]/div/strong")
 	WebElement UpdateSuccess;
-	@FindBy(xpath="//*/tbody/tr[1]/td[8]/a")
+	@FindBy(xpath="//tr[@class='row_2']//td//a//img")
 	WebElement Delete;
 	@FindBy(xpath="//select[@id='computed_financial_year']")
 	WebElement SelectFinancialYear;

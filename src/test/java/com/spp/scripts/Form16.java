@@ -15,8 +15,11 @@ public class Form16 extends BaseTest {
 		ab.ClickTDs();
 		ab.ClickForm16();
 		Thread.sleep(2000);
+		ab.ClickUpload();
+		Thread.sleep(2000);
 		ab.SelectAssessmentYear("2018/2019");
-		ab.clickChooseFile("");
+		Thread.sleep(3000);
+		ab.clickChooseFile("C:\\Users\\alfalabs\\Downloads\\Relyonsoft_TATA349666_2018_2019_13012020.pdf");
 		Thread.sleep(3000);
 		ab.clickUploadBtn();
 		String i=ab.getMessage();
@@ -27,12 +30,13 @@ public class Form16 extends BaseTest {
 	public void TocheckForm16History_SC_1206() throws Exception {
 		TocheckForm16History ab=new TocheckForm16History(driver);
 		ab.ClickTDs();
-		ab.ClickBulkTDSDeclarations();
+		ab.ClickForm16();
 		Thread.sleep(3000);
 		ab.ClickHistory();
-		Thread.sleep(3000);
+		Thread.sleep(4000);
 		ab.SelectAssessmentYear("2018/2019");
 		ab.resizeWindow();
+		ab.ClickGetEmp();
 		Thread.sleep(3000);
 		ab.ClickLoad();
 		ab.exitFullscreen();

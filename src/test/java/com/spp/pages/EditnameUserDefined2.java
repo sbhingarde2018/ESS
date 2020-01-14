@@ -17,7 +17,7 @@ public class EditnameUserDefined2 extends BasePage {
 	WebElement Perquisites;
 	@FindBy(xpath="//tr[142]/td[1]/table/tbody/tr/th[2]/a")
 	WebElement EditName;
-	@FindBy(xpath="//tbody/tr[137]/td[1]/div/div/div[2]/form/div[2]/div/div/input")
+	@FindBy(xpath="//input[@id='custom_heading']")
 	WebElement Heading;
 	@FindBy(xpath="//*/div/div[2]/form/div[3]/div/input")
 	WebElement SaveBtn;

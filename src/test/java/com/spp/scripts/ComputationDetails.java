@@ -9,7 +9,7 @@ import com.spp.pages.*;
 
 public class ComputationDetails extends BaseTest {
 	
-	@Test(priority=0)
+/*	@Test(priority=0)
 	public void EditMainComponentBasic_SC_1055() throws Exception{
 		EditMainComponentBasic ab=new EditMainComponentBasic(driver);
 		ab.ClickTDS();
@@ -269,9 +269,9 @@ public class ComputationDetails extends BaseTest {
 		Thread.sleep(2000);
 		ab.ClickDetails();
 		Thread.sleep(2000);
-	}
+	}*/
 	
-/*	@Test(priority=10)
+	@Test(priority=10)
 	public void EditAllowancesHighAltitudeAllowance_SC_1065() throws Exception{
 		EditAllowancesHighAltitudeAllowance ab=new EditAllowancesHighAltitudeAllowance(driver);
 		ab.ClickTDS();
@@ -2762,7 +2762,7 @@ public class ComputationDetails extends BaseTest {
 		ab.EnterNoofMonths("2");
 		ab.ClickComputeBtn();
 		Thread.sleep(2000);
-		ab.ClickSaveBtn();
+		//ab.ClickSaveBtn();
 	}
 	@Test(priority=110)
 	public void EditVIADeductionsContributionstopoliticalparties80GGC_SC_1166() throws Exception{
@@ -3226,7 +3226,7 @@ public class ComputationDetails extends BaseTest {
 		ab.EnterArrearsOfRentRec("10");
 		ab.EnterNotChargedEarlier("10");
 		ab.ClickPopulate();
-	}*/
+	}
 }
 
 
