@@ -12,7 +12,7 @@ public class AddNewAdditionalSalary extends BasePage{
 	WebElement SalaryLink;
 	@FindBy(xpath="//*[@id=\"menu\"]/li[6]/div/div[1]/ul/li[2]/a")
 	WebElement AdditionalSalary;
-	@FindBy(xpath="//*[@id=\"main\"]/div[1]/span/a")
+	@FindBy(xpath="//a[contains(text(),'Add New Salary Heading')]")
 	WebElement AddNewSalaryHeading;
 	@FindBy(id="additional_salary_definition_paymonth_id")
 	WebElement PayMonths;

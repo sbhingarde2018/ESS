@@ -13,7 +13,7 @@ public class CheckifSalaryPaymonthsProcessBackgroundJobsredirectstoNotification 
 	WebElement ClickOnSalary;
 	@FindBy(xpath="//*[@id=\"menu\"]/li[6]/div/div[1]/ul/li[1]/a")
 	WebElement ClickOnPayMonths;
-	@FindBy(xpath="//*[@id=\"ui-id-2\"]/li/a")
+	@FindBy(xpath="//ul[@id='ui-id-2']//a[contains(text(),'Process Background Jobs')]")
 	WebElement ClickProcessBackgroundJobs;
 	
 	public CheckifSalaryPaymonthsProcessBackgroundJobsredirectstoNotification(WebDriver driver) {

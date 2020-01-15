@@ -12,13 +12,13 @@ public class AllotSalaryToAdditionalSalaryDeductionHeadLumpsum extends BasePage{
 	WebElement SalaryLink;
 	@FindBy(xpath="//*[@id=\"menu\"]/li[6]/div/div[1]/ul/li[2]/a")
 	WebElement AdditionalSalary;
-	@FindBy(xpath="//*[@id=\"main\"]/div[2]/div[2]/nav/ul/li[2]/a/span")
+	@FindBy(xpath="//span[contains(text(),'Additional Salary - Deduction')]")
 	WebElement DeductionTab;
 	@FindBy(id="month_year")
 	WebElement PayMonth;
 	@FindBy(xpath="//*[@id=\"addn_salary\"]/div[2]/div/input")
 	WebElement GetValues;
-	@FindBy(xpath="//*[@id=\"tabs-4\"]/div[2]/table/tbody/tr/td[5]/a")
+	@FindBy(xpath="//td[@class='controls']//a[contains(text(),'Allot')]")
 	WebElement Allot;
 	@FindBy(xpath="//*[@id=\"main\"]/div[3]/span/a")
 	WebElement AddEmployees;

@@ -31,8 +31,11 @@ public class AdditionalSalary extends BaseTest {
 		Thread.sleep(2000);
 		cc.selectAddNewSalaryHeading();
 		cc.ClickPayMonths("Sep/2019");
+		Thread.sleep(2000);
 		cc.SelectSalaryType("Special Earning");
-		cc.enterAdditionalHeadingName("Bonus Gift1");
+		Thread.sleep(2000);
+		cc.enterAdditionalHeadingName("Bonus Gift44");
+		Thread.sleep(2000);
 		cc.clickCreateButton();
 		String f=cc.getMessage();
 		Assert.assertEquals(f, "Additional salary head successfully created");
@@ -98,7 +101,7 @@ public class AdditionalSalary extends BaseTest {
 		cc.selectAddNewSalaryHeading();
 		cc.ClickPayMonths("Aug/2019");
 		cc.SelectSalaryType("Special Deduction");
-		cc.enterAdditionalHeadingName("DeducTest12");
+		cc.enterAdditionalHeadingName("DeducTest1256");
 		cc.clickCreateButton();
 		String f=cc.getMessage();
 		Assert.assertEquals(f, "Additional salary head successfully created");
@@ -128,7 +131,7 @@ public class AdditionalSalary extends BaseTest {
 		//String d=cc.getMessage();
 		//Assert.assertEquals(d, "Amount updated successfully for Selected Employees");
 	}
-	@Test(priority=5)
+/*	@Test(priority=5)
 	public void AllotSalaryToAdditionalSalaryDeductionHeadFormula_SC_130() throws InterruptedException{
 		AllotSalaryToAdditionalSalaryDeductionHeadFormula cc=new AllotSalaryToAdditionalSalaryDeductionHeadFormula(driver);
 		cc.clickSalaryLink();
@@ -360,5 +363,5 @@ public class AdditionalSalary extends BaseTest {
 		Thread.sleep(3000);
 		cc.getexcelreport();
 		Thread.sleep(3000);
-	}
+	}*/
 }
