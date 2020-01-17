@@ -24,7 +24,7 @@ public class EditAdditionalSalaryDeductionHead extends BasePage{
 	WebElement UpdateButton;
 	@FindBy(xpath="//strong[text()='Additional salary head successfully updated']")
 	WebElement successfullmessage;
-	@FindBy(xpath="//*[@id=\"main\"]/div[2]/div[2]/nav/ul/li[2]/a/span")
+	@FindBy(xpath="//span[contains(text(),'Additional Salary - Deduction')]")
 	WebElement DeductionTab;
 	
 public EditAdditionalSalaryDeductionHead(WebDriver driver) {

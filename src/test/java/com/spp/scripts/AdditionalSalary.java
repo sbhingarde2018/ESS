@@ -131,7 +131,7 @@ public class AdditionalSalary extends BaseTest {
 		//String d=cc.getMessage();
 		//Assert.assertEquals(d, "Amount updated successfully for Selected Employees");
 	}
-/*	@Test(priority=5)
+	@Test(priority=5)
 	public void AllotSalaryToAdditionalSalaryDeductionHeadFormula_SC_130() throws InterruptedException{
 		AllotSalaryToAdditionalSalaryDeductionHeadFormula cc=new AllotSalaryToAdditionalSalaryDeductionHeadFormula(driver);
 		cc.clickSalaryLink();
@@ -156,7 +156,7 @@ public class AdditionalSalary extends BaseTest {
 		//String d=cc.getMessage();
 		//Assert.assertEquals(d, "Amount updated successfully for Selected Employees");
 	}
-	@Test(priority=6)
+		@Test(priority=6)
 	public void DeleteADDITIONALSALARYEARNINGHeading_SC_366() throws InterruptedException{
 		DeleteADDITIONALSALARYEARNINGHeading cc=new DeleteADDITIONALSALARYEARNINGHeading(driver);
 		cc.clickSalaryLink();
@@ -173,7 +173,7 @@ public class AdditionalSalary extends BaseTest {
 		String d=cc.getMessage();
 		Assert.assertEquals(d, "Additional salary head successfully deleted");	
 	}
-	@Test(priority=7)
+			@Test(priority=7)
 	public void DeleteADDITIONALSALARYDEDUCTIONHeading_SC_367() throws InterruptedException{
 		DeleteADDITIONALSALARYDEDUCTIONHeading cc=new DeleteADDITIONALSALARYDEDUCTIONHeading(driver);
 		cc.clickSalaryLink();
@@ -230,7 +230,7 @@ public class AdditionalSalary extends BaseTest {
 		String d=cc.getMessage();
 		Assert.assertEquals(d, "Additional Salary Entry is successfully deleted");
 	}
-	@Test(priority=9)
+		@Test(priority=9)
 	public void DeleteAdditionalSalaryEntryDeduction_SC_369() throws InterruptedException{
 		DeleteAdditionalSalaryEntryDeduction cc=new DeleteAdditionalSalaryEntryDeduction(driver);
 		cc.clickSalaryLink();
@@ -363,5 +363,5 @@ public class AdditionalSalary extends BaseTest {
 		Thread.sleep(3000);
 		cc.getexcelreport();
 		Thread.sleep(3000);
-	}*/
+	}
 }

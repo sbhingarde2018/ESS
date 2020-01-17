@@ -16,7 +16,7 @@ public class DeleteADDITIONALSALARYEARNINGHeading extends BasePage{
 	WebElement PayMonth;
 	@FindBy(xpath="//*[@id=\"addn_salary\"]/div[2]/div/input")
 	WebElement GetValues;
-	@FindBy(xpath="//div[2]/table/tbody/tr/td[contains(text(),'Sep/2019')]/parent::tr/td[6]/a")
+	@FindBy(xpath="//div[2]/table/tbody/tr/td[contains(text(),'Bonus Gift44')]/parent::tr/td[6]/a")
 	WebElement DeleteButton;
 	@FindBy(xpath="//*[@id=\"main\"]/div[1]/strong")
 	WebElement successfullMessage;

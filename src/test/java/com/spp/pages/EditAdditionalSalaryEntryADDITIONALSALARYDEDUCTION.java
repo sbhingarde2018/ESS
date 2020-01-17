@@ -16,7 +16,7 @@ public class EditAdditionalSalaryEntryADDITIONALSALARYDEDUCTION extends BasePage
 	WebElement PayMonth;
 	@FindBy(xpath="//*[@id=\"addn_salary\"]/div[2]/div/input")
 	WebElement GetValues;
-	@FindBy(xpath="//*[@id=\"main\"]/div[2]/div[2]/nav/ul/li[2]/a/span")
+	@FindBy(xpath="//span[contains(text(),'Additional Salary - Deduction')]")
 	WebElement DeductionTab;
 	@FindBy(xpath="//*[@id=\"tabs-4\"]/div[2]/table/tbody/tr/td[5]/a")
 	WebElement Allot;

@@ -57,8 +57,8 @@
 	<class name="com.spp.scripts.ComputationDetails"/>-->
 	
 	<class name="com.spp.scripts.AdditionalSalary"/>
-	<class name="com.spp.scripts.Paymonths"/>
-<!--<class name="com.spp.scripts.Arrears"/>	
+<!--<class name="com.spp.scripts.Paymonths"/>
+	<class name="com.spp.scripts.Arrears"/>	
 	<class name="com.spp.scripts.ReimbursementClaim"/>
   	<class name="com.spp.scripts.StandingInstructionTestCase"/>
   	<class name="com.spp.scripts.Bonus"/>
