@@ -12,7 +12,7 @@ public class AllotSalaryToAdditionalSalaryDeductionHeadFormula extends BasePage 
 	WebElement SalaryLink;
 	@FindBy(xpath="//*[@id=\"menu\"]/li[6]/div/div[1]/ul/li[2]/a")
 	WebElement AdditionalSalary;
-	@FindBy(xpath="//*[@id=\"main\"]/div[2]/div[2]/nav/ul/li[2]/a/span")
+	@FindBy(xpath="//span[contains(text(),'Additional Salary - Deduction')]")
 	WebElement DeductionTab;
 	@FindBy(id="month_year")
 	WebElement PayMonth;

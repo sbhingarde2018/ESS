@@ -12,7 +12,7 @@ public class ComputationDetailsToArrear extends BasePage{
 	WebElement SalaryLink;
 	@FindBy(xpath="//*[@id=\"menu\"]/li[6]/div/div[1]/ul/li[3]/a")
 	WebElement Arrears;
-	@FindBy(xpath="//table/tbody/tr/td[contains(text(),'Salary_ArrearMS')]/parent::tr/td[4]/a")
+	@FindBy(xpath="//table/tbody/tr/td[contains(text(),'Salary_ArrearMS2')]/parent::tr/td[4]/a")
 	WebElement Computaion;
 	@FindBy(id="manual_arrears")
 	WebElement AddEmployee;

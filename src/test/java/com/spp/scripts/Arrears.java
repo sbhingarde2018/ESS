@@ -73,13 +73,13 @@ public class Arrears extends BaseTest {
 		cc.selectArrears();
 		Thread.sleep(2000);
 		cc.selectCreateArrear();
-		cc.EnterArrearName("Salary_ArrearMS");
+		cc.EnterArrearName("Salary_ArrearMS2");
 		cc.EnterArrearDescription("Salary Arrears");
 		cc.ClickManualCheckBox();
-		cc.selectArrearFrom("Mar/2019");
-		cc.selectArrearTo("May/2019");
+		cc.selectArrearFrom("Mar/2020");
+		cc.selectArrearTo("Mar/2020");
 		Thread.sleep(3000);
-		cc.selectPaymonth("May/2019");
+		cc.selectPaymonth("Mar/2020");
 		cc.ClickAdvancedSettingsTab();
 		cc.ClickStatutory();
 		cc.ClickCreateButton();
@@ -88,8 +88,7 @@ public class Arrears extends BaseTest {
 		//cc.selectDeleteButton();
 		
 	}
-	
-  @Test(priority=1)
+/*  @Test(priority=1)
 	public void ComputationDetailsToArrear_SC_133() throws InterruptedException{
 	ComputationDetailsToArrear cc=new ComputationDetailsToArrear(driver);
 		cc.clickSalaryLink();
@@ -116,7 +115,7 @@ public class Arrears extends BaseTest {
 		cc.UpdateButton();
 		Thread.sleep(4000);
 		cc.ClickEmployee();
-	}
+	}*/
 	@Test(priority=2)
 	public void ArrearsManualLumpsumAsSalaryComponent_SC_134() throws InterruptedException{
 	ArrearsManualLumpsumAsSalaryComponent cc=new ArrearsManualLumpsumAsSalaryComponent(driver);
@@ -127,9 +126,9 @@ public class Arrears extends BaseTest {
 		cc.EnterArrearDescription("Salary Arrears");
 		cc.ClickManualCheckBox();
 		cc.ClickLumpsumCheckBox();
-		cc.selectArrearFrom("Sep/2019");
+		cc.selectArrearFrom("Nov/2019");
 		Thread.sleep(3000);
-		cc.selectPaymonth("Sep/2019");
+		cc.selectPaymonth("Nov/2019");
 		cc.ClickAdvancedSettingsTab();
 		cc.ClickStatutory();
 		//cc.ClickConsiderforCalc();
@@ -180,7 +179,7 @@ public class Arrears extends BaseTest {
 		cs.clickonarrearreport();
 		Thread.sleep(2000);
 		cs.selectreporttype("Arrear Salary Report");
-		cs.selectpaymonth("May/2019");
+		cs.selectpaymonth("Mar/2020");
 		cs.getemployees();
 		cs.resizeWindow();
 		Thread.sleep(3000);
@@ -189,8 +188,8 @@ public class Arrears extends BaseTest {
 		cs.exitFullscreen();
 		//cs.selectemployee();
 		cs.generatereport();
-	}/*
-	@Test(priority=5)
+	}
+/*	@Test(priority=5)
 	public void CheckifSalaryArrearsGeneralLinkPaymonthsredirectstoCreateNewPaymonthpage_SC_501() throws Exception {
 		CheckifSalaryArrearsGeneralLinkPaymonthsredirectstoCreateNewPaymonthpage lp=new CheckifSalaryArrearsGeneralLinkPaymonthsredirectstoCreateNewPaymonthpage(driver);
 		lp.clickonsalary();
@@ -204,7 +203,7 @@ public class Arrears extends BaseTest {
 		//lp.ClickDelete();
 		//Thread.sleep(3000);
 		//lp.DeleteConfirm();
-	}*/
+	}
 	@Test(priority=6)
 	public void CheckArrearsRedirectToMasterModule_SC_502() throws InterruptedException{
 	CheckArrearsRedirectToMasterModule cc=new CheckArrearsRedirectToMasterModule(driver);
@@ -1449,6 +1448,5 @@ public class Arrears extends BaseTest {
 		cc.switchToPopUpAndDismiss(driver);
 		cc.ClickDelete();
 		cc.switchToPopUpAndAccept(driver);
-	}
-	
+	}*/
 }

@@ -23,7 +23,7 @@ import com.spp.pages.EditAdditionalSalaryEntryADDITIONALSALARYEARNING;
 
 public class AdditionalSalary extends BaseTest {
 	
-	@Test(priority=0)
+/*	@Test(priority=0)
 	public void AddNewAdditionalSalary_SC_125() throws InterruptedException{
 		AddNewAdditionalSalary cc=new AddNewAdditionalSalary(driver);
 		cc.clickSalaryLink();
@@ -130,7 +130,7 @@ public class AdditionalSalary extends BaseTest {
 		cc.ClickAllotButton();
 		//String d=cc.getMessage();
 		//Assert.assertEquals(d, "Amount updated successfully for Selected Employees");
-	}
+	}*/
 	@Test(priority=5)
 	public void AllotSalaryToAdditionalSalaryDeductionHeadFormula_SC_130() throws InterruptedException{
 		AllotSalaryToAdditionalSalaryDeductionHeadFormula cc=new AllotSalaryToAdditionalSalaryDeductionHeadFormula(driver);
@@ -156,7 +156,7 @@ public class AdditionalSalary extends BaseTest {
 		//String d=cc.getMessage();
 		//Assert.assertEquals(d, "Amount updated successfully for Selected Employees");
 	}
-		@Test(priority=6)
+	/*	@Test(priority=6)
 	public void DeleteADDITIONALSALARYEARNINGHeading_SC_366() throws InterruptedException{
 		DeleteADDITIONALSALARYEARNINGHeading cc=new DeleteADDITIONALSALARYEARNINGHeading(driver);
 		cc.clickSalaryLink();
@@ -363,5 +363,5 @@ public class AdditionalSalary extends BaseTest {
 		Thread.sleep(3000);
 		cc.getexcelreport();
 		Thread.sleep(3000);
-	}
+	}*/
 }
