@@ -66,7 +66,7 @@ import com.spp.pages.EditArrear;
 
 public class Arrears extends BaseTest {
 
-	@Test(priority=0)
+/*	@Test(priority=0)
 	public void ArrearsManualSalaryHeadWiseAsSalaryComponent_SC_132() throws InterruptedException{
 	ArrearsManualSalaryHeadWiseAsSalaryComponent cc=new ArrearsManualSalaryHeadWiseAsSalaryComponent(driver);
 		cc.clickSalaryLink();
@@ -87,8 +87,8 @@ public class Arrears extends BaseTest {
 		Assert.assertEquals(t, "Arrear was successfully created.");
 		//cc.selectDeleteButton();
 		
-	}
-/*  @Test(priority=1)
+	}*/
+  @Test(priority=1)
 	public void ComputationDetailsToArrear_SC_133() throws InterruptedException{
 	ComputationDetailsToArrear cc=new ComputationDetailsToArrear(driver);
 		cc.clickSalaryLink();
@@ -104,6 +104,7 @@ public class Arrears extends BaseTest {
 		//Assert.assertEquals(y, "Employees Added Successfully.");
 		//Thread.sleep(4000);
 		cc.ClickSelectAll();
+		cc.EnterSearch("JOHN");
 		Thread.sleep(2000);
 		cc.ClickSelectEmpl();
 		cc.ClickSave();
@@ -115,8 +116,8 @@ public class Arrears extends BaseTest {
 		cc.UpdateButton();
 		Thread.sleep(4000);
 		cc.ClickEmployee();
-	}*/
-	@Test(priority=2)
+	}
+/*	@Test(priority=2)
 	public void ArrearsManualLumpsumAsSalaryComponent_SC_134() throws InterruptedException{
 	ArrearsManualLumpsumAsSalaryComponent cc=new ArrearsManualLumpsumAsSalaryComponent(driver);
 		cc.clickSalaryLink();
@@ -188,8 +189,8 @@ public class Arrears extends BaseTest {
 		cs.exitFullscreen();
 		//cs.selectemployee();
 		cs.generatereport();
-	}
-/*	@Test(priority=5)
+	}*/
+	@Test(priority=5)
 	public void CheckifSalaryArrearsGeneralLinkPaymonthsredirectstoCreateNewPaymonthpage_SC_501() throws Exception {
 		CheckifSalaryArrearsGeneralLinkPaymonthsredirectstoCreateNewPaymonthpage lp=new CheckifSalaryArrearsGeneralLinkPaymonthsredirectstoCreateNewPaymonthpage(driver);
 		lp.clickonsalary();
@@ -198,8 +199,9 @@ public class Arrears extends BaseTest {
 		Thread.sleep(2000);
 		lp.clickonpaymonths();	
 		lp.createpaymonth();
-		Thread.sleep(2000);
+		Thread.sleep(4000);
 		lp.switchToPopUpAndAccept(driver);
+		Thread.sleep(80000);
 		//lp.ClickDelete();
 		//Thread.sleep(3000);
 		//lp.DeleteConfirm();
@@ -209,9 +211,11 @@ public class Arrears extends BaseTest {
 	CheckArrearsRedirectToMasterModule cc=new CheckArrearsRedirectToMasterModule(driver);
 		cc.clickSalaryLink();
 		cc.selectArrears();
-		cc.selectGeneralLink();
 		Thread.sleep(2000);
+		cc.selectGeneralLink();
+		Thread.sleep(4000);
 		cc.EnterSalaryHead();
+		Thread.sleep(3000);
 		cc.ClickAddNewSalaryHead();
 		Thread.sleep(2000);
 		cc.EnterHeadName("WorkWork");
@@ -231,15 +235,15 @@ public class Arrears extends BaseTest {
 		Thread.sleep(2000);
 		cc.EnterSalaryStructure();
 		cc.ClickNewSalaryStructure();
-		cc.EnterStructureName("Structure1");
+		cc.EnterStructureName("Structure"+Utility.getRandNum(101, 200));
 		cc.ClickCreateButton();
 		String y=cc.getMessage();
 		Assert.assertEquals(y, "Salary group successfully created");
 		Thread.sleep(3000);
-		cc.navigateMaster();
-		cc.clickSalaryStructureLink();
-		Thread.sleep(2000);
-		cc.ClickDelete();
+	//	cc.navigateMaster();
+		//cc.clickSalaryStructureLink();
+	//	Thread.sleep(2000);
+	//	cc.ClickDelete();
 	}
 	@Test(priority=8)
 	public void CreateArrearAsSalaryComponent_SC_509() throws InterruptedException{
@@ -287,9 +291,8 @@ public class Arrears extends BaseTest {
  		Assert.assertEquals(t, "Arrear was successfully created.");
  		Thread.sleep(2000);
  		cc.selectDeleteButton();
-
   } 
-    @Test(priority=10)
+    /*   @Test(priority=10)
 	public void CreateArrearIndependentOfSalaryCash_SC_511() throws InterruptedException{
     	CreateArrearIndependentOfSalaryCash cc=new CreateArrearIndependentOfSalaryCash(driver);
 		cc.clickSalaryLink();

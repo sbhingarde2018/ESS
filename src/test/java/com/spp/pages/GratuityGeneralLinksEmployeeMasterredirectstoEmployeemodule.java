@@ -86,6 +86,18 @@ public GratuityGeneralLinksEmployeeMasterredirectstoEmployeemodule(WebDriver dri
 		WebElement EnterUANNo;
 		@FindBy(id="employee_statutory_aadhar_no")
 		WebElement EnterAadharNo;
+		@FindBy(xpath="//a[@id='emp_detail']")
+		WebElement ClickOnEmployee;
+		@FindBy(xpath="//a[contains(text(),'Employee Details')]")
+		WebElement ClickOnEmployeeDetails;
+		@FindBy(id="filter_head")
+		WebElement ClickonFilter;
+		@FindBy(xpath="//form[@id='bf_form']//button[contains(text(),'LOAD')]")
+		WebElement ClickOnLoad;
+		@FindBy(xpath="//div[@id='employees_dtable_filter']//input")
+		WebElement Search;
+		@FindBy(xpath="//td[contains(text(),'GEmp')]/parent::tr/td[6]/a[2]")
+		WebElement DeleteEmployee;
 		
 		public void clickonsalary() {
 			ClickOnSalary.click();
@@ -199,4 +211,23 @@ public GratuityGeneralLinksEmployeeMasterredirectstoEmployeemodule(WebDriver dri
 		 public void enterAADHARNo(String value) {
 		 	EnterAadharNo.sendKeys(value);
 		}
+		 public void clickonemployee() {
+				ClickOnEmployee.click();
+			}
+			public void clickonemployeedetails() {
+				ClickOnEmployeeDetails.click();
+			}
+			public void clickonfilter() {
+				ClickonFilter.click();
+			}
+			public void clickonload() {
+				ClickOnLoad.click();
+			}
+			public String SearchEmp(String value) {
+				Search.sendKeys(value);
+				return value;
+			}
+			public void DeleteEmployee() {
+				DeleteEmployee.click();
+			}
 }

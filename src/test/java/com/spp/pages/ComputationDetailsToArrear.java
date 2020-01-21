@@ -10,9 +10,9 @@ import com.spp.common.BasePage;
 public class ComputationDetailsToArrear extends BasePage{
 	@FindBy(id="salary")
 	WebElement SalaryLink;
-	@FindBy(xpath="//*[@id=\"menu\"]/li[6]/div/div[1]/ul/li[3]/a")
+	@FindBy(xpath="//div[@class='dropdown_5columns salaries']//a[contains(text(),'Arrears')]")
 	WebElement Arrears;
-	@FindBy(xpath="//table/tbody/tr/td[contains(text(),'Salary_ArrearMS2')]/parent::tr/td[4]/a")
+	@FindBy(xpath="//table/tbody/tr/td[contains(text(),'Salary_ArrearTest')]/parent::tr/td[4]/a")
 	WebElement Computaion;
 	@FindBy(id="manual_arrears")
 	WebElement AddEmployee;
@@ -22,20 +22,22 @@ public class ComputationDetailsToArrear extends BasePage{
 	WebElement successfullMessage;
 	@FindBy(id="save_employee_arrear")
 	WebElement Save;
-	@FindBy(xpath="//*[@id=\"manual_headwise_arrears\"]/tbody/tr[1]/td[7]/a")
+	@FindBy(xpath="//tbody/tr/td[contains(text(),'JOHN')]/parent::tr/td[7]/a")
 	WebElement MoreLink;
-	@FindBy(xpath="//tbody/tr[3]/td[2]/table/tbody/tr/td/table/tbody/tr[2]/td/input")
+	@FindBy(xpath="//table/tbody/tr[3]/td[1]/table/tbody/tr/td/input")
 	WebElement Basic;
 	@FindBy(xpath="//*[@id=\"main\"]/div[3]/fieldset/table/tbody/tr[3]/td[2]/table/tbody/tr[1]/td/table[1]/tbody/tr[2]/td/input")
 	WebElement DearnessAllowance;
-	@FindBy(xpath="//*[@id=\"tabs-0\"]/div/ul/li/table/tbody/tr[8]/td/table/tbody/tr/td/span")
+	@FindBy(xpath="//span[@class='btn2 btn-bglightblue']")
 	WebElement UpdateButton;
 	@FindBy(xpath="//div[@id='main']/section/p/a[2]")
 	WebElement Employee;
 	@FindBy(xpath="//*[@id=\"select_all\"]")
 	WebElement SelectAll;
-	@FindBy(xpath="//tbody/tr[2]/td[1]/input")
+	@FindBy(xpath="//tbody/tr/td[contains(text(),'JOHN')]/parent::tr/td[1]/input")
 	WebElement SelectEmp;
+	@FindBy(xpath="//div[@id='arrear_add_emp_filter']//input")
+	WebElement Search;
 	
 	public ComputationDetailsToArrear(WebDriver driver) {
 		super(driver);
@@ -63,6 +65,9 @@ public class ComputationDetailsToArrear extends BasePage{
 	}
 	public void ClickMoreLink(){
 		MoreLink.click();
+	}
+	public void EnterSearch(String value){
+		Search.sendKeys(value);
 	}
 	public void EnterBasic(String value){
 		Basic.clear();

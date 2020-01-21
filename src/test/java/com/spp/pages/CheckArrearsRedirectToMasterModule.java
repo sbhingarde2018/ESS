@@ -15,7 +15,7 @@ public class CheckArrearsRedirectToMasterModule extends BasePage{
 		WebElement Arrears;
 		@FindBy(xpath="//*[@id=\"ui-id-3\"]/h3")
 		WebElement GeneralLink;
-		@FindBy(xpath="//*[@id=\"ui-id-4\"]/li[2]/a")
+		@FindBy(xpath="//ul[@id='ui-id-4']//a[contains(text(),'Salary Heads')]")
 		WebElement SalaryHead;
 		@FindBy(xpath="//*[@id=\"main\"]/div[3]/span/a")
 		WebElement AddNewSalaryHead;

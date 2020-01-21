@@ -28,7 +28,7 @@ import com.spp.pages.UpdateGratuity;
 
 public class Gratuity extends BaseTest {
 
-	@Test(priority=0)
+/*	@Test(priority=0)
 	public void AddNewGratuity_SC_342() throws Exception {
 		AddNewGratuity ag = new AddNewGratuity(driver);
 		ag.clickonsalary();
@@ -346,8 +346,7 @@ public class Gratuity extends BaseTest {
 		Assert.assertEquals(i, "Gratuity successfully created");
 		Thread.sleep(2000);
 		ag.clickDelete();
-	}
-	
+	}*/	
 	@Test(priority=16)
 	public void AddNewGratuitywithSalaryConsideredTheoreticalChequeDDNoChequeDDdate_SC_923() throws Exception {
 		AddNewGratuitywithSalaryConsideredTheoreticalChequeDDNoChequeDDdate ag=new AddNewGratuitywithSalaryConsideredTheoreticalChequeDDNoChequeDDdate(driver);
@@ -1343,6 +1342,18 @@ public class Gratuity extends BaseTest {
 		ag.createemployee();
 		String s=ag.getMessage();
 		Assert.assertEquals(s, "Employee successfully created");
+		ag.clickonemployee();
+		ag.clickonemployeedetails();
+		ag.resizeWindow();
+		ag.clickonfilter();
+		Thread.sleep(2000);
+		ag.clickonload();
+		Thread.sleep(2000);
+		ag.exitFullscreen();
+		ag.SearchEmp("GEmp");
+		ag.DeleteEmployee();
+		ag.switchToPopUpAndAccept(driver);
+		Thread.sleep(2000);
 	}
 	
 }

@@ -18,7 +18,7 @@ public class CheckArrearsSalaryStructureRedirectToMasterModule extends BasePage 
 	WebElement SalaryStructure;
 	@FindBy(xpath="//*[@id=\"main\"]/div[2]/span/a")
 	WebElement NewSalaryStructure;
-	@FindBy(id="salary_group_salary_group_name")
+	@FindBy(xpath="//input[@id='sal_group_name']")
 	WebElement StructureName;
 	@FindBy(xpath="//*[@id=\"salary_group\"]/div[3]/input")
 	WebElement CreateButton;

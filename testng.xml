@@ -56,7 +56,7 @@
 	<class name="com.spp.scripts.Form16"/>
 	<class name="com.spp.scripts.ComputationDetails"/>-->
 	
-	<class name="com.spp.scripts.Arrears"/>	
+	<class name="com.spp.scripts.Arrears"/>
 	<class name="com.spp.scripts.Gratuity"/>
 <!--<class name="com.spp.scripts.AdditionalSalary"/>
 	<class name="com.spp.scripts.Paymonths"/>	

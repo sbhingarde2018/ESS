@@ -43,7 +43,7 @@ public class AddNewGratuitywithSalaryConsideredTheoreticalChequeDDNoChequeDDdate
 		PageFactory.initElements(driver, this);
 	}
 	public void clickonsalary() {
-		ClickOnSalary.click();
+		 ClickOnSalary.click();
 	}
 	public void clickongratutiy() {
 		ClickOnGratuity.click();
