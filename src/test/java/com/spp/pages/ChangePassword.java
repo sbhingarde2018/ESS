@@ -8,9 +8,9 @@ import org.openqa.selenium.support.PageFactory;
 import com.spp.common.BasePage;
 
 public class ChangePassword extends BasePage{
-	@FindBy(xpath="/html/body/div[1]/div[4]/div/div[2]/ul/li/a/span[1]")
+	@FindBy(xpath="//span[@class='profile-image username-text']")
 	WebElement Superuser;
-	@FindBy(xpath="/html/body/div[1]/div[4]/div/div[2]/ul/li/ul/li[1]/a")
+	@FindBy(xpath="//a[contains(text(),'Change Password')]")
 	WebElement ChangePassword;
 	@FindBy(id="user_current_password")
 	WebElement CurrentPassword;

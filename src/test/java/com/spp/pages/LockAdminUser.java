@@ -8,15 +8,15 @@ import org.openqa.selenium.support.PageFactory;
 import com.spp.common.BasePage;
 
 public class LockAdminUser extends BasePage{
-	@FindBy(xpath="/html/body/div/div[4]/div/div[2]/ul/li/a/span[1]")
+	@FindBy(xpath="//span[@class='profile-image username-text']")
 	WebElement Superuser;
-	@FindBy(xpath="/html/body/div/div[4]/div/div[2]/ul/li/ul/li[5]/a")
+	@FindBy(xpath="//a[contains(text(),'User Management')]")
 	WebElement ClickOnUserManagement;
-	@FindBy(xpath="//*[@id=\"main\"]/div[2]/nav/ul/li[4]/a/span")
+	@FindBy(xpath="//span[contains(text(),'Lock Admin User')]")
 	WebElement SelectOnLockAdminUser;
-	@FindBy(id="lock_admin_User_check_box")
+	@FindBy(xpath="//table[@id='user_admin_roles_lock']//input[@id='users_']")
 	WebElement SelectEmployee;
-	@FindBy(id="lock_admin_users")
+	@FindBy(xpath="//input[@id='lock_admin_users']")
 	WebElement ClickOnlockAdminUser;
 	@FindBy(xpath="//*[@id=\"main\"]/div[1]/strong")
 	WebElement successfullmessage;

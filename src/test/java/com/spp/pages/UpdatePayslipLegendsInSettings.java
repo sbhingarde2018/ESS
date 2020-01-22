@@ -8,9 +8,9 @@ import org.openqa.selenium.support.PageFactory;
 import com.spp.common.BasePage;
 
 public class UpdatePayslipLegendsInSettings extends BasePage{
-	@FindBy(id="setting") 
+	@FindBy(xpath="//a[@id='setting']")
 	WebElement Settings;
-	@FindBy(xpath="//*[@id=\"menu\"]/li[9]/div/div/ul/li[2]/a")
+	@FindBy(xpath="//a[contains(text(),'Payslip Legends')]")
 	WebElement PaySlipLegends;
 	@FindBy(xpath="//*[@id='add_all_things']/tbody/tr[1]/td[1]/span/input")
 	WebElement RefNo;

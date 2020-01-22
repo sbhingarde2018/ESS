@@ -8,9 +8,9 @@ import org.openqa.selenium.support.PageFactory;
 import com.spp.common.BasePage;
 
 public class SecurityPolicy extends BasePage{
-	@FindBy(xpath="/html/body/div/div[4]/div/div[2]/ul/li/a/span[1]")
+	@FindBy(xpath="//span[@class='profile-image username-text']")
 	WebElement Superuser;
-	@FindBy(xpath="/html/body/div/div[4]/div/div[2]/ul/li/ul/li[2]/a")
+	@FindBy(xpath="//a[contains(text(),'Security Policy')]")
 	WebElement SecurityPolicy;
 	@FindBy(id="general_security_policy_password_strength")
 	WebElement PasswordStrength;
@@ -46,15 +46,19 @@ public class SecurityPolicy extends BasePage{
 		dropDownSelect(PasswordStrength, value);
 	}
 	public void enterPasswordExpiryDay (String value) throws Exception{
+		PasswordExpiryDate.clear();
 		PasswordExpiryDate.sendKeys(value);
 	}
 	public void enterPasswordExpiryReminder (String value) throws Exception{
+		PasswordExpiryReminder.clear();
 		PasswordExpiryReminder.sendKeys(value);
 	}
 	public void enterMinimumPasswordLength (String value) throws Exception{
+		MinimumPasswordLength.clear();
 		MinimumPasswordLength.sendKeys(value);
 	}
 	public void enterMaximumFailLogin (String value) throws Exception{
+		MaximumFailLogin.clear();
 		MaximumFailLogin.sendKeys(value);
 	}
 	public void selectLoginType() throws Exception{

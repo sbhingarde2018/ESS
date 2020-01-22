@@ -8,9 +8,9 @@ import org.openqa.selenium.support.PageFactory;
 import com.spp.common.BasePage;
 
 public class UpdateDashboardSettings extends BasePage{
-	@FindBy(id="setting") 
+	@FindBy(xpath="//a[@id='setting']")
 	WebElement Settings;
-	@FindBy(xpath="//*[@id=\"menu\"]/li[9]/div/div/ul/li[5]/a")
+	@FindBy(xpath="//a[contains(text(),'Dashboard Settings')]")
 	WebElement DashboardSettings;
 	@FindBy(id="setting_NEWLY_JOINED")
 	WebElement NewEmployee;

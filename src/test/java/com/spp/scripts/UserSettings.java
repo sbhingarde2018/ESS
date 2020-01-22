@@ -4,6 +4,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.spp.common.BaseTest;
+import com.spp.pages.AddNewRole;
 import com.spp.pages.ChangePassword;
 import com.spp.pages.LockAdminUser;
 import com.spp.pages.SecurityPolicy;
@@ -13,7 +14,6 @@ import com.spp.pages.VerifyUnlockAdminUser;
 
 public class UserSettings extends BaseTest{
 	
-
 	@Test(priority=0)
 	public void ChangePassword_SC_141() throws Exception{
 		ChangePassword lm=new ChangePassword(driver);
@@ -26,22 +26,21 @@ public class UserSettings extends BaseTest{
 		String r=lm.getMessage();
 		Assert.assertEquals(r, "Password was successfully updated");
 	}	
-	
 	@Test(priority=1)
-		public void SecurityPolicy_SC_142() throws Exception{
-			SecurityPolicy sp=new SecurityPolicy(driver);
-			sp.navigateSuperuser1();
-			sp.clickSecurityPolicy();
-			sp.selectpasswordstrength( "Alpha Numeric");
-			sp.enterPasswordExpiryDay("50");
-			sp.enterPasswordExpiryReminder("5");
-			sp.enterMinimumPasswordLength("6");
-			sp.selectLoginType();
-			sp.clickSessionManager();
-			sp.clickupdatebutton();
-			String r=sp.getMessage();
-			Assert.assertEquals(r, "General Security Policy Is Updated.");
-			}
+	public void SecurityPolicy_SC_142() throws Exception{
+		SecurityPolicy sp=new SecurityPolicy(driver);
+		sp.navigateSuperuser1();
+		sp.clickSecurityPolicy();
+		sp.selectpasswordstrength( "Alpha Numeric");
+		sp.enterPasswordExpiryDay("50");
+		sp.enterPasswordExpiryReminder("5");
+		sp.enterMinimumPasswordLength("6");
+		sp.selectLoginType();
+		sp.clickSessionManager();
+		sp.clickupdatebutton();
+		String r=sp.getMessage();
+		Assert.assertEquals(r, "General Security Policy Is Updated.");
+	}
 	@Test(priority=2)
 	public void UnlockUser_SC_144() throws Exception{
 		UnlockUser us=new UnlockUser(driver);
@@ -71,7 +70,6 @@ public class UserSettings extends BaseTest{
 		us.clickonlockuser();
 		String r=us.getMessage();
 		Assert.assertEquals(r, "Locked selected users.");
-	
 	}
 	@Test(priority=4)
 	public void VerifyUnlockAdminUser_SC_146() throws Exception{
@@ -101,9 +99,46 @@ public class UserSettings extends BaseTest{
 		us.checkemployee();
 		Thread.sleep(2000);
 		us.clickonlockadminuser();
-		Thread.sleep(1000);
+		//Thread.sleep(1000);
 		String r=us.getMessage();
-		Assert.assertEquals(r, "Locked selected users.");
-	
+		Assert.assertEquals(r, "Locked selected users.");	
+	}
+	@Test(priority=6)
+	public void AddNewRole_SC_143() throws Exception{
+		AddNewRole ab = new AddNewRole(driver);
+		ab.clickSuperUser();
+		ab.selectRolePermission();
+		ab.selectAddNewRole();
+		ab.EnterRoleName("ABC");
+		ab.selectCSCreate();
+		ab.selectCSRead();
+		ab.selectCSUpdate();
+		ab.selectCSDelete();
+		ab.clickSubmit();
+		String r=ab.getMessage();
+		Assert.assertEquals(r, "Screen Permission is successfully created");
+		Thread.sleep(2000);
+	}
+	@Test(priority=7)
+	public void EditRole_SC_150() throws Exception{
+		AddNewRole ab = new AddNewRole(driver);
+		ab.clickSuperUser();
+		ab.selectRolePermission();
+		ab.clickEdit();
+		ab.EnterRoleName("ABCD");
+		ab.clickUpdate();
+		String r=ab.getUpdateMessage();
+		Assert.assertEquals(r, "Screen Permission is successfully updated");
+		Thread.sleep(2000);
+	}
+	@Test(priority=8)
+	public void DeleteRole_SC_151() throws Exception{
+		AddNewRole ab = new AddNewRole(driver);
+		ab.clickSuperUser();
+		ab.selectRolePermission();
+		Thread.sleep(2000);
+		ab.clickDelete();
+		ab.switchToPopUpAndAccept(driver);
+		Thread.sleep(2000);
 	}
 }

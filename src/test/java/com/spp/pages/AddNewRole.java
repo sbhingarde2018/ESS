@@ -9,13 +9,13 @@ import com.spp.common.BasePage;
 
 public class AddNewRole extends BasePage {
 
-	@FindBy(xpath="/html/body/div/div[4]/div/div[2]/ul/li/a/span[1]") 
+	@FindBy(xpath="//span[@class='profile-image username-text']")
 	WebElement SuperUser;
-	@FindBy(xpath="/html/body/div/div[4]/div/div[2]/ul/li/ul/li[3]/a")
+	@FindBy(xpath="//a[contains(text(),'Role And Screen Permission')]")
 	WebElement RolePermission;
-	@FindBy(xpath="//*[@id=\"main\"]/div[3]/span/a")
+	@FindBy(xpath="//a[contains(text(),'Add New Role')]")
 	WebElement AddNewRole;
-	@FindBy(id="role_name")
+	@FindBy(xpath="//input[@id='role_name']")
 	WebElement RoleName;
 	@FindBy(id="SPP_Cloud_permissions_company_statutory_create")
 	WebElement CSCreate;
@@ -25,12 +25,20 @@ public class AddNewRole extends BasePage {
 	WebElement CSUpdate;
 	@FindBy(xpath="//*[@id=\"role_screen\"]/div[8]/input[1]")
 	WebElement Submit;
+	@FindBy(xpath="//input[@class='btn2 btn-bglightblue']")
+	WebElement Update;
 	@FindBy(id="SPP_Cloud_permissions_company_statutory_destroy")
 	WebElement CSDelete;
-	@FindBy(xpath="//*[@id=\"main\"]/div[1]/strong")
+	@FindBy(xpath="//strong[contains(text(),'Screen Permission is successfully created')]")
 	WebElement successfullMessage;
-	@FindBy(xpath="//*[@id=\"main\"]/div[4]/table/tbody/tr[3]/td[6]/a")
+	@FindBy(xpath="//tbody/tr/td[contains(text(),'ABCD')]/parent::tr/td[5]/span[2]/a")
 	WebElement Delete;
+	@FindBy(xpath="//tbody/tr/td[contains(text(),'ABC')]/parent::tr/td[5]/span[1]/a")
+	WebElement Edit;
+	@FindBy(xpath="//strong[contains(text(),'Screen Permission is successfully updated')]")
+	WebElement UpdateMessage;
+	
+	
 	public AddNewRole(WebDriver driver) {
 		super(driver);
 		PageFactory.initElements(driver,this);
@@ -67,11 +75,19 @@ public class AddNewRole extends BasePage {
 	public void clickSubmit(){
 		Submit.click();
 	}
-
-		
+	public void clickUpdate(){
+		Update.click();
+	}
+	public void clickEdit(){
+		Edit.click();
+	}
+	public void clickDelete(){
+		Delete.click();
+	}
 	public String getMessage(){
 		return successfullMessage.getText();
 	}
-		
-	
+	public String getUpdateMessage(){
+		return UpdateMessage.getText();
+	}
 }

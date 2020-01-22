@@ -8,9 +8,9 @@ import org.openqa.selenium.support.PageFactory;
 import com.spp.common.BasePage;
 
 public class UpdateDateFormat extends BasePage{
-	@FindBy(id="setting") 
+	@FindBy(xpath="//a[@id='setting']")
 	WebElement Settings;
-	@FindBy(xpath="//*[@id=\"menu\"]/li[9]/div/div/ul/li[1]/a")
+	@FindBy(xpath="//div[@class='dropdown_1columns settings']//a[contains(text(),'Option Settings')]")
 	WebElement OptionSettings;
 	@FindBy(xpath="//*[@id=\"accordion\"]/ul/li[4]/a")
 	WebElement DateFormatSettings;

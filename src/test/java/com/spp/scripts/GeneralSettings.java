@@ -17,6 +17,7 @@ public class GeneralSettings extends BaseTest{
  	public void UpdateGeneralSettingsPaymonth_SC_86() throws Exception{
 		UpdateGeneralSettingsPaymonth sh=new UpdateGeneralSettingsPaymonth(driver);
 		sh.clickSettings();
+		Thread.sleep(3000);
 		sh.selectOptionSettings();
 		sh.selectHoldSalary();
 		sh.selectPTOnGross();
