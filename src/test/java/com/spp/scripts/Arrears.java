@@ -87,7 +87,7 @@ public class Arrears extends BaseTest {
 		Assert.assertEquals(t, "Arrear was successfully created.");
 		//cc.selectDeleteButton();
 		
-	}*/
+	}
   @Test(priority=1)
 	public void ComputationDetailsToArrear_SC_133() throws InterruptedException{
 	ComputationDetailsToArrear cc=new ComputationDetailsToArrear(driver);
@@ -117,7 +117,7 @@ public class Arrears extends BaseTest {
 		Thread.sleep(4000);
 		cc.ClickEmployee();
 	}
-/*	@Test(priority=2)
+	@Test(priority=2)
 	public void ArrearsManualLumpsumAsSalaryComponent_SC_134() throws InterruptedException{
 	ArrearsManualLumpsumAsSalaryComponent cc=new ArrearsManualLumpsumAsSalaryComponent(driver);
 		cc.clickSalaryLink();
@@ -189,7 +189,7 @@ public class Arrears extends BaseTest {
 		cs.exitFullscreen();
 		//cs.selectemployee();
 		cs.generatereport();
-	}*/
+	}
 	@Test(priority=5)
 	public void CheckifSalaryArrearsGeneralLinkPaymonthsredirectstoCreateNewPaymonthpage_SC_501() throws Exception {
 		CheckifSalaryArrearsGeneralLinkPaymonthsredirectstoCreateNewPaymonthpage lp=new CheckifSalaryArrearsGeneralLinkPaymonthsredirectstoCreateNewPaymonthpage(driver);
@@ -268,7 +268,7 @@ public class Arrears extends BaseTest {
 		cc.selectDeleteButton();
 		
   	}
-    @Test(priority=9)
+   @Test(priority=9)
  	public void CreateArrearMergedWithSalaryComponent_SC_510() throws InterruptedException{
 	    CreateArrearMergedWithSalaryComponent cc=new CreateArrearMergedWithSalaryComponent(driver);
  		cc.clickSalaryLink();
@@ -291,8 +291,8 @@ public class Arrears extends BaseTest {
  		Assert.assertEquals(t, "Arrear was successfully created.");
  		Thread.sleep(2000);
  		cc.selectDeleteButton();
-  } 
-    /*   @Test(priority=10)
+  }*/
+    @Test(priority=10)
 	public void CreateArrearIndependentOfSalaryCash_SC_511() throws InterruptedException{
     	CreateArrearIndependentOfSalaryCash cc=new CreateArrearIndependentOfSalaryCash(driver);
 		cc.clickSalaryLink();
@@ -672,12 +672,12 @@ public class Arrears extends BaseTest {
 		Thread.sleep(3000);
 		cc.selectDeleteButton();
   }
-	
-	@Test(priority=25)
+		@Test(priority=25)
 	public void CreateArrearIndependentOfSalaryBankAdviceRestrictNegative_SC_526() throws InterruptedException{
 		  CreateArrearIndependentOfSalaryBankAdviceRestrictNegative cc=new CreateArrearIndependentOfSalaryBankAdviceRestrictNegative(driver);
 			cc.clickSalaryLink();
 			cc.selectArrears();
+			Thread.sleep(2000);
 			cc.selectCreateArrear();
 			cc.EnterArrearName("Salary_ArrearSal");
 			//cc.EnterArrearName("new_"+num);
@@ -757,7 +757,6 @@ public class Arrears extends BaseTest {
 		Thread.sleep(3000);
 		cc.selectDeleteButton();
 }
-	
 	@Test(priority=28)
 	public void CreateArrearBankAdvicePayPart_SC_529() throws InterruptedException{
 		CreateArrearBankAdvicePayPart cc=new CreateArrearBankAdvicePayPart(driver);
@@ -968,7 +967,7 @@ public class Arrears extends BaseTest {
 		Thread.sleep(3000);
 		cc.selectDeleteButton();
 	}
-	@Test(priority=36)
+/*	@Test(priority=36)
 	public void CreateArrearNoOfDaysDifferenceInstruments_SC_537() throws InterruptedException{
 		CreateArrearNoOfDaysDifferenceInstruments cc=new CreateArrearNoOfDaysDifferenceInstruments(driver);
 		cc.clickSalaryLink();
@@ -1019,8 +1018,8 @@ public class Arrears extends BaseTest {
 		Assert.assertEquals(t, "Arrear was successfully created.");
 		Thread.sleep(3000);
 		cc.selectDeleteButton();
-	}
-	@Test(priority=38)
+	}*/
+/*	@Test(priority=38)
 	public void CreateArrearsManualSalaryHeadWiseMergedWithSalaryComponent_SC_539() throws InterruptedException{
 		CreateArrearsManualSalaryHeadWiseMergedWithSalaryComponent cc=new CreateArrearsManualSalaryHeadWiseMergedWithSalaryComponent(driver);
 		cc.clickSalaryLink();
@@ -1338,8 +1337,8 @@ public class Arrears extends BaseTest {
 		Thread.sleep(3000);
 		cc.selectComputation();
 		
-	}
-	@Test(priority=51)  
+	}*/
+/*	@Test(priority=51)  
 	public void ComputationDetailsToAnArrearSC543_SC_552() throws Exception {
 		ComputationDetailsToAnArrear543 cc=new ComputationDetailsToAnArrear543(driver);
 		cc.clickSalaryLink();
@@ -1439,8 +1438,8 @@ public class Arrears extends BaseTest {
 		//cc.clickPageNavigation();
 		Thread.sleep(3000);
 		cc.selectComputation();
-	}
-	@Test(priority=54)  
+	}*/
+/*	@Test(priority=54)  
 	public void DeleteComputationDetails_SC_555() throws InterruptedException{
 		DeleteComputationDetails cc=new DeleteComputationDetails(driver);
 		cc.clickSalaryLink();
