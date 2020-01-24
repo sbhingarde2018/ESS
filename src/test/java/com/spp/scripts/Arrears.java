@@ -292,7 +292,7 @@ public class Arrears extends BaseTest {
  		Thread.sleep(2000);
  		cc.selectDeleteButton();
   }*/
-    @Test(priority=10)
+ /*   @Test(priority=10)
 	public void CreateArrearIndependentOfSalaryCash_SC_511() throws InterruptedException{
     	CreateArrearIndependentOfSalaryCash cc=new CreateArrearIndependentOfSalaryCash(driver);
 		cc.clickSalaryLink();
@@ -966,8 +966,8 @@ public class Arrears extends BaseTest {
 		Assert.assertEquals(t, "Arrear was successfully created.");
 		Thread.sleep(3000);
 		cc.selectDeleteButton();
-	}
-/*	@Test(priority=36)
+	}*/
+	@Test(priority=36)
 	public void CreateArrearNoOfDaysDifferenceInstruments_SC_537() throws InterruptedException{
 		CreateArrearNoOfDaysDifferenceInstruments cc=new CreateArrearNoOfDaysDifferenceInstruments(driver);
 		cc.clickSalaryLink();
@@ -992,7 +992,7 @@ public class Arrears extends BaseTest {
 		Assert.assertEquals(t, "Arrear was successfully created.");
 		Thread.sleep(3000);
 		cc.selectDeleteButton();
-	}		
+	}
 	@Test(priority=37)
 	public void CreateArrearNoOfDaysDifferenceBankAdvice_SC_538() throws InterruptedException{
 		CreateArrearNoOfDaysDifferenceBankAdvice cc=new CreateArrearNoOfDaysDifferenceBankAdvice(driver);
@@ -1016,10 +1016,10 @@ public class Arrears extends BaseTest {
 		cc.ClickCreateButton();
 		String t=cc.getMessage();
 		Assert.assertEquals(t, "Arrear was successfully created.");
-		Thread.sleep(3000);
-		cc.selectDeleteButton();
-	}*/
-/*	@Test(priority=38)
+	//	Thread.sleep(3000);
+	//	cc.selectDeleteButton();
+	}
+	@Test(priority=38)
 	public void CreateArrearsManualSalaryHeadWiseMergedWithSalaryComponent_SC_539() throws InterruptedException{
 		CreateArrearsManualSalaryHeadWiseMergedWithSalaryComponent cc=new CreateArrearsManualSalaryHeadWiseMergedWithSalaryComponent(driver);
 		cc.clickSalaryLink();
@@ -1183,17 +1183,19 @@ public class Arrears extends BaseTest {
 		EditArrear cc=new EditArrear(driver);
 		cc.clickSalaryLink();
 		cc.selectArrears();
+	//	cc.clickNextPage();
 		cc.selectEditArrear();
 		cc.EnterArrearName("Salary_ArrearSal909");
 		cc.ClickUpdateButton();
 		String t=cc.getMessage();
 		Assert.assertEquals(t, "Arrear was successfully updated.");
 	}
-	@Test(priority=46)
+/* @Test(priority=46)
 	public void DeleteArrear_SC_547() throws InterruptedException{
 		DeleteArrear cc=new DeleteArrear(driver);
 		cc.clickSalaryLink();
 		cc.selectArrears();
+		cc.clickNextPage();
 		cc.selectDelete();
 		cc.switchToPopUpAndDismiss();
 		Thread.sleep(1000);
@@ -1337,8 +1339,8 @@ public class Arrears extends BaseTest {
 		Thread.sleep(3000);
 		cc.selectComputation();
 		
-	}*/
-/*	@Test(priority=51)  
+	}
+	@Test(priority=51)  
 	public void ComputationDetailsToAnArrearSC543_SC_552() throws Exception {
 		ComputationDetailsToAnArrear543 cc=new ComputationDetailsToAnArrear543(driver);
 		cc.clickSalaryLink();
@@ -1403,8 +1405,7 @@ public class Arrears extends BaseTest {
 		Thread.sleep(3000);
 		//cc.clickPageNavigation();
 		Thread.sleep(3000);
-		cc.selectComputation();
-		
+		cc.selectComputation();		
 	}
 	@Test(priority=53)  
 	public void ComputationDetailsToAnArrearSC545_SC_554() throws Exception {
@@ -1438,8 +1439,8 @@ public class Arrears extends BaseTest {
 		//cc.clickPageNavigation();
 		Thread.sleep(3000);
 		cc.selectComputation();
-	}*/
-/*	@Test(priority=54)  
+	}
+	@Test(priority=54)  
 	public void DeleteComputationDetails_SC_555() throws InterruptedException{
 		DeleteComputationDetails cc=new DeleteComputationDetails(driver);
 		cc.clickSalaryLink();
@@ -1451,4 +1452,5 @@ public class Arrears extends BaseTest {
 		cc.ClickDelete();
 		cc.switchToPopUpAndAccept(driver);
 	}*/
+  	// clear all data of arrear.
 }

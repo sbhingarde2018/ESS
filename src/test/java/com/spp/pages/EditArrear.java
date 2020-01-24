@@ -1,5 +1,6 @@
 package com.spp.pages;
 
+import org.hamcrest.core.IsNot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -12,7 +13,7 @@ public class EditArrear extends BasePage{
 	WebElement SalaryLink;
 	@FindBy(xpath="//*[@id=\"menu\"]/li[6]/div/div[1]/ul/li[3]/a")
 	WebElement Arrears;
-	@FindBy(xpath="//table/tbody/tr/td[contains(text(),'Salary_ArrearLS')]/parent::tr/td[5]/a")
+	@FindBy(xpath="//table/tbody/tr/td[contains(text(),'Salary_ArrearSal')]/parent::tr/td[5]/a")
 	WebElement EditArrear;
 	@FindBy(id="arrear_arrear_name")
 	WebElement ArrearName;
@@ -24,6 +25,8 @@ public class EditArrear extends BasePage{
 	WebElement successfullMessage;
 	@FindBy(xpath="//*[@id=\"main\"]/div[3]/table/tbody/tr[3]/td[6]/a")
 	WebElement DeleteButton;
+	@FindBy(xpath="//a[@class='next_page']")
+	WebElement NextPage;
 	
 //@FindBy(xpath="//*[@id=\"main\"]/div[2]/table/tbody/tr/td[1][contains(text(),'new')]/parent::tr/td[6]/a/img")
 //List<WebElement> xyz;
@@ -33,6 +36,12 @@ public EditArrear(WebDriver driver) {
 		PageFactory.initElements(driver,this);
 	}
 	
+	public void clickNextPage(){
+		if(isVisible(NextPage)) {
+		NextPage.click();
+		}
+	}
+
 	public void clickSalaryLink(){
 		SalaryLink.click();
 	}

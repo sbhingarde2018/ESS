@@ -10,7 +10,7 @@ import com.spp.common.BasePage;
 public class ComputationDetailsToAnArrear543 extends BasePage {
 	@FindBy(id="salary") 
 	WebElement SalaryLink;
-	@FindBy(xpath="//*[@id=\"menu\"]/li[6]/div/div[1]/ul/li[3]/a")
+	@FindBy(xpath="//div[@class='dropdown_5columns salaries']//a[contains(text(),'Arrears')]")
 	WebElement Arrears;
 	@FindBy(xpath="//table/tbody/tr/td[contains(text(),'Arreartest5')]/parent::tr/td[4]/a")
 	WebElement computation;

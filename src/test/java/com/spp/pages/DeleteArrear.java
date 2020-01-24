@@ -16,6 +16,8 @@ public class DeleteArrear extends BasePage{
 	WebElement Delete;
 	@FindBy(xpath="//*[@id=\"main\"]/div[1]/strong")
 	WebElement successfullMessage;
+	@FindBy(xpath="//a[@class='next_page']")
+	WebElement NextPage;
 	
 public DeleteArrear(WebDriver driver) {
 		super(driver);
@@ -25,7 +27,11 @@ public DeleteArrear(WebDriver driver) {
 	public void clickSalaryLink(){
 		SalaryLink.click();
 	}
-	
+	public void clickNextPage(){
+		if(isVisible(NextPage)) {
+		NextPage.click();
+		}
+	}
 	public void selectArrears(){
 		Arrears.click();
 	}

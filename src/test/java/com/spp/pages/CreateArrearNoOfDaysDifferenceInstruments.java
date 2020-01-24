@@ -10,7 +10,7 @@ import com.spp.common.BasePage;
 public class CreateArrearNoOfDaysDifferenceInstruments extends BasePage {
 	@FindBy(id="salary") 
 	WebElement SalaryLink;
-	@FindBy(xpath="//*[@id=\"menu\"]/li[6]/div/div[1]/ul/li[3]/a")
+	@FindBy(xpath="//div[@class='dropdown_5columns salaries']//a[contains(text(),'Arrears')]")
 	WebElement Arrears;
 	@FindBy(xpath="//*[@id=\"main\"]/div[1]/span/a[2]")
 	WebElement CreateArrear;
