@@ -38,11 +38,11 @@ public class ArrearsManualSalaryHeadWiseAsSalaryComponent extends BasePage{
 	WebElement CreateButton;
 	@FindBy(xpath="//*[@id=\"main\"]/div[1]/strong")
 	WebElement successfullMessage;
-	@FindBy(xpath="//table/tbody/tr/td[contains(text(),'Salary_ArrearMS')]/parent::tr/td[6]/a/img")
+	@FindBy(xpath="//table/tbody/tr/td[contains(text(),'Salary_ArrearMS3')]/parent::tr/td[6]/a/img")
 	WebElement DeleteButton;
+	@FindBy(xpath="//h3[contains(text(),'New Arrears Definition')]")
+	WebElement NewArrearDeinition = null;
 	
-//@FindBy(xpath="//*[@id=\"main\"]/div[2]/table/tbody/tr/td[1][contains(text(),'new')]/parent::tr/td[6]/a/img")
-//List<WebElement> xyz;
 	
 public ArrearsManualSalaryHeadWiseAsSalaryComponent(WebDriver driver) {
 		super(driver);
@@ -92,12 +92,22 @@ public ArrearsManualSalaryHeadWiseAsSalaryComponent(WebDriver driver) {
 	public String getMessage(){
 		return successfullMessage.getText();
 	}
-
-	
   	public void selectDeleteButton() throws InterruptedException{
     DeleteButton.click();
     Thread.sleep(2000);
     switchToPopUpAndAccept(driver);
-
   	}
+  	 public boolean checkIfExist(WebElement NewArrearDeinition){
+		 boolean elemexists = false;
+		 
+		 try {
+			 elemexists = NewArrearDeinition.isDisplayed();
+			 return elemexists;
+			 }
+		 catch(Exception e){
+			 
+		 }
+		 return elemexists;
+	 }
 }
+

@@ -65,15 +65,15 @@ import com.spp.pages.EditArrear;
 
 
 public class Arrears extends BaseTest {
-
-/*	@Test(priority=0)
+	//clear require data(Arrears) for execution before execution.
+	@Test(priority=0)
 	public void ArrearsManualSalaryHeadWiseAsSalaryComponent_SC_132() throws InterruptedException{
 	ArrearsManualSalaryHeadWiseAsSalaryComponent cc=new ArrearsManualSalaryHeadWiseAsSalaryComponent(driver);
 		cc.clickSalaryLink();
 		cc.selectArrears();
 		Thread.sleep(2000);
 		cc.selectCreateArrear();
-		cc.EnterArrearName("Salary_ArrearMS2");
+		cc.EnterArrearName("Salary_ArrearMS3");
 		cc.EnterArrearDescription("Salary Arrears");
 		cc.ClickManualCheckBox();
 		cc.selectArrearFrom("Mar/2020");
@@ -85,7 +85,7 @@ public class Arrears extends BaseTest {
 		cc.ClickCreateButton();
 		String t=cc.getMessage();
 		Assert.assertEquals(t, "Arrear was successfully created.");
-		//cc.selectDeleteButton();
+		cc.selectDeleteButton();
 		
 	}
   @Test(priority=1)
@@ -235,7 +235,7 @@ public class Arrears extends BaseTest {
 		Thread.sleep(2000);
 		cc.EnterSalaryStructure();
 		cc.ClickNewSalaryStructure();
-		cc.EnterStructureName("Structure"+Utility.getRandNum(101, 200));
+		cc.EnterStructureName("Structure"+Utility.getRandNum(201, 300)); //change range if get fail.
 		cc.ClickCreateButton();
 		String y=cc.getMessage();
 		Assert.assertEquals(y, "Salary group successfully created");
@@ -291,8 +291,8 @@ public class Arrears extends BaseTest {
  		Assert.assertEquals(t, "Arrear was successfully created.");
  		Thread.sleep(2000);
  		cc.selectDeleteButton();
-  }*/
- /*   @Test(priority=10)
+  }
+    @Test(priority=10)
 	public void CreateArrearIndependentOfSalaryCash_SC_511() throws InterruptedException{
     	CreateArrearIndependentOfSalaryCash cc=new CreateArrearIndependentOfSalaryCash(driver);
 		cc.clickSalaryLink();
@@ -966,7 +966,7 @@ public class Arrears extends BaseTest {
 		Assert.assertEquals(t, "Arrear was successfully created.");
 		Thread.sleep(3000);
 		cc.selectDeleteButton();
-	}*/
+	}
 	@Test(priority=36)
 	public void CreateArrearNoOfDaysDifferenceInstruments_SC_537() throws InterruptedException{
 		CreateArrearNoOfDaysDifferenceInstruments cc=new CreateArrearNoOfDaysDifferenceInstruments(driver);
@@ -1190,12 +1190,12 @@ public class Arrears extends BaseTest {
 		String t=cc.getMessage();
 		Assert.assertEquals(t, "Arrear was successfully updated.");
 	}
-/* @Test(priority=46)
+ @Test(priority=46)
 	public void DeleteArrear_SC_547() throws InterruptedException{
 		DeleteArrear cc=new DeleteArrear(driver);
 		cc.clickSalaryLink();
 		cc.selectArrears();
-		cc.clickNextPage();
+		//cc.clickNextPage();
 		cc.selectDelete();
 		cc.switchToPopUpAndDismiss();
 		Thread.sleep(1000);
@@ -1413,7 +1413,7 @@ public class Arrears extends BaseTest {
 		cc.clickSalaryLink();
 		cc.selectArrears();
 		Thread.sleep(3000);
-		//cc.clickPageNavigation();
+		cc.clickPageNavigation(); //check page navigation before execution.
 		Thread.sleep(3000);
 		cc.selectComputation();
 		Thread.sleep(3000);
@@ -1437,8 +1437,8 @@ public class Arrears extends BaseTest {
 		cc.selectArrears();
 		Thread.sleep(3000);
 		//cc.clickPageNavigation();
-		Thread.sleep(3000);
-		cc.selectComputation();
+	//	Thread.sleep(3000);
+	//	cc.selectComputation();
 	}
 	@Test(priority=54)  
 	public void DeleteComputationDetails_SC_555() throws InterruptedException{
@@ -1451,6 +1451,6 @@ public class Arrears extends BaseTest {
 		cc.switchToPopUpAndDismiss(driver);
 		cc.ClickDelete();
 		cc.switchToPopUpAndAccept(driver);
-	}*/
+	}
   	// clear all data of arrear.
 }

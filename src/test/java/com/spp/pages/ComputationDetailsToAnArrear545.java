@@ -36,7 +36,7 @@ public class ComputationDetailsToAnArrear545 extends BasePage {
 	WebElement Update;
 	@FindBy(xpath="//*[@id=\"main\"]/section/p/a[2]")
 	WebElement NewArrear;
-	@FindBy(xpath="//*[@id=\"main\"]/div[3]/a[1]")
+	@FindBy(xpath="//a[@class='next_page']")
 	WebElement PageNavigation;	
 		
 	public ComputationDetailsToAnArrear545(WebDriver driver) {
@@ -92,6 +92,8 @@ public class ComputationDetailsToAnArrear545 extends BasePage {
 			NewArrear.click();
 		}
 		public void clickPageNavigation(){
+			if(isVisible(PageNavigation)) {
 			PageNavigation.click();
+			}
 		}
 }
