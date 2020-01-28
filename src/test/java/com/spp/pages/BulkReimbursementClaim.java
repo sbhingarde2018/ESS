@@ -28,7 +28,7 @@ public class BulkReimbursementClaim extends BasePage{
 	WebElement GetEmployee;
 	@FindBy(xpath="//tbody/tr[1]/td[contains(text(),'Donald')]/parent::tr/td[1]/input")
 	WebElement CheckBox;
-	@FindBy(xpath="//*[@id=\"bulk_claim\"]/tbody/tr[1]/td[6]/input")
+	@FindBy(xpath="//table/tbody/tr/td[6]/input")
 	WebElement Amount;
 	@FindBy(xpath="//*[@id=\"bulk_claim\"]/tbody/tr[1]/td[8]/select")
 	WebElement Paymonth;

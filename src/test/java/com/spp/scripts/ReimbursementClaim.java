@@ -24,7 +24,7 @@ import junit.framework.Assert;
 
 	public class ReimbursementClaim extends BaseTest{
 		
-	/*	@Test(priority=0)
+	@Test(priority=0)
 			public void CreateReimbursementAllotment_SC_289() throws Exception{
 			CreateReimbursementAllotment rt = new CreateReimbursementAllotment(driver);
 			 rt.selectEmployee();
@@ -97,14 +97,15 @@ import junit.framework.Assert;
 		    Thread.sleep(2000);
 		    String e=rt.getMessage();
 		    Assert.assertEquals(e, "Reimbursement Claims were successfully created");// bulk reimbursement is not getting created.
-		 }
-		
+		    
+		 }		
 		@Test(priority=3)
 		  public void BulkReimbursementClaimDelete_SC_371() throws Exception{
 		  BulkReimbursementClaimDelete rt = new BulkReimbursementClaimDelete(driver);
 		   rt.selectSalary();
 		   rt.selectReimbursementClaim();
 		   rt.selectBulkReimbursementClaimDelete();
+		   Thread.sleep(3000);
 		   rt.selectSelectBox();
 		   rt.selectDeleteButton();
 		   String y=rt.getMessage();
@@ -135,7 +136,7 @@ import junit.framework.Assert;
 	 	Thread.sleep(5000);
 		}
 			
-			@Test(priority=6)
+	/*		@Test(priority=6)
 		public void CheckReimbursementClaimRedirectsToReportModule_SC_504() throws Exception{
 		CheckReimbursementClaimRedirectsToReportModule rt = new CheckReimbursementClaimRedirectsToReportModule(driver);
 	 		rt.selectSalary();
@@ -149,7 +150,7 @@ import junit.framework.Assert;
 			 rt.selectToDate("28 December 2019");
 			 rt.selectGenerateReport();
 			 Thread.sleep(5000);
-			}
+			}*/
 			
 		 @Test(priority=7)
 		public void CreateReimbursementClaimPaymentModeCash_SC_592() throws Exception{
@@ -168,12 +169,13 @@ import junit.framework.Assert;
 			 cm.selectAmount("1000");
 			 Thread.sleep(5000);
 			 cm.selectCreateReimbursementButton();
+			 Thread.sleep(5000);
 			 //String t=rt.getMessage();
 			 //Assert.assertEquals(t, "Reimbursement Claim was successfully created");
 			 cm.selectSalary();
 			 cm.selectReimbursementClaim();
-			 Thread.sleep(2000);
-			cm.clickDeleteButton();
+		//	 Thread.sleep(2000);
+		//	cm.clickDeleteButton();
 		}
 	
 		 @Test(priority=8)
@@ -200,10 +202,9 @@ import junit.framework.Assert;
 		 	 rt.switchToPopUpAndAccept(driver);
 		 	String e=rt.getMessage();
 			Assert.assertEquals(e, "Reimbursement Claim was successfully deleted."); 
-		  }
+	 }
 		
-		
-		 @Test(priority=10)
+/*		 @Test(priority=10)
 		  public void CreateReimbursementClaimPaymentModeCheque_SC_593() throws Exception{
 			CreateReimbursementClaimPaymentModeCheque cm=new CreateReimbursementClaimPaymentModeCheque(driver);
 			cm.selectSalary();
@@ -262,7 +263,7 @@ import junit.framework.Assert;
 		cm.selectSalary();
 		cm.selectReimbursementClaim();
 		cm.clickDeleteButton();
-		}*/
+		}
 		
 		@Test(priority=12)
 		public void CreateReimbursementClaimPaymentModeBankAdvise_SC_595() throws Exception{
@@ -390,7 +391,7 @@ import junit.framework.Assert;
 			Assert.assertEquals(s, "Reimbursement Master is successfully created.");
 			Thread.sleep(3000);
 			rt.clickDeleteButton();
-			}
+			}*/
 }
  	 
  	 

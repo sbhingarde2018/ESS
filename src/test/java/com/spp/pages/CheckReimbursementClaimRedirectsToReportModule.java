@@ -21,7 +21,7 @@ public class CheckReimbursementClaimRedirectsToReportModule extends BasePage{
 	WebElement Report;
 	@FindBy(linkText="Bank Statement Reimbursement")
 	WebElement BankReimbursement;
-	@FindBy(id="reim_mop_4")
+	@FindBy(xpath="//input[@id='reim_mop_4']")
 	WebElement Bank;
 
 	//@FindBy(xpath="//*[@id=\"new_reimbursement_allotment\"]/div[2]/fieldset/div[1]/div[1]/div")

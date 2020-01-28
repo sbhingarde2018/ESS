@@ -84,13 +84,13 @@ public class CreateReimbursementClaimPaymentModeCash extends BasePage{
 	WebElement ClaimDate;
 	@FindBy(id="paid_date")
 	WebElement PaidDate;
-	@FindBy(id="reimbursement_claim_amount")
+	@FindBy(xpath="//input[@id='reimbursement_claim_amount']")
 	WebElement Amount;
 	@FindBy(xpath="//*[@id=\"new_claim\"]/div[2]/div/input")
 	WebElement CreateReimbursementButton;
 	@FindBy(xpath="//*[@id=\"reimbursement_claim_result_response\"]/div/strong")
 	WebElement SuccessfulMessage;
-	@FindBy(xpath="//*[@id=\"reimbursement_claims\"]/tbody/tr[1]/td[8]/a")
+	@FindBy(xpath="//tbody/tr[1]/td[contains(text(),'Donald')]/parent::tr/td[7]/a[2]")
 	//@FindBy(xpath="//*[@id=\"reimbursement_allotments\"]/tbody/tr/td[2][contains(text(),'Reim. LTA')]/parent::tr/td[8]/a")
 	WebElement DeleteButton;
 	
