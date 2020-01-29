@@ -19,9 +19,9 @@ public class CreateSIReceiptInAdvanceDetail extends BasePage{
 	WebElement Load;
 	@FindBy(id="filter")
 	WebElement MultiAllotment;
-	@FindBy(xpath="//tbody/tr/td[contains(text(),'Raj')]/parent::tr/td[6]/a")
+	@FindBy(xpath="//tbody/tr/td[contains(text(),'Donald')]/parent::tr/td[6]/a")
 	WebElement View;
-	@FindBy(xpath="//div[2]/table/tbody/tr/td[contains(text(),'9090')]/parent::tr/td[7]/a")
+	@FindBy(xpath="//div[2]/table/tbody/tr/td[contains(text(),'Default1')]/parent::tr/td[7]/a")
 	WebElement Detail;
 	@FindBy(xpath="//span[contains(text(),'Receipt details')]")
 	WebElement ReceiptDetail;
@@ -29,7 +29,7 @@ public class CreateSIReceiptInAdvanceDetail extends BasePage{
 	WebElement Date;
 	@FindBy(id="receipt_amount")
 	WebElement Amount;
-	@FindBy(id="confirm_receipt")
+	@FindBy(xpath="//button[@id='confirm_receipt']")
 	WebElement confirmButton;
 	@FindBy(id="popup_ok")
 	WebElement YesButton;

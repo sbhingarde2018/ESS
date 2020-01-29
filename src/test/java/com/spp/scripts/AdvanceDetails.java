@@ -237,7 +237,7 @@ public class AdvanceDetails extends BaseTest {
 			Thread.sleep(2000);
 			si.clickonemployeemaster();
 			si.addnewemployee();
-			si.enterEmployeeid("xyz12345");
+	//		si.enterEmployeeid("xyz12345");
 			si.enterEmployeeref("12345xyz");
 			si.enterEmployeename("Amaan");
 			si.enterEmployeefather("Harish");
@@ -251,7 +251,7 @@ public class AdvanceDetails extends BaseTest {
 			si.selectclassificationdetail();
 			si.selectsalstructure("Structure");
 			si.selectbranch("default");
-			si.selectattendancestructure("Karnataka");
+			si.selectattendancestructure("KARNATAKAA");
 			si.selectbank("CASH");
 			si.selectleavepolicy("Default");
 			si.createemployee();
@@ -292,7 +292,7 @@ public class AdvanceDetails extends BaseTest {
 	 //am.clickAdvanceMaster();
 	 //am.deleteadvancemaster();
 	 }
-
+/*
 	@Test(priority=10)
 	public void EditEMIDetailsInAdvanceDetail_SC_577() throws Exception{
 		EditEMIDetailsInAdvanceDetail am=new EditEMIDetailsInAdvanceDetail(driver);
@@ -721,6 +721,6 @@ public class AdvanceDetails extends BaseTest {
 		 Thread.sleep(4000);
 		 am.clickDeleteButton();
 	 
-	 }
+	 }*/
 
 }

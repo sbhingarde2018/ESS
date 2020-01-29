@@ -22,13 +22,13 @@ public class DeleteAdvanceDetail extends BasePage{
 	WebElement Load;
 	@FindBy(id="filter")
 	WebElement MultiAllotment;
-	@FindBy(xpath="//tbody/tr/td[contains(text(),'Jaya')]/parent::tr/td[6]/a")
+	@FindBy(xpath="//tbody/tr/td[contains(text(),'Donald')]/parent::tr/td[6]/a")
 	WebElement View;
 	@FindBy(xpath="//div[2]/table/tbody/tr[1]/td[8]/a")
 	WebElement Delete;
 	@FindBy(xpath="//*[@id=\"main\"]/div[2]/strong")
 	WebElement SuccessfulMessage;
-	@FindBy(xpath="//*[@id=\"standing_instr_list\"]/div[2]/table/tbody/tr/td[contains(text(),'Default')]/parent::tr/td[5]/a")
+	@FindBy(xpath="//*[@id=\"standing_instr_list\"]/div[2]/table/tbody/tr/td[contains(text(),'Default1')]/parent::tr/td[5]/a")
 	WebElement DeleteAdvanceMaster;
 	public DeleteAdvanceDetail(WebDriver driver){
 		super(driver);

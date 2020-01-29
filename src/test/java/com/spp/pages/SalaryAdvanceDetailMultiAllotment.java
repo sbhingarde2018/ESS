@@ -45,9 +45,9 @@ public class SalaryAdvanceDetailMultiAllotment extends BasePage		{
 	WebElement DeleteButton;
 	@FindBy(xpath="//input[@id='select_all']")
 	WebElement DeselectEmp;
-	@FindBy(xpath="//tr//td[contains(text(),'Jaya')]/parent::tr/td[1]/input")
+	@FindBy(xpath="//tr//td[contains(text(),'LeaveA')]/parent::tr/td[1]/input")
 	WebElement Emp1;
-	@FindBy(xpath="//tr//td[contains(text(),'Reya')]/parent::tr/td[1]/input")
+	@FindBy(xpath="//tr//td[contains(text(),'LeaveB')]/parent::tr/td[1]/input")
 	WebElement Emp2;
 	
 	public SalaryAdvanceDetailMultiAllotment(WebDriver driver){

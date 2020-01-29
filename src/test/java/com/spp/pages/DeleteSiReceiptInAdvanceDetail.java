@@ -17,9 +17,9 @@ public class DeleteSiReceiptInAdvanceDetail extends BasePage{
 	WebElement Load;
 	@FindBy(id="filter")
 	WebElement MultiAllotment;
-	@FindBy(xpath="//tbody/tr/td[contains(text(),'Raj')]/parent::tr/td[6]/a")
+	@FindBy(xpath="//tbody/tr/td[contains(text(),'Donald')]/parent::tr/td[6]/a")
 	WebElement View;
-	@FindBy(xpath="//div[2]/table/tbody/tr/td[contains(text(),'9090')]/parent::tr/td[7]/a")
+	@FindBy(xpath="//div[2]/table/tbody/tr/td[contains(text(),'Default1')]/parent::tr/td[7]/a")
 	WebElement Detail;
 	@FindBy(xpath="//*[@id=\"main\"]/div/div[2]/nav/ul/li[3]/a")
 	WebElement ReceiptDetail;
