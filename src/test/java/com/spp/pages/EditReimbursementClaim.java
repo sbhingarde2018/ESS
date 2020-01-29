@@ -17,7 +17,7 @@ public class EditReimbursementClaim extends BasePage{
 	WebElement Salary;
 	@FindBy(xpath="//*[@id=\"menu\"]/li[6]/div/div[1]/ul/li[4]/a")
 	WebElement ReimbursementClaim;
-	@FindBy(xpath="//*[@id=\"reimbursement_claims\"]/tbody/tr[1]/td[7]/a")
+	@FindBy(xpath="//tbody/tr/td[contains(text(),'Donald')]/parent::tr/td[7]/a[1]")
 	WebElement Edit;
 	@FindBy(id="reimbursement_claim_amount")
 	WebElement Amount;

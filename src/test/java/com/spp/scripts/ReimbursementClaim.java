@@ -124,7 +124,7 @@ import junit.framework.Assert;
 		 Thread.sleep(2000);
 		 }
 	 
-			@Test(priority=5)
+	@Test(priority=5)
 	 	public void GetBulkReimbursementErrorLogExcel_SC_373() throws Exception{
 	 	GetBulkReimbursementErrorLogExcel rt = new GetBulkReimbursementErrorLogExcel(driver);
 	 	 rt.selectSalary();
@@ -136,7 +136,7 @@ import junit.framework.Assert;
 	 	Thread.sleep(5000);
 		}
 			
-	/*		@Test(priority=6)
+/*	@Test(priority=6) //Bank issue
 		public void CheckReimbursementClaimRedirectsToReportModule_SC_504() throws Exception{
 		CheckReimbursementClaimRedirectsToReportModule rt = new CheckReimbursementClaimRedirectsToReportModule(driver);
 	 		rt.selectSalary();
@@ -204,7 +204,7 @@ import junit.framework.Assert;
 			Assert.assertEquals(e, "Reimbursement Claim was successfully deleted."); 
 	 }
 		
-/*		 @Test(priority=10)
+		 @Test(priority=10)
 		  public void CreateReimbursementClaimPaymentModeCheque_SC_593() throws Exception{
 			CreateReimbursementClaimPaymentModeCheque cm=new CreateReimbursementClaimPaymentModeCheque(driver);
 			cm.selectSalary();
@@ -225,13 +225,13 @@ import junit.framework.Assert;
 			cm.enterChequeno("23567897");
 			cm.selectCreateReimbursementButton();
 			Thread.sleep(5000);
-			cm.selectCreateReimbursementButton();
+		//	cm.selectCreateReimbursementButton();
 			//String t=cm.getMessage();
 			//Assert.assertEquals(t, "Reimbursement Claim was successfully created");
-			Thread.sleep(2000);
+		//	Thread.sleep(2000);
 			cm.selectSalary();
 			cm.selectReimbursementClaim();
-			cm.clickBacktoReimbClaim();
+		//	cm.clickBacktoReimbClaim();
 			cm.clickDeleteButton();
 		
 		}
@@ -259,7 +259,7 @@ import junit.framework.Assert;
 		//cm.selectCreateReimbursementButton();
 		//String t=cm.getMessage();
 		//Assert.assertEquals(t, "Reimbursement Claim was successfully created");
-		Thread.sleep(2000);
+		//Thread.sleep(2000);
 		cm.selectSalary();
 		cm.selectReimbursementClaim();
 		cm.clickDeleteButton();
@@ -391,7 +391,7 @@ import junit.framework.Assert;
 			Assert.assertEquals(s, "Reimbursement Master is successfully created.");
 			Thread.sleep(3000);
 			rt.clickDeleteButton();
-			}*/
+			}
 }
  	 
  	 

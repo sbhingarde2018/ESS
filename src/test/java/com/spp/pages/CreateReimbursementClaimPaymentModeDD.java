@@ -45,8 +45,8 @@ public class CreateReimbursementClaimPaymentModeDD extends BasePage{
 	@FindBy(xpath="//*[@id=\"reimbursement_claim_result_response\"]/div/strong")
 	WebElement SuccessfulMessage;
 	@FindBy(xpath="//tbody/tr[1]/td[contains(text(),'Donald')]/parent::tr/td[7]/a[2]")
-	//@FindBy(xpath="//*[@id=\"reimbursement_allotments\"]/tbody/tr/td[2][contains(text(),'Reim. LTA')]/parent::tr/td[8]/a")
 	WebElement DeleteButton;
+	//@FindBy(xpath="//*[@id=\"reimbursement_allotments\"]/tbody/tr/td[2][contains(text(),'Reim. LTA')]/parent::tr/td[8]/a")
 	@FindBy(id="reimbursement_allotment_block_period")
 	WebElement BlockPeriod;
 	@FindBy(id="reimbursement_claim_block_period")
