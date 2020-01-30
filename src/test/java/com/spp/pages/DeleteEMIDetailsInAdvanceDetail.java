@@ -18,7 +18,7 @@ public class DeleteEMIDetailsInAdvanceDetail extends BasePage{
 	WebElement Load;
 	@FindBy(id="filter")
 	WebElement MultiAllotment;
-	@FindBy(xpath="//tbody/tr/td[contains(text(),'Reya')]/parent::tr/td[6]/a")
+	@FindBy(xpath="//tbody/tr/td[contains(text(),'Donald')]/parent::tr/td[6]/a")
 	WebElement View;
 	@FindBy(xpath="//div[2]/table/tbody/tr/td[7]/a")
 	WebElement Detail;
@@ -30,7 +30,7 @@ public class DeleteEMIDetailsInAdvanceDetail extends BasePage{
 	WebElement SuccessfulMessage;
 	@FindBy(xpath="//span[contains(text(),'EMI details')]")
 	WebElement EmiDetils;
-	@FindBy(xpath="//a[contains(text(),'Reya(TATA643666)')]")
+	@FindBy(xpath="//a[contains(text(),'Donald')]")
 	WebElement GoToAdvance;
 	@FindBy(xpath="//div[2]/table/tbody/tr/td[8]/a")
 	WebElement DeleteAdvance;

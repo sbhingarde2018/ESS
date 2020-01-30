@@ -53,7 +53,6 @@ public class AdvanceDetails extends BaseTest {
 		ld.ClickDelete();
 		ld.switchToPopUpAndAccept(driver);
 }
-
 	@Test(priority=1)
 		public void SalaryAdvanceDetailSingleAllotment_SC_296() throws Exception{
 		 SalaryAdvanceDetailSingleAllotment am=new SalaryAdvanceDetailSingleAllotment(driver);
@@ -78,8 +77,7 @@ public class AdvanceDetails extends BaseTest {
 		 String d=am.getMessage();
 		 Assert.assertEquals(d, "Advance successfully created");
 		 Thread.sleep(4000);
-		 //am.clickDeleteButton();
-	 
+		 //am.clickDeleteButton();	 
 }
 	 @Test(priority=2)
 		public void SalaryAdvanceDetailMultiAllotment_SC_316() throws Exception{
@@ -108,8 +106,7 @@ public class AdvanceDetails extends BaseTest {
 		 am.clickCreateButton();
 		 am.clickProceed();
 		 String d=am.getMessage();
-		 Assert.assertEquals(d, "Advance successfully created");
-		
+		 Assert.assertEquals(d, "Advance successfully created");		
 	 }
 	@Test(priority=3)
 		public void CreateSIReceiptInAdvanceDetail_SC_396() throws Exception{
@@ -177,9 +174,7 @@ public class AdvanceDetails extends BaseTest {
 		 am.clickYesButton();
 		 String s=am.getMessage();
 		 Assert.assertEquals(s, "Receipt Successfully Deleted");
-
-	 }
-	
+	 }	
 	@Test(priority=6)
 	public void CheckAdvanceDetailsRedirectsToReports_SC_560() throws Exception{
 	 CheckAdvanceDetailsRedirectsToReports am=new CheckAdvanceDetailsRedirectsToReports(driver);
@@ -207,7 +202,6 @@ public class AdvanceDetails extends BaseTest {
 	//Assert.assertEquals(s, "Employees Successfully Loaded.");
 	 am.clickEmployee();
 	 am.clickGenerateReport();
-
 	}
 	@Test(priority=7)
 	public void CheckAdvanceDetailsRedirectsToMaster_SC_561() throws Exception{
@@ -226,8 +220,7 @@ public class AdvanceDetails extends BaseTest {
 	 Assert.assertEquals(d, "Advance successfully created");
 	 am.clickDelete();
 	 am.switchToPopUpAndAccept(driver);
-	}
-	
+	}	
 	 @Test(priority=8)
 		public void CheckifSalaryAdvanceGeneralLinksEmployeeMasterredirectstoEmployee_SC_562() throws Exception{
 		 CheckifSalaryAdvanceGeneralLinksEmployeeMasterredirectstoEmployee si=new CheckifSalaryAdvanceGeneralLinksEmployeeMasterredirectstoEmployee(driver);
@@ -268,7 +261,6 @@ public class AdvanceDetails extends BaseTest {
 	 		si.exitFullscreen();
 	 		si.deleteemployee();
 		}
-
 	 @Test(priority=9)
 	public void DeleteAdvanceDetail_SC_576() throws Exception{
 	 DeleteAdvanceDetail am=new DeleteAdvanceDetail(driver);
@@ -292,7 +284,6 @@ public class AdvanceDetails extends BaseTest {
 	 //am.clickAdvanceMaster();
 	 //am.deleteadvancemaster();
 	 }
-/*
 	@Test(priority=10)
 	public void EditEMIDetailsInAdvanceDetail_SC_577() throws Exception{
 		EditEMIDetailsInAdvanceDetail am=new EditEMIDetailsInAdvanceDetail(driver);
@@ -316,8 +307,7 @@ public class AdvanceDetails extends BaseTest {
 		am.clickYesButton();
 		am.clickYesButton();
 		//String s=am.getMessage();
-		//Assert.assertEquals(s, "EMI Details Successfully updated.");
-	 
+		//Assert.assertEquals(s, "EMI Details Successfully updated."); 
 	}
  	@Test(priority=12)
 	public void CreateAdvanceAmountLumpsum_SC_578() throws Exception{
@@ -345,9 +335,7 @@ public class AdvanceDetails extends BaseTest {
 	 Assert.assertEquals(d, "Advance successfully created");
 	 Thread.sleep(4000);
 	// am.clickDeleteButton();
- 
-}
-	
+}	
 	@Test(priority=11)
 	 public void DeleteEMIDetailsInAdvanceDetail_SC_579() throws Exception{
 		 DeleteEMIDetailsInAdvanceDetail am=new DeleteEMIDetailsInAdvanceDetail(driver);
@@ -373,8 +361,7 @@ public class AdvanceDetails extends BaseTest {
 		 Thread.sleep(3000);
 		 am.ClickDeleteAdvance();
 		 Thread.sleep(1000);
-		 am.switchToPopUpAndAccept(driver);
-	 
+		 am.switchToPopUpAndAccept(driver);	 
 	}
 	 @Test(priority=13)
 		public void CreateAdvanceDetailLumpsumNoRecovery_SC_580() throws Exception{
@@ -402,8 +389,7 @@ public class AdvanceDetails extends BaseTest {
 		 String d=am.getMessage();
 		 Assert.assertEquals(d, "Advance successfully created");
 		 Thread.sleep(4000);
-		 am.clickDeleteButton();
-		 	 
+		 am.clickDeleteButton();		 	 
 }
 	  @Test(priority=14)
 		public void CreateADNoOfInstallmentsHigher1RupeeNoRecovery_SC_581() throws Exception{
@@ -430,8 +416,7 @@ public class AdvanceDetails extends BaseTest {
 		 String d=am.getMessage();
 		 Assert.assertEquals(d, "Advance successfully created");
 		 Thread.sleep(4000);
-		 am.clickDeleteButton();
-		 	 
+		 am.clickDeleteButton();		 	 
 	  }
 	 @Test(priority=15)
 		public void CreateADNoOfInstallmentsHigher10RupeeNoRecovery_SC_582() throws Exception{
@@ -458,8 +443,7 @@ public class AdvanceDetails extends BaseTest {
 		 String d=am.getMessage();
 		 Assert.assertEquals(d, "Advance successfully created");
 		 Thread.sleep(4000);
-		 am.clickDeleteButton();
-	 
+		 am.clickDeleteButton();	 
 	 }
 	 @Test(priority=16)
 		public void CreateADNoOfInstallmentsHigher50RupeeNoRecovery_SC_583() throws Exception{
@@ -487,8 +471,7 @@ public class AdvanceDetails extends BaseTest {
 		 String d=am.getMessage();
 		 Assert.assertEquals(d, "Advance successfully created");
 		 Thread.sleep(4000);
-		 am.clickDeleteButton();
-	 
+		 am.clickDeleteButton();	 
 	 }
 	 @Test(priority=17)
 		public void CreateADInterestamountNOIHigher1RupeeNoRecovery_SC_584() throws Exception{
@@ -546,8 +529,7 @@ public class AdvanceDetails extends BaseTest {
 		 String d=am.getMessage();
 		 Assert.assertEquals(d, "Advance successfully created");
 		 Thread.sleep(4000);
-		 am.clickDeleteButton();
-	 
+		 am.clickDeleteButton(); 
 	 }
 	 @Test(priority=19)
 		public void CreateADInterestamountNOIHigher50RupeeNoRecovery_SC_586() throws Exception{
@@ -576,8 +558,7 @@ public class AdvanceDetails extends BaseTest {
 		 String d=am.getMessage();
 		 Assert.assertEquals(d, "Advance successfully created");
 		 Thread.sleep(4000);
-		 am.clickDeleteButton();
-	 
+		 am.clickDeleteButton();	 
 	 }
 	 @Test(priority=20)
 		public void CreateADNoOfInstallmentsHigher10Rupee_SC_587() throws Exception{
@@ -604,8 +585,7 @@ public class AdvanceDetails extends BaseTest {
 		 String d=am.getMessage();
 		 Assert.assertEquals(d, "Advance successfully created");
 		 Thread.sleep(4000);
-		 am.clickDeleteButton();
-		 	 
+		 am.clickDeleteButton();	 	 
 	 }
 	 @Test(priority=21)
 		public void CreateADNoOfInstallmentsHigher50Rupee_SC_588() throws Exception{
@@ -632,8 +612,7 @@ public class AdvanceDetails extends BaseTest {
 		 String d=am.getMessage();
 		 Assert.assertEquals(d, "Advance successfully created");
 		 Thread.sleep(4000);
-		 //am.clickDeleteButton();
-	 
+		 //am.clickDeleteButton();	 
 	 }
 	 @Test(priority=22)
 		public void CreateADInterestamountNOIHigher1Rupee_SC_589() throws Exception{
@@ -661,8 +640,7 @@ public class AdvanceDetails extends BaseTest {
 		 String d=am.getMessage();
 		 Assert.assertEquals(d, "Advance successfully created");
 		 Thread.sleep(4000);
-		 am.clickDeleteButton();
-	 
+		 am.clickDeleteButton(); 
 }
 	 @Test(priority=23)
 		public void CreateADInterestamountNOIHigher10Rupee_SC_590() throws Exception{
@@ -673,7 +651,7 @@ public class AdvanceDetails extends BaseTest {
 		 am.resizeWindow();
 		 Thread.sleep(3000);
 		 am.clickLoad();
-		 Thread.sleep(3000);
+		 Thread.sleep(4000);
 		 am.exitFullscreen();
 		 am.clickView();
 		 am.AddNewAdvanceDetails();
@@ -690,8 +668,7 @@ public class AdvanceDetails extends BaseTest {
 		 String d=am.getMessage();
 		 Assert.assertEquals(d, "Advance successfully created");
 		 Thread.sleep(4000);
-		 am.clickDeleteButton();
-	 
+		 am.clickDeleteButton(); 
 }
 	 @Test(priority=24)
 		public void CreateADInterestamountNOIHigher50Rupee_SC_591() throws Exception{
@@ -718,9 +695,7 @@ public class AdvanceDetails extends BaseTest {
 		 am.clickCreateButton();
 		 String d=am.getMessage();
 		 Assert.assertEquals(d, "Advance successfully created");
-		 Thread.sleep(4000);
-		 am.clickDeleteButton();
-	 
-	 }*/
-
+		 Thread.sleep(3000);
+		 am.clickDeleteButton(); 
+	 }
 }
