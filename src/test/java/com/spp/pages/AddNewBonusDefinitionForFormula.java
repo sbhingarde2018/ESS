@@ -10,7 +10,7 @@ import com.spp.common.BasePage;
 public class AddNewBonusDefinitionForFormula extends BasePage{
 	@FindBy(id="salary") 
 	WebElement Salary;
-	@FindBy(xpath="//*[@id=\"menu\"]/li[6]/div/div[1]/ul/li[11]/a")
+	@FindBy(xpath="//a[text()=\"Bonus\"]")
 	WebElement Bonus;
 	@FindBy(xpath="//*[@id=\"bonus_definition_list\"]/div[1]/span/a")
 	WebElement AddNewBonus;
@@ -53,7 +53,6 @@ public class AddNewBonusDefinitionForFormula extends BasePage{
 		AddNewBonus.click();
 	}
 	public void EnterBonusHead(String value){
-		BonusHead.clear();
 		BonusHead.sendKeys(value);
 	}
 	public void selectformula(){

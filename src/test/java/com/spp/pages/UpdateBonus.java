@@ -10,7 +10,7 @@ import com.spp.common.BasePage;
 public class UpdateBonus extends BasePage{
 	@FindBy(id="salary") 
 	WebElement Salary;
-	@FindBy(xpath="//*[@id=\"menu\"]/li[6]/div/div[1]/ul/li[11]/a")
+	@FindBy(xpath="//a[text()=\"Bonus\"]")
 	WebElement Bonus;
 	@FindBy(xpath="//*[@id=\"bonus_or_exgratia\"]/div/table/tbody/tr[1]/td[3]/a")
 	WebElement Compute;

@@ -27,7 +27,6 @@ public class Bonus extends BaseTest {
 		cb.clickCreateBonus();
 		String t=cb.getMessage();
 		Assert.assertEquals(t, "Bonus successfully created");
-
 	}
 	@Test(priority=1)
  	public void ComputeBonus_SC_341() throws Exception{
@@ -74,8 +73,7 @@ public class Bonus extends BaseTest {
 		sh.clickonupdatebutton();
 		String i=sh.getMessage();
 		Assert.assertEquals(i, "Holi12 Computation Updated");
-		}
-	
+		}	
 	@Test(priority=4)
  	public void DeleteBonus_SC_403() throws Exception{
 		DeleteBonus sh=new DeleteBonus(driver);
@@ -2200,7 +2198,7 @@ public class Bonus extends BaseTest {
 		cb.clickDeleteButton();
 		cb.switchToPopUpAndAccept(driver);
 	}
-	@Test(priority=100)
+/*	@Test(priority=100)
 	public void AddNewBonusDefinitionAllowManualEditingModeofPaymentBankAdviseCurrentMonth_SC_732() throws Exception{
 		AddNewBonusDefinitionAllowManualEditingModeofPaymentBankAdviseCurrentMonth cb=new AddNewBonusDefinitionAllowManualEditingModeofPaymentBankAdviseCurrentMonth(driver);
 		cb.clickSalary();
@@ -6270,5 +6268,5 @@ public class Bonus extends BaseTest {
 		Assert.assertEquals(t, "Bonus successfully created");
 		cb.clickDeleteButton();
 		cb.switchToPopUpAndAccept(driver);
-	}
+	}*/
 }

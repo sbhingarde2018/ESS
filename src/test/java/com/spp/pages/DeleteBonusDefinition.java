@@ -10,7 +10,7 @@ import com.spp.common.BasePage;
 public class DeleteBonusDefinition extends BasePage{
 	@FindBy(id="salary") 
 	WebElement Salary;
-	@FindBy(xpath="//*[@id=\"menu\"]/li[6]/div/div[1]/ul/li[11]/a")
+	@FindBy(xpath="//a[text()=\"Bonus\"]")
 	WebElement Bonus;
 	@FindBy(xpath="//div/table/tbody/tr/td[contains(text(),'Christmas')]/parent::tr/td[4]/a/img")
 	WebElement ClickOnDelete;

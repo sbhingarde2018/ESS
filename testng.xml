@@ -61,10 +61,10 @@
 	<class name="com.spp.scripts.AdditionalSalary"/>
 	<class name="com.spp.scripts.Paymonths"/>	
 	<class name="com.spp.scripts.ReimbursementClaim"/>
-	<class name="com.spp.scripts.StandingInstructionTestCase"/>-->
-	<class name="com.spp.scripts.AdvanceDetails"/>
-<!--<class name="com.spp.scripts.Bonus"/>
-  	<class name="com.spp.scripts.ExGratia"/>	
+	<class name="com.spp.scripts.StandingInstructionTestCase"/>
+	<class name="com.spp.scripts.AdvanceDetails"/>-->
+	<class name="com.spp.scripts.Bonus"/>
+<!--<class name="com.spp.scripts.ExGratia"/>	
   	<class name="com.spp.scripts.FullandFinalSettlement"/>
   	<class name="com.spp.scripts.SalaryEditor"/>
   	
