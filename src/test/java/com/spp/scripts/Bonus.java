@@ -2198,7 +2198,7 @@ public class Bonus extends BaseTest {
 		cb.clickDeleteButton();
 		cb.switchToPopUpAndAccept(driver);
 	}
-/*	@Test(priority=100)
+	@Test(priority=100)
 	public void AddNewBonusDefinitionAllowManualEditingModeofPaymentBankAdviseCurrentMonth_SC_732() throws Exception{
 		AddNewBonusDefinitionAllowManualEditingModeofPaymentBankAdviseCurrentMonth cb=new AddNewBonusDefinitionAllowManualEditingModeofPaymentBankAdviseCurrentMonth(driver);
 		cb.clickSalary();
@@ -3365,7 +3365,7 @@ public class Bonus extends BaseTest {
 		cb.clickDeleteButton();
 		cb.switchToPopUpAndAccept(driver);
 	}
-	@Test(priority=150)
+/*	@Test(priority=150)
 	public void CreateBonusDefinitionFormulaCalculatePTonBonusRespectiveMonthDoNotConsiderPreviousYear_SC_784() throws Exception{
 		CreateBonusDefinitionFormulaCalculatePTonBonusRespectiveMonthDoNotConsiderPreviousYear cb=new CreateBonusDefinitionFormulaCalculatePTonBonusRespectiveMonthDoNotConsiderPreviousYear(driver);
 		cb.clickSalary();
