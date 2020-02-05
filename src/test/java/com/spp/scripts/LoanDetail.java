@@ -32,7 +32,7 @@ import junit.framework.Assert;
 
 public class LoanDetail extends BaseTest{
 
-	@Test(priority=0)
+	@Test(priority=0)									// check emp name (View) and change it.
 	public void AddNewLoanMaster_SC_297() throws Exception{
 		AddNewLoanMaster lm=new AddNewLoanMaster(driver);
 		Thread.sleep(5000);
@@ -121,8 +121,8 @@ public class LoanDetail extends BaseTest{
 		 am.clickYesButton();
 		 //String s=am.getMessage();
 		 //Assert.assertEquals(s, "Receipt Successfully Saved.");
-}	 
-	 @Test(priority=4)
+}	
+	 	@Test(priority=4)
 		public void UpdateSiReceiptInLoanDetail_SC_400() throws Exception{
 		 UpdateSiReceiptInLoanDetail am=new UpdateSiReceiptInLoanDetail(driver);
 		 am.navigatesalary();
@@ -164,10 +164,10 @@ public class LoanDetail extends BaseTest{
 		 String s=am.getMessage();
 		 Assert.assertEquals(s, "Receipt Successfully Deleted");
 		 Thread.sleep(3000);
-		 //am.clickBack();
-		 //Thread.sleep(4000);
-		 //am.clickDeleteLoan();
-		 //am.switchToPopUpAndAccept(driver);
+		 am.clickBack();
+		 Thread.sleep(4000);
+		 am.clickDeleteLoan();
+		 am.switchToPopUpAndAccept(driver);
 }
 	 @Test(priority=6)
 		public void CreateLoanAmountLumpsumNoRecovery_SC_596() throws Exception{
@@ -183,7 +183,7 @@ public class LoanDetail extends BaseTest{
 			si.clickView();
 			si.clickAddNewLoan();
 			si.clickLoanName("LoanTest");
-			si.selectLoanDate("01 July 2019");
+			si.selectLoanDate("03 July 2019");
 			si.selectInstitutionName("AxisBank-abcbranch");
 			si.clickLoanAccountNo("500");
 			si.clickAmount("500");
@@ -195,7 +195,7 @@ public class LoanDetail extends BaseTest{
 			Assert.assertEquals(s, "Loan successfully created");
 			si.clickDeleteButton();
 	 }
-	 @Test(priority=7)
+		 @Test(priority=7)
 		public void CreateLoanAmountNoOfInstallmentsHigher1rupeeNoRecovery_SC_597() throws Exception{
 			CreateLoanAmountNoOfInstallmentsHigher1rupeeNoRecovery si=new CreateLoanAmountNoOfInstallmentsHigher1rupeeNoRecovery(driver);
 			si.clickonsalary();
@@ -302,7 +302,7 @@ public class LoanDetail extends BaseTest{
 			si.clickAmount("5000");
 			si.noofinstallments();
 			si.enternoofinstallments("1");
-			// si.clickInstallmentAmount("500");
+			//si.clickInstallmentAmount("500");
 			si.clickRecoverDate("Aug/2019");
 			si.roundoffhighestrupee();
 			si.clickCreateButton();
@@ -310,7 +310,7 @@ public class LoanDetail extends BaseTest{
 			Assert.assertEquals(s, "Loan successfully created");
 			si.clickDeleteButton();
 		}
-		@Test(priority=11)
+			@Test(priority=11)
 		public void CreateLoanAmountNoOfInstallmentsHigher10rupee_SC_601() throws Exception{
 			CreateLoanAmountNoOfInstallmentsHigher10rupee si=new CreateLoanAmountNoOfInstallmentsHigher10rupee(driver);
 			si.clickonsalary();
@@ -425,7 +425,7 @@ public class LoanDetail extends BaseTest{
 	 Assert.assertEquals(s, "Loan successfully created");
 	 si.clickDeleteButton();
 	}
-	@Test(priority=15)
+/*		@Test(priority=15)
 	public void CreateLoanAmountInterestAmountNoOfInstallmentsHigher50rupeeNoRecovery_SC_605() throws Exception{
 	CreateLoanAmountInterestAmountNoOfInstallmentsHigher50rupeeNoRecovery si=new CreateLoanAmountInterestAmountNoOfInstallmentsHigher50rupeeNoRecovery(driver);
 	 si.clickonsalary();
@@ -688,7 +688,7 @@ public class LoanDetail extends BaseTest{
 		 Thread.sleep(1000);
 		 am.DeleteLoan();
 		 am.switchToPopUpAndAccept(driver);
-	 }
+	 }*/
 }
 	
 	

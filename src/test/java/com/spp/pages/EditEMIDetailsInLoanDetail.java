@@ -18,7 +18,7 @@ public class EditEMIDetailsInLoanDetail extends BasePage{
 	WebElement Load;
 	@FindBy(id="filter")
 	WebElement MultiAllotment;
-	@FindBy(xpath="//tbody/tr/td[contains(text(),'Reya')]/parent::tr/td[6]/a")
+	@FindBy(xpath="//tbody/tr/td[contains(text(),'abcLeavePolicy')]/parent::tr/td[6]/a")
 	WebElement View;
 	@FindBy(xpath="//div[2]/table/tbody/tr/td[7]/a")
 	WebElement Detail;

@@ -18,9 +18,9 @@ public class CreateSIReceiptInLoanDetail extends BasePage{
 	WebElement Load;
 	@FindBy(id="filter")
 	WebElement MultiAllotment;
-	@FindBy(xpath="//tbody/tr/td[contains(text(),'Tina')]/parent::tr/td[6]/a")
+	@FindBy(xpath="//tbody/tr/td[contains(text(),'Donald')]/parent::tr/td[6]/a")
 	WebElement View;
-	@FindBy(xpath="//div[2]/table/tbody/tr/td[contains(text(),'03 July 2019')]/parent::tr/td[7]/a")
+	@FindBy(xpath="//div[2]/table/tbody/tr/td[contains(text(),'LoanTest')]/parent::tr/td[7]/a")
 	WebElement Detail;
 	@FindBy(xpath="//span[contains(text(),'Receipt details')]")
 	WebElement ReceiptDetail;
