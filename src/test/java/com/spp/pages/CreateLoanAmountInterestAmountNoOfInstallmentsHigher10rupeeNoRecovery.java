@@ -36,7 +36,7 @@ public class CreateLoanAmountInterestAmountNoOfInstallmentsHigher10rupeeNoRecove
 	WebElement Amount;
 	@FindBy(id="standing_instruction_detail_lumpsum_amount")
 	WebElement InstallmentAmount;
-	@FindBy(id="standing_instruction_detail_no_of_instalment")
+	@FindBy(xpath="//input[@id='standing_instruction_detail_no_of_instalment']")
 	WebElement EnterNoofInstalments;
 	@FindBy(id="dpMonthYear")
 	WebElement RecoverDate;
@@ -52,7 +52,7 @@ public class CreateLoanAmountInterestAmountNoOfInstallmentsHigher10rupeeNoRecove
 	WebElement DeleteButton;
 	@FindBy(id="standing_instruction_detail_no_of_instalment")
 	WebElement EnterNoofInstallments;
-	@FindBy(id="inst")
+	@FindBy(xpath="//input[@id='inst']")
 	WebElement CheckNoofInstallments;
 	@FindBy(id="standing_instruction_detail_interest_amount")
 	WebElement EnterInterestAmount;
@@ -126,6 +126,7 @@ public void clickDeleteButton() throws Exception{
 	switchToPopUpAndAccept(driver);
 }
 public void checknoofinstallments() {
+	
 	CheckNoofInstallments.click();
 }
 public void enterinterestamount(String value) {

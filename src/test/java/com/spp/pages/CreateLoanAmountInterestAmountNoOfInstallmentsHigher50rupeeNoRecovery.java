@@ -58,7 +58,7 @@ public class CreateLoanAmountInterestAmountNoOfInstallmentsHigher50rupeeNoRecove
 	WebElement SelectLoanMaster;
 	@FindBy(xpath="//div[2]/table/tbody/tr[1]/td[8]/a")
 	WebElement DeleteLoanMaster;
-	@FindBy(id="inst")
+	@FindBy(xpath="//input[@id='inst']")
 	WebElement CheckNoofInstallments;
 	@FindBy(id="standing_instruction_detail_interest_amount")
 	WebElement EnterInterestAmount;
@@ -101,7 +101,10 @@ public void clickLoanAccountNo(String value) throws Exception{
 	LoanAccountNo.sendKeys(value);
 }
 public void clickInstallmentAmount(String value) throws Exception{
+	if(isVisible(InstallmentAmount))
+	{
 	InstallmentAmount.sendKeys(value);
+	}
 }
 public void noofinstallments(String value) {
 	EnterNoofInstalments.sendKeys(value);
