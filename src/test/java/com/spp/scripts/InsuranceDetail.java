@@ -32,8 +32,7 @@ public class InsuranceDetail extends BaseTest{
 		String d=pi.getMessage();
 		Assert.assertEquals(d, "Insurance successfully created");
 		pi.clickDeleteButton();
-	}
-	
+	}	
 	@Test(priority=1)
 	public void CreateInsuranceDetails_SC_303() throws Exception{
 		CreateInsuranceDetails pi=new CreateInsuranceDetails(driver);
@@ -103,7 +102,7 @@ public class InsuranceDetail extends BaseTest{
 		Assert.assertEquals(c, ("Insurance successfully deleted"));
 	}
 	
-	@Test(priority=3)
+		@Test(priority=3)
 	public void DeleteEMIDetail_SC_384() throws Exception{
 		DeleteEMIDetail de=new DeleteEMIDetail(driver);
 		de.navigatesalary();
@@ -122,10 +121,9 @@ public class InsuranceDetail extends BaseTest{
 		de.clickDelete2();
 		de.clickYesButton();
 		String d=de.getMessage();
-		Assert.assertEquals(d, "Details Successfully Deleted.");
-	
+		Assert.assertEquals(d, "Details Successfully Deleted.");	
 	}
-	@Test(priority=5)
+		@Test(priority=5)
 	public void CheckifSalaryInsuranceReportsStandingInsDetailReportredirectstoReport_SC_615() throws Exception{
 		SalaryInsuranceReportsStandingInsDetailReportredirectstoReport si=new SalaryInsuranceReportsStandingInsDetailReportredirectstoReport(driver);
 		si.clickonsalary();
@@ -133,22 +131,23 @@ public class InsuranceDetail extends BaseTest{
 		si.clickonstandInsdetailrpt();
 		Thread.sleep(1000);
 		si.selectsitype("Insurance");
-		si.selectreporttype("Detailed Report");
+		si.selectreporttype("Summary Report");
 		si.selectmonthfrom("Aug/2019");
-		si.selectmonthto("Aug/2019");
-		si.selectgroupby("Employee Name");
-		si.selectorderby("Insurance Name");
-		si.clickgetemployees();
-		si.resizeWindow();
-		Thread.sleep(3000);
-		si.clickonload();
-		Thread.sleep(3000);
-		si.exitFullscreen();
-		String s=si.getMessage();
-		Assert.assertEquals(s, "Employees Successfully Loaded.");
-		Thread.sleep(2000);
-		si.selectemployee();
+	//	si.selectmonthto("Aug/2019");
+	//	si.selectgroupby("Employee Name");
+	//	si.selectorderby("Insurance Name");
+	//	si.clickgetemployees();
+	//	si.resizeWindow();
+	//	Thread.sleep(3000);
+	//	si.clickonload();
+	//	Thread.sleep(3000);
+	//	si.exitFullscreen();
+	//	String s=si.getMessage();
+	//	Assert.assertEquals(s, "Employees Successfully Loaded.");
+	//	Thread.sleep(2000);
+	//	si.selectemployee();
 		si.clickongeneratereport();
+		Thread.sleep(4000);
 	}
 	@Test(priority=6)
 	public void CheckifSalaryInsuranceGeneralLinksInsuranceMasterredirectstoMaster_SC_616() throws Exception{
@@ -287,8 +286,7 @@ public class InsuranceDetail extends BaseTest{
 		pi.clickyearly();
 		pi.clickCreateInsurancebutton();
 		String c=pi.getMessage();
-		Assert.assertEquals(c, "Insurance successfully created");
-		
+		Assert.assertEquals(c, "Insurance successfully created");		
 	}
 	
 	@Test(priority=11)
