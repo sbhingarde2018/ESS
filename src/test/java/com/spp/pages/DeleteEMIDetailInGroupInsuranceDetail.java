@@ -16,7 +16,7 @@ public class DeleteEMIDetailInGroupInsuranceDetail extends BasePage{
 	WebElement AddEmployee;
 	@FindBy(xpath="//form[@id='bf_form']//button[contains(text(),'LOAD')]")
 	WebElement Load;
-	@FindBy(xpath="//tbody/tr/td[contains(text(),'Jaya')]/parent::tr/td[6]/a")
+	@FindBy(xpath="//tbody/tr/td[contains(text(),'Donald')]/parent::tr/td[6]/a")
 	WebElement View;
 	@FindBy(xpath="//div[2]/table/tbody/tr/td[8]/a")
 	WebElement Detail;
@@ -28,7 +28,7 @@ public class DeleteEMIDetailInGroupInsuranceDetail extends BasePage{
 	WebElement YesButton;
 	@FindBy(xpath="//*[@id=\"show_message\"]/div/strong")
 	WebElement SuccessfulMessage;
-	@FindBy(xpath="//a[contains(text(),'Jaya(TATA349666)')]")
+	@FindBy(xpath="//a[contains(text(),'Donald')]")
 	WebElement NavigateBack;
 	@FindBy(xpath="//div[2]/table/tbody/tr/td[9]/a/img")
 	WebElement DeleteGi;

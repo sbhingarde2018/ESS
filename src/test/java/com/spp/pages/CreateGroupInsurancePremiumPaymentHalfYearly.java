@@ -16,7 +16,7 @@ public class CreateGroupInsurancePremiumPaymentHalfYearly extends BasePage{
 	WebElement ClickAddEmployees;
 	@FindBy(xpath="//form[@id='bf_form']//button[contains(text(),'LOAD')]")
 	WebElement ClickOnLoad;
-	@FindBy(xpath="//tbody/tr[1]/td[6]/a")
+	@FindBy(xpath="//tbody/tr/td[contains(text(),'Donald')]/parent::tr/td[6]/a")
 	WebElement ClickOnView;
 	@FindBy(xpath="//*[@id=\"standing_detail_list\"]/div[1]/span/a")
 	WebElement AddNewGroupInsuranceDetails;

@@ -22,9 +22,9 @@ public class GroupInsuranceDetailMultiAllotment extends BasePage{
 	WebElement AddNewGroup;
 	@FindBy(xpath="//*[@id='si_detail_employees']/thead/tr/th[1]/input")
 	WebElement UnTick;
-	@FindBy(xpath="//tr//td[contains(text(),'Jaya')]/parent::tr/td[1]/input")
+	@FindBy(xpath="//tr//td[contains(text(),'LeaveA')]/parent::tr/td[1]/input")
 	WebElement Tick1;
-	@FindBy(xpath="//tr//td[contains(text(),'Reya')]/parent::tr/td[1]/input")
+	@FindBy(xpath="//tr//td[contains(text(),'LeaveB')]/parent::tr/td[1]/input")
 	WebElement Tick2;
 	@FindBy(xpath="//input[@id='select_all']")
 	WebElement SelectAll;
@@ -34,9 +34,9 @@ public class GroupInsuranceDetailMultiAllotment extends BasePage{
 	WebElement GroupInsuranceName;
 	@FindBy(id="standing_instruction_detail_actual_amount")
 	WebElement Amount ;
-	@FindBy(id="dpMonthYear1")
+	@FindBy(xpath="//input[@id='dpMonthYear1']")
 	WebElement StartMonth;
-	@FindBy(id="dpMonthYear")
+	@FindBy(xpath="//input[@id='dpMonthYear']")
 	WebElement EndMonth;
 	@FindBy(id="standing_instruction_detail_loan_account_no")
 	WebElement AccountNumber;
@@ -56,6 +56,11 @@ public class GroupInsuranceDetailMultiAllotment extends BasePage{
 	WebElement SuccessfulMessage;
 	@FindBy(xpath="//*[@id=\"standing_detail_list\"]/div[2]/table/tbody/tr[1]/td[9]/a")
 	WebElement DeleteButton;
+	@FindBy(xpath="//a[contains(text(),'Jan')]")
+	WebElement Month;
+	@FindBy(xpath="//a[contains(text(),'Feb')]")
+	WebElement Month2;
+	
 	public GroupInsuranceDetailMultiAllotment(WebDriver driver){
 		super(driver);
 		PageFactory.initElements(driver, this);
@@ -109,11 +114,11 @@ public class GroupInsuranceDetailMultiAllotment extends BasePage{
 			Amount.sendKeys(value);
 	}
 	
-	public void clickStartMonth(String value) throws Exception{
-		StartMonth.sendKeys(value);
+	public void clickStartMonth() throws Exception{
+		StartMonth.click();
 	}
-	public void clickEndMonth(String value) throws Exception{
-		EndMonth.sendKeys(value);
+	public void clickEndMonth() throws Exception{
+		EndMonth.click();
 	}
 	public void clickAccountNumber(String value) throws Exception{
 		AccountNumber.sendKeys(value);
@@ -140,5 +145,10 @@ public class GroupInsuranceDetailMultiAllotment extends BasePage{
 		DeleteButton.click();
 		switchToPopUpAndAccept(driver);
 	}
-
+	public void selectStartMonth() throws Exception{
+		Month.click();
+	}
+	public void selectEndkMonth() throws Exception{
+		Month2.click();
+	}
 }

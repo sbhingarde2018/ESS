@@ -38,7 +38,7 @@ public class GroupInsuranceDetailSingleAllotment extends BasePage{
 	WebElement AddEmployee;
 	@FindBy(xpath="//form[@id='bf_form']//button[contains(text(),'LOAD')]")
 	WebElement Load;
-	@FindBy(xpath="//tbody/tr[1]/td[6]/a")
+	@FindBy(xpath="//tbody/tr/td[contains(text(),'Donald')]/parent::tr/td[6]/a")
 	WebElement View;
 	@FindBy(xpath="//a[contains(text(),'Add New Group Insurance Detail')]")
 	WebElement AddNewGroup;
