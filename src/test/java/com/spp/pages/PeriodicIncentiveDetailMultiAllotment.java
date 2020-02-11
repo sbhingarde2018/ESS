@@ -34,9 +34,9 @@ public class PeriodicIncentiveDetailMultiAllotment extends BasePage{
 	WebElement PeriodicInsuranceName;
 	@FindBy(id="standing_instruction_detail_loan_account_no")
 	WebElement InsuranceNo;
-	@FindBy(id="dpMonthYear1")
+	@FindBy(xpath="//input[@id='dpMonthYear1']")
 	WebElement StartMonth;
-	@FindBy(id="dpMonthYear")
+	@FindBy(xpath="//input[@id='dpMonthYear']")
 	WebElement EndMonth;
 	@FindBy(id="standing_instruction_detail_actual_amount")
 	WebElement Amount;
@@ -54,6 +54,12 @@ public class PeriodicIncentiveDetailMultiAllotment extends BasePage{
 	WebElement SuccessfulMessage;
 	@FindBy(xpath="//*[@id=\"standing_detail_list\"]/div[2]/table/tbody/tr/td[2][contains(text(),'Periodic_12')]/parent::tr/td[8]/a")
 	WebElement DeleteButton;
+	@FindBy(xpath="//a[contains(text(),'Jan')]")
+	WebElement Month;
+	@FindBy(xpath="//a[contains(text(),'Feb')]")
+	WebElement Month2;
+	
+	
 	public PeriodicIncentiveDetailMultiAllotment(WebDriver driver){
 		super(driver);
 		PageFactory.initElements(driver, this);
@@ -100,11 +106,11 @@ public class PeriodicIncentiveDetailMultiAllotment extends BasePage{
 			InsuranceNo.sendKeys(value);
 	}
 	
-	public void clickStartMonth(String value) throws Exception{
-		StartMonth.sendKeys(value);
+	public void clickStartMonth() throws Exception{
+		StartMonth.click();
 	}
-	public void clickEndMonth(String value) throws Exception{
-		EndMonth.sendKeys(value);
+	public void clickEndMonth() throws Exception{
+		EndMonth.click();
 	}
 	public void clickAmount(String value) throws Exception{
 		Amount.sendKeys(value);
@@ -131,5 +137,10 @@ public class PeriodicIncentiveDetailMultiAllotment extends BasePage{
 		DeleteButton.click();
 		switchToPopUpAndAccept(driver);
 	}
-
+	public void selectStartMonth() throws Exception{
+		Month.click();
+	}
+	public void selectEndkMonth() throws Exception{
+		Month2.click();
+	}
 }

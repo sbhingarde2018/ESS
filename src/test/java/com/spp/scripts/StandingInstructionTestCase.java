@@ -682,8 +682,8 @@ public class StandingInstructionTestCase extends BaseTest{
 		Thread.sleep(5000);
 		pi.clickGroupInsuranceName("Group_1271");
 		pi.clickAmount("4444");
-		pi.clickStartMonth("May/2018");
-		pi.clickEndMonth("Dec/2018");
+	//	pi.clickStartMonth("May/2018"); //check error
+	//	pi.clickEndMonth("Dec/2018");
 		pi.selectInstitutionName("Abcdef-87465");
 		pi.clickAccountNumber("8555");
 		pi.clickRemark("dsfdgf");
@@ -779,8 +779,8 @@ public class StandingInstructionTestCase extends BaseTest{
 		pi.clickTick2();
 		pi.clickMultiAllotmentButton();
 		pi.clickPeriodicInsuranceName("Periodic_12");
-		pi.clickStartMonth("May/2018");
-		pi.clickEndMonth("Dec/2018");
+	//	pi.clickStartMonth("May/2018");
+	//	pi.clickEndMonth("Dec/2018");
 		pi.clickAmount("300");
 		pi.clickRemark("sdfdsf");
 		pi.clickCreateButton();

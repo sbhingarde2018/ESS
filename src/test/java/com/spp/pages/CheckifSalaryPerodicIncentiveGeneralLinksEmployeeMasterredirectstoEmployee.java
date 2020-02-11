@@ -64,7 +64,7 @@ public class CheckifSalaryPerodicIncentiveGeneralLinksEmployeeMasterredirectstoE
 	WebElement ClickOnFilterHead;
 	@FindBy(xpath="//*[@id=\"bf_form\"]/div[10]/button[1]")
 	WebElement ClickOnLoad;
-	@FindBy(xpath="//tbody/tr/td[contains(text(),'Preeti')]/parent::tr/td[6]/a[2]")
+	@FindBy(xpath="//tbody/tr/td[contains(text(),'Aman')]/parent::tr/td[6]/a[2]")
 	WebElement DeleteEmployee;
 	
 	

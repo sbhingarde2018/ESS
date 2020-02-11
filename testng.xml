@@ -64,15 +64,17 @@
 	<class name="com.spp.scripts.StandingInstructionTestCase"/>
 	<class name="com.spp.scripts.AdvanceDetails"/>
 	<class name="com.spp.scripts.Bonus"/>
-	<class name="com.spp.scripts.LoanDetail"/>-->
+	<class name="com.spp.scripts.LoanDetail"/>
 	<class name="com.spp.scripts.InsuranceDetail"/>
-	<class name="com.spp.scripts.GroupInsuranceDetail"/>
+	<class name="com.spp.scripts.GroupInsuranceDetail"/>-->
+	<class name="com.spp.scripts.PeriodicIncentiveDetail"/>	 
 <!--<class name="com.spp.scripts.ExGratia"/>	
   	<class name="com.spp.scripts.FullandFinalSettlement"/>
   	<class name="com.spp.scripts.SalaryEditor"/>
   	
   	<class name="com.spp.scripts.UserSettings"/>
-	<class name="com.spp.scripts.GeneralSettings"/>-->    	
+	<class name="com.spp.scripts.GeneralSettings"/>-->  
+  	
 <!--<class name="com.spp.scripts.FinancialInstitutionBankValidation"/>	
   	<class name="com.spp.scripts.FormulaEditorValidation"/>
   	<class name="com.spp.scripts.Leave"/> 	  
@@ -116,7 +118,7 @@
 		
 	<class name="com.spp.scripts.LoginAdmin"/>	
 	<class name="com.spp.scripts.MasterWeeklyHoliday"/>		
-	<class name="com.spp.scripts.PeriodicIncentiveDetail"/>	              
+	             
     <class name="com.spp.scripts.Reports"/>
     <class name="com.spp.scripts.ReportWriter"/>    
     <class name="com.spp.scripts.Salary"/>        

@@ -92,8 +92,10 @@ public class PeriodicIncentiveDetail extends BaseTest{
 		pi.clickTick1();
 		pi.clickMultiAllotmentButton();
 		pi.clickPeriodicInsuranceName("Default");
-		pi.clickStartMonth("Jul/2019");
-		pi.clickEndMonth("Jul/2019");
+		pi.clickStartMonth();
+		pi.selectStartMonth();
+		pi.clickEndMonth();
+		pi.selectEndkMonth();
 		pi.clickAmount("300");
 		pi.clickRemark("zcgdfh");
 		pi.clickCreateButton();
@@ -127,7 +129,7 @@ public class PeriodicIncentiveDetail extends BaseTest{
 		pi.clickGenerateReport();
 		Thread.sleep(3000);
 }
-	 @Test(priority=4)
+	 @Test(priority=8)
 	 public void DeletePeriodicIncentiveDetail_SC_375() throws Exception{
 		DeletePeriodicIncentiveDetail pi=new DeletePeriodicIncentiveDetail(driver);
 		pi.navigatesalary();
@@ -143,7 +145,7 @@ public class PeriodicIncentiveDetail extends BaseTest{
 		Thread.sleep(4000);
 		pi.clickDeleteButton2();
 	 	 }
-	 @Test(priority=5)
+	 @Test(priority=4)
 	 public void EditEMIDetailInPeriodicIncentive_SC_507() throws Exception{
 		 EditEMIDetailInPeriodicIncentive am=new EditEMIDetailInPeriodicIncentive(driver);
 		 am.navigatesalary();
@@ -191,7 +193,7 @@ public class PeriodicIncentiveDetail extends BaseTest{
 		 si.addnewemployee();
 	 	 si.enterEmployeeid("TATATEST123");
 	 	 si.enterEmployeeref("RefTest456");
-	 	 si.enterEmployeename("Preeti");
+	 	 si.enterEmployeename("Aman");
 	 	 si.enterEmployeefather("Harish");
 		 si.selectDateofBirth("06 June 1995");
 		 si.selectGender("Female");
@@ -218,10 +220,11 @@ public class PeriodicIncentiveDetail extends BaseTest{
 	 	 si.clickonload();
 	 	 Thread.sleep(3000);
 	 	 si.exitFullscreen();
+	 	 
 	 	 si.deleteemployee();
 		}
 	
-		@Test(priority=8)
+	@Test(priority=5)
 		public void DeleteEMIDetailInPeriodicIncentive_SC_564() throws Exception{
 		 DeleteEMIDetailInPeriodicIncentive am=new DeleteEMIDetailInPeriodicIncentive(driver);
 		 am.navigatesalary();
@@ -393,7 +396,7 @@ public class PeriodicIncentiveDetail extends BaseTest{
 		Thread.sleep(5000);
 		//pi.clickDeleteButton();
 	}
-	@Test(priority=14)
+/*	@Test(priority=14)
 	public void AddNewPeriodicIncentivePTMonthly_SC_570() throws Exception{
 		AddNewPeriodicIncentivePTMonthly pi=new AddNewPeriodicIncentivePTMonthly(driver);
 		pi.navigatesalary();
@@ -750,5 +753,5 @@ public class PeriodicIncentiveDetail extends BaseTest{
 	   //pi.clickPeriodicIncentiveMaster();
 	   //pi.clickdeletemaster();
 	   
-	}
+	}*/
 }
