@@ -330,7 +330,7 @@ public class PeriodicIncentiveDetail extends BaseTest{
 			String r=pi.getMessage();
 			Assert.assertEquals(r, "Periodic Incentive successfully created");
 			Thread.sleep(3000);
-			//pi.clickDeleteButton();
+			pi.clickDeleteButton();
 		}
 		
 		@Test(priority=12)
@@ -394,9 +394,9 @@ public class PeriodicIncentiveDetail extends BaseTest{
 		String r=pi.getMessage();
 		Assert.assertEquals(r, "Periodic Incentive successfully created");
 		Thread.sleep(5000);
-		//pi.clickDeleteButton();
+		pi.clickDeleteButton();
 	}
-/*	@Test(priority=14)
+	@Test(priority=14)
 	public void AddNewPeriodicIncentivePTMonthly_SC_570() throws Exception{
 		AddNewPeriodicIncentivePTMonthly pi=new AddNewPeriodicIncentivePTMonthly(driver);
 		pi.navigatesalary();
@@ -419,7 +419,7 @@ public class PeriodicIncentiveDetail extends BaseTest{
 		String r=pi.getMessage();
 		Assert.assertEquals(r, "Periodic Incentive successfully created");
 		Thread.sleep(5000);
-		//pi.clickDeleteButton();
+		pi.clickDeleteButton();
 	}
 	@Test(priority=15)
 	public void AddNewPeriodicIncentiveESIMonthly_SC_571() throws Exception{
@@ -444,7 +444,7 @@ public class PeriodicIncentiveDetail extends BaseTest{
 		String r=pi.getMessage();
 		Assert.assertEquals(r, "Periodic Incentive successfully created");
 		Thread.sleep(5000);
-		//pi.clickDeleteButton();
+		pi.clickDeleteButton();
 	}
 	@Test(priority=16)
 	public void AddNewPeriodicIncentivePFQuarterly_SC_572() throws Exception{
@@ -469,7 +469,7 @@ public class PeriodicIncentiveDetail extends BaseTest{
 		String r=pi.getMessage();
 		Assert.assertEquals(r, "Periodic Incentive successfully created");
 		Thread.sleep(5000);
-		//pi.clickDeleteButton();
+		pi.clickDeleteButton();
 	}
 	@Test(priority=17)
 	public void AddNewPeriodicIncentivePTQuarterly_SC_573() throws Exception{
@@ -494,7 +494,7 @@ public class PeriodicIncentiveDetail extends BaseTest{
 		String r=pi.getMessage();
 		Assert.assertEquals(r, "Periodic Incentive successfully created");
 		Thread.sleep(5000);
-		//pi.clickDeleteButton();
+		pi.clickDeleteButton();
 	}
 	@Test(priority=18)
 	public void AddNewPeriodicIncentiveESIQuarterly_SC_574() throws Exception{
@@ -519,7 +519,7 @@ public class PeriodicIncentiveDetail extends BaseTest{
 		String r=pi.getMessage();
 		Assert.assertEquals(r, "Periodic Incentive successfully created");
 		Thread.sleep(5000);
-		//pi.clickDeleteButton();
+		pi.clickDeleteButton();
 }
 	@Test(priority=19)
 	public void AddNewPeriodicIncentivePremiumPaymentQuarterly_SC_575() throws Exception{
@@ -543,7 +543,7 @@ public class PeriodicIncentiveDetail extends BaseTest{
 		String r=pi.getMessage();
 		Assert.assertEquals(r, "Periodic Incentive successfully created");
 		Thread.sleep(5000);
-		//pi.clickDeleteButton();
+		pi.clickDeleteButton();
 }
 	@Test(priority=20)
 	public void AddNewPeriodicIncentiveDetailPremiumPaymentHalfYearly_SC_628() throws Exception{
@@ -567,7 +567,7 @@ public class PeriodicIncentiveDetail extends BaseTest{
 	   String r=pi.getMessage();
 	   Assert.assertEquals(r, "Periodic Incentive successfully created");
 	   Thread.sleep(3000);
-	  // pi.clickDeleteButton();
+	   pi.clickDeleteButton();
 	}
 	
 	@Test(priority=21)
@@ -593,7 +593,7 @@ public class PeriodicIncentiveDetail extends BaseTest{
 		String r=pi.getMessage();
 		Assert.assertEquals(r, "Periodic Incentive successfully created");
 		Thread.sleep(5000);
-		//pi.clickDeleteButton();
+		pi.clickDeleteButton();
 	}
 	
 	@Test(priority=22)
@@ -618,7 +618,7 @@ public class PeriodicIncentiveDetail extends BaseTest{
 	   String r=pi.getMessage();
 	   Assert.assertEquals(r, "Periodic Incentive successfully created");
 	   Thread.sleep(3000);
-	   //pi.clickDeleteButton();
+	   pi.clickDeleteButton();
 	}
 	
 	@Test(priority=23)
@@ -644,7 +644,7 @@ public class PeriodicIncentiveDetail extends BaseTest{
 	   String r=pi.getMessage();
 	   Assert.assertEquals(r, "Periodic Incentive successfully created");
 	   Thread.sleep(3000);
-	   //pi.clickDeleteButton();
+	   pi.clickDeleteButton();
 	}
 	
 	@Test(priority=24)
@@ -670,7 +670,7 @@ public class PeriodicIncentiveDetail extends BaseTest{
 	   String r=pi.getMessage();
 	   Assert.assertEquals(r, "Periodic Incentive successfully created");
 	   Thread.sleep(3000);
-	   //pi.clickDeleteButton();
+	   pi.clickDeleteButton();
 	}
 	
 	@Test(priority=25)
@@ -696,7 +696,7 @@ public class PeriodicIncentiveDetail extends BaseTest{
 	   String r=pi.getMessage();
 	   Assert.assertEquals(r, "Periodic Incentive successfully created");
 	   Thread.sleep(3000);
-	   //pi.clickDeleteButton();
+	   pi.clickDeleteButton();
 	}
 	
 	@Test(priority=26)
@@ -722,7 +722,7 @@ public class PeriodicIncentiveDetail extends BaseTest{
 	   String r=pi.getMessage();
 	   Assert.assertEquals(r, "Periodic Incentive successfully created");
 	   Thread.sleep(3000);
-	  //pi.clickDeleteButton();
+	   pi.clickDeleteButton();
 	}
 	@Test(priority=27)
 	public void AddNewPeriodicIncentiveDetailStatutoryDeductionYearly_SC_635() throws Exception{
@@ -751,7 +751,6 @@ public class PeriodicIncentiveDetail extends BaseTest{
 	   //Thread.sleep(3000);
 	   //pi.navigatemasterlink();
 	   //pi.clickPeriodicIncentiveMaster();
-	   //pi.clickdeletemaster();
-	   
-	}*/
+	   //pi.clickdeletemaster();	   
+	}
 }
