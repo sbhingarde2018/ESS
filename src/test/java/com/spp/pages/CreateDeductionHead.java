@@ -10,7 +10,7 @@ import com.spp.common.BasePage;
 public class CreateDeductionHead extends BasePage{
 	@FindBy(id="salary")
 	WebElement ClickOnSalary;
-	@FindBy(xpath="//*[@id=\"menu\"]/li[6]/div/div[2]/ul/li[2]/a")
+	@FindBy(xpath="//a[text()=\"Full and Final Settlement\"]")
 	WebElement ClickOnFNF;
 	@FindBy(xpath="//*[@id=\"employees\"]/tbody/tr/td[5]/a")
 	WebElement ClickOnDetails;

@@ -10,7 +10,7 @@ import com.spp.common.BasePage;
 public class AddNewFullandFinalSettlementwithIncludeHeldSalaryAmount extends BasePage{
 	@FindBy(id="salary")
 	WebElement ClickOnSalary;
-	@FindBy(xpath="//*[@id=\"menu\"]/li[6]/div/div[2]/ul/li[2]/a")
+	@FindBy(xpath="//a[text()=\"Full and Final Settlement\"]")
 	WebElement ClickOnFNF;
 	@FindBy(xpath="//*[text()='Add New Full and Final Settlement']")
 	WebElement AddNewFNF;
