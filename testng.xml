@@ -67,8 +67,8 @@
 	<class name="com.spp.scripts.LoanDetail"/>
 	<class name="com.spp.scripts.InsuranceDetail"/>
 	<class name="com.spp.scripts.GroupInsuranceDetail"/>
-	<class name="com.spp.scripts.PeriodicIncentiveDetail"/>-->
-	<class name="com.spp.scripts.ExGratia"/>
+	<class name="com.spp.scripts.PeriodicIncentiveDetail"/>
+	<class name="com.spp.scripts.ExGratia"/>-->
 	<class name="com.spp.scripts.FullandFinalSettlement"/>
 <!--<class name="com.spp.scripts.SalaryEditor"/>
   	

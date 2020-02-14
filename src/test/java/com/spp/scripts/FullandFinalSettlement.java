@@ -16,6 +16,7 @@ import com.spp.pages.CreateDeductionHead;
 import com.spp.pages.CreateNewEarning;
 import com.spp.pages.DeleteEarningHead;
 import com.spp.pages.UpdateEarningHead;
+import com.spp.pages.UpdateRemark;
 
 public class FullandFinalSettlement extends BaseTest{
 
@@ -85,8 +86,8 @@ public class FullandFinalSettlement extends BaseTest{
 		ad.exitFullscreen();
 		Thread.sleep(5000);
 		ad.ClickDownloadpdf();
-	}
-	@Test(priority=5)
+	}*/
+	@Test(priority=5) //not able create employee
 	public void CheckifSalaryFullAndFinalSettlementGeneralLinksEmployeeMasterredirectstoEmployee_SC_959() throws Exception {
 		CheckifSalaryFullAndFinalSettlementGeneralLinksEmployeeMasterredirectstoEmployee ad=new CheckifSalaryFullAndFinalSettlementGeneralLinksEmployeeMasterredirectstoEmployee(driver);
 		ad.ClickSalary();
@@ -97,14 +98,14 @@ public class FullandFinalSettlement extends BaseTest{
 		Thread.sleep(2000);
 		ad.ClickAddEmp();
 		Thread.sleep(2000);
-		ad.enterEmployeeid("AMN1234");
-		ad.enterEmployeeref("AM3211");
-		ad.enterEmployeename("Amaan");
+		ad.enterEmployeeid("AMN7788");
+		//ad.enterEmployeeref("AM3211");
+		ad.enterEmployeename("Sonali");
 		ad.enterEmployeefather("Harish");
 		ad.selectDateofBirth("06 June 1995");
 		ad.selectGender("Male");
 		ad.selectMaritalStatus("Single");
-		ad.selectDateofJoining("06 July 2014");
+		ad.selectDateofJoining("06 January 2018");
 		Thread.sleep(5000);
 		ad.clickPresentAddress();
 		ad.selectState("Maharashtra");
@@ -157,8 +158,8 @@ public class FullandFinalSettlement extends BaseTest{
 		ad.switchToPopUpAndAccept(driver);
 		String e=ad.getmessage();
 		Assert.assertEquals(e, "Head was successfully deleted");	
-	}*/
-/*	@Test(priority=8)
+	}
+	@Test(priority=8)
 	public void UpdateDeductionHead_SC_962() throws Exception {
 		UpdateEarningHead ad = new UpdateEarningHead(driver);
 		ad.clickonsalary();
@@ -173,7 +174,7 @@ public class FullandFinalSettlement extends BaseTest{
 		String e=ad.getmessage();
 		Assert.assertEquals(e, "Head was successfully updated");
 	}
-	@Test(priority=9)
+		@Test(priority=9)
 	public void DeleteDeductionHead_SC_963() throws Exception {
 		DeleteEarningHead ad = new DeleteEarningHead(driver);
 		ad.clickonsalary();
@@ -192,7 +193,7 @@ public class FullandFinalSettlement extends BaseTest{
 		String e=ad.getmessage();
 		Assert.assertEquals(e, "Head was successfully deleted");
 	}
-	@Test(priority=10)
+		@Test(priority=10)
 	public void CreateNewEarningTheoretical_SC_964() throws Exception {
 		CreateNewEarning ad = new CreateNewEarning(driver);
 		ad.clickonsalary();
@@ -207,7 +208,7 @@ public class FullandFinalSettlement extends BaseTest{
 		Assert.assertEquals(e, "Head was successfully created");
 	}
 	
-	@Test(priority=11)
+			@Test(priority=11)
 	public void CreateNewDeductionTHEORETICAL_SC_965() throws Exception {
 		CreateDeductionHead ad=new CreateDeductionHead(driver);
 		ad.clickonsalary();
@@ -222,7 +223,7 @@ public class FullandFinalSettlement extends BaseTest{
 		String e=ad.getmessage();
 		Assert.assertEquals(e, "Head was successfully created");
 	}
-	
+
 	@Test(priority=12)
 	public void UpdateEarningHeadTheoretical_SC_966() throws Exception {
 		UpdateEarningHead ad = new UpdateEarningHead(driver);
@@ -258,8 +259,7 @@ public class FullandFinalSettlement extends BaseTest{
 		String e=ad.getmessage();
 		Assert.assertEquals(e, "Head was successfully deleted");
 	}
-	
-	@Test(priority=14)
+		@Test(priority=14)
 	public void UpdateRemark_SC_968() throws Exception {
 		UpdateRemark up = new UpdateRemark(driver);
 		up.clickonsalary();
@@ -272,7 +272,7 @@ public class FullandFinalSettlement extends BaseTest{
 		Assert.assertEquals(e, "Remark was successfully updated.");
 	}
 	
-	@Test(priority=15)
+	/*	@Test(priority=15)
 	public void UpdateRemarkTheoretical_SC_969() throws Exception {
 		UpdateRemark up = new UpdateRemark(driver);
 		up.clickonsalary();

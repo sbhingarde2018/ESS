@@ -20,9 +20,9 @@ public class UpdateEarningHead extends BasePage{
 	WebElement EnterDescription;
 	@FindBy(id="to_modify_amount")
 	WebElement EnterAmount;
-	@FindBy(xpath="//*[@id=\"modified_earnings\"]/table/tbody/tr[7]/td[4]/table/tbody/tr/td[1]/button")
+	@FindBy(xpath="//table/tbody/tr/td[4]/table/tbody/tr/td[1]/button")
 	WebElement ClickOnEdit;
-	@FindBy(xpath="//*[@id=\"modified_deductions\"]/table/tbody/tr[15]/td[4]/table/tbody/tr/td[1]/button")
+	@FindBy(xpath="//table/tbody/tr/td[4]/table/tbody/tr/td[1]/button")
 	WebElement ClickOnEditDeductionHead;
 	@FindBy(id="earn_ded_udpate")
 	WebElement UpdateHead;
@@ -32,7 +32,7 @@ public class UpdateEarningHead extends BasePage{
 	WebElement ClickOnDeductionTab;
 	@FindBy(xpath="//*[@id=\"main\"]/section/div[2]/nav/ul/li[2]/a/span")
 	WebElement SelectTheoreticalTab;
-	@FindBy(xpath="//*[@id=\"modified_earnings\"]/table/tbody/tr[7]/td[4]/table/tbody/tr/td[1]/button")
+	@FindBy(xpath="//table/tbody/tr/td[contains(text(),'Basic')]/parent::tr/td[4]/div/button")
 	WebElement EditTheoreticalHead;
 	@FindBy(xpath="//*[@id=\"modified_deductions\"]/table/tbody/tr[15]/td[4]/table/tbody/tr/td[1]/button")
 	WebElement EditDeductionHeadTheoretical;

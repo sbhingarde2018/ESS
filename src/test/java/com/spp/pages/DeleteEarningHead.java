@@ -14,9 +14,9 @@ public class DeleteEarningHead extends BasePage{
 	WebElement ClickOnFNF;
 	@FindBy(xpath="//*[@id=\"employees\"]/tbody/tr/td[5]/a")
 	WebElement ClickOnDetails;
-	@FindBy(xpath="//*[@id=\"modified_earnings\"]/table/tbody/tr[7]/td[4]/table/tbody/tr/td[2]/a/img")
+	@FindBy(xpath="//table/tbody/tr/td[4]/table/tbody/tr/td[2]/a/img")
 	WebElement ClickOnDelete;
-	@FindBy(xpath="//*[@id=\"modified_deductions\"]/table/tbody/tr[15]/td[4]/table/tbody/tr/td[2]/a/img")
+	@FindBy(xpath="//table/tbody/tr/td[4]/table/tbody/tr/td[2]/a/img")
 	WebElement ClickOnDeleteDeductionHead;
 	@FindBy(xpath="//*[@id=\"main\"]/section/div[3]/nav/ul/li[2]/a/span")
 	WebElement ClickOnDeductionTab;
@@ -24,7 +24,7 @@ public class DeleteEarningHead extends BasePage{
 	WebElement SelectTheoreticalTab;
 	@FindBy(xpath="//strong[text()='Head was successfully deleted']")
 	WebElement SuccessMessage;
-	@FindBy(xpath="//*[@id=\"modified_earnings\"]/table/tbody/tr[7]/td[4]/table/tbody/tr/td[2]/a/img")
+	@FindBy(xpath="//table/tbody/tr/td[4]/table/tbody/tr/td[2]/a/img")
 	WebElement DeleteTheoreticalEarningHead;
 	@FindBy(xpath="//*[@id=\"modified_deductions\"]/table/tbody/tr[15]/td[4]/table/tbody/tr/td[2]/a/img")
 	WebElement ClickOnDeleteDeductionHeadTheoretical;

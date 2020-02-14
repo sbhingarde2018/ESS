@@ -17,7 +17,7 @@ public class CheckifSalaryFullAndFinalSettlementGeneralLinksEmployeeMasterredire
 	WebElement EmployeeMaster;
 	@FindBy(xpath="//a[contains(text(),'Add New Employee')]")
 	WebElement AddEmp;
-	@FindBy(id="employee_emp_id")
+	@FindBy(xpath="//input[@id='employee_refno']")
 	WebElement employeeid;
 	@FindBy(id="employee_refno")
 	WebElement employeeref;
@@ -63,7 +63,7 @@ public class CheckifSalaryFullAndFinalSettlementGeneralLinksEmployeeMasterredire
 	WebElement ClickOnFilterHead;
 	@FindBy(xpath="//*[@id=\"bf_form\"]/div/button[contains(text(),'LOAD')]")
 	WebElement Load;
-	@FindBy(xpath="//tbody/tr/td[contains(text(),'Amaan')]/parent::tr/td[6]/a[2]")
+	@FindBy(xpath="//tbody/tr/td[contains(text(),'Sonali')]/parent::tr/td[6]/a[2]")
 	WebElement DeleteEmployee;
 	@FindBy(id="emp_detail")
 	WebElement ClickOnEmployee;
