@@ -34,7 +34,7 @@ public class UpdateEarningHead extends BasePage{
 	WebElement SelectTheoreticalTab;
 	@FindBy(xpath="//table/tbody/tr/td[contains(text(),'Basic')]/parent::tr/td[4]/div/button")
 	WebElement EditTheoreticalHead;
-	@FindBy(xpath="//*[@id=\"modified_deductions\"]/table/tbody/tr[15]/td[4]/table/tbody/tr/td[1]/button")
+	@FindBy(xpath="//table/tbody/tr/td[contains(text(),'Basic')]/parent::tr/td[4]/table/tbody/tr/td[1]/button")
 	WebElement EditDeductionHeadTheoretical;
 	public UpdateEarningHead(WebDriver driver) {
 		super(driver);
