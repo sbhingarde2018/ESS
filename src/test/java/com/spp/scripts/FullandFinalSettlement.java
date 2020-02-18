@@ -72,13 +72,13 @@ public class FullandFinalSettlement extends BaseTest{
 		String e=ad.getmessage();
 		Assert.assertEquals(e, "Head was successfully created");
 	}
-/*	@Test(priority=4)
+	@Test(priority=4)
 	public void CheckifSalaryFullAndFinalSettlementReportsFullandFinalReportredirectstoReports_SC_958() throws Exception {
 		CheckifSalaryFullAndFinalSettlementReportsFullandFinalReportredirectstoReports ad=new CheckifSalaryFullAndFinalSettlementReportsFullandFinalReportredirectstoReports(driver);
 		ad.ClickSalary();
 		ad.ClickFullFinalSettlement();
 		ad.ClickFullFinalReport();
-		ad.SelectPaymonth("Dec/2018");
+		ad.SelectPaymonth("Feb/2020");
 		ad.ClickGetEmp();
 		ad.resizeWindow();
 		Thread.sleep(2000);
@@ -86,7 +86,7 @@ public class FullandFinalSettlement extends BaseTest{
 		ad.exitFullscreen();
 		Thread.sleep(5000);
 		ad.ClickDownloadpdf();
-	}*/
+	}
 	@Test(priority=5) //not able create employee
 	public void CheckifSalaryFullAndFinalSettlementGeneralLinksEmployeeMasterredirectstoEmployee_SC_959() throws Exception {
 		CheckifSalaryFullAndFinalSettlementGeneralLinksEmployeeMasterredirectstoEmployee ad=new CheckifSalaryFullAndFinalSettlementGeneralLinksEmployeeMasterredirectstoEmployee(driver);
@@ -143,7 +143,7 @@ public class FullandFinalSettlement extends BaseTest{
 		String e=ad.getmessage();
 		Assert.assertEquals(e, "Head was successfully updated");			
 	}
-/*	@Test(priority=7)
+	@Test(priority=7)
 	public void DeleteEarningHead_SC_961() throws Exception {
 		DeleteEarningHead ad = new DeleteEarningHead(driver);
 		ad.clickonsalary();
@@ -222,7 +222,7 @@ public class FullandFinalSettlement extends BaseTest{
 		ad.createhead();
 		String e=ad.getmessage();
 		Assert.assertEquals(e, "Head was successfully created");
-	}*/
+	}
 
 	@Test(priority=12)
 	public void UpdateEarningHeadTheoretical_SC_966() throws Exception {
@@ -303,7 +303,7 @@ public class FullandFinalSettlement extends BaseTest{
 		Assert.assertEquals(e, "Head was successfully updated");
 	}
 	
-				@Test(priority=17)
+	@Test(priority=17)
 	public void DeleteDeductionHeadTheoretical_SC_971() throws Exception {
 		DeleteEarningHead ad = new DeleteEarningHead(driver);
 		ad.clickonsalary();
@@ -324,7 +324,7 @@ public class FullandFinalSettlement extends BaseTest{
 		Assert.assertEquals(e, "Head was successfully deleted");
 		ad.clickonsalary();
 		ad.clickonFNF();
-		ad.clickondelete();
+		ad.clickonDeleteFNF();
 		ad.switchToPopUpAndAccept(driver);
 		
 	}	
@@ -631,7 +631,7 @@ public class FullandFinalSettlement extends BaseTest{
 		ad.clickdelete();
 	}
 	
-/*	@Test(priority=37)
+	@Test(priority=37)
 	public void AddNewFullandFinalSettlementwithIncludeOpenComponentSelectHeadsIncludePendinLoanAmount_SC_992() throws Exception {
 		AddNewFullandFinalSettlementwithIncludeHeldSalaryAmount ad = new AddNewFullandFinalSettlementwithIncludeHeldSalaryAmount(driver);
 		ad.clickonsalary();
@@ -715,5 +715,5 @@ public class FullandFinalSettlement extends BaseTest{
 		String e=ad.getmessage();
 		Assert.assertEquals(e, "Full And Final Settlement successfully created");
 		ad.clickdelete();
-	}*/
+	}
 }

@@ -27,7 +27,7 @@
  	<class name="com.spp.scripts.FinancialInstitutionBank"/>-->
  		
 <!--<class name="com.spp.scripts.EmployeeDetails"/>
-  	<class name="com.spp.scripts.EmployeeDetailsValidation"/>
+	<class name="com.spp.scripts.EmployeeDetailsValidation"/>
   	<class name="com.spp.scripts.RestrictPFContribution"/>
   	<class name="com.spp.scripts.SalaryRateDetails"/>
   	<class name="com.spp.scripts.BulkIncrementDetails"/>

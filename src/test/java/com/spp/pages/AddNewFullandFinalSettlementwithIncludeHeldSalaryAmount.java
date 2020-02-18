@@ -48,7 +48,7 @@ public class AddNewFullandFinalSettlementwithIncludeHeldSalaryAmount extends Bas
 	WebElement CreateHead;
 	@FindBy(xpath="//input[@id='full_and_final_settlement_pending_loan_amount']")
 	WebElement SelectLoan;
-	@FindBy(id="full_and_final_settlement_open_component_lists_")
+	@FindBy(xpath="//input[@id='full_and_final_settlement_open_component_lists_']")
 	WebElement SelectHead;
 	@FindBy(xpath="//strong[text()='Full And Final Settlement successfully deleted']")
 	WebElement deleteMessage;

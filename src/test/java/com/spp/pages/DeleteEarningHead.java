@@ -14,7 +14,7 @@ public class DeleteEarningHead extends BasePage{
 	WebElement ClickOnFNF;
 	@FindBy(xpath="//*[@id=\"employees\"]/tbody/tr/td[5]/a")
 	WebElement ClickOnDetails;
-	@FindBy(xpath="//table/tbody/tr/td[6]/a/img")
+	@FindBy(xpath="//table/tbody/tr/td[contains(text(),'Basic1')]/parent::tr/td[4]/table/tbody/tr/td[2]/a/img")
 	WebElement ClickOnDelete;
 	@FindBy(xpath="//table/tbody/tr/td[4]/table/tbody/tr/td[2]/a/img")
 	WebElement ClickOnDeleteDeductionHead;
@@ -28,6 +28,9 @@ public class DeleteEarningHead extends BasePage{
 	WebElement DeleteTheoreticalEarningHead;
 	@FindBy(xpath="//table/tbody/tr/td[4]/table/tbody/tr/td[2]/a/img")
 	WebElement ClickOnDeleteDeductionHeadTheoretical;
+	@FindBy(xpath="//table/tbody/tr/td[6]/a/img")
+	WebElement DeleteFNF;
+	
 	public DeleteEarningHead(WebDriver driver) {
 		super(driver);
 		PageFactory.initElements( driver, this);
@@ -43,6 +46,10 @@ public class DeleteEarningHead extends BasePage{
 	}
 	public void clickondelete() {
 		ClickOnDelete.click();
+		
+	}
+	public void clickonDeleteFNF() {
+		DeleteFNF.click();
 		
 	}
 	public void clickondeletedeductionhead() {
