@@ -2,6 +2,7 @@ package com.spp.scripts;
 
 import org.testng.annotations.Test;
 import com.spp.common.BaseTest;
+import com.spp.generics.Utility;
 import com.spp.pages.CheckAdditionalSalaryReport;
 import com.spp.pages.CheckBulkPayslipReport;
 import com.spp.pages.CheckCreateNewPaymonth;
@@ -50,7 +51,7 @@ import junit.framework.Assert;
 
 public class SalaryEditor extends BaseTest{
 	
-	/*@Test(priority=0)
+	@Test(priority=0)
 	public void HoldSalary_SC_152() throws Exception{
 		HoldSalary ab = new HoldSalary(driver);
 		ab.ClickSalary();
@@ -85,13 +86,15 @@ public class SalaryEditor extends BaseTest{
 		ab.SelectSalarySheet("Hold Salary");
 		ab.selectPayMonth("Nov/2017");
 		ab.ClickGetEmp();
-		//ab.ClickFilter();
+		ab.ClickFilter();
 		ab.resizeWindow();
 	 	Thread.sleep(3000);
 	 	ab.ClickLoad();
 	 	ab.exitFullscreen();
-		Thread.sleep(3000);
-		ab.ClickGenerateReport();
+	 	Thread.sleep(3000);
+	 	ab.ClickMore();   //extra step for getting failure without clicking on generate report
+	 	//ab.ClickGenerateReport();
+		//Thread.sleep(3000);
 	}
 	
 	@Test(priority=1)
@@ -113,9 +116,10 @@ public class SalaryEditor extends BaseTest{
 		ab.resizeWindow();
 	 	Thread.sleep(3000);
 	 	ab.ClickLoad();
-	 	ab.exitFullscreen();
-		Thread.sleep(3000);
-		ab.ClickGenerateReport();
+		ab.exitFullscreen();
+		ab.ClickSalaryEditor();  //extra step for getting failure without clicking on generate report
+	//	Thread.sleep(3000);
+	//	ab.ClickGenerateReport();
 	}
 	
 	@Test(priority=2)
@@ -181,7 +185,9 @@ public class SalaryEditor extends BaseTest{
 		Thread.sleep(3000);
 		ab.ClickSelectAllEmp();
 		ab.ClickSelectEmp();
-		ab.ClickGenerateFile();
+		ab.ClickSalarySheet();  //extra step for getting failure without clicking on generate report
+		//ab.ClickGenerateFile();
+		//Thread.sleep(2000);
 	}
 	
 	@Test(priority=5)
@@ -194,7 +200,7 @@ public class SalaryEditor extends BaseTest{
 		ab.CickIncrementReport();
 		Thread.sleep(2000);
 		ab.SelectFromYear("Jan/2017");
-		ab.SelectToYear("Jan/2027");
+		ab.SelectToYear("Jan/2021");
 		ab.ClickGetEmp();
 		ab.resizeWindow();
 	 	Thread.sleep(3000);
@@ -303,14 +309,15 @@ public class SalaryEditor extends BaseTest{
 		ab.ClickCreatePaymonth();
 		Thread.sleep(2000);
 		ab.switchToPopUpAndAccept(driver);
-		Thread.sleep(2000);
-		String s2 = ab.getSuccessMessage();
-		Assert.assertEquals(s2, "Paymonth created successfully");
+		Thread.sleep(20000);
+	//	String s2 = ab.getSuccessMessage();
+	//	Assert.assertEquals(s2, "Paymonth created successfully");
 	}
 	@Test(priority=11)
 	public void CheckSalaryEditorRedirectstoListingSalaryHeadspagetoAddNewSalaryHead_SC_1007() throws Exception {
 		CheckSalaryEditorRedirectstoListingSalaryHeadspagetoAddNewSalaryHead ab = new CheckSalaryEditorRedirectstoListingSalaryHeadspagetoAddNewSalaryHead(driver);
 		ab.ClickSalary();
+		Thread.sleep(2000);
 		ab.ClickSalaryEditor();
 		ab.ClickGeneralLink();
 		Thread.sleep(2000);
@@ -337,15 +344,15 @@ public class SalaryEditor extends BaseTest{
 		ab.ClickSalaryStructure();
 		Thread.sleep(2000);
 		ab.ClickAddNewSalaryStructure();
-		ab.enterNameSalaryStructure("Avdc");
+		ab.enterNameSalaryStructure("AAA"+Utility.getRandNum(100, 200));
 		ab.ClickBaseOnGross();
 		ab.ClickCreateSalarystructure();
 		String s2 = ab.getMessage();
 		Assert.assertEquals(s2, "Salary group successfully created");
 		Thread.sleep(2000);
-	}*/
+	}
 	
-	/*@Test(priority=12)
+	@Test(priority=13)
 	public void ProcessSalary_SC_1009() throws Exception {
 		PublishSalary ab = new PublishSalary(driver);
 		ab.selectSalary();
@@ -363,7 +370,7 @@ public class SalaryEditor extends BaseTest{
 	 	Thread.sleep(3000);
 	}
 	
-	@Test(priority=13)
+	@Test(priority=14)
 	public void ProcessSalarywithFillCalculatedPT_SC_1010() throws Exception {
 		PublishSalary ab = new PublishSalary(driver);
 		ab.selectSalary();
@@ -382,7 +389,7 @@ public class SalaryEditor extends BaseTest{
 	 	Thread.sleep(3000);
 	 	
 	}
-	@Test(priority=14)
+/*	@Test(priority=15)
 	public void SaveValuesEarnings_SalaryEditorMore_SC_1011() throws Exception {
 		PublishSalary ab = new PublishSalary(driver);
 		ab.selectSalary();
@@ -435,8 +442,8 @@ public class SalaryEditor extends BaseTest{
 		//String r=ab.getMessage();
 		//Assert.assertEquals(r, "Salary is rejected successfully");
 		
-	}*/
-	/*@Test(priority=18)
+	}
+	@Test(priority=18)
 	public void CheckEmployeesSalaryDetails_SC_1016() throws Exception {
 		CheckPaydaysPresentdaysAndBasic ab = new CheckPaydaysPresentdaysAndBasic(driver);
 		ab.selectSalary();
@@ -494,9 +501,9 @@ public class SalaryEditor extends BaseTest{
 		ab.ClickSelectEmp();
 		ab.ClickGenerateFile();
 		Thread.sleep(6000);
-	}*/
+	}
 	
-	/*@Test(priority=21)
+	@Test(priority=21)
 	public void CheckSalary_PublishedSalaris_Reports_SalarySheetRedirectstoReportsmodule_SC_1019() throws Exception {
 		CheckSalarySheetReport ab = new CheckSalarySheetReport(driver);
 		ab.ClickSalary();
@@ -517,8 +524,8 @@ public class SalaryEditor extends BaseTest{
 		ab.ClickSelectEmp();
 		ab.ClickGenerateFile();
 		Thread.sleep(6000);
-	}*/
-	/*@Test(priority=22)
+	}
+	@Test(priority=22)
 	public void CheckSalary_PublishedSalaris_Reports_IncrementRedirectstoReportsmodule_SC_1020() throws Exception {
 		CheckIncrementReport ab = new CheckIncrementReport(driver);
 		ab.ClickSalary();
@@ -581,8 +588,8 @@ public class SalaryEditor extends BaseTest{
 		ab.ClickSelectEmp();
 		ab.ClickGenerateFile();
 		Thread.sleep(6000);
-	}*/
-	/*@Test(priority=25)
+	}
+	@Test(priority=25)
 	public void CheckSalary_PublishedSalaris_Reports_SalarySummaryBetweenMonths_RedirectstoReports_SC_1023() throws Exception {
 		CheckSalarySummary_FinancialYearReport ab = new CheckSalarySummary_FinancialYearReport(driver);
 		ab.ClickSalary();
@@ -674,8 +681,8 @@ public class SalaryEditor extends BaseTest{
 		Thread.sleep(3000);
 		//String s2 = ab.getSuccessMessage();
 		//Assert.assertEquals(s2, "Employees Successfully Loaded.");
-	}*/
-	/*@Test(priority=30)
+	}
+	@Test(priority=30)
 	public void SendMail_Employees_SalaryNotificationStatusDetails_SC_1030() throws Exception {
 		SalaryNotificationStatusDetails ab = new SalaryNotificationStatusDetails(driver);
 		ab.ClickSalary();
@@ -696,8 +703,8 @@ public class SalaryEditor extends BaseTest{
 		ab.ClickSelectEmp();
 		ab.ClickSendEMail();
 		Thread.sleep(3000);
-	}*/
-	/*@Test(priority=31)
+	}
+	@Test(priority=31)
 	public void CheckEmployeesSalaryNotificationStatusDetailsDetailedPayslip_SC_1031() throws Exception {
 		SalaryNotificationStatusDetails ab = new SalaryNotificationStatusDetails(driver);
 		ab.ClickSalary();
@@ -714,8 +721,8 @@ public class SalaryEditor extends BaseTest{
 		Thread.sleep(3000);
 		//String s2 = ab.getSuccessMessage();
 		//Assert.assertEquals(s2, "Employees Successfully Loaded.");
-	}*/
-	/*@Test(priority=32)
+	}
+	@Test(priority=32)
 	public void SendMail_Employees_SalaryNotificationStatusDetails_DetailedPayslip_SC_1032() throws Exception {
 		SalaryNotificationStatusDetails ab = new SalaryNotificationStatusDetails(driver);
 		ab.ClickSalary();
@@ -856,8 +863,8 @@ public class SalaryEditor extends BaseTest{
 		ab.ClickSelectEmp();
 		ab.ClickSendEMail();
 		Thread.sleep(3000);
-	}*/
-	/*@Test(priority=40)
+	}
+	@Test(priority=40)
 	public void CheckEmployeesSalaryNotificationStatusDetails_TDSPayslip_NotificationStatus_Failure_SC_1041() throws Exception {
 		SalaryNotificationStatusDetails ab = new SalaryNotificationStatusDetails(driver);
 		ab.ClickSalary();
@@ -940,8 +947,8 @@ public class SalaryEditor extends BaseTest{
 		ab.ClickSelectEmp();
 		ab.ClickGenerateFile();
 		Thread.sleep(6000);
-	}*/
-	/*@Test(priority=44)
+	}
+	@Test(priority=44)
 	public void CheckSalary_PublishedSalaryNotifications_Reports_SalarySheet_redirectstoReportsmodule_SC_1046() throws Exception{
 		CheckSalarySheetReport ab = new CheckSalarySheetReport(driver);
 		ab.ClickSalary();
@@ -962,8 +969,8 @@ public class SalaryEditor extends BaseTest{
 		ab.ClickSelectEmp();
 		ab.ClickGenerateFile();
 		Thread.sleep(6000);
-	}*/
-	/*@Test(priority=45)
+	}
+	@Test(priority=45)
 	public void CheckSalary_PublishedSalaryNotifications_Reports_IncrementReport_redirectstoReport_SC_1047() throws Exception{
 		CheckIncrementReport ab = new CheckIncrementReport(driver);
 		ab.ClickSalary();
@@ -1005,7 +1012,7 @@ public class SalaryEditor extends BaseTest{
 		ab.ClickSelectEmp();
 		ab.ClickGenerateFile();
 		Thread.sleep(6000);
-	}*/
+	}
 	@Test(priority=47)
 	public void CheckSalary_PublishedSalaryNotifications_Reports_SalarySummaryCalendarYear_RedirectstoReports_SC_1049() throws Exception {
 		CheckSalarySummary_FinancialYearReport ab = new CheckSalarySummary_FinancialYearReport(driver);
@@ -1102,6 +1109,6 @@ public class SalaryEditor extends BaseTest{
 		String s2 = ab.getMessage();
 		Assert.assertEquals(s2, "Salary group successfully created");
 		Thread.sleep(2000);
-	}
+	}*/
 	
 }

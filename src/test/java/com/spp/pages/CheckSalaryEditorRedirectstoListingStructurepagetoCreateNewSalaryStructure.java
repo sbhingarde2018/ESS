@@ -25,7 +25,7 @@ public class CheckSalaryEditorRedirectstoListingStructurepagetoCreateNewSalarySt
 	WebElement PublishSalaryStructure;
 	@FindBy(xpath="//a[contains(text(),'Add New Salary Structure')]")
 	WebElement AddNewSalaryStructure;
-	@FindBy(xpath="//input[@id='salary_group_salary_group_name']")
+	@FindBy(xpath="//input[@id='sal_group_name']")
 	WebElement NameSalaryStructure;
 	@FindBy(xpath="//input[@id='salary_group_based_on_gross']")
 	WebElement BaseOnGross;

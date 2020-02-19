@@ -15,7 +15,7 @@ public class CheckSalaryEditorRedirectstoListingSalaryHeadspagetoAddNewSalaryHea
 	}
 	@FindBy(id="salary")
 	WebElement Salary;
-	@FindBy(xpath="//*[@id=\"menu\"]/li[6]/div/div[3]/ul/li[1]/a")
+	@FindBy(xpath="//a[contains(text(),'Salary Editor')]")
 	WebElement SalaryEditor;
 	@FindBy(xpath="//h3[contains(text(),'General Link')]")
 	WebElement GeneralLink;
