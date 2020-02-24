@@ -88,8 +88,5 @@ public class AdvanceDetailsValidation  extends BasePage  {
 	public String getRecoverFromValidationMessage(){
 		return RecoverFromValidationMessage.getText();
 	}
-	
-	
-	
 
 }
